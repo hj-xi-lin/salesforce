@@ -8,6 +8,7 @@ Before you start, make sure you have:
 
 - [ ] [Salesforce CLI](https://developer.salesforce.com/tools/salesforcecli) installed (`sf --version`)
 - [ ] [Claude Code](https://claude.com/claude-code) installed
+- [ ] [jq](https://jqlang.github.io/jq/) installed (`jq --version`) — used by the auto-backup hook
 - [ ] GitHub access to this repo
 - [ ] Salesforce org credentials (ask your admin)
 
@@ -20,35 +21,13 @@ git clone https://github.com/hj-xi-lin/salesforce.git
 cd salesforce
 ```
 
-### Step 2: Configure your backup folder
-
-Add these to your `~/.zshrc` (or `~/.bashrc`):
-
-```bash
-# Salesforce auto-backup config
-export SF_BACKUP_DIR=~/SF_Backups      # Change to your preferred folder
-export SF_ORG_ALIAS=heyjobs            # Default org alias
-```
-
-Then reload:
-
-```bash
-source ~/.zshrc
-```
-
-### Step 3: Make the hook script executable
-
-```bash
-chmod +x .claude/hooks/sf-pre-deploy-backup.sh
-```
-
-### Step 4: Authenticate to the Salesforce org
+### Step 2: Authenticate to the Salesforce org
 
 ```bash
 sf org login web -a heyjobs
 ```
 
-### Step 5: Start Claude Code
+### Step 3: Start Claude Code
 
 ```bash
 claude
@@ -60,13 +39,13 @@ The auto-backup hook is now active. Every time you deploy metadata through Claud
 
 ```
 You ask Claude to deploy  →  Hook fires  →  Retrieves current org state
-                                          →  Saves to $SF_BACKUP_DIR/deploy_<timestamp>/
+                                          →  Saves to backups/deploy_<timestamp>/
                                           →  If backup fails: deploy is BLOCKED
                                           →  If backup succeeds: deploy proceeds
 ```
 
-- Backups are saved to: `$SF_BACKUP_DIR/deploy_<timestamp>_<label>/`
-- Deployment audit log: `$SF_BACKUP_DIR/deploy-log.csv`
+- Backups are saved to: `backups/deploy_<timestamp>_<label>/` (override with `SF_BACKUP_DIR` env var)
+- Deployment audit log: `backups/deploy-log.csv`
 - Hook script: `.claude/hooks/sf-pre-deploy-backup.sh`
 - Hook config: `.claude/settings.json`
 
@@ -99,10 +78,10 @@ If a deployment goes wrong:
 
 ```bash
 # Find your backup
-ls $SF_BACKUP_DIR/
+ls backups/
 
 # Redeploy the backup
-sf deploy metadata --source-dir $SF_BACKUP_DIR/deploy_<timestamp>_<label>/force-app/ \
+sf deploy metadata --source-dir backups/deploy_<timestamp>_<label>/force-app/ \
   --target-org heyjobs
 ```
 
@@ -156,12 +135,10 @@ The auto-backup hook couldn't retrieve the current org state. Common causes:
 - **Network issue** → Check your internet connection and retry
 - **Invalid sourceDir** → The paths being deployed don't exist in the org yet (new metadata). If the hook shows "SKIPPED_NEW_METADATA", this is expected and the deploy should proceed.
 
-### "SF_BACKUP_DIR not set" or backups going to wrong folder
-- Check your `~/.zshrc` has `export SF_BACKUP_DIR=...`
-- Run `source ~/.zshrc` to reload
-- Default is `~/SF_Backups` if not set
+### Backups going to wrong folder
+- By default, backups go to `backups/` in the project root (git-ignored)
+- To override, set `export SF_BACKUP_DIR=/your/path` in `~/.zshrc`
 
 ### Hook not firing
 - Make sure you're running Claude Code from inside this repo directory
 - Check `.claude/settings.json` exists and has the hook config
-- Ensure `.claude/hooks/sf-pre-deploy-backup.sh` is executable: `chmod +x .claude/hooks/sf-pre-deploy-backup.sh`
