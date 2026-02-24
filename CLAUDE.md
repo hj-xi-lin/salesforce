@@ -6,9 +6,9 @@ A `PreToolUse` hook automatically backs up org metadata before every `deploy_met
 
 ### How it works:
 - Before every deploy, the hook retrieves the CURRENT org state of the metadata being deployed
-- Backups are saved to `$SF_BACKUP_DIR/deploy_<timestamp>_<label>/` (each user sets their own `SF_BACKUP_DIR`)
+- Backups are saved to `backups/deploy_<timestamp>_<label>/` in the project root (override with `SF_BACKUP_DIR` env var)
 - If backup fails, the deploy is BLOCKED — you will see an error
-- Audit log: `$SF_BACKUP_DIR/deploy-log.csv`
+- Audit log: `backups/deploy-log.csv`
 
 ### Rules for Claude:
 1. **Do NOT skip or disable the hook.** If a deploy is blocked, investigate and fix the issue.

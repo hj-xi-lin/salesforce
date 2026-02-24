@@ -14,7 +14,7 @@
 set -euo pipefail
 
 # --- Configuration via environment variables ---
-BACKUP_ROOT="${SF_BACKUP_DIR:-$HOME/SF_Backups}"
+BACKUP_ROOT="${SF_BACKUP_DIR:-$(cd "$(dirname "$0")/../.." && pwd)/backups}"
 DEFAULT_ORG="${SF_ORG_ALIAS:-heyjobs}"
 DEPLOY_LOG="${BACKUP_ROOT}/deploy-log.csv"
 TIMESTAMP=$(date +%Y-%m-%dT%H%M%S)
