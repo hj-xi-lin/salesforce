@@ -2,16 +2,16 @@
 
 ## Automatic Backups
 
-This repo has an auto-backup hook that retrieves the current org state before every deployment via Claude Code. Backups are saved to your `$SF_BACKUP_DIR` folder (set in your `~/.zshrc`).
+This repo has an auto-backup hook that retrieves the current org state before every deployment via Claude Code. Backups are saved to `backups/` in the project root (override with `SF_BACKUP_DIR` env var).
 
 To rollback using an automatic backup:
 
 ```bash
-sf deploy metadata --source-dir $SF_BACKUP_DIR/deploy_<timestamp>_<label>/force-app/ \
+sf deploy metadata --source-dir backups/deploy_<timestamp>_<label>/force-app/ \
   --target-org heyjobs
 ```
 
-Check `$SF_BACKUP_DIR/deploy-log.csv` for a history of all deployments and their backup locations.
+Check `backups/deploy-log.csv` for a history of all deployments and their backup locations.
 
 ## Manual Rollback (without auto-backup)
 
