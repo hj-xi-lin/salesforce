@@ -7,7 +7,7 @@
 # Exit 0 = allow deploy | Exit 2 = block deploy
 #
 # Environment variables (set in ~/.zshrc or ~/.bashrc):
-#   SF_BACKUP_DIR  - Where backups are saved (default: ~/SF_Backups)
+#   SF_BACKUP_DIR  - Where backups are saved (default: <project_root>/backups)
 #   SF_ORG_ALIAS   - Default org alias (default: heyjobs)
 # =============================================================================
 
