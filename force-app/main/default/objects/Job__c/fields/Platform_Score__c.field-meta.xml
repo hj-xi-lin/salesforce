@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Platform_Score__c</fullName>
+    <description>The Platform Score on Job level is used to calculate the Weighted Score on Job level and then the Actively Hiring Score on Account level. RO-2536</description>
+    <externalId>false</externalId>
+    <formula>IF(
+INCLUDES(Platform__c, &quot;Stepstone&quot;) || INCLUDES(Platform__c, &quot;Indeed&quot;) ,
+1,
+IF(
+NOT( INCLUDES(Platform__c, &quot;HeyJobs&quot;) ) &amp;&amp; NOT( INCLUDES(Platform__c, &quot;Other&quot;) ) &amp;&amp; NOT( ISBLANK( Platform__c) ) ,
+0.75,
+0
+)
+)
+* 0.15</formula>
+    <label>Platform Score</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>4</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

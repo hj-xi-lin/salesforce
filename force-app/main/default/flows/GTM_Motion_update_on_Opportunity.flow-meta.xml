@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <decisions>
+        <name>Check_GTM_motion_value_on_Acc_and_Opp</name>
+        <label>Check GTM motion value on Acc and Opp</label>
+        <locationX>182</locationX>
+        <locationY>287</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>No_match</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.GTM_Motion_Opportunity__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.Account.GTM_Motion_Account__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_GTM_motion_field_on_Opp</targetReference>
+            </connector>
+            <label>No match</label>
+        </rules>
+    </decisions>
+    <description>RO - 1958</description>
+    <environments>Default</environments>
+    <interviewLabel>GTM Motion update on Opportunity {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>GTM Motion update on Opportunity</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_GTM_motion_field_on_Opp</name>
+        <label>Update GTM motion field on Opp</label>
+        <locationX>50</locationX>
+        <locationY>395</locationY>
+        <inputAssignments>
+            <field>GTM_Motion_Opportunity__c</field>
+            <value>
+                <elementReference>$Record.Account.GTM_Motion_Account__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_GTM_motion_value_on_Acc_and_Opp</targetReference>
+        </connector>
+        <filterFormula>OR(
+AND
+(
+ISCHANGED({!$Record.Typeform_Submitted__c}),
+{!$Record.Typeform_Submitted__c}) ,
+
+AND ({!$Record.Account.No_Repeat_Purchase_Typeform__c},
+  ISPICKVAL({!$Record.StageName}, &quot;Contract received&quot;)),
+
+AND (ISCHANGED({!$Record.StageName}),
+ ISPICKVAL({!$Record.StageName}, &quot;Closed Lost&quot;))
+)</filterFormula>
+        <object>Opportunity</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+    <triggerOrder>100</triggerOrder>
+</Flow>

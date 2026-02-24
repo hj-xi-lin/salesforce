@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>61.0</apiVersion>
+    <description>RO-2005, RO-2320</description>
+    <environments>Default</environments>
+    <interviewLabel>Update Bonus Budget on Opp {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Update Bonus Budget on Opp</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Bonus_Budget_on_Opp</name>
+        <label>Update Bonus Budget on Opp</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <inputAssignments>
+            <field>BonusBudget__c</field>
+            <value>
+                <elementReference>$Record.UnitPrice</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.Opportunity</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Bonus_Budget_on_Opp</targetReference>
+        </connector>
+        <filterLogic>or</filterLogic>
+        <filters>
+            <field>Product_Name__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Bonus HIRE Budget</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Product_Name__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Reach Bonus Monatsbudget</stringValue>
+            </value>
+        </filters>
+        <object>OpportunityLineItem</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

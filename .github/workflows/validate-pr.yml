@@ -1,0 +1,36 @@
+name: Validate PR (Dry-Run Deploy)
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'force-app/**'
+      - 'manifest/**'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Install Salesforce CLI
+        run: npm install -g @salesforce/cli
+
+      - name: Authenticate to Sandbox
+        run: |
+          echo "${{ secrets.SF_SANDBOX_AUTH_URL }}" > auth-url.txt
+          sf org login sfdx-url --sfdx-url-file auth-url.txt --alias sandbox
+          rm auth-url.txt
+
+      - name: Validate deployment (dry-run)
+        run: |
+          sf project deploy validate \
+            --source-dir force-app \
+            --target-org sandbox \
+            --test-level RunLocalTests \
+            --wait 30
+
+      - name: Report result
+        if: always()
+        run: echo "Validation ${{ job.status }}"

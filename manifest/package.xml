@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/schemas/metadata">
+  <!-- Objects, Fields, Record Types -->
+  <types>
+    <members>*</members>
+    <name>CustomObject</name>
+  </types>
+  <types>
+    <members>*</members>
+    <name>CustomField</name>
+  </types>
+  <types>
+    <members>*</members>
+    <name>RecordType</name>
+  </types>
+  <types>
+    <members>*</members>
+    <name>BusinessProcess</name>
+  </types>
+  <types>
+    <members>*</members>
+    <name>CompactLayout</name>
+  </types>
+  <types>
+    <members>*</members>
+    <name>FieldSet</name>
+  </types>
+  <types>
+    <members>*</members>
+    <name>ListView</name>
+  </types>
+  <types>
+    <members>*</members>
+    <name>WebLink</name>
+  </types>
+
+  <!-- Page Layouts -->
+  <types>
+    <members>*</members>
+    <name>Layout</name>
+  </types>
+
+  <!-- Validation Rules -->
+  <types>
+    <members>*</members>
+    <name>ValidationRule</name>
+  </types>
+
+  <!-- Apex Code -->
+  <types>
+    <members>*</members>
+    <name>ApexClass</name>
+  </types>
+  <types>
+    <members>*</members>
+    <name>ApexTrigger</name>
+  </types>
+
+  <!-- Flows & Process Builder -->
+  <types>
+    <members>*</members>
+    <name>Flow</name>
+  </types>
+
+  <!-- Lightning Web Components & Aura -->
+  <types>
+    <members>*</members>
+    <name>LightningComponentBundle</name>
+  </types>
+  <types>
+    <members>*</members>
+    <name>AuraDefinitionBundle</name>
+  </types>
+
+  <!-- Permission Sets & Profiles -->
+  <types>
+    <members>*</members>
+    <name>PermissionSet</name>
+  </types>
+  <types>
+    <members>*</members>
+    <name>Profile</name>
+  </types>
+  <types>
+    <members>*</members>
+    <name>PermissionSetGroup</name>
+  </types>
+
+  <!-- Workflows & Approvals -->
+  <types>
+    <members>*</members>
+    <name>Workflow</name>
+  </types>
+  <types>
+    <members>*</members>
+    <name>ApprovalProcess</name>
+  </types>
+
+  <!-- Reports & Dashboards -->
+  <types>
+    <members>*</members>
+    <name>Report</name>
+  </types>
+  <types>
+    <members>*</members>
+    <name>Dashboard</name>
+  </types>
+  <types>
+    <members>*</members>
+    <name>ReportType</name>
+  </types>
+
+  <!-- Email Templates -->
+  <types>
+    <members>*</members>
+    <name>EmailTemplate</name>
+  </types>
+
+  <!-- Apps & Tabs -->
+  <types>
+    <members>*</members>
+    <name>CustomApplication</name>
+  </types>
+  <types>
+    <members>*</members>
+    <name>CustomTab</name>
+  </types>
+
+  <!-- Lightning Pages -->
+  <types>
+    <members>*</members>
+    <name>FlexiPage</name>
+  </types>
+
+  <!-- Custom Labels & Metadata Types -->
+  <types>
+    <members>*</members>
+    <name>CustomLabels</name>
+  </types>
+  <types>
+    <members>*</members>
+    <name>CustomMetadata</name>
+  </types>
+
+  <!-- Static Resources -->
+  <types>
+    <members>*</members>
+    <name>StaticResource</name>
+  </types>
+
+  <!-- Assignment & Escalation Rules -->
+  <types>
+    <members>*</members>
+    <name>AssignmentRules</name>
+  </types>
+  <types>
+    <members>*</members>
+    <name>EscalationRules</name>
+  </types>
+
+  <!-- Sharing Rules, Roles -->
+  <types>
+    <members>*</members>
+    <name>SharingRules</name>
+  </types>
+  <types>
+    <members>*</members>
+    <name>Role</name>
+  </types>
+
+  <!-- Connected Apps & Named Credentials -->
+  <types>
+    <members>*</members>
+    <name>ConnectedApp</name>
+  </types>
+  <types>
+    <members>*</members>
+    <name>NamedCredential</name>
+  </types>
+
+  <!-- Queues & Groups -->
+  <types>
+    <members>*</members>
+    <name>Queue</name>
+  </types>
+  <types>
+    <members>*</members>
+    <name>Group</name>
+  </types>
+
+  <version>62.0</version>
+</Package>

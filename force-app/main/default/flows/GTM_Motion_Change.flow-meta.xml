@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <apiVersion>61.0</apiVersion>
+    <decisions>
+        <name>Approval_given</name>
+        <label>Approval given?</label>
+        <locationX>402</locationX>
+        <locationY>890</locationY>
+        <defaultConnector>
+            <targetReference>End_ApprovalRequired</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes3</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>MotionOwnerApproval.value</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Motion_System_Context</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Approval_Required</name>
+        <label>Approval Required?</label>
+        <locationX>182</locationX>
+        <locationY>566</locationY>
+        <defaultConnector>
+            <targetReference>Running_User_Permission2</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Yes</defaultConnectorLabel>
+        <rules>
+            <name>No_Front_Funnel</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Account.Stage_ACM__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>$Label.Account_Lifecycle_Stage_Lost</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_Account.Stage_ACM__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>$Label.Account_Lifecycle_Stage_Prospect</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_Account.Stage_ACM__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>$Label.Account_Lifecycle_Stage_Acquisition</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_Account.Stage_ACM__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>$Label.Account_Lifecycle_Stage_Outbound</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Motion_System_Context</targetReference>
+            </connector>
+            <label>No (Front Funnel)</label>
+        </rules>
+        <rules>
+            <name>No_Pool_User</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Account.OwnerId</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>$Label.Pre_Sales_Admin_ID</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_Account.OwnerId</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>$Label.SSSU_Admin_User_Id</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_Account.OwnerId</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>$Label.Lead_Gen_User_ID</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_Account.OwnerId</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>$Label.User_Id_HeySquad</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Motion_System_Context</targetReference>
+            </connector>
+            <label>No (Pool User)</label>
+        </rules>
+        <rules>
+            <name>No_Motion_Owner_Alignment</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>New_GTM_Motion</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Get_Account.Owner.GTM_Motion_User__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Motion_System_Context</targetReference>
+            </connector>
+            <label>No (Motion Owner Alignment)</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Error</name>
+        <label>Error?</label>
+        <locationX>182</locationX>
+        <locationY>1574</locationY>
+        <defaultConnector>
+            <targetReference>End_Error</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Yes</defaultConnectorLabel>
+        <rules>
+            <name>No</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Update_Motion_System_Context.varErrorMessage</leftValueReference>
+                <operator>IsBlank</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>End_MotionChanged</targetReference>
+            </connector>
+            <label>No</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Input_Validations</name>
+        <label>Input Validations</label>
+        <locationX>600</locationX>
+        <locationY>458</locationY>
+        <defaultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Input_New_Motion</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Back to Input Screen</defaultConnectorLabel>
+        <rules>
+            <name>All_good</name>
+            <conditionLogic>(1 OR (2 AND 3)) AND 4 AND 5</conditionLogic>
+            <conditions>
+                <leftValueReference>GTM_Motion_Change_Reason</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Other</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>GTM_Motion_Change_Reason</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Other</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>GTM_Motion_Change_Reason_Detail</leftValueReference>
+                <operator>IsBlank</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>New_GTM_Motion</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>Get_Account.GTM_Motion_Account__c</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>fmlChangeReasonAdmin</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Approval_Required</targetReference>
+            </connector>
+            <label>All good</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Running_User_Permission</name>
+        <label>Running User Permission</label>
+        <locationX>941</locationX>
+        <locationY>242</locationY>
+        <defaultConnector>
+            <targetReference>End_ANotAuthorized</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Full_Partial_Motion_Change</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Permission.Enable_Full_Motion_Change</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Permission.Enable_Partial_Motion_Change</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Input_New_Motion</targetReference>
+            </connector>
+            <label>Full/Partial Motion Change</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Running_User_Permission2</name>
+        <label>Running User Permission</label>
+        <locationX>578</locationX>
+        <locationY>674</locationY>
+        <defaultConnector>
+            <targetReference>End_NotAuthorized2</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Full_Motion_Change</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Permission.Enable_Full_Motion_Change</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Screen_Approval_Required</targetReference>
+            </connector>
+            <label>Full Motion Change</label>
+        </rules>
+    </decisions>
+    <description>RO-2179, RO-2232, RO-2291, RO-2317 , RO - 2763</description>
+    <dynamicChoiceSets>
+        <name>GTMMotionChangeReasonChoiceSet</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>GTM_Motion_Change_Reason__c</picklistField>
+        <picklistObject>Account</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>GTMMotionChoiceSet</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>GTM_Motion_Account__c</picklistField>
+        <picklistObject>Account</picklistObject>
+    </dynamicChoiceSets>
+    <environments>Default</environments>
+    <formulas>
+        <name>fmlChangeReasonAdmin</name>
+        <dataType>Boolean</dataType>
+        <expression>CONTAINS(  {!GTM_Motion_Change_Reason}  ,  &quot;Admin&quot; )</expression>
+    </formulas>
+    <formulas>
+        <name>fmlChangeReasonOther</name>
+        <dataType>String</dataType>
+        <expression>IF( ISBLANK( {!GTM_Motion_Change_Reason_Detail} ) , 
+&quot;Motion change via change request at &quot; + LEFT( TEXT( NOW() ) , 19) + &quot; (UTC)&quot; ,
+{!GTM_Motion_Change_Reason_Detail} + BR() +
+&quot;(Motion change via change request at &quot; + LEFT( TEXT( NOW() ) , 19) + &quot; (UTC)&quot; + &quot;)&quot;
+)</expression>
+    </formulas>
+    <formulas>
+        <name>fmlCurrentMotionOwner</name>
+        <dataType>String</dataType>
+        <expression>CASE( TEXT( {!Get_Account.GTM_Motion_Account__c} ) ,  
+{!$Label.GTM_Motion_Inside_Sales}  ,  {!$Label.GTM_Motion_Owner_Inside_Sales} , 
+{!$Label.GTM_Motion_New_Business_Subscription} ,  {!$Label.GTM_Motion_Owner_Subscription_New_Business} ,
+{!$Label.GTM_Motion_Subscription_Expansion}  ,  {!$Label.GTM_Motion_Owner_Subscription_Expansion} ,
+{!$Label.GTM_Motion_Subscription_Retention}  ,  {!$Label.GTM_Motion_Owner_Subscription_Retention} ,
+{!$Label.GTM_Motion_New_Business_Enterprise} ,  {!$Label.GTM_Motion_Owner_Enterprise_New_Business} ,
+{!$Label.GTM_Motion_Enterprise_Expansion}  ,  {!$Label.GTM_Motion_Owner_Enterprise_Expansion} ,
+{!$Label.GTM_Motion_Enterprise_Retention}  ,  {!$Label.GTM_Motion_Owner_Enterprise_Retention} ,
+{!$Label.GTM_Motion_Agency_Sales}  ,  {!$Label.GTM_Motion_Owner_Agency_Sales} ,
+{!$Label.GTM_Motion_Inventory_Partner} , {!$Label.GTM_Motion_Owner_Inventory_Partner},
+&quot;&quot;)</expression>
+    </formulas>
+    <formulas>
+        <name>fmlNewMotionOwner</name>
+        <dataType>String</dataType>
+        <expression>CASE( {!New_GTM_Motion}  ,  
+{!$Label.GTM_Motion_Inside_Sales}  ,  {!$Label.GTM_Motion_Owner_Inside_Sales} , 
+{!$Label.GTM_Motion_New_Business_Subscription} ,  {!$Label.GTM_Motion_Owner_Subscription_New_Business} ,
+{!$Label.GTM_Motion_Subscription_Expansion}  ,  {!$Label.GTM_Motion_Owner_Subscription_Expansion} ,
+{!$Label.GTM_Motion_Subscription_Retention}  ,  {!$Label.GTM_Motion_Owner_Subscription_Retention} ,
+{!$Label.GTM_Motion_New_Business_Enterprise} ,  {!$Label.GTM_Motion_Owner_Enterprise_New_Business} ,
+{!$Label.GTM_Motion_Enterprise_Expansion}  ,  {!$Label.GTM_Motion_Owner_Enterprise_Expansion} ,
+{!$Label.GTM_Motion_Enterprise_Retention}  ,  {!$Label.GTM_Motion_Owner_Enterprise_Retention} ,
+{!$Label.GTM_Motion_Agency_Sales}  ,  {!$Label.GTM_Motion_Owner_Agency_Sales} ,
+{!$Label.GTM_Motion_Inventory_Partner} , {!$Label.GTM_Motion_Owner_Inventory_Partner} ,
+&quot;&quot;)</expression>
+    </formulas>
+    <interviewLabel>GTM Motion Change {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>GTM Motion - Motion Change</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordLookups>
+        <name>Get_Account</name>
+        <label>Get Account</label>
+        <locationX>941</locationX>
+        <locationY>134</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Running_User_Permission</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Account</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <screens>
+        <name>End_ANotAuthorized</name>
+        <label>End_NotAuthorized</label>
+        <locationX>1282</locationX>
+        <locationY>350</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>ErrorMessage3</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;You are &lt;/span&gt;&lt;strong style=&quot;font-size: 14px;&quot;&gt;not authorized&lt;/strong&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt; to execute a motion change on this account. Please request the motion change in our slack support channel &lt;/span&gt;&lt;a href=&quot;https://hey-jobs.slack.com/archives/C070DSH58P3&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;font-size: 14px;&quot;&gt;&lt;strong&gt;#revops-support&lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <nextOrFinishButtonLabel>Close</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>End_ApprovalRequired</name>
+        <label>End_ApprovalRequired</label>
+        <locationX>490</locationX>
+        <locationY>998</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>ErrorMessage2</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;This change requires the &lt;/span&gt;&lt;strong style=&quot;font-size: 14px;&quot;&gt;explicit sign-off of both old and new motion owners&lt;/strong&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;. Please collect their approvals and then come back again.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;u&gt;Old Motion:&lt;/u&gt; &lt;strong&gt;{!Get_Account.GTM_Motion_Account__c}&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!fmlCurrentMotionOwner}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;u&gt;New Motion:&lt;/u&gt; &lt;strong&gt;{!New_GTM_Motion}&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!fmlNewMotionOwner}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <nextOrFinishButtonLabel>Close</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>End_Error</name>
+        <label>End_Error</label>
+        <locationX>314</locationX>
+        <locationY>1682</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>ErrorMessage</name>
+            <fieldText>&lt;p&gt;There was an &lt;strong&gt;error&lt;/strong&gt; when updating the account. Please reach out to an &lt;strong&gt;Admin&lt;/strong&gt; and provide the following details:&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(237, 24, 46);&quot;&gt;{!Update_Motion_System_Context.varErrorMessage}&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <nextOrFinishButtonLabel>Close</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>End_MotionChanged</name>
+        <label>End_MotionChanged</label>
+        <locationX>50</locationX>
+        <locationY>1682</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>SuccessMessage</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;GTM Motion was successfully changed to &lt;/span&gt;&lt;strong style=&quot;font-size: 14px;&quot;&gt;{!New_GTM_Motion}&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <nextOrFinishButtonLabel>Close</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>End_NotAuthorized2</name>
+        <label>End_NotAuthorized</label>
+        <locationX>754</locationX>
+        <locationY>782</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>Copy_1_of_ErrorMessage3</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;You are &lt;/span&gt;&lt;strong style=&quot;font-size: 14px;&quot;&gt;not authorized&lt;/strong&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt; to execute this motion change because it requires &lt;/span&gt;&lt;u style=&quot;font-size: 14px;&quot;&gt;Motion Owner Approval&lt;/u&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;. Please request the change in our slack support channel&lt;/span&gt;&lt;strong style=&quot;font-size: 14px;&quot;&gt; &lt;/strong&gt;&lt;span style=&quot;font-size: 14px; background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt; &lt;/span&gt;&lt;a href=&quot;https://hey-jobs.slack.com/archives/C070DSH58P3&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;font-size: 14px; background-color: rgb(255, 255, 255);&quot;&gt;&lt;strong&gt;#revops-support&lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <nextOrFinishButtonLabel>Close</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Input_New_Motion</name>
+        <label>Input New Motion</label>
+        <locationX>600</locationX>
+        <locationY>350</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Input_Validations</targetReference>
+        </connector>
+        <fields>
+            <name>CurrentMotion</name>
+            <fieldText>&lt;p&gt;Current Motion:&lt;/p&gt;&lt;p&gt;&lt;strong&gt;{!Get_Account.GTM_Motion_Account__c}&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>New_GTM_Motion</name>
+            <choiceReferences>GTMMotionChoiceSet</choiceReferences>
+            <dataType>String</dataType>
+            <defaultValue>
+                <elementReference>New_GTM_Motion</elementReference>
+            </defaultValue>
+            <fieldText>New GTM Motion</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>ErrorSameMotion</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;color: rgb(228, 25, 25);&quot;&gt;The new motion cannot be same as the current one.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+            <visibilityRule>
+                <conditionLogic>and</conditionLogic>
+                <conditions>
+                    <leftValueReference>New_GTM_Motion</leftValueReference>
+                    <operator>EqualTo</operator>
+                    <rightValue>
+                        <elementReference>Get_Account.GTM_Motion_Account__c</elementReference>
+                    </rightValue>
+                </conditions>
+            </visibilityRule>
+        </fields>
+        <fields>
+            <name>GTM_Motion_Change_Reason</name>
+            <choiceReferences>GTMMotionChangeReasonChoiceSet</choiceReferences>
+            <dataType>String</dataType>
+            <defaultValue>
+                <elementReference>GTM_Motion_Change_Reason</elementReference>
+            </defaultValue>
+            <fieldText>GTM Motion Change Reason</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Error_ChangeReasonOther</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;color: rgb(228, 25, 25);&quot;&gt;Please provide additional details below when selecting the Change Reason &lt;/span&gt;&lt;strong style=&quot;color: rgb(228, 25, 25);&quot;&gt;Other&lt;/strong&gt;&lt;span style=&quot;color: rgb(228, 25, 25);&quot;&gt;.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+            <visibilityRule>
+                <conditionLogic>and</conditionLogic>
+                <conditions>
+                    <leftValueReference>GTM_Motion_Change_Reason</leftValueReference>
+                    <operator>EqualTo</operator>
+                    <rightValue>
+                        <stringValue>Other</stringValue>
+                    </rightValue>
+                </conditions>
+                <conditions>
+                    <leftValueReference>GTM_Motion_Change_Reason_Detail</leftValueReference>
+                    <operator>EqualTo</operator>
+                </conditions>
+            </visibilityRule>
+        </fields>
+        <fields>
+            <name>Error_AdminChangeReason</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;color: rgb(228, 25, 25); background-color: rgb(255, 255, 255);&quot;&gt;You cannot select an &lt;/span&gt;&lt;strong style=&quot;color: rgb(228, 25, 25); background-color: rgb(255, 255, 255);&quot;&gt;Admin Only&lt;/strong&gt;&lt;span style=&quot;color: rgb(228, 25, 25); background-color: rgb(255, 255, 255);&quot;&gt; change reason.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+            <visibilityRule>
+                <conditionLogic>and</conditionLogic>
+                <conditions>
+                    <leftValueReference>GTM_Motion_Change_Reason</leftValueReference>
+                    <operator>Contains</operator>
+                    <rightValue>
+                        <stringValue>Admin</stringValue>
+                    </rightValue>
+                </conditions>
+            </visibilityRule>
+        </fields>
+        <fields>
+            <name>GTM_Motion_Change_Reason_Detail</name>
+            <dataType>String</dataType>
+            <defaultValue>
+                <elementReference>GTM_Motion_Change_Reason_Detail</elementReference>
+            </defaultValue>
+            <fieldText>GTM Motion Change Reason Detail</fieldText>
+            <fieldType>InputField</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>false</isRequired>
+            <validationRule>
+                <errorMessage>&lt;p&gt;test&lt;/p&gt;</errorMessage>
+                <formulaExpression>
+OR(
+    NOT( {!GTM_Motion_Change_Reason}= &quot;Other&quot;),
+    NOT(ISBLANK({!GTM_Motion_Change_Reason_Detail}))
+)</formulaExpression>
+            </validationRule>
+        </fields>
+        <nextOrFinishButtonLabel>Next</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Screen_Approval_Required</name>
+        <label>Screen Approval Required</label>
+        <locationX>402</locationX>
+        <locationY>782</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Approval_given</targetReference>
+        </connector>
+        <fields>
+            <name>Input</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;This change requires the &lt;/span&gt;&lt;strong style=&quot;font-size: 14px;&quot;&gt;explicit sign-off of both old and new motion owners.&lt;/strong&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt; Do you already have the required approvals?&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;u&gt;Old Motion:&lt;/u&gt; &lt;strong&gt;{!Get_Account.GTM_Motion_Account__c}&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!fmlCurrentMotionOwner}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;u&gt;New Motion:&lt;/u&gt; &lt;strong&gt;{!New_GTM_Motion}&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!fmlNewMotionOwner}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>MotionOwnerApproval</name>
+            <extensionName>flowruntime:toggle</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>label</name>
+                <value>
+                    <stringValue>Approval already granted</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>messageToggleActive</name>
+                <value>
+                    <stringValue>Yes</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>messageToggleInactive</name>
+                <value>
+                    <stringValue>No</stringValue>
+                </value>
+            </inputParameters>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <nextOrFinishButtonLabel>Next</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>815</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Account</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <name>Update_Motion_System_Context</name>
+        <label>Update Motion (System Context)</label>
+        <locationX>182</locationX>
+        <locationY>1466</locationY>
+        <connector>
+            <targetReference>Error</targetReference>
+        </connector>
+        <flowName>GTM_Motion_Update_GTM_Motion</flowName>
+        <inputAssignments>
+            <name>varAccount</name>
+            <value>
+                <elementReference>Get_Account</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varChangeReason</name>
+            <value>
+                <elementReference>GTM_Motion_Change_Reason</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varChangeReasonDetail</name>
+            <value>
+                <elementReference>fmlChangeReasonOther</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varNewGTMMotion</name>
+            <value>
+                <elementReference>New_GTM_Motion</elementReference>
+            </value>
+        </inputAssignments>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </subflows>
+    <variables>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

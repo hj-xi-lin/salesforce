@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Create_QLI</name>
+        <label>Create QLI</label>
+        <locationX>50</locationX>
+        <locationY>816</locationY>
+        <actionName>quoteProcess</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>quoteId</name>
+            <value>
+                <elementReference>Create_Quote</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>quoteProcess</nameSegment>
+    </actionCalls>
+    <apiVersion>59.0</apiVersion>
+    <assignments>
+        <name>Get_Quote_ID</name>
+        <label>Get Quote ID</label>
+        <locationX>50</locationX>
+        <locationY>708</locationY>
+        <assignmentItems>
+            <assignToReference>quoteId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Create_Quote</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Create_QLI</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Quote_count</name>
+        <label>Quote count</label>
+        <locationX>182</locationX>
+        <locationY>384</locationY>
+        <assignmentItems>
+            <assignToReference>existingQuote</assignToReference>
+            <operator>AssignCount</operator>
+            <value>
+                <elementReference>Check_for_quote</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Should_we_create_a_new_quote</targetReference>
+        </connector>
+    </assignments>
+    <constants>
+        <name>priceBook</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>01s0Y000006XNcp</stringValue>
+        </value>
+    </constants>
+    <decisions>
+        <name>Should_we_create_a_new_quote</name>
+        <label>Should we create a new quote</label>
+        <locationX>182</locationX>
+        <locationY>492</locationY>
+        <defaultConnectorLabel>Default outcome</defaultConnectorLabel>
+        <rules>
+            <name>Quote_doesnot_exist</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>existingQuote</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>0.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Permission.Automatic_Quote_Creation</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Create_Quote</targetReference>
+            </connector>
+            <label>Quote doesnot exist</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Sync_Quote</name>
+        <label>Sync Quote</label>
+        <locationX>710</locationX>
+        <locationY>384</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Sync</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>get_quote.Id</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.SyncedQuoteId</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Sync_Quote_to_Opp</targetReference>
+            </connector>
+            <label>Sync</label>
+        </rules>
+    </decisions>
+    <description>RO-1267, RO-1419, RO-1765, RO-2090</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>currentDate</name>
+        <dataType>Date</dataType>
+        <expression>TODAY()</expression>
+    </formulas>
+    <formulas>
+        <name>quoteExpirationDate</name>
+        <dataType>Date</dataType>
+        <expression>TODAY() + 14</expression>
+    </formulas>
+    <formulas>
+        <name>quoteName</name>
+        <dataType>String</dataType>
+        <expression>&quot;Kooperationsvertrag_&quot;+ {!$Record.Account.Name}+ &quot;_&quot;+TEXT(TODAY())</expression>
+    </formulas>
+    <interviewLabel>Quote creation on offer stage {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Quote creation on offer stage</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Create_Quote</name>
+        <label>Create Quote</label>
+        <locationX>50</locationX>
+        <locationY>600</locationY>
+        <connector>
+            <targetReference>Get_Quote_ID</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>BillingCity</field>
+            <value>
+                <elementReference>$Record.Billing_City__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>BillingName</field>
+            <value>
+                <elementReference>$Record.Bill_To_Name__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>BillingPostalCode</field>
+            <value>
+                <elementReference>$Record.Billing_Zip_Postal_Code__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>BillingStreet</field>
+            <value>
+                <elementReference>$Record.Billing_Street__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ExpirationDate</field>
+            <value>
+                <elementReference>quoteExpirationDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <elementReference>quoteName</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OpportunityId</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>$Record.Account.OwnerId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Pricebook2Id</field>
+            <value>
+                <elementReference>priceBook</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Service_Period__c</field>
+            <value>
+                <stringValue>6 months</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ShippingCity</field>
+            <value>
+                <elementReference>$Record.Shipping_City__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ShippingCountry</field>
+            <value>
+                <elementReference>$Record.Shipping_Country__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ShippingName</field>
+            <value>
+                <elementReference>$Record.Ship_To_Name__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ShippingPostalCode</field>
+            <value>
+                <elementReference>$Record.Shipping_ZIP_Postal_Code__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ShippingStreet</field>
+            <value>
+                <elementReference>$Record.Shipping_Street__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Draft</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>dPaymentTime__c</field>
+            <value>
+                <elementReference>$Record.Payment_Time__c</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Quote</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordLookups>
+        <name>Check_for_quote</name>
+        <label>Check for quote</label>
+        <locationX>182</locationX>
+        <locationY>276</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Quote_count</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>OpportunityId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>Quote</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>get_quote</name>
+        <label>get quote</label>
+        <locationX>710</locationX>
+        <locationY>276</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Sync_Quote</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>OpportunityId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Quote</object>
+        <sortField>LastModifiedDate</sortField>
+        <sortOrder>Desc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Sync_Quote_to_Opp</name>
+        <label>Sync Quote to Opp</label>
+        <locationX>578</locationX>
+        <locationY>492</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>SyncedQuoteId</field>
+            <value>
+                <elementReference>get_quote.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Opportunity</object>
+    </recordUpdates>
+    <start>
+        <locationX>320</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_for_quote</targetReference>
+        </connector>
+        <filterFormula>AND(
+OR(  ISCHANGED({!$Record.StageName})  ,  ISNEW()  ),
+
+OR(
+
+AND(
+ISPICKVAL({!$Record.StageName},&quot;Offer&quot;),
+OR(
+    {!$Record.RecordType.DeveloperName} = &quot;Sales&quot;,
+    {!$Record.RecordType.DeveloperName} = &quot;SecondPurchase&quot;,
+    {!$Record.RecordType.DeveloperName} = &quot;Account_Management&quot;,
+    {!$Record.RecordType.DeveloperName} = &quot;Agency_Customer_business&quot;
+)),
+
+AND(
+ISPICKVAL({!$Record.StageName},&quot;Pitch &amp; Negotiation&quot;),
+{!$Record.RecordType.Id} = LEFT(  {!$Label.OppSalesTransactionalRT}  , 15)
+)
+)
+)</filterFormula>
+        <object>Opportunity</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <scheduledPaths>
+            <name>Add_QLI</name>
+            <connector>
+                <targetReference>get_quote</targetReference>
+            </connector>
+            <label>Add QLI</label>
+            <offsetNumber>1</offsetNumber>
+            <offsetUnit>Minutes</offsetUnit>
+            <recordField>LastModifiedDate</recordField>
+            <timeSource>RecordField</timeSource>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>existingQuote</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>2</scale>
+    </variables>
+    <variables>
+        <name>quoteId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

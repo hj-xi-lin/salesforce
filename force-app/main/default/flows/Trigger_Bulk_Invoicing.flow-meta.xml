@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>61.0</apiVersion>
+    <description>RO - 2139</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>fmlFirstDayOfTheMonth</name>
+        <dataType>Date</dataType>
+        <expression>DATE(YEAR(TODAY()), MONTH(TODAY()), 1)</expression>
+    </formulas>
+    <interviewLabel>Trigger Bulk Invoicing {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Trigger Bulk Invoicing</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Trigger_Bulk_Invoice</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterFormula>AND(
+    {!$Record.Annual_Contract_2_0__c} = False,
+    ISPICKVAL({!$Record.Product_Type__c}, &quot;HIRE&quot;),
+OR (
+    {!$Record.Account.Parent.Bulk_Invoice_Useage__c} = True,
+    {!$Record.Account.Parent.Parent.Bulk_Invoice_Useage__c} = True),
+OR (
+   ISPICKVAL({!$Record.StageName}, &quot;Contract received&quot;),
+    ISPICKVAL({!$Record.StageName}, &quot;Closed Won&quot;)),
+   OR(
+         {!$Record.Account.Parent.RecordType.DeveloperName} = &quot;Agency_Sales&quot;,
+         {!$Record.Account.Parent.RecordType.DeveloperName} = &quot;Agency_Customer_Sales&quot;)
+)</filterFormula>
+        <object>Opportunity</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>InvalidDraft</status>
+    <subflows>
+        <name>Trigger_Bulk_Invoice</name>
+        <label>Trigger Bulk Invoice</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <flowName>Bulk_Invoicing_Actions</flowName>
+        <inputAssignments>
+            <name>varAccountId</name>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varOppId</name>
+        </inputAssignments>
+        <outputAssignments>
+            <assignToReference>$Record.AccountId</assignToReference>
+            <name>varAccountId</name>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>$Record.Id</assignToReference>
+            <name>varOppId</name>
+        </outputAssignments>
+    </subflows>
+    <variables>
+        <name>varAccountId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

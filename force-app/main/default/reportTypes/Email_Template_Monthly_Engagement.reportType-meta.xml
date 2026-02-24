@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject></baseObject>
+    <category>other</category>
+    <deployed>true</deployed>
+    <description>Email Template engagements by month</description>
+    <label>Email Template Monthly Engagement</label>
+    <sections>
+        <masterLabel>Email Templates</masterLabel>
+    </sections>
+    <sections>
+        <masterLabel>Email Template Monthly Metrics</masterLabel>
+    </sections>
+</ReportType>

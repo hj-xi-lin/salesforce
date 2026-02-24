@@ -1,0 +1,43 @@
+name: Deploy to Production
+
+on:
+  workflow_dispatch:
+    inputs:
+      test_level:
+        description: 'Apex test level'
+        required: true
+        default: 'RunLocalTests'
+        type: choice
+        options:
+          - NoTestRun
+          - RunLocalTests
+          - RunAllTestsInOrg
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: production  # Requires manual approval in GitHub Settings > Environments
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Install Salesforce CLI
+        run: npm install -g @salesforce/cli
+
+      - name: Authenticate to Production
+        run: |
+          echo "${{ secrets.SF_PRODUCTION_AUTH_URL }}" > auth-url.txt
+          sf org login sfdx-url --sfdx-url-file auth-url.txt --alias production
+          rm auth-url.txt
+
+      - name: Deploy to Production
+        run: |
+          sf project deploy start \
+            --source-dir force-app \
+            --target-org production \
+            --test-level ${{ inputs.test_level }} \
+            --wait 30
+
+      - name: Report result
+        if: always()
+        run: echo "Deployment ${{ job.status }}"

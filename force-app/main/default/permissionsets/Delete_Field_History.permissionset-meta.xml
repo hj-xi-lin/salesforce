@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Delete Field History</label>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>DeleteFieldHistory</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>DeleteFieldHistoryArchive</name>
+    </userPermissions>
+</PermissionSet>

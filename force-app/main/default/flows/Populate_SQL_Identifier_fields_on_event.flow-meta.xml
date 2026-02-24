@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <assignments>
+        <name>Update_SQL_Identifier_fields</name>
+        <label>Update SQL Identifier fields</label>
+        <locationX>50</locationX>
+        <locationY>503</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Lead_Qualification_1__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formulaChallenge</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Lead_Qualification_2__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formulaCompetitors</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Lead_Qualification_3__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formulaAuthority</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Lead_Qualification_4__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formulaMoney</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Lead_Qualification_5__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formulaPrioritization</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Lead_Qualification_6__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formulaExploration</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <name>Opportunity_retrieved</name>
+        <label>Opportunity retrieved?</label>
+        <locationX>182</locationX>
+        <locationY>395</locationY>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Opportunity</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_SQL_Identifier_fields</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <description>RO-2094, RO-2131</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>formulaAuthority</name>
+        <dataType>String</dataType>
+        <expression>&quot;Entscheidungsträger - &quot; + IF(ISNULL({!Get_Opportunity.Decision_maker_name__c}), NULL, {!Get_Opportunity.Decision_maker_name__r.Name}) + BR() +
+&quot;Genehmigungsprozess Rekrutierungslösung - &quot; + IF(ISNULL({!Get_Opportunity.Approval_process_recruitment_solution__c}), NULL, {!Get_Opportunity.Approval_process_recruitment_solution__c}) + BR() +
+&quot;Hauptfaktoren Entscheidungsfindung - &quot; + IF(ISNULL(TEXT({!Get_Opportunity.Key_factors_in_decision_making__c})), NULL, TEXT({!Get_Opportunity.Key_factors_in_decision_making__c}))</expression>
+    </formulas>
+    <formulas>
+        <name>formulaChallenge</name>
+        <dataType>String</dataType>
+        <expression>&quot;Vernachlässigte Funnelbereiche -  &quot; +  IF(ISNULL(TEXT({!Get_Opportunity.Funnel_areas_of_neglect__c})), NULL, TEXT({!Get_Opportunity.Funnel_areas_of_neglect__c})) + BR() +
+&quot;Herausfordernde Rollen und Abteilungen - &quot; + IF(ISNULL({!Get_Opportunity.Challenging_roles_departments__c}), NULL, {!Get_Opportunity.Challenging_roles_departments__c}) + BR()</expression>
+    </formulas>
+    <formulas>
+        <name>formulaCompetitors</name>
+        <dataType>String</dataType>
+        <expression>&quot;Competitor 1: current &amp; future - &quot; + IF(ISNULL(TEXT({!Get_Opportunity.Competitor_1_current_future__c})), NULL, TEXT({!Get_Opportunity.Competitor_1_current_future__c})) + BR() +
+&quot;Competitor 2: current &amp; future - &quot; + IF(ISNULL(TEXT({!Get_Opportunity.Competitor_2_current_future__c})), NULL, TEXT({!Get_Opportunity.Competitor_2_current_future__c})) + BR() +
+&quot;Competitor 3: current &amp; future - &quot; + IF(ISNULL(TEXT({!Get_Opportunity.Competitor_3_current_future__c})), NULL, TEXT({!Get_Opportunity.Competitor_3_current_future__c})) + BR() +
+&quot;Other Competitor - &quot; + IF(ISNULL({!Get_Opportunity.Other_Competitor__c}), NULL, {!Get_Opportunity.Other_Competitor__c})</expression>
+    </formulas>
+    <formulas>
+        <name>formulaExploration</name>
+        <dataType>String</dataType>
+        <expression>&quot;Erfolgsmessung - &quot; + IF(ISNULL(TEXT({!Get_Opportunity.Success_measurement__c})), NULL, TEXT({!Get_Opportunity.Success_measurement__c})) + BR() +
+&quot;Jährliches Einstellungsvolumen - &quot; + IF(ISNULL(TEXT({!Get_Opportunity.Annual_recruitment_volume__c})), NULL, TEXT({!Get_Opportunity.Annual_recruitment_volume__c})) + BR() +
+&quot;Existenz Employer Branding - &quot; + IF({!Get_Opportunity.Existence_employer_branding__c}, &quot;True&quot;, &quot;False&quot;)</expression>
+    </formulas>
+    <formulas>
+        <name>formulaMoney</name>
+        <dataType>String</dataType>
+        <expression>&quot;Jährliches Recrutierungsbudget - &quot; + IF(ISNULL(TEXT({!Get_Opportunity.Total_annual_recruiting_budget__c})), NULL, TEXT({!Get_Opportunity.Total_annual_recruiting_budget__c})) + BR() +
+&quot;Verfügbares Budget in Quartal/Jahr - &quot; + IF(ISNULL(TEXT({!Get_Opportunity.Budget_availability_next_quarter_year__c})), NULL, TEXT({!Get_Opportunity.Budget_availability_next_quarter_year__c})) + BR()</expression>
+    </formulas>
+    <formulas>
+        <name>formulaPrioritization</name>
+        <dataType>String</dataType>
+        <expression>&quot;Implemntierungszeitplan - &quot; + IF(ISNULL(TEXT({!Get_Opportunity.Implementation_timeline__c})), NULL, TEXT({!Get_Opportunity.Implementation_timeline__c})) + BR() +
+&quot;Priorisierung beeinflussende Ereignisse - &quot; + IF(ISNULL({!Get_Opportunity.Events_impacting_prioritization__c}), NULL, {!Get_Opportunity.Events_impacting_prioritization__c}) + BR()</expression>
+    </formulas>
+    <interviewLabel>Populate SQL Identifier fields on event {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Populate SQL Identifier fields on event</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Opportunity</name>
+        <label>Get Opportunity</label>
+        <locationX>182</locationX>
+        <locationY>287</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Opportunity_retrieved</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.WhatId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Opportunity</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Opportunity</targetReference>
+        </connector>
+        <object>Event</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Draft</status>
+</Flow>

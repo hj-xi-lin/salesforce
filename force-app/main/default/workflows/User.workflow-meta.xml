@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>User_was_created_alert</fullName>
+        <description>User was created alert</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>roman.riabenskyi@heyjobs.de</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>tinei.chiwara@heyjobs.de</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/User_was_created_notification</template>
+    </alerts>
+    <alerts>
+        <fullName>User_was_deactivated_alert</fullName>
+        <description>User was deactivated alert</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>roman.riabenskyi@heyjobs.de</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>tinei.chiwara@heyjobs.de</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/User_was_deactivated_notification</template>
+    </alerts>
+</Workflow>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <outboundMessages>
+        <fullName>Voucher_Campaign_Reminder</fullName>
+        <apiVersion>41.0</apiVersion>
+        <endpointUrl>https://hooks.zapier.com/hooks/catch/1714112/scrx8t/</endpointUrl>
+        <fields>Company</fields>
+        <fields>Email</fields>
+        <fields>FirstName</fields>
+        <fields>Id</fields>
+        <fields>LastName</fields>
+        <fields>Salutation</fields>
+        <includeSessionId>false</includeSessionId>
+        <integrationUser>salesexcellence@heyjobs.de</integrationUser>
+        <name>Voucher Campaign Reminder</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <tasks>
+        <fullName>Respond_to_inbound_today</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>High</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Respond to inbound today</subject>
+    </tasks>
+</Workflow>

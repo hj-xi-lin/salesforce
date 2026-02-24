@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Active_Account_Documentation_Wrong_Type</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+					Active_Account_Documentation__c ,
+					NOT( ISPICKVAL(Type__c , &quot;Account Documentation&quot;))
+)</errorConditionFormula>
+    <errorMessage>You can only mark an account documentation record as active account documentation</errorMessage>
+</ValidationRule>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>Quote_Acceptance_Screen</name>
+    </customPermissions>
+    <description>Custom Permission to test the new Quote Acceptance Screen</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Quote Acceptance Screen Testing</label>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>RunFlow</name>
+    </userPermissions>
+</PermissionSet>

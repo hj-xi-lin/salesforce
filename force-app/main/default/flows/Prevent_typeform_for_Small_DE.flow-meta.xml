@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <decisions>
+        <name>DE_Inside_Sales</name>
+        <label>DE + Inside Sales</label>
+        <locationX>182</locationX>
+        <locationY>323</locationY>
+        <defaultConnector>
+            <targetReference>NRPT_FALSE</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.GTM_Motion_Account__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>$Label.GTM_Motion_Inside_Sales</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Service_Country__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>DE</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>NRPT_TRUE</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <description>RO-1959, Typeform Update for changed Motion/Service Country</description>
+    <environments>Default</environments>
+    <interviewLabel>Prevent typeform for Small DE {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Prevent typeform for Small DE</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>NRPT_FALSE</name>
+        <label>NRPT = FALSE</label>
+        <locationX>314</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>No_Repeat_Purchase_Typeform__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>NRPT_TRUE</name>
+        <label>NRPT = TRUE</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>No_Repeat_Purchase_Typeform__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>DE_Inside_Sales</targetReference>
+        </connector>
+        <filterFormula>AND(
+ISBLANK({!$Record.txtCompanyId__c}),
+OR(   TEXT( {!$Record.Stage_ACM__c} ) = {!$Label.Account_Lifecycle_Stage_Prospect}  ,   TEXT( {!$Record.Stage_ACM__c} ) = {!$Label.Account_Lifecycle_Stage_Acquisition} , TEXT( {!$Record.Stage_ACM__c} ) = {!$Label.Account_Lifecycle_Stage_Outbound}  ,  TEXT( {!$Record.Stage_ACM__c} ) = {!$Label.Account_Lifecycle_Stage_Lost}),
+
+OR(
+
+AND(  
+ISNEW() , ISPICKVAL({!$Record.Service_Country__c}, &quot;DE&quot;) ,  TEXT( {!$Record.GTM_Motion_Account__c} ) = {!$Label.GTM_Motion_Inside_Sales} 
+ ),
+
+AND(
+ISCHANGED( {!$Record.GTM_Motion_Account__c} ) , 
+OR( TEXT( {!$Record__Prior.GTM_Motion_Account__c} ) = {!$Label.GTM_Motion_Inside_Sales} ,  TEXT( {!$Record.GTM_Motion_Account__c} ) = {!$Label.GTM_Motion_Inside_Sales} )
+),
+
+ISCHANGED( {!$Record.Service_Country__c} )
+))</filterFormula>
+        <object>Account</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

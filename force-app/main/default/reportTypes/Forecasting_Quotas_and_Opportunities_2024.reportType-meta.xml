@@ -1,0 +1,1333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>ForecastingQuota</baseObject>
+    <category>forecasts</category>
+    <deployed>true</deployed>
+    <description>Forecasting Quotas and Opportunities</description>
+    <join>
+        <join>
+            <outerJoin>false</outerJoin>
+            <relationship>ForecastingFactOpps</relationship>
+        </join>
+        <outerJoin>false</outerJoin>
+        <relationship>ForecastingQuotaItems</relationship>
+    </join>
+    <label>c - All Forecasting Quotas and Opportunities 2025</label>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Created By</displayNameOverride>
+            <field>CreatedBy</field>
+            <table>ForecastingQuota</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Created Date</displayNameOverride>
+            <field>CreatedDate</field>
+            <table>ForecastingQuota</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>End Date</displayNameOverride>
+            <field>EndDate</field>
+            <table>ForecastingQuota</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>ForecastingQuota ID</displayNameOverride>
+            <field>Id</field>
+            <table>ForecastingQuota</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Forecasting Type</displayNameOverride>
+            <field>ForecastingType</field>
+            <table>ForecastingQuota</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Is Amount</displayNameOverride>
+            <field>IsAmount</field>
+            <table>ForecastingQuota</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Is Quantity</displayNameOverride>
+            <field>IsQuantity</field>
+            <table>ForecastingQuota</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Modified By</displayNameOverride>
+            <field>LastModifiedBy</field>
+            <table>ForecastingQuota</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Modified Date</displayNameOverride>
+            <field>LastModifiedDate</field>
+            <table>ForecastingQuota</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Quota Owner</displayNameOverride>
+            <field>Owner</field>
+            <table>ForecastingQuota</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Product Family</displayNameOverride>
+            <field>ProductFamily</field>
+            <table>ForecastingQuota</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Quota Amount</displayNameOverride>
+            <field>QuotaAmount</field>
+            <table>ForecastingQuota</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Quota Currency</displayNameOverride>
+            <field>CurrencyIsoCode</field>
+            <table>ForecastingQuota</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Quota Quantity</displayNameOverride>
+            <field>QuotaQuantity</field>
+            <table>ForecastingQuota</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Start Date</displayNameOverride>
+            <field>StartDate</field>
+            <table>ForecastingQuota</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Quotas Owner Profile</displayNameOverride>
+            <field>Owner.Profile</field>
+            <table>ForecastingQuota</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Forecasting Quota : Created By : Manager</displayNameOverride>
+            <field>CreatedBy.Manager</field>
+            <table>ForecastingQuota</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Forecasting Quota : Created By : Manager (reports)</displayNameOverride>
+            <field>CreatedBy.Manager_reports__c</field>
+            <table>ForecastingQuota</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Forecasting Quota : Created By : Manager ID (reports)</displayNameOverride>
+            <field>CreatedBy.Manager_ID_reports__c</field>
+            <table>ForecastingQuota</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Forecasting Quota : Owner : Manager</displayNameOverride>
+            <field>Owner.Manager</field>
+            <table>ForecastingQuota</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Forecasting Quota : Owner : Manager (reports)</displayNameOverride>
+            <field>Owner.Manager_reports__c</field>
+            <table>ForecastingQuota</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Forecasting Quota : Owner : Manager ID (reports)</displayNameOverride>
+            <field>Owner.Manager_ID_reports__c</field>
+            <table>ForecastingQuota</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Service Country</displayNameOverride>
+            <field>Service_Country__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Segment Opp V02 (reporting only)</displayNameOverride>
+            <field>Segment_Opp_V02__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>ForecastingFact-Opp : Account Name : Segment V02 (reporting only)</displayNameOverride>
+            <field>Account.Segment_V02__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Forecasting Quota : Owner : User ID</displayNameOverride>
+            <field>Owner.Id</field>
+            <table>ForecastingQuota</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Forecasting Quota : Owner : GTM Motion User</displayNameOverride>
+            <field>Owner.GTM_Motion_User__c</field>
+            <table>ForecastingQuota</table>
+        </columns>
+        <masterLabel>Forecasting Quotas</masterLabel>
+    </sections>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Amount Without Adjustments</displayNameOverride>
+            <field>AmountWithoutAdjustments</field>
+            <table>ForecastingQuota.ForecastingQuotaItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Amount Without Manager Adjustment</displayNameOverride>
+            <field>AmountWithoutManagerAdjustment</field>
+            <table>ForecastingQuota.ForecastingQuotaItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Currency ISO Code</displayNameOverride>
+            <field>CurrencyIsoCode</field>
+            <table>ForecastingQuota.ForecastingQuotaItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Weighted Amount</displayNameOverride>
+            <field>Weighted_Amount__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>End Date</displayNameOverride>
+            <field>EndDate</field>
+            <table>ForecastingQuota.ForecastingQuotaItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Forecast Amount</displayNameOverride>
+            <field>ForecastAmount</field>
+            <table>ForecastingQuota.ForecastingQuotaItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Forecast Category</displayNameOverride>
+            <field>ForecastCategoryName</field>
+            <table>ForecastingQuota.ForecastingQuotaItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Forecasting Item Category</displayNameOverride>
+            <field>ForecastingItemCategory</field>
+            <table>ForecastingQuota.ForecastingQuotaItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Forecasting Item ID</displayNameOverride>
+            <field>Id</field>
+            <table>ForecastingQuota.ForecastingQuotaItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Forecasting Type</displayNameOverride>
+            <field>ForecastingType</field>
+            <table>ForecastingQuota.ForecastingQuotaItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Forecast Quantity</displayNameOverride>
+            <field>ForecastQuantity</field>
+            <table>ForecastingQuota.ForecastingQuotaItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Has Adjustment</displayNameOverride>
+            <field>HasAdjustment</field>
+            <table>ForecastingQuota.ForecastingQuotaItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Has Owner Adjustment</displayNameOverride>
+            <field>HasOwnerAdjustment</field>
+            <table>ForecastingQuota.ForecastingQuotaItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Is Amount</displayNameOverride>
+            <field>IsAmount</field>
+            <table>ForecastingQuota.ForecastingQuotaItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Is Quantity</displayNameOverride>
+            <field>IsQuantity</field>
+            <table>ForecastingQuota.ForecastingQuotaItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Item Owner</displayNameOverride>
+            <field>Owner</field>
+            <table>ForecastingQuota.ForecastingQuotaItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Owner Only Amount</displayNameOverride>
+            <field>OwnerOnlyAmount</field>
+            <table>ForecastingQuota.ForecastingQuotaItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Owner Only Quantity</displayNameOverride>
+            <field>OwnerOnlyQuantity</field>
+            <table>ForecastingQuota.ForecastingQuotaItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Quantity Without Adjustments</displayNameOverride>
+            <field>QuantityWithoutAdjustments</field>
+            <table>ForecastingQuota.ForecastingQuotaItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Product Family</displayNameOverride>
+            <field>ProductFamily</field>
+            <table>ForecastingQuota.ForecastingQuotaItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Quantity Without Manager Adjustment</displayNameOverride>
+            <field>QuantityWithoutManagerAdjustment</field>
+            <table>ForecastingQuota.ForecastingQuotaItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Start Date</displayNameOverride>
+            <field>StartDate</field>
+            <table>ForecastingQuota.ForecastingQuotaItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Items Owner Profile</displayNameOverride>
+            <field>Owner.Profile</field>
+            <table>ForecastingQuota.ForecastingQuotaItems</table>
+        </columns>
+        <masterLabel>Forecasting Items</masterLabel>
+    </sections>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>GTM Motion Opportunity</displayNameOverride>
+            <field>GTM_Motion_Opportunity__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Legacy - 1st Job Submitted</displayNameOverride>
+            <field>X1st_Job_Submitted__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Contact Email</displayNameOverride>
+            <field>Account_Contact_Email__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Happiness</displayNameOverride>
+            <field>fmlAccountHappiness__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>AccountName</displayNameOverride>
+            <field>fmlAccountName__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Demo_Count_Forecast__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Winback_Pilot__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Name</displayNameOverride>
+            <field>Account</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Demo set by</displayNameOverride>
+            <field>Demo_set_by_new__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Demo set by Profile</displayNameOverride>
+            <field>Demo_set_by_Profile__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Source</displayNameOverride>
+            <field>Account_Source__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Additional Billing Information</displayNameOverride>
+            <field>Additional_Billing_Information__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Timestamp Demo confirmed</displayNameOverride>
+            <field>Timestamp_Demo_confirmed__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Timestamp Demo Held</displayNameOverride>
+            <field>Timestamp_Demo_Held__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>HeyPaket</displayNameOverride>
+            <field>Annual_Contract_2_0__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>JustOn: Additional Info Block</displayNameOverride>
+            <field>ON_AdditionalInfoBlock__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Agency flexible framework</displayNameOverride>
+            <field>Agency_flexible_framework__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Amount</displayNameOverride>
+            <field>Amount</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Backend Link</displayNameOverride>
+            <field>Backend_Link__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Billing Check</displayNameOverride>
+            <field>bBillingCheck__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Billing City</displayNameOverride>
+            <field>Billing_City__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Billing Comments</displayNameOverride>
+            <field>txtBillingComments__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Billing Country Code</displayNameOverride>
+            <field>Billing_Country_Code__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Billing Due Date</displayNameOverride>
+            <field>dateBillingDueDate__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Billing Email</displayNameOverride>
+            <field>Billing_Email__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Billing Street</displayNameOverride>
+            <field>Billing_Street__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Billing Zip/Postal Code</displayNameOverride>
+            <field>Billing_Zip_Postal_Code__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Bill To Name</displayNameOverride>
+            <field>Bill_To_Name__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Budget</displayNameOverride>
+            <field>Budget__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Career Page (from Account)</displayNameOverride>
+            <field>fmlCareerPage__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Close</displayNameOverride>
+            <field>Close__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Closed</displayNameOverride>
+            <field>IsClosed</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Close Date</displayNameOverride>
+            <field>CloseDate</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Closed Won/Lost Month</displayNameOverride>
+            <field>fmlClosedWonLostMonth__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Contract</displayNameOverride>
+            <field>Contract</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Contract ID</displayNameOverride>
+            <field>Contract_ID__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Contract received Month</displayNameOverride>
+            <field>Contract_received_Month__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Create Case</displayNameOverride>
+            <field>bCreateCase__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Created By</displayNameOverride>
+            <field>CreatedBy</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Created Date</displayNameOverride>
+            <field>CreatedDate</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Created from Lead</displayNameOverride>
+            <field>Created_from_Lead__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>JustOn: Create Single Invoice</displayNameOverride>
+            <field>ON_CreateSingleInvoice__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Legacy Days</displayNameOverride>
+            <field>fmlDays__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Days Quarter</displayNameOverride>
+            <field>Days_Quarter__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Days to Close</displayNameOverride>
+            <field>fmlDaystoClose__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Demo Date</displayNameOverride>
+            <field>Demo_Date__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Legacy - Demo Person</displayNameOverride>
+            <field>Demo_Person__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Demo Date to Contract received</displayNameOverride>
+            <field>Demo_Date_to_Contract_received__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Demo Date to Offer</displayNameOverride>
+            <field>Demo_Date_to_Offer__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Description</displayNameOverride>
+            <field>Description</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Expected Revenue</displayNameOverride>
+            <field>ExpectedRevenue</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Legacy - Follow-Up Date</displayNameOverride>
+            <field>Follow_Up_Date__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Forecast Category</displayNameOverride>
+            <field>ForecastCategoryName</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Go Live Date</displayNameOverride>
+            <field>dateGoLiveDate__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Has Attachment</displayNameOverride>
+            <field>Has_Attachment__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Has Line Item</displayNameOverride>
+            <field>HasOpportunityLineItem</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Demo Hunter</displayNameOverride>
+            <field>Hunter__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Invoice Contact Email</displayNameOverride>
+            <field>Invoice_Contact_Email__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Invoice Contact Role</displayNameOverride>
+            <field>bInvoiceContactRole__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Invoice Email Reminder</displayNameOverride>
+            <field>Invoice_Email_Reminder__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Invoice Email Reminder 2</displayNameOverride>
+            <field>Invoice_Email_Reminder_2__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>JustOn: Last Invoice Run</displayNameOverride>
+            <field>ON_LastInvoiceRun__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Activity</displayNameOverride>
+            <field>LastActivityDate</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>LastDayMonth</displayNameOverride>
+            <field>fmlLastDayMonth__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Error</displayNameOverride>
+            <field>ON_LastError__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Modified By</displayNameOverride>
+            <field>LastModifiedBy</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Modified Date</displayNameOverride>
+            <field>LastModifiedDate</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Stage Change Date</displayNameOverride>
+            <field>LastStageChangeDate</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Lead Source</displayNameOverride>
+            <field>LeadSource</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Loss Reason</displayNameOverride>
+            <field>plLossReason__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Next Step</displayNameOverride>
+            <field>NextStep</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>No Address Update</displayNameOverride>
+            <field>No_Address_Update__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>No Repeat Purchase Typeform</displayNameOverride>
+            <field>No_Repeat_Purchase_Typeform__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Legacy - OfferDate</displayNameOverride>
+            <field>fmlOfferDate__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Offer to Contract received</displayNameOverride>
+            <field>Offer_to_Contract_received__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>JustOn: BillingComment</displayNameOverride>
+            <field>ON_BillingComment__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>JustOn: Recipient</displayNameOverride>
+            <field>ON_Recipient__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>ON_RecipientShip</displayNameOverride>
+            <field>ON_RecipientShip__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>ON_Region</displayNameOverride>
+            <field>OFF_Region__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>JustOn: Shipping City</displayNameOverride>
+            <field>ON_ShippingCity__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>JustOn: Shipping Country</displayNameOverride>
+            <field>ON_ShippingCountry__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>JustOn: Shipping Postal Code</displayNameOverride>
+            <field>ON_ShippingPostalCode__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>JustOn: Shipping Street</displayNameOverride>
+            <field>ON_ShippingStreet__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Onboarding</displayNameOverride>
+            <field>Onboarding__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>OnboardingContact</displayNameOverride>
+            <field>refOnboardingContact__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Onboarding Contact Last Name</displayNameOverride>
+            <field>Onboarding_Contact_Last_Name__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Onboarding Date</displayNameOverride>
+            <field>dateOnboardingDate__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Onboarding Email</displayNameOverride>
+            <field>fmlOnboardingEmail__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Onboarding Note</displayNameOverride>
+            <field>txtOnboardingNote__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>One</displayNameOverride>
+            <field>One__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Onlinekauf</displayNameOverride>
+            <field>Onlinekauf__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Onlinekauf Amount</displayNameOverride>
+            <field>Onlinekauf_Amount__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Onoarding Salutation</displayNameOverride>
+            <field>fmlOnoardingSalutation__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Opportunity Currency</displayNameOverride>
+            <field>CurrencyIsoCode</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Opportunity ID</displayNameOverride>
+            <field>Id</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Opportunity ID</displayNameOverride>
+            <field>ON_Opportunity__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <displayNameOverride>Opportunity Name</displayNameOverride>
+            <field>Name</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Owner Role</displayNameOverride>
+            <field>Owner_Role__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Opportunity Owner</displayNameOverride>
+            <field>Owner</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Opportunity Record Type</displayNameOverride>
+            <field>RecordType</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Owner Email</displayNameOverride>
+            <field>Owner_Email__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>OwnerName</displayNameOverride>
+            <field>fmlOwnerName__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>OwnerProfile</displayNameOverride>
+            <field>OwnerProfile__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>legacy - Parent Account</displayNameOverride>
+            <field>refParentAccount__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Pipedrive ID</displayNameOverride>
+            <field>txtPipedriveID__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Price Book</displayNameOverride>
+            <field>Pricebook2</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Primary Campaign Source</displayNameOverride>
+            <field>Campaign</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Primary Partner Account</displayNameOverride>
+            <field>PrimaryPartnerAccount</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Private</displayNameOverride>
+            <field>IsPrivate</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Probability (%)</displayNameOverride>
+            <field>Probability</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Purchase ID</displayNameOverride>
+            <field>Purchase_ID__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Quantity</displayNameOverride>
+            <field>TotalOpportunityQuantity</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Shipping City</displayNameOverride>
+            <field>Shipping_City__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Shipping Country</displayNameOverride>
+            <field>Shipping_Country__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Legacy Segment_Opp</displayNameOverride>
+            <field>Segment_Opp__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Shipping Street</displayNameOverride>
+            <field>Shipping_Street__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Shipping ZIP/Postal Code</displayNameOverride>
+            <field>Shipping_ZIP_Postal_Code__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Ship To Name</displayNameOverride>
+            <field>Ship_To_Name__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Specific Invoice Information</displayNameOverride>
+            <field>Specific_Invoice_Information__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Stage</displayNameOverride>
+            <field>StageName</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Stage Sort Order</displayNameOverride>
+            <field>StageSortOrder</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Synced Quote</displayNameOverride>
+            <field>SyncedQuote</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Time Reschulding to Demo</displayNameOverride>
+            <field>Time_Reschulding_to_Demo__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Timestamp Closed Won/Lost</displayNameOverride>
+            <field>dateTimestampClosedWonLost__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Timestamp Closed Won/Lost Time</displayNameOverride>
+            <field>dateTimestampClosedWonLostTime__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Timestamp Contract received</displayNameOverride>
+            <field>dateTimestampContractreceived__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Timestamp Last Demo</displayNameOverride>
+            <field>Timestamp_Demo__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Timestamp Demo Scheduled</displayNameOverride>
+            <field>Timestamp_Demo_Scheduled__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Timestamp In Discussion</displayNameOverride>
+            <field>dateTimestampInDiscussion__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Timestamp In Discussion Time</displayNameOverride>
+            <field>dateTimestampInDiscussionTime__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Timestamp Invite Sent Time</displayNameOverride>
+            <field>dateTimestampInviteSentTime__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Timestamp Lead Interested</displayNameOverride>
+            <field>dateTimestampLead_nterested__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Timestamp Offer</displayNameOverride>
+            <field>TimestampOffer__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Timestamp Offer Time</displayNameOverride>
+            <field>dateTimestampOfferTime__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Legacy - Timestamp On Hold</displayNameOverride>
+            <field>Timestamp_On_Hold__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Timestamp Pilot Definition</displayNameOverride>
+            <field>TimestampPilotDefinition__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Timestamp Pilot Definition Time</displayNameOverride>
+            <field>dateTimestampPilotDefinitionTime__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Timestamp Pre- Discussion Time</displayNameOverride>
+            <field>Timestamp_Pre_Discussion_Time__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Legacy -Timestamp Pre- Satisfaction Call</displayNameOverride>
+            <field>dateTimestampPreSatisfactionCall__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Legacy - TS Pre- Satisfaction Call Time</displayNameOverride>
+            <field>dateTimestampPreSatisfactionCallTime__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Timestamp Rescheduling</displayNameOverride>
+            <field>Timestamp_Rescheduling__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Timestamp Satisfaction Call</displayNameOverride>
+            <field>TimestampSatisfactionCall__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Timestamp Satisfaction Call Time</displayNameOverride>
+            <field>dateTimestampSatisfactionCallTime__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Legacy - Timestamp Verbal Yes</displayNameOverride>
+            <field>TimestampVerbalYes__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Legacy - Timestamp Verbal Yes Time</displayNameOverride>
+            <field>dateTimestampVerbalYesTime__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Type</displayNameOverride>
+            <field>Type</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Typeform</displayNameOverride>
+            <field>Typeform__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>VAT ID</displayNameOverride>
+            <field>VAT_ID__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Website</displayNameOverride>
+            <field>fmlWebsite__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Won</displayNameOverride>
+            <field>IsWon</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>ForecastingFact-Opp : Account Name : Test Account</displayNameOverride>
+            <field>Account.Test_Account__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Close Date Month</displayNameOverride>
+            <field>Close_Date_Month__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Opportunity Owner Profile</displayNameOverride>
+            <field>Owner.Profile</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>not a new customer</displayNameOverride>
+            <field>not_a_new_customer__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Annual Contract</displayNameOverride>
+            <field>Annual_Contract__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>ForecastingFact-Opp : Account Name : Legacy Segment</displayNameOverride>
+            <field>Account.Segment__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>ForecastingFact-Opp : Account Name : Account Count</displayNameOverride>
+            <field>Account.fmlOne__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>ForecastingFact-Opp : Account Name : Employees</displayNameOverride>
+            <field>Account.NumberOfEmployees</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>ForecastingFact-Opp : Account Name : Service Country</displayNameOverride>
+            <field>Account.Service_Country__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>ForecastingFact-Opp : Opportunity Owner : GTM Motion User</displayNameOverride>
+            <field>Owner.GTM_Motion_User__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>ForecastingFact-Opp : Opportunity Owner : Manager (reports)</displayNameOverride>
+            <field>Owner.Manager_reports__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Record Type</displayNameOverride>
+            <field>Record_Type__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>ForecastingFact-Opp : Opportunity Record Type : Record Type Name</displayNameOverride>
+            <field>RecordType.DeveloperName</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>ForecastingFact-Opp : Opportunity Record Type : Record Type ID</displayNameOverride>
+            <field>RecordType.Id</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Pilot Opportunity</displayNameOverride>
+            <field>Pilot_Opportunity__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Account.Stage_ACM__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Timestamp_Demo_Held_Time__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Account.Account_ID_18_digit__c</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Account.Name</field>
+            <table>ForecastingQuota.ForecastingQuotaItems.ForecastingFactOpps</table>
+        </columns>
+        <masterLabel>Opportunities</masterLabel>
+    </sections>
+</ReportType>

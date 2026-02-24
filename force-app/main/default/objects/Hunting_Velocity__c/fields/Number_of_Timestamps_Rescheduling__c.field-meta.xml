@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Number_of_Timestamps_Rescheduling__c</fullName>
+    <description>Populated via flow &quot;Hunting Velocity&quot;
+RO-1334</description>
+    <externalId>false</externalId>
+    <label>Number of Timestamps Rescheduling</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Slack_Message</name>
+        <label>Slack Message</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <actionName>slackv2__invokePostMessage</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>message</name>
+            <value>
+                <elementReference>contractReceivedSlackMessage</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>messageDestinationId</name>
+            <value>
+                <stringValue>a2L9L00000000TNUAY</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>$Record.Account.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>slackv2__invokePostMessage</nameSegment>
+    </actionCalls>
+    <apiVersion>59.0</apiVersion>
+    <description>Power week- Removal of legacy Lead score field.</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>contractReceivedSlackMessage</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.Account.Name}+ &quot; &quot;+&quot;is a new account now in &quot;+ TEXT({!$Record.StageName})+&quot; Needs to be assigned a ACM and CSM&quot;</expression>
+    </formulas>
+    <interviewLabel>Slack message on Contract Received stage {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Slack message on Contract Received stage</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Slack_Message</targetReference>
+        </connector>
+        <filterFormula>AND(
+ISCHANGED( {!$Record.StageName} ),
+ISPICKVAL( {!$Record.StageName} , &quot;Contract received&quot; ),
+ISPICKVAL(  {!$Record.Type} , &quot;Hunting&quot; ),
+ISPICKVAL(  {!$Record.Segment_Opp_V02__c}, &quot;Small&quot; ),
+NOT( {!$Record.Account.Test_Account__c})
+)</filterFormula>
+        <object>Opportunity</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+</Flow>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>SSSU_Lead_Conversion_LTE</name>
+    </customPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>SSSU Lead Conversion LTE</label>
+</PermissionSet>

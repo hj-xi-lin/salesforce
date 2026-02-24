@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>CountryChange</fullName>
+        <field>BillingCountry</field>
+        <formula>&quot;Deutschland&quot;</formula>
+        <name>CountryChange</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CountryChanges</fullName>
+        <field>BillingCountry</field>
+        <formula>&quot;Deutschland&quot;</formula>
+        <name>CountryChange</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>ExpirationDate14Days</fullName>
+        <field>ExpirationDate</field>
+        <formula>TODAY() + 14</formula>
+        <name>Expiration Date 14 Days</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>QuoteName</fullName>
+        <field>Name</field>
+        <formula>&quot;Kooperationsvertrag_&quot;&amp;Opportunity.Account.Name&amp;&quot;_&quot;&amp;TEXT(TODAY())</formula>
+        <name>QuoteName</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>QuoteNamingConvention</fullName>
+        <actions>
+            <name>QuoteName</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Names Quote Appropriatly</description>
+        <formula>AND(
+    NOT(ISPICKVAL(Opportunity.Account.BillingCountryCode,&quot;US&quot;)),
+    Name != null
+)</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Set Expiration Date</fullName>
+        <actions>
+            <name>ExpirationDate14Days</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Quote.ExpirationDate</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <description>Set ExpirationDate to 14Days, if not filled out</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

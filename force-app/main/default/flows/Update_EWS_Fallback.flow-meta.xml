@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>64.0</apiVersion>
+    <description>RO - 2560</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>fmlCategory3</name>
+        <dataType>Number</dataType>
+        <expression>CASE(
+    TEXT({!$Record.Category_3__c}),
+    &quot;Supermarkets&quot;, VALUE({!$Label.Supermarket}),
+    &quot;Rail Companies&quot;, VALUE({!$Label.Rail_Companies}),
+    &quot;Courier Services&quot;, VALUE({!$Label.CourierServices}),
+    &quot;Technology Stores&quot;, VALUE({!$Label.Technology_Stores}),
+    &quot;Furniture Stores&quot;, VALUE({!$Label.Furniture_Stores_AF}),
+    &quot;Call center&quot;, VALUE({!$Label.Call_Centers_AF}),
+    &quot;Foods&quot;, VALUE({!$Label.Foods_AF}),
+    &quot;Parks&quot;, VALUE({!$Label.Parks_AF}),
+    &quot;NGO&quot;, VALUE({!$Label.NGO_AF}),
+    &quot;Airports&quot;, VALUE({!$Label.Airports_AF}),
+    &quot;Electrical Wholesalers&quot;, VALUE({!$Label.Electrical_Wholesalers_AF}),
+    &quot;Meat Products&quot;, VALUE({!$Label.Meat_Products_AF}),
+    &quot;Advertising Agencies&quot;, VALUE({!$Label.Advertising_Agencies_AF}),
+    &quot;Temporary Employment Agencies&quot;, VALUE({!$Label.Temporary_Employment_Agencies_AF}),
+    &quot;Headhunter&quot;, VALUE({!$Label.Headhunters_AF}),
+    &quot;Job promotion&quot;, VALUE({!$Label.Job_Promotion_AF}),
+    1
+)</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <name>fmlEWSFallback</name>
+        <dataType>Number</dataType>
+        <expression>IF({!$Record.NumberOfEmployees} &lt;= 10, 0,
+   IF({!$Record.NumberOfEmployees} &lt;= 50, 4000 * {!fmlCategory3} ,
+      IF({!$Record.NumberOfEmployees} &lt;= 100, 10000 * {!fmlCategory3},
+         IF({!$Record.NumberOfEmployees} &lt;= 250, 20000 * {!fmlCategory3},
+            IF({!$Record.NumberOfEmployees} &lt;= 500, 35000 * {!fmlCategory3} ,
+               IF({!$Record.NumberOfEmployees} &lt;= 1000, 74000 * {!fmlCategory3} ,
+                  IF({!$Record.NumberOfEmployees} &lt;= 2500, 100000 * {!fmlCategory3} ,
+                     IF({!$Record.NumberOfEmployees} &lt;= 5000, 100001 * {!fmlCategory3} ,
+                        IF({!$Record.NumberOfEmployees} &lt;= 10000, 100002 * {!fmlCategory3},
+                           IF({!$Record.NumberOfEmployees} &lt;= 20000, 100003 * {!fmlCategory3} ,
+                              IF({!$Record.NumberOfEmployees} &lt;= 30000, 100004 * {!fmlCategory3} ,
+                                 IF({!$Record.NumberOfEmployees} &lt;= 50000, 100005 * {!fmlCategory3} ,
+                                    IF({!$Record.NumberOfEmployees} &lt;= 75000, 100006 * {!fmlCategory3} ,
+                                       IF({!$Record.NumberOfEmployees} &lt;= 100000, 100007 * {!fmlCategory3} ,
+                                          IF({!$Record.NumberOfEmployees} &lt;= 150000, 100008 * {!fmlCategory3} ,
+                                             IF({!$Record.NumberOfEmployees} &lt;= 200000, 100009 * {!fmlCategory3} ,
+                                                IF({!$Record.NumberOfEmployees} &lt;= 300000, 100010 * {!fmlCategory3} ,
+                                                   IF({!$Record.NumberOfEmployees} &lt;= 400000, 100011 * {!fmlCategory3} ,
+                                                      IF({!$Record.NumberOfEmployees} &lt;= 500000, 100012 * {!fmlCategory3} ,
+                                                       IF({!$Record.NumberOfEmployees} &gt; 500000, 100013 * {!fmlCategory3} ,
+                                                         0
+                                                       )
+                                                      )
+                                                   )
+                                                )
+                                             )
+                                          )
+                                       )
+                                    )
+                                 )
+                              )
+                           )
+                        )
+                     )
+                  )
+               )
+            )
+         )
+      )
+   )
+)</expression>
+        <scale>2</scale>
+    </formulas>
+    <interviewLabel>Update EWS Fallback {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Update EWS Fallback</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_EWS_Fallback</name>
+        <label>Update EWS Fallback</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>EWS_Fallback__c</field>
+            <value>
+                <elementReference>fmlEWSFallback</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_EWS_Fallback</targetReference>
+        </connector>
+        <filterFormula>OR(
+    ISNEW(),
+    ISCHANGED({!$Record.NumberOfEmployees}),
+    ISCHANGED({!$Record.Bookings_Last_12_Months_Hierarchy__c}),
+    ISCHANGED({!$Record.Category_3__c}),
+    ISCHANGED({!$Record.Estimated_Wallet_Size_Overwrite__c})
+)</filterFormula>
+        <object>Account</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

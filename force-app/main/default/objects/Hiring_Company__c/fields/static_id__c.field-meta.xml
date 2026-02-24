@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>static_id__c</fullName>
+    <description>This is the uuid5 generated during the job parsing process.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is the uuid5 generated during the job parsing process.</inlineHelpText>
+    <label>Static ID</label>
+    <length>255</length>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Assigned to Madeline Sill to cover for Diana</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Interim Access Head of ACM</label>
+    <status>Updated</status>
+</PermissionSetGroup>

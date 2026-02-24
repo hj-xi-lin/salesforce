@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Published_At__c</fullName>
+    <description>\</description>
+    <inlineHelpText>Zeitstempel, wann die Stelle zuletzt gemäß der job_source gesehen wurde</inlineHelpText>
+    <label>Published At</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

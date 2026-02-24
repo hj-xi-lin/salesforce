@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>64.0</apiVersion>
+    <description>ZP 2025</description>
+    <environments>Default</environments>
+    <interviewLabel>ZP - 2025 {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>ZP 2025 - Update Warm SLA status</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_ZP_SLA_status</name>
+        <label>Update ZP SLA status</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>ZPE_SLA_Status__c</field>
+            <value>
+                <stringValue>Not Met</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_ZP_SLA_status</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>ZPE_SLA_Status__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>Met</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Event_Lead_Classification_Contact__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>WARM</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Is_ZP_Contact__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>Contact</object>
+        <schedule>
+            <frequency>Once</frequency>
+            <startDate>2025-09-23</startDate>
+            <startTime>20:00:00.000Z</startTime>
+        </schedule>
+        <triggerType>Scheduled</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

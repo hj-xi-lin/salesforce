@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <description>RO-1471</description>
+    <environments>Default</environments>
+    <interviewLabel>Populating Original Campaign Source {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Updating Original Campaign Source</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>RO-1471</description>
+        <name>Original_Campaign_Source</name>
+        <label>Original Campaign Source</label>
+        <locationX>176</locationX>
+        <locationY>311</locationY>
+        <inputAssignments>
+            <field>Original_Campaign_Source__c</field>
+            <value>
+                <elementReference>$Record.CampaignId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Original_Campaign_Source</targetReference>
+        </connector>
+        <filterFormula>OR(
+AND(  ISNEW(),    NOT(ISBLANK({!$Record.Campaign.Id}))  ) , 
+AND(
+ISBLANK( {!$Record__Prior.Campaign.Id} ) ,
+ISCHANGED( {!$Record.Campaign.Id} ) ,
+ISBLANK( {!$Record.Original_Campaign_Source__c} )
+)
+)</filterFormula>
+        <object>Opportunity</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

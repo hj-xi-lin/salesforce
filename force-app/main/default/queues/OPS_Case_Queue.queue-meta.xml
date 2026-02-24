@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>OPS Case Queue</name>
+    <queueMembers>
+        <users>
+            <user>carlotta.frommer@heyjobs.de</user>
+            <user>julia.hochmal@heyjobs.de</user>
+            <user>julia.sponholz@heyjobs.de</user>
+            <user>kristina.petrova@heyjobs.de</user>
+            <user>maren.runge@heyjobs.de</user>
+            <user>marie.jaehnchen@heyjobs.de</user>
+            <user>nils.heissenbuettel@heyjobs.de</user>
+            <user>rahel.duenker@heyjobs.de</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Task</sobjectType>
+    </queueSobject>
+</Queue>

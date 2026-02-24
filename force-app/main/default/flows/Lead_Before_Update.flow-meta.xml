@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <decisions>
+        <name>EWS_Fallback_check</name>
+        <label>EWS Fallback check</label>
+        <locationX>182</locationX>
+        <locationY>623</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Update</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>fmlNew</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Category_3__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.NumberOfEmployees</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_EWS_Fallback_2</targetReference>
+            </connector>
+            <label>Update</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Status_changed_to_Lost</name>
+        <label>Status changed to Lost</label>
+        <locationX>182</locationX>
+        <locationY>323</locationY>
+        <defaultConnector>
+            <targetReference>EWS_Fallback_check</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Lost</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_the_Lost</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <description>RO - 1769 , RO - 2560</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>fmlCategory3</name>
+        <dataType>Number</dataType>
+        <expression>IF(TEXT({!$Record.Category_3__c}) = &quot;Supermarkets&quot;, 1.1, 
+    IF(TEXT({!$Record.Category_3__c}) = &quot;Rail Companies&quot;, 1.1, 
+        IF(TEXT({!$Record.Category_3__c}) = &quot;Courier Services&quot;, 1.1, 
+            IF(TEXT({!$Record.Category_3__c}) = &quot;Technology Stores&quot;, 1.05, 
+                IF(TEXT({!$Record.Category_3__c}) = &quot;Furniture Stores&quot;, 1.05, 
+                    IF(TEXT({!$Record.Category_3__c}) = &quot;Call center&quot;, 1.05, 
+                        IF(TEXT({!$Record.Category_3__c}) = &quot;Foods&quot;, 1.05, 
+                            IF(TEXT({!$Record.Category_3__c}) = &quot;Parks&quot;, 1.05, 
+                                IF(TEXT({!$Record.Category_3__c}) = &quot;NGO&quot;, 1.05, 
+                                    IF(TEXT({!$Record.Category_3__c}) = &quot;Airports&quot;, 1.05, 
+                                        IF(TEXT({!$Record.Category_3__c}) = &quot;Electrical Wholesalers&quot;, 1.05, 
+                                            IF(TEXT({!$Record.Category_3__c}) = &quot;Meat Products&quot;, 1.05, 
+                                                IF(TEXT({!$Record.Category_3__c}) = &quot;Advertising Agencies&quot;, 0.5, 
+                                                    IF(TEXT({!$Record.Category_3__c}) = &quot;Temporary Employment Agencies&quot;, 0.2, 
+                                                        IF(TEXT({!$Record.Category_3__c}) = &quot;Headhunter&quot;, 0.2, 
+                                                            IF(TEXT({!$Record.Category_3__c}) = &quot;Job promotion&quot;, 0.2, 
+                                                                1
+                                                            )
+                                                        )
+                                                    )
+                                                )
+                                            )
+                                        )
+                                    )
+                                )
+                            )
+                        )
+                    )
+                )
+            )
+        )
+    )
+)</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <name>fmlEWSFeedback</name>
+        <dataType>Number</dataType>
+        <expression>IF({!$Record.NumberOfEmployees} &lt;= 10, 0,
+   IF({!$Record.NumberOfEmployees} &lt;= 50, 4000 * {!fmlCategory3} ,
+      IF({!$Record.NumberOfEmployees} &lt;= 100, 10000 * {!fmlCategory3},
+         IF({!$Record.NumberOfEmployees} &lt;= 250, 20000 * {!fmlCategory3},
+            IF({!$Record.NumberOfEmployees} &lt;= 500, 35000 * {!fmlCategory3} ,
+               IF({!$Record.NumberOfEmployees} &lt;= 1000, 74000 * {!fmlCategory3} ,
+                  IF({!$Record.NumberOfEmployees} &lt;= 2500, 100000 * {!fmlCategory3} ,
+                     IF({!$Record.NumberOfEmployees} &lt;= 5000, 100001 * {!fmlCategory3} ,
+                        IF({!$Record.NumberOfEmployees} &lt;= 10000, 100002 * {!fmlCategory3},
+                           IF({!$Record.NumberOfEmployees} &lt;= 20000, 100003 * {!fmlCategory3} ,
+                              IF({!$Record.NumberOfEmployees} &lt;= 30000, 100004 * {!fmlCategory3} ,
+                                 IF({!$Record.NumberOfEmployees} &lt;= 50000, 100005 * {!fmlCategory3} ,
+                                    IF({!$Record.NumberOfEmployees} &lt;= 75000, 100006 * {!fmlCategory3} ,
+                                       IF({!$Record.NumberOfEmployees} &lt;= 100000, 100007 * {!fmlCategory3} ,
+                                          IF({!$Record.NumberOfEmployees} &lt;= 150000, 100008 * {!fmlCategory3} ,
+                                             IF({!$Record.NumberOfEmployees} &lt;= 200000, 100009 * {!fmlCategory3} ,
+                                                IF({!$Record.NumberOfEmployees} &lt;= 300000, 100010 * {!fmlCategory3} ,
+                                                   IF({!$Record.NumberOfEmployees} &lt;= 400000, 100011 * {!fmlCategory3} ,
+                                                      IF({!$Record.NumberOfEmployees} &lt;= 500000, 100012 * {!fmlCategory3} ,
+                                                           IF({!$Record.NumberOfEmployees} &gt; 500000, 100013 * {!fmlCategory3} ,
+0)
+                                                      )
+                                                   )
+                                                )
+                                             )
+                                          )
+                                       )
+                                    )
+                                 )
+                              )
+                           )
+                        )
+                     )
+                  )
+               )
+            )
+         )
+      )
+   )
+)</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <name>fmlNew</name>
+        <dataType>Boolean</dataType>
+        <expression>ISNEW()</expression>
+    </formulas>
+    <formulas>
+        <name>fmlTimeNow</name>
+        <dataType>DateTime</dataType>
+        <expression>NOW()</expression>
+    </formulas>
+    <interviewLabel>Lead ( Before Update) {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Lead ( Before Update)</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_EWS_Fallback_2</name>
+        <label>Update EWS Fallback</label>
+        <locationX>50</locationX>
+        <locationY>731</locationY>
+        <inputAssignments>
+            <field>EWS_Fallback_Lead__c</field>
+            <value>
+                <elementReference>fmlEWSFeedback</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_the_Lost</name>
+        <label>Update the timestamp lost date</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <connector>
+            <targetReference>EWS_Fallback_check</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Timestamp_Lost__c</field>
+            <value>
+                <elementReference>fmlTimeNow</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Status_changed_to_Lost</targetReference>
+        </connector>
+        <object>Lead</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

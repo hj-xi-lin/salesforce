@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <description>RO-2434</description>
+    <label>Type</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Account Documentation</fullName>
+                <default>false</default>
+                <label>Account Documentation</label>
+            </value>
+            <value>
+                <fullName>Onboarding Documentation</fullName>
+                <default>false</default>
+                <label>Onboarding Documentation</label>
+            </value>
+            <value>
+                <fullName>Calls</fullName>
+                <default>false</default>
+                <label>Calls</label>
+            </value>
+            <value>
+                <fullName>Events</fullName>
+                <default>false</default>
+                <label>Events</label>
+            </value>
+            <value>
+                <fullName>Lost Opps</fullName>
+                <default>false</default>
+                <label>Lost Opps</label>
+            </value>
+            <value>
+                <fullName>Deals</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Deals</label>
+            </value>
+            <value>
+                <fullName>Tasks</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Tasks</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

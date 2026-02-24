@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>63.0</apiVersion>
+    <description>RO-2434</description>
+    <environments>Default</environments>
+    <interviewLabel>Account Documentation - Mark &amp; Link Active Documentation {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Account Documentation - Mark &amp; Link Active Documentation</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Link_Active_Documentation_on_Account</name>
+        <label>Link Active Documentation on Account</label>
+        <locationX>176</locationX>
+        <locationY>539</locationY>
+        <inputAssignments>
+            <field>Active_Account_Documentation__c</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.Account__r</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Mark_other_Documentations_as_inactive</name>
+        <label>Mark other Documentations as inactive</label>
+        <locationX>176</locationX>
+        <locationY>431</locationY>
+        <connector>
+            <targetReference>Link_Active_Documentation_on_Account</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Account__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Account__r.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Account Documentation</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Id</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Active_Account_Documentation__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <object>Customer_360__c</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>(when triggered from creation)</description>
+        <name>Set_current_documentation_as_active</name>
+        <label>Set current documentation as active</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <connector>
+            <targetReference>Mark_other_Documentations_as_inactive</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Active_Account_Documentation__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Set_current_documentation_as_active</targetReference>
+        </connector>
+        <filterFormula>AND(
+ISPICKVAL( {!$Record.Type__c} , &quot;Account Documentation&quot;  ),
+OR(
+ISNEW(),
+AND( ISCHANGED({!$Record.Active_Account_Documentation__c}) , {!$Record.Active_Account_Documentation__c} )
+)
+)</filterFormula>
+        <object>Customer_360__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

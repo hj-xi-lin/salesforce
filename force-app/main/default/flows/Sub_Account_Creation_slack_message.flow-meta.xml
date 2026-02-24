@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>RO-1191</description>
+        <name>sub_account_as_a_slack_message</name>
+        <label>ACM_missing slack message</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <actionName>slackv2__invokePostMessage</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>message</name>
+            <value>
+                <elementReference>subaccountcreation</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>messageDestinationId</name>
+            <value>
+                <stringValue>a2L9L00000005ypUAA</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>$Record.Account.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>slackv2__invokePostMessage</nameSegment>
+    </actionCalls>
+    <apiVersion>59.0</apiVersion>
+    <decisions>
+        <description>Backend Creation Case</description>
+        <name>Check_record_type</name>
+        <label>Check record type</label>
+        <locationX>182</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Backend_Creation_Case</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Backend_Creation_Case</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>sub_account_as_a_slack_message</targetReference>
+            </connector>
+            <label>Backend Creation Case</label>
+        </rules>
+    </decisions>
+    <description>RO-1191
+channel name: acm missing, Removed Lead score from the message</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>RO-1191</description>
+        <name>subaccountslackmessage</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.Account.Name} + &quot; is a new account now in&quot; +&quot; &quot;+ TEXT({!$Record.Opportunity__r.StageName}) +&quot; needs to be assigned an ACM &quot;</expression>
+    </formulas>
+    <interviewLabel>Sub Account Creation slack message {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Sub Account Creation slack message</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_record_type</targetReference>
+        </connector>
+        <filterLogic>1 AND (2 OR 3) AND 4</filterLogic>
+        <filters>
+            <field>Status</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Closed</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Segment_V02__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Large</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Segment_V02__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Enterprise</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Status</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>Case</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+    <textTemplates>
+        <name>subaccountcreation</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>{!$Record.Account.Name} is a new account now in {!$Record.Opportunity__r.StageName}. Needs to be assigned an ACM.</text>
+    </textTemplates>
+</Flow>

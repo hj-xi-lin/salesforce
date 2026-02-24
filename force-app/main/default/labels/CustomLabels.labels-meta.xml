@@ -1,0 +1,1815 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>ATSOnboarding</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ATSOnboardingQueueId</shortDescription>
+        <value>00G9L000000MooXUAS</value>
+    </labels>
+    <labels>
+        <fullName>ATSOnboardingQueueId</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ATSOnboardingQueueId</shortDescription>
+        <value>00G9L000000MooXUAS</value>
+    </labels>
+    <labels>
+        <fullName>ATS_Case_Queue</fullName>
+        <categories>UserId</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ATS Case Queue</shortDescription>
+        <value>00G1v000009SzgZEAS</value>
+    </labels>
+    <labels>
+        <fullName>AccountId</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AccountId_DB Zeitarbeit GmbH</shortDescription>
+        <value>0019L0000031tHsQAI</value>
+    </labels>
+    <labels>
+        <fullName>AccountId_DB</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AccountId_Deutsche Bahn AG</shortDescription>
+        <value>0010Y00000cqs6HQAQ</value>
+    </labels>
+    <labels>
+        <fullName>AccountId_Deutsche_Post_AG</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AccountId_Deutsche Post AG</shortDescription>
+        <value>0010700000IgbktAAB</value>
+    </labels>
+    <labels>
+        <fullName>AccountId_Deutsche_Post_AG_NonREACH</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AccountId_Deutsche_Post_AG_NonREACH</shortDescription>
+        <value>0011v00001uwTCvAAM</value>
+    </labels>
+    <labels>
+        <fullName>AccountId_Deutsche_Post_And_DHL_REACH</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AccountId_Deutsche_Post_And_DHL_REACH</shortDescription>
+        <value>001W700000Um4L6IAJ</value>
+    </labels>
+    <labels>
+        <fullName>AccountId_REWE_Handel_Deutschland</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AccountId_REWE Handel Deutschland</shortDescription>
+        <value>0010Y00000kbnCYQAY</value>
+    </labels>
+    <labels>
+        <fullName>AccountId_SchenkerDeutschlandAG</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AccountId_Schenker Deutschland AG</shortDescription>
+        <value>0019L000003fO0CQAU</value>
+    </labels>
+    <labels>
+        <fullName>AccountRecordTypeID_AgencyCustomerSales</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AccountRecordTypeID_AgencyCustomerSales</shortDescription>
+        <value>0121v000000z1JdAAI</value>
+    </labels>
+    <labels>
+        <fullName>AccountRecordTypeID_AgencySales</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AccountRecordTypeID_AgencySales</shortDescription>
+        <value>0121v000000z1JTAAY</value>
+    </labels>
+    <labels>
+        <fullName>AccountRecordTypeID_Discarded</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AccountRecordTypeID_Discarded</shortDescription>
+        <value>0121v000000lUxJAAU</value>
+    </labels>
+    <labels>
+        <fullName>AccountRecordTypeID_Inventory</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AccountRecordTypeID_Inventory</shortDescription>
+        <value>0121v000000z2TZAAY</value>
+    </labels>
+    <labels>
+        <fullName>AccountRecordTypeID_Outbound</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AccountRecordTypeID_Outbound</shortDescription>
+        <value>0121v000000lUxKAAU</value>
+    </labels>
+    <labels>
+        <fullName>AccountRecordTypeID_Research</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AccountRecordTypeID_Research</shortDescription>
+        <value>0121v000000lUxLAAU</value>
+    </labels>
+    <labels>
+        <fullName>AccountRecordTypeID_Sales</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AccountRecordTypeID_Sales</shortDescription>
+        <value>0121v000000lUxMAAU</value>
+    </labels>
+    <labels>
+        <fullName>AccountSummaryTriggeringValue</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AccountSummaryTriggeringValue</shortDescription>
+        <value>Create Helper Records</value>
+    </labels>
+    <labels>
+        <fullName>AccountSummaryUpdatingValue</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AccountSummaryUpdatingValue</shortDescription>
+        <value>Generate Summary</value>
+    </labels>
+    <labels>
+        <fullName>Account_Id_Arbeiterwohlfahrt_Bundesverband</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Account_Id_Arbeiterwohlfahrt Bundesverband</shortDescription>
+        <value>001W7000005y83NIAQ</value>
+    </labels>
+    <labels>
+        <fullName>Account_Id_Caritas</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Account_Id_Caritas</shortDescription>
+        <value>0019L000002zHyFQAU</value>
+    </labels>
+    <labels>
+        <fullName>Account_Id_Deutsches_Rotes_Kreuz</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Account_Id_Deutsches Rotes Kreuz</shortDescription>
+        <value>0010Y00000taVQnQAM</value>
+    </labels>
+    <labels>
+        <fullName>Account_Id_Diakonie</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Account_Id_Diakonie</shortDescription>
+        <value>001W700000OhkbFIAR</value>
+    </labels>
+    <labels>
+        <fullName>Account_Id_EDEKA_ZENTRALE_Stiftung</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Account_Id_EDEKA ZENTRALE Stiftung</shortDescription>
+        <value>0010Y00000cqs1nQAA</value>
+    </labels>
+    <labels>
+        <fullName>Account_Lifecycle_Stage_Acquisition</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Account Lifecycle Stage Acquisition</shortDescription>
+        <value>Acquisition</value>
+    </labels>
+    <labels>
+        <fullName>Account_Lifecycle_Stage_Expansion</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Account Lifecycle Stage Expansion</shortDescription>
+        <value>Expansion</value>
+    </labels>
+    <labels>
+        <fullName>Account_Lifecycle_Stage_Lost</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Account Lifecycle Stage Lost</shortDescription>
+        <value>Lost</value>
+    </labels>
+    <labels>
+        <fullName>Account_Lifecycle_Stage_Outbound</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Account Lifecycle Stage Outbound</shortDescription>
+        <value>Outbound</value>
+    </labels>
+    <labels>
+        <fullName>Account_Lifecycle_Stage_Pilot</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Account Lifecycle Stage Pilot</shortDescription>
+        <value>Pilot</value>
+    </labels>
+    <labels>
+        <fullName>Account_Lifecycle_Stage_Prospect</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Account Lifecycle Stage Prospect</shortDescription>
+        <value>Prospect</value>
+    </labels>
+    <labels>
+        <fullName>Account_Lifecycle_Stage_Retention</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Account Lifecycle Stage Retention</shortDescription>
+        <value>Retention</value>
+    </labels>
+    <labels>
+        <fullName>Advertising_Agencies_AF</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Advertising Agencies AF</shortDescription>
+        <value>0.5</value>
+    </labels>
+    <labels>
+        <fullName>Agency</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Agency</shortDescription>
+        <value>Agency</value>
+    </labels>
+    <labels>
+        <fullName>Airports_AF</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Airports AF</shortDescription>
+        <value>1.05</value>
+    </labels>
+    <labels>
+        <fullName>BE_CREATION_ERROR_Blacklist</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BE_CREATION_ERROR_Blacklist</shortDescription>
+        <value>Blacklist</value>
+    </labels>
+    <labels>
+        <fullName>BE_CREATION_ERROR_CompanyID</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BE_CREATION_ERROR_CompanyID</shortDescription>
+        <value>Company ID</value>
+    </labels>
+    <labels>
+        <fullName>BE_CREATION_ERROR_In_Progress</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BE_CREATION_ERROR_In Progress</shortDescription>
+        <value>Backend Creation in Progress</value>
+    </labels>
+    <labels>
+        <fullName>BE_CREATION_ERROR_MESSAGE_Blacklist</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BE_CREATION_ERROR_MESSAGE_Blacklist</shortDescription>
+        <value>The account or contact is blacklisted.</value>
+    </labels>
+    <labels>
+        <fullName>BE_CREATION_ERROR_MESSAGE_RecordType</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BE_CREATION_ERROR-MESSAGE_RecordType</shortDescription>
+        <value>The Account is not of Record Type “Sales”.</value>
+    </labels>
+    <labels>
+        <fullName>BE_CREATION_ERROR_RecordType</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BE_CREATION_ERROR_RecordType</shortDescription>
+        <value>Record Type non-eligible</value>
+    </labels>
+    <labels>
+        <fullName>Bonus_HIRE_Budget_ProductId</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Bonus HIRE Budget ProductId</shortDescription>
+        <value>01t1v00000DCQidAAH</value>
+    </labels>
+    <labels>
+        <fullName>Bonus_Marketing_Budget</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Bonus HIRE Budget</shortDescription>
+        <value>Bonus HIRE Budget</value>
+    </labels>
+    <labels>
+        <fullName>CadenceId</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CadenceId_InQualification</shortDescription>
+        <value>77CW70000000HKDMA2</value>
+    </labels>
+    <labels>
+        <fullName>CadenceId_Offer</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CadenceId_Offer</shortDescription>
+        <value>77CW70000000HX7MAM</value>
+    </labels>
+    <labels>
+        <fullName>CadenceId_ReadyForSales</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CadenceId_ReadyForSales</shortDescription>
+        <value>77CW70000000H5hMAE</value>
+    </labels>
+    <labels>
+        <fullName>Cadence_InQualification</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Cadence_InQualification</shortDescription>
+        <value>77CW70000000HKDMA2</value>
+    </labels>
+    <labels>
+        <fullName>CadneceId_PitchAndNegotiation</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CadneceId_PitchAndNegotiation</shortDescription>
+        <value>77CW70000000HP3MAM</value>
+    </labels>
+    <labels>
+        <fullName>Call_Centers_AF</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Call Centers AF</shortDescription>
+        <value>1.05</value>
+    </labels>
+    <labels>
+        <fullName>CaseBackendCreation</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CaseBackendCreationCase</shortDescription>
+        <value>0121v000000X26JAAS</value>
+    </labels>
+    <labels>
+        <fullName>CaseInitialBEsetupRT</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CaseInitialBEsetupRT</shortDescription>
+        <value>0120Y000000AtD6QAK</value>
+    </labels>
+    <labels>
+        <fullName>CaseNewATSOnboardingRT</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CaseNewATSOnboardingRT</shortDescription>
+        <value>0129L0000004J2bQAE</value>
+    </labels>
+    <labels>
+        <fullName>CaseNewAdjustCampaignRT</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CaseNewAdjustCampaignRT</shortDescription>
+        <value>0129L0000004J2gQAE</value>
+    </labels>
+    <labels>
+        <fullName>CaseNewIntegrationSupportRT</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CaseNewIntegrationSupportRT</shortDescription>
+        <value>0129L0000004J30QAE</value>
+    </labels>
+    <labels>
+        <fullName>CaseRepeatPurchaseCase</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CaseRepeatPurchaseCase</shortDescription>
+        <value>0120Y0000006ueIQAQ</value>
+    </labels>
+    <labels>
+        <fullName>Case_Repeat_Purchase</fullName>
+        <categories>Case</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Case Repeat Purchase</shortDescription>
+        <value>Repeat Purchase Case</value>
+    </labels>
+    <labels>
+        <fullName>CourierServices</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Courier Services AF factor</shortDescription>
+        <value>1.1</value>
+    </labels>
+    <labels>
+        <fullName>CusOps_Queue_Id</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CusOps Queue Id</shortDescription>
+        <value>00G1v000008zLP9EAM</value>
+    </labels>
+    <labels>
+        <fullName>ERROR_ATS_NAME_QUOTE_ACCEPTANCE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ERROR_ATS_NAME_QUOTE_ACCEPTANCE</shortDescription>
+        <value>Please populate the ATS Name on account before accepting the quote.</value>
+    </labels>
+    <labels>
+        <fullName>ERROR_EMPTY_AVG_REACH_JOBS_MONTH</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ERROR EMPTY AVG REACH JOBS MONTH</shortDescription>
+        <value>Please populate the field &quot;Avg. # Reach Jobs/month&quot; on Opportunity before accepting the quote</value>
+    </labels>
+    <labels>
+        <fullName>ERROR_EMPTY_MONTHLY_REACH_BUDGET</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ERROR EMPTY MONTHLY REACH BUDGET</shortDescription>
+        <value>Please populate the field &quot;Monthly Reach Budget&quot; on Opportunity before accepting the quote</value>
+    </labels>
+    <labels>
+        <fullName>ERROR_EMPTY_PLANNED_REACH_CAMPAIGN_START_DATE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ERROR EMPTY PLANNED REACH CAMPAIGN START DATE</shortDescription>
+        <value>Please populate the field &quot;Planned Reach Campaign Start Date&quot; on Opportunity before accepting the quote</value>
+    </labels>
+    <labels>
+        <fullName>ERROR_EMPTY_REACH_CAMPAIGN_DURATION</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ERROR EMPTY REACH CAMPAIGN DURATION</shortDescription>
+        <value>Please populate the field &quot;Reach Campaign Duration (#months)&quot; on Opportunity before accepting the quote</value>
+    </labels>
+    <labels>
+        <fullName>ERROR_EMPTY_REACH_FIELDS</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ERROR EMPTY REACH FIELDS</shortDescription>
+        <value>One or all of the following fields are empty. Please populate them before accepting the quote:
+1. Reach Campaign Duration (#months)
+2. Avg. # Reach Jobs/month
+3. Monthly Reach Budget
+4. REACH Deal Type
+5. Reach Special termination right duration</value>
+    </labels>
+    <labels>
+        <fullName>ERROR_HEYPAKET_CANCELLED</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ERROR_HEYPAKET_CANCELLED</shortDescription>
+        <value>The HeyPaket is already cancelled.</value>
+    </labels>
+    <labels>
+        <fullName>ERROR_HEYPAKET_CANCEL_SCHEDULED_OPP</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ERROR_HEYPAKET_CANCEL_SCHEDULED_OPP</shortDescription>
+        <value>The HeyPaket is scheduled and can only be cancelled as soon as it is active. Please reach out to Finance if the customer wants to retract the contract completely.</value>
+    </labels>
+    <labels>
+        <fullName>ERROR_HEYPAKET_COMBINATION</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ERROR_HEYPAKET_COMBINATION</shortDescription>
+        <value>HeyPaket products can only be added as Quote line items alone or together with “Bonus Marketing Budget”. It is not possible to add two HeyPakete as Quote line items together and its not possible to add it next to another product except “Bonus Marketing Budget”</value>
+    </labels>
+    <labels>
+        <fullName>ERROR_HEYPAKET_NEXTPACKET_AVAILABLE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ERROR_HEYPAKET_NEXTPACKET_AVAILABLE</shortDescription>
+        <value>A new HeyPaket is already Scheduled. You can not activate or Schedule another HeyPaket. Please Contact your Administrator</value>
+    </labels>
+    <labels>
+        <fullName>ERROR_HEYPAKET_NOT_FUTURE_STARTDATE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ERROR_HEYPAKET_NOT_FUTURE_STARTDATE</shortDescription>
+        <value>The HeyPaket Start Date must be in the future. Please choose a HeyPaket Start Date of at least tomorrow.</value>
+    </labels>
+    <labels>
+        <fullName>ERROR_HEYPAKET_NO_STARTDATE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ERROR_HEYPAKET_NO_STARTDATE</shortDescription>
+        <value>Please specify a HeyPaket Start Date before accepting the Quote</value>
+    </labels>
+    <labels>
+        <fullName>ERROR_HEYPAKET_STARTDATE_AFTER_ENDDATE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ERROR_HEYPAKET_STARTDATE_AFTER_ENDDATE</shortDescription>
+        <value>The HeyPaket Start Date cannot be after the End Date of the currently active HeyPaket. Please choose a HeyPaket Start Date that is latest the End Date of the active HeyPaket.</value>
+    </labels>
+    <labels>
+        <fullName>ERROR_HEYPAKET_STARTDATE_IN_PAST</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ERROR_HEYPAKET_STARTDATE_IN_PAST</shortDescription>
+        <value>The HeyPaket Start Date cannot be in the past. Please choose either today or a future date for activation</value>
+    </labels>
+    <labels>
+        <fullName>ERROR_HEYPAKET_START_DATE_BEFORE_END_DATE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ERROR_HEYPAKET_START_DATE_BEFORE_END_DATE</shortDescription>
+        <value>The start date of this quote is before the end date of the active Heypaket. Accepting this quote will deactivate the running HeyPaket on the New HeyPaket Start Date.
+
+Would you like to continue?</value>
+    </labels>
+    <labels>
+        <fullName>ERROR_HEYPAKET_WRONG_STATUS</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ERROR_HEYPAKET_WRONG_STATUS</shortDescription>
+        <value>You cannot cancel a HeyPaket with this Status. Please reach out to support</value>
+    </labels>
+    <labels>
+        <fullName>ERROR_HIRE_REACH_MISMATCH</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ERROR_HIRE_REACH_MISMATCH</shortDescription>
+        <value>You can&apos;t close HIRE and REACH in one Account. Please reach out to your team lead.</value>
+    </labels>
+    <labels>
+        <fullName>ERROR_MOVE_QUOTE_TO_SENT</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ERROR_MOVE_QUOTE_TO_SENT</shortDescription>
+        <value>Please move the quote to &quot;sent&quot; status before accepting the quote.</value>
+    </labels>
+    <labels>
+        <fullName>ERROR_NOTICE_PERIOD_EXCEEDED</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ERROR_NOTICE_PERIOD_EXCEEDED</shortDescription>
+        <value>You cannot cancel this HeyPaket because the notice period is exceeded. Please contact your team lead or a system admin.</value>
+    </labels>
+    <labels>
+        <fullName>ERROR_NOT_HEYPAKET_OPP</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ERROR_NOT_HEYPAKET_OPP</shortDescription>
+        <value>This is not a HeyPaket opportunity</value>
+    </labels>
+    <labels>
+        <fullName>ERROR_NO_CONTACTROLE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ERROR_NO_CONTACTROLE</shortDescription>
+        <value>Please assign a Contact Role to the Opportunity before accepting the Quote</value>
+    </labels>
+    <labels>
+        <fullName>ERROR_NO_CONTACTROLE_AND_QUOTE_NOT_SYNCED</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ERROR_NO_CONTACTROLE_AND_QUOTE_NOT_SYNCED</shortDescription>
+        <value>Please assign a Contact Role and sync the Quote to the Opportunity before accepting the Quote</value>
+    </labels>
+    <labels>
+        <fullName>ERROR_QUOTE_NOT_SYNCED</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ERROR_QUOTE_NOT_SYNCED</shortDescription>
+        <value>Please sync the Quote to the Opportunity before accepting the Quote</value>
+    </labels>
+    <labels>
+        <fullName>ERR_No_Role_For_Contact</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ERR_NO_ROLE_FOR_CONTACT</shortDescription>
+        <value>Please Assign a Role for the &quot;Contact Role&quot; assigned</value>
+    </labels>
+    <labels>
+        <fullName>Electrical_Wholesalers_AF</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Electrical Wholesalers AF</shortDescription>
+        <value>1.05</value>
+    </labels>
+    <labels>
+        <fullName>Enterprise_Expansion</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Enterprise_Expansion</shortDescription>
+        <value>Enterprise Expansion</value>
+    </labels>
+    <labels>
+        <fullName>Enterprise_Retention</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Enterprise_Retention</shortDescription>
+        <value>Enterprise Retention</value>
+    </labels>
+    <labels>
+        <fullName>Error_Misisng_Billing_Info</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Error_Misisng_Billing_Info</shortDescription>
+        <value>Please fill out the complete Billing Address on the Opportunity including Billing Email before accepting a Quote</value>
+    </labels>
+    <labels>
+        <fullName>Error_REACH_and_HIRE_product</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Error_REACH and HIRE product</shortDescription>
+        <value>You can&apos;t have both HIRE and REACH products in the same quote.</value>
+    </labels>
+    <labels>
+        <fullName>Expiration_Date</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Expiration Date</shortDescription>
+        <value>Valid until</value>
+    </labels>
+    <labels>
+        <fullName>Foods_AF</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Foods AF</shortDescription>
+        <value>1.05</value>
+    </labels>
+    <labels>
+        <fullName>Furniture_Stores_AF</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Furniture Stores AF</shortDescription>
+        <value>1.05</value>
+    </labels>
+    <labels>
+        <fullName>GTM_Motion_Agency_Sales</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GTM Motion Agency Sales</shortDescription>
+        <value>Agency Sales</value>
+    </labels>
+    <labels>
+        <fullName>GTM_Motion_Change_Reason_Housekeeping</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GTM_Motion_Change_Reason_Housekeeping</shortDescription>
+        <value>Admin Only: Updated by Housekeeping Automation</value>
+    </labels>
+    <labels>
+        <fullName>GTM_Motion_Change_Reason_Loss_Process</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GTM_Motion_Change_Reason_Loss_Process</shortDescription>
+        <value>Admin Only: Updated by Loss Process</value>
+    </labels>
+    <labels>
+        <fullName>GTM_Motion_Change_Reason_MQL_Email_Labeling</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GTM_Motion_Change_Reason_MQL_Email_Labeling</shortDescription>
+        <value>Admin Only: Updated by MQL/Email Labelling Automation</value>
+    </labels>
+    <labels>
+        <fullName>GTM_Motion_Enterprise_Expansion</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GTM Motion Enterprise Expansion</shortDescription>
+        <value>Enterprise Expansion</value>
+    </labels>
+    <labels>
+        <fullName>GTM_Motion_Enterprise_Retention</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GTM Motion Enterprise Retention</shortDescription>
+        <value>Enterprise Retention</value>
+    </labels>
+    <labels>
+        <fullName>GTM_Motion_Inside_Sales</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GTM Motion Inside Sales</shortDescription>
+        <value>Inside Sales</value>
+    </labels>
+    <labels>
+        <fullName>GTM_Motion_Inventory_Partner</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GTM_Motion_Inventory_Partner</shortDescription>
+        <value>Inventory Partner</value>
+    </labels>
+    <labels>
+        <fullName>GTM_Motion_New_Business_Enterprise</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GTM Motion New Business Enterprise</shortDescription>
+        <value>Enterprise New Business</value>
+    </labels>
+    <labels>
+        <fullName>GTM_Motion_New_Business_Subscription</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GTM Motion New Business Subscription</shortDescription>
+        <value>Subscription New Business</value>
+    </labels>
+    <labels>
+        <fullName>GTM_Motion_Owner_Agency_Sales</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GTM_Motion_Owner_Agency_Sales</shortDescription>
+        <value>Motion Owner: Andreas Fasser</value>
+    </labels>
+    <labels>
+        <fullName>GTM_Motion_Owner_Enterprise_Expansion</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GTM_Motion_Owner_Enterprise_Expansion</shortDescription>
+        <value>Motion Owner: Julian Martin</value>
+    </labels>
+    <labels>
+        <fullName>GTM_Motion_Owner_Enterprise_New_Business</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GTM_Motion_Owner_Enterprise_New_Business</shortDescription>
+        <value>Motion Owner: Tim Koch</value>
+    </labels>
+    <labels>
+        <fullName>GTM_Motion_Owner_Enterprise_Retention</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GTM_Motion_Owner_Enterprise_Retention</shortDescription>
+        <value>Motion Owner: Julian Martin</value>
+    </labels>
+    <labels>
+        <fullName>GTM_Motion_Owner_Inside_Sales</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GTM_Motion_Owner_Inside_Sales</shortDescription>
+        <value>Motion Owner: Janosch Dietrich</value>
+    </labels>
+    <labels>
+        <fullName>GTM_Motion_Owner_Inventory_Partner</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GTM_Motion_Owner_Inventory_Partner</shortDescription>
+        <value>Motion Owners: Justine Tom &amp; Ronja Hieke</value>
+    </labels>
+    <labels>
+        <fullName>GTM_Motion_Owner_Subscription_Expansion</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GTM_Motion_Owner_Subscription_Expansion</shortDescription>
+        <value>Motion Owner: Anne Hinderberger</value>
+    </labels>
+    <labels>
+        <fullName>GTM_Motion_Owner_Subscription_New_Business</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GTM_Motion_Owner_Subscription_New_Business</shortDescription>
+        <value>Motion Owner: Tim Koch</value>
+    </labels>
+    <labels>
+        <fullName>GTM_Motion_Owner_Subscription_Retention</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GTM_Motion_Owner_Subscription_Retention</shortDescription>
+        <value>Motion Owner: Anne Hinderberger
+Deputy: Nathalie Jansen</value>
+    </labels>
+    <labels>
+        <fullName>GTM_Motion_Subscription_Expansion</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GTM Motion Subscription Expansion</shortDescription>
+        <value>Subscription Expansion</value>
+    </labels>
+    <labels>
+        <fullName>GTM_Motion_Subscription_Retention</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GTM Motion Subscription Retention</shortDescription>
+        <value>Subscription Retention</value>
+    </labels>
+    <labels>
+        <fullName>HEYPAKET</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HEYPAKET</shortDescription>
+        <value>HeyPaket</value>
+    </labels>
+    <labels>
+        <fullName>HIRE_Budget_ProductId</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HIRE_Budget_ProductId</shortDescription>
+        <value>01t1v00000DCQiYAAX</value>
+    </labels>
+    <labels>
+        <fullName>Headhunters_AF</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Headhunters AF</shortDescription>
+        <value>0.2</value>
+    </labels>
+    <labels>
+        <fullName>HeyPaketActivation_DataBaseMethod</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HeyPaketActivation_DataBaseMethod</shortDescription>
+        <value>No</value>
+    </labels>
+    <labels>
+        <fullName>HeyPaket_Activation</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HeyPaket Activation</shortDescription>
+        <value>Activated</value>
+    </labels>
+    <labels>
+        <fullName>HeyPaket_Active</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HeyPaket Active</shortDescription>
+        <value>Active</value>
+    </labels>
+    <labels>
+        <fullName>HeyPaket_Advanced</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HeyPaket_Advanced</shortDescription>
+        <value>Advanced</value>
+    </labels>
+    <labels>
+        <fullName>HeyPaket_Budget_Extension_Case</fullName>
+        <categories>HeyPaket</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HeyPaket Budget Extension Case</shortDescription>
+        <value>HeyPaket Budget Extension</value>
+    </labels>
+    <labels>
+        <fullName>HeyPaket_Budget_Validity_Case_Description</fullName>
+        <categories>HeyPaket</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HeyPaket Budget Validity Case Description</shortDescription>
+        <value>Please update the Budget of the corresponding HeyPakete purchase in the Backend to the new date (New budget expiration date in HeyPaket section).</value>
+    </labels>
+    <labels>
+        <fullName>HeyPaket_Cancelled</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HeyPaket Cancelled</shortDescription>
+        <value>Cancelled</value>
+    </labels>
+    <labels>
+        <fullName>HeyPaket_Essential</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HeyPaket_Essential</shortDescription>
+        <value>Essential</value>
+    </labels>
+    <labels>
+        <fullName>HeyPaket_Inactive</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HeyPaket Inactive</shortDescription>
+        <value>Inactive</value>
+    </labels>
+    <labels>
+        <fullName>HeyPaket_Professional</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HeyPaket_Professional</shortDescription>
+        <value>Professional</value>
+    </labels>
+    <labels>
+        <fullName>HeyPaket_Renewal</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HeyPaket Renewal</shortDescription>
+        <value>auto renewed</value>
+    </labels>
+    <labels>
+        <fullName>HeyPaket_Renewed</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HeyPaket Renewed</shortDescription>
+        <value>Renewed</value>
+    </labels>
+    <labels>
+        <fullName>HeyPaket_Scheduled</fullName>
+        <categories>HeyPaket</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HeyPaket_Scheduled</shortDescription>
+        <value>Scheduled</value>
+    </labels>
+    <labels>
+        <fullName>HeyPaket_Ultimate</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HeyPaket_Ultimate</shortDescription>
+        <value>Ultimate</value>
+    </labels>
+    <labels>
+        <fullName>HeyPaket_Upsell</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HeyPaket Upsell</shortDescription>
+        <value>upgraded</value>
+    </labels>
+    <labels>
+        <fullName>HouseKeeping_OppLosingLossReason</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HouseKeeping_OppLosingLossReason</shortDescription>
+        <value>Admin Only: Opp lost due to inactivity</value>
+    </labels>
+    <labels>
+        <fullName>HouseKeeping_OppLosingThreshold</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HouseKeeping_OppLosingThreshold</shortDescription>
+        <value>30</value>
+    </labels>
+    <labels>
+        <fullName>HouseKeeping_TaskCutoffYears</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HouseKeeping_TaskCutoffYears</shortDescription>
+        <value>2</value>
+    </labels>
+    <labels>
+        <fullName>HouseKeeping_UploadOppLosingThreshold</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HouseKeeping_UploadOppLosingThreshold</shortDescription>
+        <value>60</value>
+    </labels>
+    <labels>
+        <fullName>Inactive_Period_Days</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Inactive_Period_Days</shortDescription>
+        <value>30</value>
+    </labels>
+    <labels>
+        <fullName>JobCleanupEmailRecipients</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>JobCleanupEmailRecipients</shortDescription>
+        <value>arun.kumar@heyjobs.de</value>
+    </labels>
+    <labels>
+        <fullName>Job_Promotion_AF</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Job Promotion AF</shortDescription>
+        <value>0.2</value>
+    </labels>
+    <labels>
+        <fullName>LIMIT_OwnershipAlignmentAutomation</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LIMIT_OwnershipAlignmentAutomation</shortDescription>
+        <value>45000</value>
+    </labels>
+    <labels>
+        <fullName>Lead_Gen_User_ID</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Lead Gen User ID</shortDescription>
+        <value>0050Y00000333XsQAI</value>
+    </labels>
+    <labels>
+        <fullName>Loss_Reason_Details_for_Opps_being_lost_due_to_Account_Loosing</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Loss Reason Details for Opps being lost due to Account Loosing.</shortDescription>
+        <value>Opportunity was lost due to Account being lost</value>
+    </labels>
+    <labels>
+        <fullName>Marketing_Budget</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HIRE Budget</shortDescription>
+        <value>HIRE Budget</value>
+    </labels>
+    <labels>
+        <fullName>MaxAccountHierarchyLevel</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MaxAccountHierarchyLevel</shortDescription>
+        <value>6</value>
+    </labels>
+    <labels>
+        <fullName>Meat_Products_AF</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Meat Products AF</shortDescription>
+        <value>1.05</value>
+    </labels>
+    <labels>
+        <fullName>NGO_AF</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NGO AF</shortDescription>
+        <value>1.05</value>
+    </labels>
+    <labels>
+        <fullName>New_Business</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>New_Business</shortDescription>
+        <value>Subscription New Business</value>
+    </labels>
+    <labels>
+        <fullName>New_Case</fullName>
+        <categories>Case</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>New Case</shortDescription>
+        <value>New</value>
+    </labels>
+    <labels>
+        <fullName>OppAccManagementRT</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OppAccManagementRT</shortDescription>
+        <value>0120Y000000Ay9JQAS</value>
+    </labels>
+    <labels>
+        <fullName>OppCreation_ACM_DefaultCloseDateNBS</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OppCreation_ACM_DefaultCloseDateNBS</shortDescription>
+        <value>40</value>
+    </labels>
+    <labels>
+        <fullName>OppCreation_ACM_DefaultCloseDateTransactional</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OppCreation_ACM_DefaultCloseDateTransactional</shortDescription>
+        <value>28</value>
+    </labels>
+    <labels>
+        <fullName>OppSalesTransactionalRT</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OppSalesTransactionalRT</shortDescription>
+        <value>012W70000003QXRIA2</value>
+    </labels>
+    <labels>
+        <fullName>OppSecondPurchaseRT</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OppSecondPurchaseRT</shortDescription>
+        <value>0120Y000000RFJHQA4</value>
+    </labels>
+    <labels>
+        <fullName>Opp_Sales_RT</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Opp Sales RT</shortDescription>
+        <value>0121v000000z2JFAAY</value>
+    </labels>
+    <labels>
+        <fullName>PPCP_ProductId</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PPCP_ProductId</shortDescription>
+        <value>01tW700000MWzZxIAL</value>
+    </labels>
+    <labels>
+        <fullName>PRODUCT_PARTNER_PROVISION</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PRODUCT PARTNER PROVISION</shortDescription>
+        <value>Partner Provision</value>
+    </labels>
+    <labels>
+        <fullName>Parks_AF</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Parks AF</shortDescription>
+        <value>1.05</value>
+    </labels>
+    <labels>
+        <fullName>Pre_Sales_Admin_ID</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Pre-Sales Admin ID</shortDescription>
+        <value>0059L000000IbQ3QAK</value>
+    </labels>
+    <labels>
+        <fullName>Product_Name_PPCP</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Product_Name_PPCP</shortDescription>
+        <value>Promoted Premium Company Profile</value>
+    </labels>
+    <labels>
+        <fullName>ProfileId_Agency_Manager</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ProfileId Agency Manager</shortDescription>
+        <value>00e1v000001W18m</value>
+    </labels>
+    <labels>
+        <fullName>ProfileId_CusOps_Manager</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ProfileId CusOps Manager</shortDescription>
+        <value>00e1v000000F7hy</value>
+    </labels>
+    <labels>
+        <fullName>ProfileId_System_Admin</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ProfileId System Admin</shortDescription>
+        <value>00e0Y000001hJ5K</value>
+    </labels>
+    <labels>
+        <fullName>Prospect</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Prospect</shortDescription>
+        <value>Subscription Prospect</value>
+    </labels>
+    <labels>
+        <fullName>QUOTE_PRODUCTS</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>QUOTE_PRODUCTS</shortDescription>
+        <value>Marketing Budget:1-0</value>
+    </labels>
+    <labels>
+        <fullName>QualificationOutcome_FUPMoved</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>QualificationOutcome_FUPMoved</shortDescription>
+        <value>FUP moved: Marketing influenced</value>
+    </labels>
+    <labels>
+        <fullName>QualificationOutcome_OppContactRoleCreated</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>QualificationOutcome_OppContactRoleCreated</shortDescription>
+        <value>Opp Contact Role Created: Marketing influenced</value>
+    </labels>
+    <labels>
+        <fullName>QualificationOutcome_OppContactRoleExisting</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>QualificationOutcome_OppContactRoleExisting</shortDescription>
+        <value>Opp Contact Role Already Existed: Marketing influenced</value>
+    </labels>
+    <labels>
+        <fullName>QualificationOutcome_OppCreated</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>QualificationOutcome_OppCreated</shortDescription>
+        <value>Opp Created: Marketing generated</value>
+    </labels>
+    <labels>
+        <fullName>REACH_Bonus_Id</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>REACH_Bonus_Id</shortDescription>
+        <value>01t1v00000EIqlsAAD</value>
+    </labels>
+    <labels>
+        <fullName>REACH_budget_ProductId</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>REACH_budget_ProductId</shortDescription>
+        <value>01t1v00000EINKKAA5</value>
+    </labels>
+    <labels>
+        <fullName>RT_AGENCY_ACQUISITION</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RT AGENCY ACQUISITION</shortDescription>
+        <value>Agency_Acquisition</value>
+    </labels>
+    <labels>
+        <fullName>Rail_Companies</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Rail Companies AF</shortDescription>
+        <value>1.1</value>
+    </labels>
+    <labels>
+        <fullName>SLA_Tolerance</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SLA_Tolerance</shortDescription>
+        <value>12</value>
+    </labels>
+    <labels>
+        <fullName>SSSU_ACCOUNT_RT_NOT_ELIGIBLE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SSSU_ACCOUNT_RT_NOT_ELIGIBLE</shortDescription>
+        <value>The Account is not of Record Type “Sales”. No BE account and user can be created for this record. Please change the Account Record Type to “Sales” before creating a BE Account and User.</value>
+    </labels>
+    <labels>
+        <fullName>SSSU_Admin_User_Id</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SSSU Admin User Id</shortDescription>
+        <value>0059L000000HlmSQAS</value>
+    </labels>
+    <labels>
+        <fullName>SSSU_Blacklisted</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SSSU_Blacklisted</shortDescription>
+        <value>The Account or Contact is blacklisted. No BE Account or User can be created. 
+Please ensure that neither the account not the contact with timestamp SSSU is marked as “blacklisted” before creating a BE account and user.</value>
+    </labels>
+    <labels>
+        <fullName>SSSU_COMPANY_AND_RECRUITER_ACCESS_INPROGRESS</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SSSU_COMPANY_AND_RECRUITER_ACCESS_INPROGRESS</shortDescription>
+        <value>The company and recruiter information has been sent to the Backend already. Please wait until the processing before attempting again</value>
+    </labels>
+    <labels>
+        <fullName>SSSU_COMPANY_ID_EXISTS</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SSSU_COMPANY_ID_EXISTS</shortDescription>
+        <value>The account already has Company ID (BE Account) assigned. Therefore no new BE account or user was created. If an additional user is required, please create a customer operations case</value>
+    </labels>
+    <labels>
+        <fullName>SSSU_Domain_Match_Count</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SSSU_Domain_Match_Count</shortDescription>
+        <value>0</value>
+    </labels>
+    <labels>
+        <fullName>SSSU_Domain_Match_Count_LTE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SSSU_Domain_Match_Count_LTE</shortDescription>
+        <value>5</value>
+    </labels>
+    <labels>
+        <fullName>SSSU_ErrorMessageChannel</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SSSU_ErrorMessageChannel</shortDescription>
+        <value>C01NGQ358J2</value>
+    </labels>
+    <labels>
+        <fullName>STAGE_CLOSED_WON</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>STAGE_CLOSED_WON</shortDescription>
+        <value>Closed Won</value>
+    </labels>
+    <labels>
+        <fullName>Segment_Enterprise</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Segment Enterprise</shortDescription>
+        <value>Enterprise</value>
+    </labels>
+    <labels>
+        <fullName>Segment_Large</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Segment Large</shortDescription>
+        <value>Large</value>
+    </labels>
+    <labels>
+        <fullName>Segment_v02_Enterprise</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Segment v02 Enterprise</shortDescription>
+        <value>Enterprise</value>
+    </labels>
+    <labels>
+        <fullName>Segment_v02_Large</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Segment v02 Large</shortDescription>
+        <value>Large</value>
+    </labels>
+    <labels>
+        <fullName>Segment_v02_Small</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Segment v02 Small</shortDescription>
+        <value>Small</value>
+    </labels>
+    <labels>
+        <fullName>Subscription_Expansion</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Subscription_Expansion</shortDescription>
+        <value>Subscription Expansion</value>
+    </labels>
+    <labels>
+        <fullName>Subscription_Retention</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Subscription_Retention</shortDescription>
+        <value>Subscription Retention</value>
+    </labels>
+    <labels>
+        <fullName>Supermarket</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Category 3 AF Supermarket</shortDescription>
+        <value>1.1</value>
+    </labels>
+    <labels>
+        <fullName>Technology_Stores</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Technology Stores AF</shortDescription>
+        <value>1.05</value>
+    </labels>
+    <labels>
+        <fullName>Temporary_Employment_Agencies_AF</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Temporary Employment Agencies AF</shortDescription>
+        <value>0.2</value>
+    </labels>
+    <labels>
+        <fullName>Test_Slack_Message</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Test Slack Message</shortDescription>
+        <value>{#Opportunity.Owner.FirstName} Test {#Opportunity.Name}</value>
+    </labels>
+    <labels>
+        <fullName>Transactional</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Transactional</shortDescription>
+        <value>Transactional</value>
+    </labels>
+    <labels>
+        <fullName>UserId_TaskDrive</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>UserId_TaskDrive</shortDescription>
+        <value>0051v000003ajNMAAY</value>
+    </labels>
+    <labels>
+        <fullName>User_Id_HeySquad</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>User_Id_HeySquad</shortDescription>
+        <value>005W7000009lwHt</value>
+    </labels>
+    <labels>
+        <fullName>cadenceTrackerTest</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>cadenceTrackerTest</shortDescription>
+        <value>77CW70000001M6XMAU</value>
+    </labels>
+    <labels>
+        <fullName>ers_CancelButton</fullName>
+        <categories>buttons</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Cancel</shortDescription>
+        <value>Cancel</value>
+    </labels>
+    <labels>
+        <fullName>ers_ClearFilterAction</fullName>
+        <categories>actions</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Clear Filter</shortDescription>
+        <value>Clear Filter</value>
+    </labels>
+    <labels>
+        <fullName>ers_ClearFilterButton</fullName>
+        <categories>buttons</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Clear All Filters</shortDescription>
+        <value>Clear All Filters</value>
+    </labels>
+    <labels>
+        <fullName>ers_ClearSelectionButton</fullName>
+        <categories>buttons</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Clear Selection</shortDescription>
+        <value>Clear Selection</value>
+    </labels>
+    <labels>
+        <fullName>ers_ColumnHeader</fullName>
+        <categories>headers</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Column</shortDescription>
+        <value>Column</value>
+    </labels>
+    <labels>
+        <fullName>ers_EmptyTableMessage</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Empty</shortDescription>
+        <value>This table currently has no data to display</value>
+    </labels>
+    <labels>
+        <fullName>ers_ErrorRequiredEntry</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Required</shortDescription>
+        <value>This is a required entry.  At least 1 row must be selected.</value>
+    </labels>
+    <labels>
+        <fullName>ers_FilterHeader</fullName>
+        <categories>headers</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Filter</shortDescription>
+        <value>Filter</value>
+    </labels>
+    <labels>
+        <fullName>ers_FirstButton</fullName>
+        <categories>buttons</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>First Page</shortDescription>
+        <value>First</value>
+    </labels>
+    <labels>
+        <fullName>ers_LabelHeader</fullName>
+        <categories>headers</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label</shortDescription>
+        <value>Label</value>
+    </labels>
+    <labels>
+        <fullName>ers_LastButton</fullName>
+        <categories>buttons</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Last Page</shortDescription>
+        <value>Last</value>
+    </labels>
+    <labels>
+        <fullName>ers_NextButton</fullName>
+        <categories>buttons</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Next Page</shortDescription>
+        <value>Next</value>
+    </labels>
+    <labels>
+        <fullName>ers_PreviousButton</fullName>
+        <categories>buttons</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Previous Page</shortDescription>
+        <value>Prev</value>
+    </labels>
+    <labels>
+        <fullName>ers_RecordsPerPage</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Records per Page input label</shortDescription>
+        <value>Records per Page</value>
+    </labels>
+    <labels>
+        <fullName>ers_SaveButton</fullName>
+        <categories>buttons</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Save</shortDescription>
+        <value>Save</value>
+    </labels>
+    <labels>
+        <fullName>ers_SearchPlaceholder</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Search Term</shortDescription>
+        <value>Enter search term ...</value>
+    </labels>
+    <labels>
+        <fullName>ers_SetFilterAction</fullName>
+        <categories>actions</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Set Filter</shortDescription>
+        <value>Set Filter</value>
+    </labels>
+    <labels>
+        <fullName>ers_ShowingPageMiddle</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Showing Page x of y Pages input label middle</shortDescription>
+        <value>of</value>
+    </labels>
+    <labels>
+        <fullName>ers_ShowingPagePrefix</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Showing Page x of y Pages input label prefix</shortDescription>
+        <value>Showing Page</value>
+    </labels>
+    <labels>
+        <fullName>ers_ShowingPageSuffix</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Showing Page x of y Pages input label suffix</shortDescription>
+        <value>Pages</value>
+    </labels>
+    <labels>
+        <fullName>ers_filterBlankHelpText</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Help Text for Filter Blank Checkbox</shortDescription>
+        <value>Check here if you want to filter rows where the value in this column is blank</value>
+    </labels>
+    <labels>
+        <fullName>ers_filterBlankLabel</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label for Filter Blank Checkbox</shortDescription>
+        <value>Filter Blank Values?</value>
+    </labels>
+    <labels>
+        <fullName>fsc_AccessLevel</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AccessLevel</shortDescription>
+        <value>Access Level</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Back</fullName>
+        <categories>Buttons,Filters,Title</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Back</shortDescription>
+        <value>Back</value>
+    </labels>
+    <labels>
+        <fullName>fsc_ButtonIsNotSupportedMessage</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ButtonIsNotSupportedMessage</shortDescription>
+        <value>Following buttons are note supported:</value>
+    </labels>
+    <labels>
+        <fullName>fsc_ConditionLogicHelpText</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ConditionLogicHelpText</shortDescription>
+        <value>Use parentheses, AND, OR, and NOT to customize the logic. For example, if you enter “(1 AND 2 AND 3) OR 4”, the flow evaluates whether the first three conditions are true or only the fourth condition is true.</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Delete</fullName>
+        <categories>labels, buttons</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Delete</shortDescription>
+        <value>Delete</value>
+    </labels>
+    <labels>
+        <fullName>fsc_FieldIsNotSupportedMessage</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>FieldIsNotSupportedMessage</shortDescription>
+        <value>Following fields are not supported:</value>
+    </labels>
+    <labels>
+        <fullName>fsc_FieldTypeNotSuportedMessage</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>fsc_FieldTypeNotSuportedMessage</shortDescription>
+        <value>You provided an unsupported value for the DataTypeFilter input on Object and Field Picker. Currently the only supported value is ’picklist’</value>
+    </labels>
+    <labels>
+        <fullName>fsc_For</fullName>
+        <categories>Buttons</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>For</shortDescription>
+        <value>For</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Key_Label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Key Label</shortDescription>
+        <value>Key</value>
+    </labels>
+    <labels>
+        <fullName>fsc_LackingPermissions</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LackingPermissions</shortDescription>
+        <value>You don\&apos;t have the proper permissions for ths action</value>
+    </labels>
+    <labels>
+        <fullName>fsc_ManagerEmptyMessage</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ManagerEmptyMessage</shortDescription>
+        <value>&quot;Manager APEX Class&quot; can not be empty</value>
+    </labels>
+    <labels>
+        <fullName>fsc_MultipleGroupsForRole</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MultipleGroupsForRole</shortDescription>
+        <value>There are multiple groups for that role</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Name</fullName>
+        <categories>quicklinks, Labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Name</shortDescription>
+        <value>Name</value>
+    </labels>
+    <labels>
+        <fullName>fsc_NonePicklistValueLabel</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NonePicklistValueLabel</shortDescription>
+        <value>-- None --</value>
+    </labels>
+    <labels>
+        <fullName>fsc_OWDReadWrite</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OWDReadWrite</shortDescription>
+        <value>Sharing Settings must be private or public read/write to enable manual sharing</value>
+    </labels>
+    <labels>
+        <fullName>fsc_OwnerAdminModify</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OwnerAdminModify</shortDescription>
+        <value>Only the record owner or administrators can modify permissions</value>
+    </labels>
+    <labels>
+        <fullName>fsc_PublicGroups</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PublicGroups</shortDescription>
+        <value>Public Groups</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Queues</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Queues</shortDescription>
+        <value>Queues</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Read</fullName>
+        <categories>labels, buttons</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Read</shortDescription>
+        <value>Read</value>
+    </labels>
+    <labels>
+        <fullName>fsc_ReadWrite</fullName>
+        <categories>labels, buttons</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ReadWrite</shortDescription>
+        <value>Read / Write</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Reason</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Reason</shortDescription>
+        <value>Reason</value>
+    </labels>
+    <labels>
+        <fullName>fsc_RelatedUsers</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RelatedUsers</shortDescription>
+        <value>Related Users</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Roles</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Roles</shortDescription>
+        <value>Roles</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Search</fullName>
+        <categories>Actions,Buttons,quicklinks</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Search in</shortDescription>
+        <value>Search in</value>
+    </labels>
+    <labels>
+        <fullName>fsc_SearchFor</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SearchFor</shortDescription>
+        <value>For</value>
+    </labels>
+    <labels>
+        <fullName>fsc_SetAccessLevel</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SetAccessLevel</shortDescription>
+        <value>Set Access Level</value>
+    </labels>
+    <labels>
+        <fullName>fsc_SupportedAddCapabilitiesEmptyMessage</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SupportedAddCapabilitiesEmptyMessage</shortDescription>
+        <value>&quot;Add Capabilities&quot; can not be empty</value>
+    </labels>
+    <labels>
+        <fullName>fsc_SupportedButtonsEmptyMessage</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SupportedButtonsEmptyMessage</shortDescription>
+        <value>&quot;Supported Buttons&quot; can not be empty</value>
+    </labels>
+    <labels>
+        <fullName>fsc_SupportedEditCapabilitiesEmptyMessage</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SupportedEditCapabilitiesEmptyMessage</shortDescription>
+        <value>&quot;Edit Capabilities&quot; can not be empty</value>
+    </labels>
+    <labels>
+        <fullName>fsc_TooManyResultsMessage</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TooManyResultsMessage</shortDescription>
+        <value>Your search found more than 200 results.  Keep typing to make it more specific</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Type</fullName>
+        <categories>Buttons,Filters,Title</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Type</shortDescription>
+        <value>Type</value>
+    </labels>
+    <labels>
+        <fullName>fsc_UserOrGroup</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>UserOrGroup</shortDescription>
+        <value>User Or Group</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Users</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Users</shortDescription>
+        <value>Users</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Value_Label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Value Label</shortDescription>
+        <value>Value</value>
+    </labels>
+</CustomLabels>

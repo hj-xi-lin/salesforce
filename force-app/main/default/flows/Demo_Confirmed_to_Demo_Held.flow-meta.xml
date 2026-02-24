@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <description>RO- 1545</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>timeNow</name>
+        <dataType>DateTime</dataType>
+        <expression>NOW()</expression>
+    </formulas>
+    <formulas>
+        <name>today</name>
+        <dataType>Date</dataType>
+        <expression>TODAY()</expression>
+    </formulas>
+    <interviewLabel>Demo Confirmed to Demo Held {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Demo Confirmed to Demo Held</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>updateOpps</name>
+        <label>updateOpps</label>
+        <locationX>176</locationX>
+        <locationY>252</locationY>
+        <filterLogic>1 AND 2 AND 3 AND (4 OR 5)</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.WhatId</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>StageName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Demo Confirmed</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Demo_Date__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>today</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Record_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Sales</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Record_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Agency Acquisition</stringValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>StageName</field>
+            <value>
+                <stringValue>Demo Held</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Opportunity</object>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>updateOpps</targetReference>
+        </connector>
+        <filterLogic>1 AND (2 OR 3 OR 4) AND 5</filterLogic>
+        <filters>
+            <field>StartDateTime</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>txtEventType__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Demo Call</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>txtEventType__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Demo Video Call</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>txtEventType__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Demo F2F</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Event_cancelled__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>Event</object>
+        <schedule>
+            <frequency>Daily</frequency>
+            <startDate>2023-07-17</startDate>
+            <startTime>22:00:00.000Z</startTime>
+        </schedule>
+        <triggerType>Scheduled</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

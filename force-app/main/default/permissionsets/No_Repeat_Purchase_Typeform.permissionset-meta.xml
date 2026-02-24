@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This will provide the ability to Edit the field &apos;No Repeat Purchase Typeform &apos; on Account.</description>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.No_Repeat_Purchase_Typeform__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>No Repeat Purchase Typeform</label>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>Account</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <recordTypeVisibilities>
+        <recordType>Account.Sales</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+</PermissionSet>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject></baseObject>
+    <category>other</category>
+    <deployed>true</deployed>
+    <description>Which call script results in the best target engagement?</description>
+    <label>Call Script Engagement Report</label>
+    <sections>
+        <masterLabel>Call Scripts</masterLabel>
+    </sections>
+</ReportType>

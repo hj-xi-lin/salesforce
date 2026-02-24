@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <choices>
+        <name>choiceAddNewEntry</name>
+        <choiceText>Einen neuen Eintrag hinzufügen</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Einen neuen Eintrag hinzufügen</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>choiceUpdateExistingEntry</name>
+        <choiceText>Einen existierenden Eintrag ändern</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Einen existierenden Eintrag ändern</stringValue>
+        </value>
+    </choices>
+    <decisions>
+        <name>Action</name>
+        <label>Action</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Edit_Existing_Entry</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Update existing Entry</defaultConnectorLabel>
+        <rules>
+            <name>Create_New_Entry</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Was_willst_du_machen</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>choiceAddNewEntry</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Add_new_Entry</targetReference>
+            </connector>
+            <label>Create New Entry</label>
+        </rules>
+    </decisions>
+    <description>RO-2811</description>
+    <environments>Default</environments>
+    <interviewLabel>Account Documentation {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Account Documentation - Main Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <screens>
+        <name>Decision</name>
+        <label>Decision</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Action</targetReference>
+        </connector>
+        <fields>
+            <name>ScreenText</name>
+            <fieldText>&lt;p&gt;Willst du einen neuen Eintrag zur Account Dokumentation hinzufügen oder einen existierenden ändern?&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Was_willst_du_machen</name>
+            <choiceReferences>choiceAddNewEntry</choiceReferences>
+            <choiceReferences>choiceUpdateExistingEntry</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Was willst du machen?</fieldText>
+            <fieldType>RadioButtons</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Decision</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <name>Add_new_Entry</name>
+        <label>Add new Entry</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <flowName>Account_Documentation_Add_new_Entry</flowName>
+        <inputAssignments>
+            <name>recordId</name>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Edit_Existing_Entry</name>
+        <label>Edit Existing Entry</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <flowName>Account_Documentation_Edit_existing_Entry</flowName>
+        <inputAssignments>
+            <name>recordId</name>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <variables>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

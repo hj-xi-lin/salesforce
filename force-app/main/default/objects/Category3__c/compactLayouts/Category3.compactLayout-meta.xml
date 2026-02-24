@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Category3</fullName>
+    <fields>Category__c</fields>
+    <fields>HeyJobs_Category__c</fields>
+    <fields>Reference_Clients__c</fields>
+    <fields>Name</fields>
+    <label>Category3</label>
+</CompactLayout>

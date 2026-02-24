@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Performance_Comparison__c</fullName>
+    <description>Heyjobs Performance in comparison with other recruiting channels, RO-1152</description>
+    <inlineHelpText>Heyjobs Performance in comparison with other recruiting channels</inlineHelpText>
+    <label>Legacy - Performance Comparison</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

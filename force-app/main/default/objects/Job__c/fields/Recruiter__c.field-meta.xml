@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Recruiter__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>This field established the link between job and the respective recruiter found for this job.</description>
+    <inlineHelpText>This field established the link between job and the respective recruiter found for this job.</inlineHelpText>
+    <label>Recruiter</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Jobs</relationshipLabel>
+    <relationshipName>Jobs</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

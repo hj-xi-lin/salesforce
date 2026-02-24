@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <assignments>
+        <name>Add_to_List</name>
+        <label>Add to List</label>
+        <locationX>264</locationX>
+        <locationY>647</locationY>
+        <assignmentItems>
+            <assignToReference>varListOppContactRole</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Loop_over_Contact_Roles</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Loop_over_Contact_Roles</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_values</name>
+        <label>Assign values</label>
+        <locationX>264</locationX>
+        <locationY>539</locationY>
+        <assignmentItems>
+            <assignToReference>Loop_over_Contact_Roles.Engagement_Score_Contact__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Engagement_Score__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Loop_over_Contact_Roles.MQL_Type__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>fmlMQLtype</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Loop_over_Contact_Roles.Role</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Decision Maker</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Add_to_List</targetReference>
+        </connector>
+    </assignments>
+    <description>RO - 1706, RO-1637 v1</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>fmlIsNew</name>
+        <dataType>Boolean</dataType>
+        <expression>ISNEW()</expression>
+    </formulas>
+    <formulas>
+        <name>fmlMqlMapping</name>
+        <dataType>Number</dataType>
+        <expression>CASE({!$Record.MQL_Type_Contact__c}, 
+&quot;Type 1&quot;, 3,
+&quot;Type 2&quot;, 2,
+&quot;Type 3&quot;,1
+,0)</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <name>fmlMQLtype</name>
+        <dataType>Number</dataType>
+        <expression>CASE({!$Record.MQL_Type_Contact__c}, 
+&quot;Type 3&quot;, 3, 
+&quot;Type 2&quot;, 2,
+&quot;Type 1&quot;,1,
+4)</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>fmlReverseMapping</name>
+        <dataType>String</dataType>
+        <expression>CASE({!fmlMqlMapping}, 
+3, &quot;Type 1&quot;,
+2, &quot;Type 2&quot;,
+1, &quot;Type 3&quot;,
+&quot;None&quot;)</expression>
+    </formulas>
+    <interviewLabel>Update MQL Type and Engagement Score on Opp Contact Role {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Update MQL Type and Engagement Score on Opp Contact Role</label>
+    <loops>
+        <name>Loop_over_Contact_Roles</name>
+        <label>Loop over Contact Roles</label>
+        <locationX>176</locationX>
+        <locationY>431</locationY>
+        <collectionReference>GetRelatedOppContactRoles</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Assign_values</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>Update_Opp_Contact_Roles</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>GetRelatedOppContactRoles</name>
+        <label>Get Related Opp Contact Roles</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Loop_over_Contact_Roles</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>ContactId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Opportunity_Stage__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>Closed Won</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Opportunity_Stage__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>Closed Lost</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Opportunity_Stage__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>Contract received</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>OpportunityContactRole</object>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>Engagement_Score_Contact__c</queriedFields>
+        <queriedFields>MQL_Type__c</queriedFields>
+        <queriedFields>Role</queriedFields>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Opp_Contact_Roles</name>
+        <label>Update Opp Contact Roles</label>
+        <locationX>176</locationX>
+        <locationY>839</locationY>
+        <inputReference>varListOppContactRole</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>GetRelatedOppContactRoles</targetReference>
+        </connector>
+        <filterFormula>AND (
+NOT(ISPICKVAL({!$Record.MQL_Type_Contact__c},&quot;&quot;)),
+NOT(ISBLANK({!$Record.Engagement_Score__c})),
+OR(
+ISNEW(),
+ISCHANGED({!$Record.MQL_Type_Contact__c}),
+ISCHANGED({!$Record.Engagement_Score__c}))
+)</filterFormula>
+        <object>Contact</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>VarHighestMql</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>2</scale>
+    </variables>
+    <variables>
+        <name>varListOppContactRole</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>OpportunityContactRole</objectType>
+    </variables>
+</Flow>

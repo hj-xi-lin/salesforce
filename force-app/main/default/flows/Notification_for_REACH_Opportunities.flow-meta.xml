@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Message</name>
+        <label>Message</label>
+        <locationX>50</locationX>
+        <locationY>386</locationY>
+        <actionName>slackPostMessage</actionName>
+        <actionType>slackPostMessage</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>slackAppIdForToken</name>
+            <value>
+                <stringValue>A028VJ1KG3G</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>slackWorkspaceIdForToken</name>
+            <value>
+                <stringValue>T02516KLC</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>slackConversationId</name>
+            <value>
+                <stringValue>C06CCUFSH8W</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>slackMessage</name>
+            <value>
+                <elementReference>messageWithCampaignWithAnnotation</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>Fetch_Opportunity.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>slackPostMessage</nameSegment>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <actionCalls>
+        <name>Message1</name>
+        <label>Message</label>
+        <locationX>314</locationX>
+        <locationY>386</locationY>
+        <actionName>slackPostMessage</actionName>
+        <actionType>slackPostMessage</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>slackAppIdForToken</name>
+            <value>
+                <stringValue>A028VJ1KG3G</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>slackWorkspaceIdForToken</name>
+            <value>
+                <stringValue>T02516KLC</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>slackConversationId</name>
+            <value>
+                <stringValue>C06CCUFSH8W</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>slackMessage</name>
+            <value>
+                <elementReference>messageWithCampaigndateWithoutAnnotations</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>Fetch_Opportunity.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>slackPostMessage</nameSegment>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <actionCalls>
+        <name>Message2</name>
+        <label>Message</label>
+        <locationX>578</locationX>
+        <locationY>386</locationY>
+        <actionName>slackPostMessage</actionName>
+        <actionType>slackPostMessage</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>slackAppIdForToken</name>
+            <value>
+                <stringValue>A028VJ1KG3G</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>slackWorkspaceIdForToken</name>
+            <value>
+                <stringValue>T02516KLC</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>slackConversationId</name>
+            <value>
+                <stringValue>C06CCUFSH8W</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>slackMessage</name>
+            <value>
+                <elementReference>messageWithoutCampaignWithAnnotation</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>Fetch_Opportunity.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>slackPostMessage</nameSegment>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <actionCalls>
+        <name>Message3</name>
+        <label>Message</label>
+        <locationX>842</locationX>
+        <locationY>386</locationY>
+        <actionName>slackPostMessage</actionName>
+        <actionType>slackPostMessage</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>slackAppIdForToken</name>
+            <value>
+                <stringValue>A028VJ1KG3G</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>slackWorkspaceIdForToken</name>
+            <value>
+                <stringValue>T02516KLC</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>slackConversationId</name>
+            <value>
+                <stringValue>C06CCUFSH8W</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>slackMessage</name>
+            <value>
+                <elementReference>messageWithoutCampaigndateWithoutAnnotation</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>Fetch_Opportunity.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>slackPostMessage</nameSegment>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <apiVersion>60.0</apiVersion>
+    <decisions>
+        <name>Check_REACH_Campaign_Date_And_Annotations</name>
+        <label>Check REACH Campaign Date And Annotations</label>
+        <locationX>578</locationX>
+        <locationY>278</locationY>
+        <defaultConnectorLabel>Default</defaultConnectorLabel>
+        <rules>
+            <name>With_Campaign_Date_And_With_Annotations</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Fetch_Opportunity.Reach_Campaign_Start_Date__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Fetch_Opportunity.SyncedQuote.txtContractAnnotation__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Message</targetReference>
+            </connector>
+            <label>With Campaign Date And With Annotations</label>
+        </rules>
+        <rules>
+            <name>With_Campaign_Date_and_Without_Annotations</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Fetch_Opportunity.Reach_Campaign_Start_Date__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Fetch_Opportunity.SyncedQuote.txtContractAnnotation__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Message1</targetReference>
+            </connector>
+            <label>With Campaign Date and Without Annotations</label>
+        </rules>
+        <rules>
+            <name>Without_Campaign_Date_and_With_Annotations</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Fetch_Opportunity.Reach_Campaign_Start_Date__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Fetch_Opportunity.SyncedQuote.txtContractAnnotation__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Message2</targetReference>
+            </connector>
+            <label>Without Campaign Date and With Annotations</label>
+        </rules>
+        <rules>
+            <name>Without_Campaign_Date_and_Without_Annotations</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Fetch_Opportunity.Reach_Campaign_Start_Date__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Fetch_Opportunity.SyncedQuote.txtContractAnnotation__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Message3</targetReference>
+            </connector>
+            <label>Without Campaign Date and Without Annotations</label>
+        </rules>
+    </decisions>
+    <description>RO-2097</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>messageWithCampaigndateWithoutAnnotations</name>
+        <dataType>String</dataType>
+        <expression>{!Fetch_Opportunity.Owner.Full_Name__c} +  &quot; just closed a REACH deal with &quot; +  {!Fetch_Opportunity.Account.Name} + &quot; for &quot; 
++TEXT({!Fetch_Opportunity.Amount})+ &quot;€ contract value! Well done! &quot; +BR() + 
+&quot;Segment: &quot;  + TEXT({!Fetch_Opportunity.Segment_Opp_V02__c}) +BR() +
+&quot;Service Country: &quot; + TEXT({!Fetch_Opportunity.Account.Service_Country__c}) +BR() +
+&quot;Contract Duration: &quot; + TEXT({!Fetch_Opportunity.SyncedQuote.Service_Period__c}) + BR() +
+&quot;Reach Campaign Start Date : &quot; + TEXT ({!Fetch_Opportunity.Reach_Campaign_Start_Date__c}) + BR() +
+&quot;Contract Annotations: N/A&quot;</expression>
+    </formulas>
+    <formulas>
+        <name>messageWithCampaignWithAnnotation</name>
+        <dataType>String</dataType>
+        <expression>{!Fetch_Opportunity.Owner.Full_Name__c} +  &quot; just closed a REACH deal with &quot; +  {!Fetch_Opportunity.Account.Name} + &quot; for &quot; 
++TEXT({!Fetch_Opportunity.Amount})+ &quot;€ contract value! Well done! &quot; +BR() + 
+&quot;Segment: &quot;  + TEXT({!Fetch_Opportunity.Segment_Opp_V02__c}) +BR() +
+&quot;Service Country: &quot; + TEXT({!Fetch_Opportunity.Account.Service_Country__c}) +BR() +
+&quot;Contract Duration: &quot; + TEXT({!Fetch_Opportunity.SyncedQuote.Service_Period__c}) + BR() +
+&quot;Reach Campaign Start Date : &quot; + TEXT ({!Fetch_Opportunity.Reach_Campaign_Start_Date__c}) + BR() +
+&quot;Contract Annotations: &quot; + ({!Fetch_Opportunity.SyncedQuote.txtContractAnnotation__c})</expression>
+    </formulas>
+    <formulas>
+        <name>messageWithoutCampaigndateWithoutAnnotation</name>
+        <dataType>String</dataType>
+        <expression>{!Fetch_Opportunity.Owner.Full_Name__c} + &quot; just closed a REACH deal with &quot; + {!Fetch_Opportunity.Account.Name} + &quot; for &quot; 
++ TEXT({!Fetch_Opportunity.Amount}) + &quot;€ contract value! Well done! &quot; + BR() + 
+&quot;Segment: &quot; + TEXT({!Fetch_Opportunity.Segment_Opp_V02__c}) + BR() +
+&quot;Service Country: &quot; + TEXT({!Fetch_Opportunity.Account.Service_Country__c}) + BR() +
+&quot;Contract Duration: &quot; + TEXT({!Fetch_Opportunity.SyncedQuote.Service_Period__c}) + BR() +
+&quot;Contract Annotations: N/A&quot;</expression>
+    </formulas>
+    <formulas>
+        <name>messageWithoutCampaignWithAnnotation</name>
+        <dataType>String</dataType>
+        <expression>{!Fetch_Opportunity.Owner.Full_Name__c} + &quot; just closed a REACH deal with &quot; + {!Fetch_Opportunity.Account.Name} + &quot; for &quot; 
++ TEXT({!Fetch_Opportunity.Amount}) + &quot;€ contract value! Well done! &quot; + BR() + 
+&quot;Segment: &quot; + TEXT({!Fetch_Opportunity.Segment_Opp_V02__c}) + BR() +
+&quot;Service Country: &quot; + TEXT({!Fetch_Opportunity.Account.Service_Country__c}) + BR() +
+&quot;Contract Duration: &quot; + TEXT({!Fetch_Opportunity.SyncedQuote.Service_Period__c}) + BR() +
+&quot;Contract Annotations: &quot; + {!Fetch_Opportunity.SyncedQuote.txtContractAnnotation__c}</expression>
+    </formulas>
+    <interviewLabel>Notification for REACH Opportunities {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Notification for REACH Opportunities</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Fetch_Opportunity</name>
+        <label>Fetch Opportunity</label>
+        <locationX>578</locationX>
+        <locationY>170</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Check_REACH_Campaign_Date_And_Annotations</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.RecordId__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Opportunity</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>452</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Fetch_Opportunity</targetReference>
+        </connector>
+        <flowRunAsUser>DefaultWorkflowUser</flowRunAsUser>
+        <object>Opportunity_Alert__e</object>
+        <triggerType>PlatformEvent</triggerType>
+    </start>
+    <status>Draft</status>
+</Flow>

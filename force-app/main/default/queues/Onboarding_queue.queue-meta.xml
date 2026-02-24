@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Onboarding queue</name>
+    <queueMembers>
+        <users>
+            <user>adelina.vllasaliu@heyjobs.de</user>
+            <user>daniela.rodriguez@heyjobs.de</user>
+            <user>gianna.zuch@heyjobs.de</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

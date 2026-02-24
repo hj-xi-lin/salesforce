@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <decisions>
+        <name>SLA_1_status</name>
+        <label>SLA 1 status</label>
+        <locationX>374</locationX>
+        <locationY>276</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>In_Progress</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Account.Stage_ACM__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Outbound</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_SLA_1_status</targetReference>
+            </connector>
+            <label>In Progress</label>
+        </rules>
+    </decisions>
+    <description>RO - 2355</description>
+    <environments>Default</environments>
+    <interviewLabel>SLA Calculations {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>SLA Calculations</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_SLA_1_status</name>
+        <label>Update SLA 1 status</label>
+        <locationX>242</locationX>
+        <locationY>384</locationY>
+        <inputAssignments>
+            <field>SLA_1_status__c</field>
+            <value>
+                <stringValue>In Progress</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterFormula>AND(
+    ISPICKVAL({!$Record.Lifecycle_Stage_Contact__c}, &quot;marketingqualifiedlead&quot;),
+    NOT(ISPICKVAL({!$Record.SLA_1_status__c}, &quot;In Progress&quot;)),
+    OR(
+        ISPICKVAL({!$Record.MQL_Type_Contact__c}, &quot;Type 1&quot;),
+        ISPICKVAL({!$Record.MQL_Type_Contact__c}, &quot;Type 2&quot;),
+        ISPICKVAL({!$Record.MQL_Type_Contact__c}, &quot;Type 3&quot;)
+    ),
+    OR(
+        ISNULL({!$Record.Timestamp_Latest_Opp_Contact_Role__c}),
+        {!$Record.Timestamp_Latest_Opp_Contact_Role__c} &lt; {!$Record.Timestamp_Became_a_MQL_Contact_Latest__c}
+    )
+)</filterFormula>
+        <object>Contact</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <scheduledPaths>
+            <name>After_2_mins</name>
+            <connector>
+                <targetReference>SLA_1_status</targetReference>
+            </connector>
+            <label>After 2 mins</label>
+            <offsetNumber>2</offsetNumber>
+            <offsetUnit>Minutes</offsetUnit>
+            <timeSource>RecordTriggerEvent</timeSource>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

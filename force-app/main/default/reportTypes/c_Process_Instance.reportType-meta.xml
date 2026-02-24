@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>ProcessInstance</baseObject>
+    <category>admin</category>
+    <deployed>true</deployed>
+    <description>Process Instance</description>
+    <join>
+        <outerJoin>false</outerJoin>
+        <relationship>Nodes</relationship>
+    </join>
+    <label>c - Process Instance</label>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Approval Process</displayNameOverride>
+            <field>ProcessDefinition</field>
+            <table>ProcessInstance</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Approval Process Instance ID</displayNameOverride>
+            <field>Id</field>
+            <table>ProcessInstance</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Completed Date</displayNameOverride>
+            <field>CompletedDate</field>
+            <table>ProcessInstance</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Created By</displayNameOverride>
+            <field>CreatedBy</field>
+            <table>ProcessInstance</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Elapsed Days</displayNameOverride>
+            <field>ElapsedTimeInDays</field>
+            <table>ProcessInstance</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Elapsed Hours</displayNameOverride>
+            <field>ElapsedTimeInHours</field>
+            <table>ProcessInstance</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Elapsed Minutes</displayNameOverride>
+            <field>ElapsedTimeInMinutes</field>
+            <table>ProcessInstance</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Actor</displayNameOverride>
+            <field>LastActor</field>
+            <table>ProcessInstance</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Object Type</displayNameOverride>
+            <field>TableEnumOrId</field>
+            <table>ProcessInstance</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Pending Step Name</displayNameOverride>
+            <field>CurrentNodeName</field>
+            <table>ProcessInstance</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Record Name</displayNameOverride>
+            <field>TargetName</field>
+            <table>ProcessInstance</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Status</displayNameOverride>
+            <field>Status</field>
+            <table>ProcessInstance</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Submitted By</displayNameOverride>
+            <field>SubmittedBy</field>
+            <table>ProcessInstance</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Submitted Date</displayNameOverride>
+            <field>CreatedDate</field>
+            <table>ProcessInstance</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Process Instance : Submitted By : Manager (reports)</displayNameOverride>
+            <field>SubmittedBy.Manager_reports__c</field>
+            <table>ProcessInstance</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>SubmittedBy.Manager</field>
+            <table>ProcessInstance</table>
+        </columns>
+        <masterLabel>Process Instance</masterLabel>
+    </sections>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Process Instance</displayNameOverride>
+            <field>ProcessInstance</field>
+            <table>ProcessInstance.Nodes</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Step</displayNameOverride>
+            <field>ProcessNode</field>
+            <table>ProcessInstance.Nodes</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Step Completed Date</displayNameOverride>
+            <field>CompletedDate</field>
+            <table>ProcessInstance.Nodes</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Step Elapsed Days</displayNameOverride>
+            <field>ElapsedTimeInDays</field>
+            <table>ProcessInstance.Nodes</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Step Elapsed Hours</displayNameOverride>
+            <field>ElapsedTimeInHours</field>
+            <table>ProcessInstance.Nodes</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Step Elapsed Minutes</displayNameOverride>
+            <field>ElapsedTimeInMinutes</field>
+            <table>ProcessInstance.Nodes</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Step Last Actor</displayNameOverride>
+            <field>LastActor</field>
+            <table>ProcessInstance.Nodes</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Step Start Date</displayNameOverride>
+            <field>CreatedDate</field>
+            <table>ProcessInstance.Nodes</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Step Status</displayNameOverride>
+            <field>NodeStatus</field>
+            <table>ProcessInstance.Nodes</table>
+        </columns>
+        <masterLabel>Process Instance Node</masterLabel>
+    </sections>
+</ReportType>

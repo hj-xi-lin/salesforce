@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Other_Recruiting_Channels__c</fullName>
+    <description>Recruiting channels that perform better than Heyjobs.RO-1152</description>
+    <inlineHelpText>Recruiting channels that perform better than Heyjobs.</inlineHelpText>
+    <label>Legacy - Other Recruiting Channels</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Indeed</fullName>
+                <default>false</default>
+                <label>Indeed</label>
+            </value>
+            <value>
+                <fullName>StepStone</fullName>
+                <default>false</default>
+                <label>StepStone</label>
+            </value>
+            <value>
+                <fullName>Monster</fullName>
+                <default>false</default>
+                <label>Monster</label>
+            </value>
+            <value>
+                <fullName>meinestadt.de</fullName>
+                <default>false</default>
+                <label>meinestadt.de</label>
+            </value>
+            <value>
+                <fullName>Join</fullName>
+                <default>false</default>
+                <label>Join</label>
+            </value>
+            <value>
+                <fullName>Jobspreader by wollmilchsau</fullName>
+                <default>false</default>
+                <label>Jobspreader by wollmilchsau</label>
+            </value>
+            <value>
+                <fullName>Karrie.at</fullName>
+                <default>false</default>
+                <label>Karrie.at</label>
+            </value>
+            <value>
+                <fullName>hokify</fullName>
+                <default>false</default>
+                <label>hokify</label>
+            </value>
+            <value>
+                <fullName>Andere</fullName>
+                <default>false</default>
+                <label>Andere</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>6</visibleLines>
+</CustomField>

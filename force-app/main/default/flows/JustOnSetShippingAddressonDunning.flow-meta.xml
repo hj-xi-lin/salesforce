@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>63.0</apiVersion>
+    <assignments>
+        <name>Update_Shipping_info</name>
+        <label>Update Shipping info</label>
+        <locationX>176</locationX>
+        <locationY>287</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.ON_ShippingCity__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.ONB2__Account__r.ShippingCity</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.ON_ShippingPostalCode__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.ONB2__Account__r.ShippingPostalCode</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.ON_ShippingStreet__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.ONB2__Account__r.ShippingStreet</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <description>RO - 2010</description>
+    <environments>Default</environments>
+    <interviewLabel>JustOn_ {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>JustOn Set Shipping Address on Dunning</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Shipping_info</targetReference>
+        </connector>
+        <object>ONB2__Dunning__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

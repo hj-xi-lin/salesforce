@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Basic User Permissions</label>
+    <permissionSets>HelloSign__HelloSign_User</permissionSets>
+    <permissionSets>Multi_Factor_Authentication</permissionSets>
+    <permissionSets>aircall__AirCall_PermissionSet</permissionSets>
+    <permissionSets>slackv2__Slack_Standard_User</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <description>Upon hightouch ingesting attribution data I want to retrieve any open mql tasks and copy the attribution information to the task.</description>
+    <environments>Default</environments>
+    <interviewLabel>Contact: Update MQL Task Upon Contact being Updated {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Contact: Update MQL Task Upon Contact being Updated</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>Update the task records with the same timestamp latest mql conversion</description>
+        <name>Update_Records_1</name>
+        <label>Update Relevant MQL Task Records</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Timestamp_Latest_MQL_conversion__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Timestamp_Latest_MQL_conversion_c__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>txtTaskType__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>MQL Task</stringValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>mkt_campaign__c</field>
+            <value>
+                <elementReference>$Record.mkt_campaign__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>mkt_group__c</field>
+            <value>
+                <elementReference>$Record.mkt_group__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>mkt_medium__c</field>
+            <value>
+                <elementReference>$Record.mkt_medium__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>mkt_platform__c</field>
+            <value>
+                <elementReference>$Record.mkt_platform__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>mkt_source__c</field>
+            <value>
+                <elementReference>$Record.mkt_source__c</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Task</object>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Records_1</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>acquisition_stage_ts__c</field>
+            <operator>IsChanged</operator>
+        </filters>
+        <object>Contact</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

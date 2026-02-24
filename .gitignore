@@ -1,0 +1,29 @@
+# Salesforce
+.sf/
+.sfdx/
+deploy-report*.json
+
+# Scratch org auth
+*.scratch
+
+# Node
+node_modules/
+
+# Environment & secrets
+.env
+.env.local
+credentials.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Claude Code local settings (keep .claude/settings.json but ignore local overrides)
+.claude/settings.local.json
+
+# Backup files (backups live in $SF_BACKUP_DIR, not in the repo)
+backups/

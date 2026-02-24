@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Send_Slack_Message</name>
+        <label>Send Slack Message</label>
+        <locationX>308</locationX>
+        <locationY>276</locationY>
+        <actionName>slackPostMessage</actionName>
+        <actionType>slackPostMessage</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>slackAppIdForToken</name>
+            <value>
+                <stringValue>A028VJ1KG3G</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>slackWorkspaceIdForToken</name>
+            <value>
+                <stringValue>T02516KLC</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>slackConversationId</name>
+            <value>
+                <stringValue>C06969YEXBN</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>slackMessage</name>
+            <value>
+                <elementReference>fmlSlackMessageJobCreationError</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>slackPostMessage</nameSegment>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <apiVersion>59.0</apiVersion>
+    <description>RO-1872</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>fmlFlowURL</name>
+        <dataType>String</dataType>
+        <expression>&quot;&lt;&quot; &amp; LEFT($Api.Partner_Server_URL_340, FIND( &apos;/services&apos;, $Api.Partner_Server_URL_340)) + &quot;/builder_platform_interaction/flowBuilder.app?flowId=&quot; + {!$Record.FlowActiveVersionId__c} &amp; &quot;|&quot; &amp; {!$Record.FlowLabel__c} &amp; &quot;&gt;&quot;</expression>
+    </formulas>
+    <formulas>
+        <name>fmlLogEntryURL</name>
+        <dataType>String</dataType>
+        <expression>&quot;&lt;&quot; &amp; LEFT($Api.Partner_Server_URL_340, FIND( &apos;/services&apos;, $Api.Partner_Server_URL_340)) + &quot;/&quot; + {!$Record.Id} &amp; &quot;|&quot; &amp; &quot;Log Entry&quot; &amp; &quot;&gt;&quot;</expression>
+    </formulas>
+    <formulas>
+        <name>fmlLogURL</name>
+        <dataType>String</dataType>
+        <expression>&quot;&lt;&quot; &amp; LEFT($Api.Partner_Server_URL_340, FIND( &apos;/services&apos;, $Api.Partner_Server_URL_340)) + &quot;/&quot; + {!$Record.Log__r.Id} &amp; &quot;|&quot; &amp; &quot;Log&quot; &amp; &quot;&gt;&quot;</expression>
+    </formulas>
+    <formulas>
+        <name>fmlSlackMessageJobCreationError</name>
+        <dataType>String</dataType>
+        <expression>&quot;SF Case Creation Error&quot; + BR() +
+&quot;An error occured in the flow &quot; + {!fmlFlowURL} + &quot;: &quot; + {!$Record.Message__c} + BR() + 
+&quot;-----------------------------&quot; + BR() + 
+&quot;Exception Message: &quot; + {!$Record.ExceptionMessage__c} + BR() +
+&quot;-----------------------------&quot; + BR() + 
+&quot;Check out the &quot; + {!fmlLogURL} + &quot; and &quot; + {!fmlLogEntryURL} + &quot; for more details.&quot;</expression>
+    </formulas>
+    <interviewLabel>JobCreationCase - Send Error Message {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>JobCreationCase - Send Error Message</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <filterLogic>1 AND 2 AND NOT(3)</filterLogic>
+        <filters>
+            <field>OriginType__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Flow</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>OriginLocation__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Backend_Job_Submission_Case_Creation</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Message__c</field>
+            <operator>Contains</operator>
+            <value>
+                <stringValue>Platform Event Request</stringValue>
+            </value>
+        </filters>
+        <object>LogEntry__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <scheduledPaths>
+            <connector>
+                <targetReference>Send_Slack_Message</targetReference>
+            </connector>
+            <pathType>AsyncAfterCommit</pathType>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

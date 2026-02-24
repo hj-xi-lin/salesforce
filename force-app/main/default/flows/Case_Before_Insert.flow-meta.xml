@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>61.0</apiVersion>
+    <decisions>
+        <name>Fieldstoupdate</name>
+        <label>Fields to update</label>
+        <locationX>314</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Urgency</name>
+            <conditionLogic>(1 OR 3 OR 5) AND ( 2 OR 4)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Record_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Application Delivery case</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Account.Bookings_last_12_months__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <numberValue>51000.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Record_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Job Ad Change case</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Account.GTM_Motion_Account__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Enterprise</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Record_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Marketing support REACH</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Urgency</targetReference>
+            </connector>
+            <label>Urgency</label>
+        </rules>
+        <rules>
+            <name>Update_Reach_campaign_duration</name>
+            <conditionLogic>1 AND (2 OR 3 OR 4 OR 5)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Reach_Special_termination_right_duration__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <numberValue>0.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Record_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Repeat Purchase Case</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Record_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>[ATS] New Onboarding</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Record_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>[ATS] Create a new / Adjust Campaign (already integrated accounts)</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Record_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Initial BE Setup</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Reach_Campaign_duration_time</targetReference>
+            </connector>
+            <label>Update Reach campaign duration</label>
+        </rules>
+    </decisions>
+    <description>RO - 2203, RO - 2251, Add Marketing support REACH RT</description>
+    <environments>Default</environments>
+    <interviewLabel>Case ( Before Insert) {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Case ( Before Insert)</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Reach_Campaign_duration_time</name>
+        <label>Update Reach Campaign duration time</label>
+        <locationX>314</locationX>
+        <locationY>431</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Reach_Special_termination_right_duration__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <elementReference>$Record.Reach_Campaign_Duration_months__c</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Reach_Campaign_Duration_months__c</field>
+            <value>
+                <elementReference>$Record.Opportunity__r.Reach_Special_termination_right_duration__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Urgency</name>
+        <label>Update Urgency</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>High_Urgency__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>188</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Fieldstoupdate</targetReference>
+        </connector>
+        <filterLogic>((1 OR 2 OR 3 OR 4 ) AND 5) OR 6 OR 7 OR 8</filterLogic>
+        <filters>
+            <field>Record_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Repeat Purchase Case</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Record_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>[ATS] New Onboarding</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Record_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>[ATS] Create a new / Adjust Campaign (already integrated accounts)</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Record_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Initial BE Setup</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Reach_Special_termination_right_duration__c</field>
+            <operator>GreaterThan</operator>
+            <value>
+                <numberValue>0.0</numberValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Record_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Application Delivery case</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Record_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Job Ad Change case</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Record_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Marketing support REACH</stringValue>
+            </value>
+        </filters>
+        <object>Case</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

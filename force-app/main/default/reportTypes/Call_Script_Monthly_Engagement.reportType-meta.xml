@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject></baseObject>
+    <category>other</category>
+    <deployed>true</deployed>
+    <description>Call Script engagements by month</description>
+    <label>Call Script Monthly Engagement</label>
+    <sections>
+        <masterLabel>Call Scripts</masterLabel>
+    </sections>
+    <sections>
+        <masterLabel>Call Script Monthly Metrics</masterLabel>
+    </sections>
+</ReportType>

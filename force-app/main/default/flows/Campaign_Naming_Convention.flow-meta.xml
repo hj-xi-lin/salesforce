@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <assignments>
+        <name>Modify_Campaign_name</name>
+        <label>Modify Campaign name</label>
+        <locationX>176</locationX>
+        <locationY>287</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Name</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>fmlCampaignName</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <description>RO - 2007</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>fmlCampaignName</name>
+        <dataType>String</dataType>
+        <expression>TEXT(YEAR({!$Record.StartDate}))&amp;
+&quot;_&quot;&amp;
+TEXT(MONTH({!$Record.StartDate}))&amp;
+&quot;_&quot;&amp;
+TEXT({!$Record.Target_Group__c}) &amp;
+&quot;_&quot;&amp;
+TEXT({!$Record.Lead_Score_Group__c} ) &amp;
+&quot;_&quot;&amp;
+{!$Record.Campaign_Topic__c}</expression>
+    </formulas>
+    <interviewLabel>Campaign Naming Convention {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Campaign Naming Convention</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Modify_Campaign_name</targetReference>
+        </connector>
+        <object>Campaign</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

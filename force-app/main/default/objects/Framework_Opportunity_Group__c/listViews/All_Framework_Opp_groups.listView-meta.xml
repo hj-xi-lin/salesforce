@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Framework_Opp_groups</fullName>
+    <columns>NAME</columns>
+    <columns>Account__c</columns>
+    <columns>Framework_Opportunity__c</columns>
+    <columns>Base_Goal_3__c</columns>
+    <columns>Boost_Goal_2__c</columns>
+    <columns>Boost_Goal_achievement__c</columns>
+    <columns>Base_Goal_achievement__c</columns>
+    <columns>Bookings_in_Current_contract__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All Framework Opp groups</label>
+</ListView>

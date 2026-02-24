@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <description>RO-1959, RO-2089, temporary reactivation</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>fmlAlignmentHelper</name>
+        <dataType>Boolean</dataType>
+        <expression>NOT({!$Record.Account.GTM_Motion_Alignment_Helper__c})</expression>
+    </formulas>
+    <interviewLabel>Account Lifecycle Stage - Acquisition Update {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Account Lifecycle Stage - Acquisition Update</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Acc_Lifecycle_Stage_to_Acquisition</name>
+        <label>Update Acc Lifecycle Stage to Acquisition</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <inputAssignments>
+            <field>GTM_Motion_Alignment_Helper__c</field>
+            <value>
+                <elementReference>fmlAlignmentHelper</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Stage_ACM__c</field>
+            <value>
+                <elementReference>$Label.Account_Lifecycle_Stage_Acquisition</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.Account</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Acc_Lifecycle_Stage_to_Acquisition</targetReference>
+        </connector>
+        <filterFormula>AND(
+ISCHANGED({!$Record.StageName}) ,
+NOT({!$Record.IsClosed}),
+OR( TEXT( {!$Record.Account.Stage_ACM__c} ) = {!$Label.Account_Lifecycle_Stage_Prospect},  TEXT( {!$Record.Account.Stage_ACM__c} ) = {!$Label.Account_Lifecycle_Stage_Lost} , TEXT( {!$Record.Account.Stage_ACM__c} ) = {!$Label.Account_Lifecycle_Stage_Outbound}  ),
+OR(
+AND( {!$Record.RecordType.DeveloperName} = &quot;Sales&quot; ,  NOT(ISPICKVAL({!$Record.StageName}, &quot;Not reached yet&quot;)) ,  NOT(ISPICKVAL({!$Record.StageName}, &quot;Qualified Prospect&quot;)) , NOT(ISPICKVAL({!$Record.StageName}, &quot;Currently in Contact&quot;))  ),
+AND(  {!$Record.RecordType.DeveloperName} = &quot;Sales_Transactional&quot; ,  NOT(ISPICKVAL({!$Record.StageName}, &quot;Ready for Sales&quot;))  , NOT(ISPICKVAL({!$Record.StageName}, &quot;In Qualification&quot;))  )
+)
+)</filterFormula>
+        <object>Opportunity</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

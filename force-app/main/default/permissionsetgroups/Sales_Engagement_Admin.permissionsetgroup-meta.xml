@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Sales Engagement Admin</label>
+    <permissionSets>force__CallCoachingUser</permissionSets>
+    <permissionSets>force__HighVelocitySalesCadenceCreator</permissionSets>
+    <permissionSets>force__HighVelocitySalesCadenceCreatorIncluded</permissionSets>
+    <permissionSets>force__HighVelocitySalesQuickCadenceCreator</permissionSets>
+    <permissionSets>force__HighVelocitySalesQuickCadenceCreatorIncluded</permissionSets>
+    <permissionSets>force__HighVelocitySalesUser</permissionSets>
+    <permissionSets>force__HighVelocitySalesUserIncluded</permissionSets>
+    <permissionSets>force__SalesEngagementBasicUser</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

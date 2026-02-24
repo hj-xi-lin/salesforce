@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <description>RO-1583, RO-1607, RO - 1706</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>fmlTypeMapping</name>
+        <dataType>String</dataType>
+        <expression>CASE({!Fetch_the_related_Opp.MQL_Type__c}, 
+0, &quot;&quot;,
+1, &quot;Type 1&quot;,
+2, &quot;Type 2&quot;,
+3, &quot;Type 3&quot;,
+4,&quot;&quot;,
+&quot;&quot;)</expression>
+    </formulas>
+    <interviewLabel>Update Account Id {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Event (After Update)</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Fetch_the_related_Opp</name>
+        <label>Fetch the related Opp</label>
+        <locationX>176</locationX>
+        <locationY>431</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Update_MQL_Type_from_Opportunity</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.WhatId</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>MQL_Type__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Opportunity</object>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>MQL_Type__c</queriedFields>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_MQL_Type_from_Opportunity</name>
+        <label>Update MQL Type from Opportunity</label>
+        <locationX>176</locationX>
+        <locationY>539</locationY>
+        <inputAssignments>
+            <field>MQL_Type__c</field>
+            <value>
+                <elementReference>fmlTypeMapping</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Related_Account</name>
+        <label>Update Related Account</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <connector>
+            <targetReference>Fetch_the_related_Opp</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Related_Account__c</field>
+            <value>
+                <elementReference>$Record.Account.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Related_Account</targetReference>
+        </connector>
+        <filterFormula>OR(
+  AND(
+    ISCHANGED({!$Record.WhatId}),
+    NOT(ISNULL({!$Record.WhatId})),
+   CONTAINS( TEXT({!$Record.Type}), &quot;Demo&quot;)
+  ),
+AND(
+ ISNEW(),
+NOT(ISNULL({!$Record.WhatId})),
+CONTAINS( TEXT({!$Record.Type}), &quot;Demo&quot;))
+)</filterFormula>
+        <object>Event</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

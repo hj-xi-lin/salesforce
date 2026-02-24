@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>New_Recruiter_Onboarding_survey_email2</fullName>
+        <description>New Recruiter Onboarding survey email</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>arbeitgeberservice@heyjobs.de</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CustomerSuccess/New_Recruiter_Onboarding_survey</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>ChangePriorityToHigh</fullName>
+        <field>Priority</field>
+        <literalValue>High</literalValue>
+        <name>Changes the case priority to high.</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>JobLive</fullName>
+        <field>Status</field>
+        <literalValue>Job Live</literalValue>
+        <name>JobLive</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SetGoLiveDate</fullName>
+        <field>dateGoLive__c</field>
+        <formula>TODAY()</formula>
+        <name>SetGoLiveDate</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <outboundMessages>
+        <fullName>Send_Slack_Message_for_Submitted_Job</fullName>
+        <apiVersion>59.0</apiVersion>
+        <description>RO-1685</description>
+        <endpointUrl>https://hooks.zapier.com/hooks/catch/1714112/3s9o5jp/</endpointUrl>
+        <fields>AccountId</fields>
+        <fields>Id</fields>
+        <fields>txtJobId__c</fields>
+        <includeSessionId>false</includeSessionId>
+        <integrationUser>salesexcellence@heyjobs.de</integrationUser>
+        <name>Send Slack Message for Submitted Job</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <rules>
+        <fullName>Test Job Live Mail %28now Closed%29</fullName>
+        <active>false</active>
+        <description>Created for debugging zapier error</description>
+        <formula>AND(
+    ISCHANGED(Status),
+    ISPICKVAL(Status, &quot;Closed&quot;),
+    Record_Type__c = &quot;Job Creation Case&quot;,
+    Test_Account__c 
+)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <tasks>
+        <fullName>IntroSatisfactionCall</fullName>
+        <assignedToType>accountOwner</assignedToType>
+        <dueDateOffset>14</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Case.dateGoLive__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Intro + Satisfaction Call</subject>
+    </tasks>
+    <tasks>
+        <fullName>IntroSatisfaction_Call</fullName>
+        <assignedToType>accountOwner</assignedToType>
+        <dueDateOffset>14</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Intro Satisfaction Call</subject>
+    </tasks>
+    <tasks>
+        <fullName>Intro_SatisfactionCall</fullName>
+        <assignedToType>accountOwner</assignedToType>
+        <dueDateOffset>14</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Case.dateGoLive__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Intro + Satisfaction Call</subject>
+    </tasks>
+    <tasks>
+        <fullName>SatisfactionCall</fullName>
+        <assignedToType>accountOwner</assignedToType>
+        <description>Bitte Account Potential und Account Happiness eintragen.
+Vielen Dank!</description>
+        <dueDateOffset>14</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Satisfaction Call</subject>
+    </tasks>
+</Workflow>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Jour_Fix_Email_summary_to_Marius</fullName>
+        <description>Jour Fix Email summary to Marius (Large)</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Manager_s_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <recipient>anne.hinderberger@heyjobs.de</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>marius.jeuck@heyjobs.de</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>marius.luther@heyjobs.de</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>maximilian.riegel@heyjobs.de</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Admin/Jour_Fixe_Email_to_ML_2</template>
+    </alerts>
+    <alerts>
+        <fullName>Jour_Fixe_Email_summary_Enterprise</fullName>
+        <description>Jour Fixe Email summary to Enterprise</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>julian.martin@heyjobs.de</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>marius.luther@heyjobs.de</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Admin/Jour_Fixe_Email_to_ML_2</template>
+    </alerts>
+    <alerts>
+        <fullName>Jour_Fixe_Email_summary_to_SMB</fullName>
+        <description>Jour Fixe Email summary to Small</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Manager_s_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Admin/Jour_Fixe_Email_to_ML_2</template>
+    </alerts>
+    <alerts>
+        <fullName>QBR_Email_summary_to_Marius</fullName>
+        <description>QBR Email summary to Marius</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>juliane.walter@heyjobs.de</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>karin.gattringer@heyjobs.de</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>mareike.busche@heyjobs.de</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>marius.jeuck@heyjobs.de</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>marius.luther@heyjobs.de</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>tobias.eppler@heyjobs.de</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Admin/QBR_Email_to_ML</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>EventSubjectUpdate</fullName>
+        <description>Updates the subject field</description>
+        <field>Subject</field>
+        <formula>TEXT( plEventSubject__c )</formula>
+        <name>EventSubjectUpdate</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>EventTypeAutofill</fullName>
+        <field>txtEventType__c</field>
+        <formula>TEXT(Type)</formula>
+        <name>Event Type Autofill</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Custom Subject Rule</fullName>
+        <actions>
+            <name>EventSubjectUpdate</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Event.plEventSubject__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>Updates the actual Subject field with the custom picklist built to make life easier in the quick actions</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Event Type Tracking</fullName>
+        <actions>
+            <name>EventTypeAutofill</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Event.Type</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>Fills out other EventTypeField for TrackingReasons</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <tasks>
+        <fullName>Intro_Satisfaction_Call</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Event.Date_of_Satisfaction_call__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Intro + Satisfaction Call</subject>
+    </tasks>
+</Workflow>

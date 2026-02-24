@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Link_Advert__c</fullName>
+    <inlineHelpText>Dies ist der Link zur Anzeige, der von der Stellenquelle bereitgestellt wird. Dieser kann manchmal leer sein, insbesondere bei internen Quellen wie Inventory.</inlineHelpText>
+    <label>Link Advert</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Url</type>
+</CustomField>

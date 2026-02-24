@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <description>RO-1941</description>
+    <environments>Default</environments>
+    <interviewLabel>Delete {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>NebulaLogs - Delete Saving Entries</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordDeletes>
+        <name>Delete_Log_Entry</name>
+        <label>Delete Log Entry</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <inputReference>$Record</inputReference>
+    </recordDeletes>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Delete_Log_Entry</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Message__c</field>
+            <operator>Contains</operator>
+            <value>
+                <stringValue>Logger - Saving</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Message__c</field>
+            <operator>Contains</operator>
+            <value>
+                <stringValue>log entries via</stringValue>
+            </value>
+        </filters>
+        <object>LogEntry__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

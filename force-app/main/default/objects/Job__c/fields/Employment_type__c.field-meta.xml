@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Employment_type__c</fullName>
+    <inlineHelpText>Dies zeigt die Art der Beschäftigung: Vollzeit, Teilzeit, Vertrag</inlineHelpText>
+    <label>Employment Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>full-time</fullName>
+                <default>false</default>
+                <label>full-time</label>
+            </value>
+            <value>
+                <fullName>part-time</fullName>
+                <default>false</default>
+                <label>part-time</label>
+            </value>
+            <value>
+                <fullName>contract</fullName>
+                <default>false</default>
+                <label>contract</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

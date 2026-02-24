@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Account_Ownership_moves_to_Havva_after_CA_restriction_Hunting_Notification</fullName>
+        <description>Account Ownership moves to Havva after CA restriction (Hunting Notification)</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Admin/CA_Account_Assignment_to_AM_after_Account_restriction_Hunter_notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Account_to_Offline_Lost</fullName>
+        <description>Account to Offline - Lost</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>marius.luther@heyjobs.de</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>salesexcellence@heyjobs.de</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Farming/Offline_Lost</template>
+    </alerts>
+    <alerts>
+        <fullName>Approval_Update</fullName>
+        <description>Approval Update</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <senderType>DefaultWorkflowUser</senderType>
+        <template>unfiled$public/Account_Closed_Lost_Approval_Subscription_Expansion</template>
+    </alerts>
+    <alerts>
+        <fullName>Approval_Update_Rejection</fullName>
+        <description>Approval Update</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <senderType>DefaultWorkflowUser</senderType>
+        <template>unfiled$public/Account_Lost_Approval_Status_Subscription_Expansion</template>
+    </alerts>
+    <alerts>
+        <fullName>Customer_Happiness</fullName>
+        <description>Customer Happiness</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>arbeitgeberservice@heyjobs.de</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CustomerSuccess/Customer_Happiness_2</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Account_Approval_Status_Rejected</fullName>
+        <field>Account_Approval_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Account Approval Status Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Account_Approval_status_Accepted</fullName>
+        <field>Account_Approval_Status__c</field>
+        <literalValue>Accepted</literalValue>
+        <name>Account Approval status Accepted</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Account_Approval_status_empty</fullName>
+        <field>Account_Approval_Status__c</field>
+        <literalValue>Pending</literalValue>
+        <name>Account Approval status empty</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_status_to_Pending</fullName>
+        <field>Account_Approval_Status__c</field>
+        <literalValue>Pending</literalValue>
+        <name>Set status to Pending</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_approval_staus</fullName>
+        <field>Account_Approval_Status__c</field>
+        <literalValue>Pending</literalValue>
+        <name>Update approval staus</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <outboundMessages>
+        <fullName>NPS_120_Reminder</fullName>
+        <apiVersion>41.0</apiVersion>
+        <endpointUrl>https://hooks.zapier.com/hooks/catch/1714112/ss0rga/</endpointUrl>
+        <fields>Contact_Email__c</fields>
+        <fields>Contact_First_Name__c</fields>
+        <fields>Contact_Last_Name__c</fields>
+        <fields>Id</fields>
+        <fields>Name</fields>
+        <fields>txtContactsSalutation__c</fields>
+        <includeSessionId>false</includeSessionId>
+        <integrationUser>salesexcellence@heyjobs.de</integrationUser>
+        <name>NPS 120 Reminder</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <outboundMessages>
+        <fullName>NPS_20_Reminder</fullName>
+        <apiVersion>41.0</apiVersion>
+        <endpointUrl>https://hooks.zapier.com/hooks/catch/1714112/ss0tnn/</endpointUrl>
+        <fields>Contact_Email__c</fields>
+        <fields>Contact_First_Name__c</fields>
+        <fields>Contact_Last_Name__c</fields>
+        <fields>Id</fields>
+        <fields>Name</fields>
+        <fields>txtContactsSalutation__c</fields>
+        <includeSessionId>false</includeSessionId>
+        <integrationUser>salesexcellence@heyjobs.de</integrationUser>
+        <name>NPS 20 Reminder</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <outboundMessages>
+        <fullName>NPS_360_Reminder</fullName>
+        <apiVersion>41.0</apiVersion>
+        <endpointUrl>https://hooks.zapier.com/hooks/catch/1714112/ss08fa/</endpointUrl>
+        <fields>Contact_Email__c</fields>
+        <fields>Contact_First_Name__c</fields>
+        <fields>Contact_Last_Name__c</fields>
+        <fields>Id</fields>
+        <fields>Name</fields>
+        <fields>txtContactsSalutation__c</fields>
+        <includeSessionId>false</includeSessionId>
+        <integrationUser>salesexcellence@heyjobs.de</integrationUser>
+        <name>NPS 360 Reminder</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <outboundMessages>
+        <fullName>NPS_60_Reminder</fullName>
+        <apiVersion>41.0</apiVersion>
+        <endpointUrl>https://hooks.zapier.com/hooks/catch/1714112/ss056o/</endpointUrl>
+        <fields>Contact_Email__c</fields>
+        <fields>Contact_First_Name__c</fields>
+        <fields>Contact_Last_Name__c</fields>
+        <fields>Id</fields>
+        <fields>Name</fields>
+        <fields>txtContactsSalutation__c</fields>
+        <includeSessionId>false</includeSessionId>
+        <integrationUser>salesexcellence@heyjobs.de</integrationUser>
+        <name>NPS 60 Reminder</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <outboundMessages>
+        <fullName>NPS_Reminder</fullName>
+        <apiVersion>42.0</apiVersion>
+        <endpointUrl>https://hooks.zapier.com/hooks/catch/1714112/ss0tnn/</endpointUrl>
+        <fields>Contact_Email__c</fields>
+        <fields>Contact_First_Name__c</fields>
+        <fields>Contact_Last_Name__c</fields>
+        <fields>Id</fields>
+        <fields>Name</fields>
+        <fields>txtContactsSalutation__c</fields>
+        <includeSessionId>false</includeSessionId>
+        <integrationUser>salesexcellence@heyjobs.de</integrationUser>
+        <name>NPS Reminder</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <outboundMessages>
+        <fullName>Wrong_Account_RT_2021_Email_Campaign</fullName>
+        <apiVersion>50.0</apiVersion>
+        <endpointUrl>https://hooks.zapier.com/hooks/catch/1714112/o0v00du/</endpointUrl>
+        <fields>Id</fields>
+        <fields>Record_Type__c</fields>
+        <includeSessionId>false</includeSessionId>
+        <integrationUser>salesexcellence@heyjobs.de</integrationUser>
+        <name>Wrong Account RT 2021 Email Campaign</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <outboundMessages>
+        <fullName>Wrong_Account_RT_2021_Webinar_Campaign</fullName>
+        <apiVersion>51.0</apiVersion>
+        <endpointUrl>https://hooks.zapier.com/hooks/catch/1714112/oppleda/</endpointUrl>
+        <fields>Id</fields>
+        <fields>Record_Type__c</fields>
+        <includeSessionId>false</includeSessionId>
+        <integrationUser>salesexcellence@heyjobs.de</integrationUser>
+        <name>Wrong Account RT 2021 Webinar Campaign</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <rules>
+        <fullName>Task for framework contract negotiations</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.Framework_Contract_Amount__c</field>
+            <operation>greaterThan</operation>
+            <value>EUR 0</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Record_Type__c</field>
+            <operation>notEqual</operation>
+            <value>Agency Customer Sales</value>
+        </criteriaItems>
+        <description>4 months before the end of an framework contract, the AM receives a task to remind them to start negotiations to renew contract</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Start_Framework_Contract_negotiations</name>
+                <type>Task</type>
+            </actions>
+            <offsetFromField>Account.Framework_Contract_Signed_Date__c</offsetFromField>
+            <timeLength>270</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <tasks>
+        <fullName>Budget_Will_Expire_Soon</fullName>
+        <assignedTo>salesexcellence@heyjobs.de</assignedTo>
+        <assignedToType>user</assignedToType>
+        <dueDateOffset>29</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Budget Will Expire Soon</subject>
+    </tasks>
+    <tasks>
+        <fullName>Start_Framework_Contract_negotiations</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>240</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Account.Framework_Contract_Signed_Date__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Start Framework Contract negotiations [4 months to expiry]</subject>
+    </tasks>
+</Workflow>

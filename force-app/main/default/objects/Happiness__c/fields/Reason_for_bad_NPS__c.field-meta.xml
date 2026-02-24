@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_for_bad_NPS__c</fullName>
+    <label>Legacy - Reason for bad Performance</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Zu wenige Kandidaten</fullName>
+                <default>false</default>
+                <label>Zu wenige Kandidaten</label>
+            </value>
+            <value>
+                <fullName>Zu viele unpassende Kandidaten</fullName>
+                <default>false</default>
+                <label>Zu viele unpassende Kandidaten</label>
+            </value>
+            <value>
+                <fullName>Fehlende Qualifikationen</fullName>
+                <default>false</default>
+                <label>Fehlende Qualifikationen</label>
+            </value>
+            <value>
+                <fullName>Fehlende Dokumente</fullName>
+                <default>false</default>
+                <label>Fehlende Dokumente</label>
+            </value>
+            <value>
+                <fullName>Keine Rückmeldung der Kandidaten</fullName>
+                <default>false</default>
+                <label>Keine Rückmeldung der Kandidaten</label>
+            </value>
+            <value>
+                <fullName>Zu wenige passende Kandidaten</fullName>
+                <default>false</default>
+                <label>Zu wenige passende Kandidaten</label>
+            </value>
+            <value>
+                <fullName>Fehlende Qualifikation</fullName>
+                <default>false</default>
+                <label>Fehlende Qualifikation</label>
+            </value>
+            <value>
+                <fullName>Too few qualified candidates</fullName>
+                <default>false</default>
+                <label>Too few qualified candidates</label>
+            </value>
+            <value>
+                <fullName>Too many unqualified candidates</fullName>
+                <default>false</default>
+                <label>Too many unqualified candidates</label>
+            </value>
+            <value>
+                <fullName>Missing qualifications</fullName>
+                <default>false</default>
+                <label>Missing qualifications</label>
+            </value>
+            <value>
+                <fullName>Missing documents</fullName>
+                <default>false</default>
+                <label>Missing documents</label>
+            </value>
+            <value>
+                <fullName>Non-responsive candidates</fullName>
+                <default>false</default>
+                <label>Non-responsive candidates</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

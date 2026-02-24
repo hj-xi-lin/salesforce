@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partial_Score__c</fullName>
+    <description>The Partial Score on Job level is used to calculate the Weighted Score on Job level and then the Actively Hiring Score on Account level. RO-2536</description>
+    <externalId>false</externalId>
+    <formula>Null</formula>
+    <label>Legacy Partial Score</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>4</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

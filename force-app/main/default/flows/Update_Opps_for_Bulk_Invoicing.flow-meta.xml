@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>61.0</apiVersion>
+    <assignments>
+        <name>Update_Bulk_Invoice_Parent_Acc</name>
+        <label>Update Bulk Invoice Parent Acc</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Bulk_Invoice_Parent_Account__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Account.Parent.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Bulk_Invoicing</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Update_Bulk_Invoice_Parent_Acc_2</name>
+        <label>Update Bulk Invoice Parent Acc</label>
+        <locationX>314</locationX>
+        <locationY>431</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Bulk_Invoice_Parent_Account__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Account.Parent.Parent.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Bulk_Invoicing</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Check_Account</name>
+        <label>Check Account</label>
+        <locationX>314</locationX>
+        <locationY>323</locationY>
+        <defaultConnector>
+            <targetReference>Update_Bulk_Invoicing</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default</defaultConnectorLabel>
+        <rules>
+            <name>Agency_Sales_Parent_Acc</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Account.Parent.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Agency_Sales</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Bulk_Invoice_Parent_Acc</targetReference>
+            </connector>
+            <label>Agency Sales Parent Acc</label>
+        </rules>
+        <rules>
+            <name>Agency_Customer_Sales_Parent_Acc</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Account.Parent.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Agency_Customer_Sales</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Bulk_Invoice_Parent_Acc_2</targetReference>
+            </connector>
+            <label>Agency Customer Sales Parent Acc</label>
+        </rules>
+    </decisions>
+    <description>RO - 2139</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>fmlFirstDayOfTheMonth</name>
+        <dataType>Date</dataType>
+        <expression>DATE(YEAR(TODAY()), MONTH(TODAY()), 1)</expression>
+    </formulas>
+    <interviewLabel>Update Opps for Bulk Invoicing {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Update Opps for Bulk Invoicing</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Bulk_Invoicing</name>
+        <label>Update Bulk Invoicing</label>
+        <locationX>314</locationX>
+        <locationY>623</locationY>
+        <inputAssignments>
+            <field>Bulk_Invoicing__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>188</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_Account</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterFormula>AND(
+    {!$Record.Annual_Contract_2_0__c} = False,
+    ISPICKVAL({!$Record.Product_Type__c}, &quot;HIRE&quot;),
+OR (
+    {!$Record.Account.Parent.Bulk_Invoice_Useage__c} = True,
+    {!$Record.Account.Parent.Parent.Bulk_Invoice_Useage__c} = True),
+OR (
+   ISPICKVAL({!$Record.StageName}, &quot;Contract received&quot;),
+    ISPICKVAL({!$Record.StageName}, &quot;Closed Won&quot;)),
+  
+    OR(
+        {!$Record.RecordType.DeveloperName} = &quot;Agency_Customer_business&quot;,
+        {!$Record.RecordType.DeveloperName} = &quot;Customer_Self_Service&quot;
+    )
+)</filterFormula>
+        <object>Opportunity</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>varBulkInvoiceId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

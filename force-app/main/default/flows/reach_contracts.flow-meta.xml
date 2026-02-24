@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>campaign_date_no_annotation</name>
+        <label>campaign date no annotation</label>
+        <locationX>314</locationX>
+        <locationY>492</locationY>
+        <actionName>slackPostMessage</actionName>
+        <actionType>slackPostMessage</actionType>
+        <connector>
+            <targetReference>Copy_3_of_Reach_contracts_messages</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>slackAppIdForToken</name>
+            <value>
+                <stringValue>A028VJ1KG3G</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>slackWorkspaceIdForToken</name>
+            <value>
+                <stringValue>T02516KLC</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>slackConversationId</name>
+            <value>
+                <stringValue>C06CCUFSH8W</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>slackMessage</name>
+            <value>
+                <elementReference>reachcontractreceivedwithcampaigndatewithoutannotations</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>slackPostMessage</nameSegment>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <actionCalls>
+        <name>Copy_1_of_reach_contracts_messages</name>
+        <label>Reach contracts messages</label>
+        <locationX>578</locationX>
+        <locationY>600</locationY>
+        <actionName>slackv2__invokePostMessage</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>message</name>
+            <value>
+                <elementReference>reachcontractreceivedmessagenocampaignwithannotation</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>messageDestinationId</name>
+            <value>
+                <stringValue>a2L9L0000000DbRUAU</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>slackv2__invokePostMessage</nameSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>Copy_2_of_Reach_contracts_messages</name>
+        <label>Reach contracts messages</label>
+        <locationX>842</locationX>
+        <locationY>600</locationY>
+        <actionName>slackv2__invokePostMessage</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>message</name>
+            <value>
+                <elementReference>reachcontractmessagewithnocampaigndatenoannotation</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>messageDestinationId</name>
+            <value>
+                <stringValue>a2L9L0000000DbRUAU</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>slackv2__invokePostMessage</nameSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>Copy_3_of_Reach_contracts_messages</name>
+        <label>Reach contracts messages</label>
+        <locationX>314</locationX>
+        <locationY>600</locationY>
+        <actionName>slackv2__invokePostMessage</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>message</name>
+            <value>
+                <elementReference>reachcontractreceivedwithcampaigndatewithoutannotations</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>messageDestinationId</name>
+            <value>
+                <stringValue>a2L9L0000000DbRUAU</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>slackv2__invokePostMessage</nameSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>Copy_4_of_reach_test</name>
+        <label>no campaign date and annotation</label>
+        <locationX>842</locationX>
+        <locationY>492</locationY>
+        <actionName>slackPostMessage</actionName>
+        <actionType>slackPostMessage</actionType>
+        <connector>
+            <targetReference>Copy_2_of_Reach_contracts_messages</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>slackAppIdForToken</name>
+            <value>
+                <stringValue>A028VJ1KG3G</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>slackWorkspaceIdForToken</name>
+            <value>
+                <stringValue>T02516KLC</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>slackConversationId</name>
+            <value>
+                <stringValue>C06CCUFSH8W</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>slackMessage</name>
+            <value>
+                <elementReference>reachcontractmessagewithnocampaigndatenoannotation</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>slackPostMessage</nameSegment>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <actionCalls>
+        <name>no_campaign_date_with_annotation</name>
+        <label>no campaign date with annotation</label>
+        <locationX>578</locationX>
+        <locationY>492</locationY>
+        <actionName>slackPostMessage</actionName>
+        <actionType>slackPostMessage</actionType>
+        <connector>
+            <targetReference>Copy_1_of_reach_contracts_messages</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>slackAppIdForToken</name>
+            <value>
+                <stringValue>A028VJ1KG3G</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>slackWorkspaceIdForToken</name>
+            <value>
+                <stringValue>T02516KLC</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>slackConversationId</name>
+            <value>
+                <stringValue>C06CCUFSH8W</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>slackMessage</name>
+            <value>
+                <elementReference>reachcontractreceivedmessagenocampaignwithannotation</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>slackPostMessage</nameSegment>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <actionCalls>
+        <name>reach_contracts_messages</name>
+        <label>Reach contracts messages</label>
+        <locationX>50</locationX>
+        <locationY>600</locationY>
+        <actionName>slackv2__invokePostMessage</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>message</name>
+            <value>
+                <elementReference>reachcontractreceivedmessagewithcampaignandannotation</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>messageDestinationId</name>
+            <value>
+                <stringValue>a2L9L0000000DbRUAU</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>slackv2__invokePostMessage</nameSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>reach_test</name>
+        <label>reach test</label>
+        <locationX>50</locationX>
+        <locationY>492</locationY>
+        <actionName>slackPostMessage</actionName>
+        <actionType>slackPostMessage</actionType>
+        <connector>
+            <targetReference>reach_contracts_messages</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>slackAppIdForToken</name>
+            <value>
+                <stringValue>A028VJ1KG3G</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>slackWorkspaceIdForToken</name>
+            <value>
+                <stringValue>T02516KLC</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>slackConversationId</name>
+            <value>
+                <stringValue>C06CCUFSH8W</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>slackMessage</name>
+            <value>
+                <elementReference>reachcontractreceivedmessagewithcampaignandannotation</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>slackPostMessage</nameSegment>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <apiVersion>59.0</apiVersion>
+    <decisions>
+        <name>Check_for_annotations</name>
+        <label>Check for annotations</label>
+        <locationX>710</locationX>
+        <locationY>384</locationY>
+        <defaultConnector>
+            <targetReference>Copy_4_of_reach_test</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No Annotations</defaultConnectorLabel>
+        <rules>
+            <name>Annotations</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.SyncedQuote.txtContractAnnotation__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+            </conditions>
+            <connector>
+                <targetReference>no_campaign_date_with_annotation</targetReference>
+            </connector>
+            <label>Annotations</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_for_annotations_2</name>
+        <label>Check for annotations</label>
+        <locationX>182</locationX>
+        <locationY>384</locationY>
+        <defaultConnector>
+            <targetReference>campaign_date_no_annotation</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No Annotations</defaultConnectorLabel>
+        <rules>
+            <name>Annotations_2</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.SyncedQuote.txtContractAnnotation__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+            </conditions>
+            <connector>
+                <targetReference>reach_test</targetReference>
+            </connector>
+            <label>Annotations_2</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_if_Reach_Campaign_date_is_present</name>
+        <label>Check if Reach Campaign date is present</label>
+        <locationX>446</locationX>
+        <locationY>276</locationY>
+        <defaultConnector>
+            <targetReference>Check_for_annotations</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Reach_Campaign_Start_Date__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_for_annotations_2</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <description>RO - 1912, Message adjusted for scenarios when campaign start date is blank, Adjusted to account for Closed won entry point. RO-1960, RO-2060</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>reachcontractmessagewithnocampaigndatenoannotation</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.Owner.Full_Name__c} + &quot; just closed a REACH deal with &quot; + {!$Record.Account.Name} + &quot; for &quot; 
++ TEXT({!$Record.Amount}) + &quot;€ contract value! Well done! &quot; + BR() + 
+&quot;Segment: &quot; + TEXT({!$Record.Segment_Opp_V02__c}) + BR() +
+&quot;Service Country: &quot; + TEXT({!$Record.Account.Service_Country__c}) + BR() +
+&quot;Contract Duration: &quot; + TEXT({!$Record.SyncedQuote.Service_Period__c}) + BR() +
+&quot;Contract Annotations: N/A&quot;</expression>
+    </formulas>
+    <formulas>
+        <name>reachcontractreceivedmessagenocampaignwithannotation</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.Owner.Full_Name__c} + &quot; just closed a REACH deal with &quot; + {!$Record.Account.Name} + &quot; for &quot; 
++ TEXT({!$Record.Amount}) + &quot;€ contract value! Well done! &quot; + BR() + 
+&quot;Segment: &quot; + TEXT({!$Record.Segment_Opp_V02__c}) + BR() +
+&quot;Service Country: &quot; + TEXT({!$Record.Account.Service_Country__c}) + BR() +
+&quot;Contract Duration: &quot; + TEXT({!$Record.SyncedQuote.Service_Period__c}) + BR() +
+&quot;Contract Annotations: &quot; + {!$Record.SyncedQuote.txtContractAnnotation__c}</expression>
+    </formulas>
+    <formulas>
+        <name>reachcontractreceivedmessagewithcampaignandannotation</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.Owner.Full_Name__c} +  &quot; just closed a REACH deal with &quot; +  {!$Record.Account.Name} + &quot; for &quot; 
++TEXT({!$Record.Amount})+ &quot;€ contract value! Well done! &quot; +BR() + 
+&quot;Segment: &quot;  + TEXT({!$Record.Segment_Opp_V02__c}) +BR() +
+&quot;Service Country: &quot; + TEXT({!$Record.Account.Service_Country__c}) +BR() +
+&quot;Contract Duration: &quot; + TEXT({!$Record.SyncedQuote.Service_Period__c}) + BR() +
+&quot;Reach Campaign Start Date : &quot; + TEXT ({!$Record.Reach_Campaign_Start_Date__c}) + BR() +
+&quot;Contract Annotations: &quot; + ({!$Record.SyncedQuote.txtContractAnnotation__c})</expression>
+    </formulas>
+    <formulas>
+        <name>reachcontractreceivedwithcampaigndatewithoutannotations</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.Owner.Full_Name__c} +  &quot; just closed a REACH deal with &quot; +  {!$Record.Account.Name} + &quot; for &quot; 
++TEXT({!$Record.Amount})+ &quot;€ contract value! Well done! &quot; +BR() + 
+&quot;Segment: &quot;  + TEXT({!$Record.Segment_Opp_V02__c}) +BR() +
+&quot;Service Country: &quot; + TEXT({!$Record.Account.Service_Country__c}) +BR() +
+&quot;Contract Duration: &quot; + TEXT({!$Record.SyncedQuote.Service_Period__c}) + BR() +
+&quot;Reach Campaign Start Date : &quot; + TEXT ({!$Record.Reach_Campaign_Start_Date__c}) + BR() +
+&quot;Contract Annotations: N/A&quot;</expression>
+    </formulas>
+    <interviewLabel>reach contracts {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>reach contracts</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>650</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_if_Reach_Campaign_date_is_present</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>StageName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Contract received</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Product_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>REACH</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>StageName</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>Opportunity</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <scheduledPaths>
+            <pathType>AsyncAfterCommit</pathType>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>InvalidDraft</status>
+    <triggerOrder>500</triggerOrder>
+</Flow>

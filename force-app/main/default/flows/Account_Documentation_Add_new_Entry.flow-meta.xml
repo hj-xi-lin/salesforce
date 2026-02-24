@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <assignments>
+        <name>Add_new_entry</name>
+        <label>Add new entry</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>Get_Active_Account_Documentation.Content__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>fmlUpdatedContent</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Documentation</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_values_for_new_documentation</name>
+        <label>Assign values for new documentation</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>varNewDocumentationRecord.Account__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varNewDocumentationRecord.Active_Account_Documentation__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varNewDocumentationRecord.Content__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>fmlUpdatedContentNoExisting</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varNewDocumentationRecord.Type__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Account Documentation</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Create_New_Documentation</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_values_for_new_documentation2</name>
+        <label>Assign values for new documentation</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>varNewDocumentationRecord.Account__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varNewDocumentationRecord.Active_Account_Documentation__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varNewDocumentationRecord.Content__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>fmlUpdatedContentCharacterLimit</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varNewDocumentationRecord.Type__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Account Documentation</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Create_New_Documentation</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Link_new_documentation_to_Account</name>
+        <label>Link new documentation to Account</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>Get_Account.Active_Account_Documentation__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>varNewDocumentationRecord.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Account</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Check</name>
+        <label>Check</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Add_new_entry</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Update existing Record</defaultConnectorLabel>
+        <rules>
+            <name>Character_Limit_Exceeded</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>fmlLenghtUpdatedContent</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <numberValue>64000.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Confirm_Entry</targetReference>
+            </connector>
+            <label>Character Limit Exceeded</label>
+        </rules>
+        <rules>
+            <name>No_existing_Record</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Active_Account_Documentation</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_values_for_new_documentation</targetReference>
+            </connector>
+            <label>No existing Record</label>
+        </rules>
+    </decisions>
+    <description>RO-2811</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>fmlLenghtUpdatedContent</name>
+        <dataType>Number</dataType>
+        <expression>LEN({!fmlUpdatedContent})</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>fmlTimestamp</name>
+        <dataType>String</dataType>
+        <expression>&quot;[&quot; &amp; 
+TEXT(YEAR(DATEVALUE(NOW()))) &amp; &quot;-&quot; &amp; 
+LPAD(TEXT(MONTH(DATEVALUE(NOW()))), 2, &quot;0&quot;) &amp; &quot;-&quot; &amp; 
+LPAD(TEXT(DAY(DATEVALUE(NOW()))), 2, &quot;0&quot;) &amp; &quot; &quot; &amp; 
+LPAD(TEXT(HOUR(TIMEVALUE(NOW()))), 2, &quot;0&quot;) &amp; &quot;:&quot; &amp; 
+LPAD(TEXT(MINUTE(TIMEVALUE(NOW()))), 2, &quot;0&quot;) &amp; 
+&quot;]&quot;</expression>
+    </formulas>
+    <formulas>
+        <name>fmlUpdatedContent</name>
+        <dataType>String</dataType>
+        <expression>{!fmlTimestamp} &amp; &quot; &quot; &amp; {!New_Account_Documentation_Entry2} &amp; BR() &amp; BR() &amp; {!Get_Active_Account_Documentation.Content__c}</expression>
+    </formulas>
+    <formulas>
+        <name>fmlUpdatedContentCharacterLimit</name>
+        <dataType>String</dataType>
+        <expression>{!fmlTimestamp} &amp; &quot; &quot; &amp; {!New_Account_Documentation_Entry_CharacterLimit}</expression>
+    </formulas>
+    <formulas>
+        <name>fmlUpdatedContentNoExisting</name>
+        <dataType>String</dataType>
+        <expression>{!fmlTimestamp} &amp; &quot; &quot; &amp; {!New_Account_Documentation_Entry2}</expression>
+    </formulas>
+    <interviewLabel>Account Documentation - Add new Entry {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Account Documentation - Add new Entry</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordCreates>
+        <name>Create_New_Documentation</name>
+        <label>Create New Documentation</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Link_new_documentation_to_Account</targetReference>
+        </connector>
+        <inputReference>varNewDocumentationRecord</inputReference>
+    </recordCreates>
+    <recordLookups>
+        <name>Get_Account</name>
+        <label>Get Account</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Add_Entry</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Account</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Active_Account_Documentation</name>
+        <label>Get Active Account Documentation</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Check</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Account.Active_Account_Documentation__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Customer_360__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Account</name>
+        <label>Update Account</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputReference>Get_Account</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Documentation</name>
+        <label>Update Documentation</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputReference>Get_Active_Account_Documentation</inputReference>
+    </recordUpdates>
+    <runInMode>SystemModeWithoutSharing</runInMode>
+    <screens>
+        <name>Add_Entry</name>
+        <label>Add Entry</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Get_Active_Account_Documentation</targetReference>
+        </connector>
+        <fields>
+            <name>New_Account_Documentation_Entry2</name>
+            <fieldText>New Account Documentation Entry</fieldText>
+            <fieldType>LargeTextArea</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+        </fields>
+        <nextOrFinishButtonLabel>Finish</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <name>Confirm_Entry</name>
+        <label>Confirm Entry</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Assign_values_for_new_documentation2</targetReference>
+        </connector>
+        <fields>
+            <name>CharacterLimitWarning</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;color: rgb(231, 28, 28);&quot;&gt;Zusammen mit dem neuen Eintrag wird die maximal mögliche Länge der Account Dokumentation überschritten, weshalb ein neuer Account Dokumentation Datensatz erstellt werden muss. Dieser Eintrag wird daher der erste und einzige Eintrag in der neuen Account Dokumentation sein. Möchtest du ihn anpassen, bevor du speicherst?&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;em style=&quot;color: rgb(0, 0, 0);&quot;&gt;Auf alte Account Dokumentationen kannst du jederzeit über die Account Documentations Liste im Tab Related zugreifen.&lt;/em&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>New_Account_Documentation_Entry_CharacterLimit</name>
+            <defaultValue>
+                <stringValue>{!New_Account_Documentation_Entry2}</stringValue>
+            </defaultValue>
+            <fieldText>New Account Documentation Entry</fieldText>
+            <fieldType>LargeTextArea</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+        </fields>
+        <nextOrFinishButtonLabel>Finish</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Account</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>varNewDocumentationRecord</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Customer_360__c</objectType>
+    </variables>
+</Flow>

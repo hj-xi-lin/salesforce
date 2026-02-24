@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>61.0</apiVersion>
+    <customErrors>
+        <name>Update_not_possible</name>
+        <label>Update not possible</label>
+        <locationX>842</locationX>
+        <locationY>539</locationY>
+        <customErrorMessages>
+            <errorMessage>You cannot update the Account to this Record Type. Please request a motion change instead.</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <customErrors>
+        <name>Update_not_possible2</name>
+        <label>Update not possible</label>
+        <locationX>578</locationX>
+        <locationY>539</locationY>
+        <customErrorMessages>
+            <errorMessage>You cannot update the Account to this Lifecycle Stage manually. Please use the defined process (e.g. Opp Creation/Closing, Loss Process, ...), request a motion change or reach out to your team lead.</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <decisions>
+        <name>Critical_Change</name>
+        <label>Critical Change?</label>
+        <locationX>1106</locationX>
+        <locationY>431</locationY>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Inventory_Change</name>
+            <conditionLogic>(1 AND 2) OR (3 AND 4)</conditionLogic>
+            <conditions>
+                <leftValueReference>fmlOldRecordTypeInventory</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>fmlNewRecordTypeInventory</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>fmlOldRecordTypeInventory</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>fmlNewRecordTypeInventory</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_not_possible</targetReference>
+            </connector>
+            <label>Yes (Inventory Change)</label>
+        </rules>
+        <rules>
+            <name>Yes_Agency_Change</name>
+            <conditionLogic>(1 AND 2) OR (3 AND 4)</conditionLogic>
+            <conditions>
+                <leftValueReference>fmlOldRecordTypeAgency</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>fmlNewRecordTypeAgency</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>fmlOldRecordTypeAgency</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>fmlNewRecordTypeAgency</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <isGoTo>true</isGoTo>
+                <targetReference>Update_not_possible</targetReference>
+            </connector>
+            <label>Yes (Agency Change)</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Field_Updated</name>
+        <label>Field Updated</label>
+        <locationX>842</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Lifecycle_Stage</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Stage_ACM__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordTypeId</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Label.AccountRecordTypeID_Inventory</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordTypeId</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Label.AccountRecordTypeID_AgencyCustomerSales</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordTypeId</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Label.AccountRecordTypeID_AgencySales</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Lifecycle_Stage2</targetReference>
+            </connector>
+            <label>Lifecycle Stage (non-Inventory/Agency)</label>
+        </rules>
+        <rules>
+            <name>Record_Type</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordTypeId</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Critical_Change</targetReference>
+            </connector>
+            <label>Record Type</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Lifecycle_Stage2</name>
+        <label>Lifecycle Stage</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <defaultConnector>
+            <targetReference>Update_not_possible2</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Outbound_Prospect</name>
+            <conditionLogic>(1 AND 2) OR (3 AND 4)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record__Prior.Stage_ACM__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>$Label.Account_Lifecycle_Stage_Outbound</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Stage_ACM__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>$Label.Account_Lifecycle_Stage_Prospect</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.Stage_ACM__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>$Label.Account_Lifecycle_Stage_Prospect</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Stage_ACM__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>$Label.Account_Lifecycle_Stage_Outbound</elementReference>
+                </rightValue>
+            </conditions>
+            <label>Outbound - Prospect</label>
+        </rules>
+        <rules>
+            <name>Pilot_Retention_Inside_Sales</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record__Prior.Stage_ACM__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>$Label.Account_Lifecycle_Stage_Pilot</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Stage_ACM__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>$Label.Account_Lifecycle_Stage_Retention</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.GTM_Motion_Account__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>$Label.GTM_Motion_Inside_Sales</elementReference>
+                </rightValue>
+            </conditions>
+            <label>Pilot -&gt; Retention(Inside Sales)</label>
+        </rules>
+        <rules>
+            <name>New_Business_TL_Shifts</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>fmlOldLifecycleFrontFunnel</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>fmlNewLifecycleAllowedNewBusinessShifts</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.GTM_Motion_Account__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Label.GTM_Motion_Inside_Sales</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Permission.Manual_ALCS_Updates_within_Motion</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>New Business TL Shifts</label>
+        </rules>
+        <rules>
+            <name>Inside_Sales_TL_Shifts</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>fmlOldLifecycleFrontFunnel</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>fmlNewLifecycleAllowedInsideSalesShifts</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.GTM_Motion_Account__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>$Label.GTM_Motion_Inside_Sales</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Permission.Manual_ALCS_Updates_within_Motion</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Inside Sales TL Shifts</label>
+        </rules>
+    </decisions>
+    <description>RO-2179, RO-2317, RO-2383, RO - 2748</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>fmlNewLifecycleAllowedInsideSalesShifts</name>
+        <dataType>Boolean</dataType>
+        <expression>OR(
+TEXT(  {!$Record.Stage_ACM__c}  ) = {!$Label.Account_Lifecycle_Stage_Outbound},
+TEXT(  {!$Record.Stage_ACM__c}  ) = {!$Label.Account_Lifecycle_Stage_Lost},
+TEXT(  {!$Record.Stage_ACM__c}  ) = {!$Label.Account_Lifecycle_Stage_Prospect},
+TEXT(  {!$Record.Stage_ACM__c}  ) = {!$Label.Account_Lifecycle_Stage_Pilot},
+TEXT(  {!$Record.Stage_ACM__c}  ) = {!$Label.Account_Lifecycle_Stage_Expansion}
+)</expression>
+    </formulas>
+    <formulas>
+        <name>fmlNewLifecycleAllowedNewBusinessShifts</name>
+        <dataType>Boolean</dataType>
+        <expression>OR(
+TEXT(  {!$Record.Stage_ACM__c}  ) = {!$Label.Account_Lifecycle_Stage_Outbound},
+TEXT(  {!$Record.Stage_ACM__c}  ) = {!$Label.Account_Lifecycle_Stage_Lost},
+TEXT(  {!$Record.Stage_ACM__c}  ) = {!$Label.Account_Lifecycle_Stage_Prospect},
+TEXT(  {!$Record.Stage_ACM__c}  ) = {!$Label.Account_Lifecycle_Stage_Pilot}
+)</expression>
+    </formulas>
+    <formulas>
+        <name>fmlNewRecordTypeAgency</name>
+        <dataType>Boolean</dataType>
+        <expression>OR( 
+{!$Record.RecordTypeId} = {!$Label.AccountRecordTypeID_AgencySales},
+{!$Record.RecordTypeId} = {!$Label.AccountRecordTypeID_AgencyCustomerSales}
+)</expression>
+    </formulas>
+    <formulas>
+        <name>fmlNewRecordTypeInventory</name>
+        <dataType>Boolean</dataType>
+        <expression>{!$Record.RecordTypeId} = {!$Label.AccountRecordTypeID_Inventory}</expression>
+    </formulas>
+    <formulas>
+        <name>fmlOldLifecycleFrontFunnel</name>
+        <dataType>Boolean</dataType>
+        <expression>OR(
+TEXT(  {!$Record__Prior.Stage_ACM__c}  ) = {!$Label.Account_Lifecycle_Stage_Outbound},
+TEXT(  {!$Record__Prior.Stage_ACM__c}  ) = {!$Label.Account_Lifecycle_Stage_Lost},
+TEXT(  {!$Record__Prior.Stage_ACM__c}  ) = {!$Label.Account_Lifecycle_Stage_Prospect}
+)</expression>
+    </formulas>
+    <formulas>
+        <name>fmlOldRecordTypeAgency</name>
+        <dataType>Boolean</dataType>
+        <expression>OR( 
+{!$Record__Prior.RecordTypeId} = {!$Label.AccountRecordTypeID_AgencySales},
+{!$Record__Prior.RecordTypeId} = {!$Label.AccountRecordTypeID_AgencyCustomerSales}
+)</expression>
+    </formulas>
+    <formulas>
+        <name>fmlOldRecordTypeInventory</name>
+        <dataType>Boolean</dataType>
+        <expression>{!$Record__Prior.RecordTypeId} = {!$Label.AccountRecordTypeID_Inventory}</expression>
+    </formulas>
+    <interviewLabel>GTM Motion - Enable RT + Lifecycle Changes {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>GTM Motion - Restrict RT + Lifecycle Changes</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>716</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Field_Updated</targetReference>
+        </connector>
+        <filterFormula>AND(
+NOT(  ISCHANGED(  {!$Record.GTM_Motion_Alignment_Helper__c} )  ),
+OR(
+ISCHANGED(  {!$Record.RecordTypeId}  ),
+ISCHANGED({!$Record.Stage_ACM__c})
+)
+)</filterFormula>
+        <object>Account</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

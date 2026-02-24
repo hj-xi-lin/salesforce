@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>RO-2591</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Performance Sentiment Summary</label>
+    <permissionSets>AI_Account_Summary</permissionSets>
+    <permissionSets>Connect_to_n8n</permissionSets>
+    <permissionSets>Field_Access_Performance_Sentiment_Summary</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>
