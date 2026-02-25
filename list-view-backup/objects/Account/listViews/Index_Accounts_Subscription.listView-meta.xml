@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Index_Accounts_Subscription</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Contact_Email__c</columns>
+    <columns>Job_specific_title_Index__c</columns>
+    <columns>Job_platform_Index__c</columns>
+    <columns>Job_specific_title_date_Index__c</columns>
+    <columns>Job_specific_title_link_Index__c</columns>
+    <columns>Estimated_Wallet_Size__c</columns>
+    <columns>Open_Opportunities_Count__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Inbound_Source__c</field>
+        <operation>equals</operation>
+        <value>Index</value>
+    </filters>
+    <filters>
+        <field>Estimated_Wallet_Size__c</field>
+        <operation>greaterThan</operation>
+        <value>EUR 75000</value>
+    </filters>
+    <label>Index_Accounts_Subscription</label>
+</ListView>

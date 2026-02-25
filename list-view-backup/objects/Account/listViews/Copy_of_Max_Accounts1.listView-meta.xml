@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Copy_of_Max_Accounts1</fullName>
+    <columns>Segment_V02__c</columns>
+    <columns>PARENT_NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.EMPLOYEES</columns>
+    <columns>Bookings_last_12_months__c</columns>
+    <columns>RemainingBudget__c</columns>
+    <columns>Last_Won_Opportunity_Date__c</columns>
+    <columns>LAST_TASK_DATE</columns>
+    <columns>NEXT_ACTIVITY_DATETIME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Account_Owner__c</field>
+        <operation>contains</operation>
+        <value>Fleischer</value>
+    </filters>
+    <label>Nathalies Accounts</label>
+</ListView>

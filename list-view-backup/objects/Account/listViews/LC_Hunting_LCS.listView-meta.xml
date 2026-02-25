@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LC_Hunting_LCS</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Account_Owner__c</columns>
+    <columns>ACCOUNT.RECORDTYPE</columns>
+    <columns>ACCOUNT.TYPE</columns>
+    <columns>paid_jobs_live__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Account_Owner__c</field>
+        <operation>equals</operation>
+        <value>Swaantje Kastorf,Tim Bartels,Nils Homann,Isabel Fitz,Thure Bodendieck,Cassidy Swafing</value>
+    </filters>
+    <label>LC Hunting LCS</label>
+</ListView>

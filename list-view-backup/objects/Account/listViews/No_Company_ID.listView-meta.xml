@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_Company_ID</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.TYPE</columns>
+    <columns>txtCompanyId__c</columns>
+    <columns>Account_Owner__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>txtCompanyId__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Account_Owner__c</field>
+        <operation>notContain</operation>
+        <value>Lead Gen,Pool Admin</value>
+    </filters>
+    <label>No Company ID</label>
+    <sharedTo></sharedTo>
+</ListView>

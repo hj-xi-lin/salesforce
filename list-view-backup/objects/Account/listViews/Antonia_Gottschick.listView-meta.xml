@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Antonia_Gottschick</fullName>
+    <columns>ACCOUNT.LAST_ACTIVITY</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.PHONE1</columns>
+    <columns>Segment__c</columns>
+    <columns>ACCOUNT.EMPLOYEES</columns>
+    <columns>Stage_ACM__c</columns>
+    <columns>HeyJobs_Category__c</columns>
+    <columns>Category_1__c</columns>
+    <columns>Category_2__c</columns>
+    <columns>Category_3__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>equals</operation>
+        <value>agott</value>
+    </filters>
+    <label>Antonia Gottschick</label>
+    <sharedTo>
+        <role>Head_of_Small_Account_Management_DE</role>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LCS_Jobs_Live_Total_Sum_C_b_C_PerCity</fullName>
+    <booleanFilter>1 AND (2 OR 3) AND 4</booleanFilter>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Account_Owner__c</columns>
+    <columns>dJobslive__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Segment__c</field>
+        <operation>notEqual</operation>
+        <value>SMB</value>
+    </filters>
+    <filters>
+        <field>Account_Owner__c</field>
+        <operation>equals</operation>
+        <value>Lead Gen</value>
+    </filters>
+    <filters>
+        <field>Owner_Profile__c</field>
+        <operation>equals</operation>
+        <value>Prospector</value>
+    </filters>
+    <filters>
+        <field>Job_feed_update__c</field>
+        <operation>equals</operation>
+        <value>6/28/2021</value>
+    </filters>
+    <label>LCS_ Jobs_Live_Total_Sum-C-b-C_PerCity</label>
+</ListView>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Accounts_Sparkasse</fullName>
+    <columns>ACCOUNT.LAST_ACTIVITY</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.PHONE1</columns>
+    <columns>Segment__c</columns>
+    <columns>ACCOUNT.EMPLOYEES</columns>
+    <columns>Blacklist__c</columns>
+    <columns>Stage_ACM__c</columns>
+    <columns>HeyJobs_Category__c</columns>
+    <columns>Category_1__c</columns>
+    <columns>Category_2__c</columns>
+    <columns>Category_3__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>ACCOUNT.EMPLOYEES</field>
+        <operation>greaterOrEqual</operation>
+        <value>250</value>
+    </filters>
+    <filters>
+        <field>Open_Opportunities_Count__c</field>
+        <operation>notEqual</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.NAME</field>
+        <operation>contains</operation>
+        <value>sparkasse</value>
+    </filters>
+    <label>My Accounts - Sparkasse</label>
+</ListView>

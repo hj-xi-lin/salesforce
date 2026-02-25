@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SSSU_Pilots_with_Stage_ACM_Expansion</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Account_Owner__c</columns>
+    <columns>Stage_ACM__c</columns>
+    <columns>Segment_V02__c</columns>
+    <columns>Last_Won_Opportunity_Date__c</columns>
+    <columns>Timestamp_SSSU_Account__c</columns>
+    <columns>ACCOUNT.RECORDTYPE</columns>
+    <columns>Won_Opportunities__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Test_Account__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>Stage_ACM__c</field>
+        <operation>equals</operation>
+        <value>Expansion</value>
+    </filters>
+    <filters>
+        <field>Timestamp_SSSU_Account__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>Won_Opportunities__c</field>
+        <operation>lessOrEqual</operation>
+        <value>1</value>
+    </filters>
+    <label>SSSU Pilot/Prospect &amp; Stage Expansion</label>
+</ListView>

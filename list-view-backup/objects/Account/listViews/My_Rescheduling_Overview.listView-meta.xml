@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Rescheduling_Overview</fullName>
+    <booleanFilter>1 AND 2 AND (3 OR 4)</booleanFilter>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>dJobslive__c</columns>
+    <columns>Account_Owner__c</columns>
+    <columns>Stage_ACM__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Segment__c</field>
+        <operation>equals</operation>
+        <value>SMB</value>
+    </filters>
+    <filters>
+        <field>Job_feed_update__c</field>
+        <operation>equals</operation>
+        <value>7/12/2021</value>
+    </filters>
+    <label>My_Rescheduling_Overview</label>
+</ListView>

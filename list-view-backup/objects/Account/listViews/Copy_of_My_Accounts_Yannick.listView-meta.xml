@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Copy_of_My_Accounts_Yannick</fullName>
+    <columns>Lead_Score_2021__c</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.LAST_ACTIVITY</columns>
+    <columns>Last_Won_Opportunity_Date__c</columns>
+    <columns>Bookings_last_12_months__c</columns>
+    <columns>refTotalAmount__c</columns>
+    <columns>Stage_ACM__c</columns>
+    <columns>ACCOUNT.EMPLOYEES</columns>
+    <columns>Account_City__c</columns>
+    <columns>HeyJobs_Category__c</columns>
+    <columns>Category_1__c</columns>
+    <columns>Category_2__c</columns>
+    <columns>Category_3__c</columns>
+    <columns>Blacklist__c</columns>
+    <filterScope>Mine</filterScope>
+    <label>Copy of My Accounts_Yannick</label>
+</ListView>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Accounts_in_Prospecting_Stage_2024</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.ADDRESS1_STATE_CODE</columns>
+    <columns>ACCOUNT.PHONE1</columns>
+    <columns>ACCOUNT.TYPE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Service_Country__c</field>
+        <operation>notEqual</operation>
+        <value>AT</value>
+    </filters>
+    <filters>
+        <field>Account_Owner__c</field>
+        <operation>contains</operation>
+        <value>lead gen</value>
+    </filters>
+    <filters>
+        <field>Blacklist__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>Stage_ACM__c</field>
+        <operation>equals</operation>
+        <value>Prospect,Lost</value>
+    </filters>
+    <filters>
+        <field>Timestamp_Latest_SSSU_Account__c</field>
+        <operation>notEqual</operation>
+        <value>LAST_N_DAYS:60</value>
+    </filters>
+    <filters>
+        <field>Test_Account__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>Record_Type__c</field>
+        <operation>notContain</operation>
+        <value>discard,inventory,expansion,retention,acquisition</value>
+    </filters>
+    <label>Accounts in Prospecting Stage 2024</label>
+</ListView>
