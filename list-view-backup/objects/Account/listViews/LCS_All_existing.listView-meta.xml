@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LCS_All_existing</fullName>
+    <booleanFilter>1 AND 2 AND 3 AND 4 AND (5 OR 6) AND 7 and 8</booleanFilter>
+    <columns>Ultimate_Parent_Account__c</columns>
+    <columns>Ultimate_Parent_Lead_Score__c</columns>
+    <columns>Parent_Account_Lead_Score__c</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Decision_making__c</columns>
+    <columns>ACCOUNT.EMPLOYEES</columns>
+    <columns>ACCOUNT.TYPE</columns>
+    <columns>refTotalAmount__c</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <columns>Last_Won_Opportunity_Date__c</columns>
+    <columns>Segment__c</columns>
+    <columns>Bookings_last_12_months__c</columns>
+    <columns>dateInitialGoLive__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CORE.USERS.LAST_NAME</field>
+        <operation>notEqual</operation>
+        <value>kamm</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.Sales</value>
+    </filters>
+    <filters>
+        <field>Test_Account__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>Account_Owner__c</field>
+        <operation>equals</operation>
+        <value>Marius (official) Luther,Tobias Eppler,Pool Admin</value>
+    </filters>
+    <filters>
+        <field>Owner_Profile__c</field>
+        <operation>equals</operation>
+        <value>Head of Account Management,Account Manager</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.TYPE</field>
+        <operation>notEqual</operation>
+        <value>Bankrupt,Blacklist,Does not exist anymore,Existing Lost,Hunting - Lost,Non-Purchasing,Prospect,Restart Hunting</value>
+    </filters>
+    <filters>
+        <field>Segment__c</field>
+        <operation>equals</operation>
+        <value>LCS,Enterprise</value>
+    </filters>
+    <label>LCS - All existing</label>
+    <sharedTo></sharedTo>
+</ListView>

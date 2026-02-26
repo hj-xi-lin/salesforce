@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Accounts_M_nchen</fullName>
+    <booleanFilter>(1 OR 2 OR 3) AND 4 AND 5</booleanFilter>
+    <columns>ACCOUNT.LAST_ACTIVITY</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.PHONE1</columns>
+    <columns>Segment__c</columns>
+    <columns>ACCOUNT.EMPLOYEES</columns>
+    <columns>Blacklist__c</columns>
+    <columns>Stage_ACM__c</columns>
+    <columns>HeyJobs_Category__c</columns>
+    <columns>Category_1__c</columns>
+    <columns>Category_2__c</columns>
+    <columns>Category_3__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>Account_City__c</field>
+        <operation>equals</operation>
+        <value>München,Gilching,Unterföhring,Planegg,Neubiberg,Grünwald,Putzbrunn,Aschheim,Gräfelfing,Ottobrunn,Pullach im Isartal,Taufkirchen,Muenchen,HAAR,Garching,Feldkirchen</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.ADDRESS1_CITY</field>
+        <operation>equals</operation>
+        <value>München,Gilching,Unterföhring,Planegg,Neubiberg,Grünwald,Putzbrunn,Aschheim,Gräfelfing,Ottobrunn,Pullach im Isartal,Taufkirchen,Muenchen,HAAR,Garching,Feldkirchen</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.ADDRESS2_CITY</field>
+        <operation>equals</operation>
+        <value>München,Gilching,Unterföhring,Planegg,Neubiberg,Grünwald,Putzbrunn,Aschheim,Gräfelfing,Ottobrunn,Pullach im Isartal,Taufkirchen,Muenchen,HAAR,Garching,Feldkirchen</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.EMPLOYEES</field>
+        <operation>greaterOrEqual</operation>
+        <value>250</value>
+    </filters>
+    <filters>
+        <field>Open_Opportunities_Count__c</field>
+        <operation>notEqual</operation>
+        <value>0</value>
+    </filters>
+    <label>My Accounts München</label>
+</ListView>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Yannick_s_Accounts</fullName>
+    <columns>Category_3__c</columns>
+    <columns>Account_City__c</columns>
+    <columns>PARENT_NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>RemainingBudget__c</columns>
+    <columns>refTotalAmount__c</columns>
+    <columns>ACCOUNT.EMPLOYEES</columns>
+    <columns>LAST_CALL_DATE</columns>
+    <columns>LAST_ACTIVITY_DATETIME</columns>
+    <columns>Last_Job_Submitted_Date__c</columns>
+    <columns>Last_Won_Opportunity_Date__c</columns>
+    <columns>Stage_ACM__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Account_Owner__c</field>
+        <operation>equals</operation>
+        <value>Yannick Soppa</value>
+    </filters>
+    <label>Yannick&apos;s Accounts</label>
+</ListView>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Accounts_Sorted</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Category_3__c</columns>
+    <columns>Bookings_last_12_months__c</columns>
+    <columns>Last_Won_Opportunity_Date__c</columns>
+    <columns>Lead_Score_2021__c</columns>
+    <columns>ACCOUNT.EMPLOYEES</columns>
+    <columns>refTotalAmount__c</columns>
+    <columns>Last_Activity__c</columns>
+    <columns>Contact_Last_Name__c</columns>
+    <columns>fmlDialPhone__c</columns>
+    <columns>PARENT_NAME</columns>
+    <columns>Ultimate_Parent_Account_Description__c</columns>
+    <filterScope>Mine</filterScope>
+    <label>My Accounts_Sorted</label>
+</ListView>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Copy_of_My_accounts_with_Jobs_live</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Job_specific_title__c</columns>
+    <columns>Job_specific_title_link__c</columns>
+    <columns>Job_Platform__c</columns>
+    <columns>dJobslive__c</columns>
+    <columns>job_specific_title_published_date__c</columns>
+    <columns>ACCOUNT.TYPE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Job_feed_update__c</field>
+        <operation>equals</operation>
+        <value>5/3/2021</value>
+    </filters>
+    <filters>
+        <field>Account_Owner__c</field>
+        <operation>equals</operation>
+        <value>lead gen</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.EMPLOYEES</field>
+        <operation>greaterThan</operation>
+        <value>200</value>
+    </filters>
+    <filters>
+        <field>Segment__c</field>
+        <operation>equals</operation>
+        <value>SMB</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.TYPE</field>
+        <operation>equals</operation>
+        <value>Hunting - Lost,Prospect,Restart Hunting</value>
+    </filters>
+    <label>Lead Gen Accounts with Jobs live</label>
+</ListView>

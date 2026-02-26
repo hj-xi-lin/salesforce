@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LCS</fullName>
+    <columns>PARENT_NAME</columns>
+    <columns>Parent_Account_Lead_Score__c</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.EMPLOYEES</columns>
+    <columns>ACCOUNT.TYPE</columns>
+    <columns>ACCOUNT.ADDRESS1_CITY</columns>
+    <columns>refTotalAmount__c</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <columns>Last_Won_Opportunity_Date__c</columns>
+    <columns>Segment__c</columns>
+    <columns>Bookings_last_12_months__c</columns>
+    <columns>dateInitialGoLive__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CORE.USERS.LAST_NAME</field>
+        <operation>notEqual</operation>
+        <value>Kamm</value>
+    </filters>
+    <filters>
+        <field>Segment__c</field>
+        <operation>equals</operation>
+        <value>LCS,SMB,Enterprise</value>
+    </filters>
+    <filters>
+        <field>Account_Owner__c</field>
+        <operation>equals</operation>
+        <value>marius luther (ML)</value>
+    </filters>
+    <label>LCS - ML Accounts</label>
+    <sharedTo></sharedTo>
+</ListView>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Philipp_s_Accounts</fullName>
+    <columns>Category_3__c</columns>
+    <columns>ACCOUNT.TYPE</columns>
+    <columns>Account_City__c</columns>
+    <columns>Account_ZIP_Postal_Code__c</columns>
+    <columns>PARENT_NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>RemainingBudget__c</columns>
+    <columns>refTotalAmount__c</columns>
+    <columns>LAST_ACTIVITY_DATETIME</columns>
+    <columns>Last_Won_Opportunity_Date__c</columns>
+    <columns>ACCOUNT.EMPLOYEES</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Account_Owner__c</field>
+        <operation>equals</operation>
+        <value>Philipp Reinstorf</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.TYPE</field>
+        <operation>notContain</operation>
+        <value>Bankrupt,Blacklist,Does not exist anymore,Non-Purchasing</value>
+    </filters>
+    <filters>
+        <field>refTotalAmount__c</field>
+        <operation>greaterThan</operation>
+        <value>EUR 5000</value>
+    </filters>
+    <label>Last Booking Long Ago 28.06.2022 (Moni)</label>
+</ListView>

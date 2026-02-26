@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Non_HQ_Jobs_Live_L_beck_RE</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Segment__c</columns>
+    <columns>Account_Owner__c</columns>
+    <columns>Stage_ACM__c</columns>
+    <columns>ACCOUNT.PHONE1</columns>
+    <columns>Job_specific_title_link__c</columns>
+    <columns>job_specific_title_published_date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Account_City__c</field>
+        <operation>notEqual</operation>
+        <value>Lübeck</value>
+    </filters>
+    <label>Non-HQ_Jobs_Live_Lübeck_RE</label>
+</ListView>
