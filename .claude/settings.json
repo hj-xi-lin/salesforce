@@ -8,6 +8,53 @@
             "type": "command",
             "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/sf-pre-deploy-backup.sh",
             "timeout": 300
+          },
+          {
+            "type": "command",
+            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/sf-deploy-guard.sh",
+            "timeout": 5
+          }
+        ]
+      },
+      {
+        "matcher": "mcp__Salesforce_DX__delete_org",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/sf-delete-guard.sh",
+            "timeout": 5
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/branch-name-check.sh",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "mcp__Salesforce_DX__run_soql_query",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/soql-logger.sh",
+            "timeout": 5
+          }
+        ]
+      },
+      {
+        "matcher": "mcp__Salesforce_DX__deploy_metadata",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/sf-deploy-logger.sh",
+            "timeout": 5
           }
         ]
       }
