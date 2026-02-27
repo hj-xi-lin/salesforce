@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Timestamp_Last_Demo_Held__c</fullName>
+    <description>Displays the most recent Demo Held Timestamp of related opportunities. Value is populated by Declarative Lookup Rollup Summary &quot;&quot;</description>
+    <inlineHelpText>Displays the most recent Demo Held Timestamp of related opportunities</inlineHelpText>
+    <label>Timestamp Last Demo Held</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

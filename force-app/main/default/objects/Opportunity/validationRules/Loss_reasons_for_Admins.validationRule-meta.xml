@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Loss_reasons_for_Admins</fullName>
+    <active>true</active>
+    <description>RO-1412, RO-1569</description>
+    <errorConditionFormula>AND(
+ISCHANGED(StageName),
+ISPICKVAL(StageName, &quot;Closed Lost&quot;),
+OR(
+ISPICKVAL(plLossReason__c, &quot;Already won in SSSU Process&quot;),
+ISPICKVAL(plLossReason__c, &quot;Admin Only: Clean-Up Sales Funnel&quot;),
+ISPICKVAL(plLossReason__c, &quot;Admin Only: Opp lost due to inactivity&quot;)
+),
+$Profile.Name != &quot;System Administrator&quot;
+)</errorConditionFormula>
+    <errorMessage>The loss reason you have chosen is available only for Admins. Please choose a different loss reason for closing.</errorMessage>
+</ValidationRule>

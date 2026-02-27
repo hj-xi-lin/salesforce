@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ONB2__TaxNumber__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Specifies the value added tax identification number.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Specifies the value added tax identification number.</inlineHelpText>
+    <label>VATIN</label>
+    <length>50</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

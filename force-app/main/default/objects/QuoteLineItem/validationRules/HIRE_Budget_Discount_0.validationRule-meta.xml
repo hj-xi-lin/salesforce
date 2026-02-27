@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HIRE_Budget_Discount_0</fullName>
+    <active>true</active>
+    <description>HIRE Budget can never have a discount, instead Bonus Budget needs to be used.</description>
+    <errorConditionFormula>AND ( Product2.Name = &apos;HIRE Budget&apos;, Discount &gt; 0)</errorConditionFormula>
+    <errorMessage>There is no discount on HIRE Budget - please use Bonus Budget instead.</errorMessage>
+</ValidationRule>

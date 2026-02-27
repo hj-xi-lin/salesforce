@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Events_Contacts_ZP_Sued_24</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CONTACT.PHONE1</columns>
+    <columns>CONTACT.EMAIL</columns>
+    <columns>CONTACT.TITLE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Recent_Conversion__c</columns>
+    <columns>MQL_Conversion_c__c</columns>
+    <columns>CONTACT.CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>FULL_NAME</field>
+        <operation>notEqual</operation>
+        <value>iri carambiri,form test with opp,irub wirup,mql test conversion,samir lang,test again events test,test events,test zpsued24</value>
+    </filters>
+    <label>Events_Contacts_ZP Sued 24</label>
+</ListView>

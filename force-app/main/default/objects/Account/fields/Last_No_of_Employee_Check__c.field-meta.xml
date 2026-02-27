@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last_No_of_Employee_Check__c</fullName>
+    <description>RO -2031</description>
+    <inlineHelpText>Das Feld gibt an, wann der Wert des &quot;Employee&quot; zuletzt geändert oder überprüft wurde. Wenn das &quot;Employee&quot; Feld auf einen anderen Wert geändert wird, wird das Feld &quot;Last Number of Employee Check&quot; automatisch mit dem heutigen Datum aktualisiert. Wenn überprüft wurde, ob das Feld &quot;Employee&quot; noch aktuell ist und keine Änderung vorgenommen wird, aktualisiere das Feld &quot;Last Number of Employee Check&quot; bitte manuell mit dem heutigen Datum.</inlineHelpText>
+    <label>Last Number of Employee Check</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>DateTime</type>
+</CustomField>

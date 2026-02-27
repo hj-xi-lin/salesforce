@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Latest_import_title__c</fullName>
+    <description>Used by B2B Marketing to trigger a flow to update Latest JDP url on the contact based on matching Account city and Latest JDP City</description>
+    <inlineHelpText>Used by B2B Marketing to trigger a flow to update Latest JDP url on the contact based on matching Account city and Latest JDP City</inlineHelpText>
+    <label>Latest import title</label>
+    <length>130000</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>2</visibleLines>
+</CustomField>

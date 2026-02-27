@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Transactional_Sales_Opp_MQLs_V2</fullName>
+    <booleanFilter>((1 OR 8) AND 2 AND 3 AND 7 AND ((4 AND 5) OR 6))</booleanFilter>
+    <columns>Service_Country__c</columns>
+    <columns>MQL_Type__c</columns>
+    <columns>Engagement_Score__c</columns>
+    <columns>OPPORTUNITY.CREATED_DATE</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>MQL_Conversion__c</columns>
+    <columns>Estimated_Wallet_size_opp__c</columns>
+    <columns>Follow_Up_Date__c</columns>
+    <columns>Next_Action_Detail__c</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>Source_Opp__c</columns>
+    <columns>Original_Campaign_Source__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CORE.USERS.FULL_NAME</field>
+        <operation>equals</operation>
+        <value>Pre-Sales Admin</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>notEqual</operation>
+        <value>Closed Won,Closed Lost</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Opportunity.Sales</value>
+    </filters>
+    <filters>
+        <field>MQL_Type__c</field>
+        <operation>equals</operation>
+        <value>3</value>
+    </filters>
+    <filters>
+        <field>Engagement_Score__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>50</value>
+    </filters>
+    <filters>
+        <field>MQL_Type__c</field>
+        <operation>lessThan</operation>
+        <value>3</value>
+    </filters>
+    <filters>
+        <field>Estimated_Wallet_size_opp__c</field>
+        <operation>lessThan</operation>
+        <value>75000</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.FULL_NAME</field>
+        <operation>equals</operation>
+        <value>SSSU Admin</value>
+    </filters>
+    <label>LEGACY - Transactional_Sales_Opp_MQLs_V2</label>
+</ListView>

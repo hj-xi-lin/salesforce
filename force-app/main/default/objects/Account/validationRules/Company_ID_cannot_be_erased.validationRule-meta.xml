@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Company_ID_cannot_be_erased</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISCHANGED(txtCompanyId__c),
+ISBLANK(txtCompanyId__c),
+NOT($User.Full_Name__c = &apos;Varun Subhash&apos;),
+NOT($User.Full_Name__c = &apos;Lisa Müller&apos;),
+NOT($User.Full_Name__c = &apos;Arun Kumar&apos;),
+NOT($Permission.Customer_Operations )
+)</errorConditionFormula>
+    <errorMessage>Company ID cannot be erased</errorMessage>
+</ValidationRule>

@@ -4,6 +4,6 @@
     <protected>false</protected>
     <values>
         <field>Webhook__c</field>
-        <value xsi:type="xsd:string">REPLACE_WITH_SLACK_WEBHOOK_URL</value>
+        <value xsi:type="xsd:string">https://hooks.slack.com/services/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</value>
     </values>
 </CustomMetadata>

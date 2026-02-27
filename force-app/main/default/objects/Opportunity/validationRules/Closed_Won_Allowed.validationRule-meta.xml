@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Closed_Won_Allowed</fullName>
+    <active>true</active>
+    <description>RO-752</description>
+    <errorConditionFormula>AND(
+TEXT(StageName) = &quot;Closed Won&quot;,
+Allow_Closed_Won__c = FALSE,
+CreatedDate &gt;= DATETIMEVALUE(&quot;2022-02-07 00:00:00&quot;)
+)</errorConditionFormula>
+    <errorMessage>You cannot close the Opportunity manually. Please contact the Salesforce team if you have any issues.</errorMessage>
+</ValidationRule>

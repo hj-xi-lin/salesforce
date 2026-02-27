@@ -1,0 +1,70 @@
+<aura:component implements="force:lightningQuickActionWithoutHeader,force:hasRecordId,force:hasSObjectName" 
+                controller="HandoverService"
+                access="global">
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="sObjectName" type="String" />
+    <aura:attribute name="isLoading" type="Boolean" default="true" />
+    <aura:attribute name="isCompleted" type="Boolean" default="false" />
+    <aura:attribute name="hasError" type="Boolean" default="false" />
+    <aura:attribute name="errorMessage" type="String" />
+    <aura:attribute name="customer360Url" type="String" />
+    <aura:attribute name="accountName" type="String" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <lightning:navigation aura:id="navService" />
+    
+    <!-- Loading State -->
+    <aura:if isTrue="{!v.isLoading}">
+        <div class="slds-p-around_medium slds-text-align_center">
+            <lightning:spinner alternativeText="Prüfe Status..." size="medium" />
+            <p class="slds-m-top_medium slds-text-body_regular">
+                Prüfe Status...
+            </p>
+        </div>
+    </aura:if>
+    
+    <!-- Error State -->
+    <aura:if isTrue="{!and(!v.isLoading, v.hasError)}">
+        <div class="slds-p-around_medium">
+            <div class="slds-illustration slds-illustration_small">
+                <div class="slds-text-align_center slds-m-bottom_medium">
+                    <lightning:icon iconName="utility:warning" size="large" variant="warning" alternativeText="Warning" />
+                </div>
+                <div class="slds-text-longform slds-text-align_center">
+                    <h3 class="slds-text-heading_medium slds-m-bottom_small">
+                        Handover nicht verfügbar
+                    </h3>
+                    <p class="slds-text-body_regular slds-m-bottom_medium">
+                        {!v.errorMessage}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </aura:if>
+    
+    <!-- Completed State - Show Message -->
+    <aura:if isTrue="{!and(!v.isLoading, v.isCompleted)}">
+        <div class="slds-p-around_medium">
+            <div class="slds-illustration slds-illustration_small">
+                <div class="slds-text-align_center slds-m-bottom_medium">
+                    <lightning:icon iconName="utility:success" size="large" variant="success" alternativeText="Completed" />
+                </div>
+                <div class="slds-text-longform slds-text-align_center">
+                    <h3 class="slds-text-heading_medium slds-m-bottom_small">
+                        Handover abgeschlossen
+                    </h3>
+                    <p class="slds-text-body_regular slds-m-bottom_medium">
+                        {!$Label.c.Handover_Completed_Message}
+                    </p>
+                    <aura:if isTrue="{!v.customer360Url}">
+                        <lightning:button 
+                            label="{!$Label.c.Handover_View_Documentation_Link}"
+                            variant="brand"
+                            onclick="{!c.handleViewDocumentation}" />
+                    </aura:if>
+                </div>
+            </div>
+        </div>
+    </aura:if>
+</aura:component>

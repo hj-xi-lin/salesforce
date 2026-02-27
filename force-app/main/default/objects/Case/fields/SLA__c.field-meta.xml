@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SLA__c</fullName>
+    <description>Shows the SLA Status in much easier way / RO-659</description>
+    <externalId>false</externalId>
+    <formula>IF( ISBLANK(tysosla__First_Touch_Due__c), &quot;⚠️ Not Enough Info&quot;,
+
+
+IF( 
+AND(ISBLANK(tysosla__First_Touch__c), tysosla__First_Touch_Violation__c = False, tysosla__First_Touch_Due__c &gt; NOW()), &quot;🕓 In Progress&quot;,
+
+
+
+IF( tysosla__First_Touch_Violation__c = True,  &quot;❌ Missed SLA&quot;, 
+
+
+IF(
+OR(
+AND( NOT(ISBLANK(tysosla__First_Touch__c)), tysosla__First_Touch_Violation__c = False), 
+AND(tysosla__First_Touch_Violation__c = False, tysosla__First_Touch_Due__c &lt; NOW())), 
+&quot;✅ Met SLA&quot;, &quot;&quot;)
+
+)
+)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>SLA</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

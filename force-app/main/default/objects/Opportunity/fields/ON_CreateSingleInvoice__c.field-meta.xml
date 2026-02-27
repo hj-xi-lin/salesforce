@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ON_CreateSingleInvoice__c</fullName>
+    <description>enable single opportunity invoicing</description>
+    <formula>IF( Bulk_Invoicing__c = true,
+false,
+true
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>enable single opportunity invoicing</inlineHelpText>
+    <label>JustOn: Create Single Invoice</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

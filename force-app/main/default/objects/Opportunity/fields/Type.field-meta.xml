@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type</fullName>
+    <description>This field defines the Marketing Budget Share in the Backend. Backend team needs to be informed if new values are added</description>
+    <inlineHelpText>This field defines the Marketing Budget Share in the Backend. Backend team needs to be informed if new values are added.</inlineHelpText>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+</CustomField>

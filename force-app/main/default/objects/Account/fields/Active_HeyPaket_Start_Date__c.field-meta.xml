@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Active_HeyPaket_Start_Date__c</fullName>
+    <description>Shows the HeyPaket Start Date of the Opportunity linked under Active HeyPaket. 
+RO-1432</description>
+    <formula>Active_HeyPaket__r.HeyPaket_Start_Date__c</formula>
+    <inlineHelpText>Zeigt das HeyPaket Startdatum der Opportunity, die unter Aktivem HeyPaket verknüpft ist.</inlineHelpText>
+    <label>Active HeyPaket Start Date</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

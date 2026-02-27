@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Wrong_RT_Flow_for_Webinar_helper__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>RO-234 (used for 2021 Campaign Webinar flow)</description>
+    <label>Legacy-Wrong RT Flow for Webinar helper</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

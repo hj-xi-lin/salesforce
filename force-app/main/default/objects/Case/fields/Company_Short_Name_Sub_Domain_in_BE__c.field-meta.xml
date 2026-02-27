@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Company_Short_Name_Sub_Domain_in_BE__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>RO-1440</description>
+    <inlineHelpText>Did you enter the Company Short Name &amp; Sub-Domain in the BE?</inlineHelpText>
+    <label>Company Short Name &amp; Sub-Domain in BE?</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

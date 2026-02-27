@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Orignal_Account__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Linked account as a direct customer from Heyjobs</description>
+    <label>Legacy Orignal Account</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Accounts (Orignal Account)</relationshipLabel>
+    <relationshipName>Accounts1</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

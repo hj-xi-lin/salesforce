@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Discount</fullName>
+    <inlineHelpText>Der gewichtete Durchschnitt aller Positionsrabatte auf der Quote. Kann jede positive Zahl bis zu 100 sein (Read only.)</inlineHelpText>
+    <trackHistory>false</trackHistory>
+</CustomField>

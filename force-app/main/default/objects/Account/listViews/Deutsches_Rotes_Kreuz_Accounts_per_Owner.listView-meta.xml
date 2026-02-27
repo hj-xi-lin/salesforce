@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deutsches_Rotes_Kreuz_Accounts_per_Owner</fullName>
+    <booleanFilter>1 OR 2</booleanFilter>
+    <columns>Account_Owner__c</columns>
+    <columns>Ultimate_Parent_Account__c</columns>
+    <columns>Account_ID_18_digit__c</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>PARENT_NAME</columns>
+    <columns>Ultimate_Account_ID__c</columns>
+    <columns>GTM_Motion_Account__c</columns>
+    <columns>Bookings_last_12_months__c</columns>
+    <columns>ACCOUNT.LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Ultimate_Account_ID__c</field>
+        <operation>equals</operation>
+        <value>0010Y00000taVQnQAM,0019L00000309S8QAI</value>
+    </filters>
+    <filters>
+        <field>Ultimate_Parent_Account__c</field>
+        <operation>contains</operation>
+        <value>Deutsches Rotes Kreuz,DRK,Bayrisches Rotes Kreuz,BRK</value>
+    </filters>
+    <label>Deutsches Rotes Kreuz Accounts</label>
+</ListView>

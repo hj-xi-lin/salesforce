@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Eligible_for_Voucher_Code__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>RO - 2122</description>
+    <inlineHelpText>Das Feld zeigt an, ob der Account berechtigt ist, die Gutschein-Codes im Recruiter-Portal zu verwenden oder nicht. Wenn das Feld aktiviert ist, kann der Kunde die Gutschein-Code-Funktion im Recruiter-Portal sehen. Wenn das Feld nicht aktiviert ist, kann der Kunde die Gutschein-Code-Funktion im Recruiter-Portal nicht sehen. (Nicht relevant für Agencies, da diese keine Gutschein Codes nutzen können)</inlineHelpText>
+    <label>Eligible for Voucher Code</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

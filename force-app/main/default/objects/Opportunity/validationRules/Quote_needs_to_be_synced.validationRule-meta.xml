@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quote_needs_to_be_synced</fullName>
+    <active>true</active>
+    <description>An opportunity cannot be closed won if the synced quote is not accepted.</description>
+    <errorConditionFormula>AND(
+OR(
+ISPICKVAL(StageName, &quot;Closed Won&quot;),
+ISPICKVAL(StageName, &quot;Contract received&quot;)
+),
+TEXT(SyncedQuote.Status) &lt;&gt; &quot;Accepted&quot;,
+DATEVALUE(CreatedDate)  &gt;=   DATE(2023,1,1) 
+
+)</errorConditionFormula>
+    <errorMessage>You Cannot Close An Opportunity If The Synced Quote Is Not Accepted.Please Accept The Quote!</errorMessage>
+</ValidationRule>

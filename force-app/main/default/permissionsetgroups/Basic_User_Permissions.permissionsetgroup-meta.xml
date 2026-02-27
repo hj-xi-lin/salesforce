@@ -2,6 +2,7 @@
 <PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
     <hasActivationRequired>false</hasActivationRequired>
     <label>Basic User Permissions</label>
+    <permissionSets>Clay_Integration_Access</permissionSets>
     <permissionSets>HelloSign__HelloSign_User</permissionSets>
     <permissionSets>Multi_Factor_Authentication</permissionSets>
     <permissionSets>aircall__AirCall_PermissionSet</permissionSets>

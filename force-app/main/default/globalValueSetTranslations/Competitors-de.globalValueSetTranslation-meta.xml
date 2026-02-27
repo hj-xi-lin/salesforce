@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Agentur</masterLabel>
+        <translation>Agentur</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Agentur für Arbeit</masterLabel>
+        <translation>Agentur für Arbeit</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Indeed</masterLabel>
+        <translation>Indeed</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Karriere.at</masterLabel>
+        <translation>Karriere.at</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Kleinanzeigen</masterLabel>
+        <translation>Kleinanzeigen</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>LinkedIn</masterLabel>
+        <translation>LinkedIn</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Monster</masterLabel>
+        <translation>Monster</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>No Competitors</masterLabel>
+        <translation>Keine Wettbewerber</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Others</masterLabel>
+        <translation>Andere</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Stellenanzeigen.de</masterLabel>
+        <translation>Stellenanzeigen.de</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Stepstone</masterLabel>
+        <translation>Stepstone</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Talent.com</masterLabel>
+        <translation>Talent.com</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Unknown</masterLabel>
+        <translation><!-- Unknown --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Xing/onlyfy</masterLabel>
+        <translation>Xing/onlyfy</translation>
+    </valueTranslation>
+</GlobalValueSetTranslation>

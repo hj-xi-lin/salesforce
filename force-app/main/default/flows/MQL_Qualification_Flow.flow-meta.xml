@@ -102,6 +102,22 @@
             <targetReference>Update_Funnel_Type</targetReference>
         </connector>
     </assignments>
+    <assignments>
+        <name>Set_Task_WhoId</name>
+        <label>Set Task WhoId</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>Get_Task.WhoId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Job_Alert_Contact_Lookup.recordId</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Get_Account</targetReference>
+        </connector>
+    </assignments>
     <choices>
         <name>choiceCreateOppOrContactRole</name>
         <choiceText>Erstelle eine Opportunity bzw. Kontaktrolle</choiceText>
@@ -160,6 +176,31 @@
         </rules>
     </decisions>
     <decisions>
+        <name>Job_Alert_Contact_Decision</name>
+        <label>Job Alert Contact Decision</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Update_Task_Contact</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Contact Selected</defaultConnectorLabel>
+        <rules>
+            <name>No_Contacts</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varNoContactsAvailable</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Close_Task_No_Contact</targetReference>
+            </connector>
+            <label>No Contacts</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>Matching_Contact_Role_Found</name>
         <label>Matching Contact Role Found?</label>
         <locationX>0</locationX>
@@ -207,6 +248,21 @@
                 <targetReference>Get_Account</targetReference>
             </connector>
             <label>Yes</label>
+        </rules>
+        <rules>
+            <name>Yes_Job_Alert</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Task.Type</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Job Alert</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Job_Alert_Contact_Screen</targetReference>
+            </connector>
+            <label>Job Alert</label>
         </rules>
     </decisions>
     <decisions>
@@ -470,6 +526,39 @@
         <object>Task</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
+    <recordUpdates>
+        <name>Close_Task_No_Contact</name>
+        <label>Close Task No Contact</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Allow_closing__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>No_Contacts_Available__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Completed</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Task</object>
+    </recordUpdates>
     <recordUpdates>
         <name>Complete_Task2</name>
         <label>Complete Task</label>
@@ -757,6 +846,30 @@
         </inputAssignments>
         <object>Opportunity</object>
     </recordUpdates>
+    <recordUpdates>
+        <name>Update_Task_Contact</name>
+        <label>Update Task Contact</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Set_Task_WhoId</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>WhoId</field>
+            <value>
+                <elementReference>Job_Alert_Contact_Lookup.recordId</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Task</object>
+    </recordUpdates>
     <screens>
         <name>Decision_Screen</name>
         <label>Decision Screen</label>
@@ -968,8 +1081,89 @@
         <allowPause>false</allowPause>
         <fields>
             <name>ScreenText</name>
-            <fieldText>&lt;p&gt;Diese Funktion ist nur für &lt;strong&gt;MQL Tasks&lt;/strong&gt; verfügbar und dieser Task ist kein MQL Task.&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;Diese Funktion ist nur für &lt;strong&gt;MQL Tasks&lt;/strong&gt; und &lt;strong&gt;Job Alert Tasks&lt;/strong&gt; verfügbar.&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <name>Job_Alert_Contact_Screen</name>
+        <label>Job Alert Contact Screen</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Job_Alert_Contact_Decision</targetReference>
+        </connector>
+        <fields>
+            <name>Job_Alert_Contact_Screen_Text</name>
+            <fieldText>&lt;p&gt;&lt;strong&gt;Job Alert Qualifizierung&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Wähle den Kontakt aus, mit dem du gesprochen hast, oder markiere &amp;quot;Keine Kontakte verfügbar&amp;quot;.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Job_Alert_Contact_Screen_Section1</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>Job_Alert_Contact_Screen_Section1_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>Job_Alert_Contact_Lookup</name>
+                    <extensionName>flowruntime:lookup</extensionName>
+                    <fieldType>ComponentInstance</fieldType>
+                    <inputParameters>
+                        <name>fieldApiName</name>
+                        <value>
+                            <stringValue>Duplicate_Contact__c</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>label</name>
+                        <value>
+                            <stringValue>Kontakt</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>objectApiName</name>
+                        <value>
+                            <stringValue>Contact</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>false</isRequired>
+                    <storeOutputAutomatically>true</storeOutputAutomatically>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>Job_Alert_Contact_Screen_Section1_Column2</name>
+                <fieldType>Region</fieldType>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
+        </fields>
+        <fields>
+            <name>varNoContactsAvailable</name>
+            <dataType>Boolean</dataType>
+            <fieldText>Keine Kontakte verfügbar</fieldText>
+            <fieldType>InputField</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
         </fields>
         <showFooter>true</showFooter>
         <showHeader>false</showHeader>

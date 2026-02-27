@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_RT_Changes</fullName>
+    <active>false</active>
+    <errorConditionFormula>AND(
+   ISCHANGED(RecordTypeId),
+   OR(
+      PRIORVALUE(RecordTypeId) = &apos;0121v000000z1JdAAI&apos;,
+      PRIORVALUE(RecordTypeId) = &apos;0121v000000z1JTAAY&apos;
+     ),
+   RecordType.DeveloperName = &apos;Sales&apos;
+)</errorConditionFormula>
+    <errorMessage>Record type cannot be changed from Agency to Sales. Please contact salesforce admin team</errorMessage>
+</ValidationRule>

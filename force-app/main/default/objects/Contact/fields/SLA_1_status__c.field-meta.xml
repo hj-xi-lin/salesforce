@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SLA_1_status__c</fullName>
+    <description>RO - 2355</description>
+    <inlineHelpText>Der SLA 1 Status spiegelt den aktuellen Status des MQL wider</inlineHelpText>
+    <label>SLA 1 status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+                <label>In Progress</label>
+            </value>
+            <value>
+                <fullName>Met</fullName>
+                <default>false</default>
+                <label>Met</label>
+            </value>
+            <value>
+                <fullName>Met within Tolerance</fullName>
+                <default>false</default>
+                <label>Met within Tolerance</label>
+            </value>
+            <value>
+                <fullName>Met above Tolerance</fullName>
+                <default>false</default>
+                <label>Met above Tolerance</label>
+            </value>
+            <value>
+                <fullName>Lost</fullName>
+                <default>false</default>
+                <label>Lost</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

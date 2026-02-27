@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OFF_Region__c</fullName>
+    <description>invoice region to identify tax rate</description>
+    <externalId>false</externalId>
+    <formula>IF( OR (
+        Account.BillingCountry = &quot;Belgien&quot;,
+        Account.BillingCountry = &quot;Bulgarien&quot;,
+        Account.BillingCountry = &quot;Dänemark&quot;,
+        Account.BillingCountry = &quot;Estland&quot;,
+        Account.BillingCountry = &quot;Finnland&quot;,
+        Account.BillingCountry = &quot;Frankreich&quot;,
+        Account.BillingCountry = &quot;Griechenland&quot;,
+        Account.BillingCountry = &quot;Grossbritannien&quot;,
+        Account.BillingCountry = &quot;Niederlande&quot;,
+        Account.BillingCountry = &quot;Italien&quot;,
+        Account.BillingCountry = &quot;Irland&quot;,
+        Account.BillingCountry = &quot;Kroatien&quot;,
+        Account.BillingCountry = &quot;Lettland&quot;,
+        Account.BillingCountry = &quot;Litauen&quot;,
+        Account.BillingCountry = &quot;Luxemburg&quot;,
+        Account.BillingCountry = &quot;Malta&quot;,
+        Account.BillingCountry = &quot;Österreich&quot;,
+        Account.BillingCountry = &quot;Polen&quot;,
+        Account.BillingCountry = &quot;Portugal&quot;,
+        Account.BillingCountry = &quot;Rumänien&quot;,
+        Account.BillingCountry = &quot;Schweden&quot;,
+        Account.BillingCountry = &quot;Slowakei&quot;,
+        Account.BillingCountry = &quot;Slowenien&quot;,
+        Account.BillingCountry = &quot;Spanien&quot;,
+        Account.BillingCountry = &quot;Tschechien&quot;,
+        Account.BillingCountry = &quot;Ungarn&quot;,
+        Account.BillingCountry = &quot;Zypern&quot;),
+&quot;EU&quot;, 
+IF(Account.BillingCountry = &quot;Deutschland&quot;, &quot;DE&quot;,
+IF(Account.BillingCountry = &quot;Schweiz&quot;, &quot;CH&quot;,  
+&quot;RW&quot;
+)))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>invoice region to identify tax rate</inlineHelpText>
+    <label>ON_Region</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

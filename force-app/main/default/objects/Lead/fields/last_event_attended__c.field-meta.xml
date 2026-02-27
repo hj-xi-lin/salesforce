@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>last_event_attended__c</fullName>
+    <description>Used to filter incoming leads from event in salesforce list views</description>
+    <label>Last event attended</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>2026 Procare Hannoverr</fullName>
+                <default>false</default>
+                <label>2026 Procare Hannoverr</label>
+            </value>
+            <value>
+                <fullName>2026 Health Care Summit 1.0</fullName>
+                <default>false</default>
+                <label>2026 Health Care Summit 1.0</label>
+            </value>
+            <value>
+                <fullName>2026 HR Social Club Afterwork Hamburg</fullName>
+                <default>false</default>
+                <label>2026 HR Social Club Afterwork Hamburg</label>
+            </value>
+            <value>
+                <fullName>2026 HR Minds Bensberg</fullName>
+                <default>false</default>
+                <label>2026 HR Minds Bensberg</label>
+            </value>
+            <value>
+                <fullName>2026 Health Care Summit 3.0</fullName>
+                <default>false</default>
+                <label>2026 Health Care Summit 3.0</label>
+            </value>
+            <value>
+                <fullName>2026 OMR Festival</fullName>
+                <default>false</default>
+                <label>2026 OMR Festival</label>
+            </value>
+            <value>
+                <fullName>2026 HeyDay Berlin</fullName>
+                <default>false</default>
+                <label>2026 HeyDay Berlin</label>
+            </value>
+            <value>
+                <fullName>2026 HeyDay Munich/Frankfurt</fullName>
+                <default>false</default>
+                <label>2026 HeyDay Munich/Frankfurt</label>
+            </value>
+            <value>
+                <fullName>2026 HeyDay Cologne/HH</fullName>
+                <default>false</default>
+                <label>2026 HeyDay Cologne/HH</label>
+            </value>
+            <value>
+                <fullName>2026 Zukunft Personal Europe Köln</fullName>
+                <default>false</default>
+                <label>2026 Zukunft Personal Europe Köln</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Conversion_MQL_Type__c</fullName>
+    <description>MQL Type Account when Account becomes a Customer. Populated via Flow</description>
+    <externalId>false</externalId>
+    <inlineHelpText>&quot;Bester&quot; MQL Type aller verknüpften Kontakte, zu dem Zeitpunkt, als der Account ein Kunde wurde.</inlineHelpText>
+    <label>Customer Conversion MQL Type</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

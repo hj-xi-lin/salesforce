@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mandatory_Fields_for_ATS_Onboarding_Case</fullName>
+    <active>true</active>
+    <description>For the two ATS onboarding case record types, Staging Backend has to be empty to close the case.</description>
+    <errorConditionFormula>AND(
+ISPICKVAL(Status, &quot;Closed&quot;),
+
+OR( RecordType.DeveloperName = &quot;ATS_New_Onboarding&quot; , RecordType.DeveloperName = &quot;ATS_Create_a_new_Adjust_Campaign&quot; ),
+
+NOT( ISBLANK( Staging_Backend__c ) ) 
+)</errorConditionFormula>
+    <errorDisplayField>Staging_Backend__c</errorDisplayField>
+    <errorMessage>Before closing the case, make sure that Staging Backend is empty.</errorMessage>
+</ValidationRule>

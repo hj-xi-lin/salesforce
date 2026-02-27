@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>tysosla__SLA_Status__c</fullName>
+    <deprecated>false</deprecated>
+    <description>This field visually designates if the first touch SLA was met. If the SLA has not passed, this time value is in total hours, not Business Hours.</description>
+    <externalId>false</externalId>
+    <formula>IF(ISBLANK(tysosla__First_Touch_Due__c), 
+IMAGE(&quot;/img/msg_icons/warning16.png&quot;, &quot;Orange&quot;)&amp;&quot; Not Enough Info&quot;,
+
+IF(tysosla__First_Touch_Violation__c, IMAGE(&quot;/img/msg_icons/error16.png&quot;, &quot;Red&quot;),
+IF (tysosla__First_Touch_Violation__c==false, IMAGE(&quot;/img/msg_icons/confirm16.png&quot;, &quot;Green&quot;),
+IMAGE(&quot;/servlet/servlet.FileDownload?file=01570000000Q6Ep&quot;, &quot;Red&quot;)))
+
+
+
+&amp;
+
+IF(AND(tysosla__First_Touch_Violation__c==false, tysosla__First_Touch_Due__c &gt;NOW()), &quot; Due in: &quot;&amp;
+
+
+TEXT(
+ROUND(MOD((tysosla__First_Touch_Due__c-NOW())*24,24),0)
+         )  &amp;&quot; Hr &quot; &amp;
+TEXT(
+ROUND(MOD((tysosla__First_Touch_Due__c-NOW())*1440,60),0)
+) &amp;&quot; Min &quot;
+, null)
+
+
+&amp;
+IF(tysosla__First_Touch_Violation__c, &quot; Missed SLA&quot;, &quot;&quot;)
+&amp;
+IF(AND(tysosla__First_Touch_Violation__c==false,  tysosla__First_Touch_Due__c&lt;NOW()), &quot; Met SLA&quot;, &quot;&quot;)
+
+)</formula>
+    <inlineHelpText>This field visually designates if the first touch SLA was met. If the SLA has not passed, this time value is in total hours, not Business Hours.</inlineHelpText>
+    <label>SLA Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

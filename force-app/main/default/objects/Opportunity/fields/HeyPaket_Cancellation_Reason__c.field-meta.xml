@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HeyPaket_Cancellation_Reason__c</fullName>
+    <description>RO-1432</description>
+    <inlineHelpText>Die Klassifikation des HeyPakets zeigt an, ob es ein neues HeyPaket, ein Upsell oder manuelles Renewal oder ein Auto-Renewal ist. Die Klassifikation wird automatisch beim Akzeptieren der Quote eingetragen</inlineHelpText>
+    <label>HeyPaket Cancellation Reason</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Task_Layout</fullName>
+    <fields>Subject</fields>
+    <fields>WhoId</fields>
+    <fields>WhatId</fields>
+    <label>Task Layout</label>
+</CompactLayout>

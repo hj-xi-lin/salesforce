@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>High_Urgency__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>RO - 2251</description>
+    <inlineHelpText>The value is set to True if the booking last 12 month&apos;s value of the related account is greater than 51000. This value is populated via a flow</inlineHelpText>
+    <label>High Urgency</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

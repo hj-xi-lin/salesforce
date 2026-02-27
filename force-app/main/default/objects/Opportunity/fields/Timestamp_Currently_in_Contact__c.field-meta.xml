@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Timestamp_Currently_in_Contact__c</fullName>
+    <description>Set the Timestamp when Opportunity is in Stage Currently in Contact</description>
+    <inlineHelpText>Timestamp when Opportunity was in Stage Currently in Contact</inlineHelpText>
+    <label>Timestamp Currently in Contact</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

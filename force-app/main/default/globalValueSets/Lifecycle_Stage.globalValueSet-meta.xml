@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>subscriber</fullName>
+        <default>false</default>
+        <label>Subscriber</label>
+    </customValue>
+    <customValue>
+        <fullName>lead</fullName>
+        <default>false</default>
+        <label>Lead</label>
+    </customValue>
+    <customValue>
+        <fullName>marketingqualifiedlead</fullName>
+        <default>false</default>
+        <label>Marketing Qualified Lead</label>
+    </customValue>
+    <customValue>
+        <fullName>salesqualifiedlead</fullName>
+        <default>false</default>
+        <label>Sales Qualified Lead</label>
+    </customValue>
+    <customValue>
+        <fullName>opportunity</fullName>
+        <default>false</default>
+        <label>Opportunity</label>
+    </customValue>
+    <customValue>
+        <fullName>customer</fullName>
+        <default>false</default>
+        <label>Customer</label>
+    </customValue>
+    <customValue>
+        <fullName>evangelist</fullName>
+        <default>false</default>
+        <label>Evangelist</label>
+    </customValue>
+    <customValue>
+        <fullName>other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <description>RO-1654</description>
+    <masterLabel>Lifecycle Stage</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

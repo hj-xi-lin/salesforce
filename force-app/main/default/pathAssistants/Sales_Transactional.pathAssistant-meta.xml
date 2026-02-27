@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Opportunity</entityName>
+    <fieldName>StageName</fieldName>
+    <masterLabel>Sales Transactional</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>CloseDate</fieldNames>
+        <fieldNames>Amount</fieldNames>
+        <fieldNames>Source_Opp__c</fieldNames>
+        <info>&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-size: 10pt;&quot;&gt;Contact Role(s) wurde(n) korrekt zugewiesen.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 10pt;&quot;&gt;Finaler Milestone dieser Stage: MA-Anzahl, HeyJobs-Category, Contact Role(s) and Anzahl offener Jobs wurde verifiziert.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 10pt;&quot;&gt;Pflichtfelder in &amp;quot;Lead Qualification - Transactional&amp;quot; Section (linke Spalte) wurden verifiziert bzw. vollständig dokumentiert. &lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>In Qualification</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>CloseDate</fieldNames>
+        <fieldNames>Amount</fieldNames>
+        <fieldNames>Probability</fieldNames>
+        <info>&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-size: 10pt;&quot;&gt;Contact Role(s) wurden korrekt zugewiesen.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 10pt;&quot;&gt;Finaler Milestone dieser Stage: Angebot wurde akzeptiert oder abgelehnt.&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Offer</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>CloseDate</fieldNames>
+        <fieldNames>Amount</fieldNames>
+        <fieldNames>Probability</fieldNames>
+        <info>&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-size: 10pt;&quot;&gt;Contact Role(s) wurden korrekt zugewiesen.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 10pt;&quot;&gt;Finaler Milestone dieser Stage: Ein Angebot wurde versendet.&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Pitch &amp; Negotiation</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Sales_Transactional</recordTypeName>
+</PathAssistant>

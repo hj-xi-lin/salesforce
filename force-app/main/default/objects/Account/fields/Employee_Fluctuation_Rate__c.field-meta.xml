@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Employee_Fluctuation_Rate__c</fullName>
+    <description>Estimated Fluctuation Rate in Share of Employees/Year. Dependant on HeyJobs Category. Used for Wallez Size Calculation. RO-529 , RO - 1914</description>
+    <externalId>false</externalId>
+    <formula>CASE(
+  HeyJobs_Category__c, 
+  &quot;Call center&quot;, 0.284,
+  &quot;Logistics&quot;, 0.184,
+  &quot;Retail&quot;, 0.219,
+  &quot;Temporary Employment Agencies&quot;, 0,
+  &quot;Services&quot;, 0.370,
+  &quot;Hospitality&quot;, 0.302,
+  &quot;e-commerce&quot;, 0.170,
+  &quot;Healthcare&quot;, 0.195,
+  &quot;Production&quot;, 0.178,
+  &quot;Banking and Insurance&quot;, 0.096,
+  &quot;Agency&quot;, 0.176,
+  &quot;High-End&quot;, 0.126,
+  &quot;Headhunter&quot;, 0.132,
+  &quot;Office&quot;, 0.132,
+  &quot;Public Sector&quot;, 0.137,
+  0.176
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Estimated Fluctuation Rate in Share of Employees/Year. Dependant on HeyJobs Category. Used for Wallez Size Calculation.</inlineHelpText>
+    <label>Legacy Employee Fluctuation Rate</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>3</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

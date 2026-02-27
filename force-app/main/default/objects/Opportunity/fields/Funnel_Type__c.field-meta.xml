@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Funnel_Type__c</fullName>
+    <description>RO-2711</description>
+    <label>Funnel Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Sales generated</fullName>
+                <default>false</default>
+                <label>Sales generated</label>
+            </value>
+            <value>
+                <fullName>Marketing generated</fullName>
+                <default>false</default>
+                <label>Marketing generated</label>
+            </value>
+            <value>
+                <fullName>Marketing influenced</fullName>
+                <default>false</default>
+                <label>Marketing influenced</label>
+            </value>
+            <value>
+                <fullName>Auto-Renewal</fullName>
+                <default>false</default>
+                <label>Auto-Renewal</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

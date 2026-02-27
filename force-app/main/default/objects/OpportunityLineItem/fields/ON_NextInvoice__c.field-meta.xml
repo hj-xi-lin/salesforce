@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ON_NextInvoice__c</fullName>
+    <description>Specifies the next billing date. If no value is defined, it will be substituted by the maximum of the invoice run start date, subscription start date or item start date. When the invoice is set Open, it is incremented to the current invoice line item&apos;s
+service period end date + 1 day</description>
+    <inlineHelpText>Specifies the next billing date. If no value is defined, it will be substituted by the maximum of the invoice run start date, subscription start date or item start date. When the invoice is set Open, it is incremented to the current invoice line item&apos;s
+service period end date + 1 day</inlineHelpText>
+    <label>JustOn: Next Service Period Start</label>
+    <required>false</required>
+    <type>Date</type>
+</CustomField>

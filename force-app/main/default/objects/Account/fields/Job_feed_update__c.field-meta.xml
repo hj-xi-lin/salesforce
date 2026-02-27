@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Job_feed_update__c</fullName>
+    <description>RO-89
+Requested by Leon Thomann</description>
+    <inlineHelpText>Datum der Aktualisierung der jobbezogenen Informationen für diesen Account. Wird durch die Aktualisierung des Datensatzes festgelegt. Quelle der Daten ist Crawling vom &quot;&quot;Talent Marketing - Inventory and Matching&quot;&quot; Team.</inlineHelpText>
+    <label>Legacy Job feed update  - Inventory</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

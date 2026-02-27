@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Lead</entityName>
+    <fieldName>Status</fieldName>
+    <masterLabel>Lead</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>urlCareerPage__c</fieldNames>
+        <picklistValueName>Converted</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Loss_Reason__c</fieldNames>
+        <info>&lt;p&gt;Please enter the Loss Reason (see field on the left).&lt;/p&gt;</info>
+        <picklistValueName>Lost</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>urlCareerPage__c</fieldNames>
+        <fieldNames>HeyJobs_Category__c</fieldNames>
+        <fieldNames>NumberOfEmployees</fieldNames>
+        <fieldNames>Service_Country__c</fieldNames>
+        <fieldNames>Next_Action_Detail__c</fieldNames>
+        <info>&lt;ul&gt;&lt;li&gt;Qualify the lead and enter the mandatory information (see fields on the left).&lt;/li&gt;&lt;li&gt;Make sure the field Lead Medium has a value.&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>New</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Inbound</recordTypeName>
+</PathAssistant>

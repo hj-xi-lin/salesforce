@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Current_Wizard_Step__c</fullName>
+    <description>Tracks the current step in the Handover Wizard to enable resume functionality</description>
+    <inlineHelpText>The current or last step the user was on in the Handover Wizard</inlineHelpText>
+    <label>Current Wizard Step</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Pre-check</fullName>
+                <default>true</default>
+                <label>Pre-check</label>
+            </value>
+            <value>
+                <fullName>Notes</fullName>
+                <default>false</default>
+                <label>Notes</label>
+            </value>
+            <value>
+                <fullName>Review</fullName>
+                <default>false</default>
+                <label>Review</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

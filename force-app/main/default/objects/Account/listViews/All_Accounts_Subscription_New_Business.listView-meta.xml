@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Accounts_Subscription_New_Business</fullName>
+    <columns>Account_Owner__c</columns>
+    <columns>Service_Country__c</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Estimated_Wallet_Size__c</columns>
+    <columns>Stage_ACM__c</columns>
+    <columns>LAST_ACTIVITY_DATETIME</columns>
+    <columns>Loss_Reason_Account__c</columns>
+    <columns>Follow_up_Date_Account__c</columns>
+    <columns>Timestamp_Closed_Lost__c</columns>
+    <columns>MQL_Type_Account__c</columns>
+    <columns>Timestamp_Latest_MQL_conversion_Account__c</columns>
+    <columns>Follow_up_Details_Account__c</columns>
+    <columns>Blacklist__c</columns>
+    <columns>Timestamp_Latest_SSSU_Account__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Account_Owner__c</field>
+        <operation>equals</operation>
+        <value>Lead Gen</value>
+    </filters>
+    <filters>
+        <field>GTM_Motion_Account__c</field>
+        <operation>equals</operation>
+        <value>Subscription New Business</value>
+    </filters>
+    <filters>
+        <field>Test_Account__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>Estimated_Wallet_Size__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>EUR 75000</value>
+    </filters>
+    <label>All Accounts Subscription New Business</label>
+</ListView>

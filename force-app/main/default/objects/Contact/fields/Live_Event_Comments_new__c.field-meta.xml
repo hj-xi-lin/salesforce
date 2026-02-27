@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Live_Event_Comments_new__c</fullName>
+    <description>field was changed to long text area due to sync errors</description>
+    <inlineHelpText>Notizen über Leads von Sales-Reps bei Messen und Veranstaltungen.</inlineHelpText>
+    <label>Live Event Comments</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

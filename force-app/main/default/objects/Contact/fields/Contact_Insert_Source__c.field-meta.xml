@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Insert_Source__c</fullName>
+    <description>This field is populated for mass inserts and defines the source of the account information. This is used for tracking and cleanup.</description>
+    <inlineHelpText>This field is populated for mass inserts and defines the source of the account information. This is used for tracking and cleanup.</inlineHelpText>
+    <label>Contact Insert Source</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>e-Commerce</fullName>
+                <default>false</default>
+                <label>e-Commerce</label>
+            </value>
+            <value>
+                <fullName>WZW</fullName>
+                <default>false</default>
+                <label>WZW</label>
+            </value>
+            <value>
+                <fullName>CreFo</fullName>
+                <default>false</default>
+                <label>CreFo</label>
+            </value>
+            <value>
+                <fullName>Index Anzeigendaten</fullName>
+                <default>false</default>
+                <label>Index Anzeigendaten</label>
+            </value>
+            <value>
+                <fullName>Dealfront</fullName>
+                <default>false</default>
+                <label>Dealfront</label>
+            </value>
+            <value>
+                <fullName>Webinar Laura</fullName>
+                <default>false</default>
+                <label>Webinar Laura</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Upload</fullName>
+                <default>false</default>
+                <label>Upload</label>
+            </value>
+            <value>
+                <fullName>Recruiter Portal</fullName>
+                <default>false</default>
+                <label>Recruiter Portal</label>
+            </value>
+            <value>
+                <fullName>FrontApp</fullName>
+                <default>false</default>
+                <label>FrontApp</label>
+            </value>
+            <value>
+                <fullName>Clay</fullName>
+                <default>false</default>
+                <label>Clay</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

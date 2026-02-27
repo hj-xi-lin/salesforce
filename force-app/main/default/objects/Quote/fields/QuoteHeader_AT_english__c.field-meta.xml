@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>QuoteHeader_AT_english__c</fullName>
+    <description>Used as Header on Quote Templates</description>
+    <externalId>false</externalId>
+    <formula>&quot;HeyJobs GmbH&quot; &amp;BR()&amp;
+&quot;Gonzagasse 17&quot; &amp;BR()&amp;
+&quot;1010 Wien, Österreich&quot; &amp;BR()</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>QuoteHeader_AT</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

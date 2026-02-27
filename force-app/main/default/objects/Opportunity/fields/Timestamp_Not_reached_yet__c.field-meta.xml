@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Timestamp_Not_reached_yet__c</fullName>
+    <description>Set the Timestamp when Opportunity is in Stage Not reached yet</description>
+    <inlineHelpText>Timestamp when Opportunity was in Stage Not reached yet</inlineHelpText>
+    <label>Timestamp Not reached yet</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

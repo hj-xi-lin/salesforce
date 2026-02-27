@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HeyJobs_Category_mandatory_on_conversion</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISPICKVAL(Status, &quot;Converted&quot;),
+NOT($Permission.Allow_MQL_Conversion), 
+ISBLANK(TEXT( HeyJobs_Category__c )))</errorConditionFormula>
+    <errorMessage>The HeyJobs Category is missing. Please populate it to convert the lead (e.g. using the answer from the Inbound Form)</errorMessage>
+</ValidationRule>

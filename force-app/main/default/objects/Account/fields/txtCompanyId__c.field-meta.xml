@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>txtCompanyId__c</fullName>
+    <description>Can be found in Salesforce under Account Details, or via the link to the backend. There, the ID is specified after the last slash</description>
+    <externalId>true</externalId>
+    <inlineHelpText>Jedes Unternehmen erhält eine eindeutige Company ID, sobald eine Backend Company für diesen Salesforce-Account angelegt wurde. Die Company ID erlaubt uns, Salesforce-Accounts den Companies im Backend zuzuordnen. Daher kann dieser Wert nach dem Eintragen auch nicht verändert werden.</inlineHelpText>
+    <label>Company Id</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

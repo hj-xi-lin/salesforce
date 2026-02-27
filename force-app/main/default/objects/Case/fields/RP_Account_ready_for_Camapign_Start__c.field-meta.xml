@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RP_Account_ready_for_Camapign_Start__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>RO-1759</description>
+    <inlineHelpText>[REACH ONLY] Make sure the account is ready for campaign start (Logo, Company Pictures and Description etc.) You can impersonate (ask for temporary access to the REACH account) or create a Case (Case Type: other) for IntOps</inlineHelpText>
+    <label>RP Account ready for Camapign Start</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

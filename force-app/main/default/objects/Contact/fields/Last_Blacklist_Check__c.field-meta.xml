@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last_Blacklist_Check__c</fullName>
+    <description>RO-2282</description>
+    <inlineHelpText>Zeigt an, wann Blacklist zuletzt geändert oder bestätigt wurde, egal ob Blacklist aktiviert oder deaktiviert ist. Der Timestamp wird automatisch aktualisiert, wenn das Feld sich ändert, kann aber auch manuell angepasst werden</inlineHelpText>
+    <label>Last Blacklist Check</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>DateTime</type>
+</CustomField>

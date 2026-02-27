@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MQL_Conversion__c</fullName>
+    <description>This property essentially captures the most recent conversion that led to an MQL status</description>
+    <inlineHelpText>&quot;Zeigt den Marketing Engagement-Touchpoint (Content, Marketing-Formular usw.) an, der den Kontakt zu einem MQL gemacht hat, der mit der Opportunity verbunden ist (Contact Role).
+Über den Langdock Sales Assistent findest du eine Erklärung und einen Gesprächseinstieg für jeden MQL Conversion Wert. Nutze den Link und gib den MQL Conversion Value ein: https://app.langdock.com/chat?a=2eb99729-f855-45b7-a4c5-cf3f5d3cda2f&quot;</inlineHelpText>
+    <label>MQL Conversion</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>2</visibleLines>
+</CustomField>

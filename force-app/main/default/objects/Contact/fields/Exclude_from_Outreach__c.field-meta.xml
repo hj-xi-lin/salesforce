@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Exclude_from_Outreach__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Wenn diese Option auf „TRUE“ gesetzt ist, wird der Kontakt nicht in die Outreach-Kampagnen aufgenommen. Diese Einstellung wird nach 6 Wochen automatisch auf „FALSCH“ gesetzt.</inlineHelpText>
+    <label>Exclude from Outreach</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

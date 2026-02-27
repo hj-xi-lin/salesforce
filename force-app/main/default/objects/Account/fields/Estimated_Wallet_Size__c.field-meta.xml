@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Estimated_Wallet_Size__c</fullName>
+    <description>RO-529, RO - 2560</description>
+    <formula>IF(
+    OR(ISBLANK(Estimated_Wallet_Size_Overwrite__c), Estimated_Wallet_Size_Overwrite__c = 0),
+    MAX(
+        EWS_Fallback__c * 
+        IF(
+            Record_Type__c = &quot;Agency Sales&quot;, 
+            0.2, 
+            IF(Record_Type__c = &quot;Discarded&quot;, 0, 1)
+        ),
+        Bookings_Last_12_Months_Hierarchy__c 
+    ),
+    IF(
+        Bookings_Last_12_Months_Hierarchy__c &gt; Estimated_Wallet_Size_Overwrite__c,
+        Bookings_Last_12_Months_Hierarchy__c,
+        Estimated_Wallet_Size_Overwrite__c
+    )
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>The Estimated Wallet Size is determined based on the Number of Employees, Category 3, Account Record Type, Bookings in the Last 12 Months, and the Estimated Wallet Size Overwrite.</inlineHelpText>
+    <label>Estimated Wallet Size</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

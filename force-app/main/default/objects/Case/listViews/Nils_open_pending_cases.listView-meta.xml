@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Nils_open_pending_cases</fullName>
+    <columns>GTM_Motion_Case__c</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Product_Type__c</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>Label__c</columns>
+    <columns>Planned_Reach_Campaign_Start_Date__c</columns>
+    <columns>Campaign_Start__c</columns>
+    <columns>Due_Date__c</columns>
+    <columns>CASES.RECORDTYPE</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CORE.USERS.FIRST_NAME</field>
+        <operation>equals</operation>
+        <value>Nils</value>
+    </filters>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Escalated,Closed,Job Live,Lost</value>
+    </filters>
+    <label>Nils open/pending cases</label>
+</ListView>

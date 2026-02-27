@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Interested_in_Demo__c</fullName>
+    <description>Used in Hubspot forms to check which leads request a demo</description>
+    <inlineHelpText>Zeigt, ob der Kontakt im zuletzt eingereichten Marketing formular eine Demo angefordert hat.</inlineHelpText>
+    <label>Interested in Demo</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>YesNo_Default_Empty</valueSetName>
+    </valueSet>
+</CustomField>

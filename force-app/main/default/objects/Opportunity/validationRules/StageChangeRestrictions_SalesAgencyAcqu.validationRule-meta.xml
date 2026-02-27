@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>StageChangeRestrictions_SalesAgencyAcqu</fullName>
+    <active>true</active>
+    <description>Stage change restrictions for RTs Sales/Agency Acquisition. 
+RO-1414, RO-1424, RO-1766, RO-1630</description>
+    <errorConditionFormula>AND(
+
+OR(
+RecordType.DeveloperName = &quot;Sales&quot;,
+RecordType.DeveloperName = &quot;Agency_Acquisition&quot;
+),
+ISCHANGED(StageName),
+NOT( $Permission.Sales_Operations),
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;,
+
+/* Backwards Movements */
+OR(
+
+AND(
+ISPICKVAL(PRIORVALUE(StageName), &quot;Qualified Prospect&quot;),
+ISPICKVAL(StageName, &quot;Not reached yet&quot;)
+),
+
+AND(
+ISPICKVAL(PRIORVALUE(StageName), &quot;Currently in Contact&quot;),
+OR(
+ISPICKVAL(StageName, &quot;Qualified Prospect&quot;),
+ISPICKVAL(StageName, &quot;Not reached yet&quot;)
+)),
+
+AND(
+ISPICKVAL(PRIORVALUE(StageName), &quot;Scheduled&quot;),
+OR(
+ISPICKVAL(StageName, &quot;Rescheduling&quot;),
+ISPICKVAL(StageName, &quot;Currently in Contact&quot;),
+ISPICKVAL(StageName, &quot;Qualified Prospect&quot;),
+ISPICKVAL(StageName, &quot;Not reached yet&quot;),
+ISPICKVAL(StageName, &quot;Demo Held&quot;)
+)),
+
+AND(
+ISPICKVAL(PRIORVALUE(StageName), &quot;Demo Confirmed&quot;),
+OR(
+ISPICKVAL(StageName, &quot;Scheduled&quot;),
+ISPICKVAL(StageName, &quot;Currently in Contact&quot;),
+ISPICKVAL(StageName, &quot;Qualified Prospect&quot;),
+ISPICKVAL(StageName, &quot;Not reached yet&quot;)
+)),
+
+AND(
+ISPICKVAL(PRIORVALUE(StageName), &quot;Demo Held&quot;),
+OR(
+ISPICKVAL(StageName, &quot;Scheduled&quot;),
+ISPICKVAL(StageName, &quot;Rescheduling&quot;),
+ISPICKVAL(StageName, &quot;Currently in Contact&quot;),
+ISPICKVAL(StageName, &quot;Qualified Prospect&quot;),
+ISPICKVAL(StageName, &quot;Not reached yet&quot;)
+)),
+
+AND(
+OR(
+ISPICKVAL(PRIORVALUE(StageName), &quot;Pilot Definition&quot;),
+ISPICKVAL(PRIORVALUE(StageName), &quot;Offer&quot;)),
+OR(
+ISPICKVAL(StageName, &quot;Demo Held&quot;),
+ISPICKVAL(StageName, &quot;Demo Confirmed&quot;),
+ISPICKVAL(StageName, &quot;Scheduled&quot;),
+ISPICKVAL(StageName, &quot;Rescheduling&quot;),
+ISPICKVAL(StageName, &quot;Currently in Contact&quot;),
+ISPICKVAL(StageName, &quot;Qualified Prospect&quot;),
+ISPICKVAL(StageName, &quot;Not reached yet&quot;)
+)),
+
+/* Backwards Exception Demo Held/Confirmed */
+AND(
+$Profile.Name &lt;&gt; &quot;Head of Large Hunting&quot;,
+$Profile.Name &lt;&gt; &quot;Head of Small Account Management&quot;,
+$Profile.Name &lt;&gt; &quot;Head of Large Prospecting&quot;,
+ISPICKVAL(PRIORVALUE(StageName), &quot;Demo Held&quot;),
+ISPICKVAL(StageName, &quot;Demo Confirmed&quot;)
+),
+
+/* Movement from Prospecting to Hunting Stages */
+AND(
+OR(
+ISPICKVAL( PRIORVALUE (StageName), &quot;Not reached yet&quot;),
+ISPICKVAL( PRIORVALUE (StageName), &quot;Qualified Prospect&quot;),
+ISPICKVAL( PRIORVALUE (StageName), &quot;Currently In Contact&quot;),
+ISPICKVAL( PRIORVALUE (StageName), &quot;Scheduled&quot;)
+),
+OR( ISPICKVAL(StageName, &quot;Demo Held&quot;) ,
+ISPICKVAL(StageName, &quot;Pilot Definition&quot;),
+ISPICKVAL(StageName, &quot;Offer&quot;),
+ISPICKVAL(StageName, &quot;Contract Received &quot;)
+))
+
+)
+)</errorConditionFormula>
+    <errorMessage>Opportunity cannot be moved to the selected stage. Please reach out to your team lead.</errorMessage>
+</ValidationRule>

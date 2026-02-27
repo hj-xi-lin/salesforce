@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Renewal_At_Risk__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Wenn wahr, bedeutet dies, dass der Kunde einem Risiko der Nicht-Verlängerung ausgesetzt ist</inlineHelpText>
+    <label>Legacy Renewal At Risk</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ON_BillingUnit__c</fullName>
+    <description>Defines the time unit for the billing period to be displayed on the invoice and which is used for the price calculation of the billing period. Supported values are Day, Month and Year.</description>
+    <inlineHelpText>Defines the time unit for the billing period to be displayed on the invoice and which is used for the price calculation of the billing period. Supported values are Day, Month and Year.</inlineHelpText>
+    <label>JustOn: Billing Unit</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Day</fullName>
+                <default>false</default>
+                <label>Day</label>
+            </value>
+            <value>
+                <fullName>Month</fullName>
+                <default>false</default>
+                <label>Month</label>
+            </value>
+            <value>
+                <fullName>Year</fullName>
+                <default>false</default>
+                <label>Year</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

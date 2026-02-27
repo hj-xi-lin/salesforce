@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>0€</fullName>
+        <default>false</default>
+        <label>0€</label>
+    </customValue>
+    <customValue>
+        <fullName>0 - 100€</fullName>
+        <default>false</default>
+        <label>0 - 100€</label>
+    </customValue>
+    <customValue>
+        <fullName>100 - 500€</fullName>
+        <default>false</default>
+        <label>100 - 500€</label>
+    </customValue>
+    <customValue>
+        <fullName>500 - 1000€</fullName>
+        <default>false</default>
+        <label>500 - 1000€</label>
+    </customValue>
+    <customValue>
+        <fullName>&gt;1000€</fullName>
+        <default>false</default>
+        <label>&gt;1000€</label>
+    </customValue>
+    <masterLabel>Monthly Recruiting Budget</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

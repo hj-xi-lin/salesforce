@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ONB2__Type__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The type of this file in the context of JustOn.</description>
+    <inlineHelpText>The type of this file in the context of JustOn.</inlineHelpText>
+    <label>Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Invoice PDF</fullName>
+                <default>false</default>
+                <label>Invoice PDF</label>
+            </value>
+            <value>
+                <fullName>Dunning PDF</fullName>
+                <default>false</default>
+                <label>Dunning PDF</label>
+            </value>
+            <value>
+                <fullName>Booking Detail Export</fullName>
+                <default>false</default>
+                <label>Booking Detail Export</label>
+            </value>
+            <value>
+                <fullName>Invoice Export</fullName>
+                <default>false</default>
+                <label>Invoice Export</label>
+            </value>
+            <value>
+                <fullName>Template Logo</fullName>
+                <default>false</default>
+                <label>Template Logo</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

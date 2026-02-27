@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opt_Out_Cold_Marketing_Email__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Wenn du einen einzelnen Kontakt von Marius Luther Emails ausschließen möchtest, setze hier einen Haken. (Gilt auch für Mails von Tim Koch, Janosch etc.) - Wenn alle Kontakte eines Accounts geblockt werden sollen, nutze das gleichnamige Feld auf Account Level</inlineHelpText>
+    <label>Opt Out Cold Marketing Email</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Transactional_Index_Opps_PreSales</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>Estimated_Wallet_size_opp__c</columns>
+    <columns>OPPORTUNITY.CREATED_DATE</columns>
+    <columns>Service_Country__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Source_Opp__c</field>
+        <operation>equals</operation>
+        <value>Index</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Opportunity.Sales_Transactional</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>notEqual</operation>
+        <value>Closed Lost</value>
+    </filters>
+    <filters>
+        <field>fmlOwnerName__c</field>
+        <operation>equals</operation>
+        <value>Pre-Sales Admin</value>
+    </filters>
+    <filters>
+        <field>Estimated_Wallet_size_opp__c</field>
+        <operation>lessOrEqual</operation>
+        <value>75000</value>
+    </filters>
+    <label>Transactional_Index_Opps_PreSales</label>
+</ListView>

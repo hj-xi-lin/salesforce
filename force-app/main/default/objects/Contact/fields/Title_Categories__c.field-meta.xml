@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Title_Categories__c</fullName>
+    <description>Indicates the role of the contact within the company he is part of</description>
+    <inlineHelpText>Beschreibt die Rolle die ein Kontakt im Unternehmen hat. (Falls du mehr Informationen hinzufügen möchtest, nutze das &quot;Description Feld&quot;)</inlineHelpText>
+    <label>Title Categories</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CEO</fullName>
+                <default>false</default>
+                <label>CEO</label>
+            </value>
+            <value>
+                <fullName>CFO</fullName>
+                <default>false</default>
+                <label>CFO</label>
+            </value>
+            <value>
+                <fullName>COO</fullName>
+                <default>false</default>
+                <label>COO</label>
+            </value>
+            <value>
+                <fullName>Head of HR</fullName>
+                <default>false</default>
+                <label>Head of HR</label>
+            </value>
+            <value>
+                <fullName>HR General</fullName>
+                <default>false</default>
+                <label>HR General</label>
+            </value>
+            <value>
+                <fullName>HR Marketing</fullName>
+                <default>false</default>
+                <label>HR Marketing</label>
+            </value>
+            <value>
+                <fullName>HR Trainee</fullName>
+                <default>false</default>
+                <label>HR Trainee</label>
+            </value>
+            <value>
+                <fullName>Staff</fullName>
+                <default>false</default>
+                <label>Staff</label>
+            </value>
+            <value>
+                <fullName>Geschäftsführung</fullName>
+                <default>false</default>
+                <label>Geschäftsführung</label>
+            </value>
+            <value>
+                <fullName>CHRO/CPeO</fullName>
+                <default>false</default>
+                <label>CHRO/CPeO</label>
+            </value>
+            <value>
+                <fullName>C-Level Other</fullName>
+                <default>false</default>
+                <label>C-Level Other</label>
+            </value>
+            <value>
+                <fullName>Leadership Recruiting</fullName>
+                <default>false</default>
+                <label>Leadership Recruiting</label>
+            </value>
+            <value>
+                <fullName>Leadership HR</fullName>
+                <default>false</default>
+                <label>Leadership HR</label>
+            </value>
+            <value>
+                <fullName>Prokurist</fullName>
+                <default>false</default>
+                <label>Prokurist</label>
+            </value>
+            <value>
+                <fullName>Leadership Other</fullName>
+                <default>false</default>
+                <label>Leadership Other</label>
+            </value>
+            <value>
+                <fullName>HR Manager</fullName>
+                <default>false</default>
+                <label>HR Manager</label>
+            </value>
+            <value>
+                <fullName>Recruiter</fullName>
+                <default>false</default>
+                <label>Recruiter</label>
+            </value>
+            <value>
+                <fullName>Other Manager</fullName>
+                <default>false</default>
+                <label>Other Manager</label>
+            </value>
+            <value>
+                <fullName>Other categories</fullName>
+                <default>false</default>
+                <label>Other categories</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

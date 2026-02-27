@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Heyassessment_Deactivation_Reason_Detail__c</fullName>
+    <description>Legacy</description>
+    <inlineHelpText>Dieses Feld zeigt zusätzliche Details, die der Kunde für die Deaktivierung des HeyAssessments angegeben hat.</inlineHelpText>
+    <label>Legacy Heyassessment Deactivation Reaso</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>TextArea</type>
+</CustomField>

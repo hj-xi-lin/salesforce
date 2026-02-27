@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Backend_Purchase_link__c</fullName>
+    <externalId>false</externalId>
+    <formula>HYPERLINK(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(&quot;https://production-backend.heyjobs.de/admin/purchases/new?company_id=&quot; &amp; TEXT(Account.txtCompanyId__c) &amp; &quot;&amp;&quot; &amp;
+&quot;invoice_recipient=&quot; &amp; Account.Contact_First_Name__c &amp; &quot;%20&quot; &amp; Account_Contact_Last_Name__c &amp; &quot;&amp;&quot; &amp;
+&quot;invoice_recipient_email=&quot; &amp; Opportunity__r.Billing_Email__c &amp;&quot;&amp;&quot;&amp;
+&quot;invoice_street=&quot; &amp; Opportunity__r.Billing_Street__c &amp;&quot;&amp;&quot;&amp;
+&quot;invoice_postcode_and_city=&quot; &amp;Opportunity__r.Billing_Zip_Postal_Code__c &amp;&quot;%20&quot;&amp; Opportunity__r.Billing_City__c &amp; &quot;&amp;&quot;&amp;
+SUBSTITUTE(&quot;invoice_company =&quot; &amp;Opportunity__r.Bill_To_Name__c,&quot;&amp;&quot;,&quot;%26&quot;) &amp; &quot;&amp;&quot;&amp;
+&quot;purchase_date=&quot; &amp;TEXT(Opportunity__r.dateTimestampContractreceived__c) &amp;&quot;&amp;&quot;&amp;
+&quot;paid_budget=&quot; &amp;TEXT( Opportunity__r.Amount) &amp;&quot;&amp;&quot;&amp;
+&quot;goodwill_budget=&quot; &amp;TEXT( Opportunity__r.BonusBudget__c) &amp;&quot;&amp;&quot;&amp;
+&quot;opportunity_id=&quot; &amp; CASESAFEID(Opportunity__c) &amp;&quot;&amp;&quot;&amp;
+&quot;product_type=&quot; &amp; LOWER(TEXT(Opportunity__r.Product_Type__c)) &amp;&quot;&amp;&quot;&amp;
+&quot;marketing_budget_share=&quot; &amp;TEXT(Opportunity__r.Type ), &quot; &quot;, &quot;%20&quot;),&quot;ä&quot;, &quot;%C3%A4&quot;),
+&quot;ö&quot;,&quot;%C3%B6&quot;),&quot;ü&quot;,&quot;%C3%BC&quot;),&quot;ß&quot;,&quot;%C3%9F&quot;), &quot;Backend Purchase Link&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Backend Purchase link</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

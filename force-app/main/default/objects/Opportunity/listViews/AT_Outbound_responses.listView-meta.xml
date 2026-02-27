@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AT_Outbound_responses</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Segment_Opp_V02__c</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>fmlOwnerName__c</columns>
+    <columns>Created_DateTime__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Outbound_Response__c</field>
+        <operation>equals</operation>
+        <value>Hot,Warm,Potential</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>equals</operation>
+        <value>Qualified Prospect</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.CREATED_DATE</field>
+        <operation>equals</operation>
+        <value>THIS_YEAR</value>
+    </filters>
+    <filters>
+        <field>Service_Country__c</field>
+        <operation>equals</operation>
+        <value>AT</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Opportunity.Sales</value>
+    </filters>
+    <label>AT_Outbound responses</label>
+    <sharedTo>
+        <group>AT_User_Group</group>
+    </sharedTo>
+</ListView>

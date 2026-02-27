@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ON_Special_Invoice_Conditions__c</fullName>
+    <description>Finance needs to see Special Invoice Conditions that ACM enters on Quote / RO-481</description>
+    <inlineHelpText>Zur Dokumentation von besonderen Rechnungskonditionen</inlineHelpText>
+    <label>Special Invoice Conditions</label>
+    <length>500</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>

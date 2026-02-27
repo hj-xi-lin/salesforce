@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GTM_Motion_Change_Restrictions</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISCHANGED( GTM_Motion_Account__c ) &amp;&amp;
+OR(
+				AND(
+								ISBLANK(  TEXT( GTM_Motion_Change_Reason__c ) ),
+				    GTM_Motion_Change_Reason_Detail__c &lt;&gt; &quot;New Account&quot; ), 
+    NOT( ISCHANGED(  GTM_Motion_Change_Reason_Detail__c  ) )
+)</errorConditionFormula>
+    <errorMessage>You can only change GTM Motion by providing a change reason and change reason details</errorMessage>
+</ValidationRule>

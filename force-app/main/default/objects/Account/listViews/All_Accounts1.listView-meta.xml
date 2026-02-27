@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Accounts1</fullName>
+    <columns>Stage_ACM__c</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Follow_up_Details_Account__c</columns>
+    <columns>urlCareerPage__c</columns>
+    <columns>Pipeline_Generated__c</columns>
+    <columns>Estimated_Wallet_Size__c</columns>
+    <columns>Follow_up_Date_Account__c</columns>
+    <columns>MQL_Type_Account__c</columns>
+    <columns>ACCOUNT.EMPLOYEES</columns>
+    <columns>HeyJobs_Category__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Stage_ACM__c</field>
+        <operation>equals</operation>
+        <value>Outbound,Prospect,Acquisition</value>
+    </filters>
+    <filters>
+        <field>Test_Account__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>Account_Owner__c</field>
+        <operation>contains</operation>
+        <value>Hübert</value>
+    </filters>
+    <filters>
+        <field>Estimated_Wallet_Size__c</field>
+        <operation>lessThan</operation>
+        <value>EUR 75000</value>
+    </filters>
+    <label>All Accounts Julia Chycko</label>
+    <sharedTo>
+        <group>B2B_Team_Leads</group>
+    </sharedTo>
+</ListView>

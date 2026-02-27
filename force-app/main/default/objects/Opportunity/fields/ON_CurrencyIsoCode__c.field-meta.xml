@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ON_CurrencyIsoCode__c</fullName>
+    <description>Set Currency Iso Code.</description>
+    <externalId>false</externalId>
+    <formula>TEXT (CurrencyIsoCode)</formula>
+    <inlineHelpText>Set Currency Iso Code.</inlineHelpText>
+    <label>JustOn: Currency Iso Code</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Time_ACM_To_IHC_Completed__c</fullName>
+    <description>Elapsed business minutes from ACM Assignment to Internal Handover Call Completed. Calculated using org Business Hours settings.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Geschäftsminuten von ACM-Zuweisung bis IHC abgeschlossen.</inlineHelpText>
+    <label>Time: ACM to IHC Completed (min)</label>
+    <precision>10</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

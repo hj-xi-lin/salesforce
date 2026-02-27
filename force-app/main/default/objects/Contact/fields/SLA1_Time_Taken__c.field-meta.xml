@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SLA1_Time_Taken__c</fullName>
+    <description>RO - 2355</description>
+    <externalId>false</externalId>
+    <formula>IF(
+    OR(ISNULL(SLA_1_Time_taken__c), SLA_1_Time_taken__c = 0),
+    &quot;&quot;,
+    LPAD(TEXT(FLOOR(SLA_1_Time_taken__c / 24)), 2, &quot;0&quot;) &amp; &quot; days, &quot; &amp;
+    LPAD(TEXT(FLOOR(MOD(SLA_1_Time_taken__c, 24))), 2, &quot;0&quot;) &amp; &quot; hrs : &quot; &amp;
+    LPAD(TEXT(ROUND((MOD(SLA_1_Time_taken__c, 1) * 60), 0)), 2, &quot;0&quot;) &amp; &quot; mins&quot;
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Erforderliche Zeit zur Erfüllung von SLA 1. Bitte beachtet, dass dieses Zeitfeld auch die Wochenenden einschließt. Den genauen Zeitaufwand könnt ihr den angepassten Berechnungen auf der Berichtsebene entnehmen: https://heyjobs.lightning.force.com/lightning/r/Report/00OW7000009YpcQMAS/view</inlineHelpText>
+    <label>SLA1 Time Taken</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

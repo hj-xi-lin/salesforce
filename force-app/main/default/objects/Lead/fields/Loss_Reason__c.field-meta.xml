@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Loss_Reason__c</fullName>
+    <inlineHelpText>Illustrates the lost reason of why a lead was lost. Is important to track for future improvements in lead sourcing</inlineHelpText>
+    <label>Loss Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Status</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Jobseeker</fullName>
+                <default>false</default>
+                <label>Jobseeker</label>
+            </value>
+            <value>
+                <fullName>Currently no budget available</fullName>
+                <default>false</default>
+                <label>Currently no budget available</label>
+            </value>
+            <value>
+                <fullName>Gave fake information</fullName>
+                <default>false</default>
+                <label>Gave fake information</label>
+            </value>
+            <value>
+                <fullName>Already existing customer</fullName>
+                <default>false</default>
+                <label>Already existing customer</label>
+            </value>
+            <value>
+                <fullName>Duplicated Lead</fullName>
+                <default>false</default>
+                <label>Duplicated Lead</label>
+            </value>
+            <value>
+                <fullName>Currently no focus jobs</fullName>
+                <default>false</default>
+                <label>Currently no focus jobs</label>
+            </value>
+            <value>
+                <fullName>Didn&apos;t respond</fullName>
+                <default>false</default>
+                <label>Didn&apos;t respond</label>
+            </value>
+            <value>
+                <fullName>Not active in HeyJobs&apos; service countries</fullName>
+                <default>false</default>
+                <label>Not active in HeyJobs&apos; service countries</label>
+            </value>
+            <value>
+                <fullName>Admin Only: Lead merged in Hubspot</fullName>
+                <default>false</default>
+                <label>Admin Only: Lead merged in Hubspot</label>
+            </value>
+            <value>
+                <fullName>Bankrupt</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Bankrupt</label>
+            </value>
+            <value>
+                <fullName>Bestandskunde</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Bestandskunde</label>
+            </value>
+            <value>
+                <fullName>Blacklist</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Blacklist</label>
+            </value>
+            <value>
+                <fullName>Change of contact person</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Change of contact person</label>
+            </value>
+            <value>
+                <fullName>Dealbreaker: ATS integration</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Dealbreaker: ATS integration</label>
+            </value>
+            <value>
+                <fullName>Decentral Leads</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Decentral Leads</label>
+            </value>
+            <value>
+                <fullName>Depending on parent company decision</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Depending on parent company decision</label>
+            </value>
+            <value>
+                <fullName>Do not contact again</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Do not contact again</label>
+            </value>
+            <value>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Duplicate</label>
+            </value>
+            <value>
+                <fullName>Existing Customer</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Existing Customer</label>
+            </value>
+            <value>
+                <fullName>Fake Information</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Fake Information</label>
+            </value>
+            <value>
+                <fullName>Happy with existing methods</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Happy with existing methods</label>
+            </value>
+            <value>
+                <fullName>Internal blocker</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Internal blocker</label>
+            </value>
+            <value>
+                <fullName>Lead Score C</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lead Score C</label>
+            </value>
+            <value>
+                <fullName>No Budget at the moment</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>No Budget at the moment</label>
+            </value>
+            <value>
+                <fullName>No Budget atm</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>No Budget atm</label>
+            </value>
+            <value>
+                <fullName>No Focus Jobs atm</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>No Focus Jobs atm</label>
+            </value>
+            <value>
+                <fullName>No Hiring Need atm</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>No Hiring Need atm</label>
+            </value>
+            <value>
+                <fullName>No Interest</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>No Interest</label>
+            </value>
+            <value>
+                <fullName>No Potential</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>No Potential</label>
+            </value>
+            <value>
+                <fullName>No Response</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>No Response</label>
+            </value>
+            <value>
+                <fullName>No budget</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>No budget</label>
+            </value>
+            <value>
+                <fullName>No focus jobs</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>No focus jobs</label>
+            </value>
+            <value>
+                <fullName>No focus jobs at the moment</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>No focus jobs at the moment</label>
+            </value>
+            <value>
+                <fullName>No further hiring need</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>No further hiring need</label>
+            </value>
+            <value>
+                <fullName>No interest w/o reason</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>No interest w/o reason</label>
+            </value>
+            <value>
+                <fullName>No relevant contact person identifiable</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>No relevant contact person identifiable</label>
+            </value>
+            <value>
+                <fullName>Non-responsive after 7 tries</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Non-responsive after 7 tries</label>
+            </value>
+            <value>
+                <fullName>Not Reached</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Not Reached</label>
+            </value>
+            <value>
+                <fullName>Not active in Germany</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Not active in Germany</label>
+            </value>
+            <value>
+                <fullName>Not interested in Rescheduling</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Not interested in Rescheduling</label>
+            </value>
+            <value>
+                <fullName>On Hold</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>On Hold (&gt;3 months)</label>
+            </value>
+            <value>
+                <fullName>On Hold (&gt;3 months)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>On Hold (&gt;3 months)</label>
+            </value>
+            <value>
+                <fullName>Research new contact</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Research new contact</label>
+            </value>
+            <value>
+                <fullName>bancrupt/insolvent</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>bancrupt/insolvent</label>
+            </value>
+            <value>
+                <fullName>no ATS integration atm</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>no ATS integration atm</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Converted</controllingFieldValue>
+            <controllingFieldValue>Decentral Leads</controllingFieldValue>
+            <controllingFieldValue>Lost</controllingFieldValue>
+            <controllingFieldValue>Duplicate</controllingFieldValue>
+            <controllingFieldValue>HR Mailing</controllingFieldValue>
+            <controllingFieldValue>Not Responsive</controllingFieldValue>
+            <controllingFieldValue>Scheduled</controllingFieldValue>
+            <controllingFieldValue>Not researched yet</controllingFieldValue>
+            <controllingFieldValue>Research done - Mailing</controllingFieldValue>
+            <controllingFieldValue>Research done</controllingFieldValue>
+            <controllingFieldValue>Recycle</controllingFieldValue>
+            <controllingFieldValue>New</controllingFieldValue>
+            <valueName>Jobseeker</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Converted</controllingFieldValue>
+            <controllingFieldValue>Decentral Leads</controllingFieldValue>
+            <controllingFieldValue>Lost</controllingFieldValue>
+            <controllingFieldValue>Duplicate</controllingFieldValue>
+            <controllingFieldValue>HR Mailing</controllingFieldValue>
+            <controllingFieldValue>Not Responsive</controllingFieldValue>
+            <controllingFieldValue>Scheduled</controllingFieldValue>
+            <controllingFieldValue>Not researched yet</controllingFieldValue>
+            <controllingFieldValue>Research done - Mailing</controllingFieldValue>
+            <controllingFieldValue>Research done</controllingFieldValue>
+            <controllingFieldValue>Recycle</controllingFieldValue>
+            <controllingFieldValue>New</controllingFieldValue>
+            <valueName>Currently no budget available</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Converted</controllingFieldValue>
+            <controllingFieldValue>Decentral Leads</controllingFieldValue>
+            <controllingFieldValue>Lost</controllingFieldValue>
+            <controllingFieldValue>Duplicate</controllingFieldValue>
+            <controllingFieldValue>HR Mailing</controllingFieldValue>
+            <controllingFieldValue>Not Responsive</controllingFieldValue>
+            <controllingFieldValue>Scheduled</controllingFieldValue>
+            <controllingFieldValue>Not researched yet</controllingFieldValue>
+            <controllingFieldValue>Research done - Mailing</controllingFieldValue>
+            <controllingFieldValue>Research done</controllingFieldValue>
+            <controllingFieldValue>Recycle</controllingFieldValue>
+            <controllingFieldValue>New</controllingFieldValue>
+            <valueName>Gave fake information</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Converted</controllingFieldValue>
+            <controllingFieldValue>Decentral Leads</controllingFieldValue>
+            <controllingFieldValue>Lost</controllingFieldValue>
+            <controllingFieldValue>Duplicate</controllingFieldValue>
+            <controllingFieldValue>HR Mailing</controllingFieldValue>
+            <controllingFieldValue>Not Responsive</controllingFieldValue>
+            <controllingFieldValue>Scheduled</controllingFieldValue>
+            <controllingFieldValue>Not researched yet</controllingFieldValue>
+            <controllingFieldValue>Research done - Mailing</controllingFieldValue>
+            <controllingFieldValue>Research done</controllingFieldValue>
+            <controllingFieldValue>Recycle</controllingFieldValue>
+            <controllingFieldValue>New</controllingFieldValue>
+            <valueName>Already existing customer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Converted</controllingFieldValue>
+            <controllingFieldValue>Decentral Leads</controllingFieldValue>
+            <controllingFieldValue>Lost</controllingFieldValue>
+            <controllingFieldValue>Duplicate</controllingFieldValue>
+            <controllingFieldValue>HR Mailing</controllingFieldValue>
+            <controllingFieldValue>Not Responsive</controllingFieldValue>
+            <controllingFieldValue>Scheduled</controllingFieldValue>
+            <controllingFieldValue>Not researched yet</controllingFieldValue>
+            <controllingFieldValue>Research done - Mailing</controllingFieldValue>
+            <controllingFieldValue>Research done</controllingFieldValue>
+            <controllingFieldValue>Recycle</controllingFieldValue>
+            <controllingFieldValue>New</controllingFieldValue>
+            <valueName>Duplicated Lead</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Converted</controllingFieldValue>
+            <controllingFieldValue>Decentral Leads</controllingFieldValue>
+            <controllingFieldValue>Lost</controllingFieldValue>
+            <controllingFieldValue>Duplicate</controllingFieldValue>
+            <controllingFieldValue>HR Mailing</controllingFieldValue>
+            <controllingFieldValue>Not Responsive</controllingFieldValue>
+            <controllingFieldValue>Scheduled</controllingFieldValue>
+            <controllingFieldValue>Not researched yet</controllingFieldValue>
+            <controllingFieldValue>Research done - Mailing</controllingFieldValue>
+            <controllingFieldValue>Research done</controllingFieldValue>
+            <controllingFieldValue>Recycle</controllingFieldValue>
+            <controllingFieldValue>New</controllingFieldValue>
+            <valueName>Currently no focus jobs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Converted</controllingFieldValue>
+            <controllingFieldValue>Decentral Leads</controllingFieldValue>
+            <controllingFieldValue>Lost</controllingFieldValue>
+            <controllingFieldValue>Duplicate</controllingFieldValue>
+            <controllingFieldValue>HR Mailing</controllingFieldValue>
+            <controllingFieldValue>Not Responsive</controllingFieldValue>
+            <controllingFieldValue>Scheduled</controllingFieldValue>
+            <controllingFieldValue>Not researched yet</controllingFieldValue>
+            <controllingFieldValue>Research done - Mailing</controllingFieldValue>
+            <controllingFieldValue>Research done</controllingFieldValue>
+            <controllingFieldValue>Recycle</controllingFieldValue>
+            <controllingFieldValue>New</controllingFieldValue>
+            <valueName>Didn&apos;t respond</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Converted</controllingFieldValue>
+            <controllingFieldValue>Decentral Leads</controllingFieldValue>
+            <controllingFieldValue>Lost</controllingFieldValue>
+            <controllingFieldValue>Duplicate</controllingFieldValue>
+            <controllingFieldValue>HR Mailing</controllingFieldValue>
+            <controllingFieldValue>Not Responsive</controllingFieldValue>
+            <controllingFieldValue>Scheduled</controllingFieldValue>
+            <controllingFieldValue>Not researched yet</controllingFieldValue>
+            <controllingFieldValue>Research done - Mailing</controllingFieldValue>
+            <controllingFieldValue>Research done</controllingFieldValue>
+            <controllingFieldValue>Recycle</controllingFieldValue>
+            <controllingFieldValue>New</controllingFieldValue>
+            <valueName>Not active in HeyJobs&apos; service countries</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Converted</controllingFieldValue>
+            <controllingFieldValue>Decentral Leads</controllingFieldValue>
+            <controllingFieldValue>Lost</controllingFieldValue>
+            <controllingFieldValue>Duplicate</controllingFieldValue>
+            <controllingFieldValue>HR Mailing</controllingFieldValue>
+            <controllingFieldValue>Not Responsive</controllingFieldValue>
+            <controllingFieldValue>Scheduled</controllingFieldValue>
+            <controllingFieldValue>Not researched yet</controllingFieldValue>
+            <controllingFieldValue>Research done - Mailing</controllingFieldValue>
+            <controllingFieldValue>Research done</controllingFieldValue>
+            <controllingFieldValue>Recycle</controllingFieldValue>
+            <controllingFieldValue>New</controllingFieldValue>
+            <valueName>Admin Only: Lead merged in Hubspot</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

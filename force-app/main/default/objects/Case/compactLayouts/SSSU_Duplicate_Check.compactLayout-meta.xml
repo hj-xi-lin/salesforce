@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SSSU_Duplicate_Check</fullName>
+    <fields>RecordTypeId</fields>
+    <fields>Status</fields>
+    <fields>Company_Name__c</fields>
+    <fields>OwnerId</fields>
+    <fields>Service_Country_Lead__c</fields>
+    <label>SSSU Duplicate Check</label>
+</CompactLayout>

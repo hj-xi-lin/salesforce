@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mandatory_Fields_Initial_BE_Setup_REACH</fullName>
+    <active>true</active>
+    <description>The mandatory fields for closing the case is Company ID. RO-1759, RO - 2459</description>
+    <errorConditionFormula>ISPICKVAL(Status, &quot;Closed&quot;) &amp;&amp;
+RecordType.DeveloperName = &quot;OnboardingCase&quot; &amp;&amp;
+AND(
+    ISPICKVAL(Product_Type__c , &quot;REACH&quot;),
+    ISBLANK(txtCompanyID__c)
+)</errorConditionFormula>
+    <errorMessage>Before closing the case make sure to fill in the Company ID.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Billing_Address_Formula__c</fullName>
+    <description>RO-1270 / Used in Quote Templates</description>
+    <externalId>false</externalId>
+    <formula>Billing_Street__c &amp;BR()&amp;
+Billing_Zip_Postal_Code__c &amp; &quot; &quot; &amp; Billing_City__c &amp;BR()&amp;
+TEXT(Billing_Country_Code__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Billing Address Formula</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Account</entityName>
+    <fieldName>Stage_ACM__c</fieldName>
+    <masterLabel>Account Lifecycle Stage (Sales)</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Follow_up_Date_Account__c</fieldNames>
+        <fieldNames>Follow_up_Details_Account__c</fieldNames>
+        <fieldNames>MQL_Type_Account__c</fieldNames>
+        <fieldNames>Timestamp_Latest_MQL_conversion_Account__c</fieldNames>
+        <info>&lt;p&gt;&lt;strong&gt;Acquisition Pool&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Accounts, die Interesse an HeyJobs haben und von Sales qualifiziert wurden, sodass eine offene Acquisition Opportunity besteht.&lt;/p&gt;</info>
+        <picklistValueName>Acquisition</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Follow_up_Date_Account__c</fieldNames>
+        <fieldNames>Follow_up_Details_Account__c</fieldNames>
+        <info>&lt;p&gt;&lt;strong&gt;Outbound Pool&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Accounts, die kalt sind und kein tatsächliches Engagement gezeigt haben oder nur ein sehr geringes Potenzial aufweisen.&lt;/p&gt;</info>
+        <picklistValueName>Outbound</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Follow_up_Date_Account__c</fieldNames>
+        <fieldNames>Follow_up_Details_Account__c</fieldNames>
+        <info>&lt;p&gt;&lt;strong&gt;Customer Pool&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Accounts, die über mindestens eine gewonnene (closed won) Opportunity verfügen (und nicht gechurned sind) und sich in der Account Lifecycle Stage “Pilot”, “Expansion” oder “Retention” befinden.&lt;/p&gt;</info>
+        <picklistValueName>Pilot</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Follow_up_Date_Account__c</fieldNames>
+        <fieldNames>Follow_up_Details_Account__c</fieldNames>
+        <fieldNames>MQL_Type_Account__c</fieldNames>
+        <fieldNames>Timestamp_Latest_MQL_conversion_Account__c</fieldNames>
+        <info>&lt;p&gt;&lt;strong&gt;Prospect Pool&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Accounts, die über Kontakte verfügen, die mit Marketingmaterial interagiert haben (MQL Typ 1, 2, 3), sowie Accounts, die offene Stellen haben (Index, Bestand und andere Signale).&lt;/p&gt;</info>
+        <picklistValueName>Prospect</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Follow_up_Date_Account__c</fieldNames>
+        <fieldNames>Follow_up_Details_Account__c</fieldNames>
+        <info>&lt;p&gt;&lt;strong&gt;Customer Pool&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Accounts, die über mindestens eine gewonnene (closed won) Opportunity verfügen (und nicht gechurned sind) und sich in der Account Lifecycle Stage “Pilot”, “Expansion” oder “Retention” befinden.&lt;/p&gt;</info>
+        <picklistValueName>Retention</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Sales</recordTypeName>
+</PathAssistant>

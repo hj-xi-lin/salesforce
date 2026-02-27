@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AI_Account_Summary__c</fullName>
+    <description>RO-2514</description>
+    <inlineHelpText>Automatisch generierte Zusammenfassung der Account-Stimmung basierend auf Account Dokumentation, Call-/Meeting-Notizen, Lost Opps und aktuellem NPS-Feedback. Diese KI-Analyse hilft dir, schnell den emotionalen Status und die Beziehungsqualität zum Account zu verstehen.</inlineHelpText>
+    <label>AI Account Sentiment Summary</label>
+    <length>64000</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Transactional_Opportunities_PB</fullName>
+    <columns>Follow_Up_Date__c</columns>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>Next_Action_Detail__c</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>INACTIVE_DAYS</columns>
+    <columns>Forecast_Amount__c</columns>
+    <columns>OPPORTUNITY.AGE_IN_DAYS</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>notEqual</operation>
+        <value>Closed Won,Closed Lost</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Opportunity.Sales_Transactional</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.FULL_NAME</field>
+        <operation>equals</operation>
+        <value>Ihsan Tur(External)</value>
+    </filters>
+    <label>Transactional Opportunities PB</label>
+</ListView>

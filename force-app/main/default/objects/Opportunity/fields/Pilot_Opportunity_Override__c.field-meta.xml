@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pilot_Opportunity_Override__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Manual override to force Pilot_Opportunity__c to true. Hidden from layouts.</description>
+    <inlineHelpText>Set to true to manually mark this as a Pilot Opportunity regardless of formula criteria.</inlineHelpText>
+    <label>Pilot Opportunity Override</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

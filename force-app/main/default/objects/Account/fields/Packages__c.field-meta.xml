@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Packages__c</fullName>
+    <description>RO - 1631</description>
+    <label>Legacy Packages</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Packages on websites</fullName>
+                <default>false</default>
+                <label>Packages on websites</label>
+            </value>
+            <value>
+                <fullName>Packages only via consultancy</fullName>
+                <default>false</default>
+                <label>Packages only via consultancy</label>
+            </value>
+            <value>
+                <fullName>No packages</fullName>
+                <default>false</default>
+                <label>No packages</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Child_can_access_Parent_Budget__c</fullName>
+    <description>RO-1760</description>
+    <inlineHelpText>Should the child company have access to the parent&apos;s budget? Select &apos;yes&apos; only if budget access is required.</inlineHelpText>
+    <label>Child can access Parent Budget?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>YesNo_Default_Empty</valueSetName>
+    </valueSet>
+</CustomField>

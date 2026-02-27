@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ATS_Int_Type__c</fullName>
+    <inlineHelpText>Es gibt drei &quot;ATS&quot; Integrationsoptionen: &quot;Jobs&quot; für das Importieren von Jobs aus ihrem &quot;ATS&quot;, &quot;Bewerbungen&quot; für das Exportieren von Bewerbungen zu ihrem &quot;ATS&quot; und &quot;Voll&quot; für beides, was die häufigste und bevorzugte Einrichtung ist.</inlineHelpText>
+    <label>ATS Int. Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Applications</fullName>
+                <default>false</default>
+                <label>Applications</label>
+            </value>
+            <value>
+                <fullName>Full</fullName>
+                <default>false</default>
+                <label>Full</label>
+            </value>
+            <value>
+                <fullName>Jobs</fullName>
+                <default>false</default>
+                <label>Jobs</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

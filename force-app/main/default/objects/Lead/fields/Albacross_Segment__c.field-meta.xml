@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Albacross_Segment__c</fullName>
+    <description>Different segments of leads have been created in Albacross. This field defines which segment the lead is coming from.</description>
+    <label>Albacross Segment</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>SMB Tier 1</fullName>
+                <default>false</default>
+                <label>SMB Tier 1</label>
+            </value>
+            <value>
+                <fullName>SMB Tier 2</fullName>
+                <default>false</default>
+                <label>SMB Tier 2</label>
+            </value>
+            <value>
+                <fullName>LCS Working</fullName>
+                <default>false</default>
+                <label>LCS Working</label>
+            </value>
+            <value>
+                <fullName>Small Segment(Pre-Sales)</fullName>
+                <default>false</default>
+                <label>Small Segment(Pre-Sales)</label>
+            </value>
+            <value>
+                <fullName>Large Segment (Prospecting)</fullName>
+                <default>false</default>
+                <label>Large Segment (Prospecting)</label>
+            </value>
+            <value>
+                <fullName>Austria</fullName>
+                <default>false</default>
+                <label>Austria</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

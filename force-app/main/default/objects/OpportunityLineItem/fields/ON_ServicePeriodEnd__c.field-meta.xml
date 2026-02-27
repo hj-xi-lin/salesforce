@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ON_ServicePeriodEnd__c</fullName>
+    <description>Service Period End</description>
+    <formula>/*IF(
+ISPICKVAL(Opportunity.SyncedQuote.Service_Period__c, &apos;6 months&apos;),
+
+(DATE(
+YEAR( Opportunity.CloseDate ) + FLOOR( ( MONTH ( Opportunity.CloseDate ) + 6 - 1 ) / 12 ),
+MOD( MONTH ( Opportunity.CloseDate ) + 6 - 1 +
+IF( DAY ( Opportunity.CloseDate) &gt; CASE( MOD( MONTH( Opportunity.CloseDate ) + 6 - 1, 12 ) + 1,
+2, 28,
+4, 30,
+6, 30,
+9, 30,
+11, 30,
+31 ), 1, 0 ), 12 ) + 1,
+IF( DAY( Opportunity.CloseDate) &gt; CASE( MOD( MONTH( Opportunity.CloseDate ) +6 - 1, 12 ) + 1,
+2, 28,
+4, 30,
+6, 30,
+9, 30,
+11, 30,
+31 ),
+1, DAY( Opportunity.CloseDate )
+)
+)-1),
+
+IF(
+MOD( YEAR( Opportunity.CloseDate ) + 1, 400 ) = 0 ||
+AND(MOD( YEAR( Opportunity.CloseDate ) + 1, 4 ) = 0,
+MOD( YEAR( Opportunity.CloseDate ) + 1, 100 ) != 0)
+
+, IF(MONTH(Opportunity.CloseDate) &lt;= 2, Opportunity.CloseDate + 364, Opportunity.CloseDate + 365)
+, Opportunity.CloseDate + 364)
+)*/
+
+ Opportunity.Contract_End_Date__c</formula>
+    <inlineHelpText>Service Period End</inlineHelpText>
+    <label>JustOn: ServicePeriodEnd</label>
+    <required>false</required>
+    <type>Date</type>
+</CustomField>

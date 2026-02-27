@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Duplicate_Account__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Duplicate Account Lookup field as defined in the Account Loss Process.</description>
+    <inlineHelpText>Duplicate Account Lookup field as defined in the Account Loss Process.</inlineHelpText>
+    <label>Duplicate Account</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Accounts (Duplicate Account)</relationshipLabel>
+    <relationshipName>Accounts4</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

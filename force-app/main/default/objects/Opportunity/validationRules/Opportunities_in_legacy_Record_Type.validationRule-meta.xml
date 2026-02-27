@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunities_in_legacy_Record_Type</fullName>
+    <active>false</active>
+    <description>Opportunities should not be created with Record type Hunting, prospecting, Inboud.</description>
+    <errorConditionFormula>AND(
+    ISNEW(),
+    OR( RecordType.DeveloperName =&apos;Prospecting&apos;,
+        RecordType.DeveloperName =&apos;Hunting&apos; ,
+        RecordType.DeveloperName =&apos;Inbound&apos; )
+    
+
+   )</errorConditionFormula>
+    <errorMessage>Please create opportunity with record type &quot;Sales&quot;.</errorMessage>
+</ValidationRule>

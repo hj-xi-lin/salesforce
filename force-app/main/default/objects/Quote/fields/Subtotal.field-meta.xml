@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Subtotal</fullName>
+    <inlineHelpText>Die Summe der Quote-Positionen vor Anwendung von Rabatten und Steuern. (Read only.)</inlineHelpText>
+    <trackHistory>false</trackHistory>
+</CustomField>

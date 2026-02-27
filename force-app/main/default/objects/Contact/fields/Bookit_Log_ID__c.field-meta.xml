@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bookit_Log_ID__c</fullName>
+    <description>Bookit Forms Log ID to associate meeting and contact.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Bookit Forms Log ID to associate meeting and contact.</inlineHelpText>
+    <label>Bookit Log ID</label>
+    <length>150</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

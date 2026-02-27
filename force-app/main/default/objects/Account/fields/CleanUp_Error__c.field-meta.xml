@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CleanUp_Error__c</fullName>
+    <description>Indicated important fields that are blank and fields on the edge to an higher Level/Scoring</description>
+    <externalId>false</externalId>
+    <formula>IF(ISBLANK(urlCareerPage__c),&quot;Career Page&quot;&amp; BR(),&quot;&quot;) &amp;
+
+IF(ISBLANK( TEXT(Category_1__c )),&quot;Category 1&quot;&amp; BR(),&quot;&quot;) &amp;
+IF(ISBLANK( TEXT(Category_2__c )),&quot;Category 2&quot;&amp; BR(),&quot;&quot;) &amp;
+IF(ISBLANK( TEXT(Category_3__c )),&quot;Category 3&quot;&amp; BR(),&quot;&quot;) &amp;
+
+IF(ISBLANK( TEXT( HeyJobs_Category__c  )),&quot;HeyJobs Category&quot;&amp; BR(),&quot;&quot;) &amp;
+
+IF(ISBLANK( BillingCity   ),&quot;Billing City&quot;&amp; BR(),&quot;&quot;) &amp;
+IF(ISBLANK( BillingCountry  ),&quot;Billing Country&quot;&amp; BR(),&quot;&quot;) &amp;
+IF(ISBLANK( BillingStreet  ),&quot;Billing Street&quot;&amp; BR(),&quot;&quot;) &amp;
+IF(ISBLANK( BillingPostalCode ),&quot;Billing ZIP&quot;&amp; BR(),&quot;&quot;) &amp;
+
+IF(ISBLANK( ShippingCity  ),&quot;Shipping City&quot;&amp; BR(),&quot;&quot;) &amp;
+IF(ISBLANK( ShippingCountry  ),&quot;Shipping Country&quot;&amp; BR(),&quot;&quot;) &amp;
+IF(ISBLANK( ShippingStreet  ),&quot;Shipping Street&quot;&amp; BR(),&quot;&quot;) &amp;
+IF(ISBLANK( ShippingPostalCode ),&quot;Shipping ZIP&quot;&amp; BR(),&quot;&quot;) &amp;
+
+IF(ISBLANK(  No_of_Locations__c   ),&quot;Locations&quot;&amp; BR(),&quot;&quot;) &amp;
+IF(ISPICKVAL(   plPlannedHires__c  ,&quot;&quot;  ),&quot;Planned Hires&quot;&amp; BR(),&quot;&quot;)</formula>
+    <inlineHelpText>Indicated important fields that are blank and fields on the edge to an higher Level/Scoring</inlineHelpText>
+    <label>CleanUp Errors</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Most_recent_qualification_outcome__c</fullName>
+    <description>RO-2710</description>
+    <inlineHelpText>Hält fest, mit welchem Ergebnis die letzte MQL Aufgabe abgeschlossen wurden (bspw. Opportunity erstellt, Kontaktrolle erstellt oder Disqualifiziert).</inlineHelpText>
+    <label>Most Recent Qualification Outcome</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Qualification_Outcomes</valueSetName>
+    </valueSet>
+</CustomField>

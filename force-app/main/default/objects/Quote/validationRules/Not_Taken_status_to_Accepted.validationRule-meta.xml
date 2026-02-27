@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Not_Taken_status_to_Accepted</fullName>
+    <active>true</active>
+    <description>To stop having the status &apos;Not Taken&apos; changed into &apos;Accepted&apos;</description>
+    <errorConditionFormula>AND( 
+    NOT(ISNEW()), 
+    ISCHANGED(Status), 
+    ISPICKVAL(PRIORVALUE(Status),&quot;Not Taken&quot;), 
+    ISPICKVAL(Status, &quot;Accepted&quot;), 
+    $Profile.Name&lt;&gt;&quot;System Administrator&quot; 
+)</errorConditionFormula>
+    <errorMessage>&apos;Not Taken&apos; status cannot be changed with Accepted. Either Reject this quote or create a new one.</errorMessage>
+</ValidationRule>

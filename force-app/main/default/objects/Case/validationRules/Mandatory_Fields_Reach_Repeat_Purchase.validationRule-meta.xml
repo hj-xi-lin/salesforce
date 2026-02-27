@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mandatory_Fields_Reach_Repeat_Purchase</fullName>
+    <active>true</active>
+    <description>RO - 2558</description>
+    <errorConditionFormula>AND(
+     RecordType.Name  = &quot;Repeat Purchase Case&quot;,
+    ISPICKVAL(Product_Type__c, &quot;REACH&quot;),
+    ISPICKVAL( Status , &quot;Closed&quot;),    
+    OR(
+        ISBLANK(Actual_REACH_Campaign_start_date__c),
+        ISBLANK(Reach_Campaign_Duration_months__c),
+        NOT(Contract_created__c)
+    )
+)</errorConditionFormula>
+    <errorMessage>Ensure that the &quot;Reach Information&quot; fields and the &quot;Contract created&quot; field are not empty.</errorMessage>
+</ValidationRule>

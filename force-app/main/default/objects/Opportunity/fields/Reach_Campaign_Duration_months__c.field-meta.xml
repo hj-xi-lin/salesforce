@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reach_Campaign_Duration_months__c</fullName>
+    <description>RO - 2067
+The number of months the REACH campaign will be active</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Anzahl der Monate, in denen die REACH-Kampagne aktiv sein wird.
+
+Mehr Informationen findest du hier https://heyjobs.atlassian.net/wiki/spaces/ESE/pages/3556343832/REACH+in+Salesforce</inlineHelpText>
+    <label>Reach Campaign Duration (#months)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Special_Job_Slot_Agreement__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Manually populated, not to be used for automations, Owner: Revenue Strategy Team</description>
+    <inlineHelpText>This field gets marked, for customers that are allowed to publish jobs with a different budget than the recommended one.</inlineHelpText>
+    <label>Special Job Slot Agreement</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opt_out_Growth_Email__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Check in case the customer should not receive any growth emails.</description>
+    <inlineHelpText>Wenn du alle Kontakte eines Accounts von Marius Luther Emails ausschließen möchtest, setze hier einen Haken. (Gilt auch für Mails von Tim Koch, Janosch etc.) - Bei einzelnen Kontakten, nutze das gleichnamige Feld auf Contact Level</inlineHelpText>
+    <label>Opt Out Cold Marketing Email</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

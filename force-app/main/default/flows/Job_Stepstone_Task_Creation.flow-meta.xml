@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <assignments>
+        <name>Add_Indeed_Count</name>
+        <label>Add Indeed Count</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>varTotalJobCount</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>varIndeedCount</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Create_Task</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Count_Jobs</name>
+        <label>Count Jobs</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>varStepstoneCount</assignToReference>
+            <operator>AssignCount</operator>
+            <value>
+                <elementReference>AllStepstoneJobs</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varIndeedCount</assignToReference>
+            <operator>AssignCount</operator>
+            <value>
+                <elementReference>AllIndeedJobs</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varTotalJobCount</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>varStepstoneCount</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Add_Indeed_Count</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Check_Account_Conditions</name>
+        <label>Check Account Conditions</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Does Not Meet Criteria</defaultConnectorLabel>
+        <rules>
+            <name>Account_Is_Outbound_Lead_Gen</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>AccountRecord.Stage_ACM__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Outbound</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>AccountRecord.OwnerId</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>0050Y00000333XsQAI</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_Existing_Open_Task</targetReference>
+            </connector>
+            <label>Account Is Outbound and Lead Gen</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Is_Task_Being_Worked</name>
+        <label>Is Existing Task Being Worked?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Get_All_Stepstone_Jobs</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No Existing Task</defaultConnectorLabel>
+        <rules>
+            <name>Task_Being_Worked</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ExistingOpenTask.Id</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>ExistingOpenTask.Qualification_Outcome__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Task Being Worked</label>
+        </rules>
+        <rules>
+            <name>Unworked_Task_Exists</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ExistingOpenTask.Id</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>ExistingOpenTask.Qualification_Outcome__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Delete_Unworked_Task</targetReference>
+            </connector>
+            <label>Unworked Task Exists</label>
+        </rules>
+    </decisions>
+    <description>When a Job record is ingested with Platform containing www.stepstone.de or www.indeed.de, Account Lifecycle Stage = Outbound, and Owner = Lead Gen, create a single Job Alert task per Account. If an unworked task already exists (no Qualification Outcome), it is deleted and replaced. If a task is being worked (has Qualification Outcome), it is left untouched.</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>HasIndeedFormula</name>
+        <dataType>Boolean</dataType>
+        <expression>{!varIndeedCount} &gt; 0</expression>
+    </formulas>
+    <formulas>
+        <name>HasStepstoneFormula</name>
+        <dataType>Boolean</dataType>
+        <expression>{!varStepstoneCount} &gt; 0</expression>
+    </formulas>
+    <formulas>
+        <name>TaskDescriptionFormula</name>
+        <dataType>String</dataType>
+        <expression>TEXT({!varTotalJobCount}) &amp; &apos; OFFENE STELLENANZEIGE(N) ENTDECKT&apos; &amp; BR() &amp;
+IF({!varStepstoneCount} &gt; 0, &apos;Stepstone: &apos; &amp; TEXT({!varStepstoneCount}) &amp; &apos; Stellen&apos; &amp; BR(), &apos;&apos;) &amp;
+IF({!varIndeedCount} &gt; 0, &apos;Indeed: &apos; &amp; TEXT({!varIndeedCount}) &amp; &apos; Stellen&apos; &amp; BR(), &apos;&apos;) &amp; BR() &amp;
+&apos;Firma: &apos; &amp; {!AccountRecord.Name} &amp; BR() &amp;
+&apos;Neueste Anzeige: &apos; &amp; {!$Record.Name} &amp; BR() &amp;
+&apos;Link: &apos; &amp; {!$Record.Link_Advert__c} &amp; BR() &amp; BR() &amp;
+&apos;Job-Liste des Accounts:&apos; &amp; BR() &amp;
+&apos;https://heyjobs.lightning.force.com/lightning/cmp/force__dynamicRelatedListViewAll?force__flexipageId=Account_Record_Page_Admin_only&amp;force__cmpId=lst_dynamicRelatedList2&amp;force__recordId=&apos; &amp; {!AccountRecord.Id} &amp; BR() &amp; BR() &amp;
+&apos;--- ANLEITUNG ---&apos; &amp; BR() &amp; BR() &amp;
+&apos;1. Klicke auf den Link oben und öffne die Stellenanzeige&apos; &amp; BR() &amp;
+&apos;2. Prüfe, ob in der Anzeige Kontaktdaten (Name, Telefon, E-Mail) eines Recruiters hinterlegt sind&apos; &amp; BR() &amp;
+&apos;3. WENN Kontaktdaten vorhanden:&apos; &amp; BR() &amp;
+&apos;   → Rufe den Recruiter direkt an&apos; &amp; BR() &amp;
+&apos;   → Prüfe, ob der Kontakt bereits in Salesforce angelegt ist&apos; &amp; BR() &amp;
+&apos;   → Wenn nicht: Lege den Kontakt nach erfolgreichem Anruf an&apos; &amp; BR() &amp;
+&apos;4. WENN KEINE Kontaktdaten in der Anzeige:&apos; &amp; BR() &amp;
+&apos;   → Rufe den Hauptansprechpartner des Accounts an&apos; &amp; BR() &amp;
+&apos;   → Oder einen anderen passenden Ansprechpartner&apos; &amp; BR() &amp;
+&apos;5. Ziel des Anrufs: Das Unternehmen hat offenbar Recruiting-Budget frei — stelle unser Angebot vor!&apos; &amp; BR() &amp; BR() &amp;
+&apos;Schließe diese Task ab, sobald der Anruf erledigt ist.&apos;</expression>
+    </formulas>
+    <formulas>
+        <name>TaskSubjectFormula</name>
+        <dataType>String</dataType>
+        <expression>IF({!varTotalJobCount} &gt; 1,
+&apos;Job Alert: &apos; &amp; TEXT({!varTotalJobCount}) &amp; &apos; offene Stellen&apos; &amp;
+IF({!varStepstoneCount} &gt; 0 &amp;&amp; {!varIndeedCount} &gt; 0,
+&apos; (Stepstone, Indeed)&apos;,
+IF({!varStepstoneCount} &gt; 0, &apos; (Stepstone)&apos;, &apos; (Indeed)&apos;)),
+&apos;Job Alert: &apos; &amp; {!$Record.Name})</expression>
+    </formulas>
+    <interviewLabel>Job Stepstone Task Creation {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Job Stepstone Task Creation</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Create_Task</name>
+        <label>Create Task</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Account_Timestamp</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>ActivityDate</field>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Description</field>
+            <value>
+                <elementReference>TaskDescriptionFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Has_Indeed_Jobs__c</field>
+            <value>
+                <elementReference>HasIndeedFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Has_Stepstone_Jobs__c</field>
+            <value>
+                <elementReference>HasStepstoneFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Priority</field>
+            <value>
+                <stringValue>High</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Open</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <elementReference>TaskSubjectFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Type</field>
+            <value>
+                <stringValue>Job Alert</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>WhatId</field>
+            <value>
+                <elementReference>$Record.Account__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>WhoId</field>
+            <value>
+                <elementReference>$Record.Recruiter__c</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Task</object>
+    </recordCreates>
+    <recordDeletes>
+        <name>Delete_Unworked_Task</name>
+        <label>Delete Unworked Task</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_All_Stepstone_Jobs</targetReference>
+        </connector>
+        <inputReference>ExistingOpenTask</inputReference>
+    </recordDeletes>
+    <recordLookups>
+        <name>Check_Existing_Open_Task</name>
+        <label>Check Existing Open Task</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Is_Task_Being_Worked</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>WhatId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Account__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Type</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Job Alert</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>IsClosed</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>Task</object>
+        <outputReference>ExistingOpenTask</outputReference>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>Qualification_Outcome__c</queriedFields>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_All_Indeed_Jobs</name>
+        <label>Get All Indeed Jobs</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Count_Jobs</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Account__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Account__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Platform__c</field>
+            <operator>Contains</operator>
+            <value>
+                <stringValue>www.indeed.de</stringValue>
+            </value>
+        </filters>
+        <object>Job__c</object>
+        <outputReference>AllIndeedJobs</outputReference>
+        <queriedFields>Id</queriedFields>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_All_Stepstone_Jobs</name>
+        <label>Get All Stepstone Jobs</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_All_Indeed_Jobs</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Account__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Account__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Platform__c</field>
+            <operator>Contains</operator>
+            <value>
+                <stringValue>www.stepstone.de</stringValue>
+            </value>
+        </filters>
+        <object>Job__c</object>
+        <outputReference>AllStepstoneJobs</outputReference>
+        <queriedFields>Id</queriedFields>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Parent_Account</name>
+        <label>Get Parent Account</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Check_Account_Conditions</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Account__c</elementReference>
+            </value>
+        </filters>
+        <object>Account</object>
+        <outputReference>AccountRecord</outputReference>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>Name</queriedFields>
+        <queriedFields>Stage_ACM__c</queriedFields>
+        <queriedFields>OwnerId</queriedFields>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Account_Timestamp</name>
+        <label>Update Account Timestamp</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Account__c</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Timestamp_Trigger_Job_Task__c</field>
+            <value>
+                <elementReference>$Flow.CurrentDateTime</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Account</object>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Parent_Account</targetReference>
+        </connector>
+        <filterLogic>1 OR 2</filterLogic>
+        <filters>
+            <field>Platform__c</field>
+            <operator>Contains</operator>
+            <value>
+                <stringValue>www.stepstone.de</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Platform__c</field>
+            <operator>Contains</operator>
+            <value>
+                <stringValue>www.indeed.de</stringValue>
+            </value>
+        </filters>
+        <object>Job__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>AccountRecord</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Account</objectType>
+    </variables>
+    <variables>
+        <name>AllIndeedJobs</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Job__c</objectType>
+    </variables>
+    <variables>
+        <name>AllStepstoneJobs</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Job__c</objectType>
+    </variables>
+    <variables>
+        <name>ExistingOpenTask</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Task</objectType>
+    </variables>
+    <variables>
+        <name>varIndeedCount</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
+    </variables>
+    <variables>
+        <name>varStepstoneCount</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
+    </variables>
+    <variables>
+        <name>varTotalJobCount</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
+    </variables>
+</Flow>

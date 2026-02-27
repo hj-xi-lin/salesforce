@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Forecast_Amount_Required</fullName>
+    <active>true</active>
+    <description>As soon as opportunity reached Pilot definition, hunters should enter the forecast amount.
+RO-457,RO-1550</description>
+    <errorConditionFormula>OR(
+    AND(
+        OR( ISNEW(),
+        ISCHANGED(StageName)),
+        ISPICKVAL(StageName, &quot;Pilot Definition&quot;),
+								NOT( RecordType.DeveloperName = &quot;Sales&quot;), 
+        AND(
+            ISBLANK( Amount ),
+            ISBLANK( SyncedQuote.Id  )
+        )
+    ),
+    AND(
+        OR(
+            IF(RecordType.Name = &apos;Second Purchase&apos;, true, false),
+            IF(RecordType.Name = &apos;Account Management&apos;, true, false)
+        ),
+        OR( ISNEW(),
+        ISCHANGED(StageName)),
+        ISPICKVAL(StageName, &apos;In Discussion&apos;),
+        AND(
+            ISBLANK(Amount ),
+            ISBLANK( SyncedQuote.Id  )
+        )
+    )
+)</errorConditionFormula>
+    <errorMessage>Please enter the &apos;Amount&apos; OR create and sync a quote before moving to the next stage.</errorMessage>
+</ValidationRule>

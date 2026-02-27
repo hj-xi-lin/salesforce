@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Motion_to_be_reviewed__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Field is used to identify accounts that are potential yin the wrong segment and need to be reviewed by sales leader.</description>
+    <inlineHelpText>Set to true, if the account motion needs to be reviewed by sales leadership.</inlineHelpText>
+    <label>Motion to be reviewed</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

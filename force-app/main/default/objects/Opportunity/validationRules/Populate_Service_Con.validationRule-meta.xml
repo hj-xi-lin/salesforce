@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Populate_Service_Con</fullName>
+    <active>true</active>
+    <description>To populate service country on account.</description>
+    <errorConditionFormula>AND(ISNEW(),
+
+ISPICKVAL(Account.Service_Country__c, &quot;&quot;) )</errorConditionFormula>
+    <errorMessage>Please populate service country on account</errorMessage>
+</ValidationRule>

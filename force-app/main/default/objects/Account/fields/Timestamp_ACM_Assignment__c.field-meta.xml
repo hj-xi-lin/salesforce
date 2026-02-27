@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Timestamp_ACM_Assignment__c</fullName>
+    <description>Timestamp when the Account Owner was changed to an ACM (Account Manager). Used for SLA tracking in the Pilot-to-ACM handover process.</description>
+    <inlineHelpText>Zeitstempel, wann der Account-Inhaber zu einem ACM geändert wurde.</inlineHelpText>
+    <label>Timestamp ACM Assignment</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>DateTime</type>
+</CustomField>

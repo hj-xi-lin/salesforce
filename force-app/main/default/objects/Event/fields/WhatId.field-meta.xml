@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WhatId</fullName>
+    <inlineHelpText>Zeigt den Datensatz an, mit dem die Task verknüpft ist, z. B. ein Account oder eine Opportunity. Dieses Feld ist nur verfügbar, wenn ein Benutzer die Task mit einem Kontakt und nicht mit einem Lead verknüpft.</inlineHelpText>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

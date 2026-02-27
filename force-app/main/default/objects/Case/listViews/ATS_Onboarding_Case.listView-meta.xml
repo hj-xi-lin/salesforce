@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ATS_Onboarding_Case</fullName>
+    <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+    <columns>GTM_Motion_Case__c</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>OWNER_NAME</columns>
+    <columns>Data_complete__c</columns>
+    <columns>Label__c</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>Product_Type__c</columns>
+    <columns>Planned_Reach_Campaign_Start_Date__c</columns>
+    <columns>Actual_REACH_Campaign_start_date__c</columns>
+    <columns>Due_Date__c</columns>
+    <columns>CASES.RECORDTYPE</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ATS_Name_Account__c</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>equals</operation>
+        <value>New,In Discussion With ACM,Channable,Staging: Jobimport,Staging: Candidate Delivery,Production,Waiting for Campaign Start</value>
+    </filters>
+    <filters>
+        <field>CASES.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Case.ATS_Feasibility_Check,Case.ATS_New_Onboarding,Case.ATS_Proof_of_Concept_for_new_ATS</value>
+    </filters>
+    <filters>
+        <field>OWNER_NAME</field>
+        <operation>equals</operation>
+        <value>ATS Onboarding</value>
+    </filters>
+    <label>ATS Onboarding Queue</label>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

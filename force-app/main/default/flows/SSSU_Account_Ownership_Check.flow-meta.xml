@@ -743,7 +743,7 @@ NOT(ISBLANK({!$Record.Timestamp_SSSU__c}))
         <recordTriggerType>CreateAndUpdate</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
     <variables>
         <name>currentItem_Filter_Outbound_RT</name>
         <dataType>SObject</dataType>

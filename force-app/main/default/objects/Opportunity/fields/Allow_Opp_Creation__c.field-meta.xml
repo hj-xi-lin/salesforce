@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Allow_Opp_Creation__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Helper Field to validate if Opp Creation should be possible and block opp creations if they are not done by our custom automations
+RO-2315</description>
+    <label>Allow Opp Creation</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

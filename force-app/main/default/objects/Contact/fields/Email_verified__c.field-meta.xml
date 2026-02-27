@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Email_verified__c</fullName>
+    <inlineHelpText>Bestimmt ob die Emailadresse des Kontakts von Marketing angegangen werden kann. 
+
+OK: Kontakt erhält Emails.
+Risky: Die E-Mail-Adresse ist nicht verifiziert und die gesendete E-Mail wird zurückgesendet.
+Bounded: Emails erreichen den Kontakt nicht. Die Emailadresse ist wahrscheinlich nicht korrekt. 
+Unsubscribed: Melden den Kontakt von allen Marketing Emails ab. 
+No Cold Email: Den Kontakt nur von allen Cold E-Mails (Marius Luther Mails) abmelden.</inlineHelpText>
+    <label>Email verified</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>OK</fullName>
+                <default>false</default>
+                <label>OK</label>
+            </value>
+            <value>
+                <fullName>Risky</fullName>
+                <default>false</default>
+                <label>Risky</label>
+            </value>
+            <value>
+                <fullName>Bounced</fullName>
+                <default>false</default>
+                <label>Bounced</label>
+            </value>
+            <value>
+                <fullName>No Email</fullName>
+                <default>false</default>
+                <label>No Cold Email</label>
+            </value>
+            <value>
+                <fullName>Unsubscribed</fullName>
+                <default>false</default>
+                <label>Unsubscribed</label>
+            </value>
+            <value>
+                <fullName>No Nurturing Email</fullName>
+                <default>false</default>
+                <label>No Nurturing Email</label>
+            </value>
+            <value>
+                <fullName>Catchall</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Catchall</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

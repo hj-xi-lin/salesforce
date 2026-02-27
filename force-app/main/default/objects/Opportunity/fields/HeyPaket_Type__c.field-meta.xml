@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HeyPaket_Type__c</fullName>
+    <description>RO-1432</description>
+    <inlineHelpText>&quot;HeyPaket-Typ der Opportunity. Mögliche Werte sind: Essential, Advanced, Professional, Ultimate
+
+Mehr Informationen findest du hier https://heyjobs.atlassian.net/wiki/spaces/B2B/pages/2820964365/HeyPakete+bersicht#Leistungen-der-einzelnen-HeyPakete-im-Detail &quot;</inlineHelpText>
+    <label>HeyPaket Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Essential</fullName>
+                <default>false</default>
+                <label>Essential</label>
+            </value>
+            <value>
+                <fullName>Advanced</fullName>
+                <default>false</default>
+                <label>Advanced</label>
+            </value>
+            <value>
+                <fullName>Professional</fullName>
+                <default>false</default>
+                <label>Professional</label>
+            </value>
+            <value>
+                <fullName>Ultimate</fullName>
+                <default>false</default>
+                <label>Ultimate</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

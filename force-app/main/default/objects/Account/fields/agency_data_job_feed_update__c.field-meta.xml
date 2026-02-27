@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>agency_data_job_feed_update__c</fullName>
+    <description>Date of when we retrieved the dataset (ask MJ/RevInt/RevTech for more details)</description>
+    <label>Legacy Job feed update - Agency</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

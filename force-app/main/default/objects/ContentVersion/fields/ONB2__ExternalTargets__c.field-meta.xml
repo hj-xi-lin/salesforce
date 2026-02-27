@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ONB2__ExternalTargets__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Stores information regarding the transfer status to external cloud storages.</description>
+    <inlineHelpText>Stores information regarding the transfer status to external cloud storages.</inlineHelpText>
+    <label>External Targets</label>
+    <length>32768</length>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>2</visibleLines>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>urlCareerPage__c</fullName>
+    <inlineHelpText>should be filled with the career page URL of the client. Is used afterwards in prospecting to prepare for client meetings</inlineHelpText>
+    <label>Career Page</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Url</type>
+</CustomField>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Purchase_Decision_Behavior__c</fullName>
+    <description>RO-1981</description>
+    <inlineHelpText>Das Feld Purchase Decision Behavior definiert, ob der Account die Möglichkeit hat, für sich selbst oder seine Tochtergesellschaften über ein Budget zu entscheiden und ob Opportunities auf den Accounts geschlossen werden können. Mehr informationen findest du hier: https://heyjobs.atlassian.net/wiki/spaces/EO/pages/2155217116/Salesforce+Accounts+Definition+und+Use-Case#Purchase-Decision-Behavior</inlineHelpText>
+    <label>Purchase Decision Behavior</label>
+    <required>true</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Deciding</fullName>
+                <default>false</default>
+                <label>Deciding and invoice</label>
+            </value>
+            <value>
+                <fullName>Deciding, no invoice</fullName>
+                <default>false</default>
+                <label>Deciding, no invoice</label>
+            </value>
+            <value>
+                <fullName>Not deciding, no invoice</fullName>
+                <default>false</default>
+                <label>Not deciding, no invoice</label>
+            </value>
+            <value>
+                <fullName>Not deciding, only invoice</fullName>
+                <default>false</default>
+                <label>Not deciding, only invoice</label>
+            </value>
+            <value>
+                <fullName>Unknown</fullName>
+                <default>true</default>
+                <label>Unknown</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

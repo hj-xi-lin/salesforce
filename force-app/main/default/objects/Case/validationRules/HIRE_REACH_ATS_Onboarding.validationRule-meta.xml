@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HIRE_REACH_ATS_Onboarding</fullName>
+    <active>true</active>
+    <description>RO - 2459</description>
+    <errorConditionFormula>AND(
+Record_Type__c = &quot;[ATS] New Onboarding&quot;,
+ISPICKVAL(Product_Type__c, &quot;HIRE&quot;),
+ISPICKVAL(Status, &quot;Closed&quot;),
+NOT(ATS_Integrated__c)
+)</errorConditionFormula>
+    <errorMessage>Ensure that the &quot;ATS integrated&quot; is set to &quot;True&quot; on the account level before the case is closed.</errorMessage>
+</ValidationRule>

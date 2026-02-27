@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Timestamp_SSSU_Account__c</fullName>
+    <description>This timestamps gets populated the FIRST TIME when the customer submitted the Self-Service Sign Up Form on our website.</description>
+    <inlineHelpText>Wird ausgefüllt, wenn der Account das &quot;Self-Service Sign Up Form&quot; das ERSTE MAL auf unserer Webseite ausgefüllt hat.</inlineHelpText>
+    <label>Timestamp SSSU Account</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Date</type>
+</CustomField>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>pc_Booking_Coverage__c</fullName>
+    <description>Remaining credit divided by average credit used per month in last 3 months</description>
+    <externalId>false</externalId>
+    <inlineHelpText>On Parent Account : Remaining credit divided by average credit used per month in last 3 months</inlineHelpText>
+    <label>Legacy Parent Account Booking Coverage</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

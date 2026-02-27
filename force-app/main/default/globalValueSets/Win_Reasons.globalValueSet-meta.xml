@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Employer branding feature</fullName>
+        <default>false</default>
+        <label>Employer branding feature</label>
+    </customValue>
+    <customValue>
+        <fullName>Reach / Visibility</fullName>
+        <default>false</default>
+        <label>Reach / Visibility</label>
+    </customValue>
+    <customValue>
+        <fullName>Active &amp; passive candidates</fullName>
+        <default>false</default>
+        <label>Active &amp; passive candidates</label>
+    </customValue>
+    <customValue>
+        <fullName>Advice &amp; service</fullName>
+        <default>false</default>
+        <label>Advice &amp; service</label>
+    </customValue>
+    <customValue>
+        <fullName>Exclusive HeyJobs talent pool</fullName>
+        <default>false</default>
+        <label>Exclusive HeyJobs talent pool</label>
+    </customValue>
+    <customValue>
+        <fullName>Filter questions/selection questions/Easy Apply</fullName>
+        <default>false</default>
+        <label>Filter questions/selection questions/Easy Apply</label>
+    </customValue>
+    <customValue>
+        <fullName>Connection of ATS</fullName>
+        <default>false</default>
+        <label>Connection of ATS</label>
+    </customValue>
+    <customValue>
+        <fullName>Modern recruiting solution (algorithm)</fullName>
+        <default>false</default>
+        <label>Modern recruiting solution (algorithm)</label>
+    </customValue>
+    <customValue>
+        <fullName>Flexible product use</fullName>
+        <default>false</default>
+        <label>Flexible product use</label>
+    </customValue>
+    <customValue>
+        <fullName>Transparency of results</fullName>
+        <default>false</default>
+        <label>Transparency of results</label>
+    </customValue>
+    <customValue>
+        <fullName>Simple handling</fullName>
+        <default>false</default>
+        <label>Simple handling</label>
+    </customValue>
+    <customValue>
+        <fullName>Overview of campaigns (BMS replacement)</fullName>
+        <default>false</default>
+        <label>Overview of campaigns (BMS replacement)</label>
+    </customValue>
+    <customValue>
+        <fullName>Fulfilled performance expectation</fullName>
+        <default>false</default>
+        <label>Fulfilled performance expectation</label>
+    </customValue>
+    <customValue>
+        <fullName>Number of applications generated</fullName>
+        <default>false</default>
+        <label>Number of applications generated</label>
+    </customValue>
+    <customValue>
+        <fullName>Number of recruitments generated</fullName>
+        <default>false</default>
+        <label>Number of recruitments generated</label>
+    </customValue>
+    <customValue>
+        <fullName>Price</fullName>
+        <default>false</default>
+        <label>Price</label>
+    </customValue>
+    <masterLabel>Win Reasons</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

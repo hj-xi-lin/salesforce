@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ON_EInvoiceFormat__c</fullName>
+    <description>Specifies the target format for E-Invoices.</description>
+    <inlineHelpText>Specifies the target format for E-Invoices. To be defined when E-Invoice needs to be created automatically when invoice is finalized (Status: Open).</inlineHelpText>
+    <label>JustOn: E-Invoice Format</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>XRechnung UBL</fullName>
+                <default>false</default>
+                <label>XRechnung UBL</label>
+            </value>
+            <value>
+                <fullName>Peppol BIS Billing UBL</fullName>
+                <default>false</default>
+                <label>Peppol BIS Billing UBL</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

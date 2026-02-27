@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_Validation</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISCHANGED ( Status ),
+OR (ISPICKVAL( Status, &quot;Job Submitted&quot; ),ISPICKVAL( Status, &quot;Job Live&quot; ),ISPICKVAL( Status, &quot;Preview Sent&quot; ), ISPICKVAL( Status, &quot;Go-Live Scheduled&quot; )),
+ISBLANK( Opportunity__c ), 
+RecordTypeId = &quot;0120Y000000As48QAC&quot;
+)</errorConditionFormula>
+    <errorMessage>Please connect Case to right Opportunity!</errorMessage>
+</ValidationRule>

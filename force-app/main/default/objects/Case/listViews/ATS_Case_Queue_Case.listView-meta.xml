@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ATS_Case_Queue_Case</fullName>
+    <booleanFilter>1 AND (2 OR (3 AND 4) OR 5)</booleanFilter>
+    <columns>GTM_Motion_Case__c</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>Label__c</columns>
+    <columns>OWNER_NAME</columns>
+    <columns>CASES.RECORDTYPE</columns>
+    <columns>Request_Type__c</columns>
+    <columns>Due_Date__c</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>Account_Owner__c</columns>
+    <columns>tysosla__SLA_Status__c</columns>
+    <columns>Planned_Reach_Campaign_Start_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>equals</operation>
+        <value>New,Channable,Technical Onboarding: Ready to start,Technical Onboarding: Production,Technical Onboarding: Staging</value>
+    </filters>
+    <filters>
+        <field>CASES.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Case.ATS_Add_Sub_Account_to_Integration,Case.ATS_Create_a_new_Adjust_Campaign,Case.ATS_Integration_Support,Case.ATS_Missing_Job_Application,Case.ATS_REACH_job_as_HIRE_job</value>
+    </filters>
+    <filters>
+        <field>CASES.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Case.OnboardingCase,Case.RepeatPurchaseCase</value>
+    </filters>
+    <filters>
+        <field>Product_Type__c</field>
+        <operation>equals</operation>
+        <value>REACH</value>
+    </filters>
+    <filters>
+        <field>OWNER_NAME</field>
+        <operation>equals</operation>
+        <value>ATS Case Queue</value>
+    </filters>
+    <label>[IntOps] New ATS Cases - ATS Case Queue</label>
+</ListView>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ON_EmailFileTypes__c</fullName>
+    <defaultValue>&quot;ALL&quot;</defaultValue>
+    <description>(Optional) If you want other files to be preselected in addition to Invoice PDF, set both Invoice PDF and the relevant additional content version types in Email File Types like, for example Invoice PDF, E-Invoice.</description>
+    <inlineHelpText>(Optional) If you want other files to be preselected in addition to Invoice PDF, set both Invoice PDF and the relevant additional content version types in Email File Types like, for example Invoice PDF, E-Invoice.
+Make sure to use the predefined format when E-Invoice is needed Invoice PDF, E-Invoice</inlineHelpText>
+    <label>JustOn: Email File Types</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ALL</fullName>
+                <default>false</default>
+                <label>ALL</label>
+            </value>
+            <value>
+                <fullName>Invoice PDF</fullName>
+                <default>false</default>
+                <label>Invoice PDF</label>
+            </value>
+            <value>
+                <fullName>E-Invoice</fullName>
+                <default>false</default>
+                <label>E-Invoice</label>
+            </value>
+            <value>
+                <fullName>Invoice PDF, E-Invoice</fullName>
+                <default>false</default>
+                <label>Invoice PDF, E-Invoice</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

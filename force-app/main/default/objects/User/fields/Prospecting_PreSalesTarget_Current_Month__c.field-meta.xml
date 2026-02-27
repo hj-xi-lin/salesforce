@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prospecting_PreSalesTarget_Current_Month__c</fullName>
+    <description>Displays the target of the current month by.</description>
+    <externalId>false</externalId>
+    <formula>CASE( MOD( MONTH( TODAY() ) ,3) ,
+1, Prospecting_PreSales_Target_Month_1__c ,
+2, Prospecting_PreSales_Target_Month_2__c ,
+Prospecting_PreSales_Target_Month_3__c )</formula>
+    <label>Prospecting Target Current Month</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

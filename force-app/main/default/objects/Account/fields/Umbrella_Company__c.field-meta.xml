@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Umbrella_Company__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This will be served as a Parent Account</description>
+    <inlineHelpText>Wird verwendet, um einen Salesforce Account als multinationalen Account zu kennzeichnen. Umbrella Companies werden genutzt, um Accounts mit unterschiedlichen Service-Ländern in einer Hierarchie zu kombinieren.</inlineHelpText>
+    <label>Umbrella Company</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

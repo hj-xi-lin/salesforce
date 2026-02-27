@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HeyPaket_End_Date__c</fullName>
+    <description>RO-1432</description>
+    <inlineHelpText>Enddatum des HeyPakets. Das Datum wird automatisch beim Akzeptieren der Quote auf 12 Monate nach dem Startdatum festgelegt und definiert das Expiration Date des Budgets. Wenn der Zeitraum 6 oder 18 Monate sein soll, muss ein Support Ticket erstellt werden. Zum Enddatum wird das Paket automatisch deaktiviert und ggf. ein Auto-Renewal erstellt (falls nicht gekündigt)</inlineHelpText>
+    <label>HeyPaket End Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

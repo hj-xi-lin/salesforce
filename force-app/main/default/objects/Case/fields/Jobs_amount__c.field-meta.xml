@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Jobs_amount__c</fullName>
+    <description>The number of job ads in parallel</description>
+    <label>Jobs amount</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1-3</fullName>
+                <default>false</default>
+                <label>1-3</label>
+            </value>
+            <value>
+                <fullName>4-6</fullName>
+                <default>false</default>
+                <label>4-6</label>
+            </value>
+            <value>
+                <fullName>7-10</fullName>
+                <default>false</default>
+                <label>7-10</label>
+            </value>
+            <value>
+                <fullName>11-20</fullName>
+                <default>false</default>
+                <label>11-20</label>
+            </value>
+            <value>
+                <fullName>21-50</fullName>
+                <default>false</default>
+                <label>21-50</label>
+            </value>
+            <value>
+                <fullName>51-200</fullName>
+                <default>false</default>
+                <label>51-200</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Active__c</fullName>
+    <defaultValue>true</defaultValue>
+    <inlineHelpText>Zeigt, ob ein Kontakt aktiv ist oder nicht. Inactive Kontakte werden von allen Marketing Kampagnen ausgeschlossen. Kontakte sollten nur auf inactive gestellt werden, wenn sie weder für Sales noch für Marketing Relevanz haben.</inlineHelpText>
+    <label>Active</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

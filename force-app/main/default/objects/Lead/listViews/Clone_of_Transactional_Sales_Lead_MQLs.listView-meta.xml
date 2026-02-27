@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Clone_of_Transactional_Sales_Lead_MQLs</fullName>
+    <booleanFilter>1 AND 2 AND 3 AND (4 OR (5 AND 6)) AND 7 AND 8 AND 9 AND 10</booleanFilter>
+    <columns>Estimated_Wallet_Size_Lead__c</columns>
+    <columns>MQL_Type_Lead__c</columns>
+    <columns>Engagement_Score__c</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>MQL_Conversion__c</columns>
+    <columns>Next_Action_Detail__c</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>LEAD.PHONE</columns>
+    <columns>LEAD.EMPLOYEES</columns>
+    <columns>Domain_Match_on_Lead__c</columns>
+    <columns>Service_Country__c</columns>
+    <columns>Timestamp_Latest_MQL_conversion__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>equals</operation>
+        <value>New</value>
+    </filters>
+    <filters>
+        <field>LEAD.CREATED_DATE</field>
+        <operation>greaterThan</operation>
+        <value>1/1/2025 12:00 AM</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>notEqual</operation>
+        <value>suadmin</value>
+    </filters>
+    <filters>
+        <field>MQL_Type_Lead__c</field>
+        <operation>equals</operation>
+        <value>Type 1,Type 2</value>
+    </filters>
+    <filters>
+        <field>MQL_Type_Lead__c</field>
+        <operation>equals</operation>
+        <value>Type 3</value>
+    </filters>
+    <filters>
+        <field>Engagement_Score__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>100</value>
+    </filters>
+    <filters>
+        <field>LEAD.PHONE</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>Estimated_Wallet_Size_Lead__c</field>
+        <operation>lessThan</operation>
+        <value>75000</value>
+    </filters>
+    <filters>
+        <field>LEAD.COMPANY</field>
+        <operation>notEqual</operation>
+        <value>[not provided]</value>
+    </filters>
+    <filters>
+        <field>Event_Lead_Classification__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>Transactional_Sales_Lead_MQLs clone</label>
+</ListView>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Signal__c</fullName>
+    <description>the “sales signal” field on opp is populated by an automation in salesforce. The field is populated with the value “dealfront” when a dealfront contact with created date less than 1 year, is added to an opportunity as contact role. We plan on adding different values to this fields’ picklist for us to track different channels which opps are being triggered from. This information is ideally taken from contact</description>
+    <label>Sales Signal</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Dealfront</fullName>
+                <default>false</default>
+                <label>Dealfront</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

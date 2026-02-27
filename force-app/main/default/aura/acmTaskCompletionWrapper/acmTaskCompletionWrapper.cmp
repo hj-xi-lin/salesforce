@@ -1,0 +1,5 @@
+<aura:component implements="force:lightningQuickActionWithoutHeader,force:hasRecordId">
+    <aura:attribute name="recordId" type="String" />
+    
+    <c:acmTaskCompletion recordId="{!v.recordId}" onclose="{!c.handleClose}" />
+</aura:component>

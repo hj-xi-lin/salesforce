@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Application quantity</fullName>
+        <default>false</default>
+        <label>Application quantity</label>
+    </customValue>
+    <customValue>
+        <fullName>Application quality</fullName>
+        <default>false</default>
+        <label>Application quality</label>
+    </customValue>
+    <customValue>
+        <fullName>Customer service</fullName>
+        <default>false</default>
+        <label>Customer service</label>
+    </customValue>
+    <customValue>
+        <fullName>Product quality and usability</fullName>
+        <default>false</default>
+        <label>Product quality and usability</label>
+    </customValue>
+    <customValue>
+        <fullName>Commercial aspects</fullName>
+        <default>false</default>
+        <label>Commercial aspects</label>
+    </customValue>
+    <customValue>
+        <fullName>General feedback</fullName>
+        <default>false</default>
+        <label>General feedback</label>
+    </customValue>
+    <description>RO-2584</description>
+    <masterLabel>Customer Survey Tag Categories</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Onboarding_Team_Queue_Before_TechnicalOB</fullName>
+    <columns>OWNER_NAME</columns>
+    <columns>GTM_Motion_Case__c</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>Data_complete__c</columns>
+    <columns>Planned_Reach_Campaign_Start_Date__c</columns>
+    <columns>Actual_REACH_Campaign_start_date__c</columns>
+    <columns>Label__c</columns>
+    <columns>Account_Owner__c</columns>
+    <columns>NAME</columns>
+    <columns>ATS_Name_Account__c</columns>
+    <columns>Created_Date_Time__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Product_Type__c</field>
+        <operation>equals</operation>
+        <value>REACH</value>
+    </filters>
+    <filters>
+        <field>CASES.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Case.ATS_New_Onboarding</value>
+    </filters>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>equals</operation>
+        <value>New,Internal Handover,Customer Onboarding</value>
+    </filters>
+    <filters>
+        <field>GTM_Motion_Case__c</field>
+        <operation>notContain</operation>
+        <value>agency</value>
+    </filters>
+    <label>Onboarding Team Queue Before TechnicalOB</label>
+</ListView>

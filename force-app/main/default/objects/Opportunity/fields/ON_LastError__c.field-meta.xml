@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ON_LastError__c</fullName>
+    <description>Shows possible errors occurred during the last invoice run</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Shows possible errors occurred during the last invoice run</inlineHelpText>
+    <label>Last Error</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

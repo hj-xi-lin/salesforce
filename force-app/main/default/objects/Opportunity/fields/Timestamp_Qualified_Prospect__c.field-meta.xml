@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Timestamp_Qualified_Prospect__c</fullName>
+    <description>Set the Timestamp when Opportunity is in Stage Qualified Prospect</description>
+    <inlineHelpText>Timestamp when Opportunity was in Stage Qualified Prospect</inlineHelpText>
+    <label>Timestamp Qualified Prospect</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

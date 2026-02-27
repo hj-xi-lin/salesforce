@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>No applications received</fullName>
+        <default>false</default>
+        <label>No applications received</label>
+    </customValue>
+    <customValue>
+        <fullName>Too few applications received</fullName>
+        <default>false</default>
+        <label>Too few applications received</label>
+    </customValue>
+    <customValue>
+        <fullName>Many applications received</fullName>
+        <default>false</default>
+        <label>Many applications received</label>
+    </customValue>
+    <customValue>
+        <fullName>Unqualified candidates</fullName>
+        <default>false</default>
+        <label>Unqualified candidates</label>
+    </customValue>
+    <customValue>
+        <fullName>Candidates from abroad or without work permit / geographical mismatch</fullName>
+        <default>false</default>
+        <label>Candidates from abroad or without work permit / geographical mismatch</label>
+    </customValue>
+    <customValue>
+        <fullName>Candidates within country but geographical mismatch</fullName>
+        <default>false</default>
+        <label>Candidates within country but geographical mismatch</label>
+    </customValue>
+    <customValue>
+        <fullName>Candidates not reachable</fullName>
+        <default>false</default>
+        <label>Candidates not reachable</label>
+    </customValue>
+    <customValue>
+        <fullName>Candidate ghosting recruiters</fullName>
+        <default>false</default>
+        <label>Candidate ghosting recruiters</label>
+    </customValue>
+    <customValue>
+        <fullName>Candidates with poor language skills</fullName>
+        <default>false</default>
+        <label>Candidates with poor language skills</label>
+    </customValue>
+    <customValue>
+        <fullName>Candidates with mismatched experience</fullName>
+        <default>false</default>
+        <label>Candidates with mismatched experience</label>
+    </customValue>
+    <customValue>
+        <fullName>Fake applications</fullName>
+        <default>false</default>
+        <label>Fake applications</label>
+    </customValue>
+    <customValue>
+        <fullName>Lack of candidate intent or interest</fullName>
+        <default>false</default>
+        <label>Lack of candidate intent or interest</label>
+    </customValue>
+    <customValue>
+        <fullName>Mismatched candidate preferences</fullName>
+        <default>false</default>
+        <label>Mismatched candidate preferences</label>
+    </customValue>
+    <customValue>
+        <fullName>Responsive support / excellent communication</fullName>
+        <default>false</default>
+        <label>Responsive support / excellent communication</label>
+    </customValue>
+    <customValue>
+        <fullName>Helpful / high quality support</fullName>
+        <default>false</default>
+        <label>Helpful / high quality support</label>
+    </customValue>
+    <customValue>
+        <fullName>Unresponsive support / contact person missing</fullName>
+        <default>false</default>
+        <label>Unresponsive support / contact person missing</label>
+    </customValue>
+    <customValue>
+        <fullName>Unhelpful support / lack of support</fullName>
+        <default>false</default>
+        <label>Unhelpful support / lack of support</label>
+    </customValue>
+    <customValue>
+        <fullName>Issues with customer expectation management</fullName>
+        <default>false</default>
+        <label>Issues with customer expectation management</label>
+    </customValue>
+    <customValue>
+        <fullName>Easy to use</fullName>
+        <default>false</default>
+        <label>Easy to use</label>
+    </customValue>
+    <customValue>
+        <fullName>Hard to use</fullName>
+        <default>false</default>
+        <label>Hard to use</label>
+    </customValue>
+    <customValue>
+        <fullName>Technical issues</fullName>
+        <default>false</default>
+        <label>Technical issues</label>
+    </customValue>
+    <customValue>
+        <fullName>Problems with pre-screening questions</fullName>
+        <default>false</default>
+        <label>Problems with pre-screening questions</label>
+    </customValue>
+    <customValue>
+        <fullName>Advertisement aesthetics and accuracy</fullName>
+        <default>false</default>
+        <label>Advertisement aesthetics and accuracy</label>
+    </customValue>
+    <customValue>
+        <fullName>Cost concerns</fullName>
+        <default>false</default>
+        <label>Cost concerns</label>
+    </customValue>
+    <customValue>
+        <fullName>Feature requests</fullName>
+        <default>false</default>
+        <label>Feature requests</label>
+    </customValue>
+    <customValue>
+        <fullName>General satisfaction</fullName>
+        <default>false</default>
+        <label>General satisfaction</label>
+    </customValue>
+    <customValue>
+        <fullName>General satisfaction with room for improvement</fullName>
+        <default>false</default>
+        <label>General satisfaction with room for improvement</label>
+    </customValue>
+    <customValue>
+        <fullName>General dissatisfaction</fullName>
+        <default>false</default>
+        <label>General dissatisfaction</label>
+    </customValue>
+    <description>RO-2584</description>
+    <masterLabel>Customer Survey Tags</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

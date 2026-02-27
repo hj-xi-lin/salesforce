@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Second_Purchase_Opportunity</fullName>
+    <fields>Name</fields>
+    <fields>AccountId</fields>
+    <fields>Career_Page__c</fields>
+    <fields>OwnerId</fields>
+    <fields>Backend_Link__c</fields>
+    <fields>Account__c</fields>
+    <label>Second Purchase Opportunity</label>
+</CompactLayout>

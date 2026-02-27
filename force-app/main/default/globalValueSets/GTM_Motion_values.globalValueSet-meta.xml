@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Inside Sales</fullName>
+        <default>false</default>
+        <label>Inside Sales</label>
+    </customValue>
+    <customValue>
+        <fullName>Subscription New Business</fullName>
+        <default>false</default>
+        <label>Subscription New Business</label>
+    </customValue>
+    <customValue>
+        <fullName>Enterprise New Business</fullName>
+        <default>false</default>
+        <label>Enterprise New Business</label>
+    </customValue>
+    <customValue>
+        <fullName>Subscription Retention</fullName>
+        <default>false</default>
+        <label>Subscription Retention</label>
+    </customValue>
+    <customValue>
+        <fullName>Enterprise Retention</fullName>
+        <default>false</default>
+        <label>Enterprise Retention</label>
+    </customValue>
+    <customValue>
+        <fullName>Agency Sales</fullName>
+        <default>false</default>
+        <label>Agency Sales</label>
+    </customValue>
+    <customValue>
+        <fullName>Inventory Partner</fullName>
+        <default>false</default>
+        <label>Inventory Partner</label>
+    </customValue>
+    <customValue>
+        <fullName>Enterprise Expansion</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Enterprise Expansion</label>
+    </customValue>
+    <customValue>
+        <fullName>Subscription Expansion</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Subscription Expansion</label>
+    </customValue>
+    <description>RO - 1958</description>
+    <masterLabel>GTM Motion values</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reach_Special_termination_right_duration__c</fullName>
+    <description>RO - 2067
+The amount of months the customer is able to use the special termination rights (Sonderkündigungsrecht). If there was no special termination rights (Sonderkündigungsrecht) sold, please enter &quot;0&quot;.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Anzahl der Monate, in denen der/die Kund*in das Sonderkündigungsrecht nutzen kann. Wenn kein Sonderkündigungsrecht verkauft wurde, trage bitte &quot;&quot;0&quot;&quot; ein.
+
+Mehr Informationen findest du hier https://heyjobs.atlassian.net/wiki/spaces/ESE/pages/3556343832/REACH+in+Salesforce</inlineHelpText>
+    <label>Reach Special termination right duration</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

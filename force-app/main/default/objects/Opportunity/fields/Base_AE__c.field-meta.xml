@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Base_AE__c</fullName>
+    <description>RO - 1631</description>
+    <inlineHelpText>This is the commission our partner receives per default on all our bookings. This commission is deducted by Finance on the invoice. It can be increased if a certain threshold is passed (ie Boost AE)</inlineHelpText>
+    <label>Base AE</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Percent</type>
+</CustomField>

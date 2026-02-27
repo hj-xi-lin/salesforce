@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Actively_Hiring_Score__c</fullName>
+    <description>RO-2536</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Dieser Score bewertet die aktuelle Einstellungsaktivität eines Accounts basierend auf Stellenausschreibungen. Je höher der Score, desto aktiver stellt das Unternehmen derzeit ein. Die Berechnung basiert auf Veröffentlichungsdatum, Anzahl aktiver Jobs und Job-Plattform.</inlineHelpText>
+    <label>Legacy Actively Hiring Score</label>
+    <precision>5</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Acc_Umbrella_and_Parent_is_Non_Umbrella</fullName>
+    <active>true</active>
+    <description>It validates if Selected Parent Account is Non-Umbrella Account.RO-719</description>
+    <errorConditionFormula>AND(ParentId != null, !Parent.Umbrella_Company__c, Umbrella_Company__c)</errorConditionFormula>
+    <errorMessage>Parent Account can not be Non-Umbrella. Please select another Account.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LeadGen_ZP_Outreach_ACM</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Account_Owner__c</columns>
+    <columns>CONTACT.FIRST_NAME</columns>
+    <columns>CONTACT.LAST_NAME</columns>
+    <columns>CONTACT.TITLE</columns>
+    <columns>Title_Categories__c</columns>
+    <columns>CONTACT.SALUTATION</columns>
+    <columns>fmlLetterSalutation__c</columns>
+    <columns>CONTACT.EMAIL</columns>
+    <columns>Email_verified__c</columns>
+    <columns>Active__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CONTACT.FIRST_NAME</field>
+        <operation>notContain</operation>
+        <value>aircall</value>
+    </filters>
+    <filters>
+        <field>Active__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>Email_verified__c</field>
+        <operation>equals</operation>
+        <value>OK,Risky</value>
+    </filters>
+    <filters>
+        <field>Blacklist__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>Account_Owner__c</field>
+        <operation>notContain</operation>
+        <value>,stefanie,karin,eppler,kevin,florian,mario,sissi,franca,charleen,taskdrive,laura,michael,niklas,cassidy,tim,diana,annika,karolin,felix,oliver</value>
+    </filters>
+    <label>LeadGen - ZP Outreach ACM</label>
+    <sharedTo></sharedTo>
+</ListView>

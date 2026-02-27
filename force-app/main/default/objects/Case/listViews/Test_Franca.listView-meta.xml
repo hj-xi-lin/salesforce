@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Test_Franca</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Product_Type__c</columns>
+    <columns>Due_Date__c</columns>
+    <columns>OWNER_NAME</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>Description_RichText__c</columns>
+    <columns>GTM_Motion_Case__c</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>Actual_REACH_Campaign_start_date__c</columns>
+    <columns>Label__c</columns>
+    <columns>Created_Date_Time__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Case.ATS_New_Onboarding</value>
+    </filters>
+    <filters>
+        <field>GTM_Motion_Case__c</field>
+        <operation>notContain</operation>
+        <value>agency</value>
+    </filters>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>equals</operation>
+        <value>New,Internal Handover,Customer Onboarding,Technical Onboarding: Ready to start,Technical Onboarding: Staging,Technical Onboarding: Production,Quality check,Waiting for Campaign Start</value>
+    </filters>
+    <label>Test Franca</label>
+    <sharedTo>
+        <role>Executive_Leadership</role>
+    </sharedTo>
+</ListView>

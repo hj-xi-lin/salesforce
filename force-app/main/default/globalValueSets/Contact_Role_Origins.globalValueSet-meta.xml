@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Lifecycle change: Opportunity Handler</fullName>
+        <default>false</default>
+        <label>Lifecycle change: Opportunity Handler</label>
+    </customValue>
+    <description>RO-2303</description>
+    <masterLabel>Contact Role Origins</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

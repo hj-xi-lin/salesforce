@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Groove_Contacts_Kaya</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CONTACT.PHONE1</columns>
+    <columns>CONTACT.EMAIL</columns>
+    <columns>CONTACT.TITLE</columns>
+    <columns>Title_Categories__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Title_Categories__c</field>
+        <operation>notEqual</operation>
+        <value>CEO,CFO,COO</value>
+    </filters>
+    <filters>
+        <field>Account.Owner_Email__c</field>
+        <operation>equals</operation>
+        <value>kaya.gahtow@heyjobs.de</value>
+    </filters>
+    <filters>
+        <field>Account.Groove_Upload_Date__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>ACCOUNT.LAST_ACTIVITY</field>
+        <operation>notEqual</operation>
+        <value>LAST_N_DAYS:30</value>
+    </filters>
+    <label>Groove Contacts - Kaya</label>
+</ListView>

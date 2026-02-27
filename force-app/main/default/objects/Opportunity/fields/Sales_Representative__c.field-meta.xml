@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Representative__c</fullName>
+    <description>Synced from hubspot to show which Sales member onboarded the contact</description>
+    <label>Sales Representative</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Abdullah Ghazzaoui</fullName>
+                <default>false</default>
+                <label>Abdullah Ghazzaoui</label>
+            </value>
+            <value>
+                <fullName>Adrian Tekath</fullName>
+                <default>false</default>
+                <label>Adrian Tekath</label>
+            </value>
+            <value>
+                <fullName>Alexander Jaskowsky</fullName>
+                <default>false</default>
+                <label>Alexander Jaskowsky</label>
+            </value>
+            <value>
+                <fullName>Alex Jaskowsky</fullName>
+                <default>false</default>
+                <label>Alex Jaskowsky</label>
+            </value>
+            <value>
+                <fullName>Alina Kühne</fullName>
+                <default>false</default>
+                <label>Alina Kühne</label>
+            </value>
+            <value>
+                <fullName>Aljoscha Wolf</fullName>
+                <default>false</default>
+                <label>Aljoscha Wolf</label>
+            </value>
+            <value>
+                <fullName>Andreas Fasser</fullName>
+                <default>false</default>
+                <label>Andreas Fasser</label>
+            </value>
+            <value>
+                <fullName>Angelina Bar</fullName>
+                <default>false</default>
+                <label>Angelina Bar</label>
+            </value>
+            <value>
+                <fullName>Annalena Wutke</fullName>
+                <default>false</default>
+                <label>Annalena Wutke</label>
+            </value>
+            <value>
+                <fullName>Annika Neumann</fullName>
+                <default>false</default>
+                <label>Annika Neumann</label>
+            </value>
+            <value>
+                <fullName>Caro Piepenstock</fullName>
+                <default>false</default>
+                <label>Caro Piepenstock</label>
+            </value>
+            <value>
+                <fullName>Christian Broscheit</fullName>
+                <default>false</default>
+                <label>Christian Broscheit</label>
+            </value>
+            <value>
+                <fullName>Christina Elsing</fullName>
+                <default>false</default>
+                <label>Christina Elsing</label>
+            </value>
+            <value>
+                <fullName>Daniel Roth</fullName>
+                <default>false</default>
+                <label>Daniel Roth</label>
+            </value>
+            <value>
+                <fullName>Daniel Steinig</fullName>
+                <default>false</default>
+                <label>Daniel Steinig</label>
+            </value>
+            <value>
+                <fullName>David Beck</fullName>
+                <default>false</default>
+                <label>David Beck</label>
+            </value>
+            <value>
+                <fullName>Dennis Andreas Cyron</fullName>
+                <default>false</default>
+                <label>Dennis Andreas Cyron</label>
+            </value>
+            <value>
+                <fullName>Dennis Cyron</fullName>
+                <default>false</default>
+                <label>Dennis Cyron</label>
+            </value>
+            <value>
+                <fullName>Diana Bloß</fullName>
+                <default>false</default>
+                <label>Diana Bloß</label>
+            </value>
+            <value>
+                <fullName>Ebru Kizilkaya</fullName>
+                <default>false</default>
+                <label>Ebru Kizilkaya</label>
+            </value>
+            <value>
+                <fullName>Fabian Radtke</fullName>
+                <default>false</default>
+                <label>Fabian Radtke</label>
+            </value>
+            <value>
+                <fullName>Ferdinand Bärenfänger</fullName>
+                <default>false</default>
+                <label>Ferdinand Bärenfänger</label>
+            </value>
+            <value>
+                <fullName>Floralie Reiff</fullName>
+                <default>false</default>
+                <label>Floralie Reiff</label>
+            </value>
+            <value>
+                <fullName>Friederike Wilsenack</fullName>
+                <default>false</default>
+                <label>Friederike Wilsenack</label>
+            </value>
+            <value>
+                <fullName>Georgia Born</fullName>
+                <default>false</default>
+                <label>Georgia Born</label>
+            </value>
+            <value>
+                <fullName>Gisa Roth</fullName>
+                <default>false</default>
+                <label>Gisa Roth</label>
+            </value>
+            <value>
+                <fullName>Hatice Demirci</fullName>
+                <default>false</default>
+                <label>Hatice Demirci</label>
+            </value>
+            <value>
+                <fullName>Henrike Többe</fullName>
+                <default>false</default>
+                <label>Henrike Többe</label>
+            </value>
+            <value>
+                <fullName>Hikmet Canbolat</fullName>
+                <default>false</default>
+                <label>Hikmet Canbolat</label>
+            </value>
+            <value>
+                <fullName>Hussam Abou-Nagie</fullName>
+                <default>false</default>
+                <label>Hussam Abou-Nagie</label>
+            </value>
+            <value>
+                <fullName>Inessa Alscher</fullName>
+                <default>false</default>
+                <label>Inessa Alscher</label>
+            </value>
+            <value>
+                <fullName>Isabelle Gödde</fullName>
+                <default>false</default>
+                <label>Isabelle Gödde</label>
+            </value>
+            <value>
+                <fullName>Jane Siewert</fullName>
+                <default>false</default>
+                <label>Jane Siewert</label>
+            </value>
+            <value>
+                <fullName>Janosch Dietrich</fullName>
+                <default>false</default>
+                <label>Janosch Dietrich</label>
+            </value>
+            <value>
+                <fullName>Jan-Thore Kaulbach</fullName>
+                <default>false</default>
+                <label>Jan-Thore Kaulbach</label>
+            </value>
+            <value>
+                <fullName>Jasmin Faisst</fullName>
+                <default>false</default>
+                <label>Jasmin Faisst</label>
+            </value>
+            <value>
+                <fullName>Jasmin Mohrs</fullName>
+                <default>false</default>
+                <label>Jasmin Mohrs</label>
+            </value>
+            <value>
+                <fullName>Jenna Dohanetz</fullName>
+                <default>false</default>
+                <label>Jenna Dohanetz</label>
+            </value>
+            <value>
+                <fullName>Jessica Speck</fullName>
+                <default>false</default>
+                <label>Jessica Speck</label>
+            </value>
+            <value>
+                <fullName>Johanna Kaden</fullName>
+                <default>false</default>
+                <label>Johanna Kaden</label>
+            </value>
+            <value>
+                <fullName>Johannes Niepmann</fullName>
+                <default>false</default>
+                <label>Johannes Niepmann</label>
+            </value>
+            <value>
+                <fullName>Jonathan Detlefsen</fullName>
+                <default>false</default>
+                <label>Jonathan Detlefsen</label>
+            </value>
+            <value>
+                <fullName>Julia Chycko</fullName>
+                <default>false</default>
+                <label>Julia Chycko</label>
+            </value>
+            <value>
+                <fullName>Julian B. Schreiber</fullName>
+                <default>false</default>
+                <label>Julian B. Schreiber</label>
+            </value>
+            <value>
+                <fullName>Julian Martin</fullName>
+                <default>false</default>
+                <label>Julian Martin</label>
+            </value>
+            <value>
+                <fullName>Julian Schreiber</fullName>
+                <default>false</default>
+                <label>Julian Schreiber</label>
+            </value>
+            <value>
+                <fullName>Justin Hübert</fullName>
+                <default>false</default>
+                <label>Justin Hübert</label>
+            </value>
+            <value>
+                <fullName>Leo Enslin</fullName>
+                <default>false</default>
+                <label>Leo Enslin</label>
+            </value>
+            <value>
+                <fullName>Leon Felzmann</fullName>
+                <default>false</default>
+                <label>Leon Felzmann</label>
+            </value>
+            <value>
+                <fullName>Lisa Secundo</fullName>
+                <default>false</default>
+                <label>Lisa Secundo</label>
+            </value>
+            <value>
+                <fullName>Lucas Lingens</fullName>
+                <default>false</default>
+                <label>Lucas Lingens</label>
+            </value>
+            <value>
+                <fullName>Luisa Bell</fullName>
+                <default>false</default>
+                <label>Luisa Bell</label>
+            </value>
+            <value>
+                <fullName>Marcel Roth</fullName>
+                <default>false</default>
+                <label>Marcel Roth</label>
+            </value>
+            <value>
+                <fullName>Mareike Schliesser</fullName>
+                <default>false</default>
+                <label>Mareike Schliesser</label>
+            </value>
+            <value>
+                <fullName>Marika Junker</fullName>
+                <default>false</default>
+                <label>Marika Junker</label>
+            </value>
+            <value>
+                <fullName>Marino Dürrschmid</fullName>
+                <default>false</default>
+                <label>Marino Dürrschmid</label>
+            </value>
+            <value>
+                <fullName>Mario Feghali</fullName>
+                <default>false</default>
+                <label>Mario Feghali</label>
+            </value>
+            <value>
+                <fullName>Marius Derkum</fullName>
+                <default>false</default>
+                <label>Marius Derkum</label>
+            </value>
+            <value>
+                <fullName>Marvin Perez Grünke</fullName>
+                <default>false</default>
+                <label>Marvin Perez Grünke</label>
+            </value>
+            <value>
+                <fullName>Matheus Wewior</fullName>
+                <default>false</default>
+                <label>Matheus Wewior</label>
+            </value>
+            <value>
+                <fullName>Mathias Stroers</fullName>
+                <default>false</default>
+                <label>Mathias Stroers</label>
+            </value>
+            <value>
+                <fullName>Maximilian Medek</fullName>
+                <default>false</default>
+                <label>Maximilian Medek</label>
+            </value>
+            <value>
+                <fullName>Max Mauk</fullName>
+                <default>false</default>
+                <label>Max Mauk</label>
+            </value>
+            <value>
+                <fullName>Michael Wahl</fullName>
+                <default>false</default>
+                <label>Michael Wahl</label>
+            </value>
+            <value>
+                <fullName>Milena Bohmert</fullName>
+                <default>false</default>
+                <label>Milena Bohmert</label>
+            </value>
+            <value>
+                <fullName>Nahuel Moya</fullName>
+                <default>false</default>
+                <label>Nahuel Moya</label>
+            </value>
+            <value>
+                <fullName>Nathalie Jansen</fullName>
+                <default>false</default>
+                <label>Nathalie Jansen</label>
+            </value>
+            <value>
+                <fullName>Niklas Soestmeyer</fullName>
+                <default>false</default>
+                <label>Niklas Soestmeyer</label>
+            </value>
+            <value>
+                <fullName>Nils Niehues</fullName>
+                <default>false</default>
+                <label>Nils Niehues</label>
+            </value>
+            <value>
+                <fullName>Nina Hoffmann</fullName>
+                <default>false</default>
+                <label>Nina Hoffmann</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Ozair Yousofi</fullName>
+                <default>false</default>
+                <label>Ozair Yousofi</label>
+            </value>
+            <value>
+                <fullName>Patrick Schumacher</fullName>
+                <default>false</default>
+                <label>Patrick Schumacher</label>
+            </value>
+            <value>
+                <fullName>Philipp Bahls</fullName>
+                <default>false</default>
+                <label>Philipp Bahls</label>
+            </value>
+            <value>
+                <fullName>Philipp Brandes</fullName>
+                <default>false</default>
+                <label>Philipp Brandes</label>
+            </value>
+            <value>
+                <fullName>Philipp Schmidt</fullName>
+                <default>false</default>
+                <label>Philipp Schmidt</label>
+            </value>
+            <value>
+                <fullName>Philipp von Werthern</fullName>
+                <default>false</default>
+                <label>Philipp von Werthern</label>
+            </value>
+            <value>
+                <fullName>Pierre Byer</fullName>
+                <default>false</default>
+                <label>Pierre Byer</label>
+            </value>
+            <value>
+                <fullName>Raven Schulz</fullName>
+                <default>false</default>
+                <label>Raven Schulz</label>
+            </value>
+            <value>
+                <fullName>Rob Hirt</fullName>
+                <default>false</default>
+                <label>Rob Hirt</label>
+            </value>
+            <value>
+                <fullName>Romina Calgan</fullName>
+                <default>false</default>
+                <label>Romina Calgan</label>
+            </value>
+            <value>
+                <fullName>Romina Tejeiro Calgan</fullName>
+                <default>false</default>
+                <label>Romina Tejeiro Calgan</label>
+            </value>
+            <value>
+                <fullName>Sandra Siemoneit</fullName>
+                <default>false</default>
+                <label>Sandra Siemoneit</label>
+            </value>
+            <value>
+                <fullName>Sarah Keser</fullName>
+                <default>false</default>
+                <label>Sarah Keser</label>
+            </value>
+            <value>
+                <fullName>Sebastian Manthey</fullName>
+                <default>false</default>
+                <label>Sebastian Manthey</label>
+            </value>
+            <value>
+                <fullName>Sebastian Schönert</fullName>
+                <default>false</default>
+                <label>Sebastian Schönert</label>
+            </value>
+            <value>
+                <fullName>Simon Mazur</fullName>
+                <default>false</default>
+                <label>Simon Mazur</label>
+            </value>
+            <value>
+                <fullName>Swetlana Gossen</fullName>
+                <default>false</default>
+                <label>Swetlana Gossen</label>
+            </value>
+            <value>
+                <fullName>Tamina Stange</fullName>
+                <default>false</default>
+                <label>Tamina Stange</label>
+            </value>
+            <value>
+                <fullName>Tessa Schneeberg</fullName>
+                <default>false</default>
+                <label>Tessa Schneeberg</label>
+            </value>
+            <value>
+                <fullName>Tim Koch</fullName>
+                <default>false</default>
+                <label>Tim Koch</label>
+            </value>
+            <value>
+                <fullName>Timm Pfennig</fullName>
+                <default>false</default>
+                <label>Timm Pfennig</label>
+            </value>
+            <value>
+                <fullName>Tobias Kipp</fullName>
+                <default>false</default>
+                <label>Tobias Kipp</label>
+            </value>
+            <value>
+                <fullName>Tobias Schmidt</fullName>
+                <default>false</default>
+                <label>Tobias Schmidt</label>
+            </value>
+            <value>
+                <fullName>Tu Nguyen</fullName>
+                <default>false</default>
+                <label>Tu Nguyen</label>
+            </value>
+            <value>
+                <fullName>Yannick Poppe</fullName>
+                <default>false</default>
+                <label>Yannick Poppe</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Heyassessment_Enabled__c</fullName>
+    <defaultValue>true</defaultValue>
+    <inlineHelpText>Dieses Feld gibt an, ob das HeyAssessment für diesen Kunden aktiv oder inaktiv ist.</inlineHelpText>
+    <label>Legacy Heyassessment Enabled</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

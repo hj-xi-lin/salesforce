@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Change_To_Sales</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Change To Sales</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/29.0/connection.js&quot;)}
+
+// identify the record
+var A = new sforce.SObject(&quot;Account&quot;);
+A.id = &quot;{!Account.Id}&quot;;
+
+
+// Update the Record Type
+A.RecordTypeId = &quot;0121v000000lUxMAAU&quot;;
+// save the change
+sforce.connection.update([A]);
+
+//refresh the page
+window.location.reload();</url>
+</WebLink>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>pc_AvgLast_3m_total_credit__c</fullName>
+    <description>on Parent Account/Company Sum(Credit used in last 3 months)/3</description>
+    <inlineHelpText>on Parent Account/Company Sum(Credit used in last 3 months)/3</inlineHelpText>
+    <label>Legacy Parent Account AvgLast 3m totalC</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

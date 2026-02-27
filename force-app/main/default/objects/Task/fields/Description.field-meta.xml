@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Description</fullName>
+    <inlineHelpText>Enthält eine genauere Beschreibung der Task. Hier findest du u.U. weitere Details, die du bei der Bearbeitung der Task berücksichtigen solltest. Du kannst hier auch weitere Notizen zur Tasks hinterlegen, wenn das für dich hilfreich ist.</inlineHelpText>
+    <trackHistory>true</trackHistory>
+</CustomField>

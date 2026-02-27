@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Estimated_Min_Booking_this_quarter__c</fullName>
+    <description>RO-2433</description>
+    <inlineHelpText>Konservativste Schätzung der Bookings, die du in diesem Quartal von deinen KundInnen erwartest. Diese Zahl sollte das untere Ende deiner Umsatzprognosen darstellen.</inlineHelpText>
+    <label>Estimated Min. Booking (this quarter)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

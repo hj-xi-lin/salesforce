@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>acquisition_stage_ts__c</fullName>
+    <description>Attribution fields from the b2b_mta bi_analytics_dbt model pulled in via hightouch.</description>
+    <inlineHelpText>Attribution fields from the b2b_mta bi_analytics_dbt model pulled in via hightouch.</inlineHelpText>
+    <label>acquisition_stage_ts</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>DateTime</type>
+</CustomField>

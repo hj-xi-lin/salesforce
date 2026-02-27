@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>First_Reaction_Time__c</fullName>
+    <description>Time between created Date and first Status Change</description>
+    <externalId>false</externalId>
+    <formula>MIN(
+IF(Time_Created_To_On_Hold__c =0 ,          999999,  Time_Created_To_On_Hold__c) ,
+IF(Time_Created_to_Escalated__c =0,         999999,  Time_Created_to_Escalated__c ) ,
+IF(Time_Created_To_Closed__c =0,            999999,  Time_Created_To_Closed__c) ,
+IF(Time_Created_to_Preview_Sent__c =0,      999999,  Time_Created_to_Preview_Sent__c) ,
+IF(Time_Created_To_Job_Live__c =0,          999999,  Time_Created_To_Job_Live__c) ,
+IF(Time_Created_to_Discussion__c =0,        999999,  Time_Created_to_Discussion__c) ,
+IF(Time_Created_to_Go_Live_Scheduled__c =0, 999999,  Time_Created_to_Go_Live_Scheduled__c) ,
+IF(Time_Created_to_Lost__c =0,              999999,  Time_Created_to_Lost__c)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Time between created Date and first Status Change</inlineHelpText>
+    <label>First Reaction Time</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

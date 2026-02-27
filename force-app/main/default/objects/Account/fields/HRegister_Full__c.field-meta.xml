@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRegister_Full__c</fullName>
+    <description>Concatenation of HRegister-Court, -Department and -Number for deduplication purposes / RO-200</description>
+    <externalId>false</externalId>
+    <formula>HRegister_Court__c + &quot;_&quot; + TEXT(HRegister_Department__c) + &quot;_&quot; +  HRegister_Number__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Concatenation of HRegister-Court, -Department and -Number for deduplication purposes</inlineHelpText>
+    <label>HRegister-Full</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

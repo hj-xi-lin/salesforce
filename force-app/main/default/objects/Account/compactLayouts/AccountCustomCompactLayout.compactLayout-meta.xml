@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AccountCustomCompactLayout</fullName>
+    <fields>Name</fields>
+    <fields>BillingAddress</fields>
+    <fields>urlCareerPage__c</fields>
+    <fields>fmlCompanyBackendLink__c</fields>
+    <fields>Customer_360__c</fields>
+    <fields>OwnerId</fields>
+    <fields>Lead_Score_2__c</fields>
+    <label>Account Custom Compact Layout</label>
+</CompactLayout>

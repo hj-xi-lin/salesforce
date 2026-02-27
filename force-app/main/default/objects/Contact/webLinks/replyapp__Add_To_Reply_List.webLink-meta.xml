@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>replyapp__Add_To_Reply_List</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Add To Reply</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/36.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/36.0/apex.js&quot;)} 
+
+var records = {!GETRECORDIDS($ObjectType.Contact)}; 
+
+var result = sforce.apex.execute(&quot;replyapp.AddToReplyService&quot;,&quot;addToReplyBulk&quot;, { recordsIds : 
+records, recordType : &quot;contact&quot;}); 
+
+var intervalId = sessionStorage.getItem(&apos;intervalId&apos;);
+var counter = 0;
+
+if(intervalId)
+{
+clearInterval(intervalId);
+}
+
+intervalId = setInterval(function(){
+var msg = sforce.apex.execute(&quot;replyapp.AddToReplyService&quot;, &quot;getNotification&quot;, {});
+if(msg[0])
+   alert(msg);
+else{
+counter ++;
+if(counter == 5)
+   clearInterval(intervalId);
+}
+        }, 5000);
+
+sessionStorage.setItem(&apos;intervalId&apos;, intervalId);</url>
+</WebLink>

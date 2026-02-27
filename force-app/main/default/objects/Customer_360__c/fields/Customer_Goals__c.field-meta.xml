@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Goals__c</fullName>
+    <description>Customer goals and expected outcomes from Handover Documentation</description>
+    <inlineHelpText>Kundenziele, KPI-Erwartungen (z.B. #applications, #hires) und alle gemachten Sales-Zusagen für messbare Erfolgskontrolle.</inlineHelpText>
+    <label>Customer Goals &amp; Expected Outcomes</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>

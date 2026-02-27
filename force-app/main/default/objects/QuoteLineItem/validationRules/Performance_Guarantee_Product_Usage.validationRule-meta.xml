@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Performance_Guarantee_Product_Usage</fullName>
+    <active>true</active>
+    <description>Performance Guarantee Product is restricted for AM</description>
+    <errorConditionFormula>Product2Id = &quot;01t1v00000EIrJ3&quot;
+&amp;&amp;
+OR($Profile.Id = &quot;00e1v000001nNmB&quot;,
+   $Profile.Id = &quot;00e0Y000000Ng1o&quot;)</errorConditionFormula>
+    <errorMessage>You can&apos;t choose the Product &apos;Performance Guarantee&apos;. It&apos;s restricted for Account Management :P</errorMessage>
+</ValidationRule>

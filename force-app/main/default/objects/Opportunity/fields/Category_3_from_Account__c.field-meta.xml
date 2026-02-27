@@ -1,0 +1,1376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Category_3_from_Account__c</fullName>
+    <description>RO-2155</description>
+    <inlineHelpText>Changes automatically update the Account (for open opps)</inlineHelpText>
+    <label>Category 3 (from Account)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Category_2_from_Account__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>Category3</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>Drugstore &amp; Household</controllingFieldValue>
+            <valueName>Department Stores</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Drugstore &amp; Household</controllingFieldValue>
+            <valueName>Drugstores</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Drugstore &amp; Household</controllingFieldValue>
+            <valueName>Load</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Drugstore &amp; Household</controllingFieldValue>
+            <valueName>e-Commerce</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Drugstore &amp; Household</controllingFieldValue>
+            <valueName>Office Market</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Drugstore &amp; Household</controllingFieldValue>
+            <valueName>1€ Stores</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Drugstore &amp; Household</controllingFieldValue>
+            <valueName>Toy Stores</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Drugstore &amp; Household</controllingFieldValue>
+            <valueName>Zoo Stores</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Drugstore &amp; Household</controllingFieldValue>
+            <valueName>Pet Shop</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Drugstore &amp; Household</controllingFieldValue>
+            <valueName>Drugstore</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Food Industry</controllingFieldValue>
+            <valueName>Animal Feed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Food Industry</controllingFieldValue>
+            <valueName>Bread Factories</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Food Industry</controllingFieldValue>
+            <valueName>Dairies</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Food Industry</controllingFieldValue>
+            <valueName>Farms</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Food Industry</controllingFieldValue>
+            <valueName>Fish Factories</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Food Industry</controllingFieldValue>
+            <valueName>Foods</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Food Industry</controllingFieldValue>
+            <valueName>Forest Enterprise</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Food Industry</controllingFieldValue>
+            <valueName>Fruit VeIdgetables</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Food Industry</controllingFieldValue>
+            <valueName>Gourmet Food Manufacturer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Food Industry</controllingFieldValue>
+            <valueName>Grinding Plants</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Food Industry</controllingFieldValue>
+            <valueName>Meat Products</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Food Industry</controllingFieldValue>
+            <valueName>Nurseries</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Food Industry</controllingFieldValue>
+            <valueName>PBX Manufacturer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Food Industry</controllingFieldValue>
+            <valueName>Poultry Holdings</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Food Industry</controllingFieldValue>
+            <valueName>Spice Manufacturer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Food Industry</controllingFieldValue>
+            <valueName>Confectionary</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Food Stores</controllingFieldValue>
+            <valueName>Bakery</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Food Stores</controllingFieldValue>
+            <valueName>Butcher</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Food Stores</controllingFieldValue>
+            <valueName>Cash-and-Carry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Food Stores</controllingFieldValue>
+            <valueName>Confiserie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Food Stores</controllingFieldValue>
+            <valueName>Delicacy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Food Stores</controllingFieldValue>
+            <valueName>Discounter</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Food Stores</controllingFieldValue>
+            <valueName>Liquor Stores</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Food Stores</controllingFieldValue>
+            <valueName>Health Food Store</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Food Stores</controllingFieldValue>
+            <valueName>Bio-Stores</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Food Stores</controllingFieldValue>
+            <valueName>Supermarkets</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Food Stores</controllingFieldValue>
+            <valueName>Wine Merchant</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mechanical Engineering</controllingFieldValue>
+            <valueName>Agricultural Machinery</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mechanical Engineering</controllingFieldValue>
+            <valueName>Components</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mechanical Engineering</controllingFieldValue>
+            <valueName>Construction</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mechanical Engineering</controllingFieldValue>
+            <valueName>Crane Technology</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mechanical Engineering</controllingFieldValue>
+            <valueName>Defense Industry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mechanical Engineering</controllingFieldValue>
+            <valueName>Elevator Manufacturer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mechanical Engineering</controllingFieldValue>
+            <valueName>Fans</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mechanical Engineering</controllingFieldValue>
+            <valueName>Feathers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mechanical Engineering</controllingFieldValue>
+            <valueName>Fire Fighting Equipment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mechanical Engineering</controllingFieldValue>
+            <valueName>Fork-Lift Truck</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mechanical Engineering</controllingFieldValue>
+            <valueName>Hydraulic</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mechanical Engineering</controllingFieldValue>
+            <valueName>Machine Builders</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mechanical Engineering</controllingFieldValue>
+            <valueName>Machining</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mechanical Engineering</controllingFieldValue>
+            <valueName>Marine Technology</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mechanical Engineering</controllingFieldValue>
+            <valueName>Plant Engineering</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mechanical Engineering</controllingFieldValue>
+            <valueName>Plastic Parts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mechanical Engineering</controllingFieldValue>
+            <valueName>Pump Manufacturer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mechanical Engineering</controllingFieldValue>
+            <valueName>Railway Engineering</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mechanical Engineering</controllingFieldValue>
+            <valueName>Sheet Metal Parts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mechanical Engineering</controllingFieldValue>
+            <valueName>Shipyards</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mechanical Engineering</controllingFieldValue>
+            <valueName>Stairlifts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mechanical Engineering</controllingFieldValue>
+            <valueName>Technical Ceramics</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mechanical Engineering</controllingFieldValue>
+            <valueName>Tooling</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mechanical Engineering</controllingFieldValue>
+            <valueName>Tool Manufacturers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mechanical Engineering</controllingFieldValue>
+            <valueName>Warehouse Equipment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fashion &amp; Lifestyle</controllingFieldValue>
+            <valueName>Bookstore</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fashion &amp; Lifestyle</controllingFieldValue>
+            <valueName>Fashion Chain</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fashion &amp; Lifestyle</controllingFieldValue>
+            <valueName>Fashion Houses</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fashion &amp; Lifestyle</controllingFieldValue>
+            <valueName>Jeans Shops</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fashion &amp; Lifestyle</controllingFieldValue>
+            <valueName>Jeweler</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fashion &amp; Lifestyle</controllingFieldValue>
+            <valueName>Perfumeries</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fashion &amp; Lifestyle</controllingFieldValue>
+            <valueName>Shoe Stores</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fashion &amp; Lifestyle</controllingFieldValue>
+            <valueName>Sport Stores</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Technology &amp; Car</controllingFieldValue>
+            <valueName>Caravan Dealer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Technology &amp; Car</controllingFieldValue>
+            <valueName>Car Dealer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Technology &amp; Car</controllingFieldValue>
+            <valueName>Gas Stations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Technology &amp; Car</controllingFieldValue>
+            <valueName>Phone Stores</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Technology &amp; Car</controllingFieldValue>
+            <valueName>Photo Stores</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Technology &amp; Car</controllingFieldValue>
+            <valueName>Technology Stores</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Technology &amp; Car</controllingFieldValue>
+            <valueName>Tire Retailer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Car Industry &amp; Aircraft Construction</controllingFieldValue>
+            <valueName>Aircraft manufacturers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Car Industry &amp; Aircraft Construction</controllingFieldValue>
+            <valueName>Car manufacturers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Car Industry &amp; Aircraft Construction</controllingFieldValue>
+            <valueName>Car Suppliers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Car Industry &amp; Aircraft Construction</controllingFieldValue>
+            <valueName>Camping Van manufacturers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Car Industry &amp; Aircraft Construction</controllingFieldValue>
+            <valueName>Van manufacturers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Car Industry &amp; Aircraft Construction</controllingFieldValue>
+            <valueName>Tire Manufacturers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Construction Industry &amp; Steel</controllingFieldValue>
+            <valueName>Aluminum Plants</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Construction Industry &amp; Steel</controllingFieldValue>
+            <valueName>Brick Industry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Construction Industry &amp; Steel</controllingFieldValue>
+            <valueName>Building Materials Industry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Construction Industry &amp; Steel</controllingFieldValue>
+            <valueName>Building Technology</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Construction Industry &amp; Steel</controllingFieldValue>
+            <valueName>Cement Industry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Construction Industry &amp; Steel</controllingFieldValue>
+            <valueName>Connection Technology</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Construction Industry &amp; Steel</controllingFieldValue>
+            <valueName>Foundries</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Construction Industry &amp; Steel</controllingFieldValue>
+            <valueName>Glassmaker</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Construction Industry &amp; Steel</controllingFieldValue>
+            <valueName>Gravel Plant</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Construction Industry &amp; Steel</controllingFieldValue>
+            <valueName>Mining</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Construction Industry &amp; Steel</controllingFieldValue>
+            <valueName>Sanitary</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Construction Industry &amp; Steel</controllingFieldValue>
+            <valueName>Steel Processing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Construction Industry &amp; Steel</controllingFieldValue>
+            <valueName>Steelworks</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Construction Industry &amp; Steel</controllingFieldValue>
+            <valueName>Surface Technology</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Construction Industry &amp; Steel</controllingFieldValue>
+            <valueName>Window Manufacturers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Construction Industry &amp; Steel</controllingFieldValue>
+            <valueName>Wood Industry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Chemical Industry</controllingFieldValue>
+            <valueName>Basic Chemicals</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Chemical Industry</controllingFieldValue>
+            <valueName>Contract Manufacturers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Chemical Industry</controllingFieldValue>
+            <valueName>Generics</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Chemical Industry</controllingFieldValue>
+            <valueName>Household Chemistry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Chemical Industry</controllingFieldValue>
+            <valueName>Packaging Industry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Chemical Industry</controllingFieldValue>
+            <valueName>Paint Manufacturers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Chemical Industry</controllingFieldValue>
+            <valueName>Paper Mills</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Chemical Industry</controllingFieldValue>
+            <valueName>Pharmaceutical Industry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Electrical Engineering &amp; Medical Technology</controllingFieldValue>
+            <valueName>Cable Manufacturer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Electrical Engineering &amp; Medical Technology</controllingFieldValue>
+            <valueName>Electrical Engineering</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Electrical Engineering &amp; Medical Technology</controllingFieldValue>
+            <valueName>Electrical Parts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Electrical Engineering &amp; Medical Technology</controllingFieldValue>
+            <valueName>EMS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Electrical Engineering &amp; Medical Technology</controllingFieldValue>
+            <valueName>Measuring Control Equipment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Electrical Engineering &amp; Medical Technology</controllingFieldValue>
+            <valueName>Medical</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Electrical Engineering &amp; Medical Technology</controllingFieldValue>
+            <valueName>Optoelectronics</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Electrical Engineering &amp; Medical Technology</controllingFieldValue>
+            <valueName>Semiconductor Industry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Electrical Engineering &amp; Medical Technology</controllingFieldValue>
+            <valueName>Solar Power</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Electrical Engineering &amp; Medical Technology</controllingFieldValue>
+            <valueName>Wind Power</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Electrical Engineering &amp; Medical Technology</controllingFieldValue>
+            <valueName>Automation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Beverage &amp; Tobacco</controllingFieldValue>
+            <valueName>Beverage Industry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Beverage &amp; Tobacco</controllingFieldValue>
+            <valueName>Breweries</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Beverage &amp; Tobacco</controllingFieldValue>
+            <valueName>Coffee Distributor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Beverage &amp; Tobacco</controllingFieldValue>
+            <valueName>Spirits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Beverage &amp; Tobacco</controllingFieldValue>
+            <valueName>Tea Parties</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Beverage &amp; Tobacco</controllingFieldValue>
+            <valueName>Tobacco Industry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Beverage &amp; Tobacco</controllingFieldValue>
+            <valueName>Wineries</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consultant &amp; IT</controllingFieldValue>
+            <valueName>Auditors</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consultant &amp; IT</controllingFieldValue>
+            <valueName>Call center</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consultant &amp; IT</controllingFieldValue>
+            <valueName>Computer Games</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consultant &amp; IT</controllingFieldValue>
+            <valueName>Lawyer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consultant &amp; IT</controllingFieldValue>
+            <valueName>Engineering</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consultant &amp; IT</controllingFieldValue>
+            <valueName>Estates</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consultant &amp; IT</controllingFieldValue>
+            <valueName>IT Consulting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consultant &amp; IT</controllingFieldValue>
+            <valueName>Job promotion</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consultant &amp; IT</controllingFieldValue>
+            <valueName>Translation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consultant &amp; IT</controllingFieldValue>
+            <valueName>Management Consultant</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consultant &amp; IT</controllingFieldValue>
+            <valueName>Headhunter</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consultant &amp; IT</controllingFieldValue>
+            <valueName>Research Centers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consultant &amp; IT</controllingFieldValue>
+            <valueName>Software Manufacturer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consultant &amp; IT</controllingFieldValue>
+            <valueName>Temporary Employment Agencies</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consultant &amp; IT</controllingFieldValue>
+            <valueName>Tester</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consultant &amp; IT</controllingFieldValue>
+            <valueName>Training</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Finance &amp; Insurance</controllingFieldValue>
+            <valueName>Banks</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Finance &amp; Insurance</controllingFieldValue>
+            <valueName>Bausparkasse</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Finance &amp; Insurance</controllingFieldValue>
+            <valueName>Collection</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Finance &amp; Insurance</controllingFieldValue>
+            <valueName>Consumer Organizations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Finance &amp; Insurance</controllingFieldValue>
+            <valueName>Development Banks</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Finance &amp; Insurance</controllingFieldValue>
+            <valueName>Sparkasse</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Finance &amp; Insurance</controllingFieldValue>
+            <valueName>Financial Funds</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Finance &amp; Insurance</controllingFieldValue>
+            <valueName>Insurance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Finance &amp; Insurance</controllingFieldValue>
+            <valueName>Insurance Broker</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Finance &amp; Insurance</controllingFieldValue>
+            <valueName>Leasing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Finance &amp; Insurance</controllingFieldValue>
+            <valueName>Payment Processor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Finance &amp; Insurance</controllingFieldValue>
+            <valueName>Private Banks</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Finance &amp; Insurance</controllingFieldValue>
+            <valueName>Professional Association</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Finance &amp; Insurance</controllingFieldValue>
+            <valueName>Trustee</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Finance &amp; Insurance</controllingFieldValue>
+            <valueName>Investors</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leisure &amp; Entertainment</controllingFieldValue>
+            <valueName>Basketball Teams</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leisure &amp; Entertainment</controllingFieldValue>
+            <valueName>Bowling Center</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leisure &amp; Entertainment</controllingFieldValue>
+            <valueName>Football Clubs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leisure &amp; Entertainment</controllingFieldValue>
+            <valueName>Waterparks</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leisure &amp; Entertainment</controllingFieldValue>
+            <valueName>Gambling</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leisure &amp; Entertainment</controllingFieldValue>
+            <valueName>Golf Courses</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leisure &amp; Entertainment</controllingFieldValue>
+            <valueName>Gyms</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leisure &amp; Entertainment</controllingFieldValue>
+            <valueName>Hair Stylist</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leisure &amp; Entertainment</controllingFieldValue>
+            <valueName>Hockey Teams</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leisure &amp; Entertainment</controllingFieldValue>
+            <valueName>Movie Theaters</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leisure &amp; Entertainment</controllingFieldValue>
+            <valueName>Museums</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leisure &amp; Entertainment</controllingFieldValue>
+            <valueName>Musical</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leisure &amp; Entertainment</controllingFieldValue>
+            <valueName>Parks</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leisure &amp; Entertainment</controllingFieldValue>
+            <valueName>Sports Clubs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leisure &amp; Entertainment</controllingFieldValue>
+            <valueName>Tanning Salons</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leisure &amp; Entertainment</controllingFieldValue>
+            <valueName>Theatre</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leisure &amp; Entertainment</controllingFieldValue>
+            <valueName>Zoos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leisure &amp; Entertainment</controllingFieldValue>
+            <valueName>Videostore</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Gastronomy &amp; Tourism</controllingFieldValue>
+            <valueName>Airlines</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Gastronomy &amp; Tourism</controllingFieldValue>
+            <valueName>Airports</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Gastronomy &amp; Tourism</controllingFieldValue>
+            <valueName>Brewery</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Gastronomy &amp; Tourism</controllingFieldValue>
+            <valueName>Car Rental</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Gastronomy &amp; Tourism</controllingFieldValue>
+            <valueName>Caterer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Gastronomy &amp; Tourism</controllingFieldValue>
+            <valueName>Coffee Shops</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Gastronomy &amp; Tourism</controllingFieldValue>
+            <valueName>Franchisee</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Gastronomy &amp; Tourism</controllingFieldValue>
+            <valueName>Hotel Chains</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Gastronomy &amp; Tourism</controllingFieldValue>
+            <valueName>Hotels</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Gastronomy &amp; Tourism</controllingFieldValue>
+            <valueName>Night Clubs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Gastronomy &amp; Tourism</controllingFieldValue>
+            <valueName>Pizza Service</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Gastronomy &amp; Tourism</controllingFieldValue>
+            <valueName>Seafood Restaurants</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Gastronomy &amp; Tourism</controllingFieldValue>
+            <valueName>Ship Tourism</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Gastronomy &amp; Tourism</controllingFieldValue>
+            <valueName>Steakhouses</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Gastronomy &amp; Tourism</controllingFieldValue>
+            <valueName>Systematic Gastronomy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Gastronomy &amp; Tourism</controllingFieldValue>
+            <valueName>Theme Restaurant</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Gastronomy &amp; Tourism</controllingFieldValue>
+            <valueName>Tour Operators</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Gastronomy &amp; Tourism</controllingFieldValue>
+            <valueName>Traffic Gastronomy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Gastronomy &amp; Tourism</controllingFieldValue>
+            <valueName>Travel Agencies</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Gastronomy &amp; Tourism</controllingFieldValue>
+            <valueName>Camping Sites</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Health</controllingFieldValue>
+            <valueName>Hospitals</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Health</controllingFieldValue>
+            <valueName>Dental Laboratories</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Health</controllingFieldValue>
+            <valueName>Care Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Health</controllingFieldValue>
+            <valueName>Health Insurance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Health</controllingFieldValue>
+            <valueName>Hearing Care</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Health</controllingFieldValue>
+            <valueName>Laboratories</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Health</controllingFieldValue>
+            <valueName>Medical Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Health</controllingFieldValue>
+            <valueName>Care Homes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Health</controllingFieldValue>
+            <valueName>Optician</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Health</controllingFieldValue>
+            <valueName>Pharmacies</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Health</controllingFieldValue>
+            <valueName>Radiology Practices</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Health</controllingFieldValue>
+            <valueName>Rehabilitation clinics</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Real Estate &amp; Building Service</controllingFieldValue>
+            <valueName>Architects</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Real Estate &amp; Building Service</controllingFieldValue>
+            <valueName>Building Contractors</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Real Estate &amp; Building Service</controllingFieldValue>
+            <valueName>Building Service</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Real Estate &amp; Building Service</controllingFieldValue>
+            <valueName>Cable Companies</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Real Estate &amp; Building Service</controllingFieldValue>
+            <valueName>Cleaning Companies</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Real Estate &amp; Building Service</controllingFieldValue>
+            <valueName>Craftsman</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Real Estate &amp; Building Service</controllingFieldValue>
+            <valueName>Engineers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Real Estate &amp; Building Service</controllingFieldValue>
+            <valueName>Housing Companies</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Real Estate &amp; Building Service</controllingFieldValue>
+            <valueName>Industry Service</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Real Estate &amp; Building Service</controllingFieldValue>
+            <valueName>Landscaping</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Real Estate &amp; Building Service</controllingFieldValue>
+            <valueName>Prefabricated Houses</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Real Estate &amp; Building Service</controllingFieldValue>
+            <valueName>Real Estate Agents</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Real Estate &amp; Building Service</controllingFieldValue>
+            <valueName>Real Estate Companies</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Real Estate &amp; Building Service</controllingFieldValue>
+            <valueName>Security Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Real Estate &amp; Building Service</controllingFieldValue>
+            <valueName>Steel Fabricators</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Municipal</controllingFieldValue>
+            <valueName>Animal Hospitals</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Municipal</controllingFieldValue>
+            <valueName>Animal Shelters</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Municipal</controllingFieldValue>
+            <valueName>Associations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Municipal</controllingFieldValue>
+            <valueName>Demolition Company</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Municipal</controllingFieldValue>
+            <valueName>Emergency Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Municipal</controllingFieldValue>
+            <valueName>Federal Offices</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Municipal</controllingFieldValue>
+            <valueName>Grid Companies</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Municipal</controllingFieldValue>
+            <valueName>Hygiene Service</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Municipal</controllingFieldValue>
+            <valueName>Kita</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Municipal</controllingFieldValue>
+            <valueName>Libraries</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Municipal</controllingFieldValue>
+            <valueName>NGO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Municipal</controllingFieldValue>
+            <valueName>Prisons</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Municipal</controllingFieldValue>
+            <valueName>Professional Fire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Municipal</controllingFieldValue>
+            <valueName>Provider</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Municipal</controllingFieldValue>
+            <valueName>Recycling</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Municipal</controllingFieldValue>
+            <valueName>Sheltered Workshop</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Municipal</controllingFieldValue>
+            <valueName>Social Facilities</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Municipal</controllingFieldValue>
+            <valueName>Telephone Company</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Municipal</controllingFieldValue>
+            <valueName>Transport Network</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Municipal</controllingFieldValue>
+            <valueName>Undertakers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Municipal</controllingFieldValue>
+            <valueName>Universities</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Municipal</controllingFieldValue>
+            <valueName>Waste</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Municipal</controllingFieldValue>
+            <valueName>Waterworks</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Municipal</controllingFieldValue>
+            <valueName>Chambers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Municipal</controllingFieldValue>
+            <valueName>Parties</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Media &amp; Agencies</controllingFieldValue>
+            <valueName>Advertising Agencies</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Media &amp; Agencies</controllingFieldValue>
+            <valueName>Advertising sales</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Media &amp; Agencies</controllingFieldValue>
+            <valueName>Book Publishers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Media &amp; Agencies</controllingFieldValue>
+            <valueName>City ​​Marketing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Media &amp; Agencies</controllingFieldValue>
+            <valueName>Economic Information</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Media &amp; Agencies</controllingFieldValue>
+            <valueName>Event Agencies</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Media &amp; Agencies</controllingFieldValue>
+            <valueName>Exhibition Companies</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Media &amp; Agencies</controllingFieldValue>
+            <valueName>Fair Construction</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Media &amp; Agencies</controllingFieldValue>
+            <valueName>Film Studios</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Media &amp; Agencies</controllingFieldValue>
+            <valueName>Internet companies</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Media &amp; Agencies</controllingFieldValue>
+            <valueName>Lettershops</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Media &amp; Agencies</controllingFieldValue>
+            <valueName>Market Research</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Media &amp; Agencies</controllingFieldValue>
+            <valueName>Music Industry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Media &amp; Agencies</controllingFieldValue>
+            <valueName>Newspaper Publishers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Media &amp; Agencies</controllingFieldValue>
+            <valueName>PR Agencies</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Media &amp; Agencies</controllingFieldValue>
+            <valueName>Printers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Media &amp; Agencies</controllingFieldValue>
+            <valueName>Radio stations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Media &amp; Agencies</controllingFieldValue>
+            <valueName>Trade Publishers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Media &amp; Agencies</controllingFieldValue>
+            <valueName>TV Channel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Media &amp; Agencies</controllingFieldValue>
+            <valueName>Wholesale Grosso</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Media &amp; Agencies</controllingFieldValue>
+            <valueName>SEO Agency</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transport &amp; Logistics</controllingFieldValue>
+            <valueName>Agricultural Engineering</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transport &amp; Logistics</controllingFieldValue>
+            <valueName>Car Service</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transport &amp; Logistics</controllingFieldValue>
+            <valueName>Bus Company</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transport &amp; Logistics</controllingFieldValue>
+            <valueName>Cableways</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transport &amp; Logistics</controllingFieldValue>
+            <valueName>Car Paintwork</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transport &amp; Logistics</controllingFieldValue>
+            <valueName>Courier Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transport &amp; Logistics</controllingFieldValue>
+            <valueName>Freight Forwarders</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transport &amp; Logistics</controllingFieldValue>
+            <valueName>Harbors</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transport &amp; Logistics</controllingFieldValue>
+            <valueName>Logistics</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transport &amp; Logistics</controllingFieldValue>
+            <valueName>Rail Companies</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transport &amp; Logistics</controllingFieldValue>
+            <valueName>Shipping companies</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transport &amp; Logistics</controllingFieldValue>
+            <valueName>Taxi Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transport &amp; Logistics</controllingFieldValue>
+            <valueName>Truck Service</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transport &amp; Logistics</controllingFieldValue>
+            <valueName>Washes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transport &amp; Logistics</controllingFieldValue>
+            <valueName>Furniture Shipping</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transport &amp; Logistics</controllingFieldValue>
+            <valueName>Car Cranes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wholesale</controllingFieldValue>
+            <valueName>Builder&apos;s Merchant</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wholesale</controllingFieldValue>
+            <valueName>Chemical Wholesale</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wholesale</controllingFieldValue>
+            <valueName>Construction Machine Retail</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wholesale</controllingFieldValue>
+            <valueName>Electrical Wholesalers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wholesale</controllingFieldValue>
+            <valueName>Flower Wholesale</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wholesale</controllingFieldValue>
+            <valueName>Large Consumers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wholesale</controllingFieldValue>
+            <valueName>Paper Wholesale</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wholesale</controllingFieldValue>
+            <valueName>Petroleum Houses</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wholesale</controllingFieldValue>
+            <valueName>Pharma Wholesale</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wholesale</controllingFieldValue>
+            <valueName>Plumbing Wholesale</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wholesale</controllingFieldValue>
+            <valueName>Steel Wholesale</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wholesale</controllingFieldValue>
+            <valueName>Tobacco</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wholesale</controllingFieldValue>
+            <valueName>Wholesale-Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wholesale</controllingFieldValue>
+            <valueName>Wholesale Technique</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wholesale</controllingFieldValue>
+            <valueName>Auto Parts Trade</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wholesale</controllingFieldValue>
+            <valueName>Buying Group</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wholesale</controllingFieldValue>
+            <valueName>Gastro Outfitters</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wholesale</controllingFieldValue>
+            <valueName>Hairdresser Wholesale</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wholesale</controllingFieldValue>
+            <valueName>Wholesale Cleaning</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DIY &amp; Furnishings</controllingFieldValue>
+            <valueName>Bedroom Stores</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DIY &amp; Furnishings</controllingFieldValue>
+            <valueName>Carpet Shopping</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DIY &amp; Furnishings</controllingFieldValue>
+            <valueName>DIY</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DIY &amp; Furnishings</controllingFieldValue>
+            <valueName>Flower Shops</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DIY &amp; Furnishings</controllingFieldValue>
+            <valueName>Furniture Stores</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DIY &amp; Furnishings</controllingFieldValue>
+            <valueName>Garden Store</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DIY &amp; Furnishings</controllingFieldValue>
+            <valueName>Gift Shop</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DIY &amp; Furnishings</controllingFieldValue>
+            <valueName>Home Textiles</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DIY &amp; Furnishings</controllingFieldValue>
+            <valueName>Kitchen Shopping</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consumer Goods Manufacturers</controllingFieldValue>
+            <valueName>Bicycle Manufacturer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consumer Goods Manufacturers</controllingFieldValue>
+            <valueName>Brown Goods</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consumer Goods Manufacturers</controllingFieldValue>
+            <valueName>Camera Maker</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consumer Goods Manufacturers</controllingFieldValue>
+            <valueName>Coffin Maker</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consumer Goods Manufacturers</controllingFieldValue>
+            <valueName>Computer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consumer Goods Manufacturers</controllingFieldValue>
+            <valueName>Footwear Industry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consumer Goods Manufacturers</controllingFieldValue>
+            <valueName>Furnishing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consumer Goods Manufacturers</controllingFieldValue>
+            <valueName>Furniture Industry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consumer Goods Manufacturers</controllingFieldValue>
+            <valueName>Glasses</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consumer Goods Manufacturers</controllingFieldValue>
+            <valueName>Household Goods</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consumer Goods Manufacturers</controllingFieldValue>
+            <valueName>Jewelry Manufacturer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consumer Goods Manufacturers</controllingFieldValue>
+            <valueName>Kitchen Manufacturer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consumer Goods Manufacturers</controllingFieldValue>
+            <valueName>Leather Goods</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consumer Goods Manufacturers</controllingFieldValue>
+            <valueName>Leisure Products</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consumer Goods Manufacturers</controllingFieldValue>
+            <valueName>Light Manufacturer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consumer Goods Manufacturers</controllingFieldValue>
+            <valueName>Material Manufacturer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consumer Goods Manufacturers</controllingFieldValue>
+            <valueName>Musical Instruments</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consumer Goods Manufacturers</controllingFieldValue>
+            <valueName>Office Furniture</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consumer Goods Manufacturers</controllingFieldValue>
+            <valueName>Office Supplies</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consumer Goods Manufacturers</controllingFieldValue>
+            <valueName>Perfume Industry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consumer Goods Manufacturers</controllingFieldValue>
+            <valueName>Porcelain Factory</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consumer Goods Manufacturers</controllingFieldValue>
+            <valueName>Prams Industrial</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consumer Goods Manufacturers</controllingFieldValue>
+            <valueName>Sporting Goods</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consumer Goods Manufacturers</controllingFieldValue>
+            <valueName>Telecommunications</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consumer Goods Manufacturers</controllingFieldValue>
+            <valueName>Textile Industry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consumer Goods Manufacturers</controllingFieldValue>
+            <valueName>Toymaker</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consumer Goods Manufacturers</controllingFieldValue>
+            <valueName>Underwear</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consumer Goods Manufacturers</controllingFieldValue>
+            <valueName>Watchmaker</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consumer Goods Manufacturers</controllingFieldValue>
+            <valueName>White Goods</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

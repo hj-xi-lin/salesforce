@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ON_Email__c</fullName>
+    <description>Used to transfer the billing email to the invoice</description>
+    <externalId>false</externalId>
+    <formula>IF(
+Bulk_Invoicing__c = TRUE,
+IF(
+ISBLANK(Account.Parent.Parent.Billing_Email__c),
+Account.Parent.Billing_Email__c,
+Account.Parent.Parent.Billing_Email__c
+),
+Billing_Email__c
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Used to transfer the billing email to the invoice</inlineHelpText>
+    <label>JustOn: Email</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

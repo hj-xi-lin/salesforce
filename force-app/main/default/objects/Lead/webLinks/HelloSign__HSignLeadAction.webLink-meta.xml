@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HelloSign__HSignLeadAction</fullName>
+    <availability>online</availability>
+    <description>Clickable button on the Lead record to use the Dropbox Sign product</description>
+    <displayType>button</displayType>
+    <height>600</height>
+    <linkType>page</linkType>
+    <masterLabel>Use Dropbox Sign</masterLabel>
+    <openType>noSidebar</openType>
+    <page>HelloSign__HSignLeadAction</page>
+    <protected>false</protected>
+</WebLink>

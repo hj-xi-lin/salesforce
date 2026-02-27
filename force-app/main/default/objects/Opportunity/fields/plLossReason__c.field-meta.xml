@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>plLossReason__c</fullName>
+    <description>should be filled to later understand why we lose certain clients</description>
+    <inlineHelpText>Jede Opportunity in Stage=&quot;Closed Lost&quot;, also gelostete Opportunity, sollte einen Lost Reason besitzen. Mehr Informationen zu den einzelnen Lost Reasons finden du auf Confluence. 
+Eine spätere Analyse warum die Opportunities verloren worden sind, ist nützlich um gegebenenfalls Anpassungen am Sales Prozess oder Produkt vorzunehmen.</inlineHelpText>
+    <label>Loss Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Currently not hiring</fullName>
+                <default>false</default>
+                <label>Currently not hiring</label>
+            </value>
+            <value>
+                <fullName>Currently no budget available</fullName>
+                <default>false</default>
+                <label>Currently no budget available</label>
+            </value>
+            <value>
+                <fullName>Currently no focus jobs</fullName>
+                <default>false</default>
+                <label>Currently no focus jobs</label>
+            </value>
+            <value>
+                <fullName>Not happy with price</fullName>
+                <default>false</default>
+                <label>Not happy with price</label>
+            </value>
+            <value>
+                <fullName>Not happy with selection of features</fullName>
+                <default>false</default>
+                <label>Not happy with selection of features</label>
+            </value>
+            <value>
+                <fullName>Not happy with job performance</fullName>
+                <default>false</default>
+                <label>Not happy with job performance</label>
+            </value>
+            <value>
+                <fullName>Not happy with candidate quality</fullName>
+                <default>false</default>
+                <label>Not happy with candidate quality</label>
+            </value>
+            <value>
+                <fullName>No need for paid recruiting measures</fullName>
+                <default>false</default>
+                <label>No need for paid recruiting measures</label>
+            </value>
+            <value>
+                <fullName>All contacts are ghosting</fullName>
+                <default>false</default>
+                <label>All contacts are ghosting</label>
+            </value>
+            <value>
+                <fullName>Blacklisted</fullName>
+                <default>false</default>
+                <label>Blacklisted</label>
+            </value>
+            <value>
+                <fullName>Bankrupt</fullName>
+                <default>false</default>
+                <label>Bankrupt</label>
+            </value>
+            <value>
+                <fullName>Dependent on decision at different corporate level</fullName>
+                <default>false</default>
+                <label>Dependent on decision at different corporate level</label>
+            </value>
+            <value>
+                <fullName>Dependent on ATS integration</fullName>
+                <default>false</default>
+                <label>Dependent on ATS integration</label>
+            </value>
+            <value>
+                <fullName>Already won in SSSU Process</fullName>
+                <default>false</default>
+                <label>Already won in SSSU Process</label>
+            </value>
+            <value>
+                <fullName>Duplicate Opportunity</fullName>
+                <default>false</default>
+                <label>Duplicate Opportunity</label>
+            </value>
+            <value>
+                <fullName>Special Case</fullName>
+                <default>false</default>
+                <label>Special Case</label>
+            </value>
+            <value>
+                <fullName>Sonderkündigungsrecht used</fullName>
+                <default>false</default>
+                <label>Sonderkündigungsrecht used (REACH only)</label>
+            </value>
+            <value>
+                <fullName>Admin Only: Opp lost due to inactivity</fullName>
+                <default>false</default>
+                <label>Admin Only: Opp lost due to inactivity</label>
+            </value>
+            <value>
+                <fullName>Admin Only: Clean-Up Sales Funnel</fullName>
+                <default>false</default>
+                <label>Admin Only: Clean-Up Sales Funnel</label>
+            </value>
+            <value>
+                <fullName>Jobseeker_SSSU_only</fullName>
+                <default>false</default>
+                <label>(SSSU only) Jobseeker</label>
+            </value>
+            <value>
+                <fullName>Fraudulent_SSSU_only</fullName>
+                <default>false</default>
+                <label>(SSSU only) Fraudulent</label>
+            </value>
+            <value>
+                <fullName>#N/A​</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>#N/A​</label>
+            </value>
+            <value>
+                <fullName>1_No Open Jobs</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>1_No Open Jobs</label>
+            </value>
+            <value>
+                <fullName>2_Never paying for recruiting</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>2_Never paying for recruiting</label>
+            </value>
+            <value>
+                <fullName>3_Happy with competitor solution (which?)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>3_Happy with competitor solution (which?)</label>
+            </value>
+            <value>
+                <fullName>4_Doing same service inhouse</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>4_Doing same service inhouse</label>
+            </value>
+            <value>
+                <fullName>5_TRY CEO MAILING</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>5_TRY CEO MAILING</label>
+            </value>
+            <value>
+                <fullName>6_Rejected by HeyJobs (inbound)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>6_Rejected by HeyJobs (inbound)</label>
+            </value>
+            <value>
+                <fullName>7_Not reached after 13 attempts</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>7_Not reached after 13 attempts</label>
+            </value>
+            <value>
+                <fullName>8_CleaningOut</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>8_CleaningOut</label>
+            </value>
+            <value>
+                <fullName>8_Other (Free Text)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>8_Other (Free Text)</label>
+            </value>
+            <value>
+                <fullName>9_Other (Free Text)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>9_Other (Free Text)</label>
+            </value>
+            <value>
+                <fullName>All Positions filled at the moment</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>All Positions filled at the moment</label>
+            </value>
+            <value>
+                <fullName>Blacklist</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Blacklist</label>
+            </value>
+            <value>
+                <fullName>Can&apos;t meet pricing</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Can&apos;t meet pricing</label>
+            </value>
+            <value>
+                <fullName>Change in contact person</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Change in contact person</label>
+            </value>
+            <value>
+                <fullName>Change of contact person</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Change of contact person</label>
+            </value>
+            <value>
+                <fullName>Cleanup Sales Funnel</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Cleanup Sales Funnel</label>
+            </value>
+            <value>
+                <fullName>Cleanup Salesfunnel</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Cleanup Salesfunnel</label>
+            </value>
+            <value>
+                <fullName>Cleaup Sales Funnel</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Cleaup Sales Funnel</label>
+            </value>
+            <value>
+                <fullName>Contact Later</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Contact Later</label>
+            </value>
+            <value>
+                <fullName>Contact person no longer available</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Contact person no longer available</label>
+            </value>
+            <value>
+                <fullName>Daughter company decision</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Daughter company decision</label>
+            </value>
+            <value>
+                <fullName>Dealbreaker: ATS integration</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Dealbreaker: ATS integration</label>
+            </value>
+            <value>
+                <fullName>Dealbreaker: ATS integrationt</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Dealbreaker: ATS integrationt</label>
+            </value>
+            <value>
+                <fullName>Depending on parent company decision</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Depending on parent company decision</label>
+            </value>
+            <value>
+                <fullName>Do not contact again</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Do not contact again</label>
+            </value>
+            <value>
+                <fullName>Does not exist anymore</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Does not exist anymore</label>
+            </value>
+            <value>
+                <fullName>Doing it inhouse</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Doing it inhouse</label>
+            </value>
+            <value>
+                <fullName>Doint it inhouse</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Doint it inhouse</label>
+            </value>
+            <value>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Duplicate</label>
+            </value>
+            <value>
+                <fullName>Happy with existing methods</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Happy with existing methods</label>
+            </value>
+            <value>
+                <fullName>Happy with existing methods (paid)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Happy with existing methods (paid)</label>
+            </value>
+            <value>
+                <fullName>Happy with existing methods (unpaid)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Happy with existing methods (unpaid)</label>
+            </value>
+            <value>
+                <fullName>Hiring Freeze</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Hiring Freeze</label>
+            </value>
+            <value>
+                <fullName>interested, but Pilot Amount &lt;10.000€</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Interested, but Pilot Amount &lt;10.000€</label>
+            </value>
+            <value>
+                <fullName>Internal blocker</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Internal blocker</label>
+            </value>
+            <value>
+                <fullName>Lead Score C</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lead Score C</label>
+            </value>
+            <value>
+                <fullName>Long term contract negotiation</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Long term contract negotiation</label>
+            </value>
+            <value>
+                <fullName>Loss Reason</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Loss Reason</label>
+            </value>
+            <value>
+                <fullName>Lost to Competitor</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lost to Competitor</label>
+            </value>
+            <value>
+                <fullName>No Budget at the moment</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>No Budget at the moment</label>
+            </value>
+            <value>
+                <fullName>No Budget atm</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>No Budget atm</label>
+            </value>
+            <value>
+                <fullName>No Focus Jobs atm</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>No Focus Jobs atm</label>
+            </value>
+            <value>
+                <fullName>No Hiring Need atm</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>No Hiring Need atm</label>
+            </value>
+            <value>
+                <fullName>No Need at the moment</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>No Need at the moment</label>
+            </value>
+            <value>
+                <fullName>No Show Ensemble Demo</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>No Show Ensemble Demo</label>
+            </value>
+            <value>
+                <fullName>No System Integration</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>No System Integration</label>
+            </value>
+            <value>
+                <fullName>No System Integrationt</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>No System Integrationt</label>
+            </value>
+            <value>
+                <fullName>No focus jobs at the moment</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>No focus jobs at the moment</label>
+            </value>
+            <value>
+                <fullName>No free service</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>No free service</label>
+            </value>
+            <value>
+                <fullName>No Further Hiring Need</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>No further hiring need</label>
+            </value>
+            <value>
+                <fullName>No further hiring needs</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>No further hiring needs</label>
+            </value>
+            <value>
+                <fullName>No interest w/o reason</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>No interest w/o reason</label>
+            </value>
+            <value>
+                <fullName>No need atm</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>No need atm</label>
+            </value>
+            <value>
+                <fullName>No potential due to size</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>No potential due to size</label>
+            </value>
+            <value>
+                <fullName>No relevant contact person identifiable</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>No relevant contact person identifiable</label>
+            </value>
+            <value>
+                <fullName>Non-Responsive after 5 Tries</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Non-Responsive after 5 Tries</label>
+            </value>
+            <value>
+                <fullName>Non-responsive after 7 tries</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Non-responsive after 7 tries</label>
+            </value>
+            <value>
+                <fullName>Not FocusIndustry - Engineer</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Not FocusIndustry - Engineer</label>
+            </value>
+            <value>
+                <fullName>Not FocusIndustry - IT</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Not FocusIndustry - IT</label>
+            </value>
+            <value>
+                <fullName>Not FocusIndustry - Other</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Not FocusIndustry - Other</label>
+            </value>
+            <value>
+                <fullName>Not Interested</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Not Interested</label>
+            </value>
+            <value>
+                <fullName>Not Interested in Rescheduling</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Not Interested in Rescheduling</label>
+            </value>
+            <value>
+                <fullName>Not active in Germany</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Not active in Germany</label>
+            </value>
+            <value>
+                <fullName>Not active in HeyJobs&apos; service countries</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Not active in HeyJobs&apos; service countries</label>
+            </value>
+            <value>
+                <fullName>Not happy with Performance</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Not happy with Performance</label>
+            </value>
+            <value>
+                <fullName>On Hold (&gt;3 months)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>On Hold (&gt;3 months)</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Parent Company Dec.</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Parent Company Dec.</label>
+            </value>
+            <value>
+                <fullName>Performance - No hires made</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Performance - No hires made</label>
+            </value>
+            <value>
+                <fullName>Performance - Too few applicants</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Performance - Too few applicants</label>
+            </value>
+            <value>
+                <fullName>Performance- Bad applicant quality</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Performance- Bad applicant quality</label>
+            </value>
+            <value>
+                <fullName>Prospector change</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Prospector change</label>
+            </value>
+            <value>
+                <fullName>SSSU Pilot closed</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>SSSU Pilot closed</label>
+            </value>
+            <value>
+                <fullName>Switch to Competitor</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Switch to Competitor</label>
+            </value>
+            <value>
+                <fullName>Switch to Competitort</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Switch to Competitort</label>
+            </value>
+            <value>
+                <fullName>Test</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Test</label>
+            </value>
+            <value>
+                <fullName>Thought HeyJobs&apos; was a free service</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Thought HeyJobs&apos; was a free service</label>
+            </value>
+            <value>
+                <fullName>Timing</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Timing</label>
+            </value>
+            <value>
+                <fullName>Too Expensive</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Too Expensive</label>
+            </value>
+            <value>
+                <fullName>XX_MAIL_NEVERAPPROACH</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>XX_MAIL_NEVERAPPROACH</label>
+            </value>
+            <value>
+                <fullName>Yearly Budget depleted</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Yearly Budget depleted</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

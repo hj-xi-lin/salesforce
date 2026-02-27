@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Timestamp_Referral__c</fullName>
+    <description>Tracking of referrals. Date and time when the lead was created if a Referred_by_ID is populated.</description>
+    <inlineHelpText>Tracking of referrals. Date and time when the lead was created if a Referred_by_ID is populated.</inlineHelpText>
+    <label>Timestamp Referral</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>DateTime</type>
+</CustomField>

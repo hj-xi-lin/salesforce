@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>StageChangeRestrictions_ACM</fullName>
+    <active>true</active>
+    <description>Stage Change Restrictions for RT 2ndPurchase and ACM.
+RO-1630</description>
+    <errorConditionFormula>AND(
+OR(
+RecordType.DeveloperName = &quot;Account_Management&quot;,
+RecordType.DeveloperName = &quot;SecondPurchase&quot;
+),
+ISCHANGED(StageName),
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;,
+
+OR(
+AND(
+ISPICKVAL(PRIORVALUE(StageName), &quot;In Discussion&quot;),
+ISPICKVAL(StageName, &quot;Pre- Discussion&quot;)
+),
+
+AND(
+ISPICKVAL(PRIORVALUE(StageName), &quot;Offer&quot;),
+OR(
+ISPICKVAL(StageName, &quot;Pre- Discussion&quot;),
+ISPICKVAL(StageName, &quot;In Discussion&quot;)
+)
+)
+)
+
+)</errorConditionFormula>
+    <errorMessage>Opportunity cannot be moved to the selected stage. Please reach out to your team lead.</errorMessage>
+</ValidationRule>

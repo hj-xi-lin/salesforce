@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bulk_Invoicing__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>RO - 2134
+Indicates if the Opportunity is part of the Bulk Invoicing</description>
+    <inlineHelpText>Zeigt, ob die Opportunity Teil einer Sammelrechnung ist. Sammelrechnungen sind nur für Agencies möglich. 
+
+Mehr Informationen findest du hier https://heyjobs.atlassian.net/wiki/spaces/ESE/pages/3677487148/Monthly+Bulk+Invoices+for+Agency.</inlineHelpText>
+    <label>Bulk Invoicing</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

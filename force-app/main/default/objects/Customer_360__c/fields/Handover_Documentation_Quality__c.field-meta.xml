@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Handover_Documentation_Quality__c</fullName>
+    <description>Quality assessment of the handover documentation provided by ACM after Internal Handover Call</description>
+    <inlineHelpText>Bewertung der Qualität der Handover-Dokumentation durch den ACM nach dem Internal Handover Call.</inlineHelpText>
+    <label>Handover Documentation Quality</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>OK</fullName>
+                <default>false</default>
+                <label>OK</label>
+            </value>
+            <value>
+                <fullName>Minor Gaps (filled in Internal handover)</fullName>
+                <default>false</default>
+                <label>Minor Gaps (filled in Internal handover)</label>
+            </value>
+            <value>
+                <fullName>Major Gaps (filled in Internal Handover)</fullName>
+                <default>false</default>
+                <label>Major Gaps (filled in Internal Handover)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

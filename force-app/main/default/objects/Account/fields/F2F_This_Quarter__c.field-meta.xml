@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>F2F_This_Quarter__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>RO-2433</description>
+    <inlineHelpText>Indikator, ob in diesem Quartal persönliche Treffen mit KundInnen geplant sind, um die Beziehung zu stärken und Verkaufschancen zu verbessern.</inlineHelpText>
+    <label>F2F This Quarter</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

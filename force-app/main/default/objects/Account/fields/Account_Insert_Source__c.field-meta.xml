@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Insert_Source__c</fullName>
+    <description>This field is populated for mass inserts and defines the source of the account information. This is used for tracking and cleanup.</description>
+    <inlineHelpText>This field is populated for mass inserts and defines the source of the account information. This is used for tracking and cleanup.</inlineHelpText>
+    <label>Account Insert Source</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>e-Commerce</fullName>
+                <default>false</default>
+                <label>e-Commerce</label>
+            </value>
+            <value>
+                <fullName>WZW</fullName>
+                <default>false</default>
+                <label>WZW</label>
+            </value>
+            <value>
+                <fullName>CreFo</fullName>
+                <default>false</default>
+                <label>CreFo</label>
+            </value>
+            <value>
+                <fullName>Index Anzeigendaten</fullName>
+                <default>false</default>
+                <label>Index Anzeigendaten</label>
+            </value>
+            <value>
+                <fullName>Dealfront</fullName>
+                <default>false</default>
+                <label>Dealfront</label>
+            </value>
+            <value>
+                <fullName>Index</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Index</label>
+            </value>
+            <value>
+                <fullName>WZW_0Employee_sub50_02_2021</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>WZW_0Employee_sub50_02_2021</label>
+            </value>
+            <value>
+                <fullName>WZW_1-50Employee_02_2021</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>WZW_1-50Employee_02_2021</label>
+            </value>
+            <value>
+                <fullName>WZW_AT_02_2022</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>WZW_AT_02_2022</label>
+            </value>
+            <value>
+                <fullName>WZW_Agency_12_2021</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>WZW_Agency_12_2021</label>
+            </value>
+            <value>
+                <fullName>WZW_CbyC_1_07_2021</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>WZW_CbyC_1_07_2021</label>
+            </value>
+            <value>
+                <fullName>WZW_CbyC_2_07_2021</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>WZW_CbyC_2_07_2021</label>
+            </value>
+            <value>
+                <fullName>e-Commerce 02_2021</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>e-Commerce 02_2021</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

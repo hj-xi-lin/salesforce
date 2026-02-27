@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ONB2__VATLastValidation__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Holds the timestamp of the last VAT number validation.</description>
+    <inlineHelpText>Holds the timestamp of the last VAT number validation.</inlineHelpText>
+    <label>Last VAT Validation</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>DateTime</type>
+</CustomField>

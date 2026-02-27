@@ -190,7 +190,7 @@ Zap: https://zapier.com/editor/227942726/draft/227942726/sample</description>
         <fullName>Test_Salesforce</fullName>
         <apiVersion>60.0</apiVersion>
         <description>RO-1947</description>
-        <endpointUrl>REPLACE_WITH_SLACK_WEBHOOK_URL</endpointUrl>
+        <endpointUrl>https://hooks.slack.com/triggers/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</endpointUrl>
         <fields>AccountId</fields>
         <fields>Account_Owner__c</fields>
         <fields>Id</fields>

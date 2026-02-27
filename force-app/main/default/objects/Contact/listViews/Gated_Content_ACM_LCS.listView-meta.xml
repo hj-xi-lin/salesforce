@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Gated_Content_ACM_LCS</fullName>
+    <columns>CONTACT.CREATED_DATE</columns>
+    <columns>LAST_CALL_DATE</columns>
+    <columns>FULL_NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Account.Stage_ACM__c</columns>
+    <columns>Account_Owner__c</columns>
+    <columns>Account.Segment__c</columns>
+    <columns>CONTACT.PHONE1</columns>
+    <columns>CONTACT.EMAIL</columns>
+    <columns>CONTACT.LEAD_SOURCE</columns>
+    <columns>domain_userid__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>domain_userid__c</field>
+        <operation>contains</operation>
+        <value>urn:li,gated content</value>
+    </filters>
+    <filters>
+        <field>CONTACT.EMAIL</field>
+        <operation>notContain</operation>
+        <value>test</value>
+    </filters>
+    <filters>
+        <field>FULL_NAME</field>
+        <operation>notContain</operation>
+        <value>heyjobs</value>
+    </filters>
+    <filters>
+        <field>Account_Owner__c</field>
+        <operation>notContain</operation>
+        <value>lead gen,adam martynel,Maurice Eisenhofer,Fynn Gensicke,Moritz Heyer,Laura Ini,Jakob Karutz,Mahler,Christo Nakos,Perst,Vinzent Keilholz,Tijana Savin,Julian Schreiben,Sophie Steinke,Karsten Thiede</value>
+    </filters>
+    <filters>
+        <field>Account.Segment__c</field>
+        <operation>notEqual</operation>
+        <value>SMB</value>
+    </filters>
+    <label>Gated Content_ACM_LCS</label>
+</ListView>

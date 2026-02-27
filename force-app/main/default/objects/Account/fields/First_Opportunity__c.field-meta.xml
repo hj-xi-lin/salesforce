@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>First_Opportunity__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>RO-1165 / To track the first Opportunity, since the first Opportunity not always Closed Won
+Used in Declarative Lookup Summaries</description>
+    <label>First Opportunity</label>
+    <referenceTo>Opportunity</referenceTo>
+    <relationshipLabel>Accounts (First Opportunity)</relationshipLabel>
+    <relationshipName>Accounts2</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

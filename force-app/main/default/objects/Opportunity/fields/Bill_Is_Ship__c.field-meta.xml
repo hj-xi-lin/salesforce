@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bill_Is_Ship__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Rechnungsadresse entspricht der Leistungsadresse. Wenn TRUE (checked) wird auf den Angeboten und Rechnungen automatisch die Rechnungsadresse als Leistungsadresse eingetragen.</inlineHelpText>
+    <label>Bill Is Ship</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

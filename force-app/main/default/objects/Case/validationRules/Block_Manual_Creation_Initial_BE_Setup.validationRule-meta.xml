@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Block_Manual_Creation_Initial_BE_Setup</fullName>
+    <active>true</active>
+    <description>Block users from manually creating Initial BE Setup cases. RO-1761</description>
+    <errorConditionFormula>AND(
+RecordType.DeveloperName = &quot;OnboardingCase&quot;,
+ISNEW(),
+NOT(Created_by_Automation__c),
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;,
+$Profile.Name &lt;&gt; &quot;Customer Operations Manager&quot;,
+$Profile.Name &lt;&gt; &quot;Head of Customer Operations&quot;
+)</errorConditionFormula>
+    <errorMessage>This case can never be created manually, but automatically by closing a sales opportunity.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Warm_or_Hot_Responses</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Account_Owner__c</columns>
+    <columns>CONTACT.FIRST_NAME</columns>
+    <columns>CONTACT.LAST_NAME</columns>
+    <columns>CONTACT.SALUTATION</columns>
+    <columns>fmlLetterSalutation__c</columns>
+    <columns>CONTACT.EMAIL</columns>
+    <columns>Title_Categories__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Responded_to_Email__c</field>
+        <operation>equals</operation>
+        <value>Hot,Warm</value>
+    </filters>
+    <label>SMB - Warm or Hot Responses</label>
+</ListView>

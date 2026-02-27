@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Timestamp_Demo_Held__c</fullName>
+    <description>RO-281 Tracks if the Demo took place. Populates by flow in 1 day after the Event&apos;s Start Time and if the Event was not cancelled.</description>
+    <label>Timestamp Demo Held</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Date</type>
+</CustomField>

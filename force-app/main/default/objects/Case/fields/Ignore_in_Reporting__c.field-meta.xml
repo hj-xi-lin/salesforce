@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ignore_in_Reporting__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Go-Live Scheduled issue brought problems to CusOps&apos; metrics. Therefore, I add this field to extract such Cases from their normal reporting. Could be useful for other situations. Accessible only by admins.</description>
+    <label>Ignore in Reporting</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

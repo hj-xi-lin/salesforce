@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Timestamp_latest_opp_contact_role_Date__c</fullName>
+    <description>Date field only for the purpose of syncing timestamp latest opp contact role to HS instead of the date/time field.</description>
+    <formula>Timestamp_Latest_Opp_Contact_Role__c</formula>
+    <label>Timestamp latest opp contact role (Date)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

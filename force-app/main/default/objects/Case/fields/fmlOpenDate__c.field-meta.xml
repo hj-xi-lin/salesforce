@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>fmlOpenDate__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(MONTH(DATEVALUE(  CreatedDate  )), 
+1, TEXT(YEAR(DATEVALUE(CreatedDate ))) + &quot;.01 &quot;, 
+2, TEXT(YEAR(DATEVALUE(CreatedDate ))) + &quot;.02 &quot;, 
+3, TEXT(YEAR(DATEVALUE(CreatedDate ))) + &quot;.03 &quot;, 
+4, TEXT(YEAR(DATEVALUE(CreatedDate ))) + &quot;.04 &quot;, 
+5, TEXT(YEAR(DATEVALUE(CreatedDate ))) + &quot;.05 &quot;, 
+6, TEXT(YEAR(DATEVALUE(CreatedDate ))) + &quot;.06 &quot;, 
+7, TEXT(YEAR(DATEVALUE(CreatedDate ))) + &quot;.07 &quot;, 
+8, TEXT(YEAR(DATEVALUE(CreatedDate ))) + &quot;.08 &quot;, 
+9, TEXT(YEAR(DATEVALUE(CreatedDate ))) + &quot;.09 &quot;, 
+10, TEXT(YEAR(DATEVALUE(CreatedDate ))) + &quot;.10 &quot;, 
+11, TEXT(YEAR(DATEVALUE(CreatedDate ))) + &quot;.11 &quot;, 
+12, TEXT(YEAR(DATEVALUE(CreatedDate ))) + &quot;.12 &quot;, 
+NULL
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>OpenDate</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

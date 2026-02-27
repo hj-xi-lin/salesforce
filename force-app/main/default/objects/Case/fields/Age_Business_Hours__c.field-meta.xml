@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Age_Business_Hours__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(DATEVALUE(CreatedDate) = DATEVALUE(ClosedDate),  
+(ClosedDate - CreatedDate) * 24,  
+((CASE(MOD(DATEVALUE(CreatedDate) - DATE(1985,6,24),7),  
+0 , CASE( MOD(DATEVALUE(ClosedDate) - DATEVALUE(CreatedDate) ,7),1,2,2,3,3,4,4,5,5,5,6,5,1),  
+1 , CASE( MOD(DATEVALUE(ClosedDate) - DATEVALUE(CreatedDate) ,7),1,2,2,3,3,4,4,4,5,4,6,5,1),  
+2 , CASE( MOD(DATEVALUE(ClosedDate) - DATEVALUE(CreatedDate) ,7),1,2,2,3,3,3,4,3,5,4,6,5,1),  
+3 , CASE( MOD(DATEVALUE(ClosedDate) - DATEVALUE(CreatedDate) ,7),1,2,2,2,3,2,4,3,5,4,6,5,1),  
+4 , CASE( MOD(DATEVALUE(ClosedDate) - DATEVALUE(CreatedDate) ,7),1,1,2,1,3,2,4,3,5,4,6,5,1),  
+5 , CASE( MOD(DATEVALUE(ClosedDate) - DATEVALUE(CreatedDate) ,7),1,0,2,1,3,2,4,3,5,4,6,5,0),  
+6 , CASE( MOD(DATEVALUE(ClosedDate) - DATEVALUE(CreatedDate) ,7),1,1,2,2,3,3,4,4,5,5,6,5,0),  
+999)  
++ (FLOOR((DATEVALUE(ClosedDate) - DATEVALUE(CreatedDate))/7)*5)  
+- 2) * 9)  
++  
+MAX((  
+DATETIMEVALUE(TEXT(YEAR(DATEVALUE(CreatedDate))) &amp; &quot;-&quot; &amp; TEXT(MONTH(DATEVALUE(CreatedDate))) &amp; &quot;-&quot; &amp; TEXT(DAY(DATEVALUE(CreatedDate))) &amp; &quot; 09:00:00&quot;) - CreatedDate + 1) * 24, 0))  
++  
+MAX((ClosedDate -  
+DATETIMEVALUE(TEXT(YEAR(DATEVALUE(ClosedDate))) &amp; &quot;-&quot; &amp; TEXT(MONTH(DATEVALUE(ClosedDate))) &amp; &quot;-&quot; &amp; TEXT(DAY(DATEVALUE(ClosedDate))) &amp; &quot; 18:00:00&quot;)) * 24, 0)</formula>
+    <label>Age Business Hours</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>1</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

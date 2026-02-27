@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ON_Template__c</fullName>
+    <description>Defines the correct template &quot;Flexible Budgets&quot; according to the Service Country set at the account (AT or DE)</description>
+    <externalId>false</externalId>
+    <formula>CASE(
+Account.Service_Country__c,
+&apos;AT&apos;, &apos;a0v1v00000je2rAAAQ&apos;,
+&apos;a0v1v00000jCJ5zAAG&apos;
+)
+
+
+
+/* up to 22.03.2022:
+&apos;a0v1v00000jCJ5zAAG&apos;
+*/</formula>
+    <inlineHelpText>Defines the correct template &quot;Flexible Budgets&quot; according to the Service Country set at the account (AT or DE).</inlineHelpText>
+    <label>JustOn: Template</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

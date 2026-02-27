@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IntOps_ATS_Onboarding_Queue_Duty_View</fullName>
+    <booleanFilter>1 AND 5 AND (((2 AND 3) OR (6 AND 7)) AND 4)</booleanFilter>
+    <columns>GTM_Motion_Case__c</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>OWNER_NAME</columns>
+    <columns>Data_complete__c</columns>
+    <columns>Label__c</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>Product_Type__c</columns>
+    <columns>Planned_Reach_Campaign_Start_Date__c</columns>
+    <columns>Actual_REACH_Campaign_start_date__c</columns>
+    <columns>Due_Date__c</columns>
+    <columns>CASES.RECORDTYPE</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ATS_Name_Account__c</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Lost,Fraud,Closed,Internal Handover,Customer Onboarding</value>
+    </filters>
+    <filters>
+        <field>CASES.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Case.ATS_New_Onboarding,Case.ATS_Feasibility_Check</value>
+    </filters>
+    <filters>
+        <field>GTM_Motion_Case__c</field>
+        <operation>equals</operation>
+        <value>Agency Sales</value>
+    </filters>
+    <filters>
+        <field>CASES.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Case.ATS_Feasibility_Check,Case.ATS_Proof_of_Concept_for_new_ATS,Case.ATS_New_Onboarding</value>
+    </filters>
+    <filters>
+        <field>OWNER_NAME</field>
+        <operation>contains</operation>
+        <value>ats</value>
+    </filters>
+    <filters>
+        <field>CASES.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Case.ATS_Feasibility_Check</value>
+    </filters>
+    <filters>
+        <field>Data_complete__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <label>[IntOps] ATS Onboarding Queue Duty View</label>
+</ListView>

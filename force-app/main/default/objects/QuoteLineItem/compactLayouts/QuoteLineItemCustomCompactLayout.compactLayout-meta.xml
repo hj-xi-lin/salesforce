@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>QuoteLineItemCustomCompactLayout</fullName>
+    <fields>Product2Id</fields>
+    <fields>ListPrice</fields>
+    <fields>Quantity</fields>
+    <fields>Subtotal</fields>
+    <fields>Discount</fields>
+    <fields>TotalPrice</fields>
+    <label>Quote Line Item Custom Compact Layout</label>
+</CompactLayout>

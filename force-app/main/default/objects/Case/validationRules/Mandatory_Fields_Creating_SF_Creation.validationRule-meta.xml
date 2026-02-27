@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mandatory_Fields_Creating_SF_Creation</fullName>
+    <active>true</active>
+    <description>To create a SF Account Creation case with Product Type HIRE, the billing Information and Company Location are mandatory. RO-1759, RO-1760</description>
+    <errorConditionFormula>AND(
+ISNEW(),
+RecordType.DeveloperName = &quot;SF_Account_Creation&quot;,
+ISPICKVAL(Product_Type__c, &quot;HIRE&quot;),
+OR(
+ ISBLANK( Company_Location__c ) ,
+ ISBLANK( Bill_To_Name__c ) ,
+ ISBLANK( Billing_Street__c ) ,
+ ISBLANK( Billing_Zip_Postal_Code__c ) ,
+ ISBLANK( Billing_City__c ) ,
+ ISBLANK( billing_Country__c ) ,
+ ISBLANK(Billing_Email__c )
+)
+)</errorConditionFormula>
+    <errorMessage>When creating a HIRE case, make sure to fill in the billing information and Company Location.</errorMessage>
+</ValidationRule>

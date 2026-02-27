@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_SSSU__c</fullName>
+    <description>RO-1156</description>
+    <formula>IF( AND(
+       NOT(ISBLANK(Timestamp_SSSU_Account__c)),
+       OR(
+          ISBLANK(First_Won_Opportunity__c),
+          AND(
+              NOT(ISBLANK(First_Won_Opportunity__c)),
+              First_Won_Opportunity__r.RecordType.DeveloperName = &quot;Customer_Self_Service&quot;
+              )
+         )
+       ),
+TRUE, FALSE)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Is SSSU?</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

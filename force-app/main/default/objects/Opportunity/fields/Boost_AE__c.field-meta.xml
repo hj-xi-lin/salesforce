@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Boost_AE__c</fullName>
+    <description>RO - 1631</description>
+    <inlineHelpText>This is the increased commission a partner receives, if the Boost Volume is surpassed. This AE serves as motivation and is always higher than the Base AE and is linked to certain conditions.</inlineHelpText>
+    <label>Boost AE</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Percent</type>
+</CustomField>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Probability</fullName>
+    <inlineHelpText>Jede Opportunity Stage besitzt eine Probability. Die Probability gibt die Wahrscheinlichkeit an, mit der die Opportunity gewonnen (“closed won”) wird. Je höher die Probability, desto wahrscheinlicher ist ein erfolgreicher Abschluss. Probabilities werden automatisch mit jedem Stage Movement gesetzt, können aber manuell nach jedem Stage Movement angepasst werden.</inlineHelpText>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>true</trackTrending>
+</CustomField>

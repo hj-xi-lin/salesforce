@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Recent_Conversion__c</fullName>
+    <description>RO-1605</description>
+    <inlineHelpText>Zeigt den letzten Marketing Engagement-Touchpoint an, den der Kontakt hatte.</inlineHelpText>
+    <label>Recent Conversion</label>
+    <length>1000</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>2</visibleLines>
+</CustomField>

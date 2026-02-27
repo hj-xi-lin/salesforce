@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opt_out_Direct_Mail__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Check in case the customer should not receive any direct mails.</description>
+    <inlineHelpText>Soll der Account &quot;direct mail&quot;, also &quot;Briefpost&quot; erhalten? Falls ja, lass das Feld &quot;unchecked&quot;</inlineHelpText>
+    <label>Legacy- Opt-out Direct Mail</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

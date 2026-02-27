@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Follow_Up_Reason__c</fullName>
+    <description>Follow up later reason for Second Purchase and Existing Business</description>
+    <inlineHelpText>Follow up later reason for Second Purchase and Existing Business</inlineHelpText>
+    <label>Legacy - Follow Up Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Einstellungsstopp / Keine Vakanzen</fullName>
+                <default>false</default>
+                <label>Hiring freeze / no open positions</label>
+            </value>
+            <value>
+                <fullName>Interne Strukturen</fullName>
+                <default>false</default>
+                <label>Internal blockers (new decision maker/contact)</label>
+            </value>
+            <value>
+                <fullName>Kein Budget / Budgetverhandlung in Zukunft</fullName>
+                <default>false</default>
+                <label>No budget atm / budget negotiations in future</label>
+            </value>
+            <value>
+                <fullName>Keine passenden Vakanzen</fullName>
+                <default>false</default>
+                <label>No focus jobs</label>
+            </value>
+            <value>
+                <fullName>Keine Priorität beim Kunden</fullName>
+                <default>false</default>
+                <label>No priority on client side</label>
+            </value>
+            <value>
+                <fullName>Nutzt Konkurrenz</fullName>
+                <default>false</default>
+                <label>Uses competitor</label>
+            </value>
+            <value>
+                <fullName>Unzufrieden mit HeyJobs</fullName>
+                <default>false</default>
+                <label>Not satisfied with HeyJobs</label>
+            </value>
+            <value>
+                <fullName>Zu teuer</fullName>
+                <default>false</default>
+                <label>Too expensive</label>
+            </value>
+            <value>
+                <fullName>ATS discussion</fullName>
+                <default>false</default>
+                <label>ATS discussion</label>
+            </value>
+            <value>
+                <fullName>No potential due to size</fullName>
+                <default>false</default>
+                <label>No potential due to size</label>
+            </value>
+            <value>
+                <fullName>Rescheduling Demo</fullName>
+                <default>false</default>
+                <label>Rescheduling Demo</label>
+            </value>
+            <value>
+                <fullName>On Hold</fullName>
+                <default>false</default>
+                <label>On Hold</label>
+            </value>
+            <value>
+                <fullName>Corona</fullName>
+                <default>false</default>
+                <label>Corona</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

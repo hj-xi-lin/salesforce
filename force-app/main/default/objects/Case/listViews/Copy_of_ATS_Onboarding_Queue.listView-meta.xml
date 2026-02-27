@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Copy_of_ATS_Onboarding_Queue</fullName>
+    <booleanFilter>1 AND ((2 AND (3 OR (4 AND 5) OR (7 and 8) OR (9 AND 10))) OR 6)</booleanFilter>
+    <columns>GTM_Motion_Case__c</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>OWNER_NAME</columns>
+    <columns>Data_complete__c</columns>
+    <columns>Label__c</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>Product_Type__c</columns>
+    <columns>Planned_Reach_Campaign_Start_Date__c</columns>
+    <columns>Actual_REACH_Campaign_start_date__c</columns>
+    <columns>Due_Date__c</columns>
+    <columns>CASES.RECORDTYPE</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ATS_Name_Account__c</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Lost,Fraud,Closed</value>
+    </filters>
+    <filters>
+        <field>CASES.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Case.ATS_New_Onboarding</value>
+    </filters>
+    <filters>
+        <field>Product_Type__c</field>
+        <operation>equals</operation>
+        <value>HIRE</value>
+    </filters>
+    <filters>
+        <field>Product_Type__c</field>
+        <operation>equals</operation>
+        <value>REACH</value>
+    </filters>
+    <filters>
+        <field>GTM_Motion_Case__c</field>
+        <operation>contains</operation>
+        <value>agency</value>
+    </filters>
+    <filters>
+        <field>CASES.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Case.ATS_Feasibility_Check</value>
+    </filters>
+    <filters>
+        <field>Product_Type__c</field>
+        <operation>equals</operation>
+        <value>REACH</value>
+    </filters>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>equals</operation>
+        <value>Technical Onboarding: Ready to start,Technical Onboarding: Staging,Technical Onboarding: Production</value>
+    </filters>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>equals</operation>
+        <value>Quality check</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>equals</operation>
+        <value>marie.ja,anne.som,eva.conr,ernesto.,jblan,nils.hei</value>
+    </filters>
+    <label>[IntOps] New ATS Onboarding Queue</label>
+</ListView>

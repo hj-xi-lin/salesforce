@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Estimated_Wallet_Size_Overwrite__c</fullName>
+    <inlineHelpText>[Admin Only] Technical Helper Field to manually overwrite EWS. If this field is populated, the value will be displayed as EWS.</inlineHelpText>
+    <label>Estimated Wallet Size - Overwrite</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

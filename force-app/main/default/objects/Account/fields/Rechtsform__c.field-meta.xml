@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rechtsform__c</fullName>
+    <description>Deutsche und internationale Rechtsform des Unternehmens, abgeleitet aus dem Account-Namen.</description>
+    <inlineHelpText>Rechtsform des Unternehmens (z.B. GmbH, AG, KG). Wird automatisch aus dem Account-Namen erkannt.</inlineHelpText>
+    <label>Rechtsform</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Einzelkaufmann (e.K.)</fullName>
+                <default>false</default>
+                <label>Einzelkaufmann (e.K.)</label>
+            </value>
+            <value>
+                <fullName>GbR</fullName>
+                <default>false</default>
+                <label>GbR</label>
+            </value>
+            <value>
+                <fullName>OHG</fullName>
+                <default>false</default>
+                <label>OHG</label>
+            </value>
+            <value>
+                <fullName>KG</fullName>
+                <default>false</default>
+                <label>KG</label>
+            </value>
+            <value>
+                <fullName>GmbH &amp; Co. KG</fullName>
+                <default>false</default>
+                <label>GmbH &amp; Co. KG</label>
+            </value>
+            <value>
+                <fullName>GmbH</fullName>
+                <default>false</default>
+                <label>GmbH</label>
+            </value>
+            <value>
+                <fullName>gGmbH</fullName>
+                <default>false</default>
+                <label>gGmbH</label>
+            </value>
+            <value>
+                <fullName>UG (haftungsbeschränkt)</fullName>
+                <default>false</default>
+                <label>UG (haftungsbeschränkt)</label>
+            </value>
+            <value>
+                <fullName>AG</fullName>
+                <default>false</default>
+                <label>AG</label>
+            </value>
+            <value>
+                <fullName>KGaA</fullName>
+                <default>false</default>
+                <label>KGaA</label>
+            </value>
+            <value>
+                <fullName>eG (Genossenschaft)</fullName>
+                <default>false</default>
+                <label>eG (Genossenschaft)</label>
+            </value>
+            <value>
+                <fullName>e.V. (Verein)</fullName>
+                <default>false</default>
+                <label>e.V. (Verein)</label>
+            </value>
+            <value>
+                <fullName>Partnerschaftsgesellschaft (PartG)</fullName>
+                <default>false</default>
+                <label>Partnerschaftsgesellschaft (PartG)</label>
+            </value>
+            <value>
+                <fullName>Stille Gesellschaft</fullName>
+                <default>false</default>
+                <label>Stille Gesellschaft</label>
+            </value>
+            <value>
+                <fullName>EWIV</fullName>
+                <default>false</default>
+                <label>EWIV</label>
+            </value>
+            <value>
+                <fullName>Societas Europaea (SE)</fullName>
+                <default>false</default>
+                <label>Societas Europaea (SE)</label>
+            </value>
+            <value>
+                <fullName>Stiftung</fullName>
+                <default>false</default>
+                <label>Stiftung</label>
+            </value>
+            <value>
+                <fullName>Limited (Ltd.)</fullName>
+                <default>false</default>
+                <label>Limited (Ltd.)</label>
+            </value>
+            <value>
+                <fullName>Incorporated (Inc.)</fullName>
+                <default>false</default>
+                <label>Incorporated (Inc.)</label>
+            </value>
+            <value>
+                <fullName>Corporation (Corp.)</fullName>
+                <default>false</default>
+                <label>Corporation (Corp.)</label>
+            </value>
+            <value>
+                <fullName>S.A.</fullName>
+                <default>false</default>
+                <label>S.A.</label>
+            </value>
+            <value>
+                <fullName>B.V.</fullName>
+                <default>false</default>
+                <label>B.V.</label>
+            </value>
+            <value>
+                <fullName>S.r.l.</fullName>
+                <default>false</default>
+                <label>S.r.l.</label>
+            </value>
+            <value>
+                <fullName>Sonstige</fullName>
+                <default>false</default>
+                <label>Sonstige</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

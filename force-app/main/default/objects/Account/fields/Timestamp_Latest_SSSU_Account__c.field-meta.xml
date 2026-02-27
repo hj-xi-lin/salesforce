@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Timestamp_Latest_SSSU_Account__c</fullName>
+    <description>RO-1488</description>
+    <inlineHelpText>This timestamps gets populated EVERY TIME when the customer submitted the Self-Service Sign Up Form on our website.</inlineHelpText>
+    <label>Legacy Timestamp Latest SSSU Account</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

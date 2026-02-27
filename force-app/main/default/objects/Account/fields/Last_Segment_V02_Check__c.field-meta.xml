@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last_Segment_V02_Check__c</fullName>
+    <description>RO - 2031</description>
+    <inlineHelpText>This value get’s updated every time the Segment V02 value on account is being updated.</inlineHelpText>
+    <label>Legacy Last Segment V02 Check</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>DateTime</type>
+</CustomField>

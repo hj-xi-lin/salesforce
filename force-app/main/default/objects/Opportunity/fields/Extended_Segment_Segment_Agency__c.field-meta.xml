@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Extended_Segment_Segment_Agency__c</fullName>
+    <description>[RO-1143] Combines record type and segment information and displays &quot;Agency&quot; for record type &quot;Agency Customer Business&quot;, &quot;Agency Business&quot; for &quot;Agency Business&quot; and &quot;Segment Opp V02&quot; value otherwise. Used for segregating Agency and Non-Agency Business in reporting.</description>
+    <externalId>false</externalId>
+    <formula>CASE(RecordType.DeveloperName, 
+ &quot;Agency_Customer_business&quot;, &quot;Agency&quot;, 
+ &quot;Agency_business&quot;, &quot;Agency Business&quot; ,
+ TEXT(Segment_Opp_V02__c)
+)</formula>
+    <inlineHelpText>Combines record type and segment information and displays &quot;Agency&quot; for record type &quot;Agency Customer Business&quot;, &quot;Agency Business&quot; for &quot;Agency Business&quot; and &quot;Segment Opp V02&quot; value otherwise.</inlineHelpText>
+    <label>Extended Segment (Segment/Agency)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

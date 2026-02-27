@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restrict_Contact_Update</fullName>
+    <active>false</active>
+    <description>RO-2275</description>
+    <errorConditionFormula>NOT( $Permission.Bypass_Opp_Contact_Role_Validations )
+	&amp;&amp;
+ ISCHANGED( ContactId )</errorConditionFormula>
+    <errorMessage>You cannot change the Contact of an existing Contact Role. Please create a new Contact Role instead.</errorMessage>
+</ValidationRule>

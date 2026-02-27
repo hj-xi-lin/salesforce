@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RecurrenceInterval</fullName>
+    <inlineHelpText>Gibt die Anzahl der Tage nach dem Fälligkeitsdatum oder dem Abschlussdatum der Task an, wann die nächste Task fällig ist.</inlineHelpText>
+    <trackHistory>false</trackHistory>
+</CustomField>

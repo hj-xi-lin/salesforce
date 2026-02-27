@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pipeline_Generated__c</fullName>
+    <description>RO - 2544 PK- Q4 2025 adjustment - removed special 4k values</description>
+    <externalId>false</externalId>
+    <formula>CASE(
+Account.Lead_Score_2__c,
+&quot;A&quot;, 50000,
+&quot;B&quot;, 25000,
+&quot;C&quot;, 16000,
+&quot;D&quot;, 9000,
+&quot;E&quot;, 7000,
+2500
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Pipeline Generated</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

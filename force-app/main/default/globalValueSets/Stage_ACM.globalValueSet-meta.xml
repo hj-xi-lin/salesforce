@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Outbound</fullName>
+        <default>false</default>
+        <label>Outbound</label>
+    </customValue>
+    <customValue>
+        <fullName>Prospect</fullName>
+        <default>false</default>
+        <label>Prospect</label>
+    </customValue>
+    <customValue>
+        <fullName>Acquisition</fullName>
+        <default>false</default>
+        <label>Acquisition</label>
+    </customValue>
+    <customValue>
+        <fullName>Pilot</fullName>
+        <default>false</default>
+        <label>Pilot</label>
+    </customValue>
+    <customValue>
+        <fullName>Retention</fullName>
+        <default>false</default>
+        <label>Retention</label>
+    </customValue>
+    <customValue>
+        <fullName>Non-Applicable</fullName>
+        <default>false</default>
+        <label>Non-Applicable</label>
+    </customValue>
+    <customValue>
+        <fullName>Lost</fullName>
+        <default>false</default>
+        <label>Lost</label>
+    </customValue>
+    <customValue>
+        <fullName>Pilot Lost</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Pilot Lost</label>
+    </customValue>
+    <customValue>
+        <fullName>Restart Hunting</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Restart Hunting</label>
+    </customValue>
+    <customValue>
+        <fullName>Blacklist</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Blacklist</label>
+    </customValue>
+    <customValue>
+        <fullName>Expansion</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Expansion</label>
+    </customValue>
+    <customValue>
+        <fullName>Invalid</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Invalid</label>
+    </customValue>
+    <customValue>
+        <fullName>Offline - Pause</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Offline - Pause</label>
+    </customValue>
+    <customValue>
+        <fullName>Hunting Lost</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Hunting Lost</label>
+    </customValue>
+    <customValue>
+        <fullName>Does not exist anymore</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Does not exist anymore</label>
+    </customValue>
+    <customValue>
+        <fullName>Existing Lost</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Existing Lost</label>
+    </customValue>
+    <masterLabel>Stage_ACM</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

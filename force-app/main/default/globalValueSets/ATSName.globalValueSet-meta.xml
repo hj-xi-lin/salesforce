@@ -1,0 +1,969 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>ADP</fullName>
+        <default>false</default>
+        <label>ADP</label>
+    </customValue>
+    <customValue>
+        <fullName>AFAS Software</fullName>
+        <default>false</default>
+        <label>AFAS Software</label>
+    </customValue>
+    <customValue>
+        <fullName>Artemis</fullName>
+        <default>false</default>
+        <label>Artemis</label>
+    </customValue>
+    <customValue>
+        <fullName>Ashby</fullName>
+        <default>false</default>
+        <label>Ashby</label>
+    </customValue>
+    <customValue>
+        <fullName>ATS WorkExperts</fullName>
+        <default>false</default>
+        <label>ATS WorkExperts</label>
+    </customValue>
+    <customValue>
+        <fullName>Avature</fullName>
+        <default>false</default>
+        <label>Avature</label>
+    </customValue>
+    <customValue>
+        <fullName>Aventini</fullName>
+        <default>false</default>
+        <label>Aventini</label>
+    </customValue>
+    <customValue>
+        <fullName>Aveo</fullName>
+        <default>false</default>
+        <label>Aveo</label>
+    </customValue>
+    <customValue>
+        <fullName>BambooHR</fullName>
+        <default>false</default>
+        <label>BambooHR</label>
+    </customValue>
+    <customValue>
+        <fullName>BeeSite Recruiting Edition</fullName>
+        <default>false</default>
+        <label>BeeSite Recruiting Edition</label>
+    </customValue>
+    <customValue>
+        <fullName>BITE</fullName>
+        <default>false</default>
+        <label>BITE</label>
+    </customValue>
+    <customValue>
+        <fullName>Brassring</fullName>
+        <default>false</default>
+        <label>Brassring</label>
+    </customValue>
+    <customValue>
+        <fullName>breezy</fullName>
+        <default>false</default>
+        <label>breezy</label>
+    </customValue>
+    <customValue>
+        <fullName>Bullhorn</fullName>
+        <default>false</default>
+        <label>Bullhorn</label>
+    </customValue>
+    <customValue>
+        <fullName>Careerbuilder</fullName>
+        <default>false</default>
+        <label>Careerbuilder</label>
+    </customValue>
+    <customValue>
+        <fullName>Carerix</fullName>
+        <default>false</default>
+        <label>Carerix</label>
+    </customValue>
+    <customValue>
+        <fullName>carsonal</fullName>
+        <default>false</default>
+        <label>carsonal</label>
+    </customValue>
+    <customValue>
+        <fullName>Catch Talents</fullName>
+        <default>false</default>
+        <label>Catch Talents</label>
+    </customValue>
+    <customValue>
+        <fullName>Ceridian Dayforce</fullName>
+        <default>false</default>
+        <label>Ceridian Dayforce</label>
+    </customValue>
+    <customValue>
+        <fullName>Cesop Communication</fullName>
+        <default>false</default>
+        <label>Cesop Communication</label>
+    </customValue>
+    <customValue>
+        <fullName>Cgi</fullName>
+        <default>false</default>
+        <label>Cgi</label>
+    </customValue>
+    <customValue>
+        <fullName>Check-in / Perbility</fullName>
+        <default>false</default>
+        <label>Check-in / Perbility</label>
+    </customValue>
+    <customValue>
+        <fullName>Comeet</fullName>
+        <default>false</default>
+        <label>Comeet</label>
+    </customValue>
+    <customValue>
+        <fullName>compana</fullName>
+        <default>false</default>
+        <label>compana</label>
+    </customValue>
+    <customValue>
+        <fullName>compleet</fullName>
+        <default>false</default>
+        <label>compleet</label>
+    </customValue>
+    <customValue>
+        <fullName>Concludis</fullName>
+        <default>false</default>
+        <label>Concludis</label>
+    </customValue>
+    <customValue>
+        <fullName>Connectoor</fullName>
+        <default>false</default>
+        <label>Connectoor</label>
+    </customValue>
+    <customValue>
+        <fullName>Connext Vivendi</fullName>
+        <default>false</default>
+        <label>Connext Vivendi</label>
+    </customValue>
+    <customValue>
+        <fullName>CORE</fullName>
+        <default>false</default>
+        <label>CORE</label>
+    </customValue>
+    <customValue>
+        <fullName>Cornerstone</fullName>
+        <default>false</default>
+        <label>Cornerstone</label>
+    </customValue>
+    <customValue>
+        <fullName>coveto</fullName>
+        <default>false</default>
+        <label>coveto</label>
+    </customValue>
+    <customValue>
+        <fullName>d.vinci</fullName>
+        <default>false</default>
+        <label>d.vinci</label>
+    </customValue>
+    <customValue>
+        <fullName>DATEV PMS Comfort Plus</fullName>
+        <default>false</default>
+        <label>DATEV PMS Comfort Plus</label>
+    </customValue>
+    <customValue>
+        <fullName>Digital Recruiters</fullName>
+        <default>false</default>
+        <label>Digital Recruiters</label>
+    </customValue>
+    <customValue>
+        <fullName>eArcu</fullName>
+        <default>false</default>
+        <label>eArcu</label>
+    </customValue>
+    <customValue>
+        <fullName>Easycruit</fullName>
+        <default>false</default>
+        <label>Easycruit</label>
+    </customValue>
+    <customValue>
+        <fullName>easyHR</fullName>
+        <default>false</default>
+        <label>easyHR</label>
+    </customValue>
+    <customValue>
+        <fullName>EasySoft</fullName>
+        <default>false</default>
+        <label>EasySoft</label>
+    </customValue>
+    <customValue>
+        <fullName>Egecko</fullName>
+        <default>false</default>
+        <label>Egecko</label>
+    </customValue>
+    <customValue>
+        <fullName>ELO HR Recruiting</fullName>
+        <default>false</default>
+        <label>ELO HR Recruiting</label>
+    </customValue>
+    <customValue>
+        <fullName>EMEA Recruitment</fullName>
+        <default>false</default>
+        <label>EMEA Recruitment</label>
+    </customValue>
+    <customValue>
+        <fullName>enaio</fullName>
+        <default>false</default>
+        <label>enaio</label>
+    </customValue>
+    <customValue>
+        <fullName>Engage</fullName>
+        <default>false</default>
+        <label>Engage</label>
+    </customValue>
+    <customValue>
+        <fullName>eRecruiter</fullName>
+        <default>false</default>
+        <label>eRecruiter</label>
+    </customValue>
+    <customValue>
+        <fullName>fidelis.Personal HCM</fullName>
+        <default>false</default>
+        <label>fidelis.Personal HCM</label>
+    </customValue>
+    <customValue>
+        <fullName>Flatchr</fullName>
+        <default>false</default>
+        <label>Flatchr</label>
+    </customValue>
+    <customValue>
+        <fullName>Fountain</fullName>
+        <default>false</default>
+        <label>Fountain</label>
+    </customValue>
+    <customValue>
+        <fullName>Greenhouse</fullName>
+        <default>false</default>
+        <label>Greenhouse</label>
+    </customValue>
+    <customValue>
+        <fullName>Hansalog</fullName>
+        <default>false</default>
+        <label>Hansalog</label>
+    </customValue>
+    <customValue>
+        <fullName>Harver</fullName>
+        <default>false</default>
+        <label>Harver</label>
+    </customValue>
+    <customValue>
+        <fullName>HCM4all</fullName>
+        <default>false</default>
+        <label>HCM4all</label>
+    </customValue>
+    <customValue>
+        <fullName>HeavenHR</fullName>
+        <default>false</default>
+        <label>HeavenHR</label>
+    </customValue>
+    <customValue>
+        <fullName>Helix</fullName>
+        <default>false</default>
+        <label>Helix</label>
+    </customValue>
+    <customValue>
+        <fullName>Heroes</fullName>
+        <default>false</default>
+        <label>Heroes</label>
+    </customValue>
+    <customValue>
+        <fullName>HeyRecruit</fullName>
+        <default>false</default>
+        <label>HeyRecruit</label>
+    </customValue>
+    <customValue>
+        <fullName>hidden professionals</fullName>
+        <default>false</default>
+        <label>hidden professionals</label>
+    </customValue>
+    <customValue>
+        <fullName>Homerun</fullName>
+        <default>false</default>
+        <label>Homerun</label>
+    </customValue>
+    <customValue>
+        <fullName>HR4YOU</fullName>
+        <default>false</default>
+        <label>HR4YOU</label>
+    </customValue>
+    <customValue>
+        <fullName>HR Diagnostics</fullName>
+        <default>false</default>
+        <label>HR Diagnostics</label>
+    </customValue>
+    <customValue>
+        <fullName>HRecuiting</fullName>
+        <default>false</default>
+        <label>HRecuiting</label>
+    </customValue>
+    <customValue>
+        <fullName>HRPuls</fullName>
+        <default>false</default>
+        <label>HRPuls</label>
+    </customValue>
+    <customValue>
+        <fullName>HRtool24</fullName>
+        <default>false</default>
+        <label>HRtool24</label>
+    </customValue>
+    <customValue>
+        <fullName>HRworks</fullName>
+        <default>false</default>
+        <label>HRworks</label>
+    </customValue>
+    <customValue>
+        <fullName>ICIMS</fullName>
+        <default>false</default>
+        <label>ICIMS</label>
+    </customValue>
+    <customValue>
+        <fullName>Infoniqa</fullName>
+        <default>false</default>
+        <label>Infoniqa</label>
+    </customValue>
+    <customValue>
+        <fullName>Inriva</fullName>
+        <default>false</default>
+        <label>Inriva</label>
+    </customValue>
+    <customValue>
+        <fullName>interamt</fullName>
+        <default>false</default>
+        <label>interamt</label>
+    </customValue>
+    <customValue>
+        <fullName>iRecruit</fullName>
+        <default>false</default>
+        <label>iRecruit</label>
+    </customValue>
+    <customValue>
+        <fullName>Jacando</fullName>
+        <default>false</default>
+        <label>Jacando</label>
+    </customValue>
+    <customValue>
+        <fullName>JazzHR</fullName>
+        <default>false</default>
+        <label>JazzHR</label>
+    </customValue>
+    <customValue>
+        <fullName>Joblyon</fullName>
+        <default>false</default>
+        <label>Joblyon</label>
+    </customValue>
+    <customValue>
+        <fullName>Jobquick</fullName>
+        <default>false</default>
+        <label>Jobquick</label>
+    </customValue>
+    <customValue>
+        <fullName>Jobrouter</fullName>
+        <default>false</default>
+        <label>Jobrouter</label>
+    </customValue>
+    <customValue>
+        <fullName>Jobtool24</fullName>
+        <default>false</default>
+        <label>Jobtool24</label>
+    </customValue>
+    <customValue>
+        <fullName>Jobvite</fullName>
+        <default>false</default>
+        <label>Jobvite</label>
+    </customValue>
+    <customValue>
+        <fullName>Jobylon</fullName>
+        <default>false</default>
+        <label>Jobylon</label>
+    </customValue>
+    <customValue>
+        <fullName>Join</fullName>
+        <default>false</default>
+        <label>Join</label>
+    </customValue>
+    <customValue>
+        <fullName>Kallidus</fullName>
+        <default>false</default>
+        <label>Kallidus</label>
+    </customValue>
+    <customValue>
+        <fullName>Kenjo</fullName>
+        <default>false</default>
+        <label>Kenjo</label>
+    </customValue>
+    <customValue>
+        <fullName>KNW (Knowledge network)</fullName>
+        <default>false</default>
+        <label>KNW (Knowledge network)</label>
+    </customValue>
+    <customValue>
+        <fullName>Landwehr L1</fullName>
+        <default>false</default>
+        <label>Landwehr L1</label>
+    </customValue>
+    <customValue>
+        <fullName>Lever</fullName>
+        <default>false</default>
+        <label>Lever</label>
+    </customValue>
+    <customValue>
+        <fullName>lumesse</fullName>
+        <default>false</default>
+        <label>lumesse</label>
+    </customValue>
+    <customValue>
+        <fullName>Magellan</fullName>
+        <default>false</default>
+        <label>Magellan</label>
+    </customValue>
+    <customValue>
+        <fullName>Mana HR</fullName>
+        <default>false</default>
+        <label>Mana HR</label>
+    </customValue>
+    <customValue>
+        <fullName>Maxime Media</fullName>
+        <default>false</default>
+        <label>Maxime Media</label>
+    </customValue>
+    <customValue>
+        <fullName>Meffert</fullName>
+        <default>false</default>
+        <label>Meffert</label>
+    </customValue>
+    <customValue>
+        <fullName>mhm-hr</fullName>
+        <default>false</default>
+        <label>mhm-hr</label>
+    </customValue>
+    <customValue>
+        <fullName>Microsoft Dynamics Hubdrive</fullName>
+        <default>false</default>
+        <label>Microsoft Dynamics Hubdrive</label>
+    </customValue>
+    <customValue>
+        <fullName>Microsoft Dynamics NAV</fullName>
+        <default>false</default>
+        <label>Microsoft Dynamics NAV</label>
+    </customValue>
+    <customValue>
+        <fullName>MySolution</fullName>
+        <default>false</default>
+        <label>MySolution</label>
+    </customValue>
+    <customValue>
+        <fullName>Namred</fullName>
+        <default>false</default>
+        <label>Namred</label>
+    </customValue>
+    <customValue>
+        <fullName>NCore HR</fullName>
+        <default>false</default>
+        <label>NCore HR</label>
+    </customValue>
+    <customValue>
+        <fullName>Neptune</fullName>
+        <default>false</default>
+        <label>Neptune</label>
+    </customValue>
+    <customValue>
+        <fullName>No ATS: Email Application</fullName>
+        <default>false</default>
+        <label>No ATS: Email Application</label>
+    </customValue>
+    <customValue>
+        <fullName>Nolis</fullName>
+        <default>false</default>
+        <label>Nolis</label>
+    </customValue>
+    <customValue>
+        <fullName>onapply</fullName>
+        <default>false</default>
+        <label>onapply</label>
+    </customValue>
+    <customValue>
+        <fullName>Onlyfy (previously Prescreen)</fullName>
+        <default>false</default>
+        <label>Onlyfy (previously Prescreen)</label>
+    </customValue>
+    <customValue>
+        <fullName>Oracle Peoplesoft</fullName>
+        <default>false</default>
+        <label>Oracle Recruiting</label>
+    </customValue>
+    <customValue>
+        <fullName>Otys</fullName>
+        <default>false</default>
+        <label>Otys</label>
+    </customValue>
+    <customValue>
+        <fullName>Own ATS</fullName>
+        <default>false</default>
+        <label>Own ATS</label>
+    </customValue>
+    <customValue>
+        <fullName>P&amp;I Pure HR</fullName>
+        <default>false</default>
+        <label>P&amp;I Loga</label>
+    </customValue>
+    <customValue>
+        <fullName>pagemachine</fullName>
+        <default>false</default>
+        <label>pagemachine</label>
+    </customValue>
+    <customValue>
+        <fullName>perbit</fullName>
+        <default>false</default>
+        <label>perbit</label>
+    </customValue>
+    <customValue>
+        <fullName>Persis</fullName>
+        <default>false</default>
+        <label>Persis</label>
+    </customValue>
+    <customValue>
+        <fullName>Personal-DIALOG</fullName>
+        <default>false</default>
+        <label>Personal-DIALOG</label>
+    </customValue>
+    <customValue>
+        <fullName>Personalwerk</fullName>
+        <default>false</default>
+        <label>Personalwerk</label>
+    </customValue>
+    <customValue>
+        <fullName>Personio</fullName>
+        <default>false</default>
+        <label>Personio</label>
+    </customValue>
+    <customValue>
+        <fullName>Persy</fullName>
+        <default>false</default>
+        <label>Persy</label>
+    </customValue>
+    <customValue>
+        <fullName>Perview</fullName>
+        <default>false</default>
+        <label>Perview</label>
+    </customValue>
+    <customValue>
+        <fullName>Pinpoint</fullName>
+        <default>false</default>
+        <label>Pinpoint</label>
+    </customValue>
+    <customValue>
+        <fullName>Predictive Index</fullName>
+        <default>false</default>
+        <label>Predictive Index</label>
+    </customValue>
+    <customValue>
+        <fullName>prosoftrecruiting</fullName>
+        <default>false</default>
+        <label>prosoftrecruiting</label>
+    </customValue>
+    <customValue>
+        <fullName>Reachmee</fullName>
+        <default>false</default>
+        <label>Reachmee</label>
+    </customValue>
+    <customValue>
+        <fullName>RECRU</fullName>
+        <default>false</default>
+        <label>RECRU</label>
+    </customValue>
+    <customValue>
+        <fullName>Recruitee</fullName>
+        <default>false</default>
+        <label>Recruitee</label>
+    </customValue>
+    <customValue>
+        <fullName>rexx</fullName>
+        <default>false</default>
+        <label>rexx</label>
+    </customValue>
+    <customValue>
+        <fullName>Sabris</fullName>
+        <default>false</default>
+        <label>Sabris</label>
+    </customValue>
+    <customValue>
+        <fullName>Sage</fullName>
+        <default>false</default>
+        <label>SageHR</label>
+    </customValue>
+    <customValue>
+        <fullName>Salesforce</fullName>
+        <default>false</default>
+        <label>Salesforce</label>
+    </customValue>
+    <customValue>
+        <fullName>SAP</fullName>
+        <default>false</default>
+        <label>SAP</label>
+    </customValue>
+    <customValue>
+        <fullName>Scope</fullName>
+        <default>false</default>
+        <label>Scope</label>
+    </customValue>
+    <customValue>
+        <fullName>SEEK</fullName>
+        <default>false</default>
+        <label>SEEK</label>
+    </customValue>
+    <customValue>
+        <fullName>Smartrecruiters</fullName>
+        <default>false</default>
+        <label>Smartrecruiters</label>
+    </customValue>
+    <customValue>
+        <fullName>Softgarden</fullName>
+        <default>false</default>
+        <label>Softgarden</label>
+    </customValue>
+    <customValue>
+        <fullName>solique</fullName>
+        <default>false</default>
+        <label>solique</label>
+    </customValue>
+    <customValue>
+        <fullName>SP_Data</fullName>
+        <default>false</default>
+        <label>SP_Data</label>
+    </customValue>
+    <customValue>
+        <fullName>Successfactors</fullName>
+        <default>false</default>
+        <label>Successfactors</label>
+    </customValue>
+    <customValue>
+        <fullName>Summit Consult</fullName>
+        <default>false</default>
+        <label>Summit Consult</label>
+    </customValue>
+    <customValue>
+        <fullName>Taleez</fullName>
+        <default>false</default>
+        <label>Taleez</label>
+    </customValue>
+    <customValue>
+        <fullName>Talent360</fullName>
+        <default>false</default>
+        <label>Talent360</label>
+    </customValue>
+    <customValue>
+        <fullName>Talent-Check-Ins</fullName>
+        <default>false</default>
+        <label>Talent-Check-Ins</label>
+    </customValue>
+    <customValue>
+        <fullName>Talent Compass</fullName>
+        <default>false</default>
+        <label>Talent Compass</label>
+    </customValue>
+    <customValue>
+        <fullName>TalentHero</fullName>
+        <default>false</default>
+        <label>TalentHero</label>
+    </customValue>
+    <customValue>
+        <fullName>Talention</fullName>
+        <default>false</default>
+        <label>Talention</label>
+    </customValue>
+    <customValue>
+        <fullName>TalentLoop</fullName>
+        <default>false</default>
+        <label>TalentLoop</label>
+    </customValue>
+    <customValue>
+        <fullName>TalentReef</fullName>
+        <default>false</default>
+        <label>TalentReef</label>
+    </customValue>
+    <customValue>
+        <fullName>Talents Connect</fullName>
+        <default>false</default>
+        <label>Talents Connect</label>
+    </customValue>
+    <customValue>
+        <fullName>Talentsoft</fullName>
+        <default>false</default>
+        <label>Talentsoft</label>
+    </customValue>
+    <customValue>
+        <fullName>Talentstorm</fullName>
+        <default>false</default>
+        <label>Talentstorm</label>
+    </customValue>
+    <customValue>
+        <fullName>Taleo</fullName>
+        <default>false</default>
+        <label>Taleo</label>
+    </customValue>
+    <customValue>
+        <fullName>teamhero</fullName>
+        <default>false</default>
+        <label>teamhero</label>
+    </customValue>
+    <customValue>
+        <fullName>Teamtailor</fullName>
+        <default>false</default>
+        <label>Teamtailor</label>
+    </customValue>
+    <customValue>
+        <fullName>tool24</fullName>
+        <default>false</default>
+        <label>tool24</label>
+    </customValue>
+    <customValue>
+        <fullName>Traffit</fullName>
+        <default>false</default>
+        <label>Traffit</label>
+    </customValue>
+    <customValue>
+        <fullName>Umantis</fullName>
+        <default>false</default>
+        <label>Umantis</label>
+    </customValue>
+    <customValue>
+        <fullName>VIASONA</fullName>
+        <default>false</default>
+        <label>VIASONA</label>
+    </customValue>
+    <customValue>
+        <fullName>Vincere</fullName>
+        <default>false</default>
+        <label>Vincere</label>
+    </customValue>
+    <customValue>
+        <fullName>Vivendi PEP</fullName>
+        <default>false</default>
+        <label>Vivendi PEP</label>
+    </customValue>
+    <customValue>
+        <fullName>Welcome to the Jungle</fullName>
+        <default>false</default>
+        <label>Welcome to the Jungle</label>
+    </customValue>
+    <customValue>
+        <fullName>Workable</fullName>
+        <default>false</default>
+        <label>Workable</label>
+    </customValue>
+    <customValue>
+        <fullName>Workday</fullName>
+        <default>false</default>
+        <label>Workday</label>
+    </customValue>
+    <customValue>
+        <fullName>Workwise</fullName>
+        <default>false</default>
+        <label>Workwise</label>
+    </customValue>
+    <customValue>
+        <fullName>Your Career Group</fullName>
+        <default>false</default>
+        <label>Your Career Group</label>
+    </customValue>
+    <customValue>
+        <fullName>Zoho</fullName>
+        <default>false</default>
+        <label>Zoho</label>
+    </customValue>
+    <customValue>
+        <fullName>Zvoove</fullName>
+        <default>false</default>
+        <label>Zvoove</label>
+    </customValue>
+    <customValue>
+        <fullName>Sage DPW</fullName>
+        <default>false</default>
+        <label>Sage DPW</label>
+    </customValue>
+    <customValue>
+        <fullName>Apploi</fullName>
+        <default>false</default>
+        <label>Apploi</label>
+    </customValue>
+    <customValue>
+        <fullName>Asymbl</fullName>
+        <default>false</default>
+        <label>Asymbl</label>
+    </customValue>
+    <customValue>
+        <fullName>Broadbean / Veritone</fullName>
+        <default>false</default>
+        <label>Broadbean / Veritone</label>
+    </customValue>
+    <customValue>
+        <fullName>Bullhorn (not Connexys)</fullName>
+        <default>false</default>
+        <label>Bullhorn (not Connexys)</label>
+    </customValue>
+    <customValue>
+        <fullName>Ceipal</fullName>
+        <default>false</default>
+        <label>Ceipal</label>
+    </customValue>
+    <customValue>
+        <fullName>Connexys by Bullhorn</fullName>
+        <default>false</default>
+        <label>Connexys by Bullhorn</label>
+    </customValue>
+    <customValue>
+        <fullName>Cornerstone OnDemand</fullName>
+        <default>false</default>
+        <label>Cornerstone OnDemand</label>
+    </customValue>
+    <customValue>
+        <fullName>Cornerstone Talentlink</fullName>
+        <default>false</default>
+        <label>Cornerstone Talentlink</label>
+    </customValue>
+    <customValue>
+        <fullName>DigitalRecruiters</fullName>
+        <default>false</default>
+        <label>DigitalRecruiters</label>
+    </customValue>
+    <customValue>
+        <fullName>Eightfold</fullName>
+        <default>false</default>
+        <label>Eightfold</label>
+    </customValue>
+    <customValue>
+        <fullName>engage (Infoniqa)</fullName>
+        <default>false</default>
+        <label>engage (Infoniqa)</label>
+    </customValue>
+    <customValue>
+        <fullName>GEM</fullName>
+        <default>false</default>
+        <label>GEM</label>
+    </customValue>
+    <customValue>
+        <fullName>Gohiring</fullName>
+        <default>false</default>
+        <label>Gohiring</label>
+    </customValue>
+    <customValue>
+        <fullName>GuideCom / Magellan</fullName>
+        <default>false</default>
+        <label>GuideCom / Magellan</label>
+    </customValue>
+    <customValue>
+        <fullName>Haufe.umantis / Abacus</fullName>
+        <default>false</default>
+        <label>Haufe.umantis / Abacus</label>
+    </customValue>
+    <customValue>
+        <fullName>Heyrecruit (Scope)</fullName>
+        <default>false</default>
+        <label>Heyrecruit (Scope)</label>
+    </customValue>
+    <customValue>
+        <fullName>Impeak</fullName>
+        <default>false</default>
+        <label>Impeak</label>
+    </customValue>
+    <customValue>
+        <fullName>Laura</fullName>
+        <default>false</default>
+        <label>Laura</label>
+    </customValue>
+    <customValue>
+        <fullName>Marcapo</fullName>
+        <default>false</default>
+        <label>Marcapo</label>
+    </customValue>
+    <customValue>
+        <fullName>Onlyfy</fullName>
+        <default>false</default>
+        <label>Onlyfy</label>
+    </customValue>
+    <customValue>
+        <fullName>Oracle Recruiting Cloud</fullName>
+        <default>false</default>
+        <label>Oracle Recruiting Cloud</label>
+    </customValue>
+    <customValue>
+        <fullName>Oracle Taleo</fullName>
+        <default>false</default>
+        <label>Oracle Taleo</label>
+    </customValue>
+    <customValue>
+        <fullName>Paradox</fullName>
+        <default>false</default>
+        <label>Paradox</label>
+    </customValue>
+    <customValue>
+        <fullName>Persy (compleet)</fullName>
+        <default>false</default>
+        <label>Persy (compleet)</label>
+    </customValue>
+    <customValue>
+        <fullName>Phenom</fullName>
+        <default>false</default>
+        <label>Phenom</label>
+    </customValue>
+    <customValue>
+        <fullName>recruitee / Tellent</fullName>
+        <default>false</default>
+        <label>recruitee / Tellent</label>
+    </customValue>
+    <customValue>
+        <fullName>rexx systems</fullName>
+        <default>false</default>
+        <label>rexx systems</label>
+    </customValue>
+    <customValue>
+        <fullName>SAP Successfactors</fullName>
+        <default>false</default>
+        <label>SAP Successfactors</label>
+    </customValue>
+    <customValue>
+        <fullName>Talentsoft Customer API</fullName>
+        <default>false</default>
+        <label>Talentsoft Customer API</label>
+    </customValue>
+    <customValue>
+        <fullName>Talentsoft FrontOffice API</fullName>
+        <default>false</default>
+        <label>Talentsoft FrontOffice API</label>
+    </customValue>
+    <customValue>
+        <fullName>Zvoove Recruit (not Cockpit)</fullName>
+        <default>false</default>
+        <label>Zvoove Recruit (not Cockpit)</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Check-In (helix)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Check-In (helix)</label>
+    </customValue>
+    <customValue>
+        <fullName>Perbility</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Perbility</label>
+    </customValue>
+    <customValue>
+        <fullName>Prescreen</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prescreen</label>
+    </customValue>
+    <masterLabel>ATS Name</masterLabel>
+    <sorted>true</sorted>
+</GlobalValueSet>

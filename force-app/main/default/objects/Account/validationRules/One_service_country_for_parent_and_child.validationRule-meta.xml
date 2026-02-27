@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>One_service_country_for_parent_and_child</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( 
+  NOT(ISNULL(TEXT(Service_Country__c))),
+  NOT(ISBLANK(TEXT(Service_Country__c))),
+  NOT(ISNULL(TEXT(Parent.Service_Country__c))),
+  NOT(ISBLANK(TEXT(Parent.Service_Country__c))),
+  TEXT(Service_Country__c) !=  TEXT(Parent.Service_Country__c),
+  Parent.Umbrella_Company__c = FALSE 
+)</errorConditionFormula>
+    <errorMessage>Service Country for child and parent Account have to be the same</errorMessage>
+</ValidationRule>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ONB2__VATLastError__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Stores error messages regarding the last VAT number validation, is empty on success.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Stores error messages regarding the last VAT number validation, is empty on success.</inlineHelpText>
+    <label>Last VAT Validation Error</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

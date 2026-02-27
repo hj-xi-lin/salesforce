@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Manager_s_Email__c</fullName>
+    <description>This field shows the Manager Email of the record owner</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Team Lead Email of the Opportunity Owner</inlineHelpText>
+    <label>Manager&apos;s Email</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Email</type>
+    <unique>false</unique>
+</CustomField>

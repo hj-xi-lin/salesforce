@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OFF_Region__c</fullName>
+    <description>Determines the invoice region. The produced value will be copied to the field Region on the invoice</description>
+    <externalId>false</externalId>
+    <formula>IF(
+    ISPICKVAL(BillingCountryCode,&quot;DE&quot;), &quot;DE&quot;,
+        CASE(TEXT(BillingCountryCode),
+        &quot;AT&quot;,&quot;AT&quot;,
+        &quot;BE&quot;,&quot;EU&quot;,
+        &quot;BG&quot;,&quot;EU&quot;,
+        &quot;CY&quot;,&quot;EU&quot;,
+        &quot;CZ&quot;,&quot;EU&quot;,
+        &quot;DK&quot;,&quot;EU&quot;,
+        &quot;EE&quot;,&quot;EU&quot;,
+        &quot;ES&quot;,&quot;EU&quot;,
+        &quot;FI&quot;,&quot;EU&quot;,
+        &quot;FR&quot;,&quot;EU&quot;,
+        &quot;GR&quot;,&quot;EU&quot;,
+        &quot;HU&quot;,&quot;EU&quot;,
+        &quot;IE&quot;,&quot;EU&quot;,
+        &quot;IT&quot;,&quot;EU&quot;,
+        &quot;HR&quot;,&quot;EU&quot;,
+        &quot;LT&quot;,&quot;EU&quot;,
+        &quot;LU&quot;,&quot;EU&quot;,
+        &quot;LV&quot;,&quot;EU&quot;,
+        &quot;MT&quot;,&quot;EU&quot;,
+        &quot;NL&quot;,&quot;EU&quot;,
+        &quot;PL&quot;,&quot;EU&quot;,
+        &quot;PT&quot;,&quot;EU&quot;,
+        &quot;RO&quot;,&quot;EU&quot;,
+        &quot;SE&quot;,&quot;EU&quot;,
+        &quot;SI&quot;,&quot;EU&quot;,
+        &quot;SK&quot;,&quot;EU&quot;,
+        &quot;SM&quot;,&quot;EU&quot;,
+        &quot;CH&quot;,&quot;EU&quot;,
+        &quot;NON-EU&quot;)
+)
+
+/*
+IF(
+AND ( TEXT(Service_Country__c) = &quot;DE&quot; , TEXT(BillingCountryCode) = &quot;DE&quot; ),
+&apos;DE&apos; ,
+
+IF(
+AND ( TEXT(Service_Country__c) = &quot;AT&quot; , TEXT(BillingCountryCode) = &quot;AT&quot; ),
+&apos;AT&apos;,
+
+&apos;EU&apos;
+)
+)
+
+*/</formula>
+    <inlineHelpText>Determines the invoice region. The produced value will be copied to the field Region on the invoice</inlineHelpText>
+    <label>JustOn: Region</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

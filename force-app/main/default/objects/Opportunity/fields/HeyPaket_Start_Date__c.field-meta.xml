@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HeyPaket_Start_Date__c</fullName>
+    <description>RO-1432</description>
+    <inlineHelpText>Startdatum des HeyPakets. Das Datum wird automatisch beim Akzeptieren der Quote aus dem HeyPaket Start Date auf der Quote eingetragen und definiert, wann das HeyPaket aktiviert wird, also ab wann der Kunde das Budget freigeschaltet bekommt.</inlineHelpText>
+    <label>HeyPaket Start Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Date</type>
+</CustomField>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Scheduling_Leads1</fullName>
+    <columns>LEAD.COMPANY</columns>
+    <columns>FULL_NAME</columns>
+    <columns>MQL_Conversion__c</columns>
+    <columns>HeyJobs_Category__c</columns>
+    <columns>Event_Lead_Classification__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>Event_Lead_Classification__c</field>
+        <operation>equals</operation>
+        <value>HOT,WARM,COLD</value>
+    </filters>
+    <label>My Leads</label>
+</ListView>

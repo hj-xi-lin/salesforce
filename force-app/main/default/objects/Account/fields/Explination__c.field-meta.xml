@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Explination__c</fullName>
+    <description>Serves for Sales to explain why they think the accounts needs to have it&apos;s motion reviewed.</description>
+    <inlineHelpText>Please explain why you think this account needs to have it&apos;s motion reviewed.</inlineHelpText>
+    <label>LegacyReasoning for motion review needed</label>
+    <length>10000</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Org_Account_Hierarchy</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Account_ID_18_digit__c</columns>
+    <columns>Account_Owner_s_Manager__c</columns>
+    <columns>Account_Owner__c</columns>
+    <columns>GTM_Motion_Account__c</columns>
+    <columns>Record_Type__c</columns>
+    <columns>Stage_ACM__c</columns>
+    <columns>Purchase_Decision_Behavior__c</columns>
+    <columns>Bookings_Last_12_Months_Hierarchy__c</columns>
+    <columns>Days_since_Last_Booking_Child__c</columns>
+    <columns>refTotalAmount__c</columns>
+    <columns>Total_Live_Jobs_Hierarchy__c</columns>
+    <columns>LAST_ACTIVITY_DATETIME</columns>
+    <columns>Estimated_Wallet_Size__c</columns>
+    <columns>Lead_Score_2__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>Org_Account_Hierarchy</label>
+</ListView>

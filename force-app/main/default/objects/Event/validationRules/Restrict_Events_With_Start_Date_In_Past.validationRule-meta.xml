@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restrict_Events_With_Start_Date_In_Past</fullName>
+    <active>true</active>
+    <description>Prevent events to be created with start date in the past. RO - 1597</description>
+    <errorConditionFormula>AND( ISNEW(),ActivityDate &lt; TODAY(),
+
+OR( ISPICKVAL(Type, &quot;Demo Call&quot;),ISPICKVAL(Type, &quot;Demo Video Call&quot;),ISPICKVAL(Type, &quot;Demo F2F&quot;)
+))</errorConditionFormula>
+    <errorMessage>You can&apos;t create an event with start date in the past. Please make sure that the event is in the future.</errorMessage>
+</ValidationRule>

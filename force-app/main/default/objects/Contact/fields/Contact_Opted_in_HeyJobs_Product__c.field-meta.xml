@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Opted_in_HeyJobs_Product__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Created for HS sync</description>
+    <label>Legacy Opted in: HeyJobs Product</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

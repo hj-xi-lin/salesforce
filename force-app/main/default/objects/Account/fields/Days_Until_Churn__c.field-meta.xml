@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Days_Until_Churn__c</fullName>
+    <description>RO-2840:180 minus the number of days since the last contract end date. Positive = days before churn. Negative = days past 180-day churn threshold. Blank = no contract end date.</description>
+    <externalId>false</externalId>
+    <formula>IF(
+  ISBLANK(Last_Contract_End_Date__c),
+  NULL,
+  180 - (TODAY() - Last_Contract_End_Date__c)
+)</formula>
+    <inlineHelpText>Verbleibende Tage bis dieser Account die 180-Tage-Churn-Schwelle erreicht. Negativ = Schwelle bereits überschritten.</inlineHelpText>
+    <label>Days Until Churn</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

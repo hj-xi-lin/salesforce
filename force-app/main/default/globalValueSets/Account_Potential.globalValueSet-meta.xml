@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>A - &gt; &gt;100’000€</fullName>
+        <default>false</default>
+        <label>A - &gt; &gt;100’000€</label>
+    </customValue>
+    <customValue>
+        <fullName>B -&gt; 50’000€-100’000€</fullName>
+        <default>false</default>
+        <label>B -&gt; 50’000€-100’000€</label>
+    </customValue>
+    <customValue>
+        <fullName>C -&gt; 18’000€-50’000€</fullName>
+        <default>false</default>
+        <label>C -&gt; 18’000€-50’000€</label>
+    </customValue>
+    <customValue>
+        <fullName>D -&gt; 5000-18’000€</fullName>
+        <default>false</default>
+        <label>D -&gt; 5000-18’000€</label>
+    </customValue>
+    <customValue>
+        <fullName>E -&gt; 0-5000 €</fullName>
+        <default>false</default>
+        <label>E -&gt; 0-5000 €</label>
+    </customValue>
+    <description>Account Potential</description>
+    <masterLabel>Account Potential</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

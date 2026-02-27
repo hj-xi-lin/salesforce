@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Candidate_Delivery__c</fullName>
+    <description>RO - 2067</description>
+    <inlineHelpText>How will applications be delivered? Full Integration, LinkOut (Link to Career Page) or Email (via RP)</inlineHelpText>
+    <label>Candidate Delivery</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Full Integration</fullName>
+                <default>false</default>
+                <label>ATS</label>
+            </value>
+            <value>
+                <fullName>LinkOut</fullName>
+                <default>false</default>
+                <label>Link-Out</label>
+            </value>
+            <value>
+                <fullName>Email</fullName>
+                <default>false</default>
+                <label>Email</label>
+            </value>
+            <value>
+                <fullName>ATS</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>ATS</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

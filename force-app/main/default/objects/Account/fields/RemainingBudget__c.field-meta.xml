@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RemainingBudget__c</fullName>
+    <description>Budget available to use for the client (=total budget - budget used for published/scheduled jobs)</description>
+    <inlineHelpText>Zeigt die Summe des verbleibende Budgets (REACH &amp; HIRE) im Backend</inlineHelpText>
+    <label>Legacy - Remaining Total Credit</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

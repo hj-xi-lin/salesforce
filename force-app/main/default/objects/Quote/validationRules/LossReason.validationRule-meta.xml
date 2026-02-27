@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LossReason</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( 
+ISPICKVAL(Opportunity.plLossReason__c, &quot;&quot;), 
+ISCHANGED( Status ), 
+ISPICKVAL(Status, &quot;Rejected&quot;) 
+)</errorConditionFormula>
+    <errorMessage>Please fill out Loss Reason on Opportunity!</errorMessage>
+</ValidationRule>

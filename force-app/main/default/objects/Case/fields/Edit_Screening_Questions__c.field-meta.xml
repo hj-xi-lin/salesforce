@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Edit_Screening_Questions__c</fullName>
+    <description>RO-1759</description>
+    <inlineHelpText>Do the screening questions need to be adjusted or are they already correct according to the SQ catalog for the jobs</inlineHelpText>
+    <label>Edit Screening Questions</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>YesNo_Default_Empty</valueSetName>
+    </valueSet>
+</CustomField>

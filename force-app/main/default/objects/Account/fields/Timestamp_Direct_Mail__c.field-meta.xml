@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Timestamp_Direct_Mail__c</fullName>
+    <description>The time when the Direct mail is sent.</description>
+    <inlineHelpText>RO-486</inlineHelpText>
+    <label>Legacy Timestamp Direct Mail</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

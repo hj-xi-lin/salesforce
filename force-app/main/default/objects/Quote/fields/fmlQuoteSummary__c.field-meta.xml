@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>fmlQuoteSummary__c</fullName>
+    <externalId>false</externalId>
+    <formula>&quot;Angebot gültig bis: &quot;&amp;TEXT(DAY(ExpirationDate))&amp;&quot;.&quot;&amp;TEXT(MONTH(ExpirationDate))&amp;&quot;.&quot;&amp;TEXT(YEAR(ExpirationDate)) &amp;BR()&amp; 
+&quot;Einlösezeitraum der JobSlots: 12 Monate ab Unterschrift&quot; &amp;BR()&amp;
+&quot;Rechnungsstellung: Nach Auftragseingang&quot; &amp;BR()&amp;
+&quot;Zahlungsbedingungen: &quot; &amp; TEXT(dPaymentTime__c) &amp; &quot; Tage ohne Abzug per Überweisung&quot; &amp;BR()&amp;
+&quot;Jeder JobSlot muss innerhalb der Gültigkeitsdauer aktiviert werden.&quot;</formula>
+    <label>QuoteSummary</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

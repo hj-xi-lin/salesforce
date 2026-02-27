@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Admin_Loss_Reason</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISCHANGED(Status),
+ISPICKVAL(Status, &quot;Lost&quot;),
+ISPICKVAL( Loss_Reason__c, &quot;Admin Only: Lead merged in Hubspot&quot;),
+$Profile.Name != &quot;System Administrator&quot;
+)</errorConditionFormula>
+    <errorMessage>The loss reason you have chosen is available only for Admins. Please choose a different loss reason for closing.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Johanns_Opps</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>Next_Action_Detail__c</columns>
+    <columns>LAST_CALL_DATE</columns>
+    <columns>Follow_Up_Date__c</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>fmlOwnerName__c</field>
+        <operation>equals</operation>
+        <value>Johann Kloth</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>notEqual</operation>
+        <value>Closed Lost</value>
+    </filters>
+    <label>Johanns Opps</label>
+</ListView>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HeyJobs_Category__c</fullName>
+    <description>Sector in Tableau/DWH</description>
+    <inlineHelpText>HeyJobs spezifische Segregation der Kund*innen, basiert auf Category 1, 2 &amp; 3. Entspricht den Sektoren in Tableau/DWH.</inlineHelpText>
+    <label>HeyJobs - Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Agency</fullName>
+                <default>false</default>
+                <label>Agency</label>
+            </value>
+            <value>
+                <fullName>Call center</fullName>
+                <default>false</default>
+                <label>Call center</label>
+            </value>
+            <value>
+                <fullName>Headhunter</fullName>
+                <default>false</default>
+                <label>Headhunter</label>
+            </value>
+            <value>
+                <fullName>Healthcare</fullName>
+                <default>false</default>
+                <label>Healthcare</label>
+            </value>
+            <value>
+                <fullName>High-End</fullName>
+                <default>false</default>
+                <label>High-End</label>
+            </value>
+            <value>
+                <fullName>Logistics</fullName>
+                <default>false</default>
+                <label>Logistics</label>
+            </value>
+            <value>
+                <fullName>Office</fullName>
+                <default>false</default>
+                <label>Office</label>
+            </value>
+            <value>
+                <fullName>Production</fullName>
+                <default>false</default>
+                <label>Production</label>
+            </value>
+            <value>
+                <fullName>Public Sector</fullName>
+                <default>false</default>
+                <label>Public Sector</label>
+            </value>
+            <value>
+                <fullName>Retail</fullName>
+                <default>false</default>
+                <label>Retail</label>
+            </value>
+            <value>
+                <fullName>Services</fullName>
+                <default>false</default>
+                <label>Services</label>
+            </value>
+            <value>
+                <fullName>Temporary Employment Agencies</fullName>
+                <default>false</default>
+                <label>Temporary Employment Agencies</label>
+            </value>
+            <value>
+                <fullName>Banking and Insurance</fullName>
+                <default>false</default>
+                <label>Banking and Insurance</label>
+            </value>
+            <value>
+                <fullName>E-commerce</fullName>
+                <default>false</default>
+                <label>E-commerce</label>
+            </value>
+            <value>
+                <fullName>Hospitality</fullName>
+                <default>false</default>
+                <label>Hospitality</label>
+            </value>
+            <value>
+                <fullName>Inventory Partner</fullName>
+                <default>false</default>
+                <label>Inventory Partner</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

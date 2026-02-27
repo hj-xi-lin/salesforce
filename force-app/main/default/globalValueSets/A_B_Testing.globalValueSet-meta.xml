@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Performance Sentiment</fullName>
+        <default>false</default>
+        <label>Performance Sentiment</label>
+    </customValue>
+    <customValue>
+        <fullName>Trigger Sentiment Summary</fullName>
+        <default>false</default>
+        <label>Trigger Sentiment Summary</label>
+    </customValue>
+    <customValue>
+        <fullName>Test 3</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Test 3</label>
+    </customValue>
+    <customValue>
+        <fullName>Test 4</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Test 4</label>
+    </customValue>
+    <customValue>
+        <fullName>Test 5</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Test 5</label>
+    </customValue>
+    <customValue>
+        <fullName>Test 1</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Test 1</label>
+    </customValue>
+    <customValue>
+        <fullName>Done (no Note)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Done (no Note)</label>
+    </customValue>
+    <customValue>
+        <fullName>Done</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Done</label>
+    </customValue>
+    <customValue>
+        <fullName>Pending</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Pending</label>
+    </customValue>
+    <customValue>
+        <fullName>Test 2</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Test 2</label>
+    </customValue>
+    <description>RO-1591</description>
+    <masterLabel>A/B Testing</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

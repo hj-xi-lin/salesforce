@@ -1,0 +1,150 @@
+<template>
+    <div class="slds-p-around_medium">
+        <!-- Handover Urgency (optional, default Standard) -->
+        <div class="slds-form-element slds-m-bottom_medium">
+            <lightning-combobox
+                name="handoverUrgency"
+                label="Handover Urgency"
+                value={handoverUrgencyValue}
+                options={handoverUrgencyOptions}
+                onchange={handleHandoverUrgencyChange}
+                field-level-help="Dringlichkeit aus Kundensicht. Bitte auswählen, wie schnell der Kunde starten möchte.">
+            </lightning-combobox>
+        </div>
+
+        <!-- Customer Goals & Expected Outcomes (Required) -->
+        <div class="slds-form-element slds-m-bottom_medium">
+            <lightning-textarea
+                name="customerGoals"
+                label="Customer Goals & Expected Outcomes"
+                value={customerGoalsValue}
+                onchange={handleCustomerGoalsChange}
+                required
+                max-length="32000"
+                field-level-help="Kundenziele, erwartete Ergebnisse und gemachte Sales-Zusagen.">
+            </lightning-textarea>
+            <div class={customerGoalsCounterClass}>
+                {customerGoalsCharacterCount} / 32.000
+            </div>
+        </div>
+
+        <!-- Risks / Red Flags (Required) -->
+        <div class="slds-form-element slds-m-bottom_medium">
+            <lightning-textarea
+                name="risks"
+                label="Risks / Red Flags"
+                value={risksValue}
+                onchange={handleRisksChange}
+                required
+                max-length="32000"
+                field-level-help="Risiken, die die Zusammenarbeit oder die Zielerreichung gefährden (z.B. Verhaltensrisiken, Budgetthemen, interne Blocker).">
+            </lightning-textarea>
+            <div class={risksCounterClass}>
+                {risksCharacterCount} / 32.000
+            </div>
+        </div>
+
+        <!-- Relationship Rating & Reason (Required) -->
+        <div class="slds-grid slds-gutters slds-m-bottom_medium">
+            <div class="slds-col slds-size_1-of-3">
+                <lightning-combobox
+                    name="relationshipRating"
+                    label="Relationship Rating (1–10)"
+                    value={relationshipRatingValue}
+                    options={ratingOptions}
+                    onchange={handleRelationshipRatingChange}
+                    required
+                    field-level-help="Stabilität und Qualität der Kundenbeziehung bewerten. 1 = sehr instabil, 10 = sehr stabil.">
+                </lightning-combobox>
+            </div>
+            <div class="slds-col slds-size_2-of-3">
+                <div class="slds-form-element">
+                    <lightning-input
+                        type="text"
+                        name="relationshipReason"
+                        label="Relationship Reason"
+                        value={relationshipReasonValue}
+                        onchange={handleRelationshipReasonChange}
+                        required
+                        max-length="255"
+                        field-level-help="Kurze Begründung für den vergebenen Beziehungswert. Max. 255 Zeichen.">
+                    </lightning-input>
+                    <div class={relationshipReasonCounterClass}>
+                        {relationshipReasonCharacterCount} / 255
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Key Logistics / Operational Notes (Required) -->
+        <div class="slds-form-element slds-m-bottom_medium">
+            <lightning-textarea
+                name="keyLogistics"
+                label="Key Logistics / Operational Notes"
+                value={keyLogisticsValue}
+                onchange={handleKeyLogisticsChange}
+                required
+                max-length="32000"
+                field-level-help="Relevante operative Details für Onboarding & Kickoff (Go-Live Timing, Prozesse, ATS-Besonderheiten, Schichtmodelle etc.).">
+            </lightning-textarea>
+            <div class={keyLogisticsCounterClass}>
+                {keyLogisticsCharacterCount} / 32.000
+            </div>
+        </div>
+
+        <!-- Do's and Don'ts (Required, max 255 characters) -->
+        <div class="slds-grid slds-gutters slds-m-bottom_medium">
+            <div class="slds-col slds-size_1-of-2">
+                <div class="slds-form-element">
+                    <lightning-textarea
+                        name="dos"
+                        label="Do's"
+                        value={dosValue}
+                        onchange={handleDosChange}
+                        required
+                        max-length="255"
+                        message-when-too-long="Maximal 255 Zeichen erlaubt"
+                        field-level-help="Worauf der Kunde gut reagiert (Kommunikationsstil, Tonalität, bevorzugte Vorgehensweise). Max. 255 Zeichen.">
+                    </lightning-textarea>
+                    <div class={dosCounterClass}>
+                        {dosCharacterCount} / 255
+                    </div>
+                </div>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <div class="slds-form-element">
+                    <lightning-textarea
+                        name="donts"
+                        label="Don'ts"
+                        value={dontsValue}
+                        onchange={handleDontsChange}
+                        required
+                        max-length="255"
+                        message-when-too-long="Maximal 255 Zeichen erlaubt"
+                        field-level-help="Was vermieden werden sollte (No-Go Themen, kritische Trigger, unerwünschte Kommunikationsarten). Max. 255 Zeichen.">
+                    </lightning-textarea>
+                    <div class={dontsCounterClass}>
+                        {dontsCharacterCount} / 255
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Other (Optional, max 32k characters) -->
+        <div class="slds-form-element slds-m-bottom_medium">
+            <lightning-textarea
+                name="other"
+                label="Other"
+                value={otherValue}
+                onchange={handleOtherChange}
+                max-length="32000"
+                message-when-too-long="Maximal 32.000 Zeichen erlaubt"
+                field-level-help={otherHelpText}>
+            </lightning-textarea>
+            <div class={otherCounterClass}>
+                {otherCharacterCount} / 32.000
+            </div>
+        </div>
+
+    </div>
+</template>

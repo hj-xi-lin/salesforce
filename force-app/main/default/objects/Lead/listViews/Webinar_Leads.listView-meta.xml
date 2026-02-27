@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Webinar_Leads</fullName>
+    <booleanFilter>1 AND 2 AND 3 AND 4 AND 5 AND 6</booleanFilter>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.EMPLOYEES</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.UNREAD</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>Domain_Match_on_Lead__c</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>LEAD.COMPANY</field>
+        <operation>notContain</operation>
+        <value>HeyJobs</value>
+    </filters>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>notContain</operation>
+        <value>Lost</value>
+    </filters>
+    <filters>
+        <field>Inbound_Source__c</field>
+        <operation>equals</operation>
+        <value>Webinar,Webinar Sign Up</value>
+    </filters>
+    <filters>
+        <field>Email_Domain__c</field>
+        <operation>notContain</operation>
+        <value>.at</value>
+    </filters>
+    <filters>
+        <field>Domain_Match_on_Lead__c</field>
+        <operation>equals</operation>
+        <value>,0</value>
+    </filters>
+    <filters>
+        <field>LEAD.LAST_NAME</field>
+        <operation>notEqual</operation>
+        <value>[not provided]</value>
+    </filters>
+    <label>DE - Webinar Leads</label>
+    <queue>Lead_Research_Queue</queue>
+</ListView>

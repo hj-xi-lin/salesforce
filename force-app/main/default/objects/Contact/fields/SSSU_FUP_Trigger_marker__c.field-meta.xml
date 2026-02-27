@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SSSU_FUP_Trigger_marker__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>RO - 1629</description>
+    <inlineHelpText>When checked, the account will be addressed by marketing again.</inlineHelpText>
+    <label>Legacy SSSU FUP Trigger marker</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

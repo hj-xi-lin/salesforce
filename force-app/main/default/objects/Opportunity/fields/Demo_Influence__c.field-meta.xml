@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Demo_Influence__c</fullName>
+    <inlineHelpText>Markiert Demos, die nicht aus der regulären Demo Verteilung stammen, sondern von anderen Faktoren beeinflusst wurden.
+Decentralized Efforts = Arbeit an einem gemeinsamen Projekt, das sich darauf konzentriert, eine Unternehmensstruktur aufzubrechen.
+Team Effort = Arbeit an einem gemeinsamen Projekt, das sich auf eine Branche und deren Unternehmen konzentriert. Zusätzlich gemeinsamer Fokus auf Ziel Accounts aus der Pipeline eines Account Executives oder aus dem CRM.</inlineHelpText>
+    <label>Demo Influence</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Decentralized Efforts</fullName>
+                <default>false</default>
+                <label>Decentralized Efforts</label>
+            </value>
+            <value>
+                <fullName>Team Effort</fullName>
+                <default>false</default>
+                <label>Team Effort</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

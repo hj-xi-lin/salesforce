@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>bReferenceallowed__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Zeigt, ob der Account damit einverstanden ist, als Referenzkund*in genannt zu werden.</inlineHelpText>
+    <label>Reference allowed?</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

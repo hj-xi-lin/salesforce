@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AI_Account_Sentiment_Score_picklist__c</fullName>
+    <inlineHelpText>Numerischer Wert zwischen 0 (sehr negativ) und 4 (sehr positiv), der die Gesamtstimmung des Accounts widerspiegelt basierend auf der &quot;AI Account Summary&quot;.</inlineHelpText>
+    <label>AI Account Sentiment Score</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>0 - sehr negativ</fullName>
+                <default>false</default>
+                <label>0 - sehr negativ</label>
+            </value>
+            <value>
+                <fullName>1 - leicht negativ</fullName>
+                <default>false</default>
+                <label>1 - leicht negativ</label>
+            </value>
+            <value>
+                <fullName>2 - neutral</fullName>
+                <default>false</default>
+                <label>2 - neutral</label>
+            </value>
+            <value>
+                <fullName>3 - leicht positiv</fullName>
+                <default>false</default>
+                <label>3 - leicht positiv</label>
+            </value>
+            <value>
+                <fullName>4 - sehr positiv</fullName>
+                <default>false</default>
+                <label>4 - sehr positiv</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

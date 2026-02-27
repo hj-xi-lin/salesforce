@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Remaining_Total_Credit__c</fullName>
+    <formula>Remaining_HIRE_Credit__c  + Remaining_REACH_Credit__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Zeigt die Summe des verbleibende Budgets (REACH &amp; HIRE) im Backend</inlineHelpText>
+    <label>Remaining Total Credit</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Original_Campaign_Source__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <description>RO-1471</description>
+    <inlineHelpText>Shows the initial capaign an account enrolled in</inlineHelpText>
+    <label>Original Campaign Source</label>
+    <referenceTo>Campaign</referenceTo>
+    <relationshipLabel>Opportunities (Original Campaign Source)</relationshipLabel>
+    <relationshipName>Opportunities3</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

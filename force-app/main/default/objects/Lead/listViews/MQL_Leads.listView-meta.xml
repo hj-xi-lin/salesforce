@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MQL_Leads</fullName>
+    <columns>Engagement_Score__c</columns>
+    <columns>MQL_Type_Lead__c</columns>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.STATE_CODE</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.UNREAD</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>GTM_Motion_Lead__c</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Lifecycle_Stage_Lead__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Lifecycle_Stage_Lead__c</field>
+        <operation>equals</operation>
+        <value>marketingqualifiedlead</value>
+    </filters>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>equals</operation>
+        <value>New</value>
+    </filters>
+    <filters>
+        <field>MQL_Type_Lead__c</field>
+        <operation>equals</operation>
+        <value>Type 1,Type 2</value>
+    </filters>
+    <label>MQL Leads</label>
+</ListView>

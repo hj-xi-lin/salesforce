@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SMB_Prosp_My_Albacross_Leads_SMB_Tier_2</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.URL</columns>
+    <columns>LEAD.STATE_CODE</columns>
+    <columns>LEAD.EMPLOYEES</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.UNREAD</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>Outbound_Source__c</field>
+        <operation>equals</operation>
+        <value>Website Visitor</value>
+    </filters>
+    <filters>
+        <field>Albacross_Segment__c</field>
+        <operation>equals</operation>
+        <value>SMB Tier 2</value>
+    </filters>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Lost</value>
+    </filters>
+    <label>SMB Prosp-My Albacross Leads SMB Tier 2</label>
+</ListView>

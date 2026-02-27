@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MQL_Type_Account__c</fullName>
+    <description>Is populated via flow from Contact MQL Conversions based on defined logic or via upload for Sales Signals (Index/Inventory/Dealfront)
+RO-2366</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Zeigt für Accounts in Lifecycle Stage Prospect und Acquisition den besten MQL Type aller verknüpften Kontakte an und hilft Sales, den Account zu priorisieren. Hier kannst du mehr Infos zu den MQL Types finden. https://heyjobs.atlassian.net/wiki/spaces/EOP/pages/3107455666/MQL+to+Demo+Process#MQL-Type</inlineHelpText>
+    <label>MQL Type Account</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

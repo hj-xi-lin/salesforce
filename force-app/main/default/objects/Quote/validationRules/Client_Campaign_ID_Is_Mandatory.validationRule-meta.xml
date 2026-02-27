@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Client_Campaign_ID_Is_Mandatory</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(
+fmlAccountName__c=&quot;Deutsche Bahn AG - HIRE (3404 / Hamel &amp; Co)&quot;,
+fmlAccountName__c=&quot;Autokraft GmbH&quot;,
+fmlAccountName__c=&quot;DB Dialog GmbH&quot;,
+fmlAccountName__c=&quot;Db Regionetz Verkehrs GmbH - Westfrankenbahn -&quot;,
+fmlAccountName__c=&quot;Deutsche Bahn - DB mindbox&quot;,
+fmlAccountName__c=&quot;Deutsche Bahn - DB Regio AG&quot;,
+fmlAccountName__c=&quot;Deutsche Bahn - Recruiter Portal&quot;,
+fmlAccountName__c=&quot;Deutsche Bahn CBR / Global&quot;,
+fmlAccountName__c=&quot;Deutsche Bahn Events&quot;,
+fmlAccountName__c=&quot;Deutsche Bahn Ingenieure&quot;,
+fmlAccountName__c=&quot;Deutsche Bahn IT&quot;,
+fmlAccountName__c=&quot;Deutsche Bahn kaufm. Akademiker&quot;,
+fmlAccountName__c=&quot;Deutsche Bahn Konzernprojekte&quot;,
+fmlAccountName__c=&quot;Deutsche Bahn Mitte&quot;,
+fmlAccountName__c=&quot;Deutsche Bahn Nord&quot;,
+fmlAccountName__c=&quot;Deutsche Bahn Ost&quot;,
+fmlAccountName__c=&quot;Deutsche Bahn Studenten&quot;,
+fmlAccountName__c=&quot;Deutsche Bahn Süd&quot;,
+fmlAccountName__c=&quot;Deutsche Bahn Südost&quot;,
+fmlAccountName__c=&quot;Deutsche Bahn Südwest&quot;,
+fmlAccountName__c=&quot;Deutsche Bahn West&quot;,
+fmlAccountName__c=&quot;Deutsche Bahn Zentral&quot;,
+fmlAccountName__c=&quot;Regional Bus Stuttgart GmbH RBS&quot;,
+fmlAccountName__c=&quot;Regionalverkehr Oberbayern GmbH&quot;,
+fmlAccountName__c=&quot;S-Bahn Berlin GmbH&quot;,
+fmlAccountName__c=&quot;SBG Südbadenbus GmbH&quot;,
+fmlAccountName__c=&quot;Tfg Transfracht Internat. Gesellschaft für Kombin. Güterverkehr mbH&quot;,
+fmlAccountName__c=&quot;Deutsche Bahn AG - REACH (2911 / Lehmkuhl)&quot;,
+fmlAccountName__c=&quot;S-Bahn Hamburg GmbH&quot;,
+fmlAccountName__c=&quot;Station Food GmbH&quot;)
+&amp;&amp;
+ISBLANK( Client_Campaign_ID__c)</errorConditionFormula>
+    <errorMessage>Client_Campaign_ID__c_Is_Mandatory!</errorMessage>
+</ValidationRule>

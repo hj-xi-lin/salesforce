@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Handover_Quality_Comments__c</fullName>
+    <description>Comments from ACM about the quality of the handover documentation after Internal Handover Call</description>
+    <inlineHelpText>Kommentare des ACM zur Qualität der Handover-Dokumentation (max. 3 Sätze).</inlineHelpText>
+    <label>Handover Quality Comments</label>
+    <length>1000</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

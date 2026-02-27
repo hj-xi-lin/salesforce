@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_of_Open_Hunting_Opportunities__c</fullName>
+    <description>Reused for RO-1730</description>
+    <label>Legacy Open Opp Count before Offer</label>
+    <summaryFilterItems>
+        <field>Opportunity.StageName</field>
+        <operation>notEqual</operation>
+        <value>Offer, Onlinekauf, Contract received, Closed Won, Closed Lost</value>
+    </summaryFilterItems>
+    <summaryFilterItems>
+        <field>Opportunity.RecordTypeId</field>
+        <operation>notEqual</operation>
+        <value>Customer Self Service</value>
+    </summaryFilterItems>
+    <summaryFilterItems>
+        <field>Opportunity.Onlinekauf__c</field>
+        <operation>equals</operation>
+        <value>False</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Opportunity.AccountId</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

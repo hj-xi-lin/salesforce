@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ON_BillingType__c</fullName>
+    <description>Specifies the billing behavior. Supported values for recurring items include Recurring or Recurring Prorated.</description>
+    <externalId>false</externalId>
+    <formula>IF (Opportunity.Recurring_Invoice__c = true, &apos;Recurring&apos;, 
+&apos;One-Time&apos;)</formula>
+    <inlineHelpText>Specifies the billing behavior. Supported values for recurring items include Recurring or Recurring Prorated.</inlineHelpText>
+    <label>JustOn: Billing Type</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

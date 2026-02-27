@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Case</entityName>
+    <fieldName>Status</fieldName>
+    <masterLabel>[ATS] Proof of Concept for new ATS</masterLabel>
+    <recordTypeName>ATS_Proof_of_Concept_for_new_ATS</recordTypeName>
+</PathAssistant>

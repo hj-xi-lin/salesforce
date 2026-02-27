@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Timestamp_Latest_Opp_Contact_Role__c</fullName>
+    <description>RO-1821</description>
+    <inlineHelpText>The latest created date of the Opportunity Contact role, whenever an Opportunity Contact role gets created (not edited) using this contact.</inlineHelpText>
+    <label>Timestamp Latest Opp Contact Role</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>DateTime</type>
+</CustomField>

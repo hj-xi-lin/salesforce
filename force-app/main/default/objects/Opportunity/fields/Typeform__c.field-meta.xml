@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Typeform__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Ist TRUE (checked), wenn ein Typeform zum Einholen der Rechnungs- und Leistungsadresse an den/die Kund*in rausgeschickt wurde. Wenn FALSE (unchecked) wurde kein Typeform versendet.</inlineHelpText>
+    <label>Typeform</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

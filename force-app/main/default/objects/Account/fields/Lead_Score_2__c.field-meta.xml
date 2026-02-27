@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Score_2__c</fullName>
+    <description>RO - 2319</description>
+    <inlineHelpText>Jedes angelegte Unternehmen (Account) besitzt einen eigenen Lead Score. Der Lead Score wird im Sales und Marketing genutzt und definiert die “Größe” oder “Qualität” des Leads. Anhand des Lead Scores werden Berichte und die Aktivitäten des Sales-Teams gefiltert. Der Lead Score wird bei HeyJobs anhand der Estimated Wallet Size festgelegt.</inlineHelpText>
+    <label>Lead Score</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>A</fullName>
+                <default>false</default>
+                <label>A</label>
+            </value>
+            <value>
+                <fullName>B</fullName>
+                <default>false</default>
+                <label>B</label>
+            </value>
+            <value>
+                <fullName>C</fullName>
+                <default>false</default>
+                <label>C</label>
+            </value>
+            <value>
+                <fullName>D</fullName>
+                <default>false</default>
+                <label>D</label>
+            </value>
+            <value>
+                <fullName>E</fullName>
+                <default>false</default>
+                <label>E</label>
+            </value>
+            <value>
+                <fullName>F</fullName>
+                <default>false</default>
+                <label>F</label>
+            </value>
+            <value>
+                <fullName>G</fullName>
+                <default>false</default>
+                <label>G</label>
+            </value>
+            <value>
+                <fullName>H</fullName>
+                <default>false</default>
+                <label>H</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

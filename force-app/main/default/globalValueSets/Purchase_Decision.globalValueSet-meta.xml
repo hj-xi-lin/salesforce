@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Purchasing</fullName>
+        <default>false</default>
+        <label>Purchasing</label>
+    </customValue>
+    <customValue>
+        <fullName>Not Purchasing</fullName>
+        <default>false</default>
+        <label>Not Purchasing</label>
+    </customValue>
+    <customValue>
+        <fullName>Yes</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Yes</label>
+    </customValue>
+    <customValue>
+        <fullName>No</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>No</label>
+    </customValue>
+    <customValue>
+        <fullName>Using Framework</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Using Framework</label>
+    </customValue>
+    <masterLabel>Purchase Decision</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

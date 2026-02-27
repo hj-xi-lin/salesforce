@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Full Integration</fullName>
+        <default>false</default>
+        <label>Full Integration</label>
+    </customValue>
+    <customValue>
+        <fullName>LinkOut</fullName>
+        <default>false</default>
+        <label>LinkOut</label>
+    </customValue>
+    <customValue>
+        <fullName>Email</fullName>
+        <default>false</default>
+        <label>Email</label>
+    </customValue>
+    <description>RO-2068</description>
+    <masterLabel>Integration type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

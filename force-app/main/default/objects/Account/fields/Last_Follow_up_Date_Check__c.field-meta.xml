@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last_Follow_up_Date_Check__c</fullName>
+    <description>RO-2317</description>
+    <inlineHelpText>Das Feld gibt an, wann der Wert von &quot;Follow-Up Date (Account)&quot; zuletzt geändert oder überprüft wurde. Wenn das &quot;Follow-Up Date (Account)&quot; auf einen anderen Wert geändert wird, wird das Feld &quot;Last Follow-up Date Check&quot; automatisch mit dem heutigen Datum aktualisiert. Wenn überprüft wurde, ob das Feld &quot;Follow-Up Date (Account)&quot; noch aktuell ist und keine Änderung vorgenommen wird, muss das Feld &quot;Last Follow-up Date Check&quot; manuell zum aktuellen Datum geändert werden.</inlineHelpText>
+    <label>Last Follow-up Date Check</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>DateTime</type>
+</CustomField>

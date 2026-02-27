@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GTM_Motion_Change_Reason_Detail__c</fullName>
+    <description>RO-2177</description>
+    <inlineHelpText>Freitextfeld zur weiteren Erläuterung des GTM Motion Change Reasons. Weitere Informationen zu den Change Reasons findest du hier: https://heyjobs.atlassian.net/wiki/spaces/ESE/pages/3322937454/GTM+Segmentation+Area+and+Motion+Account+Segmentation+V03#GTM-Motion-Change-Reasons</inlineHelpText>
+    <label>GTM Motion Change Reason Detail</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>TextArea</type>
+</CustomField>

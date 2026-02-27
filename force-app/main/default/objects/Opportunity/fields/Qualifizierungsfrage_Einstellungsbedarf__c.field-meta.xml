@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Qualifizierungsfrage_Einstellungsbedarf__c</fullName>
+    <inlineHelpText>Event form question: Gibt es einen dringenden Einstellungsbedarf?</inlineHelpText>
+    <label>Qualifizierungsfrage Einstellungsbedarf?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>YesNo_Default_Empty</valueSetName>
+    </valueSet>
+</CustomField>

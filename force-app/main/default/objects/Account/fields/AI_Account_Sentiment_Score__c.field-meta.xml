@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AI_Account_Sentiment_Score__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Numerischer Wert zwischen 0 (sehr negativ) und 4 (sehr positiv), der die Gesamtstimmung des Accounts widerspiegelt basierend auf der &quot;AI Account Sentiment Summary&quot;.
+0: sehr negativ
+1: leicht negativ
+2: neutral
+3: leicht positiv
+4: sehr positiv</inlineHelpText>
+    <label>AI Account Sentiment Score (Number)</label>
+    <precision>17</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>
