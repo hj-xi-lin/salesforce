@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pilot_Opportunity__c</fullName>
+    <description>RO-1361</description>
+    <formula>IF(
+    OR(
+        Pilot_Opportunity_Override__c,
+        AND(
+            dateTimestampContractreceived__c &gt;= DATE(2026, 1, 1),
+            IsWon = true,
+            OR(
+                ISPICKVAL(Owner.GTM_Motion_User__c, &quot;Inside Sales&quot;),
+                ISPICKVAL(Owner.GTM_Motion_User__c, &quot;Subscription New Business&quot;)
+            ),
+            Winback_Pilot__c = 1
+        )
+    ),
+    true,
+    IF(
+        AND(
+            OR(RecordType.DeveloperName = &quot;Sales&quot;, RecordType.DeveloperName = &quot;Sales_Transactional&quot;),
+            not_a_new_customer__c = false,
+            OR(ISPICKVAL(StageName, &quot;Closed Won&quot;), ISPICKVAL(StageName, &quot;Contract received&quot;))
+        ),
+        true,
+        IF(
+            AND(
+                RecordType.DeveloperName = &quot;Customer_Self_Service&quot;,
+                Account.First_Won_Opportunity__c = Id,
+                Account.First_Won_Opportunity__r.not_a_new_customer__c = false
+            ), true, false
+        )
+    )
+)</formula>
+    <label>Pilot Opportunity</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

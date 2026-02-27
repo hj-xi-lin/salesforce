@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>A_B_Test_Marker_Account__c</fullName>
+    <description>Temporary helper field for the implementation and testing of the Sentiment Summary</description>
+    <label>Temp Helper Sentiment Summary</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>A_B_Testing</valueSetName>
+    </valueSet>
+</CustomField>

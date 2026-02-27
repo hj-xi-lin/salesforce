@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage_ACM__c</fullName>
+    <defaultValue>&apos;Prospect&apos;</defaultValue>
+    <inlineHelpText>Definiert, wo sich der Account derzeit in unserem Verkaufsprozess befindet.
+Finde die genauen Stage-Definitionen hier: https://heyjobs.atlassian.net/wiki/spaces/EO/pages/2155217116/Salesforce+Accounts+Definition+und+Use-Case#Account-Lifecycle-Stage</inlineHelpText>
+    <label>Account Lifecycle Stage</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Stage_ACM</valueSetName>
+    </valueSet>
+</CustomField>
