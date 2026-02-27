@@ -144,6 +144,16 @@ These packages are installed in the org and managed separately (NOT via GitHub):
 ### 7. Run retrieve from the project directory
 Always `cd` to the sfdx project root (`/Users/xi.lin/Documents/SF_Claude/salesforce`) before running retrieve commands. Running from other directories causes `InvalidProjectWorkspaceError`.
 
+## Research Before Planning (IMPORTANT)
+
+Before creating any implementation plan or making significant changes, ALWAYS search Atlassian first:
+1. **Jira** — Search for related tickets (open and resolved) to understand requirements, decisions, and prior work
+2. **Confluence** — Search for documentation, architecture decisions, and runbooks related to the feature/area
+
+Use the Atlassian MCP tools (`atlassian-mcp-remote` skills) to do this. Only proceed to planning after reviewing what's already documented.
+
+This applies to: new features, bug fixes, refactors, metadata changes, and any task that touches more than a few lines.
+
 ## Team Guidelines
 
 - Follow the development lifecycle in `docs/development-lifecycle.md`
