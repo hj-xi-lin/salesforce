@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Agency_contact__c</fullName>
+    <description>Used to filter inbound agency leads from events</description>
+    <label>Event Agency check</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Yes</fullName>
+                <default>false</default>
+                <label>Yes</label>
+            </value>
+            <value>
+                <fullName>No</fullName>
+                <default>false</default>
+                <label>No</label>
+            </value>
+            <value>
+                <fullName>Null</fullName>
+                <default>false</default>
+                <label>Null</label>
+            </value>
+            <value>
+                <fullName>false</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>false</label>
+            </value>
+            <value>
+                <fullName>true</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>true</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

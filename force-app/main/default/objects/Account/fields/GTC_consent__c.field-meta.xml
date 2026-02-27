@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GTC_consent__c</fullName>
+    <description>RO-1541</description>
+    <inlineHelpText>Derzeit nur für AT HeyPakete-Accounts verwendet - Gibt an, wann das Konto zuletzt den allgemeinen Geschäftsbedingungen (AGBs) zugestimmt hat.</inlineHelpText>
+    <label>GTC consent</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

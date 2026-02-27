@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mandatory_Opp_for_Repeat_Purchase_case</fullName>
+    <active>true</active>
+    <description>RO - 2184</description>
+    <errorConditionFormula>AND(
+RecordType.DeveloperName = &quot;RepeatPurchaseCase&quot;,
+ISNEW(),
+NOT(Created_by_Automation__c),
+ISBLANK(Opportunity__c))</errorConditionFormula>
+    <errorMessage>Please link the case to the original Opportunity in which the REACH deal was closed.</errorMessage>
+</ValidationRule>

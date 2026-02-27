@@ -1,0 +1,84 @@
+/* Host element styling - ensure proper scroll behavior */
+:host {
+    display: block;
+}
+
+/* Review section styling */
+.review-section {
+    padding: 16px;
+    background-color: #fafaf9;
+    border-radius: 8px;
+    border: 1px solid #dddbda;
+}
+
+/* Review item styling */
+.review-item {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 12px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    border: 1px solid #e5e5e5;
+}
+
+.review-item-full {
+    padding: 12px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    border: 1px solid #e5e5e5;
+}
+
+.review-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #706e6b;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+}
+
+.review-value {
+    font-size: 14px;
+    font-weight: 500;
+    color: #181818;
+}
+
+.review-value-small {
+    display: block;
+    font-size: 12px;
+    color: #706e6b;
+    margin-top: 2px;
+}
+
+.review-value-long {
+    display: block;
+    font-size: 14px;
+    color: #181818;
+    margin-top: 8px;
+    white-space: pre-wrap;
+}
+
+/* Badge styling */
+.slds-badge_success {
+    background-color: #04844b;
+    color: white;
+}
+
+.slds-badge_warning {
+    background-color: #ff9a3c;
+    color: #181818;
+}
+
+/* Info box */
+.slds-theme_info {
+    background-color: #16325c;
+    color: white;
+}
+
+/* Title caps styling */
+.slds-text-title_caps {
+    font-size: 0.75rem;
+    letter-spacing: 0.0625rem;
+    color: #706e6b;
+    text-transform: uppercase;
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HelloSign__HSignAccountAction</fullName>
+    <availability>online</availability>
+    <description>Clickable button on the Account page to use the Dropbox Sign application</description>
+    <displayType>button</displayType>
+    <height>600</height>
+    <linkType>page</linkType>
+    <masterLabel>Use Dropbox Sign</masterLabel>
+    <openType>noSidebar</openType>
+    <page>HelloSign__HSignAccountAction</page>
+    <protected>false</protected>
+</WebLink>

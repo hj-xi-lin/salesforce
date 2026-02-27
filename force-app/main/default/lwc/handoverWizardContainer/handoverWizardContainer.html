@@ -1,0 +1,161 @@
+<template>
+    <template lwc:if={_toastVisible}>
+        <div class={toastContainerClass} role="alert">
+            <div class={toastClass}>
+                <lightning-icon icon-name={toastIcon} variant="inverse" size="x-small" class="slds-m-right_small"></lightning-icon>
+                <span><b>{_toastData.title}</b>&nbsp; {_toastData.message}</span>
+                <lightning-button-icon icon-name="utility:close" variant="bare-inverse" alternative-text="Schließen" class="slds-m-left_small" onclick={_dismissToast}></lightning-button-icon>
+            </div>
+        </div>
+    </template>
+
+    <div class="wizard-wrapper">
+        <!-- Sticky Header Section -->
+        <div class="wizard-header-sticky">
+            <!-- Title -->
+            <div class="wizard-title">
+                <h1 class="slds-text-heading_medium">{wizardTitle}</h1>
+            </div>
+
+            <!-- Context Header - Salesforce Highlights Panel Style -->
+            <div class="highlights-panel">
+                <div class="highlights-item">
+                    <p class="highlights-label">Account</p>
+                    <p class="highlights-value">
+                        <a href={contextAccountUrl} onclick={handleAccountLinkClick} class="highlights-link">
+                            {contextAccountName}
+                        </a>
+                    </p>
+                </div>
+                <div class="highlights-item">
+                    <p class="highlights-label">Close Date</p>
+                    <p class="highlights-value">{contextCloseDate}</p>
+                </div>
+                <div class="highlights-item">
+                    <p class="highlights-label">Amount</p>
+                    <p class="highlights-value">{contextAmount}</p>
+                </div>
+                <div class="highlights-item">
+                    <p class="highlights-label">Product Sold</p>
+                    <p class="highlights-value">{contextProductSold}</p>
+                </div>
+            </div>
+
+            <!-- Progress Path - Native Salesforce Component -->
+            <div class="wizard-path">
+                <lightning-progress-indicator
+                    current-step={currentStepValue}
+                    type="path"
+                    variant="base">
+                    <lightning-progress-step label="Pre-check" value="1"></lightning-progress-step>
+                    <lightning-progress-step label="Notes" value="2"></lightning-progress-step>
+                    <lightning-progress-step label="Review" value="3"></lightning-progress-step>
+                </lightning-progress-indicator>
+            </div>
+        </div>
+
+        <!-- Scrollable Content Area -->
+        <div class="wizard-content-scroll">
+            <!-- Loading Spinner -->
+            <template lwc:if={isLoading}>
+                <div class="slds-is-relative slds-p-around_large">
+                    <lightning-spinner alternative-text="Laden..." size="medium"></lightning-spinner>
+                </div>
+            </template>
+
+            <!-- Main Content Area -->
+            <template lwc:if={isNotLoading}>
+                <div class="slds-p-horizontal_medium wizard-content">
+                    
+                    <!-- Pre-check: Consolidated Data & Stakeholder Validation -->
+                    <template lwc:if={isPrecheck}>
+                        <c-handover-section-pre-checks
+                            customer360-data={customer360Data}
+                            auto-pulled-context={autoPulledContext}
+                            onsectionsave={handleSectionSave}
+                            onsectionvalidity={handleSectionValidity}
+                            ondatachange={handleDataChange}>
+                        </c-handover-section-pre-checks>
+                    </template>
+
+                    <!-- Notes -->
+                    <template lwc:if={isNotes}>
+                        <c-handover-section-notes
+                            customer360-data={customer360Data}
+                            onsectionsave={handleSectionSave}
+                            onsectionvalidity={handleSectionValidity}
+                            ondatachange={handleDataChange}>
+                        </c-handover-section-notes>
+                    </template>
+
+                    <!-- Review & Submit -->
+                    <template lwc:if={isReview}>
+                        <c-handover-section-review-submit
+                            customer360-data={customer360Data}
+                            auto-pulled-context={autoPulledContext}
+                            onsubmithandover={handleSubmit}>
+                        </c-handover-section-review-submit>
+                    </template>
+
+                </div>
+            </template>
+        </div>
+
+        <!-- Sticky Footer with navigation buttons -->
+        <template lwc:if={isNotLoading}>
+            <div class="wizard-footer">
+                <div class="slds-grid slds-grid_align-spread">
+                    <div class="footer-left">
+                        <!-- Save Draft Button -->
+                        <lightning-button 
+                            label={saveDraftButtonLabel} 
+                            variant="neutral" 
+                            onclick={handleSaveDraft}
+                            disabled={isSaveDraftDisabled}
+                            icon-name="utility:save"
+                            class="slds-m-right_small">
+                        </lightning-button>
+                        <!-- Back Button -->
+                        <template lwc:if={showBackButton}>
+                            <lightning-button 
+                                label={backButtonLabel} 
+                                variant="neutral" 
+                                onclick={handleBack}
+                                disabled={isNavigationDisabled}
+                                icon-name="utility:chevronleft">
+                            </lightning-button>
+                        </template>
+                    </div>
+                    <div class="footer-right">
+                        <!-- Saving Spinner -->
+                        <template lwc:if={isSaving}>
+                            <lightning-spinner alternative-text="Speichern..." size="small" class="slds-m-right_small"></lightning-spinner>
+                        </template>
+                        <!-- Next Button -->
+                        <template lwc:if={showNextButton}>
+                            <lightning-button 
+                                label={nextButtonLabel} 
+                                variant="brand" 
+                                onclick={handleNext}
+                                disabled={isNavigationDisabled}
+                                icon-name="utility:chevronright"
+                                icon-position="right">
+                            </lightning-button>
+                        </template>
+                        <!-- Submit Button -->
+                        <template lwc:if={showSubmitButton}>
+                            <lightning-button 
+                                label={submitButtonLabel} 
+                                variant="brand" 
+                                onclick={handleSubmit}
+                                disabled={isNavigationDisabled}
+                                icon-name="utility:check"
+                                icon-position="right">
+                            </lightning-button>
+                        </template>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </div>
+</template>

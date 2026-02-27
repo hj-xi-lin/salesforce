@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quote_Summary_2_en__c</fullName>
+    <description>Text field to be included in quote templates</description>
+    <externalId>false</externalId>
+    <formula>&quot;The invoice is issued after the order is received.&quot; &amp;BR()&amp;
+&quot;The invoice has to be settled within &quot; &amp;TEXT( dPaymentTime__c )&amp; &quot; days by bank transfer without deduction.&quot;</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Text field to be included in quote templates</inlineHelpText>
+    <label>Quote Summary 2 en</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

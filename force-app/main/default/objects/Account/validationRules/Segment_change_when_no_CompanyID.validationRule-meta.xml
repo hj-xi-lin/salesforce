@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Segment_change_when_no_CompanyID</fullName>
+    <active>false</active>
+    <errorConditionFormula>AND(
+
+  
+   ISCHANGED(Segment_V02__c),
+
+NOT(ISBLANK(txtCompanyId__c)),
+NOT($Profile.Name = &quot;System Administrator&quot;),
+NOT($Profile.Name = &quot;Customer Operations Manager&quot;),
+NOT($Permission.Allow_Segment_V02_change_with_Company_Id )
+)</errorConditionFormula>
+    <errorMessage>Oops, this Account has a Company ID and we cannot change the Segment. Please contact RevOps via the channel.</errorMessage>
+</ValidationRule>

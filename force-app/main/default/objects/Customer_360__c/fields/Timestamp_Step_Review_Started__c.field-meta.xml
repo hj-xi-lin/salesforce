@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Timestamp_Step_Review_Started__c</fullName>
+    <description>Timestamp when the Review step was started. Used for tracking time spent on each wizard step.</description>
+    <inlineHelpText>When the user started the Review step</inlineHelpText>
+    <label>Timestamp Step Review Started</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Research_Status__c</fullName>
+    <description>identified the account research status for Taskdrive and B2B Marketing</description>
+    <inlineHelpText>identified the account research status for Taskdrive and B2B Marketing</inlineHelpText>
+    <label>Legacy Research Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>On Hold</fullName>
+                <default>false</default>
+                <label>On Hold</label>
+            </value>
+            <value>
+                <fullName>Please research</fullName>
+                <default>false</default>
+                <label>Please research</label>
+            </value>
+            <value>
+                <fullName>Research done</fullName>
+                <default>false</default>
+                <label>Research done</label>
+            </value>
+            <value>
+                <fullName>B2B check done</fullName>
+                <default>false</default>
+                <label>B2B check done</label>
+            </value>
+            <value>
+                <fullName>Fully researched</fullName>
+                <default>false</default>
+                <label>Fully researched</label>
+            </value>
+            <value>
+                <fullName>Not useful for outbound</fullName>
+                <default>false</default>
+                <label>Not useful for outbound</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

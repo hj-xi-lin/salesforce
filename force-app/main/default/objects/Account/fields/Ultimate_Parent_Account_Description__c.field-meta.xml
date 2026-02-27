@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ultimate_Parent_Account_Description__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(NOT(ISBLANK(Parent.Parent.Parent.Parent.Parent.Id)), Parent.Parent.Parent.Parent.Parent.Description_c__c, 
+IF(NOT(ISBLANK(Parent.Parent.Parent.Parent.Id)), Parent.Parent.Parent.Parent.Description_c__c, 
+IF(NOT(ISBLANK(Parent.Parent.Parent.Id)), Parent.Parent.Parent.Description_c__c, 
+IF(NOT(ISBLANK(Parent.Parent.Id)), Parent.Parent.Description_c__c, 
+IF(NOT(ISBLANK(Parent.Id)),Parent.Description_c__c, 
+Description_c__c)))))</formula>
+    <label>Ultimate Parent Account Description</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

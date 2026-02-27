@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Number_of_All_Child_Accounts__c</fullName>
+    <defaultValue>0</defaultValue>
+    <description>RO-2157</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Displays the total number of all accounts in the hierarchy below this account</inlineHelpText>
+    <label>Legacy Number of All Child Accounts</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

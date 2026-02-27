@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Stars</fullName>
+        <default>false</default>
+        <label>Stars</label>
+    </customValue>
+    <customValue>
+        <fullName>Cash Cows</fullName>
+        <default>false</default>
+        <label>Cash Cows</label>
+    </customValue>
+    <customValue>
+        <fullName>Question Marks</fullName>
+        <default>false</default>
+        <label>Question Marks</label>
+    </customValue>
+    <customValue>
+        <fullName>Pool Dogs</fullName>
+        <default>false</default>
+        <label>Pool Dogs</label>
+    </customValue>
+    <masterLabel>Potential</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

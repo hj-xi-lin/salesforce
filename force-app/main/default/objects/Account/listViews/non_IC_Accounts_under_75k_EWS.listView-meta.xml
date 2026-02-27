@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>non_IC_Accounts_under_75k_EWS</fullName>
+    <columns>Account_Owner__c</columns>
+    <columns>Stage_ACM__c</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Follow_up_Details_Account__c</columns>
+    <columns>Estimated_Wallet_Size__c</columns>
+    <columns>Follow_up_Date_Account__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Test_Account__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>Account_Owner__c</field>
+        <operation>contains</operation>
+        <value>Diana,Koch,Marino,tejeiro,Hochmal,Chycko,Felzmann,Schönert,Murges</value>
+    </filters>
+    <filters>
+        <field>Estimated_Wallet_Size__c</field>
+        <operation>lessOrEqual</operation>
+        <value>EUR 74000</value>
+    </filters>
+    <label>Non_IC_Accounts_under_75k_EWS</label>
+</ListView>

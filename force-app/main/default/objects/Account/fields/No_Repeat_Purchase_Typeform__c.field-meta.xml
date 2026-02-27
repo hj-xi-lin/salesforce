@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_Repeat_Purchase_Typeform__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Das No Repeat Purchase Typeform (NRPT) Feld, wenn aktiviert (TRUE), umgeht die Notwendigkeit, dass Kunden bei jedem Kauf wiederholt Rechnungs- und Versandinformationen angeben müssen, sofern ihre Account-Daten vollständig sind. Wenn NRPT deaktiviert ist (FALSE), müssen Kunden ein Typeform für jede geschlossene Opportunity ausfüllen, bevor die Opportunity in die Stage &apos;closed won&apos; gehen kann.</inlineHelpText>
+    <label>No Repeat Purchase Typeform</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

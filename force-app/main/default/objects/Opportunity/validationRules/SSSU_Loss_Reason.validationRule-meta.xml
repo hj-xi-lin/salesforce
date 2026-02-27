@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SSSU_Loss_Reason</fullName>
+    <active>true</active>
+    <description>RO-2049</description>
+    <errorConditionFormula>AND(
+  OR(
+  ISPICKVAL(plLossReason__c, &quot;Jobseeker_SSSU_only&quot;),
+  ISPICKVAL(plLossReason__c, &quot;Fraudulent_SSSU_only&quot;)
+  ),
+  ISCHANGED(StageName),
+  ISPICKVAL(StageName,&quot;Closed Lost&quot;),
+  OR(
+     ISNULL(Account.Timestamp_SSSU_Account__c),
+     ISBLANK(Account.Timestamp_SSSU_Account__c)
+)
+)</errorConditionFormula>
+    <errorMessage>The loss reason chosen is available only for SSSU accounts. Please choose a different loss reason</errorMessage>
+</ValidationRule>

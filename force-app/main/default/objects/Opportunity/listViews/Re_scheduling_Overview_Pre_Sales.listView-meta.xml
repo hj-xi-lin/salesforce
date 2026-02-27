@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Re_scheduling_Overview_Pre_Sales</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>Timestamp_Demo_confirmed__c</columns>
+    <columns>Timestamp_Rescheduling__c</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>equals</operation>
+        <value>Rescheduling</value>
+    </filters>
+    <label>Re-scheduling_Pre-Sales&amp;Prospecting</label>
+</ListView>

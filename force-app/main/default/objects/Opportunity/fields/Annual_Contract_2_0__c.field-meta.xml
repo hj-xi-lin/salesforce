@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Annual_Contract_2_0__c</fullName>
+    <description>RO-1052</description>
+    <formula>AND(
+    ISPICKVAL(Product_Type__c, &quot;HIRE&quot;),
+    NOT(ISPICKVAL(HeyPaket_Type__c,&quot;&quot;))
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Legacy - HeyPaket</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

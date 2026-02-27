@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ultimate_Parent_Lead_Score__c</fullName>
+    <description>Displayes the lead score of the ultimate parents if it is not empty. Adjusted for new Lead Score 2 on 05.03.2025 (PK)</description>
+    <externalId>false</externalId>
+    <formula>IF(
+    ISBLANK(ParentId), 
+    &quot;&quot;, 
+    IF(
+        NOT(ISBLANK(TEXT(Parent.Parent.Parent.Parent.Lead_Score_2__c))), 
+        TEXT(Parent.Parent.Parent.Parent.Lead_Score_2__c),
+        IF(
+            NOT(ISBLANK(TEXT(Parent.Parent.Parent.Lead_Score_2__c))), 
+            TEXT(Parent.Parent.Parent.Lead_Score_2__c),
+            IF(
+                NOT(ISBLANK(TEXT(Parent.Parent.Lead_Score_2__c))), 
+                TEXT(Parent.Parent.Lead_Score_2__c),
+                IF(
+                    NOT(ISBLANK(TEXT(Parent.Lead_Score_2__c))),
+                    TEXT(Parent.Lead_Score_2__c),
+                    TEXT(Lead_Score_2__c)
+                )
+            )
+        )
+    )
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Displayes the lead score of the ultimate parents if it is not empty.</inlineHelpText>
+    <label>Ultimate Parent Lead Score</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

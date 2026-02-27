@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Currently not hiring</fullName>
+        <default>false</default>
+        <label>Currently not hiring</label>
+    </customValue>
+    <customValue>
+        <fullName>Not budget available</fullName>
+        <default>false</default>
+        <label>No budget available</label>
+    </customValue>
+    <customValue>
+        <fullName>Looking for free service</fullName>
+        <default>false</default>
+        <label>Looking for free service</label>
+    </customValue>
+    <customValue>
+        <fullName>Interested in Content Only</fullName>
+        <default>false</default>
+        <label>Interested in Content Only</label>
+    </customValue>
+    <customValue>
+        <fullName>Converted by Mistake</fullName>
+        <default>false</default>
+        <label>Converted by Mistake</label>
+    </customValue>
+    <customValue>
+        <fullName>Satisfied with competitor</fullName>
+        <default>false</default>
+        <label>Satisfied with competitor</label>
+    </customValue>
+    <customValue>
+        <fullName>Contact not part of the buying group</fullName>
+        <default>false</default>
+        <label>Contact not part of the buying group</label>
+    </customValue>
+    <customValue>
+        <fullName>Invalid/missing contact information</fullName>
+        <default>false</default>
+        <label>Invalid/missing contact information</label>
+    </customValue>
+    <customValue>
+        <fullName>Not interested in digital recruiting services</fullName>
+        <default>false</default>
+        <label>Not interested in digital recruiting services</label>
+    </customValue>
+    <customValue>
+        <fullName>Does not trust performance marketing approach</fullName>
+        <default>false</default>
+        <label>Does not trust performance marketing approach</label>
+    </customValue>
+    <customValue>
+        <fullName>Price too high</fullName>
+        <default>false</default>
+        <label>Price too high</label>
+    </customValue>
+    <customValue>
+        <fullName>Not hiring in HeyJobs region</fullName>
+        <default>false</default>
+        <label>Not hiring in HeyJobs region</label>
+    </customValue>
+    <customValue>
+        <fullName>Not enough priority/resources for implementation</fullName>
+        <default>false</default>
+        <label>Not enough priority/resources for implementation</label>
+    </customValue>
+    <customValue>
+        <fullName>Dependent central buying decision</fullName>
+        <default>false</default>
+        <label>Dependent central buying decision</label>
+    </customValue>
+    <customValue>
+        <fullName>ATS integration unavailable</fullName>
+        <default>false</default>
+        <label>ATS integration unavailable</label>
+    </customValue>
+    <customValue>
+        <fullName>Contact doesn’t respond</fullName>
+        <default>false</default>
+        <label>Contact doesn’t respond</label>
+    </customValue>
+    <customValue>
+        <fullName>Duplicate contact</fullName>
+        <default>false</default>
+        <label>Duplicate contact</label>
+    </customValue>
+    <customValue>
+        <fullName>Jobseeker</fullName>
+        <default>false</default>
+        <label>Jobseeker</label>
+    </customValue>
+    <customValue>
+        <fullName>Fraud</fullName>
+        <default>false</default>
+        <label>Fraud</label>
+    </customValue>
+    <customValue>
+        <fullName>Special Case</fullName>
+        <default>false</default>
+        <label>Special Case</label>
+    </customValue>
+    <customValue>
+        <fullName>Freelancer oder Einzelunternehmen</fullName>
+        <default>false</default>
+        <label>Freelancer oder Einzelunternehmen</label>
+    </customValue>
+    <customValue>
+        <fullName>Reason 2</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Reason 2</label>
+    </customValue>
+    <customValue>
+        <fullName>Reason 1</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Reason 1</label>
+    </customValue>
+    <description>RO-2710</description>
+    <masterLabel>Disqualification Reasons</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

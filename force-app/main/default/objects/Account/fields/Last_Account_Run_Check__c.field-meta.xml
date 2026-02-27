@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last_Account_Run_Check__c</fullName>
+    <description>RO-2433</description>
+    <inlineHelpText>Datum, an dem zuletzt die Überprüfung der Account Run Felder durchgeführt wurde. Dieses Feld hilft, den Zeitpunkt der letzten Analyse oder Aktualisierung der Account Run Daten zu dokumentieren, um sicherzustellen, dass alle Informationen aktuell und korrekt sind.</inlineHelpText>
+    <label>Last Account Run Check</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>DateTime</type>
+</CustomField>

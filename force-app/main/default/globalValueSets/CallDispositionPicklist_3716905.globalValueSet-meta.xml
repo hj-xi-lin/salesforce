@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Connected</fullName>
+        <default>false</default>
+        <label>Connected</label>
+    </customValue>
+    <customValue>
+        <fullName>No Answer</fullName>
+        <default>false</default>
+        <label>No Answer</label>
+    </customValue>
+    <customValue>
+        <fullName>Not Interested</fullName>
+        <default>false</default>
+        <label>Not Interested</label>
+    </customValue>
+    <customValue>
+        <fullName>Left Voicemail</fullName>
+        <default>false</default>
+        <label>Left Voicemail</label>
+    </customValue>
+    <customValue>
+        <fullName>Wrong Number</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Wrong Number</label>
+    </customValue>
+    <description>This picklist is used for the call result feature</description>
+    <masterLabel>CallDispositionPicklist_3716905</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

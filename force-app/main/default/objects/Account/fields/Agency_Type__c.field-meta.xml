@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Agency_Type__c</fullName>
+    <description>RO - 1631</description>
+    <label>Agency Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Pakete Agentur</fullName>
+                <default>false</default>
+                <label>Pakete Agentur</label>
+            </value>
+            <value>
+                <fullName>Stellenanzeigen Beratungsagentur</fullName>
+                <default>false</default>
+                <label>Stellenanzeigen Beratungsagentur</label>
+            </value>
+            <value>
+                <fullName>Marketing Agentur / Employer Branding</fullName>
+                <default>false</default>
+                <label>Marketing Agentur / Employer Branding</label>
+            </value>
+            <value>
+                <fullName>Multiposter / ATS</fullName>
+                <default>false</default>
+                <label>Multiposter / ATS</label>
+            </value>
+            <value>
+                <fullName>Special Case</fullName>
+                <default>false</default>
+                <label>Special Case</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

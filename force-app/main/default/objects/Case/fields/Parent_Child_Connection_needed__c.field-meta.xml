@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Parent_Child_Connection_needed__c</fullName>
+    <description>RO-1760</description>
+    <inlineHelpText>Set to &quot;yes&quot; only if a Parent-Child Connection in BE is required. Typically, this action is irreversible.</inlineHelpText>
+    <label>Parent Child Connection needed?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>YesNo_Default_Empty</valueSetName>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Research_Status_required</fullName>
+    <active>true</active>
+    <description>The Research Status field is required for Account Record Type Research</description>
+    <errorConditionFormula>RecordTypeId = &quot;0121w0000000z7k&quot; 
+&amp;&amp; 
+NOT(OR( 
+ISPICKVAL(Research_Status__c,&quot;Please research&quot;), 
+ISPICKVAL(Research_Status__c,&quot;Research done&quot;), 
+ISPICKVAL(Research_Status__c,&quot;B2B check done&quot;), 
+ISPICKVAL(Research_Status__c,&quot;Not useful for outbound&quot;), 
+ISPICKVAL(Research_Status__c,&quot;Fully researched&quot;)))</errorConditionFormula>
+    <errorDisplayField>Research_Status__c</errorDisplayField>
+    <errorMessage>Please enter the Research Status!</errorMessage>
+</ValidationRule>

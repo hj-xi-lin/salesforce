@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunities_without_Event</fullName>
+    <booleanFilter>1 AND 2 AND 3 AND (4 OR 5)</booleanFilter>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>Demo_Date__c</columns>
+    <columns>Hunter__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CORE.USERS.FULL_NAME</field>
+        <operation>contains</operation>
+        <value>felzmann,lenti,hormuth,von den benken,westphal,roth,geissler,born,virgillito,boehmert,chycko</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>notEqual</operation>
+        <value>Closed Won,Closed Lost</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Opportunity.Sales</value>
+    </filters>
+    <filters>
+        <field>Demo_Date__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Hunter__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>Opportunities without Event</label>
+</ListView>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Service_Period__c</fullName>
+    <inlineHelpText>Leistungszeitraum in dem das Budget für den/die Kund*in im Recruiter Portal gültig ist.</inlineHelpText>
+    <label>Service Period</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1 month</fullName>
+                <default>false</default>
+                <label>1 month</label>
+            </value>
+            <value>
+                <fullName>2 months</fullName>
+                <default>false</default>
+                <label>2 months</label>
+            </value>
+            <value>
+                <fullName>3 months</fullName>
+                <default>false</default>
+                <label>3 months</label>
+            </value>
+            <value>
+                <fullName>4 months</fullName>
+                <default>false</default>
+                <label>4 months</label>
+            </value>
+            <value>
+                <fullName>5 months</fullName>
+                <default>false</default>
+                <label>5 months</label>
+            </value>
+            <value>
+                <fullName>6 months</fullName>
+                <default>true</default>
+                <label>6 months</label>
+            </value>
+            <value>
+                <fullName>7 months</fullName>
+                <default>false</default>
+                <label>7 months</label>
+            </value>
+            <value>
+                <fullName>8 months</fullName>
+                <default>false</default>
+                <label>8 months</label>
+            </value>
+            <value>
+                <fullName>9 months</fullName>
+                <default>false</default>
+                <label>9 months</label>
+            </value>
+            <value>
+                <fullName>10 months</fullName>
+                <default>false</default>
+                <label>10 months</label>
+            </value>
+            <value>
+                <fullName>11 months</fullName>
+                <default>false</default>
+                <label>11 months</label>
+            </value>
+            <value>
+                <fullName>12 months</fullName>
+                <default>false</default>
+                <label>12 months</label>
+            </value>
+            <value>
+                <fullName>13 months</fullName>
+                <default>false</default>
+                <label>13 months</label>
+            </value>
+            <value>
+                <fullName>14 months</fullName>
+                <default>false</default>
+                <label>14 months</label>
+            </value>
+            <value>
+                <fullName>15 months</fullName>
+                <default>false</default>
+                <label>15 months</label>
+            </value>
+            <value>
+                <fullName>16 months</fullName>
+                <default>false</default>
+                <label>16 months</label>
+            </value>
+            <value>
+                <fullName>17 months</fullName>
+                <default>false</default>
+                <label>17 months</label>
+            </value>
+            <value>
+                <fullName>18 months</fullName>
+                <default>false</default>
+                <label>18 months</label>
+            </value>
+            <value>
+                <fullName>19 months</fullName>
+                <default>false</default>
+                <label>19 months</label>
+            </value>
+            <value>
+                <fullName>20 months</fullName>
+                <default>false</default>
+                <label>20 months</label>
+            </value>
+            <value>
+                <fullName>21 months</fullName>
+                <default>false</default>
+                <label>21 months</label>
+            </value>
+            <value>
+                <fullName>22 months</fullName>
+                <default>false</default>
+                <label>22 months</label>
+            </value>
+            <value>
+                <fullName>23 months</fullName>
+                <default>false</default>
+                <label>23 months</label>
+            </value>
+            <value>
+                <fullName>24 months</fullName>
+                <default>false</default>
+                <label>24 months</label>
+            </value>
+            <value>
+                <fullName>36 months</fullName>
+                <default>false</default>
+                <label>36 months</label>
+            </value>
+            <value>
+                <fullName>48 months</fullName>
+                <default>false</default>
+                <label>48 months</label>
+            </value>
+            <value>
+                <fullName>Ramp-up _Special_-_September_30th</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Ramp-up Special - September 30th</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

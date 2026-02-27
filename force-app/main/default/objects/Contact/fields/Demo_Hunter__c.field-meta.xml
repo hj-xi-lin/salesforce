@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Demo_Hunter__c</fullName>
+    <description>Can be retired, is not in use anymore. to be retired</description>
+    <label>Legacy_Demo Hunter</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Annika Wittkowski</fullName>
+                <default>false</default>
+                <label>Annika Wittkowski</label>
+            </value>
+            <value>
+                <fullName>Charleen Göllner</fullName>
+                <default>false</default>
+                <label>Charleen Göllner</label>
+            </value>
+            <value>
+                <fullName>Diana Bloß</fullName>
+                <default>false</default>
+                <label>Diana Bloß</label>
+            </value>
+            <value>
+                <fullName>Felix-Maximilian Wolf</fullName>
+                <default>false</default>
+                <label>Felix-Maximilian Wolf</label>
+            </value>
+            <value>
+                <fullName>Karolin Weyer</fullName>
+                <default>false</default>
+                <label>Karolin Weyer</label>
+            </value>
+            <value>
+                <fullName>Karol M. Czuba</fullName>
+                <default>false</default>
+                <label>Karol M. Czuba</label>
+            </value>
+            <value>
+                <fullName>Kevin Kadillari</fullName>
+                <default>false</default>
+                <label>Kevin Kadillari</label>
+            </value>
+            <value>
+                <fullName>Laura Ritz</fullName>
+                <default>false</default>
+                <label>Laura Ritz</label>
+            </value>
+            <value>
+                <fullName>Niklas Menke</fullName>
+                <default>false</default>
+                <label>Niklas Menke</label>
+            </value>
+            <value>
+                <fullName>Oliver Sellschopp</fullName>
+                <default>false</default>
+                <label>Oliver Sellschopp</label>
+            </value>
+            <value>
+                <fullName>Sissi Greifendorf</fullName>
+                <default>false</default>
+                <label>Sissi Greifendorf</label>
+            </value>
+            <value>
+                <fullName>Tim Koch</fullName>
+                <default>false</default>
+                <label>Tim Koch</label>
+            </value>
+            <value>
+                <fullName>Tobias Eppler</fullName>
+                <default>false</default>
+                <label>Tobias Eppler</label>
+            </value>
+            <value>
+                <fullName>Florian Przybilla</fullName>
+                <default>false</default>
+                <label>Florian Przybilla</label>
+            </value>
+            <value>
+                <fullName>Anna-Lena Eggert</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Anna-Lena Eggert</label>
+            </value>
+            <value>
+                <fullName>Julia Unger</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Julia Unger</label>
+            </value>
+            <value>
+                <fullName>Kasimir Rantzau</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Kasimir Rantzau</label>
+            </value>
+            <value>
+                <fullName>Martin Roberts</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Martin Roberts</label>
+            </value>
+            <value>
+                <fullName>Stephan Ruppel</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Stephan Ruppel</label>
+            </value>
+            <value>
+                <fullName>Tanya Langenkamp</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Tanya Langenkamp</label>
+            </value>
+            <value>
+                <fullName>Torsten Depping</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Torsten Depping</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

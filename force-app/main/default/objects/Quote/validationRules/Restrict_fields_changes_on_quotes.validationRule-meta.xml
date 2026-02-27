@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restrict_fields_changes_on_quotes</fullName>
+    <active>true</active>
+    <description>Restrict edits on the quote fields after quote has been accepted.</description>
+    <errorConditionFormula>AND( $Profile.Name &lt;&gt;&quot;System Administrator&quot;,  $Profile.Name &lt;&gt;&quot;Finance&quot;,
+
+OR(
+
+AND (
+      (TEXT(PRIORVALUE(Status))= &quot;Accepted&quot;) ,
+      (TEXT(Status)= &quot;Accepted&quot;)),
+AND (
+      (TEXT(PRIORVALUE(Status))= &quot;Rejected&quot;) ,
+      (TEXT(Status)= &quot;Rejected&quot;)),
+
+AND (
+      (TEXT(PRIORVALUE(Status))= &quot;Accepted&quot;) ,
+       (TEXT(Status)!= &quot;Accepted&quot;)),
+AND (
+      (TEXT(PRIORVALUE(Status))= &quot;Rejected&quot;) ,
+       (TEXT(Status)!= &quot;Rejected&quot;))
+    )
+)</errorConditionFormula>
+    <errorMessage>You cant edit the fields once the quote has been accepted</errorMessage>
+</ValidationRule>

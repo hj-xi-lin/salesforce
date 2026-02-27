@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mandatory_ATS_field</fullName>
+    <active>false</active>
+    <description>RO-1523</description>
+    <errorConditionFormula>AND(
+
+ISPICKVAL( plATSName__c , &quot;&quot; ),
+
+OR(
+TEXT(Stage_ACM__c) = $Label.Account_Lifecycle_Stage_Pilot,
+TEXT(Stage_ACM__c) = $Label.Account_Lifecycle_Stage_Expansion,
+TEXT(Stage_ACM__c) = $Label.Account_Lifecycle_Stage_Retention
+),
+
+RecordType.DeveloperName &lt;&gt; &quot;Agency_Customer_Sales&quot;,
+RecordType.DeveloperName &lt;&gt; &quot;Agency_Sales&quot;,
+RecordType.DeveloperName &lt;&gt; &quot;Inventory_Partner&quot;,
+
+$User.Full_Name__c &lt;&gt; &quot;Salesforce Admin&quot;,
+NOT(CONTAINS($Profile.Name, &quot;Customer&quot;)),   
+NOT( $Permission.Finance )
+)</errorConditionFormula>
+    <errorDisplayField>plATSName__c</errorDisplayField>
+    <errorMessage>Please populate the ATS Name field.</errorMessage>
+</ValidationRule>

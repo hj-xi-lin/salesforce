@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Role_Required</fullName>
+    <active>true</active>
+    <description>It checks if the Contact Role is populated</description>
+    <errorConditionFormula>AND(
+    NOT(ISNEW()),
+    ISCHANGED(StageName),
+   
+    Contact_Role_Assigned__c = FALSE,
+    OR(    
+        ISPICKVAL(StageName, &quot;Rescheduling&quot;),
+        ISPICKVAL(StageName, &quot;Scheduled&quot;),
+        ISPICKVAL(StageName, &quot;Demo Confirmed&quot;),
+        ISPICKVAL(StageName, &quot;Demo Held&quot;),
+        ISPICKVAL(StageName, &quot;Pilot Definition&quot;),
+        ISPICKVAL(StageName, &quot;Offer&quot;),
+        ISPICKVAL(StageName, &quot;Contract Received&quot;),
+	ISPICKVAL(StageName, &quot;Closed Lost&quot;),
+        ISPICKVAL(StageName, &quot;Pitch &amp; Negotiation&quot;)
+
+
+    ),
+    $Profile.Name &lt;&gt; &quot;System Administrator&quot;
+)</errorConditionFormula>
+    <errorMessage>Please ensure that there is at least one Contact Role and all Contact Roles have a defined &quot;Role&quot; before you proceed to the next stage.</errorMessage>
+</ValidationRule>

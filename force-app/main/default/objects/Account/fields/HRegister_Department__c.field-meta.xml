@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRegister_Department__c</fullName>
+    <description>Department in the Handeslregister</description>
+    <inlineHelpText>Department in the Handeslregister</inlineHelpText>
+    <label>HRegister-Department</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>BSR</fullName>
+                <default>false</default>
+                <label>BSR</label>
+            </value>
+            <value>
+                <fullName>GnR</fullName>
+                <default>false</default>
+                <label>GnR</label>
+            </value>
+            <value>
+                <fullName>GR</fullName>
+                <default>false</default>
+                <label>GR</label>
+            </value>
+            <value>
+                <fullName>HR</fullName>
+                <default>false</default>
+                <label>HR</label>
+            </value>
+            <value>
+                <fullName>HRA</fullName>
+                <default>false</default>
+                <label>HRA</label>
+            </value>
+            <value>
+                <fullName>HRB</fullName>
+                <default>false</default>
+                <label>HRB</label>
+            </value>
+            <value>
+                <fullName>PR</fullName>
+                <default>false</default>
+                <label>PR</label>
+            </value>
+            <value>
+                <fullName>VR</fullName>
+                <default>false</default>
+                <label>VR</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

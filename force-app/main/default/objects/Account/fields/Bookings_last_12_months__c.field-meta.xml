@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bookings_last_12_months__c</fullName>
+    <defaultValue>0</defaultValue>
+    <description>RO-674 / Used in Declarative Rollup Summary</description>
+    <inlineHelpText>Zeigt die Summer aller (closed won) Bookings in den letzten 12 Monaten.</inlineHelpText>
+    <label>Bookings Last 12 Months</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Currency</type>
+</CustomField>

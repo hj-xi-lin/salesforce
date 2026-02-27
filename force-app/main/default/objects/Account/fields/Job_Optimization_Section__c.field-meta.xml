@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Job_Optimization_Section__c</fullName>
+    <description>IntOps uses field to store Channable URL as well as infos about an integration pause or termination.</description>
+    <inlineHelpText>In der Regel speichert dieses Feld den Link zum &quot;Channable-Projekt&quot; für die Integration. Wenn eine Kampagne pausiert oder offline genommen wird, wird diese Information ebenfalls hier vermerkt.</inlineHelpText>
+    <label>Channable Information</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>TextArea</type>
+</CustomField>

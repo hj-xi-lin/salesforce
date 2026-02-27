@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Karrierewebseite</fullName>
+        <default>false</default>
+        <label>Karrierewebseite</label>
+    </customValue>
+    <customValue>
+        <fullName>Stellenbörsen/Meta-Jobsuchmaschinen</fullName>
+        <default>false</default>
+        <label>Stellenbörsen/Meta-Jobsuchmaschinen</label>
+    </customValue>
+    <customValue>
+        <fullName>Google Anzeigen</fullName>
+        <default>false</default>
+        <label>Google Anzeigen</label>
+    </customValue>
+    <customValue>
+        <fullName>Facebook Anzeigen</fullName>
+        <default>false</default>
+        <label>Facebook Anzeigen</label>
+    </customValue>
+    <customValue>
+        <fullName>Zeitungsanzeigen</fullName>
+        <default>false</default>
+        <label>Zeitungsanzeigen</label>
+    </customValue>
+    <customValue>
+        <fullName>Aussenwerbung</fullName>
+        <default>false</default>
+        <label>Aussenwerbung</label>
+    </customValue>
+    <customValue>
+        <fullName>Radio</fullName>
+        <default>false</default>
+        <label>Radio</label>
+    </customValue>
+    <customValue>
+        <fullName>Jobmessen</fullName>
+        <default>false</default>
+        <label>Jobmessen</label>
+    </customValue>
+    <customValue>
+        <fullName>Andere</fullName>
+        <default>false</default>
+        <label>Andere</label>
+    </customValue>
+    <masterLabel>Current Marketing Channels</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

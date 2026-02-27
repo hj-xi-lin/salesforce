@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X2025_10_CW41_MIX_MKT_COV_DE_ALL_ALL_OPS</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CONTACT.PHONE1</columns>
+    <columns>CONTACT.EMAIL</columns>
+    <columns>CONTACT.TITLE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Lifecycle_Stage_Contact__c</columns>
+    <columns>Account.Heyassessment_Enabled__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>2025-10-CW41-MIX-MKT-COV-DE-ALL-ALL-OPS-</label>
+</ListView>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deduplication_Parent__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Temporary field for Contact Deduplication</description>
+    <label>Deduplication Parent</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Contacts</relationshipLabel>
+    <relationshipName>DuplicateContacts</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

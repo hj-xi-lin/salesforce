@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ON_UnitPrice__c</fullName>
+    <description>Either the net or gross price of one unit of this item.</description>
+    <formula>UnitPrice</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Either the net or gross price of one unit of this item.</inlineHelpText>
+    <label>JustOn: UnitPrice</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <type>Currency</type>
+</CustomField>

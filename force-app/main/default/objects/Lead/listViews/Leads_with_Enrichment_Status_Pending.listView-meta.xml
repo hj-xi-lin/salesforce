@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Leads_with_Enrichment_Status_Pending</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.STATE_CODE</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.UNREAD</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>urlCareerPage__c</columns>
+    <columns>Category_3__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Enrichment_Status__c</field>
+        <operation>equals</operation>
+        <value>Enrichment Pending</value>
+    </filters>
+    <label>Leads with Enrichment Status = Pending</label>
+</ListView>

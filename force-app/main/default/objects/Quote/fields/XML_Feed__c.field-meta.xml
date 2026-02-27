@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>XML_Feed__c</fullName>
+    <description>Link provided by the customer, where they fill in all the required info for Reach setup in the Recruiter Portal.</description>
+    <inlineHelpText>Link provided by the customer, where they fill in all the required info for Reach setup in the Recruiter Portal.</inlineHelpText>
+    <label>XML Feed</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Url</type>
+</CustomField>

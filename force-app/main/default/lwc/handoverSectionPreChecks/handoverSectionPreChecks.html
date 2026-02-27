@@ -1,0 +1,242 @@
+<template>
+    <div class="slds-p-around_medium">
+        <!-- Account Data Fields (2-Column Layout) -->
+        <div class="slds-box slds-m-bottom_medium">
+            <h3 class="slds-text-title_caps slds-m-bottom_small">Account Daten</h3>
+            <div class="slds-grid slds-gutters slds-wrap">
+                <!-- Ultimate Parent Account (Read-only) -->
+                <div class="slds-col slds-size_1-of-2 slds-m-bottom_medium">
+                    <div class="slds-form-element">
+                        <label class="slds-form-element__label label-with-help">
+                            <abbr class="slds-required" title="required">*</abbr>
+                            <span class="label-text">Ultimate Parent Account</span>
+                            <lightning-helptext content={ultimateParentHelpText}></lightning-helptext>
+                        </label>
+                        <div class="slds-form-element__static readonly-field">
+                            {ultimateParentDisplay}
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Parent Account (Editable Lookup) -->
+                <div class="slds-col slds-size_1-of-2 slds-m-bottom_medium">
+                    <lightning-record-picker
+                        label="Parent Account"
+                        placeholder="Account suchen..."
+                        object-api-name="Account"
+                        value={parentAccountIdValue}
+                        onchange={handleParentAccountChange}
+                        field-level-help={parentAccountHelpText}>
+                    </lightning-record-picker>
+                </div>
+                
+                <!-- GTM Motion (Read-only with icon help) -->
+                <div class="slds-col slds-size_1-of-2 slds-m-bottom_medium">
+                    <div class="slds-form-element">
+                        <label class="slds-form-element__label label-with-help">
+                            <span class="label-text">GTM Motion</span>
+                            <lightning-helptext content="Angezeigter Motion-Wert basierend auf Systemlogik."></lightning-helptext>
+                        </label>
+                        <div class="slds-form-element__static readonly-field">
+                            {gtmMotionDisplay}
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Employees (Editable) -->
+                <div class="slds-col slds-size_1-of-2 slds-m-bottom_medium">
+                    <div class="slds-form-element">
+                        <label class="slds-form-element__label label-with-help" for="employees-input">
+                            <span class="label-text">Employees</span>
+                            <lightning-helptext content="Anzahl der Mitarbeiter. Bei Bedarf aktualisieren."></lightning-helptext>
+                        </label>
+                        <div class="slds-form-element__control">
+                            <lightning-input
+                                type="number"
+                                name="employees"
+                                value={employeesValue}
+                                onchange={handleEmployeesChange}
+                                variant="label-hidden">
+                            </lightning-input>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Open Jobs (Editable Picklist) -->
+                <div class="slds-col slds-size_1-of-2 slds-m-bottom_medium">
+                    <div class="slds-form-element">
+                        <label class="slds-form-element__label label-with-help">
+                            <span class="label-text">Open Jobs</span>
+                            <lightning-helptext content="Anzahl offener Stellen. Bei Bedarf aktualisieren."></lightning-helptext>
+                        </label>
+                        <div class="slds-form-element__control">
+                            <lightning-combobox
+                                name="openJobs"
+                                value={openJobsValue}
+                                options={openJobsOptions}
+                                onchange={handleOpenJobsChange}
+                                placeholder="Bitte auswählen..."
+                                variant="label-hidden">
+                            </lightning-combobox>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Estimated Wallet Size (Read-only - Formula Field) -->
+                <div class="slds-col slds-size_1-of-2 slds-m-bottom_medium">
+                    <div class="slds-form-element">
+                        <label class="slds-form-element__label label-with-help">
+                            <span class="label-text">Estimated Wallet Size (EWS)</span>
+                            <lightning-helptext content="Berechnetes Feld basierend auf Account-Daten. Nicht direkt bearbeitbar."></lightning-helptext>
+                        </label>
+                        <div class="slds-form-element__static readonly-field">
+                            {ewsDisplayValue}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Cards Section (Side by Side) -->
+        <div class="slds-grid slds-gutters slds-m-bottom_medium">
+            <!-- Strategic Contact Card -->
+            <div class="slds-col slds-size_1-of-2">
+                <div class="slds-box contact-card">
+                    <h3 class="slds-text-heading_small slds-m-bottom_small contact-title">
+                        Hauptansprechpartner:in - Strategisch
+                    </h3>
+                    <p class="slds-text-body_regular slds-m-bottom_medium contact-name">
+                        {strategicContactName}
+                    </p>
+                    
+                    <!-- Contact Search with Refresh Button -->
+                    <div class="slds-grid slds-gutters slds-grid_vertical-align-end slds-m-bottom_small">
+                        <div class="slds-col slds-grow">
+                            <lightning-record-picker
+                                label="Kontakt suchen"
+                                placeholder="Bitte geben Sie den Kontaktnamen ein, um zu suchen..."
+                                object-api-name="Contact"
+                                value={strategicContactIdValue}
+                                onchange={handleStrategicContactSelect}
+                                field-level-help="Suchen Sie einen aktiven Kontakt dieses Accounts.">
+                            </lightning-record-picker>
+                        </div>
+                        <div class="slds-col slds-no-flex">
+                            <lightning-button
+                                label="Refresh"
+                                variant="neutral"
+                                onclick={handleStrategicContactRefresh}
+                                disabled={isStrategicRefreshDisabled}
+                                class="refresh-button">
+                            </lightning-button>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Details (Read-only) -->
+                    <div class="slds-grid slds-gutters slds-wrap">
+                        <div class="slds-col slds-size_1-of-2 slds-m-bottom_small">
+                            <div class="slds-form-element">
+                                <label class="slds-form-element__label">Vorname</label>
+                                <div class="slds-form-element__static readonly-field">{strategicContactFirstNameValue}</div>
+                            </div>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2 slds-m-bottom_small">
+                            <div class="slds-form-element">
+                                <label class="slds-form-element__label">Nachname</label>
+                                <div class="slds-form-element__static readonly-field">{strategicContactLastNameValue}</div>
+                            </div>
+                        </div>
+                        <div class="slds-col slds-size_1-of-1 slds-m-bottom_small">
+                            <div class="slds-form-element">
+                                <label class="slds-form-element__label">E-Mail</label>
+                                <div class="slds-form-element__static readonly-field">{strategicContactEmailValue}</div>
+                            </div>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2 slds-m-bottom_small">
+                            <div class="slds-form-element">
+                                <label class="slds-form-element__label">Telefon</label>
+                                <div class="slds-form-element__static readonly-field">{strategicContactPhoneValue}</div>
+                            </div>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2 slds-m-bottom_small">
+                            <div class="slds-form-element">
+                                <label class="slds-form-element__label">Titel</label>
+                                <div class="slds-form-element__static readonly-field">{strategicContactTitleValue}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Operational Contact Card -->
+            <div class="slds-col slds-size_1-of-2">
+                <div class="slds-box contact-card">
+                    <h3 class="slds-text-heading_small slds-m-bottom_small contact-title">
+                        Hauptansprechpartner:in - Operational
+                    </h3>
+                    <p class="slds-text-body_regular slds-m-bottom_medium contact-name">
+                        {operationalContactName}
+                    </p>
+                    
+                    <!-- Contact Search with Refresh Button -->
+                    <div class="slds-grid slds-gutters slds-grid_vertical-align-end slds-m-bottom_small">
+                        <div class="slds-col slds-grow">
+                            <lightning-record-picker
+                                label="Kontakt suchen"
+                                placeholder="Bitte geben Sie den Kontaktnamen ein, um zu suchen..."
+                                object-api-name="Contact"
+                                value={operationalContactIdValue}
+                                onchange={handleOperationalContactSelect}
+                                field-level-help="Suchen Sie einen aktiven Kontakt dieses Accounts.">
+                            </lightning-record-picker>
+                        </div>
+                        <div class="slds-col slds-no-flex">
+                            <lightning-button
+                                label="Refresh"
+                                variant="neutral"
+                                onclick={handleOperationalContactRefresh}
+                                disabled={isOperationalRefreshDisabled}
+                                class="refresh-button">
+                            </lightning-button>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Details (Read-only) -->
+                    <div class="slds-grid slds-gutters slds-wrap">
+                        <div class="slds-col slds-size_1-of-2 slds-m-bottom_small">
+                            <div class="slds-form-element">
+                                <label class="slds-form-element__label">Vorname</label>
+                                <div class="slds-form-element__static readonly-field">{operationalContactFirstNameValue}</div>
+                            </div>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2 slds-m-bottom_small">
+                            <div class="slds-form-element">
+                                <label class="slds-form-element__label">Nachname</label>
+                                <div class="slds-form-element__static readonly-field">{operationalContactLastNameValue}</div>
+                            </div>
+                        </div>
+                        <div class="slds-col slds-size_1-of-1 slds-m-bottom_small">
+                            <div class="slds-form-element">
+                                <label class="slds-form-element__label">E-Mail</label>
+                                <div class="slds-form-element__static readonly-field">{operationalContactEmailValue}</div>
+                            </div>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2 slds-m-bottom_small">
+                            <div class="slds-form-element">
+                                <label class="slds-form-element__label">Telefon</label>
+                                <div class="slds-form-element__static readonly-field">{operationalContactPhoneValue}</div>
+                            </div>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2 slds-m-bottom_small">
+                            <div class="slds-form-element">
+                                <label class="slds-form-element__label">Titel</label>
+                                <div class="slds-form-element__static readonly-field">{operationalContactTitleValue}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</template>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mandatory_Fields_Creating_BE_Creation</fullName>
+    <active>true</active>
+    <description>To create a BE Creation case with Product Type HIRE, the fields Parent Child Connection needed?, Child can access Parent Budget? and User for Recruiter Portal are mandatory. RO-1759, RO-1760</description>
+    <errorConditionFormula>AND(
+ISNEW(),
+RecordType.DeveloperName = &quot;Backend_Creation_Case&quot;,
+ISPICKVAL(Product_Type__c, &quot;HIRE&quot;),
+OR(
+ ISPICKVAL(Parent_Child_Connection_needed__c, &quot;&quot;),
+ ISPICKVAL( Child_can_access_Parent_Budget__c, &quot;&quot; ),
+ ISBLANK( User_for_Recruiter_Portal__c )
+)
+)</errorConditionFormula>
+    <errorMessage>When creating a HIRE case, make sure to fill in Parent Child Connection needed?, Child can access Parent Budget? and User for Recruiter Portal.</errorMessage>
+</ValidationRule>

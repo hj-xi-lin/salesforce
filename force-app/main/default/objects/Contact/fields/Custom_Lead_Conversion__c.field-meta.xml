@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Custom_Lead_Conversion__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>RO-1429</description>
+    <inlineHelpText>Contact is a converted lead, converted through custom lead conversion</inlineHelpText>
+    <label>Custom Lead Conversion</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

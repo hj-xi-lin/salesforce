@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mandatory_Loss_Reason</fullName>
+    <active>true</active>
+    <description>Field &apos;Loss Reason&apos; should be populated when the Lead is Lost.</description>
+    <errorConditionFormula>AND(
+ISPICKVAL(Status, &quot;Lost&quot;),
+ISBLANK(TEXT(Loss_Reason__c))
+)</errorConditionFormula>
+    <errorMessage>Please fill the &apos;Loss Reason&apos;</errorMessage>
+</ValidationRule>

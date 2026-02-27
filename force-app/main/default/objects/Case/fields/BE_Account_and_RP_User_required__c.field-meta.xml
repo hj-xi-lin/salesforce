@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BE_Account_and_RP_User_required__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>RO-1760</description>
+    <inlineHelpText>Tick the checkbox and add SF contact in the field User for Recruiter Portal only if BE Account and RP User are needed.</inlineHelpText>
+    <label>BE Account and RP User required</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

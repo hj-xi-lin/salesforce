@@ -3,6 +3,21 @@
   <!-- Objects, Fields, Record Types -->
   <types>
     <members>*</members>
+    <members>Account</members>
+    <members>Opportunity</members>
+    <members>Lead</members>
+    <members>Contact</members>
+    <members>Case</members>
+    <members>Quote</members>
+    <members>Event</members>
+    <members>Task</members>
+    <members>User</members>
+    <members>Campaign</members>
+    <members>CampaignMember</members>
+    <members>OpportunityContactRole</members>
+    <members>OpportunityLineItem</members>
+    <members>QuoteLineItem</members>
+    <members>ContentVersion</members>
     <name>CustomObject</name>
   </types>
   <types>
@@ -186,6 +201,46 @@
   <types>
     <members>*</members>
     <name>Group</name>
+  </types>
+
+  <!-- Global & Standard Value Sets -->
+  <types>
+    <members>*</members>
+    <name>GlobalValueSet</name>
+  </types>
+  <types>
+    <members>*</members>
+    <name>StandardValueSet</name>
+  </types>
+  <types>
+    <members>*</members>
+    <name>GlobalValueSetTranslation</name>
+  </types>
+
+  <!-- Duplicate & Matching Rules -->
+  <types>
+    <members>*</members>
+    <name>DuplicateRule</name>
+  </types>
+  <types>
+    <members>*</members>
+    <name>MatchingRules</name>
+  </types>
+
+  <!-- Quick Actions & Path -->
+  <types>
+    <members>*</members>
+    <name>QuickAction</name>
+  </types>
+  <types>
+    <members>*</members>
+    <name>PathAssistant</name>
+  </types>
+
+  <!-- Custom Permissions -->
+  <types>
+    <members>*</members>
+    <name>CustomPermission</name>
   </types>
 
   <version>62.0</version>

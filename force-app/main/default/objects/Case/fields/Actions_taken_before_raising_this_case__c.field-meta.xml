@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Actions_taken_before_raising_this_case__c</fullName>
+    <description>RO - 2251</description>
+    <inlineHelpText>Please select everything you already tried. Always check what you can do to improve the job performance using the Sales Success Handbook, before submitting this Case.</inlineHelpText>
+    <label>Actions taken before raising this case?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Screening questions adjusted</fullName>
+                <default>false</default>
+                <label>Screening questions adjusted</label>
+            </value>
+            <value>
+                <fullName>Radius adjusted</fullName>
+                <default>false</default>
+                <label>Radius adjusted</label>
+            </value>
+            <value>
+                <fullName>Easy Apply adjusted</fullName>
+                <default>false</default>
+                <label>Easy Apply adjusted</label>
+            </value>
+            <value>
+                <fullName>Employer profile optimized</fullName>
+                <default>false</default>
+                <label>Employer profile optimized</label>
+            </value>
+            <value>
+                <fullName>Job Ad title optimized</fullName>
+                <default>false</default>
+                <label>Job Ad title optimized</label>
+            </value>
+            <value>
+                <fullName>Job information completed</fullName>
+                <default>false</default>
+                <label>Job information completed</label>
+            </value>
+            <value>
+                <fullName>Job description optimized</fullName>
+                <default>false</default>
+                <label>Job description optimized</label>
+            </value>
+            <value>
+                <fullName>Visual material optimized</fullName>
+                <default>false</default>
+                <label>Visual material optimized</label>
+            </value>
+            <value>
+                <fullName>AGG compliance checked</fullName>
+                <default>false</default>
+                <label>AGG compliance checked</label>
+            </value>
+            <value>
+                <fullName>Social media ads reviewed</fullName>
+                <default>false</default>
+                <label>Social media ads reviewed</label>
+            </value>
+            <value>
+                <fullName>Other (please give details in description)</fullName>
+                <default>false</default>
+                <label>Other (please give details in description)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

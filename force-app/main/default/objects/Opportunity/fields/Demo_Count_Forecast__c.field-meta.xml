@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Demo_Count_Forecast__c</fullName>
+    <defaultValue>0</defaultValue>
+    <description>Automatically calculates whether an opportunity is marked as a Demo Held.
+Displays 1 if tdemo was held, and 0 otherwise.
+Used in forecasting to count the number of demos owned by a user or team.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Zeigt an, ob eine Demo gehalten wurde.
+Der Wert beträgt 1, Demo gehalten wurde, und 0, wenn nicht.
+Dieses Feld wird für Forecasts verwendet, um die Anzahl der Demos zu tracken.</inlineHelpText>
+    <label>Demo Count Forecast</label>
+    <precision>1</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

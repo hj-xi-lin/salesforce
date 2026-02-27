@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Copy_of_Jo_Open_Tasks</fullName>
+    <columns>CORE.USERS.FULL_NAME</columns>
+    <columns>SUBJECT</columns>
+    <columns>WHAT_NAME</columns>
+    <columns>DUE_DATE</columns>
+    <columns>STATUS</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>IS_RECURRENCE</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Task.Task</value>
+    </filters>
+    <filters>
+        <field>STATUS</field>
+        <operation>equals</operation>
+        <value>Open,In Progress</value>
+    </filters>
+    <filters>
+        <field>SUBJECT</field>
+        <operation>contains</operation>
+        <value>HeyAssessment</value>
+    </filters>
+    <filters>
+        <field>Assigned_Profile__c</field>
+        <operation>equals</operation>
+        <value>Large Account Manager</value>
+    </filters>
+    <label>Open Tasks HeyAssessment</label>
+</ListView>

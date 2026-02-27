@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Internal_Account_Name__c</fullName>
+    <description>Account Name without Legal Form</description>
+    <externalId>false</externalId>
+    <formula>TRIM(
+SUBSTITUTE(
+SUBSTITUTE(
+SUBSTITUTE(
+SUBSTITUTE(
+SUBSTITUTE(
+SUBSTITUTE(
+SUBSTITUTE(
+SUBSTITUTE(
+SUBSTITUTE(
+SUBSTITUTE(
+SUBSTITUTE(
+SUBSTITUTE(
+SUBSTITUTE(
+SUBSTITUTE(
+SUBSTITUTE(
+SUBSTITUTE(
+SUBSTITUTE(
+SUBSTITUTE(
+SUBSTITUTE(
+SUBSTITUTE(
+SUBSTITUTE(
+SUBSTITUTE(
+SUBSTITUTE(
+SUBSTITUTE(
+SUBSTITUTE(
+SUBSTITUTE(
+SUBSTITUTE(Name, 
+
+
+&quot; GmbH &amp; Co. KG&quot;, &quot;&quot;),
+&quot; Gmbh &amp; Co. KG&quot;, &quot;&quot;),
+&quot; GmbH &amp; Co KG&quot;, &quot;&quot;),
+&quot; GmbH &amp; Co.KG&quot;, &quot;&quot;),
+&quot; &amp; Co. KG&quot;, &quot;&quot;),
+&quot; mbH &amp; Co.&quot;, &quot;&quot;),
+&quot; KG&quot;, &quot;&quot;),
+&quot; OHG&quot;, &quot;&quot;),
+&quot; GbR&quot;, &quot;&quot;),
+&quot; (AG &amp; Co.) KG&quot;, &quot;&quot;),
+&quot; AG&quot;, &quot;&quot;),
+&quot; A.G.&quot;, &quot;&quot;),
+&quot; KGaA&quot;, &quot;&quot;),
+&quot; GMBH&quot;, &quot;&quot;),
+&quot; GmbH&quot;, &quot;&quot;),
+&quot; gGmbH&quot;, &quot;&quot;),
+&quot; Handels-GmbH&quot;, &quot;&quot;),
+&quot; eG&quot;, &quot;&quot;),
+&quot; e.V.&quot;, &quot;&quot;),
+&quot; e. V.&quot;, &quot;&quot;),
+&quot; Inc&quot;, &quot;&quot;),
+&quot; SE&quot;, &quot;&quot;),
+&quot; Gbr&quot;, &quot;&quot;),
+&quot; MBH&quot;, &quot;&quot;),
+&quot; mbH&quot;, &quot;&quot;),
+&quot; B.V.&quot;, &quot;&quot;),
+&quot; Ltd. &amp; Co.KG&quot;, &quot;&quot;)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Account Name without Legal Form</inlineHelpText>
+    <label>Account Name Internal</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

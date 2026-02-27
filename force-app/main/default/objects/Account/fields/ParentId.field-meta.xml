@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ParentId</fullName>
+    <inlineHelpText>Der Parent Account ist immer der Account 1 up in der Account-Hierarchie. Jeder angelegte Sub-Account, der Teil einer Account-Hierarchie ist, muss einen Parent Account hinterlegt haben.</inlineHelpText>
+    <lookupFilter>
+        <active>true</active>
+        <booleanFilter>(1 OR 2) AND 3</booleanFilter>
+        <errorMessage>No parent account with the same service country as this account is present</errorMessage>
+        <filterItems>
+            <field>Account.Service_Country__c</field>
+            <operation>equals</operation>
+            <valueField>$Source.Service_Country__c</valueField>
+        </filterItems>
+        <filterItems>
+            <field>Account.Umbrella_Company__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </filterItems>
+        <filterItems>
+            <field>Account.Id</field>
+            <operation>notEqual</operation>
+            <valueField>$Source.Id</valueField>
+        </filterItems>
+        <infoMessage>Only accounts with same service country or an umbrella account will be shown</infoMessage>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Hierarchy</type>
+</CustomField>

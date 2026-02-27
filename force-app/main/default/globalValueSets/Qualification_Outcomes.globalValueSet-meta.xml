@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Opp Created: Marketing generated</fullName>
+        <default>false</default>
+        <label>Opp Created: Marketing generated</label>
+    </customValue>
+    <customValue>
+        <fullName>Opp Contact Role Created: Marketing influenced</fullName>
+        <default>false</default>
+        <label>Opp Contact Role Created: Marketing influenced</label>
+    </customValue>
+    <customValue>
+        <fullName>Opp Contact Role Already Existed: Marketing influenced</fullName>
+        <default>false</default>
+        <label>Opp Contact Role Already Existed: Marketing influenced</label>
+    </customValue>
+    <customValue>
+        <fullName>FUP moved: Marketing influenced</fullName>
+        <default>false</default>
+        <label>FUP moved: Marketing influenced</label>
+    </customValue>
+    <customValue>
+        <fullName>Disqualified</fullName>
+        <default>false</default>
+        <label>Disqualified</label>
+    </customValue>
+    <description>RO-2710</description>
+    <masterLabel>Qualification Outcomes</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

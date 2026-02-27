@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Purchase_Decision__c</fullName>
+    <inlineHelpText>This field is not used anymore. Please use &quot;Purchase Decision Behavior&quot; instead.</inlineHelpText>
+    <label>Legacy - Purchase Decision</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Purchase_Decision</valueSetName>
+    </valueSet>
+</CustomField>

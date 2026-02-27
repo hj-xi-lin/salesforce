@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Archetype__c</fullName>
+    <description>RO-2844</description>
+    <inlineHelpText>Klassifiziert den Account nach Archetyp. Enterprise Account: grosse Unternehmenskunden. Mid-Market Account (Konzernstruktur): mittelgrosse Accounts innerhalb einer Konzernstruktur. Mid-Market Account (Einzelgesellschaft): mittelgrosse, eigenstaendige Accounts. SMB Account: kleine und mittlere Unternehmen. HeySquads Account: Accounts, die ueber HeySquads betreut werden. Nur durch Admins bearbeitbar.</inlineHelpText>
+    <label>Account Archetype</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Enterprise Account</fullName>
+                <default>false</default>
+                <label>Enterprise Account</label>
+            </value>
+            <value>
+                <fullName>Mid-Market Account (Konzernstruktur)</fullName>
+                <default>false</default>
+                <label>Mid-Market Account (Konzernstruktur)</label>
+            </value>
+            <value>
+                <fullName>Mid-Market Account (Einzelgesellschaft)</fullName>
+                <default>false</default>
+                <label>Mid-Market Account (Einzelgesellschaft)</label>
+            </value>
+            <value>
+                <fullName>SMB Account</fullName>
+                <default>false</default>
+                <label>SMB Account</label>
+            </value>
+            <value>
+                <fullName>HeySquads Account</fullName>
+                <default>false</default>
+                <label>HeySquads Account</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

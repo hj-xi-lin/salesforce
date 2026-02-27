@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Update_Competitor_fields</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+  OR(
+    Record_Type__c = &quot;Sales&quot;,
+    Record_Type__c = &quot;Sales Transactional&quot;
+  ),
+  ISPICKVAL(StageName, &quot;Offer&quot;),
+  MQL_Conversion__c = &quot;2025-9-CON-LEV-LP-MQL-ZPE25&quot;,
+
+  OR(
+    IF(
+      AND(
+        OR(
+          ISPICKVAL(Competitor_1_current_future__c, &quot;Others&quot;),
+          ISPICKVAL(Competitor_2_current_future__c, &quot;Others&quot;),
+          ISPICKVAL(Competitor_3_current_future__c, &quot;Others&quot;)
+        ),
+        ISBLANK(Other_Competitor__c)
+      ),
+      true,
+      false
+    ),
+
+    IF(
+      AND(
+        OR(
+          ISBLANK(TEXT(Competitor_1_current_future__c)),
+          ISBLANK(TEXT(Competitor_2_current_future__c)),
+          ISBLANK(TEXT(Competitor_3_current_future__c))
+        ),
+        NOT(
+          OR(
+            ISPICKVAL(Competitor_1_current_future__c, &quot;None&quot;),
+            ISPICKVAL(Competitor_2_current_future__c, &quot;None&quot;),
+            ISPICKVAL(Competitor_3_current_future__c, &quot;None&quot;),
+            ISPICKVAL(Competitor_1_current_future__c, &quot;Unknown&quot;),
+            ISPICKVAL(Competitor_2_current_future__c, &quot;Unknown&quot;),
+            ISPICKVAL(Competitor_3_current_future__c, &quot;Unknown&quot;),
+            ISPICKVAL(Competitor_1_current_future__c, &quot;Others&quot;),
+            ISPICKVAL(Competitor_2_current_future__c, &quot;Others&quot;),
+            ISPICKVAL(Competitor_3_current_future__c, &quot;Others&quot;)
+          )
+        )
+      ),
+      true,
+      false
+    )
+  )
+)</errorConditionFormula>
+    <errorDisplayField>Competitor_1_current_future__c</errorDisplayField>
+    <errorMessage>Error: You cannot move the opportunity to the &quot;Offer&quot; stage.
+Reason: Competitor 1, Competitor 2, and Competitor 3 must be filled out.
+Action: Update these fields in the left panel of the opportunity and try again.</errorMessage>
+</ValidationRule>

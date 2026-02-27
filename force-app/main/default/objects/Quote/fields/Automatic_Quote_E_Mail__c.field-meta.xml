@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Automatic_Quote_E_Mail__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>(Enterprise only) Wenn TRUE (checked) wird beim Ändern des Quote Status auf “Sent” eine Email, die die Quote enthält an den Kontakt geschickt, der in Contact Name hinterlegt ist. 
+Mehr informationen findest du hier https://heyjobs.atlassian.net/wiki/spaces/EO/pages/2788294675/Salesforce+Quotes+Definition+und+Use+Case#Automate-Quote-Email-(Enterprise-only)</inlineHelpText>
+    <label>Automatic Quote E-Mail</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

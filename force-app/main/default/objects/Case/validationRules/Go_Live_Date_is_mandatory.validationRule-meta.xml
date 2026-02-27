@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Go_Live_Date_is_mandatory</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+TEXT(Status) = &quot;Go-Live Scheduled&quot;,
+ISBLANK(dateGoLive__c)
+)</errorConditionFormula>
+    <errorDisplayField>dateGoLive__c</errorDisplayField>
+    <errorMessage>Please populate the Go-Live Date field</errorMessage>
+</ValidationRule>

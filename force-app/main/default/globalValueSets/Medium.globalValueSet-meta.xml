@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>ColdCalling</fullName>
+        <default>false</default>
+        <label>ColdCalling</label>
+    </customValue>
+    <customValue>
+        <fullName>Direct</fullName>
+        <default>false</default>
+        <label>Direct</label>
+    </customValue>
+    <customValue>
+        <fullName>E-Learning</fullName>
+        <default>false</default>
+        <label>E-Learning</label>
+    </customValue>
+    <customValue>
+        <fullName>External</fullName>
+        <default>false</default>
+        <label>External</label>
+    </customValue>
+    <customValue>
+        <fullName>Hotline</fullName>
+        <default>false</default>
+        <label>Hotline</label>
+    </customValue>
+    <customValue>
+        <fullName>Linkedin Ads</fullName>
+        <default>false</default>
+        <label>Linkedin Ads</label>
+    </customValue>
+    <customValue>
+        <fullName>Referral</fullName>
+        <default>false</default>
+        <label>Referral</label>
+    </customValue>
+    <customValue>
+        <fullName>Snapaddy</fullName>
+        <default>false</default>
+        <label>Snapaddy</label>
+    </customValue>
+    <customValue>
+        <fullName>Website</fullName>
+        <default>false</default>
+        <label>Website</label>
+    </customValue>
+    <customValue>
+        <fullName>Xing Ads</fullName>
+        <default>false</default>
+        <label>Xing Ads</label>
+    </customValue>
+    <customValue>
+        <fullName>Linkedin</fullName>
+        <default>false</default>
+        <label>Linkedin</label>
+    </customValue>
+    <customValue>
+        <fullName>E-Mail</fullName>
+        <default>false</default>
+        <label>E-Mail</label>
+    </customValue>
+    <customValue>
+        <fullName>Zukunft Personal</fullName>
+        <default>false</default>
+        <label>Zukunft Personal</label>
+    </customValue>
+    <customValue>
+        <fullName>GoogleAds</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>GoogleAds</label>
+    </customValue>
+    <customValue>
+        <fullName>Handelskongress 2018</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Handelskongress 2018</label>
+    </customValue>
+    <customValue>
+        <fullName>HR Roadshow</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>HR Roadshow</label>
+    </customValue>
+    <customValue>
+        <fullName>Internal</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Internal</label>
+    </customValue>
+    <customValue>
+        <fullName>Internorga</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Internorga</label>
+    </customValue>
+    <customValue>
+        <fullName>Internorga 19</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Internorga 19</label>
+    </customValue>
+    <customValue>
+        <fullName>JobMedi</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>JobMedi</label>
+    </customValue>
+    <customValue>
+        <fullName>Jobmesse Stuttgart</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Jobmesse Stuttgart</label>
+    </customValue>
+    <customValue>
+        <fullName>Meet-Ups</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Meet-Ups</label>
+    </customValue>
+    <customValue>
+        <fullName>Network</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Network</label>
+    </customValue>
+    <customValue>
+        <fullName>Network Outreach</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Network Outreach</label>
+    </customValue>
+    <customValue>
+        <fullName>Online-Karrieretag Berlin 2018</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Online-Karrieretag Berlin 2018</label>
+    </customValue>
+    <customValue>
+        <fullName>Paid Ads</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Paid Ads</label>
+    </customValue>
+    <customValue>
+        <fullName>Personal Nord</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Personal Nord</label>
+    </customValue>
+    <customValue>
+        <fullName>Praxisbörse Göttingen</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Praxisbörse Göttingen</label>
+    </customValue>
+    <customValue>
+        <fullName>Social Media</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Social Media</label>
+    </customValue>
+    <customValue>
+        <fullName>Social Recruiting Days 2018</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Social Recruiting Days 2018</label>
+    </customValue>
+    <customValue>
+        <fullName>Sticks &amp; Stones 19</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Sticks &amp; Stones 19</label>
+    </customValue>
+    <customValue>
+        <fullName>Sticks &amp; Stones 2018</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Sticks &amp; Stones 2018</label>
+    </customValue>
+    <customValue>
+        <fullName>talent.io Co.Lab</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>talent.io Co.Lab</label>
+    </customValue>
+    <customValue>
+        <fullName>Talente Kompakt</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Talente Kompakt</label>
+    </customValue>
+    <customValue>
+        <fullName>TALENTpro</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>TALENTpro</label>
+    </customValue>
+    <customValue>
+        <fullName>Altenpflege Hannover</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Altenpflege Hannover</label>
+    </customValue>
+    <customValue>
+        <fullName>Thomas Messer</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Thomas Messer</label>
+    </customValue>
+    <customValue>
+        <fullName>Translogistik 2019</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Translogistik 2019</label>
+    </customValue>
+    <customValue>
+        <fullName>Vocatium</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Vocatium</label>
+    </customValue>
+    <customValue>
+        <fullName>Voucher Campaign</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Voucher Campaign</label>
+    </customValue>
+    <customValue>
+        <fullName>women &amp; work</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>women &amp; work</label>
+    </customValue>
+    <customValue>
+        <fullName>Xing</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Xing</label>
+    </customValue>
+    <customValue>
+        <fullName>Zukunft Personal - Europe 2018</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Zukunft Personal - Europe 2018</label>
+    </customValue>
+    <customValue>
+        <fullName>Theresa Dietzsch</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Theresa Dietzsch</label>
+    </customValue>
+    <customValue>
+        <fullName>Anna Kling</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Anna Kling</label>
+    </customValue>
+    <customValue>
+        <fullName>Blog</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Blog</label>
+    </customValue>
+    <customValue>
+        <fullName>Call Center World</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Call Center World</label>
+    </customValue>
+    <customValue>
+        <fullName>Career Event</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Career Event</label>
+    </customValue>
+    <customValue>
+        <fullName>CCW 19</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>CCW 19</label>
+    </customValue>
+    <customValue>
+        <fullName>Client</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Client</label>
+    </customValue>
+    <customValue>
+        <fullName>Conference</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Conference</label>
+    </customValue>
+    <customValue>
+        <fullName>Connecticum 2019</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Connecticum 2019</label>
+    </customValue>
+    <customValue>
+        <fullName>Email</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Email</label>
+    </customValue>
+    <customValue>
+        <fullName>Expert Events</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Expert Events</label>
+    </customValue>
+    <customValue>
+        <fullName>Facebook</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Facebook</label>
+    </customValue>
+    <customValue>
+        <fullName>Good School auf HR Safari</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Good School auf HR Safari</label>
+    </customValue>
+    <description>Defines the Lead, Account &amp; Contact Medium</description>
+    <masterLabel>Medium</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

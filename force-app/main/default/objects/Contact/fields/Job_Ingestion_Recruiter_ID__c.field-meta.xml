@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Job_Ingestion_Recruiter_ID__c</fullName>
+    <description>UUID5 of the recruiter details parsed from the jobs during the job parsing process/ingestion.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>UUID5 of the recruiter details parsed from the jobs during the job parsing process/ingestion.</inlineHelpText>
+    <label>Job Ingestion Recruiter ID</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

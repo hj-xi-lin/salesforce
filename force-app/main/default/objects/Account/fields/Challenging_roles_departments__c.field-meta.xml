@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Challenging_roles_departments__c</fullName>
+    <description>RO-2315</description>
+    <inlineHelpText>Welche spezifischen Rollen oder Abteilungen sind am schwierigsten zu rekrutieren?</inlineHelpText>
+    <label>Challenging roles &amp; departments</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>TextArea</type>
+</CustomField>

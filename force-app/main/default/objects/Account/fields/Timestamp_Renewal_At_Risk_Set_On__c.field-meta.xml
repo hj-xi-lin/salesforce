@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Timestamp_Renewal_At_Risk_Set_On__c</fullName>
+    <inlineHelpText>Zeigt an, wann der Kunde als &quot;Renewal At Risk&quot; identifiziert wurde</inlineHelpText>
+    <label>Legacy Timestamp Renewal At Risk Set On</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>DateTime</type>
+</CustomField>

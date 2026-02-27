@@ -1,0 +1,70 @@
+/* Pre-check section styles */
+
+/* Host element styling - ensure proper scroll behavior */
+:host {
+    display: block;
+}
+
+/* Uniform label with help text icon spacing */
+.label-with-help {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+.label-with-help .label-text {
+    margin-right: 4px;
+}
+
+.label-with-help lightning-helptext {
+    margin-left: 4px;
+}
+
+/* Read-only field styling */
+.readonly-field {
+    background-color: #f3f3f3;
+    padding: 8px 12px;
+    border: 1px solid #dddbda;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    color: #3e3e3c;
+    min-height: 32px;
+}
+
+/* Contact card styling */
+.contact-card {
+    height: 100%;
+    background-color: #fafaf9;
+    border: 1px solid #dddbda;
+}
+
+.contact-title {
+    color: #0070d2;
+    border-bottom: 1px solid #dddbda;
+    padding-bottom: 8px;
+}
+
+.contact-name {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #3e3e3c;
+}
+
+/* Section box styling */
+.slds-box {
+    padding: 16px;
+    border-radius: 4px;
+}
+
+/* Title caps styling */
+.slds-text-title_caps {
+    font-size: 0.75rem;
+    letter-spacing: 0.0625rem;
+    color: #706e6b;
+    text-transform: uppercase;
+}
+
+/* Refresh button styling */
+.refresh-button {
+    margin-top: 1.25rem;
+}

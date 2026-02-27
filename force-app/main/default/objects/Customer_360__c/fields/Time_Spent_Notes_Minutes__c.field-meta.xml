@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Time_Spent_Notes_Minutes__c</fullName>
+    <description>Total time in minutes spent by AE on the Notes section of the Handover wizard. Accumulates across multiple visits.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Gesamtzeit in Minuten, die der AE im Notizen-Abschnitt des Handover-Assistenten verbracht hat.</inlineHelpText>
+    <label>Time Spent on Notes (Minutes)</label>
+    <precision>10</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

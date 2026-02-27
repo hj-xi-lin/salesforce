@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_for_bad_Performance__c</fullName>
+    <inlineHelpText>Grund den Kund*innen im Recruiter Portal für die schlechte Performance genannt hat.</inlineHelpText>
+    <label>Legacy - Reason for bad Performance</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>TextArea</type>
+</CustomField>

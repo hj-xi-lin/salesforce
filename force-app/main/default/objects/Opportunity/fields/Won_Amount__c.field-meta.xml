@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Won_Amount__c</fullName>
+    <description>Shows the Amount of the Opportunity if the Probability is 100%.
+Used for Reporting</description>
+    <formula>IF(Probability = 1, Amount * Probability,0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Shows the Amount of the Opportunity if the Probability is 100%</inlineHelpText>
+    <label>Won Amount</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

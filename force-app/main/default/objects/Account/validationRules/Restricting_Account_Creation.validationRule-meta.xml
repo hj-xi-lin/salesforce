@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restricting_Account_Creation</fullName>
+    <active>true</active>
+    <description>RO - 1679</description>
+    <errorConditionFormula>AND(
+ ISNEW(),
+   Converted__c  = False,
+   $Profile.Name &lt;&gt;  &quot;System Administrator&quot;,
+   $Profile.Name &lt;&gt; &quot;Customer Operations Manager&quot;,
+   $Profile.Name &lt;&gt; &quot;Head of Customer Operations&quot;,
+   $Profile.Name &lt;&gt; &quot;Agency Manager&quot;,
+   $Profile.Name &lt;&gt; &quot;Head of Prospecting&quot;,
+   $Profile.Name &lt;&gt; &quot;Head of Large Hunting&quot;,
+   $Profile.Name &lt;&gt; &quot;VP Sales&quot;,
+   $Profile.Name &lt;&gt; &quot;Head of Agency&quot;,
+   NOT($Permission.CanCreateAccounts) 
+)</errorConditionFormula>
+    <errorMessage>Please create a case with CusOps if you want an account to be created in Salesforce</errorMessage>
+</ValidationRule>

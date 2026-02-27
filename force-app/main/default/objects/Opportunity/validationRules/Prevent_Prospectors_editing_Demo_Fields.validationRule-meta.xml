@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Prospectors_editing_Demo_Fields</fullName>
+    <active>true</active>
+    <description>Prospectors and Pre Sales are not allowed to edit Demo fields when a RT Sales/Agency Acquisition opp has a hunting stage
+RO-1180</description>
+    <errorConditionFormula>AND(
+  NOT($Permission.Edit_Demo_Hunter_and_Demo_date),
+		NOT( $Permission.MVP_Opp_Creation ),
+ OR(
+  RecordType.DeveloperName = &quot;Sales&quot;,
+  RecordType.DeveloperName = &quot;Agency_Acquisition&quot;),
+  $Profile.Name = &quot;Large Prospector&quot;,
+
+ 
+ OR(
+  TEXT(StageName) = &quot;Demo Held&quot;,
+  TEXT(StageName) = &quot;Pilot Definition&quot;,
+  TEXT(StageName) = &quot;Offer&quot;,
+  TEXT(StageName) = &quot;Contract received&quot;,
+  TEXT(StageName) = &quot;Closed Won&quot;,
+  TEXT(StageName) = &quot;Closed Lost&quot;),
+ 
+ OR(
+  ISCHANGED(Hunter__c),
+  ISCHANGED(Demo_Date__c))  
+
+)</errorConditionFormula>
+    <errorMessage>You cannot edit the fields &quot;Demo Hunter&quot; or &quot;Demo Date&quot; in this stage.</errorMessage>
+</ValidationRule>

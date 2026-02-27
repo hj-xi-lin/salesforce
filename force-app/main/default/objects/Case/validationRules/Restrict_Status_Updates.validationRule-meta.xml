@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restrict_Status_Updates</fullName>
+    <active>true</active>
+    <description>Only Admins and CusOps users are allowed to use another Status than New. RO-1827</description>
+    <errorConditionFormula>AND(
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;,
+$Profile.Name &lt;&gt; &quot;Customer Operations Manager&quot;,
+$Profile.Name &lt;&gt; &quot;Marketing Operations&quot;,
+$Profile.Name &lt;&gt; &quot;Head of Customer Operations&quot;,
+NOT( ISPICKVAL( Status , &quot;New&quot;) )
+)</errorConditionFormula>
+    <errorDisplayField>Status</errorDisplayField>
+    <errorMessage>Please create new cases with the Status &quot;New&quot;. Updates of the Case Status will be done by CusOps or IntOps.</errorMessage>
+</ValidationRule>

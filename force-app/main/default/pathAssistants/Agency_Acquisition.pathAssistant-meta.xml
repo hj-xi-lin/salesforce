@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Opportunity</entityName>
+    <fieldName>StageName</fieldName>
+    <masterLabel>Agency Acquisition</masterLabel>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;img src=&quot;https://heyjobs.file.force.com/servlet/rtaImage?eid=1CF9L000000003m&amp;amp;feoid=Info&amp;amp;refid=0EM9L0000004JxA&quot;&gt;&lt;/img&gt; &lt;span style=&quot;font-size: 13px;&quot;&gt;Congratulations!&lt;/span&gt;&lt;/p&gt;</info>
+        <picklistValueName>Closed Won</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>CloseDate</fieldNames>
+        <fieldNames>Amount</fieldNames>
+        <fieldNames>Follow_Up_Date__c</fieldNames>
+        <fieldNames>Next_Action_Detail__c</fieldNames>
+        <info>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;Congratulations! &lt;/span&gt;&lt;img src=&quot;https://heyjobs.file.force.com/servlet/rtaImage?eid=1CF9L000000003r&amp;amp;feoid=Info&amp;amp;refid=0EM9L0000004Jx5&quot;&gt;&lt;/img&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Make sure that the prospect has received the billing typeform (you are on cc on the mail).&lt;/li&gt;&lt;li&gt;Please don&amp;#39;t change the Stage manually to Closed Won!&lt;/li&gt;&lt;li&gt;Follow up with prospect if necessary, to fill in the typeform and thus automatically move to closed won.&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Contract received</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Follow_Up_Date__c</fieldNames>
+        <fieldNames>Next_Action__c</fieldNames>
+        <fieldNames>Next_Action_Detail__c</fieldNames>
+        <fieldNames>Probability</fieldNames>
+        <fieldNames>CloseDate</fieldNames>
+        <info>&lt;ul&gt;&lt;li&gt;Keep all your prospects that you want to reach out to today in this list.&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Currently in Contact</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Demo_Date__c</fieldNames>
+        <fieldNames>Follow_Up_Date__c</fieldNames>
+        <fieldNames>Next_Action_Detail__c</fieldNames>
+        <fieldNames>Probability</fieldNames>
+        <fieldNames>CloseDate</fieldNames>
+        <info>&lt;ul&gt;&lt;li&gt;Move to confirmed, only when the calendar invitation has been confirmed by the prospect in writing (e.g. accepted calendar invite, confirmation via email).&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Demo Confirmed</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Amount</fieldNames>
+        <fieldNames>Follow_Up_Date__c</fieldNames>
+        <fieldNames>Next_Action_Detail__c</fieldNames>
+        <fieldNames>Probability</fieldNames>
+        <fieldNames>CloseDate</fieldNames>
+        <info>&lt;ul&gt;&lt;li&gt;Demo date has been set and invite has been accepted.&lt;/li&gt;&lt;li&gt;Move the opportunity once the demo date has passed, either to the next stage or to Rescheduling.&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Demo Held</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Follow_Up_Date__c</fieldNames>
+        <fieldNames>Next_Action__c</fieldNames>
+        <fieldNames>Next_Action_Detail__c</fieldNames>
+        <fieldNames>Probability</fieldNames>
+        <fieldNames>CloseDate</fieldNames>
+        <info>&lt;ul&gt;&lt;li&gt;Park the prospects who you have not reached on any channel at all yet in this stage.&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Not reached yet</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Amount</fieldNames>
+        <fieldNames>Follow_Up_Date__c</fieldNames>
+        <fieldNames>Next_Action_Detail__c</fieldNames>
+        <fieldNames>Probability</fieldNames>
+        <fieldNames>CloseDate</fieldNames>
+        <info>&lt;p&gt;In order to go to next stage:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Accept the appropriate quote and make sure it is synced.&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Offer</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Amount</fieldNames>
+        <fieldNames>Follow_Up_Date__c</fieldNames>
+        <fieldNames>Next_Action_Detail__c</fieldNames>
+        <fieldNames>Probability</fieldNames>
+        <fieldNames>CloseDate</fieldNames>
+        <info>&lt;ul&gt;&lt;li&gt;Make sure to create the Quote.&lt;/li&gt;&lt;li&gt;The Quote must have the status &amp;#39;Sent&amp;#39;, which automatically fills in the amount in the opportunity and moves it to the &amp;#39;Offer&amp;#39; stage.&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Pilot Definition</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Follow_Up_Date__c</fieldNames>
+        <fieldNames>Next_Action__c</fieldNames>
+        <fieldNames>Next_Action_Detail__c</fieldNames>
+        <fieldNames>Probability</fieldNames>
+        <fieldNames>CloseDate</fieldNames>
+        <info>&lt;ul&gt;&lt;li&gt;Make a first contact attempt via call/e-mail/other channels.&lt;/li&gt;&lt;li&gt;Move opportunity along to according stage (not reached yet, currently in contact).&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Qualified Prospect</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Hunter__c</fieldNames>
+        <fieldNames>Demo_Date__c</fieldNames>
+        <fieldNames>Next_Action_Detail__c</fieldNames>
+        <fieldNames>Probability</fieldNames>
+        <fieldNames>CloseDate</fieldNames>
+        <info>&lt;ul&gt;&lt;li&gt;Schedule a new demo, as this prospect had cancelled/did not show up previously.&lt;/li&gt;&lt;li&gt;Update the Demo Hunter Person, if necessary.&lt;/li&gt;&lt;li&gt;Enter the new Demo Event Date.&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Rescheduling</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Hunter__c</fieldNames>
+        <fieldNames>Demo_Date__c</fieldNames>
+        <fieldNames>Next_Action_Detail__c</fieldNames>
+        <fieldNames>Probability</fieldNames>
+        <fieldNames>CloseDate</fieldNames>
+        <info>&lt;ul&gt;&lt;li&gt;Add demo Hunter and Demo Date.&lt;/li&gt;&lt;li&gt;Ensure the Demo Event has been created with all necessary information.&lt;/li&gt;&lt;li&gt;Calendar invitation has been sent to prospect, but has not been accepted yet.&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Scheduled</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Agency_Acquisition</recordTypeName>
+</PathAssistant>

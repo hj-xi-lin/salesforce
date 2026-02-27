@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Case</entityName>
+    <fieldName>Status</fieldName>
+    <masterLabel>SSSU Pilot Job Creation</masterLabel>
+    <recordTypeName>SSSU_Pilot_Job_Creation</recordTypeName>
+</PathAssistant>

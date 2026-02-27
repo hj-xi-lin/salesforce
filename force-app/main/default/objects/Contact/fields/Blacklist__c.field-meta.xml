@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Blacklist__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Blacklist Contact for Campaigns</description>
+    <inlineHelpText>Zeigt, dass der Kontakt nicht mehr angegangen werden soll, e.g. weil der Kontakt nie wieder von Heyjobs kontaktiert werden möchte. Geblacklistete Kontakte sind von allen marketing Kampagnen ausgeschlossen.</inlineHelpText>
+    <label>Blacklist</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

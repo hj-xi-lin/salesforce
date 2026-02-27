@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X2023_Large_Prospecting_Lead_MQLs_DE_V1</fullName>
+    <booleanFilter>1 AND 2 AND 3 AND 4 AND 7 AND (5 OR 6) AND 8 AND 9 AND 10</booleanFilter>
+    <columns>Estimated_Wallet_Size_Lead__c</columns>
+    <columns>MQL_Type_Lead__c</columns>
+    <columns>Engagement_Score__c</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Recent_Conversion__c</columns>
+    <columns>MQL_Conversion__c</columns>
+    <columns>Lifecycle_Stage_Lead__c</columns>
+    <columns>LEAD.PHONE</columns>
+    <columns>Lead_Score_v02__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>equals</operation>
+        <value>New</value>
+    </filters>
+    <filters>
+        <field>Timestamp_Latest_MQL_conversion__c</field>
+        <operation>greaterThan</operation>
+        <value>7/1/2023 12:00 AM</value>
+    </filters>
+    <filters>
+        <field>OwnerProfile__c</field>
+        <operation>notContain</operation>
+        <value>Prosp</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>notEqual</operation>
+        <value>suadmin</value>
+    </filters>
+    <filters>
+        <field>MQL_Type_Lead__c</field>
+        <operation>equals</operation>
+        <value>Type 1,Type 2</value>
+    </filters>
+    <filters>
+        <field>MQL_Type_Lead__c</field>
+        <operation>equals</operation>
+        <value>Type 3</value>
+    </filters>
+    <filters>
+        <field>Estimated_Wallet_Size_Lead__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>75000</value>
+    </filters>
+    <filters>
+        <field>LEAD.PHONE</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>Event_Lead_Classification__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Timestamp_Latest_MQL_conversion__c</field>
+        <operation>greaterThan</operation>
+        <value>1/1/2026 12:00 AM</value>
+    </filters>
+    <label>Prospecting_Lead_MQLs</label>
+</ListView>

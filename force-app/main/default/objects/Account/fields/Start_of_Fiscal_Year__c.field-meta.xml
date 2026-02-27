@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Start_of_Fiscal_Year__c</fullName>
+    <description>Starting month of fiscal year if different from calendar year</description>
+    <inlineHelpText>Dokumentiert den Startmonat des Geschäftsjahres eines Unternehmens, wenn es sich vom Kalenderjahr unterscheidet. Es kann in Listenansichten oder Berichten verwendet werden, um relevante Accounts zu filtern.</inlineHelpText>
+    <label>Start of Fiscal Year</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Calendar_Months</valueSetName>
+    </valueSet>
+</CustomField>

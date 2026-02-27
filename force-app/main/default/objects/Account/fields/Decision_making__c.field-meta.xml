@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Decision_making__c</fullName>
+    <inlineHelpText>This field is not used anymore. Please use &quot;Purchase Decision Behavior&quot; instead.</inlineHelpText>
+    <label>Legacy - Decision making</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Central</fullName>
+                <default>false</default>
+                <label>Central</label>
+            </value>
+            <value>
+                <fullName>Decentral</fullName>
+                <default>false</default>
+                <label>Decentral</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

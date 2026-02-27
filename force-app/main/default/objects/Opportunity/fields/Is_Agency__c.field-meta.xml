@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Agency__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Used to agency contacts to the agency team i</description>
+    <label>Is Agency Contact (Opportunity)</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

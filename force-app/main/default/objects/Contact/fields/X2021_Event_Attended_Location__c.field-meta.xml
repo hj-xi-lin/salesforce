@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X2021_Event_Attended_Location__c</fullName>
+    <description>2021 non-remote event the contact attended.</description>
+    <inlineHelpText>2021 non-remote event the contact attended.</inlineHelpText>
+    <label>Legacy 2021 Event Attended Location</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Berlin 31.08</fullName>
+                <default>false</default>
+                <label>Berlin 31.08</label>
+            </value>
+            <value>
+                <fullName>Berlin 28.09</fullName>
+                <default>false</default>
+                <label>Berlin 28.09</label>
+            </value>
+            <value>
+                <fullName>Hamburg 02.09</fullName>
+                <default>false</default>
+                <label>Hamburg 02.09</label>
+            </value>
+            <value>
+                <fullName>Leipzig 21.09</fullName>
+                <default>false</default>
+                <label>Leipzig 21.09</label>
+            </value>
+            <value>
+                <fullName>Cologne 19.10</fullName>
+                <default>false</default>
+                <label>Cologne 19.10</label>
+            </value>
+            <value>
+                <fullName>Berlin 02.11</fullName>
+                <default>false</default>
+                <label>Berlin 02.11</label>
+            </value>
+            <value>
+                <fullName>Frankfurt 16.11</fullName>
+                <default>false</default>
+                <label>Frankfurt 16.11</label>
+            </value>
+            <value>
+                <fullName>Stuttgart 24.11</fullName>
+                <default>false</default>
+                <label>Stuttgart 24.11</label>
+            </value>
+            <value>
+                <fullName>München 25.11</fullName>
+                <default>false</default>
+                <label>München 25.11</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

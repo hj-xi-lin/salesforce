@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Subscription_accounts_with_open_jobs</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Account_Owner__c</columns>
+    <columns>Total_Live_Jobs__c</columns>
+    <columns>Estimated_Wallet_Size__c</columns>
+    <columns>Lead_Score_2__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Total_Live_Jobs__c</field>
+        <operation>greaterThan</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>GTM_Motion_Account__c</field>
+        <operation>equals</operation>
+        <value>Subscription New Business,Subscription Expansion,Subscription Retention</value>
+    </filters>
+    <label>Subscription accounts with open jobs</label>
+</ListView>

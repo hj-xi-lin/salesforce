@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>fmlOfferDate__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(MONTH( TimestampOffer__c  ), 
+1, TEXT(YEAR(TimestampOffer__c )) + &quot;.01 &quot;, 
+2, TEXT(YEAR(TimestampOffer__c )) + &quot;.02 &quot;, 
+3, TEXT(YEAR(TimestampOffer__c )) + &quot;.03 &quot;, 
+4, TEXT(YEAR(TimestampOffer__c )) + &quot;.04 &quot;, 
+5, TEXT(YEAR(TimestampOffer__c )) + &quot;.05 &quot;, 
+6, TEXT(YEAR(TimestampOffer__c )) + &quot;.06 &quot;, 
+7, TEXT(YEAR(TimestampOffer__c )) + &quot;.07 &quot;, 
+8, TEXT(YEAR(TimestampOffer__c )) + &quot;.08 &quot;, 
+9, TEXT(YEAR(TimestampOffer__c )) + &quot;.09 &quot;, 
+10, TEXT(YEAR(TimestampOffer__c )) + &quot;.10 &quot;, 
+11, TEXT(YEAR(TimestampOffer__c )) + &quot;.11 &quot;, 
+12, TEXT(YEAR(TimestampOffer__c )) + &quot;.12 &quot;, 
+NULL 
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Legacy - OfferDate</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

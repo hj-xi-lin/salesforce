@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Category_3_mandatory_on_Offer_Stage</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISPICKVAL( StageName, &quot;Offer&quot; ),
+ISCHANGED( StageName ),
+ISPICKVAL( Account.Category_3__c , &quot;&quot;)
+)</errorConditionFormula>
+    <errorMessage>Please, populate Category (1,2,3) fields of the related Account in order to save this Opportunity</errorMessage>
+</ValidationRule>

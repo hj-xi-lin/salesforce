@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>User_for_Recruiter_Portal__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>RO-1760</description>
+    <inlineHelpText>Which contact should receive a BE User invitation? If the contact is not yet in SF, please add them before submitting the case.</inlineHelpText>
+    <label>User for Recruiter Portal</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Cases (User for Recruiter Portal)</relationshipLabel>
+    <relationshipName>CasesRPUser</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

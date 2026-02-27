@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fixed_Bonus_Budget</fullName>
+    <active>false</active>
+    <description>The Bonus Budget value can only be 0, 500, 1000, 2500, 5000, 15000 or 25000.</description>
+    <errorConditionFormula>AND(
+Product2.Name =&apos;Bonus HIRE Budget&apos;,
+NOT(UnitPrice = 0) ,
+NOT(UnitPrice = 500),
+NOT(UnitPrice = 1000), 
+NOT(UnitPrice = 2500), 
+NOT(UnitPrice = 5000),
+NOT(UnitPrice = 15000),
+NOT(UnitPrice = 25000)
+)</errorConditionFormula>
+    <errorMessage>The Bonus Budget must be 0, 500, 1000, 2500, 5000, 15000 OR 25000.</errorMessage>
+</ValidationRule>

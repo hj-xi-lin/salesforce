@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>dJobslive__c</fullName>
+    <description>Number of jobs the company had live on the job feed update date. All platforms, not necessarily including Heyjobs.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Anzahl der Stellen, die das Unternehmen am &quot;job feed update date&quot; live hatte. Alle Plattformen, nicht unbedingt einschließlich HeyJobs.</inlineHelpText>
+    <label>Legacy Jobs live - Inventory</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

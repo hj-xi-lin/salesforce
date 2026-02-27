@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OwnerId</fullName>
+    <description>shows the person who is responsible for the individual opportunity</description>
+    <inlineHelpText>Jedes Opportunity besitzt einen Opportunity Owner (Besitzer).
+Der/die Opportunity Owner*in ist dafür verantwortlich, die Opportunity durch den Funnel zu begleiten und die Opportunity im Idealfall auf “closed won” zu setzen. Dann geht der €-Betrag der Opportunity in das Target Achievement des Owners ein.</inlineHelpText>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MQL_Type_Lead__c</fullName>
+    <description>MQL Types based on Hubspot criteria. Synced from HS to SF Lead and Contact.</description>
+    <inlineHelpText>MQL Types based on Marketing definitions. Find details here: https://heyjobs.atlassian.net/wiki/spaces/EOP/pages/3107455666/MQL+to+Demo+Process#MQL-Type</inlineHelpText>
+    <label>MQL Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>MQL_Type</valueSetName>
+    </valueSet>
+</CustomField>

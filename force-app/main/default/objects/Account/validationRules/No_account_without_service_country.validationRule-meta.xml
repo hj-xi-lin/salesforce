@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_account_without_service_country</fullName>
+    <active>true</active>
+    <description>New accounts cannot be created without service country (if Umbrella company = False) RO-717</description>
+    <errorConditionFormula>AND(
+($Profile.Name &lt;&gt; &apos;System Administrator&apos;),
+ISNEW(),
+ISPICKVAL(Service_Country__c, &quot;&quot;),
+Umbrella_Company__c = FALSE )</errorConditionFormula>
+    <errorMessage>You can not create an Account without a Service Country if it is not an Umbrella Company. Please define a Service Country.</errorMessage>
+</ValidationRule>

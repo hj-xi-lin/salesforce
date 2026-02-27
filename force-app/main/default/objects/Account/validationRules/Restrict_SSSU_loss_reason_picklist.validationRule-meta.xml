@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restrict_SSSU_loss_reason_picklist</fullName>
+    <active>false</active>
+    <description>To ensure that end users can only use loss reason picklist values with “(SSSU only)” if the Accounts has Timestamp_SSSU populated. RO - 1594</description>
+    <errorConditionFormula>OR(
+AND(
+    CONTAINS(TEXT(Loss_Reason_Account__c), &quot;(SSSU only)&quot;),
+    ISNULL(  Timestamp_SSSU_Account__c  )),
+AND(
+    CONTAINS(TEXT(Loss_Reason_Account__c), &quot;(SSSU only)&quot;),
+    ISCHANGED( Loss_Reason_Account__c ),
+
+    NOT(
+        OR(
+            $Profile.Name == &quot;Small Hunter Digital&quot;,
+    $Profile.Name == &quot;Head of Small Account Management&quot;,
+            $Profile.Name == &quot;VP Sales&quot;,
+            $Profile.Name == &quot;System Administrator&quot;)
+        )
+    )
+)</errorConditionFormula>
+    <errorMessage>You are not authorized to use this loss reason.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>pc_Remaining_Total_Credit__c</fullName>
+    <description>on Parent Account/Company Budget available to use for the client (=total budget - budget used for published/scheduled jobs)</description>
+    <inlineHelpText>On Parent Account - Budget available to use for the client (=total budget - budget used for published/scheduled jobs)</inlineHelpText>
+    <label>Legacy Parent Account Remaining Credit</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

@@ -1812,4 +1812,60 @@ Please ensure that neither the account not the contact with timestamp SSSU is ma
         <shortDescription>Value Label</shortDescription>
         <value>Value</value>
     </labels>
+    <labels>
+        <fullName>Handover_ACM_Task_Description</fullName>
+        <categories>Handover</categories>
+        <language>de</language>
+        <protected>false</protected>
+        <shortDescription>ACM Task Description</shortDescription>
+        <value>Der AE hat die Handover-Dokumentation abgeschlossen. Bitte planen Sie den Internal Handover Call mit dem AE, um die Kundenübergabe zu besprechen.</value>
+    </labels>
+    <labels>
+        <fullName>Handover_ACM_Task_Due_Days</fullName>
+        <categories>Handover</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ACM Task Due Days (Working Days)</shortDescription>
+        <value>3</value>
+    </labels>
+    <labels>
+        <fullName>Handover_ACM_Task_Subject</fullName>
+        <categories>Handover</categories>
+        <language>de</language>
+        <protected>false</protected>
+        <shortDescription>ACM Task Subject</shortDescription>
+        <value>Internal Handover Call planen &amp; durchführen</value>
+    </labels>
+    <labels>
+        <fullName>Handover_AE_Task_Due_Days</fullName>
+        <categories>Handover</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AE Task Due Days (Working Days for SLA 1)</shortDescription>
+        <value>1</value>
+    </labels>
+    <labels>
+        <fullName>Handover_AE_Task_Subject</fullName>
+        <categories>Handover</categories>
+        <language>de</language>
+        <protected>false</protected>
+        <shortDescription>AE Task Subject</shortDescription>
+        <value>Prepare Handover Documentation</value>
+    </labels>
+    <labels>
+        <fullName>Handover_Completed_Message</fullName>
+        <categories>Handover</categories>
+        <language>de</language>
+        <protected>false</protected>
+        <shortDescription>Handover Completed Message</shortDescription>
+        <value>Die Handover-Dokumentation wurde erfolgreich abgeschlossen und ist mit dem Account im Tab &quot;Related&quot; verknüpft.</value>
+    </labels>
+    <labels>
+        <fullName>Handover_View_Documentation_Link</fullName>
+        <categories>Handover</categories>
+        <language>de</language>
+        <protected>false</protected>
+        <shortDescription>Link text to view handover documentation</shortDescription>
+        <value>Handover-Dokumentation anzeigen</value>
+    </labels>
 </CustomLabels>

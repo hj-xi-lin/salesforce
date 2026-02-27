@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lifecycle_Stage_Lead__c</fullName>
+    <description>RO-1654</description>
+    <inlineHelpText>Synced from Hubspot</inlineHelpText>
+    <label>Lifecycle Stage</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Lifecycle_Stage</valueSetName>
+    </valueSet>
+</CustomField>

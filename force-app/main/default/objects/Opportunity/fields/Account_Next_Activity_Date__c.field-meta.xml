@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Next_Activity_Date__c</fullName>
+    <description>The date of the next scheduled task or event. Only open tasks in the future are included</description>
+    <formula>Account.ActivityMetric.NextActivityDateTime</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>The date of the next scheduled task or event. Only open tasks in the future are included</inlineHelpText>
+    <label>Account: Next Activity Date</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

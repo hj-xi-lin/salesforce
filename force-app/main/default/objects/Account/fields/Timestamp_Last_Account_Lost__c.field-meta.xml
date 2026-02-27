@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Timestamp_Last_Account_Lost__c</fullName>
+    <description>Included as part of RO - 1594</description>
+    <inlineHelpText>Datum, an dem der Account das letzte mal gelostet wurde. (nach dem genehmigten Approval Request vom Management)</inlineHelpText>
+    <label>Timestamp Last Account Lost</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>DateTime</type>
+</CustomField>

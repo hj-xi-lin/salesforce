@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Live_At_Risk_Trigger_Details__c</fullName>
+    <label>Legacy Live At Risk Trigger Details</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Manual Trigger by Sales</fullName>
+                <default>false</default>
+                <label>Manual Trigger by Sales</label>
+            </value>
+            <value>
+                <fullName>Automated Trigger</fullName>
+                <default>false</default>
+                <label>Automated Trigger</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last_Booking_Generated_Date_Hierarchy__c</fullName>
+    <inlineHelpText>Hier wird angezeigt, wann die letzte Opportunity für diesen Kunden gewonnen wurde. Wenn dieses Konto nicht Teil einer Hierarchie ist, werden die direkten Opportunities dieses Kontos berücksichtigt. Wenn dieses Konto eine Hierarchie hat, dann werden alle Opportunities von allen Konten in dieser Hierarchie geprüft.</inlineHelpText>
+    <label>Last Booking Generated Date Hierarchy</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

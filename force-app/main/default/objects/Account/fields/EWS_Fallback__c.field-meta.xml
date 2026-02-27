@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EWS_Fallback__c</fullName>
+    <description>RO - 2560</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field contains the EWS Fallback score which is used for calculating the Estimated Wallet size value. It is calculated based on the number of employees and category 3 value.</inlineHelpText>
+    <label>EWS Fallback</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

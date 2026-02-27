@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ON_BuyerReference__c</fullName>
+    <description>An identifier assigned to the recipient used for internal routing purposes. (For example: Leitweg-ID).</description>
+    <externalId>false</externalId>
+    <inlineHelpText>An identifier assigned to the recipient used for internal routing purposes. (For example: Leitweg-ID).</inlineHelpText>
+    <label>JustOn: Buyer Reference</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

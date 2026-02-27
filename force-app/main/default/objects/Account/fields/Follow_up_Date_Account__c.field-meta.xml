@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Follow_up_Date_Account__c</fullName>
+    <description>RO-2317</description>
+    <inlineHelpText>Zeitpunkt, wann dieser Account wieder aktiv angegangen werden soll. Das Follow-up Date kann entweder manuell gesetzt werden oder wird durch das Losten einer Acquisition Opp mit dem Reactivation Date überschrieben. 
+
+Zeitpunkt, wann dieser Account wieder aktiv angegangen werden soll oder ein Termin, nächster Austausch, Follow up vereinbart wurde.</inlineHelpText>
+    <label>Follow-up Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Email_Domain__c</fullName>
+    <description>Enhanced via RO-1295. 
+Shows email domain only if it is not a private service</description>
+    <externalId>false</externalId>
+    <formula>IF( OR(
+CONTAINS(Email, &quot;hotmail&quot;),
+CONTAINS(Email, &quot;gmx&quot;),
+CONTAINS(Email, &quot;heyjobs&quot;),
+CONTAINS(Email, &quot;hj.de&quot;),
+CONTAINS(Email, &quot;aol.de&quot;),
+CONTAINS(Email, &quot;aol.com&quot;),
+CONTAINS(Email, &quot;arcor.de&quot;),
+CONTAINS(Email, &quot;freenet.de&quot;),
+CONTAINS(Email, &quot;gmail.com&quot;),
+CONTAINS(Email, &quot;googlemail.com&quot;),
+CONTAINS(Email, &quot;outlook&quot;),
+CONTAINS(Email, &quot;yahoo&quot;),
+CONTAINS(Email, &quot;icloud.com&quot;),
+CONTAINS(Email, &quot;inbox.lv&quot;),
+CASE(SUBSTITUTE(Email, LEFT(Email, FIND(&quot;@&quot;, Email)), NULL),
+   &quot;t-online.de&quot;, &quot;true&quot;,
+   &quot;web.de&quot;, &quot;true&quot;,
+   &quot;mail.de&quot;, &quot;true&quot;,
+   &quot;mail.com&quot;, &quot;true&quot;,
+   &quot;live.de&quot;, &quot;true&quot;,
+   &quot;live.com&quot;, &quot;true&quot;,
+   &quot;test.de&quot;, &quot;true&quot;,
+   &quot;false&quot;)
+   = &quot;true&quot;  ),
+
+null,
+SUBSTITUTE(Email, LEFT(Email, FIND(&quot;@&quot;, Email)), NULL)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Email Domain</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

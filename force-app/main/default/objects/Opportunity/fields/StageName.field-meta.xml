@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>StageName</fullName>
+    <description>indicates in which stage of the sales funnel the opportunity is at the moment</description>
+    <inlineHelpText>Gibt an, in welcher Phase des Sales Funnels sich die Opportunity momentan befindet. Die möglichen Stages hängen vom Opportunity Record Type ab.</inlineHelpText>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>true</trackTrending>
+    <type>Picklist</type>
+</CustomField>

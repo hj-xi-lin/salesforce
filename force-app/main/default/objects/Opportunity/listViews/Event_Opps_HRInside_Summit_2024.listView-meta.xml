@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Event_Opps_HRInside_Summit_2024</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>GTM_Motion_Opportunity__c</columns>
+    <columns>Event_Lead_Classification_Opportunity__c</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>OPPORTUNITY.AMOUNT</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>MQL_Conversion__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Next_Action_Detail__c</field>
+        <operation>equals</operation>
+        <value>Live Event Lead</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.CREATED_DATE</field>
+        <operation>greaterThan</operation>
+        <value>10/8/2024 12:00 AM</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.CREATED_DATE</field>
+        <operation>lessThan</operation>
+        <value>10/12/2024 12:00 AM</value>
+    </filters>
+    <label>Event Opps HRInside Summit 2024</label>
+</ListView>

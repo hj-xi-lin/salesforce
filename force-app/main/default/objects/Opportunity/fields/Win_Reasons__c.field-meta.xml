@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Win_Reasons__c</fullName>
+    <description>RO - 2166
+Captures the underlying reason why the client made the purchase</description>
+    <inlineHelpText>Jedes Opportunity die gewonnen werden soll braucht einen Win Reason (Gewinngrund) beim Akzeptieren der Quote (Angebot). Genauere Informationen, welche Win Reasons es gibt und wie sie zu nutzen sind, findet du hier https://heyjobs.atlassian.net/wiki/spaces/EO/pages/3547463941.</inlineHelpText>
+    <label>Win Reasons</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Win_Reasons</valueSetName>
+    </valueSet>
+</CustomField>

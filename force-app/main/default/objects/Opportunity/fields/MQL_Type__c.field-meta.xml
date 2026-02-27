@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MQL_Type__c</fullName>
+    <defaultValue>4</defaultValue>
+    <description>RO - 1653</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Zeigt den Typ des MQLs an (1, 2, 3, oder 4) und hilft Sales, die Opportunity zu priorisieren. 
+
+Mehr Informationen findest du hier https://heyjobs.atlassian.net/wiki/spaces/ESE/pages/3542155304/Marketing+to+Sales+Hand+Over</inlineHelpText>
+    <label>MQL Type</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

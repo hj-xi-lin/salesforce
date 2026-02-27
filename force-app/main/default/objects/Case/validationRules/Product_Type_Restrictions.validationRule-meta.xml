@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Type_Restrictions</fullName>
+    <active>true</active>
+    <description>Product Type cannot be changed after Case is created. RO-1759</description>
+    <errorConditionFormula>AND(
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;,
+$Profile.Name &lt;&gt; &quot;Customer Operations Manager&quot;,
+$Profile.Name &lt;&gt; &quot;Head of Customer Operations&quot;,
+ISCHANGED( Product_Type__c ) ,
+NOT(ISNEW())
+)</errorConditionFormula>
+    <errorDisplayField>Product_Type__c</errorDisplayField>
+    <errorMessage>You cannot change the Product Type after the Case has been created.</errorMessage>
+</ValidationRule>

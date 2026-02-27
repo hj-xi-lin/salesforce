@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bookkeeper__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Is marked if the contact is responsible for bookkeeping in his related companies. Data Owner is Finance</description>
+    <inlineHelpText>Is marked TRUE if the contact is responsible for bookkeeping in his related companies.</inlineHelpText>
+    <label>Bookkeeper</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

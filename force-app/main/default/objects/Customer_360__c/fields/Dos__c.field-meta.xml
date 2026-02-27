@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dos__c</fullName>
+    <description>Do&apos;s - what the customer responds well to</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Dokumentiere, worauf der Kunde positiv reagiert (bevorzugter Kommunikationsstil, Tonalität, erfolgreiche Vorgehensweisen).</inlineHelpText>
+    <label>Do&apos;s</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

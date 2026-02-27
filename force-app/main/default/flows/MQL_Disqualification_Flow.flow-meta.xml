@@ -187,6 +187,31 @@
         </rules>
     </decisions>
     <decisions>
+        <name>Job_Alert_Contact_Decision_Disqual</name>
+        <label>Job Alert Contact Decision Disqual</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Update_Task_Contact_Disqual</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Contact Selected</defaultConnectorLabel>
+        <rules>
+            <name>No_Contacts_Disqual</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varNoContactsAvailableDisqual</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Close_Task_No_Contact_Disqual</targetReference>
+            </connector>
+            <label>No Contacts</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>MQL_Task</name>
         <label>MQL Task?</label>
         <locationX>0</locationX>
@@ -209,6 +234,21 @@
                 <targetReference>Disqualification_Screen</targetReference>
             </connector>
             <label>Yes</label>
+        </rules>
+        <rules>
+            <name>Yes_Job_Alert</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Task.Type</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Job Alert</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Job_Alert_Contact_Screen_Disqual</targetReference>
+            </connector>
+            <label>Job Alert</label>
         </rules>
     </decisions>
     <decisions>
@@ -425,6 +465,27 @@
         <object>Task</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
+    <recordLookups>
+        <name>Refresh_Task_Disqual</name>
+        <label>Refresh Task Disqual</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Disqualification_Screen</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Task</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
     <recordUpdates>
         <name>Blacklist_Account</name>
         <label>Blacklist Account</label>
@@ -454,6 +515,39 @@
             </value>
         </inputAssignments>
         <object>Account</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Close_Task_No_Contact_Disqual</name>
+        <label>Close Task No Contact Disqual</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Allow_closing__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>No_Contacts_Available__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Completed</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Task</object>
     </recordUpdates>
     <recordUpdates>
         <name>Complete_Task</name>
@@ -509,6 +603,30 @@
             <targetReference>Get_Account</targetReference>
         </connector>
         <inputReference>Get_Contact</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Task_Contact_Disqual</name>
+        <label>Update Task Contact Disqual</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Refresh_Task_Disqual</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>WhoId</field>
+            <value>
+                <elementReference>JobAlertContactLookup.recordId</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Task</object>
     </recordUpdates>
     <screens>
         <name>Disqualification_Screen</name>
@@ -723,9 +841,71 @@
         <allowPause>false</allowPause>
         <fields>
             <name>ScreenText</name>
-            <fieldText>&lt;p&gt;Diese Funktion ist nur für &lt;strong&gt;MQL Tasks&lt;/strong&gt; verfügbar und dieser Task ist kein MQL Task.&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;Diese Funktion ist nur für &lt;strong&gt;MQL Tasks&lt;/strong&gt; und &lt;strong&gt;Job Alert Tasks&lt;/strong&gt; verfügbar.&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <name>Job_Alert_Contact_Screen_Disqual</name>
+        <label>Job Alert Contact Screen Disqual</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Job_Alert_Contact_Decision_Disqual</targetReference>
+        </connector>
+        <fields>
+            <name>JobAlertContactScreenText</name>
+            <fieldText>&lt;p&gt;Wähle den Kontakt aus, mit dem du gesprochen hast, oder markiere &amp;#39;Keine Kontakte verfügbar&amp;#39;.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>JobAlertContactLookup</name>
+            <extensionName>flowruntime:lookup</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>fieldApiName</name>
+                <value>
+                    <stringValue>Duplicate_Contact__c</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>label</name>
+                <value>
+                    <stringValue>Kontakt</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>objectApiName</name>
+                <value>
+                    <stringValue>Contact</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>required</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </inputParameters>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>false</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <fields>
+            <name>varNoContactsAvailableDisqual</name>
+            <dataType>Boolean</dataType>
+            <defaultValue>
+                <booleanValue>false</booleanValue>
+            </defaultValue>
+            <fieldText>Keine Kontakte verfügbar</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <nextOrFinishButtonLabel>Weiter</nextOrFinishButtonLabel>
         <showFooter>true</showFooter>
         <showHeader>false</showHeader>
     </screens>

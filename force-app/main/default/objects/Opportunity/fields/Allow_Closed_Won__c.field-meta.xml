@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Allow_Closed_Won__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Helper field to prevent manual Closed Won / RO-712</description>
+    <label>Allow Closed Won</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

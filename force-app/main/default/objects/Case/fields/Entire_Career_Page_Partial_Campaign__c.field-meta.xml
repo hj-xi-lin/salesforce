@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Entire_Career_Page_Partial_Campaign__c</fullName>
+    <description>RO - 2458</description>
+    <inlineHelpText>Is the entire career page included in the campaign or only certain jobs?</inlineHelpText>
+    <label>Entire Career Page / Partial Campaign</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Entire Career Page</fullName>
+                <default>false</default>
+                <label>Entire Career Page</label>
+            </value>
+            <value>
+                <fullName>Partial Campaign</fullName>
+                <default>false</default>
+                <label>Partial Campaign</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

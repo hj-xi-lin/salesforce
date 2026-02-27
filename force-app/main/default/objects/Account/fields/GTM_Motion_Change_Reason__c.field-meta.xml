@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GTM_Motion_Change_Reason__c</fullName>
+    <description>RO-2177</description>
+    <inlineHelpText>Zeigt den Grund, warum ein Account in eine andere Motion geshiftet wurde oder werden soll. Freitextfeld zur weiteren Erläuterung des GTM Motion Change Reasons. Weitere Informationen zu den Change Reasons findest du hier: https://heyjobs.atlassian.net/wiki/spaces/ESE/pages/3322937454/GTM+Segmentation+Area+and+Motion+Account+Segmentation+V03#GTM-Motion-Change-Reasons</inlineHelpText>
+    <label>GTM Motion Change Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Has Reach Potential</fullName>
+                <default>false</default>
+                <label>Has Reach Potential</label>
+            </value>
+            <value>
+                <fullName>Conditions for Expansion met</fullName>
+                <default>false</default>
+                <label>Conditions for Expansion met</label>
+            </value>
+            <value>
+                <fullName>Conditions for Retention met</fullName>
+                <default>false</default>
+                <label>Conditions for Retention met</label>
+            </value>
+            <value>
+                <fullName>Conditions for Enterprise met</fullName>
+                <default>false</default>
+                <label>Conditions for Enterprise met</label>
+            </value>
+            <value>
+                <fullName>Transactional Buying Behaviour</fullName>
+                <default>false</default>
+                <label>Transactional Buying Behaviour</label>
+            </value>
+            <value>
+                <fullName>Churn</fullName>
+                <default>false</default>
+                <label>Churn</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Admin Only: Updated by Loss Process</fullName>
+                <default>false</default>
+                <label>Admin Only: Updated by Loss Process</label>
+            </value>
+            <value>
+                <fullName>Admin Only: Updated by Housekeeping Automation</fullName>
+                <default>false</default>
+                <label>Admin Only: Updated by Housekeeping Automation</label>
+            </value>
+            <value>
+                <fullName>Admin Only: Updated by MQL/Email Labelling Automation</fullName>
+                <default>false</default>
+                <label>Admin Only: Updated by MQL/Email Labelling Automation</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

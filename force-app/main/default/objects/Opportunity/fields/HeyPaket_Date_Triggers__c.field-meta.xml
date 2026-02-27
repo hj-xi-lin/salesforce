@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HeyPaket_Date_Triggers__c</fullName>
+    <description>Can be used in scheduled flow to filter for the correct opps but cannot be used in record-triggered flows as ISCHANGED. RO-1461, RO - 1838</description>
+    <externalId>false</externalId>
+    <formula>IF( HeyPaket_End_Date__c =  TODAY(), &quot;End Date Today&quot;,
+IF( HeyPaket_End_Date__c =  TODAY() + 25, &quot;End Date 25D in Future&quot;,
+IF( HeyPaket_End_Date__c =  TODAY() + 56, &quot;End Date 2Months in Future&quot;,
+IF( HeyPaket_End_Date__c =  TODAY() + 1 &amp;&amp; ISPICKVAL(HeyPaket_Status__c, &quot;Renewed&quot;) &amp;&amp; ISBLANK( Account.Next_HeyPaket__c ) , &quot;Auto Renewal&quot;,
+&quot;&quot;
+))))</formula>
+    <label>HeyPaket Date Triggers</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

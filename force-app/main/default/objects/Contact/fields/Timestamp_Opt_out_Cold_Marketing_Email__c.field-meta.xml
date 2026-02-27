@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Timestamp_Opt_out_Cold_Marketing_Email__c</fullName>
+    <description>Updated when Opt out Cold Marketing Email is updated</description>
+    <label>Timestamp Opt out Cold Marketing Email</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>DateTime</type>
+</CustomField>

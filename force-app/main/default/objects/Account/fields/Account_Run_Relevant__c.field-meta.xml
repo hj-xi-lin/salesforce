@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Run_Relevant__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>RO-2433</description>
+    <inlineHelpText>Marker-Feld, um Accounts vom Account Run ein- oder auszuschließen.</inlineHelpText>
+    <label>Account Run Relevant</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

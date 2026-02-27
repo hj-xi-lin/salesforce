@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ultimate_Parent_Account__c</fullName>
+    <externalId>false</externalId>
+    <formula>BLANKVALUE(Parent.Parent.Parent.Parent.Parent.Name, 
+BLANKVALUE(Parent.Parent.Parent.Parent.Name, 
+BLANKVALUE(Parent.Parent.Parent.Name, 
+BLANKVALUE(Parent.Parent.Name, 
+BLANKVALUE(Parent.Name, 
+Name)))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Der Ultimate Parent Account ist immer der “höchste” Account in einer Account-Hierarchie.</inlineHelpText>
+    <label>Ultimate Parent Account</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

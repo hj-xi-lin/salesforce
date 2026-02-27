@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Campaign_Start__c</fullName>
+    <description>RO-1759</description>
+    <inlineHelpText>REACH ONLY | When should the campaign start? (starting date of campaign usually is on the 01. of the month)</inlineHelpText>
+    <label>Campaign Start</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Timestamp_Latest_MQL_conversion_c__c</fullName>
+    <description>RO-1700</description>
+    <inlineHelpText>Zeigt das Datum, an dem der Kontakt die letzte MQL Conversion erreicht hat.</inlineHelpText>
+    <label>Timestamp Latest MQL conversion</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>DateTime</type>
+</CustomField>

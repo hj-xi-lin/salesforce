@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Role_ID_18__c</fullName>
+    <description>RO-2043</description>
+    <externalId>false</externalId>
+    <formula>CASESAFEID( Id )</formula>
+    <label>Contact Role ID (18)</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

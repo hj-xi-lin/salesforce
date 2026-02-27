@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Outbound_responses_Potential_HG</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Segment_Opp_V02__c</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>Source_Opp__c</columns>
+    <columns>fmlOwnerName__c</columns>
+    <columns>Created_DateTime__c</columns>
+    <columns>Email_Campaign_Source__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>equals</operation>
+        <value>Qualified Prospect,Demo Confirmed,Demo Held</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.CREATED_DATE</field>
+        <operation>equals</operation>
+        <value>THIS_QUARTER</value>
+    </filters>
+    <filters>
+        <field>Service_Country__c</field>
+        <operation>equals</operation>
+        <value>,DE</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Opportunity.Sales</value>
+    </filters>
+    <filters>
+        <field>Outbound_Response__c</field>
+        <operation>equals</operation>
+        <value>Hot,Warm</value>
+    </filters>
+    <label>Outbound responses: Potential_HG</label>
+</ListView>

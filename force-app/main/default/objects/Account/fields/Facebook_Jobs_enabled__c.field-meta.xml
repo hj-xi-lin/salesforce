@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Facebook_Jobs_enabled__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Check this field if Facebook Jobs should be live for this client.</description>
+    <inlineHelpText>Check this field if Facebook Jobs should be live for this client.</inlineHelpText>
+    <label>Legacy Facebook Jobs enabled</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

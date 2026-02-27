@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Timestamp_Closed_Lost__c</fullName>
+    <description>RO-169</description>
+    <formula>IF(
+TEXT(StageName) = &apos;Closed Lost&apos; &amp;&amp; NOT(ISBLANK(dateTimestampClosedWonLost__c)),
+dateTimestampClosedWonLost__c,
+null)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Timestamp Closed Lost</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

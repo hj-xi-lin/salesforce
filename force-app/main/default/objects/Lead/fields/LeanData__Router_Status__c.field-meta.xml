@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LeanData__Router_Status__c</fullName>
+    <deprecated>false</deprecated>
+    <label>LeanData Router Status (obsolete)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>not_processed</fullName>
+                <default>false</default>
+                <label>not_processed</label>
+            </value>
+            <value>
+                <fullName>unmatched</fullName>
+                <default>false</default>
+                <label>unmatched</label>
+            </value>
+            <value>
+                <fullName>converted</fullName>
+                <default>false</default>
+                <label>converted</label>
+            </value>
+            <value>
+                <fullName>routed</fullName>
+                <default>false</default>
+                <label>routed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

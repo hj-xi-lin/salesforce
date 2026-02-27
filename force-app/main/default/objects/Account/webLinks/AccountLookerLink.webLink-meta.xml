@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AccountLookerLink</fullName>
+    <availability>online</availability>
+    <displayType>link</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <height>600</height>
+    <linkType>url</linkType>
+    <masterLabel>Looker Link</masterLabel>
+    <openType>sidebar</openType>
+    <protected>false</protected>
+    <url>https://heyjobs.eu.looker.com/dashboards/30?Company%20ID={!Account.txtCompanyId__c}</url>
+</WebLink>

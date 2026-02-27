@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Next_Agency_Parent_Account__c</fullName>
+    <description>Displays the Id of the closest &quot;Agency Sales&quot; account in the hierarchy above this account.
+RO-1247</description>
+    <externalId>false</externalId>
+    <formula>Null</formula>
+    <inlineHelpText>Displays the Id of the closest &quot;Agency Sales&quot; account in the hierarchy above this account.</inlineHelpText>
+    <label>Legacy Next Agency Parent Account</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

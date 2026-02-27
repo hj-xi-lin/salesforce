@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restrict_Opportunity_Record_Type_Changes</fullName>
+    <active>true</active>
+    <description>RO - 2084</description>
+    <errorConditionFormula>AND(
+  ISCHANGED(RecordTypeId),
+  NOT(
+    OR(
+        $Profile.Name = &quot;System Administrator&quot;,
+        $Profile.Name = &quot;Customer Operations Manager&quot;,
+         CONTAINS($Profile.Name, &quot;Head&quot;) ,
+        $Profile.Name = &quot;Agency Manager&quot;,
+								$Permission.Sales_Operations 
+    )
+  )
+)</errorConditionFormula>
+    <errorMessage>You are not allowed to change the record type. Please reach out to your Salesforce Admin.</errorMessage>
+</ValidationRule>

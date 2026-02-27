@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Follow_Up_date_is_reached__c</fullName>
+    <description>RO - 2354</description>
+    <formula>Follow_up_Date_Account__c = TODAY()</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Indicates if the Follow-up date on account is reached.</inlineHelpText>
+    <label>Follow Up date is reached_trigger</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

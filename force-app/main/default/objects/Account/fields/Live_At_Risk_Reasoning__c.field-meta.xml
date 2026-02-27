@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Live_At_Risk_Reasoning__c</fullName>
+    <inlineHelpText>Gründe, warum dieser Kunde Anzeichen von Unzufriedenheit oder schlechter Leistung zeigt</inlineHelpText>
+    <label>Legacy Live At Risk Reasoning</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>TextArea</type>
+</CustomField>

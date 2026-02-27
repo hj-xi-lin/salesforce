@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Instalment_Type__c</fullName>
+    <description>RO-1576</description>
+    <inlineHelpText>Art der Ratenzahlung für Finance. Mehr Informationen findest du hier https://heyjobs.atlassian.net/wiki/spaces/FIN/pages/2944368769</inlineHelpText>
+    <label>Installment Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>2 x 30 Tage</fullName>
+                <default>false</default>
+                <label>2 x 30 Tage</label>
+            </value>
+            <value>
+                <fullName>3 x 30 Tage</fullName>
+                <default>false</default>
+                <label>3 x 30 Tage</label>
+            </value>
+            <value>
+                <fullName>4 x 30 Tage</fullName>
+                <default>false</default>
+                <label>4 x 30 Tage</label>
+            </value>
+            <value>
+                <fullName>5 x 30 Tage</fullName>
+                <default>false</default>
+                <label>5 x 30 Tage</label>
+            </value>
+            <value>
+                <fullName>6 x 30 Tage</fullName>
+                <default>false</default>
+                <label>6 x 30 Tage</label>
+            </value>
+            <value>
+                <fullName>7 x 30 Tage</fullName>
+                <default>false</default>
+                <label>7 x 30 Tage</label>
+            </value>
+            <value>
+                <fullName>8 x 30 Tage</fullName>
+                <default>false</default>
+                <label>8 x 30 Tage</label>
+            </value>
+            <value>
+                <fullName>9 x 30 Tage</fullName>
+                <default>false</default>
+                <label>9 x 30 Tage</label>
+            </value>
+            <value>
+                <fullName>10 x 30 Tage</fullName>
+                <default>false</default>
+                <label>10 x 30 Tage</label>
+            </value>
+            <value>
+                <fullName>11 x 30 Tage</fullName>
+                <default>false</default>
+                <label>11 x 30 Tage</label>
+            </value>
+            <value>
+                <fullName>12 x 30 Tage</fullName>
+                <default>false</default>
+                <label>12 x 30 Tage</label>
+            </value>
+            <value>
+                <fullName>2 x 90 Tage</fullName>
+                <default>false</default>
+                <label>2 x 90 Tage</label>
+            </value>
+            <value>
+                <fullName>3 x 90 Tage</fullName>
+                <default>false</default>
+                <label>3 x 90 Tage</label>
+            </value>
+            <value>
+                <fullName>4 x 90 Tage</fullName>
+                <default>false</default>
+                <label>4 x 90 Tage</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

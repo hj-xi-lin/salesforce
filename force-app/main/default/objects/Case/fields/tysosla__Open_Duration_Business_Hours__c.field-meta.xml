@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>tysosla__Open_Duration_Business_Hours__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Total duration this Case was open during workable (Business Hours).</description>
+    <inlineHelpText>Total duration this Case was open during workable (Business Hours).</inlineHelpText>
+    <label>Open Duration (Business Hours)</label>
+    <summarizedField>tysosla__Status_Tracking__c.tysosla__Business_Hours_in_Stage__c</summarizedField>
+    <summaryForeignKey>tysosla__Status_Tracking__c.tysosla__Case__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

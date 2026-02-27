@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Job_platform_Index__c</fullName>
+    <description>Platform where the job specific title has been published.</description>
+    <inlineHelpText>Plattform, auf der der Job mit dem &quot;job specific title&quot; veröffentlicht wurde.</inlineHelpText>
+    <label>Legacy Job platform - Index</label>
+    <length>1024</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Role_Assigned__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>True if there is at least one contact role and all contact roles have roles assigned. Populated via automation
+RO-1377</description>
+    <inlineHelpText>Updated automatically when contact roles are assigned and all contact roles have roles.</inlineHelpText>
+    <label>Contact Role Assigned</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

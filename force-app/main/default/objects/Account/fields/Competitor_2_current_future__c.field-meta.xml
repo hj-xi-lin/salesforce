@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Competitor_2_current_future__c</fullName>
+    <description>RO-2315</description>
+    <inlineHelpText>Welche Rekrutierungslösungen werden derzeit eingesetzt oder für die Zukunft in Betracht gezogen?
+Erfasst die Rekrutierungslösungen, die von potenziellen Kunden derzeit genutzt werden oder in der Zukunft in Betracht gezogen werden.</inlineHelpText>
+    <label>Competitor 2: current &amp; future</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Competitors</valueSetName>
+    </valueSet>
+</CustomField>

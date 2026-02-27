@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Grants access to Pilot_Opportunity_Override__c field on Opportunity</description>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Opportunity.Pilot_Opportunity_Override__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Pilot Opportunity Override Access</label>
+</PermissionSet>

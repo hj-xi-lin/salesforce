@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SEB_Transactional_Index_Opps_PreSales_DE</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>Estimated_Wallet_size_opp__c</columns>
+    <columns>OPPORTUNITY.CREATED_DATE</columns>
+    <columns>Service_Country__c</columns>
+    <columns>CREATEDBY_USER.ALIAS</columns>
+    <columns>fmlOwnerName__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OPPORTUNITY.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Opportunity.Sales_Transactional</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>notEqual</operation>
+        <value>Closed Lost</value>
+    </filters>
+    <filters>
+        <field>Estimated_Wallet_size_opp__c</field>
+        <operation>lessOrEqual</operation>
+        <value>75000</value>
+    </filters>
+    <filters>
+        <field>Service_Country__c</field>
+        <operation>equals</operation>
+        <value>AT</value>
+    </filters>
+    <filters>
+        <field>CREATEDBY_USER.ALIAS</field>
+        <operation>contains</operation>
+        <value>sblan</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.CREATED_DATE</field>
+        <operation>greaterOrEqual</operation>
+        <value>8/23/2024 12:00 AM</value>
+    </filters>
+    <label>SEB Transactional_Index_Opps_PreSales AT</label>
+</ListView>

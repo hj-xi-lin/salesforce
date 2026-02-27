@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_Repeat_Purchase_Typeform__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Zeigt an, ob nach dem ersten Einholden der Rechnungs- und Lieferadresse weitere Typeforms an den/die Kund*in geschickt werden sollen. Wenn TRUE (checked) werden keine weitere Typeforms rausgeschickt. Dann muss die Rechnungs- und Lieferadresse auf der Opportunity und dem Account manuell gepflegt werden. (Dies ist für Accounts in der Inside Sales GTM Motion der Fall)</inlineHelpText>
+    <label>No Repeat Purchase Typeform</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Run_Template_Subscription</fullName>
+    <columns>Ultimate_Parent_Account__c</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Bookings_last_12_months__c</columns>
+    <columns>Remaining_HIRE_Credit__c</columns>
+    <columns>Remaining_REACH_Credit__c</columns>
+    <columns>Start_of_Fiscal_Year__c</columns>
+    <columns>Focus_this_quarter__c</columns>
+    <columns>Estimated_Min_Booking_this_quarter__c</columns>
+    <columns>Estimated_Target_Booking_this_quarter__c</columns>
+    <columns>Estimated_Max_Booking_this_quarter__c</columns>
+    <columns>Booking_expected_in_Quarter__c</columns>
+    <columns>F2F_This_Quarter__c</columns>
+    <columns>plATSName__c</columns>
+    <columns>Account_Run_Status_Notes__c</columns>
+    <columns>Last_Account_Run_Check__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Account_Owner__c</field>
+        <operation>equals</operation>
+        <value>Hikmet Canbolat</value>
+    </filters>
+    <filters>
+        <field>Record_Type__c</field>
+        <operation>equals</operation>
+        <value>Sales</value>
+    </filters>
+    <filters>
+        <field>Test_Account__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <label>Account Run Template Subscription</label>
+</ListView>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Jobs_on_Career_Page_update_date__c</fullName>
+    <description>Last update date of &quot;Jobs on Career Page&quot; field. Originally implemented for taskdrive Research for REACH BB.</description>
+    <inlineHelpText>Zeitpunkt zu dem &quot;Jobs on Career Page&quot; das letzte mal aktualisiert wurde.</inlineHelpText>
+    <label>Legacy Jobs on Career Page (update date)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

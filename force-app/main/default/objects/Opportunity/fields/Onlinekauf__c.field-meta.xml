@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Onlinekauf__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>&quot;Die Opportunity wurde durch einen Onlinekauf im Recruiter Portal erstellt.
+
+Mehr Informationen findest du hier https://heyjobs.atlassian.net/wiki/spaces/B2B/pages/2117861564/Alles+ber+Onlinek+ufe+Self+Service+Purchases &quot;</inlineHelpText>
+    <label>Onlinekauf</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Events_impacting_prioritization__c</fullName>
+    <description>RO-2093</description>
+    <inlineHelpText>Gibt es bevorstehende Ereignisse, die sich auf die Priorisierung von Rekrutierungslösungen auswirken?</inlineHelpText>
+    <label>Events impacting prioritization</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>TextArea</type>
+</CustomField>

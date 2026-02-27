@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Success_measurement__c</fullName>
+    <description>RO-2315</description>
+    <inlineHelpText>Welche ist die Haupt-KPI, die den Rekrutierungserfolg für das Unternehmen definiert?</inlineHelpText>
+    <label>Success measurement</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>JP page views</fullName>
+                <default>false</default>
+                <label>JP page views</label>
+            </value>
+            <value>
+                <fullName>Applications started</fullName>
+                <default>false</default>
+                <label>Applications started</label>
+            </value>
+            <value>
+                <fullName>Application started rate</fullName>
+                <default>false</default>
+                <label>Application started rate</label>
+            </value>
+            <value>
+                <fullName>Applications completed</fullName>
+                <default>false</default>
+                <label>Applications completed</label>
+            </value>
+            <value>
+                <fullName>Application completed rate</fullName>
+                <default>false</default>
+                <label>Application completed rate</label>
+            </value>
+            <value>
+                <fullName>Cost per application</fullName>
+                <default>false</default>
+                <label>Cost per application</label>
+            </value>
+            <value>
+                <fullName>Applicant quality</fullName>
+                <default>false</default>
+                <label>Applicant quality</label>
+            </value>
+            <value>
+                <fullName>Time to hire</fullName>
+                <default>false</default>
+                <label>Time to hire</label>
+            </value>
+            <value>
+                <fullName>Cost per hire</fullName>
+                <default>false</default>
+                <label>Cost per hire</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

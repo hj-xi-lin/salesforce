@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stages_For_Hunters_and_Prospectors</fullName>
+    <active>false</active>
+    <description>To define the stage moment for hunters and prospectors. RO-551
+
+Moved to &quot;StageChangeRestrictions_SalesAgencyAcqu&quot;</description>
+    <errorConditionFormula>AND(
+RecordType.DeveloperName = &quot;Sales&quot;,
+ISCHANGED( StageName ),
+
+OR(
+
+AND(
+OR(
+ISPICKVAL( PRIORVALUE (StageName), &quot;Not Reached Yet&quot;),
+ISPICKVAL( PRIORVALUE (StageName), &quot;Qualified Prospect&quot;),
+ISPICKVAL( PRIORVALUE (StageName), &quot;Currently In Contact&quot;),
+ISPICKVAL( PRIORVALUE (StageName), &quot;Scheduled&quot;)),
+
+OR( ISPICKVAL(StageName, &quot;Demo Held&quot;) ,
+ISPICKVAL(StageName, &quot;Pilot Definition&quot;),
+ISPICKVAL(StageName, &quot;Offer&quot;),
+ISPICKVAL(StageName, &quot;Contract Received &quot;) )
+),
+
+AND(
+OR(
+ISPICKVAL( PRIORVALUE (StageName), &quot;Demo Confirmed&quot;),
+ISPICKVAL( PRIORVALUE (StageName), &quot;Demo Held&quot;),
+ISPICKVAL( PRIORVALUE (StageName), &quot;Pilot Definition&quot;),
+ISPICKVAL( PRIORVALUE (StageName), &quot;Offer&quot;),
+ISPICKVAL( PRIORVALUE (StageName), &quot;Contract Received&quot;)),
+
+OR(
+ISPICKVAL(StageName, &quot;Not Reached Yet&quot;) ,
+ISPICKVAL(StageName, &quot;Qualified Prospect&quot;),
+ISPICKVAL(StageName, &quot;Currently In Contact&quot;),
+ISPICKVAL(StageName, &quot;Scheduled&quot;) )))
+
+
+)</errorConditionFormula>
+    <errorMessage>You cannot change the opportunity to this stage. Please use “Rescheduling” and “Demo confirmed” stages to switch the Opportunity type.</errorMessage>
+</ValidationRule>

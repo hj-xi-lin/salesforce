@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quote_Footer_English__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE( Service_Country__c,
+&quot;DE&quot;, &quot;Registry Court: District Court Berlin-Charlottenburg • Registry Number: HRB 175212 B • VAT Number.: DE305584183&quot; &amp;BR()&amp;
+&quot;German Tax Number: 37/345/50019 • Managing Directors: Marius Luther &amp; Marius Jeuck&quot;,
+&quot;AT&quot;, &quot;Registry Court:: Handelsgericht Wien * Registry Number: FN 579225 b * VAT Number.: ATU78109627&quot; &amp;BR()&amp;
+&quot;Austrian Tax Number: 12 845/7652 * Managing Directors: Marius Luther &amp; Marius Jeuck&quot;, &apos;&apos;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Quote Footer English</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

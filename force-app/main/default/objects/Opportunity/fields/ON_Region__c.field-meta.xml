@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ON_Region__c</fullName>
+    <description>Processes the Billing Country Code to a Region for Taxing</description>
+    <externalId>false</externalId>
+    <formula>CASE(TEXT(Billing_Country_Code__c),
+&quot;Deutschland&quot;,&quot;DE&quot;,
+&quot;Österreich&quot;,&quot;AT&quot;,
+&quot;BE&quot;,&quot;EU&quot;,
+&quot;BG&quot;,&quot;EU&quot;,
+&quot;CY&quot;,&quot;EU&quot;,
+&quot;CZ&quot;,&quot;EU&quot;,
+&quot;DK&quot;,&quot;EU&quot;,
+&quot;EE&quot;,&quot;EU&quot;,
+&quot;ES&quot;,&quot;EU&quot;,
+&quot;FI&quot;,&quot;EU&quot;,
+&quot;FR&quot;,&quot;EU&quot;,
+&quot;GR&quot;,&quot;EU&quot;,
+&quot;HU&quot;,&quot;EU&quot;,
+&quot;IE&quot;,&quot;EU&quot;,
+&quot;Italien&quot;,&quot;EU&quot;,
+&quot;HR&quot;,&quot;EU&quot;,
+&quot;LT&quot;,&quot;EU&quot;,
+&quot;LU&quot;,&quot;EU&quot;,
+&quot;LV&quot;,&quot;EU&quot;,
+&quot;MT&quot;,&quot;EU&quot;,
+&quot;NL&quot;,&quot;EU&quot;,
+&quot;PL&quot;,&quot;EU&quot;,
+&quot;PT&quot;,&quot;EU&quot;,
+&quot;RO&quot;,&quot;EU&quot;,
+&quot;SE&quot;,&quot;EU&quot;,
+&quot;SI&quot;,&quot;EU&quot;,
+&quot;SK&quot;,&quot;EU&quot;,
+&quot;SM&quot;,&quot;EU&quot;,
+&quot;CH&quot;,&quot;EU&quot;,
+&quot;NON-EU&quot;)</formula>
+    <inlineHelpText>Processes the Billing Country Code to a Region for Taxing</inlineHelpText>
+    <label>JustOn: Region</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

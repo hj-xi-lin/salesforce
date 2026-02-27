@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Part_of_Hierarchy__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Uses this clay table https://app.clay.com/workspaces/366316/workbooks/wb_0ta0fxmj6zgo9K4XC8f/tables/t_0ta0fxmyxVWcosBCHUT/views/gv_0ta0fxnfdKWgb3wmeUc to figure out whether or not the lead is part of a hierarchy.</description>
+    <inlineHelpText>Uses this clay table https://app.clay.com/workspaces/366316/workbooks/wb_0ta0fxmj6zgo9K4XC8f/tables/t_0ta0fxmyxVWcosBCHUT/views/gv_0ta0fxnfdKWgb3wmeUc to figure out whether or not the lead is part of a hierarchy.</inlineHelpText>
+    <label>Part of Hierarchy</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

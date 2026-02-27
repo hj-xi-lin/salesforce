@@ -1,0 +1,181 @@
+/* Wizard container styles */
+:host {
+    display: block;
+    height: 100vh;
+}
+
+/* ============ MAIN LAYOUT - Fixed Header, Scrollable Content, Fixed Footer ============ */
+
+.wizard-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f4f6f9;
+}
+
+/* Sticky Header Section - Title, Highlights, Path */
+.wizard-header-sticky {
+    flex-shrink: 0;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.wizard-title {
+    padding: 12px 16px;
+    border-bottom: 1px solid #dddbda;
+}
+
+.wizard-path {
+    padding: 12px 16px;
+    background-color: white;
+}
+
+/* Scrollable Content Area */
+.wizard-content-scroll {
+    flex: 1;
+    overflow-y: auto;
+    background-color: white;
+}
+
+.wizard-content {
+    padding-bottom: 20px;
+}
+
+/* ============ HIGHLIGHTS PANEL STYLES (Salesforce Native Look) ============ */
+
+.highlights-panel {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: #ffffff;
+    border-bottom: 1px solid #dddbda;
+    padding: 12px 16px;
+    gap: 0;
+}
+
+.highlights-item {
+    flex: 0 0 auto;
+    padding: 0 24px;
+    border-right: 1px solid #dddbda;
+    min-width: 120px;
+}
+
+.highlights-item:first-child {
+    padding-left: 0;
+}
+
+.highlights-item:last-child {
+    border-right: none;
+}
+
+.highlights-label {
+    font-size: 0.75rem;
+    color: #706e6b;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.025rem;
+    margin: 0 0 4px 0;
+    line-height: 1.25;
+}
+
+.highlights-value {
+    font-size: 0.875rem;
+    color: #080707;
+    font-weight: 400;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.highlights-link {
+    color: #0070d2;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.highlights-link:hover {
+    text-decoration: underline;
+    color: #005fb2;
+}
+
+/* ============ FOOTER STYLES - Sticky at Bottom ============ */
+
+.wizard-footer {
+    flex-shrink: 0;
+    background-color: white;
+    border-top: 1px solid #dddbda;
+    padding: 12px 16px;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* ============ RESPONSIVE ADJUSTMENTS ============ */
+
+@media (max-width: 768px) {
+    .highlights-panel {
+        flex-wrap: wrap;
+        padding: 8px 12px;
+    }
+    
+    .highlights-item {
+        flex: 0 0 50%;
+        padding: 8px 12px;
+        border-right: none;
+        border-bottom: 1px solid #dddbda;
+        min-width: auto;
+    }
+    
+    .highlights-item:first-child {
+        padding-left: 12px;
+    }
+    
+    .highlights-item:last-child,
+    .highlights-item:nth-last-child(2) {
+        border-bottom: none;
+    }
+}
+
+/* ============ CUSTOM TOAST (VF-hosted — ShowToastEvent unavailable) ============ */
+
+.custom-toast-container {
+    position: fixed;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10000;
+}
+
+.custom-toast {
+    display: flex;
+    align-items: center;
+    padding: 10px 16px;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 0.875rem;
+    min-width: 300px;
+    max-width: 600px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    white-space: nowrap;
+    animation: toastFadeIn 0.3s ease-out;
+}
+
+.custom-toast_success { background-color: #2e844a; }
+.custom-toast_error   { background-color: #c23934; }
+.custom-toast_warning { background-color: #dd7a01; }
+.custom-toast_info    { background-color: #706e6b; }
+
+@keyframes toastFadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}

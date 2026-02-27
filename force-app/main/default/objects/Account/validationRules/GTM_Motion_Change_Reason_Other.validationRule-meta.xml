@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GTM_Motion_Change_Reason_Other</fullName>
+    <active>true</active>
+    <description>Other can only be selected when providing additional information</description>
+    <errorConditionFormula>ISPICKVAL( GTM_Motion_Change_Reason__c , &quot;Other&quot; ) &amp;&amp;
+ISBLANK(  GTM_Motion_Change_Reason_Detail__c )</errorConditionFormula>
+    <errorDisplayField>GTM_Motion_Change_Reason_Detail__c</errorDisplayField>
+    <errorMessage>Please provide additional information about the change reason in the field &quot;GTM Motion Change Reason Detail&quot;</errorMessage>
+</ValidationRule>

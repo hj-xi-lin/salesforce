@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ON_BillingCity__c</fullName>
+    <description>Replicates the Billing City</description>
+    <externalId>false</externalId>
+    <formula>IF(
+    Bulk_Invoicing__c = TRUE,
+    IF(
+        ISBLANK(Account.Parent.Parent.BillingCity),
+        Account.Parent.BillingCity,
+        Account.Parent.Parent.BillingCity
+    ),
+    Billing_City__c
+)</formula>
+    <inlineHelpText>Replicates the Billing City</inlineHelpText>
+    <label>JustOn: Billing City</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

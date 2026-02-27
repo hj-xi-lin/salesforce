@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Insert_Source__c</fullName>
+    <description>Identify source of new leads</description>
+    <label>Lead Insert Source</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Crefo</fullName>
+                <default>false</default>
+                <label>Crefo</label>
+            </value>
+            <value>
+                <fullName>Dealfront</fullName>
+                <default>false</default>
+                <label>Dealfront</label>
+            </value>
+            <value>
+                <fullName>Webinar Laura</fullName>
+                <default>false</default>
+                <label>Webinar Laura</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

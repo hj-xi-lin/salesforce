@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>in-person</fullName>
+        <default>false</default>
+        <label>in-person</label>
+    </customValue>
+    <customValue>
+        <fullName>phonecall</fullName>
+        <default>false</default>
+        <label>phonecall</label>
+    </customValue>
+    <customValue>
+        <fullName>videocall</fullName>
+        <default>false</default>
+        <label>videocall</label>
+    </customValue>
+    <customValue>
+        <fullName>email</fullName>
+        <default>false</default>
+        <label>email</label>
+    </customValue>
+    <masterLabel>OB Medium</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

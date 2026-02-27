@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quote</fullName>
+    <active>true</active>
+    <label>Quote</label>
+    <picklistValues>
+        <picklist>Instalment_Type__c</picklist>
+        <values>
+            <fullName>10 x 30 Tage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11 x 30 Tage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>12 x 30 Tage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 x 30 Tage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 x 90 Tage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 x 30 Tage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 x 90 Tage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 x 30 Tage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 x 90 Tage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5 x 30 Tage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6 x 30 Tage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7 x 30 Tage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8 x 30 Tage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9 x 30 Tage</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Package_Type__c</picklist>
+        <values>
+            <fullName>Advanced</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Essentials</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Professional</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ultimate</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Payment_Cycle__c</picklist>
+        <values>
+            <fullName>Monthly Payments</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yearly Payments</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Product_Type__c</picklist>
+        <values>
+            <fullName>HIRE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PPCP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>REACH</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Service_Period__c</picklist>
+        <values>
+            <fullName>1 month</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10 months</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11 months</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>12 months</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>13 months</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>14 months</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>15 months</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>16 months</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>17 months</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>18 months</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>19 months</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 months</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>20 months</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>21 months</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>22 months</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>23 months</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>24 months</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 months</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>36 months</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 months</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>48 months</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5 months</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6 months</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>7 months</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8 months</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9 months</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status</picklist>
+        <values>
+            <fullName>Draft</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Not Taken</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

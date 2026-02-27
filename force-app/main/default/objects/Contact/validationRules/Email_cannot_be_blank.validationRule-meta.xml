@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Email_cannot_be_blank</fullName>
+    <active>true</active>
+    <description>RO-2442</description>
+    <errorConditionFormula>AND(
+    NOT(ISNEW()),
+    ISCHANGED(Email),
+    ISBLANK(Email)
+)</errorConditionFormula>
+    <errorMessage>Email cannot be left blank. In case of a completely new email address, please first copy the old value and place it in the &quot;secondary email&quot; field</errorMessage>
+</ValidationRule>

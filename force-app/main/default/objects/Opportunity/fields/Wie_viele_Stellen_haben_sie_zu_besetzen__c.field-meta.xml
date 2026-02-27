@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Wie_viele_Stellen_haben_sie_zu_besetzen__c</fullName>
+    <label>Wie viele Stellen haben sie zu besetzen?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1</fullName>
+                <default>false</default>
+                <label>1</label>
+            </value>
+            <value>
+                <fullName>Null</fullName>
+                <default>false</default>
+                <label>Null</label>
+            </value>
+            <value>
+                <fullName>2-10</fullName>
+                <default>false</default>
+                <label>2-10</label>
+            </value>
+            <value>
+                <fullName>11-100</fullName>
+                <default>false</default>
+                <label>11-100</label>
+            </value>
+            <value>
+                <fullName>&gt; 100</fullName>
+                <default>false</default>
+                <label>&gt; 100</label>
+            </value>
+            <value>
+                <fullName>2-30</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>2-30</label>
+            </value>
+            <value>
+                <fullName>30-500</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>30-500</label>
+            </value>
+            <value>
+                <fullName>&gt; 500</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>&gt; 500</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Opportunities_incl_MQL</fullName>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>Next_Action_Detail__c</columns>
+    <columns>Follow_Up_Date__c</columns>
+    <columns>Account_Lead_Score__c</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>Created_DateTime__c</columns>
+    <columns>OPPORTUNITY.PROBABILITY</columns>
+    <columns>MQL_Type__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>MQL_Type__c</field>
+        <operation>equals</operation>
+        <value>1,2,3,4</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>equals</operation>
+        <value>Ready for Sales,In Qualification,Pitch &amp; Negotiation,Offer</value>
+    </filters>
+    <label>My Opportunities_incl. MQL</label>
+    <sharedTo>
+        <group>AT_User_Group</group>
+    </sharedTo>
+</ListView>

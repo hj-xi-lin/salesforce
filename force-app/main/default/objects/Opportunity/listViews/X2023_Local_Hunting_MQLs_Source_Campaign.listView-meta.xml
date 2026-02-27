@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X2023_Local_Hunting_MQLs_Source_Campaign</fullName>
+    <columns>MQL_Type__c</columns>
+    <columns>Engagement_Score__c</columns>
+    <columns>OPPORTUNITY.CREATED_DATE</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>Outbound_Response__c</columns>
+    <columns>Next_Action_Detail__c</columns>
+    <columns>Timestamp_Email_Reply__c</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>Source_Opp__c</columns>
+    <columns>Original_Campaign_Source__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Segment_Opp_V02__c</field>
+        <operation>equals</operation>
+        <value>Small</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>equals</operation>
+        <value>Not reached yet,Qualified Prospect,Currently in Contact,Rescheduling,Scheduled</value>
+    </filters>
+    <filters>
+        <field>Service_Country__c</field>
+        <operation>equals</operation>
+        <value>DE</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.FULL_NAME</field>
+        <operation>equals</operation>
+        <value>Pre-Sales Admin</value>
+    </filters>
+    <label>2023_Local_Hunting_MQLs_Source_Campaign</label>
+</ListView>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>First_Won_Opportunity_Record_Type__c</fullName>
+    <description>RO-1165, RO-1352
+&quot;Job creation Case&quot; &amp; &quot;SSSU Pilot job Creation Case&quot; trigger is dependent on this field!</description>
+    <externalId>false</externalId>
+    <formula>IF( First_Won_Opportunity__r.RecordType.DeveloperName = &quot;Customer_Self_Service&quot;,&quot;SSSU&quot;, 
+  IF(
+     OR(First_Won_Opportunity__r.RecordType.DeveloperName = &quot;Sales&quot;,
+        First_Won_Opportunity__r.RecordType.DeveloperName = &quot;Hunting&quot;, 
+        First_Won_Opportunity__r.RecordType.DeveloperName = &quot;Inbound&quot;,
+        First_Won_Opportunity__r.RecordType.DeveloperName = &quot;Sales_Transactional&quot;) , 
+     &quot;Sales&quot; , &quot;&quot;)
+)</formula>
+    <inlineHelpText>Jedes angelegte Unternehmen (Account) sollte einen Pilot Type besitzen. Der Pilot Type gibt an, ob die erste gewonnene Opportunity des Accounts ein Sales Pilot oder ein SSSU Pilot war. Für Agency Accounts mit einer closed won Opportunity bleibt dieses Feld jedoch leer.</inlineHelpText>
+    <label>Pilot Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

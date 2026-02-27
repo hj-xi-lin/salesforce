@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>2_SMB</fullName>
+        <default>false</default>
+        <label>2_SMB</label>
+    </customValue>
+    <customValue>
+        <fullName>1_Enterprise</fullName>
+        <default>false</default>
+        <label>1_Enterprise</label>
+    </customValue>
+    <customValue>
+        <fullName>3_Small</fullName>
+        <default>true</default>
+        <label>3_Small</label>
+    </customValue>
+    <masterLabel>Customer Segment</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

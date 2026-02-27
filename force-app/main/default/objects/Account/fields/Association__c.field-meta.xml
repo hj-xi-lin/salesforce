@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Association__c</fullName>
+    <description>This field is used to identifiy connected companies that are not in a hirarchy with each other.</description>
+    <inlineHelpText>This field is used to identifiy connected companies that are not in a hirarchy with each other</inlineHelpText>
+    <label>Association</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>VDV - Verband Deutscher Verkehrsunternehmen e. V.</fullName>
+                <default>false</default>
+                <label>VDV - Verband Deutscher Verkehrsunternehmen e. V.</label>
+            </value>
+            <value>
+                <fullName>VDV - Arbeitgeberinitiative</fullName>
+                <default>false</default>
+                <label>VDV - Arbeitgeberinitiative</label>
+            </value>
+            <value>
+                <fullName>Verband Deutscher Freizeitparks und Freizeitunternehmen e.V. (VDFU)</fullName>
+                <default>false</default>
+                <label>Verband Deutscher Freizeitparks und Freizeitunternehmen e.V. (VDFU)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

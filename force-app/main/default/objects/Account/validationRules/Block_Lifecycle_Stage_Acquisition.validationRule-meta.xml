@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Block_Lifecycle_Stage_Acquisition</fullName>
+    <active>true</active>
+    <description>RO-2349</description>
+    <errorConditionFormula>AND(
+ISCHANGED( Stage_ACM__c ) ,
+TEXT( Stage_ACM__c ) = $Label.Account_Lifecycle_Stage_Acquisition ,
+Open_Opportunities_Count__c &lt; 1
+)</errorConditionFormula>
+    <errorMessage>Please create an acquisition opportunity to move the Lifecycle Stage to Acquisition.</errorMessage>
+</ValidationRule>

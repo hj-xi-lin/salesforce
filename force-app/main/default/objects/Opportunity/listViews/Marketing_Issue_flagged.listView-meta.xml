@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Marketing_Issue_flagged</fullName>
+    <columns>MQL_Type__c</columns>
+    <columns>Engagement_Score__c</columns>
+    <columns>OPPORTUNITY.CREATED_DATE</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>Next_Action_Detail__c</columns>
+    <columns>Recent_Conversion__c</columns>
+    <columns>MQL_Conversion__c</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>Campaign__c</columns>
+    <columns>Estimated_Wallet_size_opp__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Next_Action_Detail__c</field>
+        <operation>contains</operation>
+        <value>Marketing Issue flagged</value>
+    </filters>
+    <label>Marketing Issue flagged OPPs</label>
+</ListView>

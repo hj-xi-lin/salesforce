@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ExpirationDate</fullName>
+    <description>If empty, will be set to 14 days from today</description>
+    <inlineHelpText>Datum, bis wann das Angebot gültig ist. Wenn das Feld bei Erstellung der Quote leer bleibst, wird das Gültigkeitsdatum standardmäßig auf 2 Wochen in der Zukunft gesetzt.</inlineHelpText>
+    <trackHistory>false</trackHistory>
+</CustomField>

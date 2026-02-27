@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Masterclass_contacts_not_defined</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CONTACT.PHONE1</columns>
+    <columns>CONTACT.EMAIL</columns>
+    <columns>CONTACT.TITLE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Account.Campaign__c</columns>
+    <columns>ACCOUNT.EMPLOYEES</columns>
+    <columns>Account.Lead_Score_2021__c</columns>
+    <columns>Account.Segment_V02__c</columns>
+    <columns>Account.Service_Country__c</columns>
+    <columns>Account.Inbound_Source__c</columns>
+    <columns>CONTACT.LEAD_SOURCE</columns>
+    <columns>Account.Owner_Profile__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>Masterclass contacts - not defined</label>
+</ListView>

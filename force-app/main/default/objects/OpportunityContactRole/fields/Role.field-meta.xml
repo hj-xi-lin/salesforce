@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Role</fullName>
+    <inlineHelpText>Decision Maker - Contact that does final sign-off for purchase.
+
+Influencer - Contact that is not using the product themselves but is relevant for the decision making on the customer side
+
+Business User - Contact person that is using our product.
+
+Other - Contact that is involved in a limited way, e.g. an intern that was part of the demo meeting.</inlineHelpText>
+    <type>Picklist</type>
+</CustomField>

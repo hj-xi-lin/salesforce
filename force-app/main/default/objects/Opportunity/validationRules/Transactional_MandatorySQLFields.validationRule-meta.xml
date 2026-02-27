@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Transactional_MandatorySQLFields</fullName>
+    <active>false</active>
+    <description>RO-2130</description>
+    <errorConditionFormula>AND(
+RecordType.DeveloperName = &quot;Sales_Transactional&quot;,
+NOT($Permission.MVP_Opp_Creation ),
+OR(
+ISBLANK( Timestamp_Demo_Held__c ) ,
+Timestamp_Demo_Held__c &gt;= DATE(2024,07,01)
+),
+NOT( ISPICKVAL( StageName , &quot;Ready for Sales&quot;) ),
+NOT( ISPICKVAL( StageName , &quot;In Qualification&quot;) ),
+NOT( ISPICKVAL( StageName , &quot;Pitch &amp; Negotiation&quot;) ),
+NOT( ISPICKVAL( StageName , &quot;Closed Lost&quot;) ),
+
+
+OR(
+ISBLANK(  Number_of_Employees_from_Account__c  ),
+ISBLANK( TEXT( HeyJobs_Category_from_Account__c ) ),
+ISBLANK( TEXT( Open_Jobs_from_Account__c ) ),
+
+IF(
+OR(
+ISPICKVAL(Competitor_1_current_future__c , &quot;Others&quot;),
+ISPICKVAL(Competitor_2_current_future__c , &quot;Others&quot;),
+ISPICKVAL(Competitor_3_current_future__c , &quot;Others&quot;)
+)
+&amp;&amp; ISBLANK( Other_Competitor__c ),
+true, false),
+
+IF(
+AND(
+OR(
+ISBLANK( TEXT(Competitor_1_current_future__c) ),
+ISBLANK( TEXT(Competitor_2_current_future__c) ),
+ISBLANK( TEXT(Competitor_3_current_future__c) )
+),
+NOT( ISPICKVAL(Competitor_1_current_future__c , &quot;None&quot;)),
+NOT( ISPICKVAL(Competitor_2_current_future__c , &quot;None&quot;)),
+NOT( ISPICKVAL(Competitor_3_current_future__c , &quot;None&quot;)),
+NOT( ISPICKVAL(Competitor_1_current_future__c , &quot;Unknown&quot;)),
+NOT( ISPICKVAL(Competitor_2_current_future__c , &quot;Unknown&quot;)),
+NOT( ISPICKVAL(Competitor_3_current_future__c , &quot;Unknown&quot;))
+),
+true, false)
+
+
+)
+)</errorConditionFormula>
+    <errorMessage>Please populate the mandatory fields on Account Employees , HeyJobs Category, Open Jobs and on Opp Competitors 1-3 (and Other Competitor if you selected &quot;Others&quot; in Competitor 1,2 or 3)</errorMessage>
+</ValidationRule>

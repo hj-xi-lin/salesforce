@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ONB2__ContactRole__c</fullName>
+    <deprecated>false</deprecated>
+    <description>This field is used to pre-populate contact and address fields when creating invoices, account statements or dunning reminders.</description>
+    <inlineHelpText>This field is used to pre-populate contact and address fields when creating invoices, account statements or dunning reminders.</inlineHelpText>
+    <label>JustOn Contact Role</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Invoice Contact</fullName>
+                <default>false</default>
+                <label>Invoice Contact</label>
+            </value>
+            <value>
+                <fullName>Invoice Mailing Contact</fullName>
+                <default>false</default>
+                <label>Invoice Mailing Contact</label>
+            </value>
+            <value>
+                <fullName>Invoice Email Contact</fullName>
+                <default>false</default>
+                <label>Invoice Email Contact</label>
+            </value>
+            <value>
+                <fullName>Invoice Email CC Contact</fullName>
+                <default>false</default>
+                <label>Invoice Email CC Contact</label>
+            </value>
+            <value>
+                <fullName>Invoice Email BCC Contact</fullName>
+                <default>false</default>
+                <label>Invoice Email BCC Contact</label>
+            </value>
+            <value>
+                <fullName>Dunning Contact</fullName>
+                <default>false</default>
+                <label>Dunning Contact</label>
+            </value>
+            <value>
+                <fullName>Dunning Mailing Contact</fullName>
+                <default>false</default>
+                <label>Dunning Mailing Contact</label>
+            </value>
+            <value>
+                <fullName>Dunning Email Contact</fullName>
+                <default>false</default>
+                <label>Dunning Email Contact</label>
+            </value>
+            <value>
+                <fullName>Dunning Email CC Contact</fullName>
+                <default>false</default>
+                <label>Dunning Email CC Contact</label>
+            </value>
+            <value>
+                <fullName>Dunning Email BCC Contact</fullName>
+                <default>false</default>
+                <label>Dunning Email BCC Contact</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>10</visibleLines>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Parent_Account_Description__c</fullName>
+    <description>Reference Account Field: Parent Account Description</description>
+    <externalId>false</externalId>
+    <formula>Account.Parent_Account_Description__c</formula>
+    <inlineHelpText>Reference Account Field: Parent Account Description</inlineHelpText>
+    <label>Parent Account Description</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

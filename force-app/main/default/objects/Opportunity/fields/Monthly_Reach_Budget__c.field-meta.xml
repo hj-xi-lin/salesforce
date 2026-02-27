@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Monthly_Reach_Budget__c</fullName>
+    <description>RO - 2067
+The €-amount of budget that is supposed to be used for the REACH campaign per month</description>
+    <inlineHelpText>Der €-Betrag des Budgets, das monatlich für die REACH-Kampagne verwendet werden soll.
+
+Mehr Informationen findest du hier https://heyjobs.atlassian.net/wiki/spaces/ESE/pages/3556343832/REACH+in+Salesforce</inlineHelpText>
+    <label>Monthly Reach Budget</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

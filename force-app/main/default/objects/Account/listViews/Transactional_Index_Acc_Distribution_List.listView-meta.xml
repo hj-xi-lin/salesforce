@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Transactional_Index_Acc_Distribution_List</fullName>
+    <columns>Service_Country__c</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Estimated_Wallet_Size__c</columns>
+    <columns>Account_Owner__c</columns>
+    <columns>MQL_Type_Account__c</columns>
+    <columns>Timestamp_Latest_MQL_conversion_Account__c</columns>
+    <columns>Follow_up_Date_Account__c</columns>
+    <columns>Follow_up_Details_Account__c</columns>
+    <columns>Blacklist__c</columns>
+    <columns>Timestamp_Latest_SSSU_Account__c</columns>
+    <columns>ACCOUNT.CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Account_Owner__c</field>
+        <operation>equals</operation>
+        <value>Pre-Sales Admin,SSSU Admin</value>
+    </filters>
+    <filters>
+        <field>GTM_Motion_Account__c</field>
+        <operation>equals</operation>
+        <value>Inside Sales</value>
+    </filters>
+    <filters>
+        <field>Umbrella_Company__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>Stage_ACM__c</field>
+        <operation>equals</operation>
+        <value>Prospect</value>
+    </filters>
+    <filters>
+        <field>Record_Type__c</field>
+        <operation>equals</operation>
+        <value>sales</value>
+    </filters>
+    <filters>
+        <field>Test_Account__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>MQL_Type_Account__c</field>
+        <operation>equals</operation>
+        <value>4</value>
+    </filters>
+    <label>Transactional_Index_Acc_Distri.</label>
+</ListView>

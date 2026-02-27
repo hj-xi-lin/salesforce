@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>zp2023_demo_confirmed_date_time__c</fullName>
+    <description>Field to populate demo date and time on the form</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Hubspot Field to populate demo date and time on the form</inlineHelpText>
+    <label>zp2023_demo_confirmed_date&amp;time</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

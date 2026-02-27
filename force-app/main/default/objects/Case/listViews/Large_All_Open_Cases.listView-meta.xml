@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Large_All_Open_Cases</fullName>
+    <columns>Service_Country__c</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>OWNER_NAME</columns>
+    <columns>Segment_V02__c</columns>
+    <columns>X1st_Job_Creation_Case__c</columns>
+    <columns>CASES.RECORDTYPE</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>txtJobId__c</columns>
+    <columns>txtJobTitle__c</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>Account_Owner__c</columns>
+    <columns>SLA__c</columns>
+    <columns>Minutes_to_SLA__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>equals</operation>
+        <value>New,In Discussion With ACM,On Hold,Waiting for budget</value>
+    </filters>
+    <filters>
+        <field>CASES.RECORDTYPE</field>
+        <operation>notEqual</operation>
+        <value>0121v000000FuKT,Case.ATS_Add_Sub_Account_to_Integration,Case.ATS_Create_a_new_Adjust_Campaign,Case.ATS_Feasibility_Check,Case.ATS_Integration_Support,Case.ATS_Missing_Job_Application,Case.ATS_New_Onboarding,Case.ATS_Proof_of_Concept_for_new_ATS,Case.ATS_REACH_job_as_HIRE_job,0129L0000004J2q</value>
+    </filters>
+    <filters>
+        <field>Segment_V02__c</field>
+        <operation>equals</operation>
+        <value>Large</value>
+    </filters>
+    <label>LARGE - All Open Cases</label>
+</ListView>

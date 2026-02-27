@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Service_Country_Flag__c</fullName>
+    <description>RO-824</description>
+    <externalId>false</externalId>
+    <formula>IF( OR(Service_Country__c != &apos;&apos;, NOT(ISPICKVAL(Service_Country_Lead__c, &apos;&apos;))),
+IMAGE(IF( OR(Service_Country__c = &apos;DE&apos;, ISPICKVAL(Service_Country_Lead__c, &apos;DE&apos;)), &quot;/sfc/servlet.shepherd/version/download/0681v00000olPKP&quot;, 
+IF( OR(Service_Country__c = &apos;AT&apos;, ISPICKVAL(Service_Country_Lead__c,&apos;AT&apos;)), &quot;/sfc/servlet.shepherd/version/download/0681v00000olPTD&quot;,&apos;&apos;)), &quot;Flags&quot;, 30, 55),&apos;&apos;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Service Country Flag</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

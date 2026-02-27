@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Block_Acquisition_Opp_Creation</fullName>
+    <active>true</active>
+    <description>RO-2349</description>
+    <errorConditionFormula>AND(
+    ISNEW(),
+    NOT($Profile.Name = &quot;System Administrator&quot;),
+    OR(
+        RecordTypeId = LEFT($Label.OppSalesTransactionalRT, 15),
+        RecordTypeId = LEFT($Label.Opp_Sales_RT, 15)
+    ),
+    NOT(Allow_Opp_Creation__c)
+)</errorConditionFormula>
+    <errorMessage>Please use the button &quot;New Opportunity&quot; on top of the account or contact page to create a new Acquisition opportunity.</errorMessage>
+</ValidationRule>

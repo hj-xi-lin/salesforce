@@ -1,0 +1,74 @@
+<template>
+    <template if:true={isLoading}>
+        <div class="loading-container">
+            <lightning-spinner alternative-text="Laden..." size="medium"></lightning-spinner>
+        </div>
+    </template>
+    
+    <template if:false={isLoading}>
+        <!-- Content Area -->
+        <div class="content-area">
+            <p class="intro-text">
+                Bitte geben Sie die Details zum Internal Handover Call ein, um diese Aufgabe abzuschließen.
+            </p>
+            
+            <!-- IHC Completed Timestamp -->
+            <lightning-input
+                type="datetime"
+                name="ihcCompleted"
+                label="Internal Handover Datum"
+                required
+                value={ihcCompletedTimestamp}
+                onchange={handleCompletedChange}
+                field-level-help={completedHelpText}
+                class="slds-m-bottom_x-small">
+            </lightning-input>
+            <template if:true={errors.completed}>
+                <div class="slds-text-color_error slds-text-body_small slds-m-bottom_x-small">
+                    Dieses Feld ist erforderlich.
+                </div>
+            </template>
+            
+            <!-- Documentation Quality -->
+            <lightning-combobox
+                name="quality"
+                label="Qualität der Handover-Dokumentation"
+                required
+                value={documentationQuality}
+                options={qualityOptions}
+                onchange={handleQualityChange}
+                placeholder="Bitte auswählen..."
+                field-level-help={qualityHelpText}
+                class="slds-m-bottom_x-small">
+            </lightning-combobox>
+            <template if:true={errors.quality}>
+                <div class="slds-text-color_error slds-text-body_small slds-m-bottom_x-small">
+                    Dieses Feld ist erforderlich.
+                </div>
+            </template>
+            
+            <!-- Quality Comments -->
+            <lightning-textarea
+                name="comments"
+                label="Kommentare zur Qualität (optional)"
+                value={qualityComments}
+                onchange={handleCommentsChange}
+                max-length="255"
+                field-level-help={commentsHelpText}
+                placeholder="Max. 3 Sätze...">
+            </lightning-textarea>
+            <div class={commentsCounterClass}>
+                {commentsCharacterCount} / 255
+            </div>
+        </div>
+        
+        <!-- Footer Area (like Screen Flow) -->
+        <div class="footer-area">
+            <lightning-button
+                label="Finish"
+                variant="brand"
+                onclick={handleSubmit}>
+            </lightning-button>
+        </div>
+    </template>
+</template>

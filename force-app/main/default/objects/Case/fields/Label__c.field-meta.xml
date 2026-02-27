@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Label__c</fullName>
+    <label>Label</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>blocked</fullName>
+                <default>false</default>
+                <label>blocked</label>
+            </value>
+            <value>
+                <fullName>internal discussion (wfr internal)</fullName>
+                <default>false</default>
+                <label>internal discussion (wfr internal)</label>
+            </value>
+            <value>
+                <fullName>waiting for reply external (wfr external)</fullName>
+                <default>false</default>
+                <label>waiting for reply external (wfr external)</label>
+            </value>
+            <value>
+                <fullName>Pre Kick-Off</fullName>
+                <default>false</default>
+                <label>Pre Kick-Off</label>
+            </value>
+            <value>
+                <fullName>Kick-Off</fullName>
+                <default>false</default>
+                <label>Kick-Off</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

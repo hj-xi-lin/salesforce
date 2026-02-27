@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>REACH_Deal_Type__c</fullName>
+    <description>RO - 2068
+
+Indicates the REACH Deal Type. Has to be set correctly so that IntOps can perform the adequate follow up actions.</description>
+    <inlineHelpText>Gibt den REACH Deal-Typ an. Muss korrekt gesetzt werden, damit IntOps die entsprechenden Folgeaktionen durchführen kann. 
+
+Mehr Informationen findest du hier https://heyjobs.atlassian.net/wiki/spaces/ESE/pages/3556343832/REACH+in+Salesforce</inlineHelpText>
+    <label>REACH Deal Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>REACH_Deal_Type</valueSetName>
+    </valueSet>
+</CustomField>

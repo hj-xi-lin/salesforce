@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VAT_ID_boolean__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>RO-1440</description>
+    <inlineHelpText>If you find a Vat-ID please enter the VAT-ID on the account itself</inlineHelpText>
+    <label>VAT-ID?</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

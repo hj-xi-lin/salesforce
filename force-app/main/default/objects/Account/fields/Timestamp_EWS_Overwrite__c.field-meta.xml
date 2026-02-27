@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Timestamp_EWS_Overwrite__c</fullName>
+    <inlineHelpText>Field is automatically updated if &quot;Estimated Wallet Size - Overwrite&quot; is updated or if an account with a non-empty value is created.</inlineHelpText>
+    <label>Timestamp EWS - Overwrite</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>DateTime</type>
+</CustomField>

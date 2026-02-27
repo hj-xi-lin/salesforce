@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Quote</entityName>
+    <fieldName>Status</fieldName>
+    <masterLabel>Quote Path</masterLabel>
+    <pathAssistantSteps>
+        <info>&lt;ul&gt;&lt;li&gt;Use the &amp;#39;Accepted&amp;#39; button on the very top right of this page to accept.&lt;/li&gt;&lt;li&gt;Fill in mandatory information in the pop-up screen.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</info>
+        <picklistValueName>Accepted</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>IsSyncing</fieldNames>
+        <info>&lt;ul&gt;&lt;li&gt;Add Products;&lt;/li&gt;&lt;li&gt;Start Syncing.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</info>
+        <picklistValueName>Draft</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;ul&gt;&lt;li&gt;If multiple quotes are sent, move all except for the accepted quote to this stage.&lt;/li&gt;&lt;li&gt;If all quotes were not suitable, at least one needs to be rejected.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</info>
+        <picklistValueName>Not Taken</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;ul&gt;&lt;li&gt;Use the &amp;#39;Rejected&amp;#39; button on the very top right of this page to reject.&lt;/li&gt;&lt;li&gt;Fill in mandatory information in the pop-up screen.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</info>
+        <picklistValueName>Rejected</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;ul&gt;&lt;li&gt;Create PDF and&lt;ul&gt;&lt;li&gt;save to quote to use HelloSign &lt;a href=&quot;https://docs.google.com/document/d/1TQGtM5Z4e683L_LwZ-tDM8hrI57Q1wd7CIxwhhnJMoA/edit#heading=h.85r9mlqw1a4d&quot; target=&quot;_blank&quot;&gt;(Guide)&lt;/a&gt; or&lt;/li&gt;&lt;li&gt;save to quote and email.&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;Send quote to prospect and mark this stage complete.&lt;/li&gt;&lt;li&gt;This stage automatically moves the opportunity to &amp;#39;Offer&amp;#39; stage.&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Sent</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>__MASTER__</recordTypeName>
+</PathAssistant>

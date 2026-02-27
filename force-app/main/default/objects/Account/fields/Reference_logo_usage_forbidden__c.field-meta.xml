@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reference_logo_usage_forbidden__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>the client does not grant us the rights to use their logo</description>
+    <inlineHelpText>Zeigt an, ob der Account damit einverstanden ist, dass er/sie als Referenzkund*in genannt wird.</inlineHelpText>
+    <label>Reference logo usage forbidden</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

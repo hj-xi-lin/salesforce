@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Closed_stag_cannot_be_edited</fullName>
+    <active>true</active>
+    <description>RO-731
+Moved to &quot;StageChangeRestrictions_ClosedStages&quot;</description>
+    <errorConditionFormula>AND(
+ISCHANGED(StageName),
+OR(ISPICKVAL(PRIORVALUE(StageName),&quot;Closed Won&quot;), ISPICKVAL(PRIORVALUE(StageName),&quot;Closed Lost&quot;)),
+NOT($Profile.Name = &quot;System Administrator&quot;),
+NOT(ISPICKVAL(Approval_Status__c, &quot;Rejected&quot;))
+)</errorConditionFormula>
+    <errorMessage>You can not change the stage of a Won or Lost opportunity. Please contact the Salesforce team.</errorMessage>
+</ValidationRule>

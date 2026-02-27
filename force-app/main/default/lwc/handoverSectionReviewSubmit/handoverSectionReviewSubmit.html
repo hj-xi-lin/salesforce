@@ -1,0 +1,156 @@
+<template>
+    <div class="slds-p-around_medium">
+        <h2 class="slds-text-heading_small slds-m-bottom_medium">
+            Review & Submit
+        </h2>
+        <p class="slds-text-body_regular slds-text-color_weak slds-m-bottom_large">
+            Bitte überprüfen Sie alle Eingaben vor dem Abschluss.
+        </p>
+
+        <!-- Pre-check Summary -->
+        <div class="review-section slds-m-bottom_medium">
+            <h3 class="slds-text-title_bold slds-m-bottom_small">
+                <lightning-icon icon-name="utility:check" size="x-small" class="slds-m-right_x-small"></lightning-icon>
+                Pre-check Daten
+            </h3>
+            
+            <!-- Account Hierarchy -->
+            <div class="slds-grid slds-wrap slds-gutters slds-m-bottom_small">
+                <div class="slds-col slds-size_1-of-2 slds-m-bottom_x-small">
+                    <div class="review-item">
+                        <span class="review-label">Ultimate Parent Account</span>
+                        <span class="review-value">{ultimateParentAccount}</span>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-2 slds-m-bottom_x-small">
+                    <div class="review-item">
+                        <span class="review-label">Parent Account</span>
+                        <span class="review-value">{parentAccountName}</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Account Data -->
+            <div class="slds-grid slds-wrap slds-gutters">
+                <div class="slds-col slds-size_1-of-2 slds-m-bottom_x-small">
+                    <div class="review-item">
+                        <span class="review-label">GTM Motion</span>
+                        <span class="review-value">{gtmMotion}</span>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-2 slds-m-bottom_x-small">
+                    <div class="review-item">
+                        <span class="review-label">Employees</span>
+                        <span class="review-value">{employees}</span>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-2 slds-m-bottom_x-small">
+                    <div class="review-item">
+                        <span class="review-label">Open Jobs</span>
+                        <span class="review-value">{openJobs}</span>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-2 slds-m-bottom_x-small">
+                    <div class="review-item">
+                        <span class="review-label">Estimated Wallet Size</span>
+                        <span class="review-value">{estimatedWalletSize}</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contacts -->
+            <h4 class="slds-text-title_caps slds-m-top_medium slds-m-bottom_small">Kontakte</h4>
+            <div class="slds-grid slds-wrap slds-gutters">
+                <div class="slds-col slds-size_1-of-2 slds-m-bottom_x-small">
+                    <div class="review-item">
+                        <span class="review-label">Strategischer Kontakt</span>
+                        <span class="review-value">{strategicContactName}</span>
+                        <span class="review-value-small">{strategicContactTitle}</span>
+                        <span class="review-value-small">{strategicContactEmail}</span>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-2 slds-m-bottom_x-small">
+                    <div class="review-item">
+                        <span class="review-label">Operativer Kontakt</span>
+                        <span class="review-value">{operationalContactName}</span>
+                        <span class="review-value-small">{operationalContactTitle}</span>
+                        <span class="review-value-small">{operationalContactEmail}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Notes Summary -->
+        <div class="review-section slds-m-bottom_medium">
+            <h3 class="slds-text-title_bold slds-m-bottom_small">
+                <lightning-icon icon-name="utility:note" size="x-small" class="slds-m-right_x-small"></lightning-icon>
+                Handover Notes
+            </h3>
+            
+            <div class="slds-grid slds-wrap slds-gutters">
+                <div class="slds-col slds-size_1-of-1 slds-m-bottom_small">
+                    <div class="review-item-full">
+                        <span class="review-label">Customer Goals & Expected Outcomes</span>
+                        <span class="review-value-long">{customerGoals}</span>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-m-bottom_small">
+                    <div class="review-item-full">
+                        <span class="review-label">Risks / Red Flags</span>
+                        <span class="review-value-long">{risks}</span>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-3 slds-m-bottom_small">
+                    <div class="review-item">
+                        <span class="review-label">Relationship Rating</span>
+                        <span class="review-value">{relationshipRating}</span>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_2-of-3 slds-m-bottom_small">
+                    <div class="review-item">
+                        <span class="review-label">Relationship Reason</span>
+                        <span class="review-value">{relationshipReason}</span>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-m-bottom_small">
+                    <div class="review-item-full">
+                        <span class="review-label">Key Logistics / Operational Notes</span>
+                        <span class="review-value-long">{keyLogistics}</span>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-2 slds-m-bottom_small">
+                    <div class="review-item-full">
+                        <span class="review-label">Do's</span>
+                        <span class="review-value-long">{dos}</span>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-2 slds-m-bottom_small">
+                    <div class="review-item-full">
+                        <span class="review-label">Don'ts</span>
+                        <span class="review-value-long">{donts}</span>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-m-bottom_small">
+                    <div class="review-item-full">
+                        <span class="review-label">Other</span>
+                        <span class="review-value-long">{other}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Confirmation Message -->
+        <div class="slds-box slds-theme_info slds-m-top_medium">
+            <div class="slds-grid slds-grid_vertical-align-center">
+                <lightning-icon icon-name="utility:info" variant="inverse" size="small" class="slds-m-right_small"></lightning-icon>
+                <div>
+                    <p class="slds-text-body_regular">
+                        <strong>Hinweis:</strong> Nach dem Abschluss wird die Handover-Dokumentation als abgeschlossen markiert 
+                        und eine Aufgabe für den ACM erstellt.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</template>

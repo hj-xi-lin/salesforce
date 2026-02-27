@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ZP_Leads</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>GTM_Motion_Lead__c</columns>
+    <columns>Sales_Representative__c</columns>
+    <columns>LEAD.EMPLOYEES</columns>
+    <columns>Event_Lead_Classification__c</columns>
+    <columns>MQL_Type_Lead__c</columns>
+    <columns>Interested_in_Demo_lead__c</columns>
+    <columns>Lead_ID__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Interested_in_Demo_lead__c</field>
+        <operation>equals</operation>
+        <value>Yes</value>
+    </filters>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>equals</operation>
+        <value>Converted</value>
+    </filters>
+    <label>ZPE 2025 Leads to Convert</label>
+</ListView>

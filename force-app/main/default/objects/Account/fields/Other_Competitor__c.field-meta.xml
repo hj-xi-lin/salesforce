@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Other_Competitor__c</fullName>
+    <description>RO-2315</description>
+    <inlineHelpText>Welche Rekrutierungslösungen, die nicht Teil der Liste sind, werden derzeit eingesetzt oder für die Zukunft in Betracht gezogen?</inlineHelpText>
+    <label>Other Competitor</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>TextArea</type>
+</CustomField>

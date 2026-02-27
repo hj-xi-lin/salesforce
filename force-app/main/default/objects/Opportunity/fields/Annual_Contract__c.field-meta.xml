@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Annual_Contract__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>For the Account Managers, to mark the opportunities that are part of their bonus calculations - when +18k is signed for an annual contract.</description>
+    <inlineHelpText>Mark the opportunities that are part of contracts agreed with an Annual Budget of + €18k</inlineHelpText>
+    <label>Annual Contract</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

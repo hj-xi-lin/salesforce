@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HeyJobs_Category_from_Account__c</fullName>
+    <description>RO-2155</description>
+    <inlineHelpText>Changes automatically update the Account (for open opps)</inlineHelpText>
+    <label>HeyJobs - Category (from Account)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>HeyJobs_Category</valueSetName>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ON_VATID__c</fullName>
+    <description>Transfers VAT ID to invoice - shown via placeholder on invoice</description>
+    <externalId>false</externalId>
+    <formula>IF( OR (
+        BillingCountry = &quot;Belgien&quot;,
+        BillingCountry = &quot;Bulgarien&quot;,
+        BillingCountry = &quot;Dänemark&quot;,
+        BillingCountry = &quot;Estland&quot;,
+        BillingCountry = &quot;Finnland&quot;,
+        BillingCountry = &quot;Frankreich&quot;,
+        BillingCountry = &quot;Griechenland&quot;,
+        BillingCountry = &quot;Grossbritannien&quot;,
+        BillingCountry = &quot;Niederlande&quot;,
+        BillingCountry = &quot;Italien&quot;,
+        BillingCountry = &quot;Irland&quot;,
+        BillingCountry = &quot;Kroatien&quot;,
+        BillingCountry = &quot;Lettland&quot;,
+        BillingCountry = &quot;Litauen&quot;,
+        BillingCountry = &quot;Luxemburg&quot;,
+        BillingCountry = &quot;Malta&quot;,
+        BillingCountry = &quot;Österreich&quot;,
+        BillingCountry = &quot;Polen&quot;,
+        BillingCountry = &quot;Portugal&quot;,
+        BillingCountry = &quot;Rumänien&quot;,
+        BillingCountry = &quot;Schweden&quot;,
+        BillingCountry = &quot;Slowakei&quot;,
+        BillingCountry = &quot;Slowenien&quot;,
+        BillingCountry = &quot;Spanien&quot;,
+        BillingCountry = &quot;Tschechien&quot;,
+        BillingCountry = &quot;Ungarn&quot;,
+        BillingCountry = &quot;Zypern&quot;,
+        BillingCountry = &quot;Schweiz&quot;
+), 
+&quot;VAT ID: &quot; +  txtVATID__c , 
+null
+)</formula>
+    <inlineHelpText>Transfers VAT ID to invoice - shown via placeholder on invoice</inlineHelpText>
+    <label>JustOn: VAT ID</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

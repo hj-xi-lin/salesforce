@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ZP2023_Opps_Local</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>OPPORTUNITY.AMOUNT</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Original_Campaign_Source__c</field>
+        <operation>equals</operation>
+        <value>2023-5-CW21-MIX-MKT-CON-DE-ALL-ALL-OPS-EV--Zukunft Personal 2023</value>
+    </filters>
+    <filters>
+        <field>Segment_Opp_V02__c</field>
+        <operation>equals</operation>
+        <value>Small</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>equals</operation>
+        <value>psadmin</value>
+    </filters>
+    <filters>
+        <field>Next_Action_Detail__c</field>
+        <operation>equals</operation>
+        <value>ZP Leads 2023</value>
+    </filters>
+    <filters>
+        <field>Service_Country__c</field>
+        <operation>equals</operation>
+        <value>DE</value>
+    </filters>
+    <label>ZP2023_Opps_Local</label>
+</ListView>

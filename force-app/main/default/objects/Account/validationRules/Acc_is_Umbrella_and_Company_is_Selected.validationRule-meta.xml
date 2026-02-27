@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Acc_is_Umbrella_and_Company_is_Selected</fullName>
+    <active>true</active>
+    <description>Check if Umbrella is Checked and Company is Populated.RO-719</description>
+    <errorConditionFormula>AND(Umbrella_Company__c,  !ISNULL(txtCompanyId__c), !ISBLANK(txtCompanyId__c))</errorConditionFormula>
+    <errorMessage>You can&apos;t populate Company Id if Umbrella Company is Checked and Can&apos;t Check Umbrella Company if Company Id is populated.</errorMessage>
+</ValidationRule>

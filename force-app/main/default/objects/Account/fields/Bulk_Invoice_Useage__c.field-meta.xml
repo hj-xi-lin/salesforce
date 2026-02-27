@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bulk_Invoice_Useage__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>RO - 2134 Indicates if the Account is using Bulk Invoicing.</description>
+    <inlineHelpText>Zeigt an, ob der Account &quot;Bulk Invoicing&quot; verwendet. (Ausschließlich für Agency möglich)</inlineHelpText>
+    <label>Bulk Invoice Usage</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

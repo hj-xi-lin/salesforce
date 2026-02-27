@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>closed_job_creation_cases</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>X1st_Job_Creation_Case__c</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>bHasBeenPublishedBefore__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Case.JobCreationCase</value>
+    </filters>
+    <filters>
+        <field>CASES.CREATED_DATE_DATE_ONLY</field>
+        <operation>greaterThan</operation>
+        <value>10/1/2022 12:00 AM</value>
+    </filters>
+    <filters>
+        <field>bHasBeenPublishedBefore__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>re-published jobs (oct - nov 2022)</label>
+</ListView>

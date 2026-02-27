@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Yearly_Budget_Planning_Time__c</fullName>
+    <description>To enter the date when the budget for the next year is being decided.</description>
+    <inlineHelpText>Ab wann steht Budget für die Personalbeschaffung zur Verfügung steht?</inlineHelpText>
+    <label>Next Budget Availability Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Transactional_SentQuoteRequired</fullName>
+    <active>true</active>
+    <description>For RT Transactional, a synced Quote in Status Sent is required to move to Offer Stage
+RO-2090</description>
+    <errorConditionFormula>AND(
+RecordType.DeveloperName = &quot;Sales_Transactional&quot;,
+OR( ISNEW(),  ISCHANGED(StageName)  ),
+ISPICKVAL(StageName, &quot;Offer&quot;) ,
+NOT(Synced_Quote_Status__c = &quot;Sent&quot;)			
+)</errorConditionFormula>
+    <errorMessage>You cannot move to Offer Stage without a sent quote. Please update your Quote to Status &quot;Sent&quot; or select a different Stage.</errorMessage>
+</ValidationRule>

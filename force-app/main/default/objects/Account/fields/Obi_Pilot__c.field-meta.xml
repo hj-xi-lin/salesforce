@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Obi_Pilot__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>RO-1036, This field to be marked as &apos;true&apos; whenever the account belongs to Obi</description>
+    <inlineHelpText>This field to be marked as &apos;true&apos; whenever the account belongs to Obi</inlineHelpText>
+    <label>Legacy Obi-Pilot</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

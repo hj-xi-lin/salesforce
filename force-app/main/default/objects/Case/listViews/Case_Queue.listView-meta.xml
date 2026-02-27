@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Queue</fullName>
+    <columns>OWNER_NAME</columns>
+    <columns>CASES.RECORDTYPE</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>X1st_Job_Creation_Case__c</columns>
+    <columns>txtJobId__c</columns>
+    <columns>txtJobTitle__c</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>bHasBeenPublishedBefore__c</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>Check_Account_Management__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OWNER_NAME</field>
+        <operation>equals</operation>
+        <value>CSM Case Queue</value>
+    </filters>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>equals</operation>
+        <value>New,On Hold,Waiting for budget,Escalated,Job Submitted,Discussion with Customer,Preview Sent,Go-Live Scheduled</value>
+    </filters>
+    <label>CSM Case Queue</label>
+</ListView>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Job_specific_title_link_Index__c</fullName>
+    <description>Link to the JDP of the &quot;Job specific Title&quot; job. Links to Index Anzeigendaten JDP.</description>
+    <inlineHelpText>Link zur JDP des Jobs mit dem &quot;job specific title&quot;. Verlinkt auf Index Anzeigendaten JDP.</inlineHelpText>
+    <label>Legacy Job specific title (link) - Index</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Url</type>
+</CustomField>

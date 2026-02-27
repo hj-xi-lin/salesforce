@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Demo_Event_must_be_related_to_an_Opp</fullName>
+    <active>true</active>
+    <description>If Event Type = Demo and Event Date is in the past, an Opportunity must be related</description>
+    <errorConditionFormula>ActivityDate &lt; TODAY()  &amp;&amp; 
+Case( Type , &quot;Demo Call&quot;,1,&quot;Demo F2F&quot;,1,&quot;Demo Video Call&quot;,1,0)=1
+&amp;&amp;
+ISBLANK (WhatId)</errorConditionFormula>
+    <errorDisplayField>WhatId</errorDisplayField>
+    <errorMessage>Please link an Opportunity to this Event!</errorMessage>
+</ValidationRule>

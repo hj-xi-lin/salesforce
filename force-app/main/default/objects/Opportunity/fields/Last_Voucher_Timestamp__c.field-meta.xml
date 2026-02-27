@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last_Voucher_Timestamp__c</fullName>
+    <description>RO-2176
+Date of the most recent Voucher added to the related account</description>
+    <inlineHelpText>Datum des letzten hinzugefügten Gutscheins zum zugehörigen Account</inlineHelpText>
+    <label>Last Voucher Timestamp</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

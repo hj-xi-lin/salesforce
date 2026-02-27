@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Phone_Enriched__c</fullName>
+    <description>Phone number that is pulled from an enrichment provider. To be copied over to the actual phone fields (business phone/mobile) once verified.</description>
+    <inlineHelpText>Phone number that is pulled from an enrichment provider. To be copied over to the actual phone fields (business phone/mobile) once verified.</inlineHelpText>
+    <label>Phone (Enriched)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Phone</type>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lost_Depending_on_Parent_Account</fullName>
+    <active>true</active>
+    <description>When Opportunity is in stage Lost with Loss Reason = Depending on Parent Company decision, to ask for the Parent Account field to be field in, on the account level.</description>
+    <errorConditionFormula>AND(
+ISPICKVAL(plLossReason__c, &quot;Dependent on decision at different corporate level&quot;),
+ISBLANK( Account.ParentId )
+)</errorConditionFormula>
+    <errorMessage>To use this loss reason, make sure that the Account of this Opportunity has a Parent Account indicated. Please add a Parent Account and then come back to the Opportunity to close it as lost.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Loss_Reason_Account__c</fullName>
+    <description>RO-1505</description>
+    <inlineHelpText>Grund, warum der Account aus dem Portfolio entfernt werden sollte (löst eine Genehmigungsanfrage (Approval Request) für das Management aus). Mehr Informationen findest du hier:https://heyjobs.atlassian.net/wiki/spaces/EO/pages/3134816426/Loss+Reasons+in+Salesforce#%F0%9F%8F%A1-Account-Loss-Reasons</inlineHelpText>
+    <label>Loss Reason (Account)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Finds HeyJobs too complicated</fullName>
+                <default>false</default>
+                <label>Finds HeyJobs too complicated</label>
+            </value>
+            <value>
+                <fullName>No further budget available</fullName>
+                <default>false</default>
+                <label>No further budget available</label>
+            </value>
+            <value>
+                <fullName>Thinks that HeyJobs&apos; is too expensive</fullName>
+                <default>false</default>
+                <label>Thinks that HeyJobs&apos; is too expensive (SSSU &amp; non-SSSU)</label>
+            </value>
+            <value>
+                <fullName>No further open positions</fullName>
+                <default>false</default>
+                <label>No further open positions</label>
+            </value>
+            <value>
+                <fullName>Unhappy with HeyJobs&apos; Performance</fullName>
+                <default>false</default>
+                <label>Unhappy with HeyJobs&apos; Performance</label>
+            </value>
+            <value>
+                <fullName>Unhappy with HeyJobs&apos; Service</fullName>
+                <default>false</default>
+                <label>Unhappy with HeyJobs&apos; Service</label>
+            </value>
+            <value>
+                <fullName>Dependent on ATS Integration</fullName>
+                <default>false</default>
+                <label>Dependent on ATS Integration</label>
+            </value>
+            <value>
+                <fullName>Facing large restructuring</fullName>
+                <default>false</default>
+                <label>Facing large restructuring</label>
+            </value>
+            <value>
+                <fullName>Bankrupt</fullName>
+                <default>false</default>
+                <label>Bankrupt</label>
+            </value>
+            <value>
+                <fullName>(Admin only) churned due to inactivity</fullName>
+                <default>false</default>
+                <label>(Admin only) churned due to inactivity</label>
+            </value>
+            <value>
+                <fullName>Jobseeker</fullName>
+                <default>false</default>
+                <label>Jobseeker</label>
+            </value>
+            <value>
+                <fullName>Didn’t respond</fullName>
+                <default>false</default>
+                <label>Didn’t respond</label>
+            </value>
+            <value>
+                <fullName>Competition: Lost to competitor</fullName>
+                <default>false</default>
+                <label>Competition: Lost to competitor</label>
+            </value>
+            <value>
+                <fullName>Competition: Buying exclusively via agency</fullName>
+                <default>false</default>
+                <label>Competition: Buying exclusively via agency</label>
+            </value>
+            <value>
+                <fullName>Competition: Not open to a new vendor</fullName>
+                <default>false</default>
+                <label>Competition: Not open to a new vendor</label>
+            </value>
+            <value>
+                <fullName>Competition: Price too high</fullName>
+                <default>false</default>
+                <label>Competition: Price too high</label>
+            </value>
+            <value>
+                <fullName>Product: Poor application volume</fullName>
+                <default>false</default>
+                <label>Product: Poor application volume</label>
+            </value>
+            <value>
+                <fullName>Product: Poor application quality</fullName>
+                <default>false</default>
+                <label>Product: Poor application quality</label>
+            </value>
+            <value>
+                <fullName>Product: Blocked by ATS integration</fullName>
+                <default>false</default>
+                <label>Product: Blocked by ATS integration</label>
+            </value>
+            <value>
+                <fullName>Product: Missing product feature</fullName>
+                <default>false</default>
+                <label>Product: Missing product feature</label>
+            </value>
+            <value>
+                <fullName>Client: Hiring paused/Not Hiring</fullName>
+                <default>false</default>
+                <label>Client: Hiring paused/Not Hiring</label>
+            </value>
+            <value>
+                <fullName>Client: No budget available</fullName>
+                <default>false</default>
+                <label>Client: No budget available</label>
+            </value>
+            <value>
+                <fullName>Client: No need for paid recruitment</fullName>
+                <default>false</default>
+                <label>Client: No need for paid recruitment</label>
+            </value>
+            <value>
+                <fullName>Client: No matching open roled</fullName>
+                <default>false</default>
+                <label>Client: No matching open roled</label>
+            </value>
+            <value>
+                <fullName>Client: Position filled or cancelled</fullName>
+                <default>false</default>
+                <label>Client: Position filled or cancelled</label>
+            </value>
+            <value>
+                <fullName>Stakeholder: All contacts unresponsive</fullName>
+                <default>false</default>
+                <label>Stakeholder: All contacts unresponsive</label>
+            </value>
+            <value>
+                <fullName>Admin: Duplicate</fullName>
+                <default>false</default>
+                <label>Admin: Duplicate</label>
+            </value>
+            <value>
+                <fullName>Admin: Jobseeker</fullName>
+                <default>false</default>
+                <label>Admin: Jobseeker</label>
+            </value>
+            <value>
+                <fullName>Admin: Fraud</fullName>
+                <default>false</default>
+                <label>Admin: Fraud</label>
+            </value>
+            <value>
+                <fullName>Admin: Blacklist</fullName>
+                <default>false</default>
+                <label>Admin: Blacklist</label>
+            </value>
+            <value>
+                <fullName>Admin: Bankrupt</fullName>
+                <default>false</default>
+                <label>Admin: Bankrupt</label>
+            </value>
+            <value>
+                <fullName>Admin: No contact data on any contacts</fullName>
+                <default>false</default>
+                <label>Admin: No contact data on any contacts</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Currently no vacant position_SSSU_only</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>(SSSU only) Currently no vacant position</label>
+            </value>
+            <value>
+                <fullName>Didn’t respond_SSSU_only</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>(SSSU only) Didn’t respond</label>
+            </value>
+            <value>
+                <fullName>Fraudulant_SSSU_only</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>(SSSU only) Fraudulant</label>
+            </value>
+            <value>
+                <fullName>Jobseeker_SSSU_only</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>(SSSU only) Jobseeker</label>
+            </value>
+            <value>
+                <fullName>Just wanted to get information_SSSU_only</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>(SSSU only) Just wanted to get information</label>
+            </value>
+            <value>
+                <fullName>Other_SSSU_only</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>(SSSU only) Other</label>
+            </value>
+            <value>
+                <fullName>Thought it’s a free service_SSSU_only</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>(SSSU only) Thought it’s a free service</label>
+            </value>
+            <value>
+                <fullName>Has currently no vacant position</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Has currently no vacant position</label>
+            </value>
+            <value>
+                <fullName>Is a Jobseeker</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Is a Jobseeker</label>
+            </value>
+            <value>
+                <fullName>Just wanted to get information</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Just wanted to get information</label>
+            </value>
+            <value>
+                <fullName>Thought it’s a free service</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Thought it’s a free service</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

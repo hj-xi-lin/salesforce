@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Timestamp_Exclude_from_Outreach__c</fullName>
+    <inlineHelpText>Zeigt an, wann dieser bestimmte Kontakt für den Ausschluss von Outreach-Kampagnen markiert wurde</inlineHelpText>
+    <label>Timestamp Exclude from Outreach</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>DateTime</type>
+</CustomField>

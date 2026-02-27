@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last_Voucher__c</fullName>
+    <description>RO-2176
+Most recent voucher associated to the related Account</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Der letzte Gutschein, der mit dem zugehörigen Account verbunden ist. 
+
+Mehr Informationen findest du hier https://heyjobs.atlassian.net/wiki/spaces/BM/pages/3756392532/Voucher+Codes+Usage</inlineHelpText>
+    <label>Last Voucher</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

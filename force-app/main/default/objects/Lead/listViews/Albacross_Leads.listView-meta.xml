@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Albacross_Leads</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.PHONE</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.URL</columns>
+    <columns>LEAD.STATE_CODE</columns>
+    <columns>LEAD.EMPLOYEES</columns>
+    <columns>HeyJobs_Category__c</columns>
+    <columns>urlCareerPage__c</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.UNREAD</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>LAST_CALL_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Outbound_Source__c</field>
+        <operation>equals</operation>
+        <value>Website Visitor</value>
+    </filters>
+    <filters>
+        <field>Albacross_Segment__c</field>
+        <operation>equals</operation>
+        <value>SMB Tier 1</value>
+    </filters>
+    <filters>
+        <field>LEAD.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Lead.Inbound</value>
+    </filters>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Converted,Lost</value>
+    </filters>
+    <label>Albacross Leads SMB Tier 1</label>
+</ListView>

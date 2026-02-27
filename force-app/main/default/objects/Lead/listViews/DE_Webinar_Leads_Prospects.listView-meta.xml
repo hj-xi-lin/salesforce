@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DE_Webinar_Leads_Prospects</fullName>
+    <booleanFilter>1 AND 2</booleanFilter>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.EMPLOYEES</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.UNREAD</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Service_Country__c</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>LEAD.COMPANY</field>
+        <operation>notContain</operation>
+        <value>HeyJobs</value>
+    </filters>
+    <filters>
+        <field>Email_Domain__c</field>
+        <operation>notContain</operation>
+        <value>.at</value>
+    </filters>
+    <label>DE - Webinar Leads_Prospects</label>
+    <queue>Lead_Research_Queue</queue>
+</ListView>

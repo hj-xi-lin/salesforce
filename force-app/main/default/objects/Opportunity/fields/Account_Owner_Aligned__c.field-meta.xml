@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Owner_Aligned__c</fullName>
+    <description>RO-1623</description>
+    <formula>IF( OwnerId = Account.OwnerId , true, false)</formula>
+    <label>Account Owner Aligned</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

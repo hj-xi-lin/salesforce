@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X2020_Reference_Clients__c</fullName>
+    <description>used for hubspot email campaigns</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Zeigt potentielle Referenzkund*innen, die ähnlich zum vorliegenden Account sind.</inlineHelpText>
+    <label>Reference Clients</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

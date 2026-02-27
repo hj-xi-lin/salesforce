@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Timestamp_SSSU_HS_Workflow_completed__c</fullName>
+    <description>RO-1559, Gets populated once a lead/contact has completed the HS workflow to filter out jobseekers.
+It is the trigger for the custom lead conversion automation.</description>
+    <label>Timestamp SSSU HS Workflow Completed</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>DateTime</type>
+</CustomField>

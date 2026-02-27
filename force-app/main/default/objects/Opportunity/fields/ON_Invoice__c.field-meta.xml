@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ON_Invoice__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>The invoice that resulted from this record.</description>
+    <inlineHelpText>The invoice that resulted from this record.</inlineHelpText>
+    <label>JustOn: Invoice</label>
+    <referenceTo>ONB2__Invoice__c</referenceTo>
+    <relationshipLabel>Opportunities (JustOn: Invoice)</relationshipLabel>
+    <relationshipName>Opportunities1</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

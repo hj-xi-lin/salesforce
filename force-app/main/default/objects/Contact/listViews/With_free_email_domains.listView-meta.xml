@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>With_free_email_domains</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CONTACT.PHONE1</columns>
+    <columns>CONTACT.EMAIL</columns>
+    <columns>CONTACT.TITLE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CONTACT.EMAIL</field>
+        <operation>contains</operation>
+        <value>hotmail,t-online,web.de,live.de,hj.de,aol.de,arcor.de,outlook.de,outlook.com,yahoo.de,yahoo.com,icloud.com,gmail,gmx.de,mail.de,freenet.de</value>
+    </filters>
+    <label>With free email domains</label>
+</ListView>

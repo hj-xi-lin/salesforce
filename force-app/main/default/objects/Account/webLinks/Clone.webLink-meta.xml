@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Clone</fullName>
+    <availability>online</availability>
+    <description>Button to clone Accounts</description>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Clone</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>/one/one.app#/sObject/{!Account.Id}/clone</url>
+</WebLink>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GTM_Motion_Account__c</fullName>
+    <description>RO - 1958</description>
+    <inlineHelpText>Das GTM Motion zeigt an, in welchem Motion (Segment) sich ein Account befindet oder zugeordnet werden sollte. Hier findest du mehr Informationen zu den GTM Motion.</inlineHelpText>
+    <label>GTM Motion Account</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>GTM_Motion_values</valueSetName>
+    </valueSet>
+</CustomField>

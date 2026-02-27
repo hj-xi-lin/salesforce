@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last_SQL_Field_Check__c</fullName>
+    <description>RO-2347</description>
+    <inlineHelpText>Das Feld gibt an, wann eines der Qualification Felder zuletzt geändert oder überprüft wurde.Wenn eines der Qualification Felder auf einen anderen Wert geändert wird, wird das Feld &quot;Last SQL Field Check&quot; automatisch mit dem heutigen Datum aktualisiert. Wenn überprüft wurde, ob die Qualification Felder noch aktuell sind und keine Änderung vorgenommen wird, aktualisiere das Feld &quot;Last SQL Field Check&quot; bitte manuell mit dem heutigen Datum.</inlineHelpText>
+    <label>Last Qualification Field Check</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>DateTime</type>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Potential_REACH_Contract__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Marked manually when Customer shows Inetresst in REACH, to identify Opportunities early in the Process</description>
+    <inlineHelpText>Markiere dieses Feld, falls der Kunde an REACH interessiert ist und diese Opportunity ein REACH-Deal sein könnte.
+
+Mehr Informationen findest du hier https://heyjobs.atlassian.net/wiki/spaces/ESE/pages/3556343832/REACH+in+Salesforce</inlineHelpText>
+    <label>Potential REACH Contract</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

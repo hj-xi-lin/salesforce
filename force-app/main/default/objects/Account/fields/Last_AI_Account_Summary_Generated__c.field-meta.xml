@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last_AI_Account_Summary_Generated__c</fullName>
+    <description>RO-2514</description>
+    <inlineHelpText>Zeitpunkt wann die letzte AI Account Sentiment Summary generiert wurde</inlineHelpText>
+    <label>Last Account Sentiment Summary Generated</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>DateTime</type>
+</CustomField>

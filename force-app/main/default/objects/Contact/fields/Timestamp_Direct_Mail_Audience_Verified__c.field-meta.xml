@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Timestamp_Direct_Mail_Audience_Verified__c</fullName>
+    <description>Used by Marketing to mark Contacts to add to direct mail campaign. Owner: Heydar. Dont build automations on top. Reevaluate field 12.2023</description>
+    <inlineHelpText>Used by Marketing to mark Contacts to add to direct mail campaign.</inlineHelpText>
+    <label>Timestamp Direct Mail Audience Verified</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

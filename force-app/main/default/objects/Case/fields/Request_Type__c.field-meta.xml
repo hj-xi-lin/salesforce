@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Request_Type__c</fullName>
+    <description>RO-1759</description>
+    <inlineHelpText>Please select the request type that best fits your needs. Provide any additional details or specific instructions in the description section.</inlineHelpText>
+    <label>Request Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>New Campaign</fullName>
+                <default>false</default>
+                <label>New Campaign</label>
+            </value>
+            <value>
+                <fullName>Adjust Campaign</fullName>
+                <default>false</default>
+                <label>Adjust Campaign</label>
+            </value>
+            <value>
+                <fullName>Missing Job</fullName>
+                <default>false</default>
+                <label>Missing Job</label>
+            </value>
+            <value>
+                <fullName>Missing Applications</fullName>
+                <default>false</default>
+                <label>Missing Applications</label>
+            </value>
+            <value>
+                <fullName>Agency</fullName>
+                <default>false</default>
+                <label>Agency</label>
+            </value>
+            <value>
+                <fullName>GoHiring</fullName>
+                <default>false</default>
+                <label>GoHiring</label>
+            </value>
+            <value>
+                <fullName>Subsidiary</fullName>
+                <default>false</default>
+                <label>Subsidiary</label>
+            </value>
+            <value>
+                <fullName>Connecting Accounts</fullName>
+                <default>false</default>
+                <label>Connecting Accounts</label>
+            </value>
+            <value>
+                <fullName>Account Hierarchies</fullName>
+                <default>false</default>
+                <label>Account Hierarchies</label>
+            </value>
+            <value>
+                <fullName>Budget Request</fullName>
+                <default>false</default>
+                <label>Budget Request</label>
+            </value>
+            <value>
+                <fullName>Account Merge Request</fullName>
+                <default>false</default>
+                <label>Account Merge Request</label>
+            </value>
+            <value>
+                <fullName>Account Owner Change</fullName>
+                <default>false</default>
+                <label>Account Owner Change</label>
+            </value>
+            <value>
+                <fullName>Service Country Change</fullName>
+                <default>false</default>
+                <label>Service Country Change</label>
+            </value>
+            <value>
+                <fullName>Change Account Information</fullName>
+                <default>false</default>
+                <label>Change Account Information</label>
+            </value>
+            <value>
+                <fullName>Increase / Decrease Radius</fullName>
+                <default>false</default>
+                <label>Increase / Decrease Radius</label>
+            </value>
+            <value>
+                <fullName>Title w/ 40 Characters</fullName>
+                <default>false</default>
+                <label>Title w/ 40 Characters</label>
+            </value>
+            <value>
+                <fullName>Jobtype</fullName>
+                <default>false</default>
+                <label>Jobtype</label>
+            </value>
+            <value>
+                <fullName>SQ’s</fullName>
+                <default>false</default>
+                <label>SQ’s</label>
+            </value>
+            <value>
+                <fullName>AGG / FB</fullName>
+                <default>false</default>
+                <label>AGG / FB</label>
+            </value>
+            <value>
+                <fullName>Job Extension</fullName>
+                <default>false</default>
+                <label>Job Extension</label>
+            </value>
+            <value>
+                <fullName>Resent Applications</fullName>
+                <default>false</default>
+                <label>Resent Applications</label>
+            </value>
+            <value>
+                <fullName>Easy Apply</fullName>
+                <default>false</default>
+                <label>Easy Apply</label>
+            </value>
+            <value>
+                <fullName>Activate Branded Ads</fullName>
+                <default>false</default>
+                <label>Activate Branded Ads</label>
+            </value>
+            <value>
+                <fullName>Change Location in Job Ad</fullName>
+                <default>false</default>
+                <label>Change Location in Job Ad</label>
+            </value>
+            <value>
+                <fullName>Change Image in Job Ad</fullName>
+                <default>false</default>
+                <label>Change Image in Job Ad</label>
+            </value>
+            <value>
+                <fullName>Change Company Name displayed in Job Ad</fullName>
+                <default>false</default>
+                <label>Change Company Name displayed in Job Ad</label>
+            </value>
+            <value>
+                <fullName>Exclude a Marketing Channel</fullName>
+                <default>false</default>
+                <label>Exclude a Marketing Channel</label>
+            </value>
+            <value>
+                <fullName>Not enough applications</fullName>
+                <default>false</default>
+                <label>Not enough applications</label>
+            </value>
+            <value>
+                <fullName>Questions about Feed/Campaign Setup</fullName>
+                <default>false</default>
+                <label>Questions about Feed/Campaign Setup</label>
+            </value>
+            <value>
+                <fullName>Not good enough quality of applications</fullName>
+                <default>false</default>
+                <label>Not good enough quality of applications</label>
+            </value>
+            <value>
+                <fullName>Change Radius</fullName>
+                <default>false</default>
+                <label>Change Radius</label>
+            </value>
+            <value>
+                <fullName>Change Title w/ 40 Characters</fullName>
+                <default>false</default>
+                <label>Change Title w/ 40 Characters</label>
+            </value>
+            <value>
+                <fullName>ATS Switch</fullName>
+                <default>false</default>
+                <label>ATS Switch</label>
+            </value>
+            <value>
+                <fullName>Change Jobtype</fullName>
+                <default>false</default>
+                <label>Change Jobtype</label>
+            </value>
+            <value>
+                <fullName>Extend Job</fullName>
+                <default>false</default>
+                <label>Extend Job</label>
+            </value>
+            <value>
+                <fullName>Resend Applications</fullName>
+                <default>false</default>
+                <label>Resend Applications</label>
+            </value>
+            <value>
+                <fullName>Review SQ&apos;s</fullName>
+                <default>false</default>
+                <label>Review SQ&apos;s</label>
+            </value>
+            <value>
+                <fullName>Change Image / Title</fullName>
+                <default>false</default>
+                <label>Change Image / Title</label>
+            </value>
+            <value>
+                <fullName>Change visibility of location in Job Ad</fullName>
+                <default>false</default>
+                <label>Change visibility of location in Job Ad</label>
+            </value>
+            <value>
+                <fullName>Exclude Marketing Channel</fullName>
+                <default>false</default>
+                <label>Exclude Marketing Channel</label>
+            </value>
+            <value>
+                <fullName>Provide Screenshot of Social Ad</fullName>
+                <default>false</default>
+                <label>Provide Screenshot of Social Ad</label>
+            </value>
+            <value>
+                <fullName>Renewal &amp; adjust</fullName>
+                <default>false</default>
+                <label>Renewal &amp; adjust</label>
+            </value>
+            <value>
+                <fullName>Deactivation</fullName>
+                <default>false</default>
+                <label>Deactivation</label>
+            </value>
+            <value>
+                <fullName>Excel Sheet Adjustment</fullName>
+                <default>false</default>
+                <label>Excel Sheet Adjustment</label>
+            </value>
+            <value>
+                <fullName>Reactivation</fullName>
+                <default>false</default>
+                <label>Reactivation</label>
+            </value>
+            <value>
+                <fullName>Support with Social Ad Issue</fullName>
+                <default>false</default>
+                <label>Support with Social Ad Issue</label>
+            </value>
+            <value>
+                <fullName>Exclude Location in Job Ad (only on META)</fullName>
+                <default>false</default>
+                <label>Exclude Location in Job Ad (only on META)</label>
+            </value>
+            <value>
+                <fullName>Change Marketing Image</fullName>
+                <default>false</default>
+                <label>Change Marketing Image</label>
+            </value>
+            <value>
+                <fullName>Support for Customer Call</fullName>
+                <default>false</default>
+                <label>Support for Customer Call</label>
+            </value>
+            <value>
+                <fullName>Question Pre Onboarding</fullName>
+                <default>false</default>
+                <label>Question Pre Onboarding</label>
+            </value>
+            <value>
+                <fullName>Question after Onboarding</fullName>
+                <default>false</default>
+                <label>Question after Onboarding</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

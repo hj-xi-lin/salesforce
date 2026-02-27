@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Timestamp_Live_At_Risk_Resolved_On__c</fullName>
+    <inlineHelpText>Zeigt an, wann der Kunde als wieder engagiert und positive Leistung zeigend identifiziert wurde (d.h. wann das &quot;Live At Risk&quot; aufgelöst wurde)</inlineHelpText>
+    <label>LegacyTimestamp Live At Risk Resolved On</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>DateTime</type>
+</CustomField>

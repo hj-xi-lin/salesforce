@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ATS_Type_processing_time__c</fullName>
+    <description>RO-1759</description>
+    <inlineHelpText>Confluence: ATS New Onboarding &amp; New Integration Process</inlineHelpText>
+    <label>ATS Type &amp; processing time</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Easy (2weeks)</fullName>
+                <default>false</default>
+                <label>Easy (2weeks)</label>
+            </value>
+            <value>
+                <fullName>Complex (4-6Weeks)</fullName>
+                <default>false</default>
+                <label>Complex (4-6Weeks)</label>
+            </value>
+            <value>
+                <fullName>Individual</fullName>
+                <default>false</default>
+                <label>Individual</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

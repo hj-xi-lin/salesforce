@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Subjective_Demo_Probability__c</fullName>
+    <description>Subjective probability of a demo to be scheduled on this opportunity / RO-671</description>
+    <inlineHelpText>Subjective probability of a demo to be scheduled on this opportunity</inlineHelpText>
+    <label>Legacy Subjective Demo Probability</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>20%</fullName>
+                <default>false</default>
+                <label>20%</label>
+            </value>
+            <value>
+                <fullName>40%</fullName>
+                <default>false</default>
+                <label>40%</label>
+            </value>
+            <value>
+                <fullName>60%</fullName>
+                <default>false</default>
+                <label>60%</label>
+            </value>
+            <value>
+                <fullName>80%</fullName>
+                <default>false</default>
+                <label>80%</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Index_Subscription</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>fmlOwnerName__c</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>Source_Opp__c</columns>
+    <columns>Estimated_Wallet_size_opp__c</columns>
+    <filterScope>Team</filterScope>
+    <filters>
+        <field>Source_Opp__c</field>
+        <operation>equals</operation>
+        <value>Index</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Opportunity.Sales</value>
+    </filters>
+    <filters>
+        <field>Estimated_Wallet_size_opp__c</field>
+        <operation>greaterThan</operation>
+        <value>75000</value>
+    </filters>
+    <label>Index_Subscription</label>
+</ListView>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Opp_Creation_for_Umbrella_Co</fullName>
+    <active>true</active>
+    <description>This will validate if Selected Account is Umbrella Company and prevent opportunity creation</description>
+    <errorConditionFormula>AND(AccountId != null &amp;&amp; Account.Umbrella_Company__c)</errorConditionFormula>
+    <errorMessage>The selected Account is an Umbrella Company. Please select another Account.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reach__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indicates the accounts that are considered for the Reach product.</description>
+    <inlineHelpText>Indicates the accounts that are considered for the Reach product.</inlineHelpText>
+    <label>Legacy Reach</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

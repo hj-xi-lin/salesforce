@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Heyassessment_Deactivation_Reason__c</fullName>
+    <label>Heyassessment Deactivation Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Aus Versehen</fullName>
+                <default>false</default>
+                <label>Aus Versehen</label>
+            </value>
+            <value>
+                <fullName>Verstehe die Funktion nicht</fullName>
+                <default>false</default>
+                <label>Verstehe die Funktion nicht</label>
+            </value>
+            <value>
+                <fullName>Kein Bedarf/Mehrwert</fullName>
+                <default>false</default>
+                <label>Kein Bedarf/Mehrwert</label>
+            </value>
+            <value>
+                <fullName>Zu teuer</fullName>
+                <default>false</default>
+                <label>Zu teuer</label>
+            </value>
+            <value>
+                <fullName>Zu kompliziert</fullName>
+                <default>false</default>
+                <label>Zu kompliziert</label>
+            </value>
+            <value>
+                <fullName>Passt nicht in unseren Prozess</fullName>
+                <default>false</default>
+                <label>Passt nicht in unseren Prozess</label>
+            </value>
+            <value>
+                <fullName>Mangelndes Vertrauen in KI</fullName>
+                <default>false</default>
+                <label>Mangelndes Vertrauen in KI</label>
+            </value>
+            <value>
+                <fullName>Datenschutzbedenken</fullName>
+                <default>false</default>
+                <label>Datenschutzbedenken</label>
+            </value>
+            <value>
+                <fullName>Keine Screening-Unterstützung gewünscht</fullName>
+                <default>false</default>
+                <label>Keine Screening-Unterstützung gewünscht</label>
+            </value>
+            <value>
+                <fullName>Firmenrichtlinie gegen KI</fullName>
+                <default>false</default>
+                <label>Firmenrichtlinie gegen KI</label>
+            </value>
+            <value>
+                <fullName>Sonstiges</fullName>
+                <default>false</default>
+                <label>Sonstiges</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

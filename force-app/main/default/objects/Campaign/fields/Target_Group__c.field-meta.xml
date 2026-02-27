@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Target_Group__c</fullName>
+    <description>Defines the Target Group for Reporting and Naming Convention</description>
+    <inlineHelpText>Defines the Target Group for Reporting and Naming Convention</inlineHelpText>
+    <label>Target Group</label>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CEO</fullName>
+                <default>false</default>
+                <label>CEO</label>
+            </value>
+            <value>
+                <fullName>Head of HR</fullName>
+                <default>false</default>
+                <label>Head of HR</label>
+            </value>
+            <value>
+                <fullName>Head ofs (not HR)</fullName>
+                <default>false</default>
+                <label>Head ofs (not HR)</label>
+            </value>
+            <value>
+                <fullName>HR</fullName>
+                <default>false</default>
+                <label>HR</label>
+            </value>
+            <value>
+                <fullName>HR in General</fullName>
+                <default>false</default>
+                <label>HR in General</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NumberOfEmployees</fullName>
+    <inlineHelpText>Mitarbeitendenzahl eines Unternehmens. 
+Jeder Account sollte eine Mitarbeitendenanzahl haben, da die Mitarbeiteranzahl eines Unternehmens einen direkten Einfluss auf die Hiring Demand hat, beeinflusst sie die interne Potenzial-Berechnung (Estimated Wallet Size) und somit auch die Zuteilung zur GTM Motion.</inlineHelpText>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+</CustomField>

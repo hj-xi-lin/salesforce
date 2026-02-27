@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Timestamp_Demo__c</fullName>
+    <description>Renamed by Roman from Timestamp Demo to Timestamp Last Demo on 20.01.2021 due to Paul&apos;s request (RO-172)</description>
+    <label>Timestamp Last Demo</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

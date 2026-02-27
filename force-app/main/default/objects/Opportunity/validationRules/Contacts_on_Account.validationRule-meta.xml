@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contacts_on_Account</fullName>
+    <active>true</active>
+    <description>Validation of Contact Fields on Account</description>
+    <errorConditionFormula>AND(
+     OR(ISBLANK(Account.Contact_Email__c),
+        ISBLANK( Account.Contact_Last_Name__c ),
+        ISBLANK( Account.txtContactsSalutation__c )),
+     ISCHANGED( StageName ),
+     ISPICKVAL(StageName, &quot;Contract received&quot;)
+)</errorConditionFormula>
+    <errorMessage>Please fill out Contact Fields on Account</errorMessage>
+</ValidationRule>

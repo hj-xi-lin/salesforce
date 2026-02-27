@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Performance_Guarantee__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Activates the Performance Guarantee Product for this Quote</description>
+    <inlineHelpText>Activates the Performance Guarantee Product for this Quote</inlineHelpText>
+    <label>Legacy - Performance Guarantee</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ONB2__LastMRRUpdate__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The date when the MRR fields have been updated the last time.</description>
+    <inlineHelpText>The date when the MRR fields have been updated the last time.</inlineHelpText>
+    <label>Last MRR Update</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

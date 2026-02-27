@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contract_Group_ID__c</fullName>
+    <description>RO - 2557</description>
+    <externalId>false</externalId>
+    <inlineHelpText>You can find this info in either the BE ( Contracts ) /Tableau.</inlineHelpText>
+    <label>Contract Group ID</label>
+    <length>56</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

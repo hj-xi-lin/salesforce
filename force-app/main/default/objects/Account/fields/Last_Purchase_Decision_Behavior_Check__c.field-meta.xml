@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last_Purchase_Decision_Behavior_Check__c</fullName>
+    <description>RO-1981</description>
+    <inlineHelpText>Gibt an, wann der Wert des Purchase Decision Behavior zuletzt geändert oder überprüft wurde. Wenn das &quot;Purchase Decision Behavior&quot; Feld auf einen anderen Wert geändert wird, wird das Feld &quot;Last Purchase Decision Behavior Check&quot; automatisch mit dem heutigen Datum aktualisiert. Wenn überprüft wurde, ob das Feld &quot;Purchase Decision Behavior&quot; noch aktuell ist und keine Änderung vorgenommen wird, aktualisiere das Feld &quot;Last Purchase Decision Behavior Check&quot; bitte manuell mit dem heutigen Datum.</inlineHelpText>
+    <label>Last Purchase Decision Behavior Check</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>DateTime</type>
+</CustomField>

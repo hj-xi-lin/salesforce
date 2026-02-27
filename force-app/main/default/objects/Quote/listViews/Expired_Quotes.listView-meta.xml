@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Expired_Quotes</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>QUOTE.NAME</columns>
+    <columns>QUOTE.EXPIRATIONDATE</columns>
+    <columns>QUOTE.ISSYNCING</columns>
+    <columns>QUOTE.TOTALPRICE</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>QUOTE.STATUS</field>
+        <operation>equals</operation>
+        <value>Draft,Sent</value>
+    </filters>
+    <label>Expired Quotes</label>
+</ListView>

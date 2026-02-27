@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Date_of_Satisfaction_call_is_mandatory</fullName>
+    <active>true</active>
+    <description>Date of Satisfaction call is mandatory for Onboarding Call Events!</description>
+    <errorConditionFormula>AND(
+NOT(ISNEW()),
+TEXT(plEventSubject__c) =&apos;Onboarding Call&apos;,
+ISBLANK(Date_of_Satisfaction_call__c) 
+)</errorConditionFormula>
+    <errorMessage>Date of Satisfaction call is mandatory ! Please fill out this field!</errorMessage>
+</ValidationRule>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Timestamp_Documentation_Completed__c</fullName>
+    <description>Date and time when the Handover Documentation was completed</description>
+    <inlineHelpText>Zeitstempel der Fertigstellung der Handover-Dokumentation.</inlineHelpText>
+    <label>Timestamp Documentation Completed</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

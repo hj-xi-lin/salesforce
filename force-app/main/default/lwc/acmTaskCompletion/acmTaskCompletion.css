@@ -1,0 +1,50 @@
+/* ACM Task Completion styles - Match Screen Flow look */
+
+:host {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Loading container */
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+}
+
+/* Content area */
+.content-area {
+    flex: 1;
+    padding: 1rem 1.5rem;
+    overflow-y: auto;
+}
+
+/* Intro text styling */
+.intro-text {
+    font-size: 0.875rem;
+    color: #3e3e3c;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+/* Normalize all label styles to non-bold */
+.content-area lightning-input .slds-form-element__label,
+.content-area lightning-combobox .slds-form-element__label,
+.content-area lightning-textarea .slds-form-element__label {
+    font-weight: 400;
+}
+
+/* Footer area - matches Screen Flow footer */
+.footer-area {
+    background-color: #f3f3f3;
+    border-top: 1px solid #dddbda;
+    padding: 0.75rem 1rem;
+    text-align: right;
+}
+
+/* Error state styling */
+.has-error {
+    --slds-c-input-color-border: #c23934;
+}

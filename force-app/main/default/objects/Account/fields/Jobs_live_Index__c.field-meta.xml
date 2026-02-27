@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Jobs_live_Index__c</fullName>
+    <description>Number of jobs the company has published within 7 days before the job feed update date. All platforms, not necessarily including Heyjobs.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Anzahl der Stellen, die das Unternehmen innerhalb von 7 Tagen vor dem &quot;job feed update date&quot; veröffentlicht hat. Alle Plattformen, nicht unbedingt einschließlich HeyJobs.</inlineHelpText>
+    <label>Legacy Jobs live - Index</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Winback_Pilot__c</fullName>
+    <defaultValue>0</defaultValue>
+    <description>Automatically calculates whether an opportunity is marked as a Pilot Opportunity.
+Displays 1 if tbookings last 12 months = 0€, and 0 otherwise.
+Used in forecasting to count the number of pilot opportunities owned by a user or team.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Berechnet automatisch, ob eine Opportunity als Pilot-Opportunity gekennzeichnet ist.
+Zeigt 1 an, wenn die Buchungen der letzten 12 Monate = 0 € betragen, andernfalls 0.
+Wird in der Prognose verwendet, um die Anzahl der Pilot-Opportunities zu zählen, die einem Benutzer oder Team gehören.</inlineHelpText>
+    <label>Pilot_incl_winback</label>
+    <precision>1</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

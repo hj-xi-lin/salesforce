@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Segment_Opp_V02__c</fullName>
+    <description>RO-841</description>
+    <inlineHelpText>indicates the size (number of employees) of the opportunity</inlineHelpText>
+    <label>Segment Opp V02 (reporting only)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Small</fullName>
+                <color>#FF99FF</color>
+                <default>false</default>
+                <label>Small</label>
+            </value>
+            <value>
+                <fullName>Large</fullName>
+                <color>#FFCC66</color>
+                <default>false</default>
+                <label>Large</label>
+            </value>
+            <value>
+                <fullName>Enterprise</fullName>
+                <color>#FF6600</color>
+                <default>false</default>
+                <label>Enterprise</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

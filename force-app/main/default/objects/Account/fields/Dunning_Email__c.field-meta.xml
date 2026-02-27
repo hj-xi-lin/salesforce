@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dunning_Email__c</fullName>
+    <description>Used by Finance. RO-480</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Used by Finance.</inlineHelpText>
+    <label>Dunning Email</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Email</type>
+    <unique>false</unique>
+</CustomField>

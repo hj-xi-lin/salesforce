@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ON_Discount__c</fullName>
+    <description>Specifies the time (in days) after which the discounted payment is due.</description>
+    <externalId>false</externalId>
+    <formula>IF(
+    OR(
+        SkontoAktiv__c,
+        Account.SkontoAktiv__c
+    ),
+    30,
+    NULL
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Specifies the time (in days) after which the discounted payment is due.</inlineHelpText>
+    <label>JustOn: DiscountPaymentDue</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

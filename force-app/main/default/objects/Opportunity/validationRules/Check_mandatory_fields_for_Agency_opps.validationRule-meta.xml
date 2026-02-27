@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_mandatory_fields_for_Agency_opps</fullName>
+    <active>false</active>
+    <errorConditionFormula>AND (
+ISPICKVAL(StageName,&quot;Offer&quot;),
+
+OR(
+ Record_Type__c = &quot;Agency_business&quot;,
+ Record_Type__c = &quot;Agency_Acquisition&quot;),
+
+OR (
+ ISBLANK(Base_Volume__c),
+ ISBLANK(Base_AE__c),
+ ISBLANK(Boost_AE__c),
+ ISBLANK(Boost_Volume__c),
+ ISBLANK(Contract_Start_Date__c),
+ ISBLANK( Contract_End_Date__c)))</errorConditionFormula>
+    <errorMessage>Please populated the required fields for Agency Opps.</errorMessage>
+</ValidationRule>

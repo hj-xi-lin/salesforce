@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>QuoteHeader_english__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE( Service_Country__c,
+&quot;DE&quot;, &quot;HeyJobs GmbH&quot; &amp;BR()&amp;
+      &quot;Paul-Lincke-Ufer 39-40&quot; &amp;BR()&amp;
+      &quot;10999 Berlin, Germany&quot; &amp;BR(),
+&quot;AT&quot;, &quot;HeyJobs GmbH c/o andys cc coworking&quot; &amp;BR()&amp;
+      &quot;Aspernbrückengasse 2&quot; &amp;BR()&amp;
+      &quot;1020 Vienna, Austria&quot; &amp;BR(),
+&apos;&apos;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>QuoteHeader_english</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

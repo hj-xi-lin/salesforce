@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ultimate_Account_ID__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASESAFEID(
+IF(NOT(ISBLANK(Parent.Parent.Parent.Parent.Parent.Id )), Parent.Parent.Parent.Parent.Parent.Id, 
+IF(NOT(ISBLANK(Parent.Parent.Parent.Parent.Id)), Parent.Parent.Parent.Parent.Id, 
+IF(NOT(ISBLANK(Parent.Parent.Parent.Id)), Parent.Parent.Parent.Id, 
+IF(NOT(ISBLANK(Parent.Parent.Id)), Parent.Parent.Id, 
+IF(NOT(ISBLANK(Parent.Id)),Parent.Id, 
+Id)))))
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Ultimate Account ID</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

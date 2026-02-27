@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ACM_Assignment_Date__c</fullName>
+    <description>Date and time when the ACM was assigned for the handover</description>
+    <inlineHelpText>Zeitstempel der ACM-Zuweisung für SLA-Tracking.</inlineHelpText>
+    <label>ACM Assignment Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

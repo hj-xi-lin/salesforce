@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Follow_up_Details_Account__c</fullName>
+    <description>RO-2317</description>
+    <inlineHelpText>Informationen zum Follow-up mit dem Account, z.B. Was sind die nächsten Schritte mit diesem Account?</inlineHelpText>
+    <label>Follow-up Details</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>TextArea</type>
+</CustomField>

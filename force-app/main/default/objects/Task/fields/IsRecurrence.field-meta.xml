@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsRecurrence</fullName>
+    <inlineHelpText>Ermöglicht, eine Serie wiederkehrender Tasks einzurichten. Wenn diese Option aktiviert ist, wird das Feld Due Date deaktiviert, da jede Task in der Serie ein anderes Fälligkeitsdatum hat.</inlineHelpText>
+    <trackHistory>false</trackHistory>
+</CustomField>

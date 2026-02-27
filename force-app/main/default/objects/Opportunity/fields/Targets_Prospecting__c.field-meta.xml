@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Targets_Prospecting__c</fullName>
+    <description>Targets for Prospecting Q3 2022
+Used for HeyRockstar Dashboard</description>
+    <externalId>false</externalId>
+    <formula>CASE(Demo_set_by_new__r.Full_Name__c,
+&quot;André Morgenstern&quot;, 40, 
+&quot;Ben Nicolai&quot;, 40, 
+&quot;Constantin Klinger&quot;, 14, 
+&quot;Jürgen Galos&quot;, 40,
+&quot;Sven Schorle&quot;, 40,
+&quot;Thissanth Vigneswaran&quot;, 40,
+&quot;Hope Frater&quot;, 33,
+
+
+
+&quot;Christoph Birk&quot;, 43,
+&quot;Jakob Karutz&quot;, 24,
+&quot;Jannis Ruß&quot;, 36,
+&quot;Jonas Sutter&quot;, 43, 
+&quot;Luka Oertling&quot;, 57,
+&quot;Martin Kraus&quot;, 37,
+&quot;Maximilian Medek&quot;, 93,
+&quot;Miriam Terstegge&quot;, 17,
+&quot;Bianca Heikamp&quot;, 1,
+&quot;Alejandra Gutierrez&quot;, 1,
+&quot;Leonie Kolar&quot;, 1,
+&quot;Brevin Koneswaran&quot;, 41,
+&quot;Christo Nakos&quot;, 33,
+&quot;Cynthia Eble&quot;, 41,
+&quot;Emily Werner&quot;, 22,
+&quot;Julian Schreiber&quot;, 61,
+&quot;Julius Perst&quot;, 56,
+&quot;Kail Patruck&quot;, 25,
+&quot;Laura Ini&quot;, 50,
+&quot;Max Radman&quot;, 50,
+&quot;Melis Özhan&quot;, 35,
+&quot;Pia xCaesar&quot;, 11,
+&quot;Raven Schulz&quot;, 49,
+&quot;Sophie Steinke&quot;, 34,
+
+null)</formula>
+    <label>Targets Prospecting</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Funnel_areas_of_neglect__c</fullName>
+    <description>RO-2315</description>
+    <inlineHelpText>Welche Schritte des Rekrutierungsprozesses nehmen zu viel Zeit in Anspruch oder erzeugen nicht die gewünschten Ergebnisse?</inlineHelpText>
+    <label>Funnel areas of neglect</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Ad creation / optimization</fullName>
+                <default>false</default>
+                <label>Ad creation / optimization</label>
+            </value>
+            <value>
+                <fullName>Cost-efficient channel selection</fullName>
+                <default>false</default>
+                <label>Cost-efficient channel selection</label>
+            </value>
+            <value>
+                <fullName>Quantity (applications sent)</fullName>
+                <default>false</default>
+                <label>Quantity (applications sent)</label>
+            </value>
+            <value>
+                <fullName>Quality (qualified applicants)</fullName>
+                <default>false</default>
+                <label>Quality (qualified applicants)</label>
+            </value>
+            <value>
+                <fullName>Hires</fullName>
+                <default>false</default>
+                <label>Hires</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

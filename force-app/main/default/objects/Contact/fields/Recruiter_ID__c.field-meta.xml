@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Recruiter_ID__c</fullName>
+    <caseSensitive>true</caseSensitive>
+    <description>Unique Identifier for the recruiters created in portal</description>
+    <externalId>true</externalId>
+    <inlineHelpText>ID (Unique Identifier) des Recruiters aus dem Backend (RecruiterPortal)  (ähnlich wie die Company ID auf Account, nur auf Kontaktebene)</inlineHelpText>
+    <label>Recruiter ID</label>
+    <length>50</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last_GTM_Motion_Check__c</fullName>
+    <description>RO-2177</description>
+    <inlineHelpText>Das Feld gibt an, wann der Wert des von &quot;GTM Motion&quot; zuletzt geändert oder überprüft wurde. Wenn das &quot;GTM Motion&quot; auf einen anderen Wert geändert wird, wird das Feld &quot;Last GTM Motion Check&quot; automatisch mit dem heutigen Datum aktualisiert. Wenn überprüft wurde, ob das Feld &quot;GTM Motion&quot; noch aktuell ist und keine Änderung vorgenommen wird, muss das Feld &quot;Last GTM Motion Check&quot; manuell zum aktuellen Datum geändert werden.</inlineHelpText>
+    <label>Last GTM Motion Check</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>DateTime</type>
+</CustomField>

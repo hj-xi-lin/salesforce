@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X2019_06_Roadshow_Olli_Koeln</fullName>
+    <booleanFilter>(1 OR 2) AND 3 AND 4 AND 5 AND 6 AND 7</booleanFilter>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Account_Owner__c</columns>
+    <columns>CONTACT.SALUTATION</columns>
+    <columns>CONTACT.FIRST_NAME</columns>
+    <columns>CONTACT.LAST_NAME</columns>
+    <columns>CONTACT.TITLE</columns>
+    <columns>Title_Categories__c</columns>
+    <columns>CONTACT.EMAIL</columns>
+    <columns>fmlLetterSalutation__c</columns>
+    <columns>Email_verified__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CONTACT.FIRST_NAME</field>
+        <operation>notContain</operation>
+        <value>XXX</value>
+    </filters>
+    <filters>
+        <field>Email_verified__c</field>
+        <operation>notEqual</operation>
+        <value>Bounced</value>
+    </filters>
+    <filters>
+        <field>Active__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>CONTACT.TITLE</field>
+        <operation>contains</operation>
+        <value>CEO,managing,geschäfts</value>
+    </filters>
+    <label>Events - Köln</label>
+    <sharedTo></sharedTo>
+</ListView>

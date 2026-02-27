@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_budget_expiration_date__c</fullName>
+    <description>Please update the budget of the corresponding HeyPakete purchase in the Backend to the new date</description>
+    <formula>IF(
+    HeyPakete_Type__c = $Label.HeyPaket_Professional,
+    HeyPakete_End_Date__c + 90,
+    IF(
+        HeyPakete_Type__c = $Label.HeyPaket_Ultimate,
+        HeyPakete_End_Date__c + 180,
+        HeyPakete_End_Date__c
+    )
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>New budget expiration date</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

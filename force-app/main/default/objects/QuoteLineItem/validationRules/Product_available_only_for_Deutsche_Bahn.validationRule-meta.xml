@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_available_only_for_Deutsche_Bahn</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+Product2.Name = &quot;HIRE Budget für Ihre Stellenanzeigen&quot;,
+Quote.fmlAccountName__c &lt;&gt; &quot;Deutsche Bahn AG - HIRE (3404 / Hamel &amp; Co)&quot;,
+Quote.fmlAccountName__c &lt;&gt; &quot;Autokraft GmbH&quot;,
+Quote.fmlAccountName__c &lt;&gt;&quot;DB Dialog GmbH&quot;,
+Quote.fmlAccountName__c &lt;&gt;&quot;Db Regionetz Verkehrs GmbH - Westfrankenbahn -&quot;,
+Quote.fmlAccountName__c &lt;&gt;&quot;Deutsche Bahn - DB mindbox&quot;,
+Quote.fmlAccountName__c &lt;&gt;&quot;Deutsche Bahn - DB Regio AG&quot;,
+Quote.fmlAccountName__c &lt;&gt;&quot;Deutsche Bahn - Recruiter Portal&quot;,
+Quote.fmlAccountName__c &lt;&gt;&quot;Deutsche Bahn CBR / Global&quot;,
+Quote.fmlAccountName__c &lt;&gt;&quot;Deutsche Bahn Events&quot;,
+Quote.fmlAccountName__c &lt;&gt;&quot;Deutsche Bahn Ingenieure&quot;,
+Quote.fmlAccountName__c &lt;&gt;&quot;Deutsche Bahn IT&quot;,
+Quote.fmlAccountName__c &lt;&gt;&quot;Deutsche Bahn kaufm. Akademiker&quot;,
+Quote.fmlAccountName__c &lt;&gt;&quot;Deutsche Bahn Konzernprojekte&quot;,
+Quote.fmlAccountName__c &lt;&gt;&quot;Deutsche Bahn Mitte&quot;,
+Quote.fmlAccountName__c &lt;&gt;&quot;Deutsche Bahn Nord&quot;,
+Quote.fmlAccountName__c &lt;&gt;&quot;Deutsche Bahn Nord - Fachkräfte&quot;,
+Quote.fmlAccountName__c &lt;&gt;&quot;Deutsche Bahn Ost&quot;,
+Quote.fmlAccountName__c &lt;&gt;&quot;Deutsche Bahn Studenten&quot;,
+Quote.fmlAccountName__c &lt;&gt;&quot;Deutsche Bahn Süd&quot;,
+Quote.fmlAccountName__c &lt;&gt;&quot;Deutsche Bahn Südost&quot;,
+Quote.fmlAccountName__c &lt;&gt;&quot;Deutsche Bahn Südwest&quot;,
+Quote.fmlAccountName__c &lt;&gt;&quot;Deutsche Bahn West&quot;,
+Quote.fmlAccountName__c &lt;&gt;&quot;Deutsche Bahn Zentral&quot;,
+Quote.fmlAccountName__c &lt;&gt;&quot;Regional Bus Stuttgart GmbH RBS&quot;,
+Quote.fmlAccountName__c &lt;&gt;&quot;Regionalverkehr Oberbayern GmbH&quot;,
+Quote.fmlAccountName__c &lt;&gt;&quot;S-Bahn Berlin GmbH&quot;,
+Quote.fmlAccountName__c &lt;&gt;&quot;SBG Südbadenbus GmbH&quot;,
+Quote.fmlAccountName__c &lt;&gt;&quot;Tfg Transfracht Internat. Gesellschaft für Kombin. Güterverkehr mbH&quot;,
+Quote.fmlAccountName__c &lt;&gt;&quot;Deutsche Bahn AG - REACH (2911 / Lehmkuhl)&quot;,
+Quote.fmlAccountName__c &lt;&gt;&quot;S-Bahn Hamburg GmbH&quot;,
+Quote.fmlAccountName__c &lt;&gt;&quot;Station Food GmbH&quot;,
+Quote.fmlAccountName__c &lt;&gt;&quot;Deutsche Bahn Executives&quot;,
+Quote.fmlAccountName__c &lt;&gt;&quot;DB Zeitarbeit GmbH&quot;,
+Quote.fmlAccountName__c &lt;&gt;&quot;Deutsche Bahn Süd (AT)&quot;
+)</errorConditionFormula>
+    <errorMessage>&quot;HIRE Budget für Ihre Stellenanzeigen&quot; can only be added for Deutsche Bahn Accounts!</errorMessage>
+</ValidationRule>

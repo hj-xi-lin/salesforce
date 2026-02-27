@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Trigger_for_Contact_Role_Addition__c</fullName>
+    <description>RO-2303</description>
+    <label>Trigger for Contact Role Addition</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Contact_Role_Origins</valueSetName>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Agency_flexible_framework__c</fullName>
+    <formula>AND(
+RecordType.Name = &apos;Agency Business&apos;, 
+TEXT(Contract_type__c) = &apos;Flexible&apos;
+				)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Agency flexible framework</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

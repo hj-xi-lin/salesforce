@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Copy_of_My_Opportunities_Hot_Warm_Email</fullName>
+    <columns>Account_Lead_Score__c</columns>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>OPPORTUNITY.TYPE</columns>
+    <columns>OPPORTUNITY.AMOUNT</columns>
+    <columns>Follow_Up_Date__c</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>LAST_ACTIVITY_DATETIME</columns>
+    <columns>Outbound_Response__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>notEqual</operation>
+        <value>Closed Won,Closed Lost</value>
+    </filters>
+    <filters>
+        <field>Outbound_Response__c</field>
+        <operation>equals</operation>
+        <value>Potential</value>
+    </filters>
+    <filters>
+        <field>Segment_Opp__c</field>
+        <operation>equals</operation>
+        <value>SMB</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.LAST_ACTIVITY</field>
+        <operation>notEqual</operation>
+        <value>LAST_N_DAYS:31</value>
+    </filters>
+    <label>My Opportunities - Cold Calling</label>
+</ListView>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Base_Volume__c</fullName>
+    <description>RO - 1631</description>
+    <inlineHelpText>The volume we define in order to work together. If this is 0€ then we have no fixed commitment and if it has a value then it is the minimum commitment.</inlineHelpText>
+    <label>Base Volume</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

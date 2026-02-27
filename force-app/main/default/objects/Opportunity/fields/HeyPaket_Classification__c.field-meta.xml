@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HeyPaket_Classification__c</fullName>
+    <description>RO-1824</description>
+    <label>HeyPaket Classification</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>New Business</fullName>
+                <default>false</default>
+                <label>New Business</label>
+            </value>
+            <value>
+                <fullName>Renewal/Upsell</fullName>
+                <default>false</default>
+                <label>Renewal/Upsell</label>
+            </value>
+            <value>
+                <fullName>Auto-Renewal</fullName>
+                <default>false</default>
+                <label>Auto-Renewal</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

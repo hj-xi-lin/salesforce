@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Filter_Criteria_for_REACH_Jobs__c</fullName>
+    <description>RO - 2458</description>
+    <inlineHelpText>Filter Criteria for REACH Jobs</inlineHelpText>
+    <label>Filter Criteria for REACH Jobs</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

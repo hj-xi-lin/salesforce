@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Typeform_Submitted__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>When the typeform is submitted by the customer.</description>
+    <inlineHelpText>Zeigt an, ob der/die Kund*in das Typeform vollständig ausgefüllt hat.</inlineHelpText>
+    <label>Typeform Submitted</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AWO_Accounts</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.TYPE</columns>
+    <columns>Account_Owner__c</columns>
+    <columns>ACCOUNT.ADDRESS1_ZIP</columns>
+    <columns>Category_1__c</columns>
+    <columns>Category_2__c</columns>
+    <columns>Category_3__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Open_Opportunities_Count__c</field>
+        <operation>notEqual</operation>
+        <value>,0</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.NAME</field>
+        <operation>contains</operation>
+        <value>AWO,Arbeiterwohlfahrt</value>
+    </filters>
+    <label>AWO Accounts</label>
+</ListView>

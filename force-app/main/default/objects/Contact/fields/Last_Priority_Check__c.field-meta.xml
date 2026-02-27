@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last_Priority_Check__c</fullName>
+    <description>RO - 2145</description>
+    <inlineHelpText>Zeigt das Datum wann das Priority Level das letzte mal verändert wurde. Last Priority Check kann aber auch manuell angepasst werden, e.g. wenn das Last Priority überprüft wurde.</inlineHelpText>
+    <label>Last Priority Check</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>DateTime</type>
+</CustomField>

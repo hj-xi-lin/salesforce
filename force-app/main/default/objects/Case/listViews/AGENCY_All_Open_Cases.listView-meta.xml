@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AGENCY_All_Open_Cases</fullName>
+    <columns>Service_Country__c</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>OWNER_NAME</columns>
+    <columns>Segment_V02__c</columns>
+    <columns>X1st_Job_Creation_Case__c</columns>
+    <columns>CASES.RECORDTYPE</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>txtJobId__c</columns>
+    <columns>txtJobTitle__c</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>Account_Owner__c</columns>
+    <columns>SLA__c</columns>
+    <columns>Minutes_to_SLA__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>equals</operation>
+        <value>New,In Discussion With ACM,On Hold,Waiting for budget</value>
+    </filters>
+    <filters>
+        <field>Record_Type__c</field>
+        <operation>equals</operation>
+        <value>Agency Business,Agency Customer Business</value>
+    </filters>
+    <label>AGENCY - All Open Cases</label>
+</ListView>

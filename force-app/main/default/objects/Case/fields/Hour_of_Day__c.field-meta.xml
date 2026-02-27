@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hour_of_Day__c</fullName>
+    <description>RO-382 Used in reports, shows an Hour of a Day when the Case was created. &quot;Timezone Helpers&quot; custom setting was used (22 during Summer Time, 23 during Winter Timer)</description>
+    <externalId>false</externalId>
+    <formula>VALUE(MID (TEXT ( CreatedDate - ( $Setup.Timezone_Helpers__c.H22_23__c  / 24)), 12, 2))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Hour of Day</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

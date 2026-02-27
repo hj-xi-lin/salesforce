@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>not_a_new_customer__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>not a new customer: do not count for hunting CP</description>
+    <inlineHelpText>Zeigt an, ob die Acquisition Opportunity zu einem Bestandskunden gehört. Sollte auf TRUE (checked) gesetzt werden, wenn es sich bei dem Account, um einen Bestandskund*in und nicht um einen Neukund*in handelt. Wenn das Feld auf TRUE gesetzt ist, wird die Opportunity aus dem Pilot-Tracking ausgeschlossen.</inlineHelpText>
+    <label>not a new customer</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Comment_Quote_Acceptance_Screen__c</fullName>
+    <description>Saving comment from Quote Acceptance Screen to populate the information on Case
+RO-1999</description>
+    <label>Comment Quote Acceptance Screen</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Html</type>
+    <visibleLines>25</visibleLines>
+</CustomField>

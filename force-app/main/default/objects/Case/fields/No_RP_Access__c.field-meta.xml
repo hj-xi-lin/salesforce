@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_RP_Access__c</fullName>
+    <description>RO-1760</description>
+    <inlineHelpText>The user should not receive access to the RP. It merely serves as a &quot;Dummy Recruiter&quot;</inlineHelpText>
+    <label>No RP Access</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>YesNo</valueSetName>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ATS_Int_Go_Live__c</fullName>
+    <inlineHelpText>Zeigt das Datum, an dem die Integration von IntOps abgeschlossen wurde.</inlineHelpText>
+    <label>ATS Int. Go-Live</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>DateTime</type>
+</CustomField>

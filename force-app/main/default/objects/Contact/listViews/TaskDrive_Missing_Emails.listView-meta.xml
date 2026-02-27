@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TaskDrive_Missing_Emails</fullName>
+    <columns>CONTACT.SALUTATION</columns>
+    <columns>fmlLetterSalutation__c</columns>
+    <columns>CONTACT.FIRST_NAME</columns>
+    <columns>CONTACT.LAST_NAME</columns>
+    <columns>CONTACT.TITLE</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CONTACT.PHONE1</columns>
+    <columns>CONTACT.PHONE3</columns>
+    <columns>CONTACT.EMAIL</columns>
+    <columns>Email_verified__c</columns>
+    <columns>CORE.USERS.FIRST_NAME</columns>
+    <columns>Active__c</columns>
+    <columns>TaskDrive_done__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CONTACT.FIRST_NAME</field>
+        <operation>notContain</operation>
+        <value>aircall</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.NAME</field>
+        <operation>notContain</operation>
+        <value>Heyjobs,macedonia,flintstones</value>
+    </filters>
+    <filters>
+        <field>CONTACT.LAST_NAME</field>
+        <operation>notContain</operation>
+        <value>test</value>
+    </filters>
+    <filters>
+        <field>Account_Owner__c</field>
+        <operation>notContain</operation>
+        <value>franca,martha,martin,kai,aishah,tanya,michele</value>
+    </filters>
+    <filters>
+        <field>TaskDrive_done__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>Email_verified__c</field>
+        <operation>equals</operation>
+        <value>No Email</value>
+    </filters>
+    <filters>
+        <field>Active__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>TaskDrive - Missing Emails</label>
+    <sharedTo>
+        <role>Taskdrive</role>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Webinar_Leads_Geh_lter_Benefits</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.EMPLOYEES</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.UNREAD</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>LEAD.CREATED_DATE</field>
+        <operation>greaterThan</operation>
+        <value>10/26/2021 12:00 AM</value>
+    </filters>
+    <filters>
+        <field>LEAD.COMPANY</field>
+        <operation>notContain</operation>
+        <value>HeyJobs</value>
+    </filters>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>notContain</operation>
+        <value>Lost</value>
+    </filters>
+    <filters>
+        <field>Inbound_Source__c</field>
+        <operation>equals</operation>
+        <value>Linkedin,Webinar,Webinar Sign Up</value>
+    </filters>
+    <filters>
+        <field>domain_userid__c</field>
+        <operation>notContain</operation>
+        <value>LinkedIn,Xing,LGC,XGC</value>
+    </filters>
+    <filters>
+        <field>Webinar_Campaign_Source__c</field>
+        <operation>equals</operation>
+        <value>70107000000cIvkAAE</value>
+    </filters>
+    <label>Webinar Leads Gehälter &amp; Benefits</label>
+    <queue>Lead_Research_Queue</queue>
+</ListView>

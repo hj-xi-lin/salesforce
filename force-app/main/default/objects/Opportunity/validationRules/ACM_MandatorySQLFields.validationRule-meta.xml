@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ACM_MandatorySQLFields</fullName>
+    <active>true</active>
+    <description>RO-2164</description>
+    <errorConditionFormula>AND(
+OR(
+RecordType.DeveloperName = &quot;Account_Management&quot;,
+RecordType.DeveloperName = &quot;SecondPurchase&quot;
+),
+NOT(Onlinekauf__c ),
+NOT( ISPICKVAL(HeyPaket_Classification__c , &quot;Auto-Renewal&quot;) ),
+NOT( CONTAINS(TEXT( GTM_Motion_Opportunity__c ), &quot;Enterprise&quot;) ),
+OR(
+ISBLANK( TimestampOffer__c ) ,
+TimestampOffer__c &gt;= DATE(2024,08,05)
+),
+
+NOT( ISPICKVAL( StageName , &quot;Pre- Discussion&quot;) ),
+NOT( ISPICKVAL( StageName , &quot;In Discussion&quot;) ),
+NOT( ISPICKVAL( StageName , &quot;Closed Lost&quot;) ),
+
+OR(
+IF(
+AND(
+OR(
+ISPICKVAL(Competitor_1_current_future__c , &quot;Others&quot;),
+ISPICKVAL(Competitor_2_current_future__c , &quot;Others&quot;),
+ISPICKVAL(Competitor_3_current_future__c , &quot;Others&quot;)
+),
+ISBLANK( Other_Competitor__c )),
+true, false),
+
+IF(
+AND(
+OR(
+ISBLANK(TEXT( Competitor_1_current_future__c )),
+ISBLANK(TEXT( Competitor_2_current_future__c )),
+ISBLANK(TEXT( Competitor_3_current_future__c ))
+),
+NOT( ISPICKVAL(Competitor_1_current_future__c , &quot;None&quot;)),
+NOT( ISPICKVAL(Competitor_2_current_future__c , &quot;None&quot;)),
+NOT( ISPICKVAL(Competitor_3_current_future__c , &quot;None&quot;)),
+NOT( ISPICKVAL(Competitor_1_current_future__c , &quot;Unknown&quot;)),
+NOT( ISPICKVAL(Competitor_2_current_future__c , &quot;Unknown&quot;)),
+NOT( ISPICKVAL(Competitor_3_current_future__c , &quot;Unknown&quot;))
+),
+true, false)
+)
+
+)</errorConditionFormula>
+    <errorMessage>Please populate the mandatory fields Competitors 1-3 (and Other Competitor if you selected &quot;Others&quot;)</errorMessage>
+</ValidationRule>

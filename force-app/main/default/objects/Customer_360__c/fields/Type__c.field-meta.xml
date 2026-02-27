@@ -38,6 +38,11 @@
                 <label>Lost Opps</label>
             </value>
             <value>
+                <fullName>Pilot Handover</fullName>
+                <default>false</default>
+                <label>Pilot Handover</label>
+            </value>
+            <value>
                 <fullName>Deals</fullName>
                 <default>false</default>
                 <isActive>false</isActive>

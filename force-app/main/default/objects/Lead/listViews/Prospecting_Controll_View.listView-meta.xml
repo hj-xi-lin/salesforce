@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prospecting_Controll_View</fullName>
+    <booleanFilter>1 AND 2 AND 3 AND 4 AND 5 AND 9 AND (6 OR (7 AND 8)) and 10</booleanFilter>
+    <columns>Lead_Score_v02__c</columns>
+    <columns>MQL_Type_Lead__c</columns>
+    <columns>Engagement_Score__c</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Recent_Conversion__c</columns>
+    <columns>MQL_Conversion__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Lead_Score_v02__c</field>
+        <operation>equals</operation>
+        <value>AAA,AA,A,B,C,D</value>
+    </filters>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>equals</operation>
+        <value>New</value>
+    </filters>
+    <filters>
+        <field>Timestamp_Latest_MQL_conversion__c</field>
+        <operation>greaterThan</operation>
+        <value>7/1/2023 12:00 AM</value>
+    </filters>
+    <filters>
+        <field>OwnerProfile__c</field>
+        <operation>notContain</operation>
+        <value>Prosp</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>notEqual</operation>
+        <value>suadmin</value>
+    </filters>
+    <filters>
+        <field>MQL_Type_Lead__c</field>
+        <operation>equals</operation>
+        <value>Type 1,Type 2</value>
+    </filters>
+    <filters>
+        <field>MQL_Type_Lead__c</field>
+        <operation>equals</operation>
+        <value>Type 3</value>
+    </filters>
+    <filters>
+        <field>Engagement_Score__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>100</value>
+    </filters>
+    <filters>
+        <field>Exclude_MQLs_lead__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>Service_Country__c</field>
+        <operation>notEqual</operation>
+        <value>AT</value>
+    </filters>
+    <label>2023_Large_Prospecting_Lead_MQLs_DE</label>
+</ListView>

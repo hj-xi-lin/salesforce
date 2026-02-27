@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Days_Created_to_Closed__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+NOT(ISBLANK( Timestamp_Closed_Date__c )),
+Timestamp_Closed_Date__c  -  Created_Date_Time__c  ,
+IF(NOT(ISBLANK( Timestamp_Go_Live_Scheduled_Time__c )),
+  Timestamp_Go_Live_Scheduled_Time__c - Created_Date_Time__c  ,
+  IF(NOT(ISBLANK( Timestamp_Job_Live_Time__c )),
+    Timestamp_Job_Live_Time__c  - Created_Date_Time__c  ,
+     Timestamp_Lost_Time__c  - Created_Date_Time__c  
+)))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Days Created to Closed</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

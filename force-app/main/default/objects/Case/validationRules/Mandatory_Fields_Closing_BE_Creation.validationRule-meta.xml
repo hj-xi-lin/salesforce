@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mandatory_Fields_Closing_BE_Creation</fullName>
+    <active>true</active>
+    <description>Company ID is mandatory to close the case. RO-1759, RO-1760</description>
+    <errorConditionFormula>AND(
+ISPICKVAL(Status, &quot;Closed&quot;),
+RecordType.DeveloperName = &quot;Backend_Creation_Case&quot;,
+ISBLANK(txtCompanyID__c)
+)</errorConditionFormula>
+    <errorDisplayField>txtCompanyID__c</errorDisplayField>
+    <errorMessage>Before closing the case make sure to fill in the Company ID.</errorMessage>
+</ValidationRule>

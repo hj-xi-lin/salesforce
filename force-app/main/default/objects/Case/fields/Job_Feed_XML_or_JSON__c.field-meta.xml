@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Job_Feed_XML_or_JSON__c</fullName>
+    <description>RO-1759 , RO - 2458</description>
+    <inlineHelpText>Provide the XML or JSON Feed for Jobimport</inlineHelpText>
+    <label>Job Feed/ Kombo-Link/Excel-Tabelle</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

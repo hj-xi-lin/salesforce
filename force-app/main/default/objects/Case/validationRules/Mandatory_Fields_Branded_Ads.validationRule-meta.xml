@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mandatory_Fields_Branded_Ads</fullName>
+    <active>true</active>
+    <description>&quot;Branded Ads activated&quot; checkbox has to be ticked before closing the case. RO-1759</description>
+    <errorConditionFormula>AND(
+ISPICKVAL(Status, &quot;Closed&quot;),
+RecordType.DeveloperName = &quot;Branded_ads_Case&quot;,
+ISPICKVAL( Request_Type__c , &quot;Activate Branded Ads&quot;) ,
+NOT( Branded_Ads_activated__c )
+)</errorConditionFormula>
+    <errorDisplayField>Branded_Ads_activated__c</errorDisplayField>
+    <errorMessage>Branded Ads Activated checkbox is not ticked. The field needs to be checked before the case can be closed</errorMessage>
+</ValidationRule>

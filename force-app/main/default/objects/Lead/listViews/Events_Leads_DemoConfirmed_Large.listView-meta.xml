@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Events_Leads_DemoConfirmed_Large</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>LEAD.EMPLOYEES</columns>
+    <columns>zp2023_demo_confirmed_date_time__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>LEAD.EMPLOYEES</field>
+        <operation>greaterOrEqual</operation>
+        <value>250</value>
+    </filters>
+    <filters>
+        <field>LEAD.EMPLOYEES</field>
+        <operation>lessOrEqual</operation>
+        <value>9999</value>
+    </filters>
+    <filters>
+        <field>Loss_Reason__c</field>
+        <operation>notEqual</operation>
+        <value>Duplicated Lead</value>
+    </filters>
+    <label>Events Leads_DemoConfirmed-Large</label>
+</ListView>

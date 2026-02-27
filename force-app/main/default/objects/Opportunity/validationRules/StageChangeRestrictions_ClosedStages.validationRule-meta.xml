@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>StageChangeRestrictions_ClosedStages</fullName>
+    <active>true</active>
+    <description>Stage Change Restrictions for Closed Stages. 
+RO-1630</description>
+    <errorConditionFormula>AND(
+ISCHANGED( StageName ) ,
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;,
+
+OR(
+
+/* Not changing Closed Won */
+ISPICKVAL(PRIORVALUE(StageName), &quot;Closed Won&quot;),
+
+/* Not changing Closed Lost */
+AND(
+ISPICKVAL(PRIORVALUE(StageName), &quot;Closed Lost&quot;),
+NOT(ISPICKVAL(Approval_Status__c, &quot;Rejected&quot;))
+),
+
+/* Contract received can only be changed to Closed Won */
+AND(
+ISPICKVAL(PRIORVALUE(StageName), &quot;Contract received&quot;),
+NOT(ISPICKVAL(StageName, &quot;Closed Won&quot;))
+),
+
+/* Onlinekauf */
+AND(
+ISPICKVAL(PRIORVALUE(StageName), &quot;Onlinekauf&quot;),
+
+OR(
+NOT(IsClosed),
+ISPICKVAL(StageName, &quot;Closed Won&quot;),
+AND(
+ISPICKVAL(StageName, &quot;Closed Lost&quot;),
+NOT(CONTAINS($Profile.Name,&quot;Head&quot;))
+)
+)
+)
+
+)
+)</errorConditionFormula>
+    <errorMessage>Opportunity cannot be moved to the selected stage. Please reach out to your team lead.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Enrichment_Status__c</fullName>
+    <description>This field is the basis for some Clay enrichment processes and captures where in the process the contact currently is. This field is initially populated by LeanData, then altered by Clay.</description>
+    <label>Enrichment Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Enrichment Pending</fullName>
+                <default>false</default>
+                <label>Enrichment Pending</label>
+            </value>
+            <value>
+                <fullName>Enrichment Successful</fullName>
+                <default>false</default>
+                <label>Enrichment Successful</label>
+            </value>
+            <value>
+                <fullName>Enrichment Failed</fullName>
+                <default>false</default>
+                <label>Enrichment Failed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

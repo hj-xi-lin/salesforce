@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Copy_of_Test_Franzi_Fixed_Portfolio</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>CONTACT.PHONE1</columns>
+    <columns>CONTACT.EMAIL</columns>
+    <columns>CONTACT.TITLE</columns>
+    <columns>Title_Categories__c</columns>
+    <columns>Priority_Level__c</columns>
+    <columns>Operational_Contact__c</columns>
+    <columns>MQL_Type_Contact__c</columns>
+    <columns>MQL_Source_c__c</columns>
+    <columns>MQL_Source_Date_c__c</columns>
+    <columns>Recent_Conversion__c</columns>
+    <columns>Timestamp_Latest_MQL_conversion_c__c</columns>
+    <columns>Active__c</columns>
+    <columns>Lifecycle_Stage_Contact__c</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>Account.Stage_ACM__c</field>
+        <operation>equals</operation>
+        <value>Prospect,Acquisition</value>
+    </filters>
+    <label>Test Franzi Related Contacts View</label>
+    <sharedTo>
+        <role>Executive_Leadership</role>
+    </sharedTo>
+</ListView>

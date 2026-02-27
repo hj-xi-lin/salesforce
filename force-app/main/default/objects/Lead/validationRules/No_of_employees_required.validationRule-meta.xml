@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_of_employees_required</fullName>
+    <active>true</active>
+    <description>No. of Employees must be filled out before converting!</description>
+    <errorConditionFormula>AND( 
+ISPICKVAL(Status, &quot;Converted&quot;), 
+ISBLANK( NumberOfEmployees ))</errorConditionFormula>
+    <errorDisplayField>NumberOfEmployees</errorDisplayField>
+    <errorMessage>Please enter the No. of Employees!</errorMessage>
+</ValidationRule>

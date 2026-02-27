@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Copy_of_Onboarding_Queue</fullName>
+    <columns>OWNER_NAME</columns>
+    <columns>GTM_Motion_Case__c</columns>
+    <columns>CASES.RECORDTYPE</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>Product_Type__c</columns>
+    <columns>Due_Date__c</columns>
+    <columns>Actual_REACH_Campaign_start_date__c</columns>
+    <columns>Label__c</columns>
+    <columns>Account_Owner__c</columns>
+    <columns>Created_Date_Time__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Case.ATS_New_Onboarding,Case.Customer_Onboarding_Support</value>
+    </filters>
+    <filters>
+        <field>GTM_Motion_Case__c</field>
+        <operation>notContain</operation>
+        <value>agency</value>
+    </filters>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>equals</operation>
+        <value>New,Internal Handover,Customer Onboarding,Quality check,Waiting for Campaign Start,In Discussion With ACM,On Hold,Blocked</value>
+    </filters>
+    <filters>
+        <field>Data_complete__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <label>Onboarding Team Queue</label>
+</ListView>

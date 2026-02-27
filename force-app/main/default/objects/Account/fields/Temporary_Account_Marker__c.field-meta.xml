@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Temporary_Account_Marker__c</fullName>
+    <description>Used to Mark Account for different purposes. Currently Used to Mark Accounts related to a B2B Marketing Outreach with Link Out Info. Has to stay here at least 01.10.2025. Please align with marketing before overwriting)</description>
+    <label>Legacy Temporary Account Marker</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Only Link Out Last 12 Months (31.07.2025)</fullName>
+                <default>false</default>
+                <label>Only Link Out Last 12 Months (31.07.2025)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

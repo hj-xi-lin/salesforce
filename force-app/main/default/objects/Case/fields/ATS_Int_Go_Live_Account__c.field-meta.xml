@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ATS_Int_Go_Live_Account__c</fullName>
+    <description>RO-1759</description>
+    <formula>Account.ATS_Int_Go_Live__c</formula>
+    <inlineHelpText>Displays the value from the linked account</inlineHelpText>
+    <label>ATS Int. Go-Live (Account)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Exclude_MQLs_contact__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>RO-1743</description>
+    <inlineHelpText>If this checkbox is true the MQL will not appear in Sales List views or SSSU MQL tracking that filter for this property</inlineHelpText>
+    <label>Exclude MQLs</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_annual_recruiting_budget__c</fullName>
+    <description>RO-2093</description>
+    <inlineHelpText>Wie hoch ist das Gesamtbudget des Unternehmens für die Personalbeschaffung im aktuellen Jahr?</inlineHelpText>
+    <label>Total annual recruiting budget</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

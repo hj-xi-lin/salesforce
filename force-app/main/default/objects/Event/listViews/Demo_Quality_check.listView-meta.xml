@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Demo_Quality_check</fullName>
+    <booleanFilter>(1 OR 2 OR 3) AND 4 AND 5 AND 6 AND 7 AND 8</booleanFilter>
+    <columns>SUBJECT</columns>
+    <columns>WHAT_NAME</columns>
+    <columns>CORE.USERS.FULL_NAME</columns>
+    <columns>DUE_DATE</columns>
+    <columns>Demo_Quality__c</columns>
+    <columns>CREATEDBY_USER.ALIAS</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>txtEventType__c</field>
+        <operation>equals</operation>
+        <value>Demo Call</value>
+    </filters>
+    <filters>
+        <field>txtEventType__c</field>
+        <operation>equals</operation>
+        <value>Demo F2F</value>
+    </filters>
+    <filters>
+        <field>txtEventType__c</field>
+        <operation>equals</operation>
+        <value>Demo Video Call</value>
+    </filters>
+    <filters>
+        <field>DUE_DATE</field>
+        <operation>greaterOrEqual</operation>
+        <value>YESTERDAY</value>
+    </filters>
+    <filters>
+        <field>Assigned_Profile__c</field>
+        <operation>equals</operation>
+        <value>Large Hunter,Head of Large Hunting</value>
+    </filters>
+    <filters>
+        <field>Event_cancelled__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>greaterOrEqual</operation>
+        <value>7/1/2023 12:00 AM</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.FULL_NAME</field>
+        <operation>notEqual</operation>
+        <value>,Tobias Stöllinger,Anupal Bains,Melanie Steinhäusler</value>
+    </filters>
+    <label>Demo Quality Review</label>
+</ListView>

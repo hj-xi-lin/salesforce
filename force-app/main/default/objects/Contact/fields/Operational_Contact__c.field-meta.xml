@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Operational_Contact__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Shows if this is the main contact person of the account
+RO-1317 - Field should get reviewed in 6-12 months. Please don&apos;t build any automation based on this field, since it might be removed after the review!</description>
+    <inlineHelpText>Shows if this is the main contact person of the account</inlineHelpText>
+    <label>Operational Contact</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

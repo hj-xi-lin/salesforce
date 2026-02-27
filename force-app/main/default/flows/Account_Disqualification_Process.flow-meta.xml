@@ -63,7 +63,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Update_Account_to_be_owned_by_Lead_Gen</targetReference>
+                <targetReference>Update_Account_to_Outbound</targetReference>
             </connector>
             <label>Outbound &amp; LeadGen</label>
         </rules>
@@ -198,9 +198,6 @@
         <label>Update Account to be owned by Lead Gen</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
-        <connector>
-            <targetReference>Update_Account_to_Outbound</targetReference>
-        </connector>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
@@ -332,6 +329,9 @@
         <label>Update Account to Outbound</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Account_to_be_owned_by_Lead_Gen</targetReference>
+        </connector>
         <flowName>GTM_Motion_Enable_RT_Lifecycle_Changes</flowName>
         <inputAssignments>
             <name>varAccount</name>

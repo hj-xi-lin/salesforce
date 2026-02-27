@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Wrong_Record_Type_to_change_Owner</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+$User.LastName &lt;&gt; &quot;Taskdrive&quot;,
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;,
+$Profile.Name &lt;&gt; &quot;Customer Operations Manager&quot;,
+$Profile.Name &lt;&gt; &quot;Head of Customer Operations&quot;,
+$Profile.Name &lt;&gt; &quot;Head of Large Prospecting&quot;,
+Ultimate_Account_ID__c &lt;&gt;  $Label.Account_Id_Arbeiterwohlfahrt_Bundesverband ,
+Ultimate_Account_ID__c &lt;&gt;  $Label.Account_Id_Caritas ,
+Ultimate_Account_ID__c &lt;&gt;  $Label.Account_Id_Deutsches_Rotes_Kreuz ,
+Ultimate_Account_ID__c &lt;&gt;  $Label.Account_Id_EDEKA_ZENTRALE_Stiftung ,
+Ultimate_Account_ID__c &lt;&gt;  $Label.Account_Id_Diakonie ,
+NOT( $Permission.Sales_Operations ),
+ISCHANGED(OwnerId),
+OR(
+Record_Type__c = &quot;Outbound&quot;,
+Record_Type__c = &quot;Research&quot;
+)
+)</errorConditionFormula>
+    <errorMessage>Please change the Record Type to &quot;Sales&quot; in order to change the Account Owner</errorMessage>
+</ValidationRule>

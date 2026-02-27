@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>fmlTime_To_Onboarding_Closed__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+   (( Timestamp_Closed_Date__c  - CreatedDate ) * 1440/60) &gt;= 62,
+   (( Timestamp_Closed_Date__c  - CreatedDate ) * 1440/60) - 62,
+    ( Timestamp_Closed_Date__c  - CreatedDate ) * 1440/60
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>DELETE_Time To Onboarding Closed</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>
