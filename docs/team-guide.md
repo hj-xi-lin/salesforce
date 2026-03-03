@@ -60,7 +60,7 @@ salesforce/
 ### 2. Clone and authenticate
 
 ```bash
-git clone https://github.com/hj-xi-lin/salesforce.git
+git clone https://github.com/heyjobs/salesforce.git
 cd salesforce
 sf org login web -a heyjobs
 ```

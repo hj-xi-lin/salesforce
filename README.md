@@ -17,7 +17,7 @@ Before you start, make sure you have:
 ### Step 1: Clone the repo
 
 ```bash
-git clone https://github.com/hj-xi-lin/salesforce.git
+git clone https://github.com/heyjobs/salesforce.git
 cd salesforce
 ```
 
