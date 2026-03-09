@@ -1,0 +1,147 @@
+name: Salesforce Drift Detection
+
+on:
+  schedule:
+    # Every day at 8 PM UTC
+    - cron: '0 20 * * *'
+  workflow_dispatch:
+    inputs:
+      org_alias:
+        description: 'Salesforce org alias'
+        default: 'heyjobs'
+      assignees:
+        description: 'PR assignees (comma-separated GitHub usernames, or leave empty for repo default)'
+        default: ''
+
+permissions:
+  contents: write
+  pull-requests: write
+
+env:
+  ORG_ALIAS: ${{ inputs.org_alias || 'heyjobs' }}
+  DRIFT_BRANCH: drift/org-sync
+
+jobs:
+  detect-drift:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.DRIFT_DETECTION_TOKEN || secrets.GITHUB_TOKEN }}
+
+      - name: Install Salesforce CLI
+        run: npm install -g @salesforce/cli
+
+      - name: Authenticate to Production Org
+        run: |
+          echo "${{ secrets.SF_JWT_KEY }}" > server.key
+          sf org login jwt \
+            --username "${{ secrets.SF_USERNAME }}" \
+            --jwt-key-file server.key \
+            --client-id "${{ secrets.SF_CLIENT_ID }}" \
+            --alias "${{ env.ORG_ALIAS }}" \
+            --instance-url https://heyjobs.my.salesforce.com
+          rm server.key
+
+      - name: Configure Git
+        run: |
+          git config user.name "heyjobsbot"
+          git config user.email "team.devx@heyjobs.de"
+
+      - name: Run drift detection
+        id: detect
+        env:
+          SF_ORG_ALIAS: ${{ env.ORG_ALIAS }}
+        run: |
+          chmod +x scripts/detect-drift.sh
+          bash scripts/detect-drift.sh
+
+      - name: Stage changes
+        id: check
+        run: |
+          # Reset intent-to-add entries and do a real stage
+          git reset -- force-app/ 2>/dev/null || true
+          git add -A force-app/
+          if git diff --quiet --cached; then
+            echo "has_changes=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_changes=true" >> "$GITHUB_OUTPUT"
+            echo "$(git diff --cached --stat)" >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Create or update drift PR
+        if: steps.check.outputs.has_changes == 'true' || steps.detect.outputs.unknown_missing > 0
+        env:
+          GH_TOKEN: ${{ secrets.DRIFT_DETECTION_TOKEN || secrets.GITHUB_TOKEN }}
+        run: |
+          BRANCH="${{ env.DRIFT_BRANCH }}"
+          DATE="$(date -u +%Y-%m-%d)"
+
+          # Start a fresh branch from main
+          git checkout -b "$BRANCH"
+          git add -A force-app/
+          git commit -m "$(cat <<EOF
+          chore: sync Salesforce org drift — $DATE
+
+          Automated drift detection found changes between the
+          production org and this repository.
+
+          Co-Authored-By: heyjobsbot <team.devx@heyjobs.de>
+          EOF
+          )"
+
+          # Push branch (force-update if it already exists — this is a
+          # bot-managed branch that only the workflow writes to)
+          git push origin "$BRANCH" --force
+
+          # Resolve assignees: manual input > repo variable > none
+          ASSIGNEES="${{ inputs.assignees || vars.DRIFT_PR_ASSIGNEES || '' }}"
+
+          # Build --assignee flags
+          ASSIGNEE_FLAGS=""
+          if [ -n "$ASSIGNEES" ]; then
+            IFS=',' read -ra USERS <<< "$ASSIGNEES"
+            for user in "${USERS[@]}"; do
+              user="$(echo "$user" | xargs)"  # trim whitespace
+              [ -n "$user" ] && ASSIGNEE_FLAGS+=" --assignee $user"
+            done
+          fi
+
+          # Check for an existing open PR on this branch
+          EXISTING_PR=$(gh pr list \
+            --head "$BRANCH" \
+            --state open \
+            --json number \
+            --jq '.[0].number' 2>/dev/null || true)
+
+          if [ -n "$EXISTING_PR" ]; then
+            gh pr edit "$EXISTING_PR" \
+              --title "chore: Salesforce org drift detected — $DATE" \
+              --body-file drift-report.md \
+              $ASSIGNEE_FLAGS
+            echo "Updated existing PR #$EXISTING_PR" >> "$GITHUB_STEP_SUMMARY"
+          else
+            gh pr create \
+              --title "chore: Salesforce org drift detected — $DATE" \
+              --label "automated" \
+              --label "drift" \
+              --body-file drift-report.md \
+              --base main \
+              --head "$BRANCH" \
+              $ASSIGNEE_FLAGS
+            echo "Created new drift PR" >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: No drift detected
+        if: steps.check.outputs.has_changes == 'false' && (steps.detect.outputs.unknown_missing == '0' || steps.detect.outputs.unknown_missing == '')
+        run: echo "No drift detected — org and repo are in sync." >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload drift report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: drift-report
+          path: drift-report.md
+          retention-days: 30
+          if-no-files-found: ignore
