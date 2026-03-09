@@ -35,9 +35,14 @@ jobs:
 
       - name: Authenticate to Production Org
         run: |
-          echo "${{ secrets.SF_PRODUCTION_AUTH_URL }}" > auth-url.txt
-          sf org login sfdx-url --sfdx-url-file auth-url.txt --alias "${{ env.ORG_ALIAS }}"
-          rm auth-url.txt
+          echo "${{ secrets.SF_JWT_KEY }}" > server.key
+          sf org login jwt \
+            --username "${{ secrets.SF_USERNAME }}" \
+            --jwt-key-file server.key \
+            --client-id "${{ secrets.SF_CLIENT_ID }}" \
+            --alias "${{ env.ORG_ALIAS }}" \
+            --instance-url https://heyjobs.my.salesforce.com
+          rm server.key
 
       - name: Configure Git
         run: |
