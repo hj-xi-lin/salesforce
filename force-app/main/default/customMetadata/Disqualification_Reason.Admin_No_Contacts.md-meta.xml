@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>No contact data on any contacts</label>
+    <protected>false</protected>
+    <values>
+        <field>Approval_Requirement__c</field>
+        <value xsi:type="xsd:string">Conditional</value>
+    </values>
+    <values>
+        <field>Category__c</field>
+        <value xsi:type="xsd:string">Administrative</value>
+    </values>
+    <values>
+        <field>Is_Active__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>Outcome__c</field>
+        <value xsi:type="xsd:string">Permanent_Loss</value>
+    </values>
+    <values>
+        <field>Reason_Value__c</field>
+        <value xsi:type="xsd:string">Admin: No contact data on any contacts</value>
+    </values>
+    <values>
+        <field>Requires_Detail_Text__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>Requires_Duplicate_Lookup__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>Requires_Market_Input__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>Sets_Blacklist__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>Sort_Order__c</field>
+        <value xsi:type="xsd:double">80.0</value>
+    </values>
+</CustomMetadata>

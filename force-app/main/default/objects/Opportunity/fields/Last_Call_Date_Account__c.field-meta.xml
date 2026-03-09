@@ -2,7 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Last_Call_Date_Account__c</fullName>
     <description>Last Call Date from related Account</description>
-    <formula>Account.ActivityMetric.LastCallDateTime</formula>
+    <formula>ENCODED:[treatNullAsNull]{!ID:Account.ActivityMetric.LastCallDateTime}</formula>
     <inlineHelpText>Datum des letzten Anrufs vom zugehörigen Account</inlineHelpText>
     <label>Last Call Date (Account)</label>
     <required>false</required>

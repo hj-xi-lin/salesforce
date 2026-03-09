@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partner_Days_Left_In_Contract__c</fullName>
+    <description>RO-2858 — Replaces Days_left_in_current_contract__c. Days remaining until contract end.</description>
+    <externalId>false</externalId>
+    <formula>Partner_Contract_End_Date__c - TODAY()</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Partner Days Left In Contract</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

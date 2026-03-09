@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partner_Current_AE__c</fullName>
+    <description>RO-2858 — Current commission %. Cascading check against Partner_Booking_Within_Contract__c: if &gt;= Threshold 3 then Kickback 3 AE, else if &gt;= Threshold 2 then Kickback 2 AE, else if &gt;= Threshold 1 then Kickback 1 AE, else Basis AE.</description>
+    <formula>IF( Partner_Booking_Within_Contract__c &gt;= Partner_Kickback_Threshold_3__c, Partner_Kickback_3_AE__c,
+IF( Partner_Booking_Within_Contract__c &gt;= Partner_Kickback_Threshold_2__c, Partner_Kickback_2_AE__c,
+IF( Partner_Booking_Within_Contract__c &gt;= Partner_Kickback_Threshold_1__c, Partner_Kickback_1_AE__c,
+Partner_Basis_AE__c )))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Partner Current AE</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Percent</type>
+</CustomField>

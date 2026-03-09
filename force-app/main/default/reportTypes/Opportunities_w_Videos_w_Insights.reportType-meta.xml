@@ -4,14 +4,6 @@
     <category>activities</category>
     <deployed>true</deployed>
     <description>Opportunities w/ Videos w/ Insights</description>
-    <join>
-        <join>
-            <outerJoin>false</outerJoin>
-            <relationship>Insights</relationship>
-        </join>
-        <outerJoin>false</outerJoin>
-        <relationship>UnifiedVideoCalls</relationship>
-    </join>
     <label>Opportunities w/ Videos w/ Insights</label>
     <sections>
         <columns>
@@ -302,89 +294,9 @@
         <masterLabel>Opportunities</masterLabel>
     </sections>
     <sections>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>ActivityDateTime</field>
-            <table>Opportunity.UnifiedVideoCalls</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>ActivitySubType</field>
-            <table>Opportunity.UnifiedVideoCalls</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>CallDurationInSeconds</field>
-            <table>Opportunity.UnifiedVideoCalls</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>IsInsightAvailable</field>
-            <table>Opportunity.UnifiedVideoCalls</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Subject</field>
-            <table>Opportunity.UnifiedVideoCalls</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Id</field>
-            <table>Opportunity.UnifiedVideoCalls</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Detail</field>
-            <table>Opportunity.UnifiedVideoCalls</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Detail.Id</field>
-            <table>Opportunity.UnifiedVideoCalls</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Detail.IntelligenceScore</field>
-            <table>Opportunity.UnifiedVideoCalls</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Detail.DurationInSeconds</field>
-            <table>Opportunity.UnifiedVideoCalls</table>
-        </columns>
         <masterLabel>Unified Video Calls</masterLabel>
     </sections>
     <sections>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>AggregatedKeywordOccurrences</field>
-            <table>Opportunity.UnifiedVideoCalls.Insights</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>CreatedDate</field>
-            <table>Opportunity.UnifiedVideoCalls.Insights</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>InsightType</field>
-            <table>Opportunity.UnifiedVideoCalls.Insights</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>LastModifiedDate</field>
-            <table>Opportunity.UnifiedVideoCalls.Insights</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Scope</field>
-            <table>Opportunity.UnifiedVideoCalls.Insights</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Id</field>
-            <table>Opportunity.UnifiedVideoCalls.Insights</table>
-        </columns>
         <masterLabel>Insights</masterLabel>
     </sections>
 </ReportType>

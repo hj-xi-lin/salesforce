@@ -2,10 +2,23 @@
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>59.0</apiVersion>
     <assignments>
+        <name>Update_ACM_assignment_TS</name>
+        <label>Update ACM assignment TS</label>
+        <locationX>50</locationX>
+        <locationY>3095</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Timestamp_ACM_Assignment__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDateTime</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
         <name>Update_ATS_Name_Check</name>
         <label>Update ATS Name Check</label>
         <locationX>50</locationX>
-        <locationY>1595</locationY>
+        <locationY>1895</locationY>
         <assignmentItems>
             <assignToReference>$Record.Last_ATS_Name_Check__c</assignToReference>
             <operator>Assign</operator>
@@ -21,7 +34,7 @@
         <name>Update_Last_Account_Run_Check</name>
         <label>Update Last Account Run Check</label>
         <locationX>50</locationX>
-        <locationY>2195</locationY>
+        <locationY>2495</locationY>
         <assignmentItems>
             <assignToReference>$Record.Last_Account_Run_Check__c</assignToReference>
             <operator>Assign</operator>
@@ -53,7 +66,7 @@
         <name>Update_Last_Follow_up_Date_Check</name>
         <label>Update Last Follow-up Date Check</label>
         <locationX>50</locationX>
-        <locationY>1895</locationY>
+        <locationY>2195</locationY>
         <assignmentItems>
             <assignToReference>$Record.Last_Follow_up_Date_Check__c</assignToReference>
             <operator>Assign</operator>
@@ -63,6 +76,22 @@
         </assignmentItems>
         <connector>
             <targetReference>Account_Run_Fields_Changed</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Update_Last_Happiness_Check</name>
+        <label>Update Last Happiness Check</label>
+        <locationX>50</locationX>
+        <locationY>1295</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Last_Account_Happiness_Check__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>fmlToday</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Purchase_Decision_Behavior_changed</targetReference>
         </connector>
     </assignments>
     <assignments>
@@ -78,7 +107,7 @@
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Purchase_Decision_Behavior_changed</targetReference>
+            <targetReference>Check_if_Account_Happiness_is_updated</targetReference>
         </connector>
     </assignments>
     <assignments>
@@ -101,7 +130,7 @@
         <name>Update_Last_Purchase_Decision_Behavior_Check</name>
         <label>Update Last Purchase Decision Behavior Check</label>
         <locationX>50</locationX>
-        <locationY>1295</locationY>
+        <locationY>1595</locationY>
         <assignmentItems>
             <assignToReference>$Record.Last_Purchase_Decision_Behavior_Check__c</assignToReference>
             <operator>Assign</operator>
@@ -117,7 +146,7 @@
         <name>Update_TS_EWS_Overwrite</name>
         <label>Update TS EWS Overwrite</label>
         <locationX>50</locationX>
-        <locationY>2495</locationY>
+        <locationY>2795</locationY>
         <assignmentItems>
             <assignToReference>$Record.Timestamp_EWS_Overwrite__c</assignToReference>
             <operator>Assign</operator>
@@ -125,6 +154,9 @@
                 <elementReference>$Flow.CurrentDateTime</elementReference>
             </value>
         </assignmentItems>
+        <connector>
+            <targetReference>Is_assigned_to_ACM</targetReference>
+        </connector>
     </assignments>
     <decisions>
         <name>Account_Blacklisted</name>
@@ -155,7 +187,7 @@
         <name>Account_Run_Fields_Changed</name>
         <label>Account Run Fields Changed?</label>
         <locationX>182</locationX>
-        <locationY>2087</locationY>
+        <locationY>2387</locationY>
         <defaultConnector>
             <targetReference>EW_Overwrite_Changed</targetReference>
         </defaultConnector>
@@ -222,7 +254,7 @@
         <name>ATS_Name_Changed</name>
         <label>ATS Name Changed?</label>
         <locationX>182</locationX>
-        <locationY>1487</locationY>
+        <locationY>1787</locationY>
         <defaultConnector>
             <targetReference>Follow_up_Date_Changed</targetReference>
         </defaultConnector>
@@ -251,13 +283,38 @@
         </rules>
     </decisions>
     <decisions>
+        <name>Check_if_Account_Happiness_is_updated</name>
+        <label>Check if Account Happiness is updated</label>
+        <locationX>182</locationX>
+        <locationY>1187</locationY>
+        <defaultConnector>
+            <targetReference>Purchase_Decision_Behavior_changed</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.plAccountHappiness__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Last_Happiness_Check</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
         <description>RO - 2031</description>
         <name>Check_if_HeyJobs_category_is_Changed</name>
         <label>Check if HeyJobs category is Changed</label>
         <locationX>182</locationX>
         <locationY>887</locationY>
         <defaultConnector>
-            <targetReference>Purchase_Decision_Behavior_changed</targetReference>
+            <targetReference>Check_if_Account_Happiness_is_updated</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -306,7 +363,10 @@
         <name>EW_Overwrite_Changed</name>
         <label>EW Overwrite Changed?</label>
         <locationX>182</locationX>
-        <locationY>2387</locationY>
+        <locationY>2687</locationY>
+        <defaultConnector>
+            <targetReference>Is_assigned_to_ACM</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>No</defaultConnectorLabel>
         <rules>
             <name>Yes4</name>
@@ -328,7 +388,7 @@
         <name>Follow_up_Date_Changed</name>
         <label>Follow-up Date Changed?</label>
         <locationX>182</locationX>
-        <locationY>1787</locationY>
+        <locationY>2087</locationY>
         <defaultConnector>
             <targetReference>Account_Run_Fields_Changed</targetReference>
         </defaultConnector>
@@ -350,10 +410,33 @@
         </rules>
     </decisions>
     <decisions>
+        <name>Is_assigned_to_ACM</name>
+        <label>Is assigned to ACM?</label>
+        <locationX>182</locationX>
+        <locationY>2987</locationY>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_12</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Owner.UserRole.DeveloperName</leftValueReference>
+                <operator>StartsWith</operator>
+                <rightValue>
+                    <stringValue>Sub_Ret_IC</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_ACM_assignment_TS</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>Purchase_Decision_Behavior_changed</name>
         <label>Purchase Decision Behavior changed?</label>
         <locationX>182</locationX>
-        <locationY>1187</locationY>
+        <locationY>1487</locationY>
         <defaultConnector>
             <targetReference>ATS_Name_Changed</targetReference>
         </defaultConnector>
@@ -374,8 +457,14 @@
             <label>Yes</label>
         </rules>
     </decisions>
-    <description>RO - 1656 , RO - 1655, RO - 1855, RO-1981, RO - 2031, RO-2046, RO-2032,RO-2282, RO-2317, RO-2433, TS EWS Overwrite, RO - 2747 , RO - 1357 , RO - 2747</description>
+    <description>RO - 1656 , RO - 1655, RO - 1855, RO-1981, RO - 2031, RO-2046, RO-2032,RO-2282, RO-2317, RO-2433, TS EWS Overwrite, RO - 2747, RO-2807</description>
     <environments>Default</environments>
+    <formulas>
+        <name>fmlBookingCoveringCheck</name>
+        <dataType>Number</dataType>
+        <expression>2 - ( {!$Record__Prior.BookingCoverage__c} - {!$Record.BookingCoverage__c})</expression>
+        <scale>2</scale>
+    </formulas>
     <formulas>
         <name>fmlIsNew</name>
         <dataType>Boolean</dataType>
@@ -420,6 +509,13 @@
         </connector>
         <filterLogic>or</filterLogic>
         <filters>
+            <field>plAccountHappiness__c</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
             <field>Purchase_Decision_Behavior__c</field>
             <operator>IsChanged</operator>
             <value>
@@ -435,6 +531,13 @@
         </filters>
         <filters>
             <field>HeyJobs_Category__c</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Segment_V02__c</field>
             <operator>IsChanged</operator>
             <value>
                 <booleanValue>true</booleanValue>
@@ -517,9 +620,16 @@
                 <booleanValue>true</booleanValue>
             </value>
         </filters>
+        <filters>
+            <field>OwnerId</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
         <object>Account</object>
         <recordTriggerType>CreateAndUpdate</recordTriggerType>
         <triggerType>RecordBeforeSave</triggerType>
     </start>
-    <status>Active</status>
+    <status>Obsolete</status>
 </Flow>

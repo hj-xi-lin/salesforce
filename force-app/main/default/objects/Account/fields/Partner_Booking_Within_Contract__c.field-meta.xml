@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partner_Booking_Within_Contract__c</fullName>
+    <description>RO-2858 — Replaces Bookings_in_current_contract__c. Bookings under ultimate parent account within contract period. Populated by Flow. Same filters as Partner_Booking_FY__c but from Partner_Contract_Start_Date__c until today.</description>
+    <label>Partner Booking Within Contract</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

@@ -796,7 +796,7 @@
     <assignments>
         <name>Assign_Values_Opp_w_Demo</name>
         <label>Assign Values Opp w/ Demo</label>
-        <locationX>534</locationX>
+        <locationX>402</locationX>
         <locationY>2606</locationY>
         <assignmentItems>
             <assignToReference>varNewOpp.AccountId</assignToReference>
@@ -889,7 +889,7 @@
     <assignments>
         <name>Assign_Values_Opp_w_Demo_Scheduled</name>
         <label>Assign Values Opp w/ Demo Scheduled</label>
-        <locationX>270</locationX>
+        <locationX>138</locationX>
         <locationY>2606</locationY>
         <assignmentItems>
             <assignToReference>varNewOpp.AccountId</assignToReference>
@@ -980,9 +980,67 @@
         </connector>
     </assignments>
     <assignments>
+        <name>Assign_Values_Opp_w_DemoHandover</name>
+        <label>Assign Values Opp w/ Demo Handover</label>
+        <locationX>930</locationX>
+        <locationY>2606</locationY>
+        <assignmentItems>
+            <assignToReference>varNewOpp.AccountId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>varAccountRecord.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varOppAccOwner</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$User.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varNewOpp.StageName</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>fmlOppStageWithDemoHandover</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varNewOpp.Name</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>1</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varNewOpp.RecordTypeId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Record_Type</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varAccountOwnerId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$User.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varNewOpp.Allow_Opp_Creation__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Funnel_Type</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
         <name>Assign_Values_Opp_w_o_Demo</name>
         <label>Assign Values Opp w/o Demo</label>
-        <locationX>798</locationX>
+        <locationX>666</locationX>
         <locationY>2606</locationY>
         <assignmentItems>
             <assignToReference>varNewOpp.AccountId</assignToReference>
@@ -1257,6 +1315,15 @@
         </value>
     </choices>
     <choices>
+        <description>This calls in the Bookit Handoff component.</description>
+        <name>choicewithDemoHandover</name>
+        <choiceText>&lt;strong&gt;With&lt;/strong&gt; Demo&lt;strong&gt; Handover&lt;/strong&gt;</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>choicewithDemoHandover</stringValue>
+        </value>
+    </choices>
+    <choices>
         <name>choiceWithoutDemo</name>
         <choiceText>&lt;strong&gt;Without&lt;/strong&gt; Demo Event</choiceText>
         <dataType>String</dataType>
@@ -1328,6 +1395,21 @@
                 <targetReference>Assign_Values_Opp_w_o_Demo</targetReference>
             </connector>
             <label>Opp w/o Demo</label>
+        </rules>
+        <rules>
+            <name>Opp_w_DemoHandover</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Do_you_want_to_create_an_Opportunity_with_or_without_a_Demo_Event</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>choicewithDemoHandover</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Values_Opp_w_DemoHandover</targetReference>
+            </connector>
+            <label>Opp w/ Demo Handover</label>
         </rules>
     </decisions>
     <decisions>
@@ -1984,6 +2066,13 @@ TEXT( {!varAccountRecord.GTM_Motion_Account__c} ) = {!$Label.GTM_Motion_Inside_S
         <dataType>String</dataType>
         <expression>IF(
 {!Record_Type} = {!$Label.Opp_Sales_RT} , {!Stage_WithDemo_Sales} , SUBSTITUTE( {!Stage_WithDemo_Transactional} , &quot;and&quot;, &quot;&amp;&quot; )
+)</expression>
+    </formulas>
+    <formulas>
+        <name>fmlOppStageWithDemoHandover</name>
+        <dataType>String</dataType>
+        <expression>IF(
+{!Record_Type} = {!$Label.Opp_Sales_RT} , {!Stage_WithDemoHandover_Sales} , SUBSTITUTE( {!Stage_WithDemoHandover_Transactional} , &quot;and&quot;, &quot;&amp;&quot; )
 )</expression>
     </formulas>
     <formulas>
@@ -3404,6 +3493,7 @@ TEXT( {!varAccountRecord.GTM_Motion_Account__c} ) = {!$Label.GTM_Motion_Inside_S
                 <fields>
                     <name>Do_you_want_to_create_an_Opportunity_with_or_without_a_Demo_Event</name>
                     <choiceReferences>choiceWithDemo</choiceReferences>
+                    <choiceReferences>choicewithDemoHandover</choiceReferences>
                     <choiceReferences>choiceWithoutDemo</choiceReferences>
                     <dataType>String</dataType>
                     <fieldText>Do you want to create an Opportunity with or without a Demo Event?</fieldText>
@@ -3437,7 +3527,7 @@ TEXT( {!varAccountRecord.GTM_Motion_Account__c} ) = {!$Label.GTM_Motion_Inside_S
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>ScreenText5</name>
-                    <fieldText>&lt;p&gt;&lt;strong style=&quot;color: rgb(0, 0, 0);&quot;&gt;Opportunity &lt;/strong&gt;&lt;strong style=&quot;color: rgb(240, 22, 22);&quot;&gt;with&lt;/strong&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong style=&quot;color: rgb(0, 0, 0);&quot;&gt;Demo Event&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);&quot;&gt;A &lt;/span&gt;&lt;strong style=&quot;color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);&quot;&gt;demo event&lt;/strong&gt;&lt;span style=&quot;color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);&quot;&gt; will be created automatically and you will be defined as &lt;/span&gt;&lt;strong style=&quot;color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);&quot;&gt;Demo set by&lt;/strong&gt;&lt;span style=&quot;color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);&quot;&gt; User. &lt;/span&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);&quot;&gt;If the Stage is &lt;/span&gt;&lt;strong style=&quot;color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);&quot;&gt;Scheduled&lt;/strong&gt;&lt;span style=&quot;color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);&quot;&gt;, you will be the Opp Owner.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;If the Stage is &lt;/span&gt;&lt;strong style=&quot;color: rgb(0, 0, 0);&quot;&gt;Demo Confirmed &lt;/strong&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;or &lt;/span&gt;&lt;strong style=&quot;color: rgb(0, 0, 0);&quot;&gt;Pitch &amp;amp; Negotiation&lt;/strong&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;, the Demo Hunter &lt;/span&gt;&lt;span style=&quot;color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);&quot;&gt;will be the Opp Owner.&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);&quot;&gt;Opportunity &lt;/strong&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255); color: rgb(240, 22, 22);&quot;&gt;without&lt;/strong&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);&quot;&gt; Demo Event&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;You will be the Opp Owner.&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <fieldText>&lt;p&gt;&lt;strong style=&quot;color: rgb(0, 0, 0);&quot;&gt;Opportunity &lt;/strong&gt;&lt;strong style=&quot;color: rgb(240, 22, 22);&quot;&gt;with&lt;/strong&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong style=&quot;color: rgb(0, 0, 0);&quot;&gt;Demo Event&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);&quot;&gt;A &lt;/span&gt;&lt;strong style=&quot;color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);&quot;&gt;demo event&lt;/strong&gt;&lt;span style=&quot;color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);&quot;&gt; will be created automatically and you will be defined as &lt;/span&gt;&lt;strong style=&quot;color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);&quot;&gt;Demo set by&lt;/strong&gt;&lt;span style=&quot;color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);&quot;&gt; User. &lt;/span&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);&quot;&gt;If the Stage is &lt;/span&gt;&lt;strong style=&quot;color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);&quot;&gt;Scheduled&lt;/strong&gt;&lt;span style=&quot;color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);&quot;&gt;, you will be the Opp Owner.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;If the Stage is &lt;/span&gt;&lt;strong style=&quot;color: rgb(0, 0, 0);&quot;&gt;Demo Confirmed &lt;/strong&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;or &lt;/span&gt;&lt;strong style=&quot;color: rgb(0, 0, 0);&quot;&gt;Pitch &amp;amp; Negotiation&lt;/strong&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;, the Demo Hunter &lt;/span&gt;&lt;span style=&quot;color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);&quot;&gt;will be the Opp Owner.&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;strong style=&quot;color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);&quot;&gt;Opportunity &lt;/strong&gt;&lt;strong style=&quot;color: rgb(240, 22, 22); background-color: rgb(255, 255, 255);&quot;&gt;with&lt;/strong&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255);&quot;&gt; &lt;/strong&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);&quot;&gt;Demo Handover&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);&quot;&gt;This will display the Bookit Handoff Handover widget. Please reach out to &lt;/span&gt;&lt;a href=&quot;https://hey-jobs.slack.com/archives/D06CH3SD6NR&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);&quot;&gt;Lisann&lt;/a&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);&quot;&gt; if you&apos;d like to test this new feature.  The account, opp and demo will be assigned to the adequate round robin pool.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);&quot;&gt;Opportunity &lt;/strong&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255); color: rgb(240, 22, 22);&quot;&gt;without&lt;/strong&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);&quot;&gt; Demo Event&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;You will be the Opp Owner.&lt;/span&gt;&lt;/p&gt;</fieldText>
                     <fieldType>DisplayText</fieldType>
                 </fields>
                 <inputParameters>
@@ -3577,7 +3667,7 @@ TEXT( {!varAccountRecord.GTM_Motion_Account__c} ) = {!$Label.GTM_Motion_Inside_S
             <isRequired>false</isRequired>
             <regionContainerType>SectionWithoutHeader</regionContainerType>
             <visibilityRule>
-                <conditionLogic>and</conditionLogic>
+                <conditionLogic>1 AND 2</conditionLogic>
                 <conditions>
                     <leftValueReference>Do_you_want_to_create_an_Opportunity_with_or_without_a_Demo_Event</leftValueReference>
                     <operator>EqualTo</operator>
@@ -3785,7 +3875,7 @@ TEXT( {!varAccountRecord.GTM_Motion_Account__c} ) = {!$Label.GTM_Motion_Inside_S
             <isRequired>false</isRequired>
             <regionContainerType>SectionWithoutHeader</regionContainerType>
             <visibilityRule>
-                <conditionLogic>and</conditionLogic>
+                <conditionLogic>1 AND 2</conditionLogic>
                 <conditions>
                     <leftValueReference>Do_you_want_to_create_an_Opportunity_with_or_without_a_Demo_Event</leftValueReference>
                     <operator>EqualTo</operator>
@@ -3798,6 +3888,130 @@ TEXT( {!varAccountRecord.GTM_Motion_Account__c} ) = {!$Label.GTM_Motion_Inside_S
                     <operator>IsNull</operator>
                     <rightValue>
                         <booleanValue>false</booleanValue>
+                    </rightValue>
+                </conditions>
+            </visibilityRule>
+        </fields>
+        <fields>
+            <name>Bookit_Handoff_Assitant</name>
+            <extensionName>LeanData:bookItHandoffAssistant</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>recordId</name>
+                <value>
+                    <elementReference>varAccountRecord.Id</elementReference>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>objectApiName</name>
+                <value>
+                    <stringValue>Account</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>isInstantHandoff</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </inputParameters>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+            <visibilityRule>
+                <conditionLogic>and</conditionLogic>
+                <conditions>
+                    <leftValueReference>Do_you_want_to_create_an_Opportunity_with_or_without_a_Demo_Event</leftValueReference>
+                    <operator>EqualTo</operator>
+                    <rightValue>
+                        <elementReference>choicewithDemoHandover</elementReference>
+                    </rightValue>
+                </conditions>
+            </visibilityRule>
+        </fields>
+        <fields>
+            <name>Opp_Input_Section4</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>Opp_Input_Section4_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <fieldType>ObjectProvided</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>false</isRequired>
+                    <objectFieldReference>varNewOpp.CloseDate</objectFieldReference>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>Opp_Input_Section4_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>Stage_WithDemoHandover_Sales</name>
+                    <choiceReferences>choiceOppStageScheduled</choiceReferences>
+                    <choiceReferences>choiceOppStageConfirmed</choiceReferences>
+                    <dataType>String</dataType>
+                    <defaultSelectedChoiceReference>choiceOppStageScheduled</defaultSelectedChoiceReference>
+                    <fieldText>Stage</fieldText>
+                    <fieldType>DropdownBox</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <visibilityRule>
+                        <conditionLogic>and</conditionLogic>
+                        <conditions>
+                            <leftValueReference>Record_Type</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <elementReference>choiceOppRTSales</elementReference>
+                            </rightValue>
+                        </conditions>
+                    </visibilityRule>
+                </fields>
+                <fields>
+                    <name>Stage_WithDemoHandover_Transactional</name>
+                    <choiceReferences>choiceOppStagePitch</choiceReferences>
+                    <dataType>String</dataType>
+                    <defaultSelectedChoiceReference>choiceOppStagePitch</defaultSelectedChoiceReference>
+                    <fieldText>Stage</fieldText>
+                    <fieldType>DropdownBox</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isDisabled>
+                        <booleanValue>true</booleanValue>
+                    </isDisabled>
+                    <isRequired>true</isRequired>
+                    <visibilityRule>
+                        <conditionLogic>and</conditionLogic>
+                        <conditions>
+                            <leftValueReference>Record_Type</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <elementReference>choiceOppRTSalesTransactional</elementReference>
+                            </rightValue>
+                        </conditions>
+                    </visibilityRule>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
+            <visibilityRule>
+                <conditionLogic>and</conditionLogic>
+                <conditions>
+                    <leftValueReference>Do_you_want_to_create_an_Opportunity_with_or_without_a_Demo_Event</leftValueReference>
+                    <operator>EqualTo</operator>
+                    <rightValue>
+                        <elementReference>choicewithDemoHandover</elementReference>
                     </rightValue>
                 </conditions>
             </visibilityRule>
@@ -3916,7 +4130,7 @@ TEXT( {!varAccountRecord.GTM_Motion_Account__c} ) = {!$Label.GTM_Motion_Inside_S
             <targetReference>Get_Account_Contact_Relationships</targetReference>
         </connector>
     </start>
-    <status>Active</status>
+    <status>Draft</status>
     <variables>
         <name>varAccountOwnerId</name>
         <dataType>String</dataType>

@@ -1,5 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Submit_For_Approval</name>
+        <label>Submit for Approval</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>submit</actionName>
+        <actionType>submit</actionType>
+        <faultConnector>
+            <targetReference>Screen_Approval_Error</targetReference>
+        </faultConnector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>objectId</name>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>comment</name>
+            <value>
+                <elementReference>fmlDetailWithMarket</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>submit</nameSegment>
+    </actionCalls>
     <apiVersion>66.0</apiVersion>
     <constants>
         <name>LeadGenId</name>
@@ -9,80 +34,119 @@
         </value>
     </constants>
     <constants>
-        <name>recordIdDiscarded</name>
+        <name>RecordTypeIdDiscarded</name>
         <dataType>String</dataType>
         <value>
             <stringValue>0121v000000lUxJAAU</stringValue>
         </value>
     </constants>
+    <constants>
+        <name>RecordTypeIdOutbound</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>0121v000000lUxKAAU</stringValue>
+        </value>
+    </constants>
     <decisions>
-        <name>Next_Step</name>
-        <label>Next Step</label>
+        <name>Decision_Approval_Required</name>
+        <label>Approval Required?</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>Blacklist_Account</targetReference>
+            <targetReference>Update_Account_For_Approval</targetReference>
         </defaultConnector>
-        <defaultConnectorLabel>Blacklist</defaultConnectorLabel>
+        <defaultConnectorLabel>Needs Approval</defaultConnectorLabel>
         <rules>
-            <name>Outbound_LeadGen</name>
-            <conditionLogic>or</conditionLogic>
+            <name>Outcome_Approval_Free</name>
+            <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Disqualification_Reason</leftValueReference>
-                <operator>Contains</operator>
+                <leftValueReference>fmlIsApprovalFree</leftValueReference>
+                <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Competition</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>Disqualification_Reason</leftValueReference>
-                <operator>Contains</operator>
-                <rightValue>
-                    <stringValue>Product</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>Disqualification_Reason</leftValueReference>
-                <operator>Contains</operator>
-                <rightValue>
-                    <stringValue>Client</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>Disqualification_Reason</leftValueReference>
-                <operator>Contains</operator>
-                <rightValue>
-                    <stringValue>Stakeholder</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>Disqualification_Reason</leftValueReference>
-                <operator>Contains</operator>
-                <rightValue>
-                    <stringValue>Other</stringValue>
+                    <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Update_Account_to_Outbound</targetReference>
+                <targetReference>Decision_Release_Or_Loss</targetReference>
             </connector>
-            <label>Outbound &amp; LeadGen</label>
+            <label>Approval Free</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Decision_Release_Or_Loss</name>
+        <label>Release or Permanent Loss?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Update_Account_Loss_Immediate</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Permanent Loss</defaultConnectorLabel>
+        <rules>
+            <name>Outcome_Release</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>fmlIsRelease</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Account_Release_Immediate</targetReference>
+            </connector>
+            <label>Release</label>
         </rules>
     </decisions>
     <dynamicChoiceSets>
-        <name>pcs_AccountLossReasons</name>
-        <dataType>Picklist</dataType>
-        <displayField xsi:nil="true"/>
-        <object xsi:nil="true"/>
-        <picklistField>Loss_Reason_Account__c</picklistField>
-        <picklistObject>Account</picklistObject>
+        <name>drcReasons</name>
+        <dataType>String</dataType>
+        <displayField>MasterLabel</displayField>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Is_Active__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <limit>50</limit>
+        <object>Disqualification_Reason__mdt</object>
+        <sortField>Sort_Order__c</sortField>
+        <sortOrder>Asc</sortOrder>
+        <valueField>Reason_Value__c</valueField>
     </dynamicChoiceSets>
     <environments>Default</environments>
     <formulas>
-        <name>fup90</name>
-        <dataType>Date</dataType>
-        <expression>{!$Flow.CurrentDate} + 90</expression>
+        <name>fmlConditionalMet</name>
+        <dataType>Boolean</dataType>
+        <expression>(ISBLANK({!Get_Account_Data.Days_Since_Last_Booking__c}) || {!Get_Account_Data.Days_Since_Last_Booking__c} &gt; 365) &amp;&amp; {!Get_Account_Data.Estimated_Wallet_Size__c} &lt; 50000</expression>
     </formulas>
-    <interviewLabel>Account Disqualification Process {!$Flow.CurrentDateTime}</interviewLabel>
+    <formulas>
+        <name>fmlDetailWithMarket</name>
+        <dataType>String</dataType>
+        <expression>IF(NOT(ISBLANK({!txtMarket})), &quot;Market: &quot; &amp; {!txtMarket} &amp; IF(NOT(ISBLANK({!txtDetail})), &quot; | &quot; &amp; {!txtDetail}, &quot;&quot;), {!txtDetail})</expression>
+    </formulas>
+    <formulas>
+        <name>fmlIsApprovalFree</name>
+        <dataType>Boolean</dataType>
+        <expression>TEXT({!Get_Selected_Reason.Approval_Requirement__c}) = &quot;Never&quot; || (TEXT({!Get_Selected_Reason.Approval_Requirement__c}) = &quot;Conditional&quot; &amp;&amp; {!fmlConditionalMet})</expression>
+    </formulas>
+    <formulas>
+        <name>fmlIsRelease</name>
+        <dataType>Boolean</dataType>
+        <expression>TEXT({!Get_Selected_Reason.Outcome__c}) = &quot;Release&quot;</expression>
+    </formulas>
+    <formulas>
+        <name>fmlOutcomeText</name>
+        <dataType>String</dataType>
+        <expression>TEXT({!Get_Selected_Reason.Outcome__c})</expression>
+    </formulas>
+    <formulas>
+        <name>fmlToggleGTMHelper</name>
+        <dataType>Boolean</dataType>
+        <expression>NOT({!Get_Account_Data.GTM_Motion_Alignment_Helper__c})</expression>
+    </formulas>
+    <interviewLabel>Account Disqualification Process v2 {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Account Disqualification Process</label>
     <processMetadataValues>
         <name>BuilderType</name>
@@ -105,12 +169,12 @@
     <processType>Flow</processType>
     <recordLookups>
         <name>Get_Account_Data</name>
-        <label>Get_Account_Data</label>
+        <label>Get Account Data</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Disqualification</targetReference>
+            <targetReference>Screen_Select_Reason</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -124,40 +188,34 @@
         <object>Account</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
-    <recordUpdates>
-        <name>Blacklist_Account</name>
-        <label>Blacklist Account</label>
+    <recordLookups>
+        <name>Get_Selected_Reason</name>
+        <label>Get Selected Reason</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Screen_Confirm_Details</targetReference>
+        </connector>
         <filterLogic>and</filterLogic>
         <filters>
-            <field>Id</field>
+            <field>Reason_Value__c</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>Get_Account_Data.Id</elementReference>
+                <elementReference>ddReason</elementReference>
             </value>
         </filters>
-        <inputAssignments>
-            <field>Blacklist__c</field>
-            <value>
-                <booleanValue>true</booleanValue>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>RecordTypeId</field>
-            <value>
-                <elementReference>$Label.AccountRecordTypeID_Discarded</elementReference>
-            </value>
-        </inputAssignments>
-        <object>Account</object>
-    </recordUpdates>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Disqualification_Reason__mdt</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
     <recordUpdates>
-        <name>Update_Account_Fields</name>
-        <label>Update_Account_Fields</label>
+        <name>Update_Account_For_Approval</name>
+        <label>Update Account (Prepare for Approval)</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Next_Step</targetReference>
+            <targetReference>Submit_For_Approval</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -168,34 +226,34 @@
             </value>
         </filters>
         <inputAssignments>
-            <field>Follow_up_Date_Account__c</field>
+            <field>Disqualification_Outcome__c</field>
             <value>
-                <elementReference>Follow_Up_Date_Screen</elementReference>
+                <elementReference>fmlOutcomeText</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Identified_Service_Country__c</field>
+            <value>
+                <elementReference>txtMarket</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>Loss_Reason_Account__c</field>
             <value>
-                <elementReference>Disqualification_Reason</elementReference>
+                <elementReference>ddReason</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>Loss_Reason_Detail_Account__c</field>
             <value>
-                <elementReference>Explanation_Other</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Timestamp_Last_Account_Lost__c</field>
-            <value>
-                <elementReference>$Flow.CurrentDateTime</elementReference>
+                <elementReference>fmlDetailWithMarket</elementReference>
             </value>
         </inputAssignments>
         <object>Account</object>
     </recordUpdates>
     <recordUpdates>
-        <name>Update_Account_to_be_owned_by_Lead_Gen</name>
-        <label>Update Account to be owned by Lead Gen</label>
+        <name>Update_Account_Loss_Immediate</name>
+        <label>Update Account (Permanent Loss - Immediate)</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <filterLogic>and</filterLogic>
@@ -203,115 +261,192 @@
             <field>Id</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>Get_Account_Data.Id</elementReference>
+                <elementReference>recordId</elementReference>
             </value>
         </filters>
         <inputAssignments>
-            <field>OwnerId</field>
+            <field>Blacklist__c</field>
             <value>
-                <elementReference>$Label.Lead_Gen_User_ID</elementReference>
+                <elementReference>Get_Selected_Reason.Sets_Blacklist__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Disqualification_Outcome__c</field>
+            <value>
+                <stringValue>Permanent_Loss</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>GTM_Motion_Alignment_Helper__c</field>
+            <value>
+                <elementReference>fmlToggleGTMHelper</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Loss_Reason_Account__c</field>
+            <value>
+                <elementReference>ddReason</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Loss_Reason_Detail_Account__c</field>
+            <value>
+                <elementReference>fmlDetailWithMarket</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <elementReference>RecordTypeIdDiscarded</elementReference>
             </value>
         </inputAssignments>
         <object>Account</object>
     </recordUpdates>
+    <recordUpdates>
+        <name>Update_Account_Release_Immediate</name>
+        <label>Update Account (Release - Immediate)</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Disqualification_Outcome__c</field>
+            <value>
+                <stringValue>Release</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>GTM_Motion_Alignment_Helper__c</field>
+            <value>
+                <elementReference>fmlToggleGTMHelper</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Identified_Service_Country__c</field>
+            <value>
+                <elementReference>txtMarket</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Loss_Reason_Account__c</field>
+            <value>
+                <elementReference>ddReason</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Loss_Reason_Detail_Account__c</field>
+            <value>
+                <elementReference>fmlDetailWithMarket</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>LeadGenId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <elementReference>RecordTypeIdOutbound</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Stage_ACM__c</field>
+            <value>
+                <stringValue>Outbound</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Account</object>
+    </recordUpdates>
+    <runInMode>SystemModeWithSharing</runInMode>
     <screens>
-        <name>Disqualification</name>
-        <label>Disqualification Screen</label>
+        <name>Screen_Approval_Error</name>
+        <label>Fehler bei Genehmigungsanfrage</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>txtErrorMessage</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;color: rgb(194, 57, 52);&quot;&gt;Die Genehmigungsanfrage konnte nicht gesendet werden. Bitte kontaktiere deinen Admin.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;{!$Flow.FaultMessage}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <name>Screen_Confirm_Details</name>
+        <label>Details und Bestätigung</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Decision_Approval_Required</targetReference>
+        </connector>
+        <fields>
+            <name>txtConfirmInfo</name>
+            <fieldText>&lt;p&gt;&lt;b&gt;Gewählter Grund:&lt;/b&gt; {!ddReason}&lt;/p&gt;&lt;p&gt;&lt;b&gt;Outcome:&lt;/b&gt; {!Get_Selected_Reason.Outcome__c}&lt;/p&gt;&lt;p&gt;&lt;b&gt;Genehmigung nötig:&lt;/b&gt; {!fmlIsApprovalFree}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>txtMarket</name>
+            <dataType>String</dataType>
+            <fieldText>In welchem Markt ist der Account tätig?</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+            <visibilityRule>
+                <conditionLogic>and</conditionLogic>
+                <conditions>
+                    <leftValueReference>Get_Selected_Reason.Requires_Market_Input__c</leftValueReference>
+                    <operator>EqualTo</operator>
+                    <rightValue>
+                        <booleanValue>true</booleanValue>
+                    </rightValue>
+                </conditions>
+            </visibilityRule>
+        </fields>
+        <fields>
+            <name>txtDetail</name>
+            <fieldText>Weitere Details (optional)</fieldText>
+            <fieldType>LargeTextArea</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <name>Screen_Select_Reason</name>
+        <label>Grund auswählen</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
         <connector>
-            <targetReference>Update_Account_Fields</targetReference>
+            <targetReference>Get_Selected_Reason</targetReference>
         </connector>
         <fields>
-            <name>Header</name>
-            <fieldText>&lt;p&gt;Disqualify {!Get_Account_Data.Name}&lt;/p&gt;</fieldText>
+            <name>txtHeader</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 16px; font-weight: bold;&quot;&gt;Account disqualifizieren: {!Get_Account_Data.Name}&lt;/span&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
-            <name>Disqualification_Reason</name>
-            <choiceReferences>pcs_AccountLossReasons</choiceReferences>
+            <name>ddReason</name>
+            <choiceReferences>drcReasons</choiceReferences>
             <dataType>String</dataType>
-            <fieldText>Disqualification Reason</fieldText>
+            <fieldText>Grund</fieldText>
             <fieldType>DropdownBox</fieldType>
-            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
             <isRequired>true</isRequired>
-        </fields>
-        <fields>
-            <name>Follow_Up_Date_Screen</name>
-            <dataType>Date</dataType>
-            <defaultValue>
-                <elementReference>fup90</elementReference>
-            </defaultValue>
-            <fieldText>Nächstes Follow-Up Datum</fieldText>
-            <fieldType>InputField</fieldType>
-            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-            <isRequired>true</isRequired>
-            <visibilityRule>
-                <conditionLogic>NOT 1</conditionLogic>
-                <conditions>
-                    <leftValueReference>Disqualification_Reason</leftValueReference>
-                    <operator>Contains</operator>
-                    <rightValue>
-                        <stringValue>Admin</stringValue>
-                    </rightValue>
-                </conditions>
-            </visibilityRule>
-        </fields>
-        <fields>
-            <name>Explanation_Other</name>
-            <fieldText>Erläuterung</fieldText>
-            <fieldType>LargeTextArea</fieldType>
-            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-            <isRequired>true</isRequired>
-            <visibilityRule>
-                <conditionLogic>and</conditionLogic>
-                <conditions>
-                    <leftValueReference>Disqualification_Reason</leftValueReference>
-                    <operator>Contains</operator>
-                    <rightValue>
-                        <stringValue>Other</stringValue>
-                    </rightValue>
-                </conditions>
-            </visibilityRule>
-        </fields>
-        <fields>
-            <name>Duplicate_Account_Lookup</name>
-            <extensionName>flowruntime:lookup</extensionName>
-            <fieldType>ComponentInstance</fieldType>
-            <inputParameters>
-                <name>fieldApiName</name>
-                <value>
-                    <elementReference>Get_Account_Data.Duplicate_Account__c</elementReference>
-                </value>
-            </inputParameters>
-            <inputParameters>
-                <name>label</name>
-                <value>
-                    <stringValue>Bitte doppelten Account vermerken:</stringValue>
-                </value>
-            </inputParameters>
-            <inputParameters>
-                <name>objectApiName</name>
-                <value>
-                    <stringValue>Account</stringValue>
-                </value>
-            </inputParameters>
-            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-            <isRequired>true</isRequired>
-            <storeOutputAutomatically>true</storeOutputAutomatically>
-            <visibilityRule>
-                <conditionLogic>and</conditionLogic>
-                <conditions>
-                    <leftValueReference>Disqualification_Reason</leftValueReference>
-                    <operator>EqualTo</operator>
-                    <rightValue>
-                        <stringValue>Admin: Duplicate</stringValue>
-                    </rightValue>
-                </conditions>
-            </visibilityRule>
         </fields>
         <showFooter>true</showFooter>
         <showHeader>false</showHeader>
@@ -323,35 +458,7 @@
             <targetReference>Get_Account_Data</targetReference>
         </connector>
     </start>
-    <status>Active</status>
-    <subflows>
-        <name>Update_Account_to_Outbound</name>
-        <label>Update Account to Outbound</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <connector>
-            <targetReference>Update_Account_to_be_owned_by_Lead_Gen</targetReference>
-        </connector>
-        <flowName>GTM_Motion_Enable_RT_Lifecycle_Changes</flowName>
-        <inputAssignments>
-            <name>varAccount</name>
-            <value>
-                <elementReference>Get_Account_Data</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>varNewLifecycleStage</name>
-            <value>
-                <elementReference>$Label.Account_Lifecycle_Stage_Outbound</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>varNewRecordTypeId</name>
-            <value>
-                <elementReference>$Label.AccountRecordTypeID_Outbound</elementReference>
-            </value>
-        </inputAssignments>
-    </subflows>
+    <status>Draft</status>
     <variables>
         <name>recordId</name>
         <dataType>String</dataType>

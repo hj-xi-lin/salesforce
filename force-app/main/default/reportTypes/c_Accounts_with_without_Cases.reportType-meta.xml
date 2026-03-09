@@ -4160,6 +4160,11 @@
             <field>ParentAccount__c</field>
             <table>Account.Opportunities.Cases__r</table>
         </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Onboarding_Checkliste__c</field>
+            <table>Account.Opportunities.Cases__r</table>
+        </columns>
         <masterLabel>Cases</masterLabel>
     </sections>
 </ReportType>

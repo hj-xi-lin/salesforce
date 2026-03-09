@@ -4,14 +4,6 @@
     <category>activities</category>
     <deployed>true</deployed>
     <description>Opportunities with Unified Emails</description>
-    <join>
-        <join>
-            <outerJoin>false</outerJoin>
-            <relationship>UnifiedEmailParticipants</relationship>
-        </join>
-        <outerJoin>false</outerJoin>
-        <relationship>UnifiedEmails</relationship>
-    </join>
     <label>Opportunities with Emails Unified</label>
     <sections>
         <columns>
@@ -342,94 +334,9 @@
         <masterLabel>Opportunities</masterLabel>
     </sections>
     <sections>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Id</field>
-            <table>Opportunity.UnifiedEmails</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>ActivityDateTime</field>
-            <table>Opportunity.UnifiedEmails</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Subject</field>
-            <table>Opportunity.UnifiedEmails</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Snippet</field>
-            <table>Opportunity.UnifiedEmails</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>IsInsightAvailable</field>
-            <table>Opportunity.UnifiedEmails</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Detail</field>
-            <table>Opportunity.UnifiedEmails</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Direction</field>
-            <table>Opportunity.UnifiedEmails</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>InternalEventKey</field>
-            <table>Opportunity.UnifiedEmails</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>IsPrivate</field>
-            <table>Opportunity.UnifiedEmails</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Detail.CreatedBy</field>
-            <table>Opportunity.UnifiedEmails</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Detail.FromAddress</field>
-            <table>Opportunity.UnifiedEmails</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Detail.Subject</field>
-            <table>Opportunity.UnifiedEmails</table>
-        </columns>
         <masterLabel>Unified Emails</masterLabel>
     </sections>
     <sections>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>ChannelAddress</field>
-            <table>Opportunity.UnifiedEmails.UnifiedEmailParticipants</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>ParticipantType</field>
-            <table>Opportunity.UnifiedEmails.UnifiedEmailParticipants</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Id</field>
-            <table>Opportunity.UnifiedEmails.UnifiedEmailParticipants</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Name</field>
-            <table>Opportunity.UnifiedEmails.UnifiedEmailParticipants</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Type</field>
-            <table>Opportunity.UnifiedEmails.UnifiedEmailParticipants</table>
-        </columns>
         <masterLabel>Participants</masterLabel>
     </sections>
 </ReportType>

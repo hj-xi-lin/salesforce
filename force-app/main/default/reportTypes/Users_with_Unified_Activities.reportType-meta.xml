@@ -4,10 +4,6 @@
     <category>activities</category>
     <deployed>true</deployed>
     <description>Users with Unified Activities</description>
-    <join>
-        <outerJoin>false</outerJoin>
-        <relationship>UnifiedActivities</relationship>
-    </join>
     <label>Users with Unified Activities</label>
     <sections>
         <columns>
@@ -58,61 +54,6 @@
         <masterLabel>Users</masterLabel>
     </sections>
     <sections>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>ChannelAddress</field>
-            <table>User.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>ParticipantType</field>
-            <table>User.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Id</field>
-            <table>User.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>ActivityType</field>
-            <table>User.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>ActivitySubType</field>
-            <table>User.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>ActivityDateTime</field>
-            <table>User.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Subject</field>
-            <table>User.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Snippet</field>
-            <table>User.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>IsInsightAvailable</field>
-            <table>User.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Detail-Event</field>
-            <table>User.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Detail-Task</field>
-            <table>User.UnifiedActivities</table>
-        </columns>
         <masterLabel>Unified Activities</masterLabel>
     </sections>
 </ReportType>

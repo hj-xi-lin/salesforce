@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partner_Bulk_Invoice_SF_Report__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>RO-2858 — Whether SF Report for bulk invoicing exists.</description>
+    <label>Partner Bulk Invoice SF Report</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

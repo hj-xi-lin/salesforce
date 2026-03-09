@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ListView xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Test_Franca</fullName>
+    <booleanFilter>1 AND 2 AND (3 OR (4 AND 5))</booleanFilter>
+    <columns>CASES.CASE_NUMBER</columns>
     <columns>ACCOUNT.NAME</columns>
     <columns>Product_Type__c</columns>
-    <columns>Due_Date__c</columns>
     <columns>OWNER_NAME</columns>
-    <columns>CASES.CASE_NUMBER</columns>
+    <columns>Due_Date__c</columns>
+    <columns>CORE.USERS.ALIAS</columns>
     <columns>Description_RichText__c</columns>
     <columns>GTM_Motion_Case__c</columns>
     <columns>CASES.STATUS</columns>
@@ -28,8 +30,15 @@
         <operation>equals</operation>
         <value>New,Internal Handover,Customer Onboarding,Technical Onboarding: Ready to start,Technical Onboarding: Staging,Technical Onboarding: Production,Quality check,Waiting for Campaign Start</value>
     </filters>
-    <label>Test Franca</label>
-    <sharedTo>
-        <role>Executive_Leadership</role>
-    </sharedTo>
+    <filters>
+        <field>Closed_Date__c</field>
+        <operation>greaterThan</operation>
+        <value>2/23/2026</value>
+    </filters>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>equals</operation>
+        <value>Closed</value>
+    </filters>
+    <label>Onboarding Pipeline</label>
 </ListView>

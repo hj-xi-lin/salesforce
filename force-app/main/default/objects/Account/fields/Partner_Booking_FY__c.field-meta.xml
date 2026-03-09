@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partner_Booking_FY__c</fullName>
+    <description>RO-2858 — Bookings under ultimate parent account, YTD (Jan-Dec). Populated by Flow. Filter: Stage IN (Onlinekauf, Contract Received, Closed Won), GTM Motion User = Agency Sales, Opp Type NOT IN (Agency Business, Agency Acquisition). Aggregate by Contract Received Date.</description>
+    <label>Partner Booking FY</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

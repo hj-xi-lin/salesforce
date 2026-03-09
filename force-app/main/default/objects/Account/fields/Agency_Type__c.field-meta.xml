@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Agency_Type__c</fullName>
-    <description>RO - 1631</description>
-    <label>Agency Type</label>
+    <description>RO-2858 — Renamed from &quot;Agency Type&quot;. Partner category classification.</description>
+    <label>Partner Category</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>
@@ -12,29 +12,49 @@
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
-                <fullName>Pakete Agentur</fullName>
+                <fullName>Win/Grow</fullName>
                 <default>false</default>
-                <label>Pakete Agentur</label>
+                <label>Win/Grow</label>
             </value>
             <value>
-                <fullName>Stellenanzeigen Beratungsagentur</fullName>
+                <fullName>Retain</fullName>
                 <default>false</default>
-                <label>Stellenanzeigen Beratungsagentur</label>
+                <label>Retain</label>
+            </value>
+            <value>
+                <fullName>Cut/Ignore</fullName>
+                <default>false</default>
+                <label>Cut/Ignore</label>
             </value>
             <value>
                 <fullName>Marketing Agentur / Employer Branding</fullName>
                 <default>false</default>
+                <isActive>false</isActive>
                 <label>Marketing Agentur / Employer Branding</label>
             </value>
             <value>
                 <fullName>Multiposter / ATS</fullName>
                 <default>false</default>
+                <isActive>false</isActive>
                 <label>Multiposter / ATS</label>
+            </value>
+            <value>
+                <fullName>Pakete Agentur</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Pakete Agentur</label>
             </value>
             <value>
                 <fullName>Special Case</fullName>
                 <default>false</default>
+                <isActive>false</isActive>
                 <label>Special Case</label>
+            </value>
+            <value>
+                <fullName>Stellenanzeigen Beratungsagentur</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Stellenanzeigen Beratungsagentur</label>
             </value>
         </valueSetDefinition>
     </valueSet>

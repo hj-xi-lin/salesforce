@@ -4,10 +4,6 @@
     <category>accounts</category>
     <deployed>true</deployed>
     <description>Contacts with Video Calls</description>
-    <join>
-        <outerJoin>false</outerJoin>
-        <relationship>UnifiedVideoCalls</relationship>
-    </join>
     <label>Contacts with Video Calls ECI</label>
     <sections>
         <columns>
@@ -408,56 +404,6 @@
         <masterLabel>Contacts</masterLabel>
     </sections>
     <sections>
-        <columns>
-            <checkedByDefault>true</checkedByDefault>
-            <field>ActivityDateTime</field>
-            <table>Contact.UnifiedVideoCalls</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>ActivitySubType</field>
-            <table>Contact.UnifiedVideoCalls</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>CallDurationInSeconds</field>
-            <table>Contact.UnifiedVideoCalls</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>IsInsightAvailable</field>
-            <table>Contact.UnifiedVideoCalls</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>ListenRatio</field>
-            <table>Contact.UnifiedVideoCalls</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>ParticipantType</field>
-            <table>Contact.UnifiedVideoCalls</table>
-        </columns>
-        <columns>
-            <checkedByDefault>true</checkedByDefault>
-            <field>Subject</field>
-            <table>Contact.UnifiedVideoCalls</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>TalkRatio</field>
-            <table>Contact.UnifiedVideoCalls</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Id</field>
-            <table>Contact.UnifiedVideoCalls</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Detail</field>
-            <table>Contact.UnifiedVideoCalls</table>
-        </columns>
         <masterLabel>Unified Video Calls</masterLabel>
     </sections>
 </ReportType>

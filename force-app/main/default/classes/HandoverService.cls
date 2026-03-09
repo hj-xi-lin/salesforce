@@ -562,6 +562,70 @@ public without sharing class HandoverService {
     }
     
     /**
+     * @description Updates Customer_360__c.Time_To_ACM_Assignment__c for the given accounts. Used by C360TimeToACMAssignmentAction invocable.
+     * Finds Pilot Handover C360 linked to each Account and its pilot Opportunity, then sets business minutes from Contract Received to ACM Assignment.
+     * @param accountIds List of Account IDs that were assigned to an ACM (Timestamp_ACM_Assignment__c already set on Account)
+     */
+    @TestVisible
+    public static void calculateTimeToACMAssignmentForAccounts(List<Id> accountIds) {
+        if (accountIds == null || accountIds.isEmpty()) {
+            return;
+        }
+        List<Account> accounts = [
+            SELECT Id, Timestamp_ACM_Assignment__c
+            FROM Account
+            WHERE Id IN :accountIds
+            AND Timestamp_ACM_Assignment__c != null
+        ];
+        if (accounts.isEmpty()) {
+            return;
+        }
+        Map<Id, DateTime> accountIdToAcmDt = new Map<Id, DateTime>();
+        for (Account a : accounts) {
+            accountIdToAcmDt.put(a.Id, a.Timestamp_ACM_Assignment__c);
+        }
+        List<Customer_360__c> c360List = [
+            SELECT Id, Account__c, Opportunity__r.Timestamp_Contract_Recieved_Time_2__c
+            FROM Customer_360__c
+            WHERE Account__c IN :accountIds
+            AND Type__c = 'Pilot Handover'
+            AND Opportunity__c != null
+            AND Opportunity__r.Pilot_Opportunity__c = true
+            AND Opportunity__r.Timestamp_Contract_Recieved_Time_2__c != null
+            ORDER BY CreatedDate DESC
+        ];
+        List<Customer_360__c> toUpdate = new List<Customer_360__c>();
+        Set<Id> seenAccounts = new Set<Id>();
+        for (Customer_360__c c360 : c360List) {
+            if (seenAccounts.contains(c360.Account__c)) {
+                continue;
+            }
+            DateTime acmDt = accountIdToAcmDt.get(c360.Account__c);
+            if (acmDt == null) {
+                continue;
+            }
+            DateTime contractReceivedDt = c360.Opportunity__r.Timestamp_Contract_Recieved_Time_2__c;
+            if (contractReceivedDt == null) {
+                continue;
+            }
+            Long businessMinutes = BusinessHoursUtility.calculateBusinessMinutes(contractReceivedDt, acmDt);
+            if (businessMinutes != null) {
+                c360.Time_To_ACM_Assignment__c = businessMinutes;
+                toUpdate.add(c360);
+                seenAccounts.add(c360.Account__c);
+            }
+        }
+        if (!toUpdate.isEmpty()) {
+            try {
+                update toUpdate;
+            } catch (Exception e) {
+                Logger.error('HandoverService.calculateTimeToACMAssignmentForAccounts failed to update C360. Error: ' + e.getMessage() + ' | Stack: ' + e.getStackTraceString());
+                Logger.saveLog();
+            }
+        }
+    }
+    
+    /**
      * @description Complete ACM Task with IHC feedback
      * Also updates the related Customer_360__c record with quality feedback
      * Note: Task custom fields (IHC_Scheduled_Timestamp__c, etc.) need to be created manually
@@ -609,16 +673,14 @@ public without sharing class HandoverService {
             
             update t;
             
-            // Also update the Customer_360__c record with quality feedback
+            // Also update the Customer_360__c record with quality feedback (Time_To_ACM_Assignment__c is set by the flow via calculateTimeToACMAssignment invocable)
             if (taskRecord.WhatId != null) {
                 Id accountId = null;
-                DateTime contractReceivedDT = null;
                 Schema.SObjectType whatType = taskRecord.WhatId.getSObjectType();
                 
                 if (whatType == Opportunity.SObjectType) {
-                    Opportunity opp = [SELECT AccountId, Timestamp_Contract_Recieved_Time_2__c FROM Opportunity WHERE Id = :taskRecord.WhatId LIMIT 1];
+                    Opportunity opp = [SELECT AccountId FROM Opportunity WHERE Id = :taskRecord.WhatId LIMIT 1];
                     accountId = opp.AccountId;
-                    contractReceivedDT = opp.Timestamp_Contract_Recieved_Time_2__c;
                 } else if (whatType == Account.SObjectType) {
                     accountId = taskRecord.WhatId;
                 }
@@ -656,10 +718,6 @@ public without sharing class HandoverService {
                         
                         if (acmAssignmentDT != null && completedDT != null) {
                             c360.Time_ACM_To_IHC_Completed__c = BusinessHoursUtility.calculateBusinessMinutes(acmAssignmentDT, completedDT);
-                        }
-                        
-                        if (acmAssignmentDT != null && contractReceivedDT != null) {
-                            c360.Time_To_ACM_Assignment__c = BusinessHoursUtility.calculateBusinessMinutes(contractReceivedDT, acmAssignmentDT);
                         }
                         
                         try {

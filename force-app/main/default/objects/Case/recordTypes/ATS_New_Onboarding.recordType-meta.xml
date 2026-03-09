@@ -3,6 +3,7 @@
     <fullName>ATS_New_Onboarding</fullName>
     <active>true</active>
     <businessProcess>ATS Onboarding</businessProcess>
+    <compactLayoutAssignment>ATS_New_Onboarding_Compact_Layout</compactLayoutAssignment>
     <description>Initiate onboarding for non-integrated accounts by providing all info. Begin only after info is complete and the first opportunity is closed. For ATS checks, use &apos;Proof of concept&apos; case-type</description>
     <label>[ATS] New Onboarding</label>
     <picklistValues>

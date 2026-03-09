@@ -2,7 +2,7 @@
 <QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
     <description>Button used to disqualify this account.</description>
     <flowDefinition>Account_Disqualification_Process</flowDefinition>
-    <label>Account Disqualifizieren</label>
+    <label>Disqualify Account</label>
     <optionsCreateFeedItem>false</optionsCreateFeedItem>
     <type>Flow</type>
 </QuickAction>

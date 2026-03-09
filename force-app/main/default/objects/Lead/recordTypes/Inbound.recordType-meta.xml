@@ -146,6 +146,10 @@
     <picklistValues>
         <picklist>Category_3__c</picklist>
         <values>
+            <fullName>1%3F Stores</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>1%E2%82%AC Stores</fullName>
             <default>false</default>
         </values>
@@ -203,6 +207,14 @@
         </values>
         <values>
             <fullName>Auditors</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Auto Parts Trade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Automation</fullName>
             <default>false</default>
         </values>
         <values>
@@ -302,6 +314,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Buying Group</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Cable Companies</fullName>
             <default>false</default>
         </values>
@@ -322,7 +338,15 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Camping Sites</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Camping Van manufacturers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Car Cranes</fullName>
             <default>false</default>
         </values>
         <values>
@@ -378,7 +402,15 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Chambers</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Chemical Wholesale</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>City %3F%3FMarketing</fullName>
             <default>false</default>
         </values>
         <values>
@@ -491,6 +523,10 @@
         </values>
         <values>
             <fullName>Discounter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Drugstore</fullName>
             <default>false</default>
         </values>
         <values>
@@ -634,11 +670,19 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Fruit Vegetables</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Furnishing</fullName>
             <default>false</default>
         </values>
         <values>
             <fullName>Furniture Industry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Furniture Shipping</fullName>
             <default>false</default>
         </values>
         <values>
@@ -655,6 +699,10 @@
         </values>
         <values>
             <fullName>Gas Stations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gastro Outfitters</fullName>
             <default>false</default>
         </values>
         <values>
@@ -699,6 +747,10 @@
         </values>
         <values>
             <fullName>Hair Stylist</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hairdresser Wholesale</fullName>
             <default>false</default>
         </values>
         <values>
@@ -782,11 +834,19 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Investors</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Jeans Shops</fullName>
             <default>false</default>
         </values>
         <values>
             <fullName>Jeweler</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jewelry</fullName>
             <default>false</default>
         </values>
         <values>
@@ -990,6 +1050,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Parties</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Payment Processor</fullName>
             <default>false</default>
         </values>
@@ -999,6 +1063,10 @@
         </values>
         <values>
             <fullName>Perfumeries</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pet Shop</fullName>
             <default>false</default>
         </values>
         <values>
@@ -1119,6 +1187,10 @@
         </values>
         <values>
             <fullName>Research Centers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SEO Agency</fullName>
             <default>false</default>
         </values>
         <values>
@@ -1350,6 +1422,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Trustee</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Undertakers</fullName>
             <default>false</default>
         </values>
@@ -1395,6 +1471,10 @@
         </values>
         <values>
             <fullName>White Goods</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wholesale Cleaning</fullName>
             <default>false</default>
         </values>
         <values>

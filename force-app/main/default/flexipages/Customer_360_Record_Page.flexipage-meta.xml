@@ -743,7 +743,7 @@
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>none</value>
+                    <value>readonly</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Timestamp_Step_PreCheck_Started__c</fieldItem>
                 <identifier>RecordTimestamp_Step_PreCheck_Started_cField</identifier>
@@ -753,7 +753,7 @@
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>none</value>
+                    <value>readonly</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Timestamp_Step_Notes_Started__c</fieldItem>
                 <identifier>RecordTimestamp_Step_Notes_Started_cField</identifier>
@@ -763,7 +763,7 @@
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>none</value>
+                    <value>readonly</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Timestamp_Step_Review_Started__c</fieldItem>
                 <identifier>RecordTimestamp_Step_Review_Started_cField</identifier>
@@ -773,20 +773,20 @@
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>none</value>
+                    <value>readonly</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Time_CloseWon_To_ACM_Assignment__c</fieldItem>
-                <identifier>RecordTime_CloseWon_To_ACM_Assignment_cField</identifier>
+                <fieldItem>Record.Time_To_ACM_Assignment__c</fieldItem>
+                <identifier>RecordTime_To_ACM_Assignment_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>none</value>
+                    <value>readonly</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Time_CloseWon_To_Documentation__c</fieldItem>
-                <identifier>RecordTime_CloseWon_To_Documentation_cField</identifier>
+                <fieldItem>Record.Time_To_Documentation_Completion__c</fieldItem>
+                <identifier>RecordTime_To_Documentation_Completion_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-f40a5e4e-7223-448f-985e-f74c3a31f69c</name>
@@ -797,7 +797,7 @@
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>none</value>
+                    <value>readonly</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Timestamp_Step_PreCheck_Completed__c</fieldItem>
                 <identifier>RecordTimestamp_Step_PreCheck_Completed_cField</identifier>
@@ -807,7 +807,7 @@
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>none</value>
+                    <value>readonly</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Timestamp_Step_Notes_Completed__c</fieldItem>
                 <identifier>RecordTimestamp_Step_Notes_Completed_cField</identifier>
@@ -817,7 +817,7 @@
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>none</value>
+                    <value>readonly</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Timestamp_Documentation_Completed__c</fieldItem>
                 <identifier>RecordTimestamp_Documentation_Completed_cField</identifier>
@@ -827,30 +827,10 @@
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>none</value>
+                    <value>readonly</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Time_ACM_To_IHC_Completed__c</fieldItem>
                 <identifier>RecordTime_ACM_To_IHC_Completed_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Time_ACM_To_IHC_Scheduled__c</fieldItem>
-                <identifier>RecordTime_ACM_To_IHC_Scheduled_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Time_IHC_Scheduled_To_Completed__c</fieldItem>
-                <identifier>RecordTime_IHC_Scheduled_To_Completed_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-4556db6c-4071-487d-9345-ef8f79848a38</name>

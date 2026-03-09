@@ -11,11 +11,6 @@
     <columns>MANAGER</columns>
     <filterScope>Everything</filterScope>
     <filters>
-        <field>CORE.PROFILE.NAME</field>
-        <operation>equals</operation>
-        <value>System Administrator</value>
-    </filters>
-    <filters>
         <field>CORE.USERS.ACTIVE</field>
         <operation>equals</operation>
         <value>1</value>

@@ -4,5 +4,75 @@
     <entityName>Case</entityName>
     <fieldName>Status</fieldName>
     <masterLabel>[ATS] New Onboarding Case</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Notes__c</fieldNames>
+        <fieldNames>ATS_Name_Account__c</fieldNames>
+        <fieldNames>Integration_Type__c</fieldNames>
+        <fieldNames>Account_Owner__c</fieldNames>
+        <picklistValueName>Closed</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Notes__c</fieldNames>
+        <fieldNames>ATS_Name_Account__c</fieldNames>
+        <fieldNames>Integration_Type__c</fieldNames>
+        <fieldNames>Account_Owner__c</fieldNames>
+        <picklistValueName>Customer Onboarding</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Notes__c</fieldNames>
+        <fieldNames>ATS_Name_Account__c</fieldNames>
+        <fieldNames>Integration_Type__c</fieldNames>
+        <fieldNames>Account_Owner__c</fieldNames>
+        <picklistValueName>Internal Handover</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Notes__c</fieldNames>
+        <fieldNames>ATS_Name_Account__c</fieldNames>
+        <fieldNames>Integration_Type__c</fieldNames>
+        <fieldNames>Account_Owner__c</fieldNames>
+        <picklistValueName>Lost</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Notes__c</fieldNames>
+        <fieldNames>ATS_Name_Account__c</fieldNames>
+        <fieldNames>Integration_Type__c</fieldNames>
+        <fieldNames>Account_Owner__c</fieldNames>
+        <picklistValueName>New</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Notes__c</fieldNames>
+        <fieldNames>ATS_Name_Account__c</fieldNames>
+        <fieldNames>Integration_Type__c</fieldNames>
+        <fieldNames>Account_Owner__c</fieldNames>
+        <picklistValueName>Quality check</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Notes__c</fieldNames>
+        <fieldNames>ATS_Name_Account__c</fieldNames>
+        <fieldNames>Integration_Type__c</fieldNames>
+        <fieldNames>Account_Owner__c</fieldNames>
+        <picklistValueName>Technical Onboarding: Production</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Notes__c</fieldNames>
+        <fieldNames>ATS_Name_Account__c</fieldNames>
+        <fieldNames>Integration_Type__c</fieldNames>
+        <fieldNames>Account_Owner__c</fieldNames>
+        <picklistValueName>Technical Onboarding: Ready to start</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Notes__c</fieldNames>
+        <fieldNames>ATS_Name_Account__c</fieldNames>
+        <fieldNames>Integration_Type__c</fieldNames>
+        <fieldNames>Account_Owner__c</fieldNames>
+        <picklistValueName>Technical Onboarding: Staging</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Notes__c</fieldNames>
+        <fieldNames>ATS_Name_Account__c</fieldNames>
+        <fieldNames>Integration_Type__c</fieldNames>
+        <fieldNames>Account_Owner__c</fieldNames>
+        <picklistValueName>Waiting for Campaign Start</picklistValueName>
+    </pathAssistantSteps>
     <recordTypeName>ATS_New_Onboarding</recordTypeName>
 </PathAssistant>

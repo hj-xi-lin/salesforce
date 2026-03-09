@@ -451,6 +451,10 @@
                 <field>Loss_Reason_Detail_Account__c</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Account_Disqualified_By__c</field>
+            </layoutItems>
+            <layoutItems>
                 <behavior>Edit</behavior>
                 <field>No_of_Locations__c</field>
             </layoutItems>
@@ -461,7 +465,8 @@
                 <field>Timestamp_Last_Account_Lost__c</field>
             </layoutItems>
             <layoutItems>
-                <emptySpace>true</emptySpace>
+                <behavior>Readonly</behavior>
+                <field>Account_Approval_Status__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
