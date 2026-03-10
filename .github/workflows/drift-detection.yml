@@ -71,6 +71,7 @@ jobs:
           fi
 
       - name: Create or update drift PR
+        id: pr
         if: steps.check.outputs.has_changes == 'true' || steps.detect.outputs.unknown_missing > 0
         env:
           GH_TOKEN: ${{ secrets.DRIFT_DETECTION_TOKEN || secrets.GITHUB_TOKEN }}
@@ -120,18 +121,40 @@ jobs:
               --title "chore: Salesforce org drift detected — $DATE" \
               --body-file drift-report.md \
               $ASSIGNEE_FLAGS
+            PR_URL="https://github.com/${{ github.repository }}/pull/$EXISTING_PR"
+            echo "pr_url=$PR_URL" >> "$GITHUB_OUTPUT"
             echo "Updated existing PR #$EXISTING_PR" >> "$GITHUB_STEP_SUMMARY"
           else
-            gh pr create \
+            PR_URL=$(gh pr create \
               --title "chore: Salesforce org drift detected — $DATE" \
               --label "automated" \
               --label "drift" \
               --body-file drift-report.md \
               --base main \
               --head "$BRANCH" \
-              $ASSIGNEE_FLAGS
+              --reviewer heyjobs/gtm_salesforce \
+              $ASSIGNEE_FLAGS)
+            echo "pr_url=$PR_URL" >> "$GITHUB_OUTPUT"
             echo "Created new drift PR" >> "$GITHUB_STEP_SUMMARY"
           fi
+
+      - name: Notify Slack
+        if: steps.pr.outputs.pr_url
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_DRIFT_WEBHOOK_URL }}
+        run: |
+          PR_URL="${{ steps.pr.outputs.pr_url }}"
+          CHANGED="${{ steps.detect.outputs.total_changed || '0' }}"
+          MISSING="${{ steps.detect.outputs.unknown_missing || '0' }}"
+
+          curl -s -X POST "$SLACK_WEBHOOK_URL" \
+            -H 'Content-type: application/json' \
+            --data "$(cat <<EOF
+          {
+            "text": ":warning: *Salesforce Org Drift Detected*\n\n• *Files changed:* $CHANGED\n• *Unknown missing classes:* $MISSING\n• *PR:* <$PR_URL|View Pull Request>\n\nPlease review the drift PR and decide whether to merge or revert changes in the org."
+          }
+          EOF
+          )"
 
       - name: No drift detected
         if: steps.check.outputs.has_changes == 'false' && (steps.detect.outputs.unknown_missing == '0' || steps.detect.outputs.unknown_missing == '')
