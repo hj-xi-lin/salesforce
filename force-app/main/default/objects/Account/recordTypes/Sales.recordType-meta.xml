@@ -152,29 +152,6 @@
         </values>
     </picklistValues>
     <picklistValues>
-        <picklist>Agency_Type__c</picklist>
-        <values>
-            <fullName>Marketing Agentur %2F Employer Branding</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Multiposter %2F ATS</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Pakete Agentur</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Special Case</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Stellenanzeigen Beratungsagentur</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
-    <picklistValues>
         <picklist>Association__c</picklist>
         <values>
             <fullName>VDV - Arbeitgeberinitiative</fullName>
@@ -2463,33 +2440,6 @@
         </values>
     </picklistValues>
     <picklistValues>
-        <picklist>Job_Submission__c</picklist>
-        <values>
-            <fullName>API</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Einstellungsservice</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Einstellungsservice %2B</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Feed Integration %2B Einstellungsservice</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Feed Integration %2B Einstellungsservice %2B</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Recruiter Portal</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
-    <picklistValues>
         <picklist>Key_factors_in_decision_making__c</picklist>
         <values>
             <fullName>Analytics and Reporting</fullName>
@@ -2593,23 +2543,11 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Client%3A Hiring paused%2FNot Hiring</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Client%3A No budget available</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>Client%3A No matching open roled</fullName>
             <default>false</default>
         </values>
         <values>
             <fullName>Client%3A No need for paid recruitment</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Client%3A Position filled or cancelled</fullName>
             <default>false</default>
         </values>
         <values>

@@ -4,14 +4,6 @@
     <category>accounts</category>
     <deployed>true</deployed>
     <description>Accounts with Unified Activities (including EAC activities) with Participants</description>
-    <join>
-        <join>
-            <outerJoin>false</outerJoin>
-            <relationship>UnifiedActivityParticipants</relationship>
-        </join>
-        <outerJoin>false</outerJoin>
-        <relationship>UnifiedActivities</relationship>
-    </join>
     <label>c - Accounts w/ Unified Activities w/ Participants</label>
     <sections>
         <columns>
@@ -2452,114 +2444,9 @@
         <masterLabel>Accounts</masterLabel>
     </sections>
     <sections>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Id</field>
-            <table>Account.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>ActivityType</field>
-            <table>Account.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>ActivitySubType</field>
-            <table>Account.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>ActivityDateTime</field>
-            <table>Account.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Subject</field>
-            <table>Account.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Snippet</field>
-            <table>Account.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>IsInsightAvailable</field>
-            <table>Account.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>InternalEventKey</field>
-            <table>Account.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Detail-Event</field>
-            <table>Account.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Detail-Task</field>
-            <table>Account.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Detail-VideoCall</field>
-            <table>Account.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Detail-Task.CallDurationInSeconds</field>
-            <table>Account.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Detail-Task.CallType</field>
-            <table>Account.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Detail-Task.Answered_Unanswered__c</field>
-            <table>Account.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Detail-Event.Type</field>
-            <table>Account.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Detail-Event.plEventSubject__c</field>
-            <table>Account.UnifiedActivities</table>
-        </columns>
         <masterLabel>Unified Activities</masterLabel>
     </sections>
     <sections>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>ChannelAddress</field>
-            <table>Account.UnifiedActivities.UnifiedActivityParticipants</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>ParticipantType</field>
-            <table>Account.UnifiedActivities.UnifiedActivityParticipants</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Id</field>
-            <table>Account.UnifiedActivities.UnifiedActivityParticipants</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Name</field>
-            <table>Account.UnifiedActivities.UnifiedActivityParticipants</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Type</field>
-            <table>Account.UnifiedActivities.UnifiedActivityParticipants</table>
-        </columns>
         <masterLabel>Participants</masterLabel>
     </sections>
 </ReportType>

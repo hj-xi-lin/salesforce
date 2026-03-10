@@ -4,10 +4,6 @@
     <category>activities</category>
     <deployed>true</deployed>
     <description>Users with Unified Voice Calls</description>
-    <join>
-        <outerJoin>false</outerJoin>
-        <relationship>UnifiedVoiceCalls</relationship>
-    </join>
     <label>Users w/ Unified Voice Call</label>
     <sections>
         <columns>
@@ -183,51 +179,6 @@
         <masterLabel>Users</masterLabel>
     </sections>
     <sections>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>ParticipantType</field>
-            <table>User.UnifiedVoiceCalls</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>ListenRatio</field>
-            <table>User.UnifiedVoiceCalls</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>TalkRatio</field>
-            <table>User.UnifiedVoiceCalls</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Id</field>
-            <table>User.UnifiedVoiceCalls</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>ActivitySubType</field>
-            <table>User.UnifiedVoiceCalls</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>ActivityDateTime</field>
-            <table>User.UnifiedVoiceCalls</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Subject</field>
-            <table>User.UnifiedVoiceCalls</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>IsInsightAvailable</field>
-            <table>User.UnifiedVoiceCalls</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>CallDurationInSeconds</field>
-            <table>User.UnifiedVoiceCalls</table>
-        </columns>
         <masterLabel>Unified Voice Calls</masterLabel>
     </sections>
 </ReportType>

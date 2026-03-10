@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Loss_Reason_Account__c</fullName>
-    <description>RO-1505</description>
+    <description>RO-1505 Unified Disqualification Framework</description>
     <inlineHelpText>Grund, warum der Account aus dem Portfolio entfernt werden sollte (löst eine Genehmigungsanfrage (Approval Request) für das Management aus). Mehr Informationen findest du hier:https://heyjobs.atlassian.net/wiki/spaces/EO/pages/3134816426/Loss+Reasons+in+Salesforce#%F0%9F%8F%A1-Account-Loss-Reasons</inlineHelpText>
     <label>Loss Reason (Account)</label>
     <required>false</required>
@@ -9,7 +9,6 @@
     <trackHistory>true</trackHistory>
     <type>Picklist</type>
     <valueSet>
-        <restricted>true</restricted>
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
@@ -113,16 +112,6 @@
                 <label>Product: Missing product feature</label>
             </value>
             <value>
-                <fullName>Client: Hiring paused/Not Hiring</fullName>
-                <default>false</default>
-                <label>Client: Hiring paused/Not Hiring</label>
-            </value>
-            <value>
-                <fullName>Client: No budget available</fullName>
-                <default>false</default>
-                <label>Client: No budget available</label>
-            </value>
-            <value>
                 <fullName>Client: No need for paid recruitment</fullName>
                 <default>false</default>
                 <label>Client: No need for paid recruitment</label>
@@ -131,11 +120,6 @@
                 <fullName>Client: No matching open roled</fullName>
                 <default>false</default>
                 <label>Client: No matching open roled</label>
-            </value>
-            <value>
-                <fullName>Client: Position filled or cancelled</fullName>
-                <default>false</default>
-                <label>Client: Position filled or cancelled</label>
             </value>
             <value>
                 <fullName>Stakeholder: All contacts unresponsive</fullName>
@@ -173,75 +157,44 @@
                 <label>Admin: No contact data on any contacts</label>
             </value>
             <value>
+                <fullName>Nicht in HeyJobs Märkten tätig (non-DE/AT)</fullName>
+                <default>false</default>
+                <label>Nicht in HeyJobs Märkten tätig (non-DE/AT)</label>
+            </value>
+            <value>
+                <fullName>Keine Firmierung</fullName>
+                <default>false</default>
+                <label>Keine Firmierung</label>
+            </value>
+            <value>
+                <fullName>Keine/falsche Telefonnummer</fullName>
+                <default>false</default>
+                <label>Keine/falsche Telefonnummer</label>
+            </value>
+            <value>
+                <fullName>Client: Not active in HeyJobs market</fullName>
+                <default>false</default>
+                <label>Client: Not active in HeyJobs market</label>
+            </value>
+            <value>
+                <fullName>Client: No matching open roles</fullName>
+                <default>false</default>
+                <label>Client: No matching open roles</label>
+            </value>
+            <value>
+                <fullName>Admin: Bankrupt or Insolvent</fullName>
+                <default>false</default>
+                <label>Admin: Bankrupt or Insolvent</label>
+            </value>
+            <value>
+                <fullName>Admin: No or Invalid Contact Number</fullName>
+                <default>false</default>
+                <label>Admin: No or Invalid Contact Number</label>
+            </value>
+            <value>
                 <fullName>Other</fullName>
                 <default>false</default>
                 <label>Other</label>
-            </value>
-            <value>
-                <fullName>Currently no vacant position_SSSU_only</fullName>
-                <default>false</default>
-                <isActive>false</isActive>
-                <label>(SSSU only) Currently no vacant position</label>
-            </value>
-            <value>
-                <fullName>Didn’t respond_SSSU_only</fullName>
-                <default>false</default>
-                <isActive>false</isActive>
-                <label>(SSSU only) Didn’t respond</label>
-            </value>
-            <value>
-                <fullName>Fraudulant_SSSU_only</fullName>
-                <default>false</default>
-                <isActive>false</isActive>
-                <label>(SSSU only) Fraudulant</label>
-            </value>
-            <value>
-                <fullName>Jobseeker_SSSU_only</fullName>
-                <default>false</default>
-                <isActive>false</isActive>
-                <label>(SSSU only) Jobseeker</label>
-            </value>
-            <value>
-                <fullName>Just wanted to get information_SSSU_only</fullName>
-                <default>false</default>
-                <isActive>false</isActive>
-                <label>(SSSU only) Just wanted to get information</label>
-            </value>
-            <value>
-                <fullName>Other_SSSU_only</fullName>
-                <default>false</default>
-                <isActive>false</isActive>
-                <label>(SSSU only) Other</label>
-            </value>
-            <value>
-                <fullName>Thought it’s a free service_SSSU_only</fullName>
-                <default>false</default>
-                <isActive>false</isActive>
-                <label>(SSSU only) Thought it’s a free service</label>
-            </value>
-            <value>
-                <fullName>Has currently no vacant position</fullName>
-                <default>false</default>
-                <isActive>false</isActive>
-                <label>Has currently no vacant position</label>
-            </value>
-            <value>
-                <fullName>Is a Jobseeker</fullName>
-                <default>false</default>
-                <isActive>false</isActive>
-                <label>Is a Jobseeker</label>
-            </value>
-            <value>
-                <fullName>Just wanted to get information</fullName>
-                <default>false</default>
-                <isActive>false</isActive>
-                <label>Just wanted to get information</label>
-            </value>
-            <value>
-                <fullName>Thought it’s a free service</fullName>
-                <default>false</default>
-                <isActive>false</isActive>
-                <label>Thought it’s a free service</label>
             </value>
         </valueSetDefinition>
     </valueSet>

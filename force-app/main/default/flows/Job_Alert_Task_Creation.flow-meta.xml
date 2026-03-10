@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <decisions>
+        <name>Has_New_Jobs_Today</name>
+        <label>Has New Jobs Today?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>No New Jobs Today</defaultConnectorLabel>
+        <rules>
+            <name>New_Jobs_Found</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>NewJobToday.Id</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_Existing_Open_Task</targetReference>
+            </connector>
+            <label>New Jobs Found</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Is_Task_Being_Worked</name>
+        <label>Is Existing Task Being Worked?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Get_Latest_Job</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No Existing Task</defaultConnectorLabel>
+        <rules>
+            <name>Task_Being_Worked</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ExistingOpenTask.Id</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>ExistingOpenTask.Qualification_Outcome__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Task Being Worked</label>
+        </rules>
+        <rules>
+            <name>Unworked_Task_Exists</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ExistingOpenTask.Id</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>ExistingOpenTask.Qualification_Outcome__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Delete_Unworked_Task</targetReference>
+            </connector>
+            <label>Unworked Task Exists</label>
+        </rules>
+    </decisions>
+    <description>Daily scheduled flow (12:30 UTC) that evaluates Outbound accounts owned by Lead Gen with at least 3 live jobs (including Stepstone or Indeed) and new jobs ingested today. Creates a single Job Alert task per qualifying Account, moves the Account to Prospect via GTM_Motion_Enable_RT_Lifecycle_Changes subflow. If an unworked task already exists, it is deleted and replaced. If a task is being worked (has Qualification Outcome), it is left untouched.</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>HasIndeedFormula</name>
+        <dataType>Boolean</dataType>
+        <expression>{!$Record.Indeed_Jobs_Self__c} &gt; 0</expression>
+    </formulas>
+    <formulas>
+        <name>HasStepstoneFormula</name>
+        <dataType>Boolean</dataType>
+        <expression>{!$Record.Stepstone_Jobs_Self__c} &gt; 0</expression>
+    </formulas>
+    <formulas>
+        <name>TaskDescriptionFormula</name>
+        <dataType>String</dataType>
+        <expression>TEXT({!$Record.Total_Live_Jobs_Self__c}) &amp; &apos; OFFENE STELLENANZEIGE(N) ENTDECKT&apos; &amp; BR() &amp;
+IF({!$Record.Stepstone_Jobs_Self__c} &gt; 0, &apos;Stepstone: &apos; &amp; TEXT({!$Record.Stepstone_Jobs_Self__c}) &amp; &apos; Stellen&apos; &amp; BR(), &apos;&apos;) &amp;
+IF({!$Record.Indeed_Jobs_Self__c} &gt; 0, &apos;Indeed: &apos; &amp; TEXT({!$Record.Indeed_Jobs_Self__c}) &amp; &apos; Stellen&apos; &amp; BR(), &apos;&apos;) &amp; BR() &amp;
+&apos;Firma: &apos; &amp; {!$Record.Name} &amp; BR() &amp;
+&apos;Neueste Anzeige: &apos; &amp; {!LatestJob.Name} &amp; BR() &amp;
+&apos;Link: &apos; &amp; {!LatestJob.Link_Advert__c} &amp; BR() &amp; BR() &amp;
+&apos;Job-Liste des Accounts:&apos; &amp; BR() &amp;
+&apos;https://heyjobs.lightning.force.com/lightning/r/Account/&apos; &amp; {!$Record.Id} &amp; &apos;/related/Jobs__r/view&apos; &amp; BR() &amp; BR() &amp;
+&apos;--- ANLEITUNG ---&apos; &amp; BR() &amp; BR() &amp;
+&apos;1. Klicke auf den Link oben und öffne die Stellenanzeige&apos; &amp; BR() &amp;
+&apos;2. Prüfe, ob in der Anzeige Kontaktdaten (Name, Telefon, E-Mail) eines Recruiters hinterlegt sind&apos; &amp; BR() &amp;
+&apos;3. WENN Kontaktdaten vorhanden:&apos; &amp; BR() &amp;
+&apos;   → Rufe den Recruiter direkt an&apos; &amp; BR() &amp;
+&apos;   → Prüfe, ob der Kontakt bereits in Salesforce angelegt ist&apos; &amp; BR() &amp;
+&apos;   → Wenn nicht: Lege den Kontakt nach erfolgreichem Anruf an&apos; &amp; BR() &amp;
+&apos;4. WENN KEINE Kontaktdaten in der Anzeige:&apos; &amp; BR() &amp;
+&apos;   → Rufe den Hauptansprechpartner des Accounts an&apos; &amp; BR() &amp;
+&apos;   → Oder einen anderen passenden Ansprechpartner&apos; &amp; BR() &amp;
+&apos;5. Ziel des Anrufs: Das Unternehmen hat offenbar Recruiting-Budget frei — stelle unser Angebot vor!&apos; &amp; BR() &amp; BR() &amp;
+&apos;Schließe diese Task ab, sobald der Anruf erledigt ist.&apos;</expression>
+    </formulas>
+    <formulas>
+        <name>TaskSubjectFormula</name>
+        <dataType>String</dataType>
+        <expression>IF({!$Record.Total_Live_Jobs_Self__c} &gt; 1,
+&apos;Job Alert: &apos; &amp; TEXT({!$Record.Total_Live_Jobs_Self__c}) &amp; &apos; offene Stellen&apos; &amp;
+IF({!$Record.Stepstone_Jobs_Self__c} &gt; 0 &amp;&amp; {!$Record.Indeed_Jobs_Self__c} &gt; 0,
+&apos; (Stepstone, Indeed)&apos;,
+IF({!$Record.Stepstone_Jobs_Self__c} &gt; 0, &apos; (Stepstone)&apos;, &apos; (Indeed)&apos;)),
+&apos;Job Alert: &apos; &amp; {!LatestJob.Name})</expression>
+    </formulas>
+    <interviewLabel>Job Alert Task Creation {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Job Alert Task Creation</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Create_Task</name>
+        <label>Create Task</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Call_GTM_Lifecycle_Change</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>ActivityDate</field>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Description</field>
+            <value>
+                <elementReference>TaskDescriptionFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Has_Indeed_Jobs__c</field>
+            <value>
+                <elementReference>HasIndeedFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Has_Stepstone_Jobs__c</field>
+            <value>
+                <elementReference>HasStepstoneFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Priority</field>
+            <value>
+                <stringValue>High</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Open</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <elementReference>TaskSubjectFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Type</field>
+            <value>
+                <stringValue>Job Alert</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>WhatId</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>WhoId</field>
+            <value>
+                <elementReference>LatestJob.Recruiter__c</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Task</object>
+    </recordCreates>
+    <recordDeletes>
+        <name>Delete_Unworked_Task</name>
+        <label>Delete Unworked Task</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Latest_Job</targetReference>
+        </connector>
+        <inputReference>ExistingOpenTask</inputReference>
+    </recordDeletes>
+    <recordLookups>
+        <name>Check_Existing_Open_Task</name>
+        <label>Check Existing Open Task</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Is_Task_Being_Worked</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>WhatId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Type</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Job Alert</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>IsClosed</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>Task</object>
+        <outputReference>ExistingOpenTask</outputReference>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>Qualification_Outcome__c</queriedFields>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Latest_Job</name>
+        <label>Get Latest Job</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Create_Task</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Account__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <object>Job__c</object>
+        <outputReference>LatestJob</outputReference>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>Name</queriedFields>
+        <queriedFields>Link_Advert__c</queriedFields>
+        <queriedFields>Recruiter__c</queriedFields>
+        <sortField>CreatedDate</sortField>
+        <sortOrder>Desc</sortOrder>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_New_Jobs_Today</name>
+        <label>Get New Jobs Today</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Has_New_Jobs_Today</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Account__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>CreatedDate</field>
+            <operator>GreaterThanOrEqualTo</operator>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </filters>
+        <object>Job__c</object>
+        <outputReference>NewJobToday</outputReference>
+        <queriedFields>Id</queriedFields>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Account_Timestamp</name>
+        <label>Update Account Timestamp</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Timestamp_Trigger_Job_Task__c</field>
+            <value>
+                <elementReference>$Flow.CurrentDateTime</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Account</object>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_New_Jobs_Today</targetReference>
+        </connector>
+        <filterLogic>1 AND 2 AND 3 AND (4 OR 5)</filterLogic>
+        <filters>
+            <field>Stage_ACM__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Outbound</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>OwnerId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>0050Y00000333XsQAI</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Total_Live_Jobs_Self__c</field>
+            <operator>GreaterThanOrEqualTo</operator>
+            <value>
+                <numberValue>4.0</numberValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Stepstone_Jobs_Self__c</field>
+            <operator>GreaterThan</operator>
+            <value>
+                <numberValue>0.0</numberValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Indeed_Jobs_Self__c</field>
+            <operator>GreaterThan</operator>
+            <value>
+                <numberValue>0.0</numberValue>
+            </value>
+        </filters>
+        <object>Account</object>
+        <schedule>
+            <dayOfMonthToRun>0</dayOfMonthToRun>
+            <frequency>Daily</frequency>
+            <frequencyNumber>0</frequencyNumber>
+            <startDate>2026-03-09</startDate>
+            <startTime>15:15:00.000Z</startTime>
+        </schedule>
+        <triggerType>Scheduled</triggerType>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <name>Call_GTM_Lifecycle_Change</name>
+        <label>Call GTM Lifecycle Change</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Account_Timestamp</targetReference>
+        </connector>
+        <flowName>GTM_Motion_Enable_RT_Lifecycle_Changes</flowName>
+        <inputAssignments>
+            <name>varAccount</name>
+            <value>
+                <elementReference>$Record</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varFlowAPIName</name>
+            <value>
+                <stringValue>Job_Alert_Task_Creation</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varMotionChangeReason</name>
+            <value>
+                <stringValue>Admin Only: Updated by Job Alert Automation</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varNewLifecycleStage</name>
+            <value>
+                <stringValue>Prospect</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varNewRecordTypeId</name>
+            <value>
+                <stringValue>0121v000000lUxMAAU</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <variables>
+        <name>ExistingOpenTask</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Task</objectType>
+    </variables>
+    <variables>
+        <name>LatestJob</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Job__c</objectType>
+    </variables>
+    <variables>
+        <name>NewJobToday</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Job__c</objectType>
+    </variables>
+</Flow>

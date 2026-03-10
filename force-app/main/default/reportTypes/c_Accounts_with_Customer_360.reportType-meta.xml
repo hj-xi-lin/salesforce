@@ -54,6 +54,11 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <field>Timestamp_ACM_Assignment__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
             <displayNameOverride>Account Happiness</displayNameOverride>
             <field>plAccountHappiness__c</field>
             <table>Account</table>
@@ -3030,6 +3035,46 @@
             <field>Content__c</field>
             <table>Account.Customer_360s__r</table>
         </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Handover_Quality_Comments__c</field>
+            <table>Account.Customer_360s__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Time_To_ACM_Assignment__c</field>
+            <table>Account.Customer_360s__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Handover_Documentation_Quality__c</field>
+            <table>Account.Customer_360s__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Time_To_Documentation_Completion__c</field>
+            <table>Account.Customer_360s__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Opportunity__c</field>
+            <table>Account.Customer_360s__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>IHC_Meeting_Date__c</field>
+            <table>Account.Customer_360s__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Documentation_Status__c</field>
+            <table>Account.Customer_360s__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Time_ACM_To_IHC_Completed__c</field>
+            <table>Account.Customer_360s__r</table>
+        </columns>
         <masterLabel>Customer 360 Records</masterLabel>
     </sections>
     <sections>
@@ -3054,5 +3099,48 @@
             <table>Account.Customer_360s__r</table>
         </columns>
         <masterLabel>Customer 360</masterLabel>
+    </sections>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Opportunity__c.StageName</field>
+            <table>Account.Customer_360s__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Opportunity__c.Owner</field>
+            <table>Account.Customer_360s__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Opportunity__c.Timestamp_Closed_Won_Time__c</field>
+            <table>Account.Customer_360s__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Opportunity__c.Timestamp_Contract_Recieved_Time_2__c</field>
+            <table>Account.Customer_360s__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Opportunity__c.Pilot_Opportunity__c</field>
+            <table>Account.Customer_360s__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Opportunity__c.Owner_s_Manager__c</field>
+            <table>Account.Customer_360s__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Opportunity__c.OwnerProfile__c</field>
+            <table>Account.Customer_360s__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Opportunity__c.Owner_Role__c</field>
+            <table>Account.Customer_360s__r</table>
+        </columns>
+        <masterLabel>Pilot Opp</masterLabel>
     </sections>
 </ReportType>

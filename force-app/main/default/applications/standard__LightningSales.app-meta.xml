@@ -7997,6 +7997,294 @@
         <type>Flexipage</type>
         <profile>Pre-Qualifying Prospector</profile>
     </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>ATS_New_Onboarding_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.ATS_New_Onboarding</recordType>
+        <type>Flexipage</type>
+        <profile>C-Level</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>ATS_New_Onboarding_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.ATS_New_Onboarding</recordType>
+        <type>Flexipage</type>
+        <profile>C-Level</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>ATS_New_Onboarding_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.ATS_New_Onboarding</recordType>
+        <type>Flexipage</type>
+        <profile>Enterprise Account Manager</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>ATS_New_Onboarding_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.ATS_New_Onboarding</recordType>
+        <type>Flexipage</type>
+        <profile>Enterprise Account Manager</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>ATS_New_Onboarding_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.ATS_New_Onboarding</recordType>
+        <type>Flexipage</type>
+        <profile>Head of Enterprise Account Management</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>ATS_New_Onboarding_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.ATS_New_Onboarding</recordType>
+        <type>Flexipage</type>
+        <profile>Head of Enterprise Account Management</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>ATS_New_Onboarding_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.ATS_New_Onboarding</recordType>
+        <type>Flexipage</type>
+        <profile>Head of Large Account Management</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>ATS_New_Onboarding_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.ATS_New_Onboarding</recordType>
+        <type>Flexipage</type>
+        <profile>Head of Large Account Management</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>ATS_New_Onboarding_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.ATS_New_Onboarding</recordType>
+        <type>Flexipage</type>
+        <profile>Head of Large Hunting</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>ATS_New_Onboarding_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.ATS_New_Onboarding</recordType>
+        <type>Flexipage</type>
+        <profile>Head of Large Hunting</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>ATS_New_Onboarding_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.ATS_New_Onboarding</recordType>
+        <type>Flexipage</type>
+        <profile>Head of Large Prospecting</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>ATS_New_Onboarding_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.ATS_New_Onboarding</recordType>
+        <type>Flexipage</type>
+        <profile>Head of Large Prospecting</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>ATS_New_Onboarding_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.ATS_New_Onboarding</recordType>
+        <type>Flexipage</type>
+        <profile>Head of Small Account Management</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>ATS_New_Onboarding_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.ATS_New_Onboarding</recordType>
+        <type>Flexipage</type>
+        <profile>Head of Small Account Management</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>ATS_New_Onboarding_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.ATS_New_Onboarding</recordType>
+        <type>Flexipage</type>
+        <profile>Large Account Manager</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>ATS_New_Onboarding_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.ATS_New_Onboarding</recordType>
+        <type>Flexipage</type>
+        <profile>Large Account Manager</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>ATS_New_Onboarding_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.ATS_New_Onboarding</recordType>
+        <type>Flexipage</type>
+        <profile>Large Hunter</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>ATS_New_Onboarding_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.ATS_New_Onboarding</recordType>
+        <type>Flexipage</type>
+        <profile>Large Hunter</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>ATS_New_Onboarding_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.ATS_New_Onboarding</recordType>
+        <type>Flexipage</type>
+        <profile>Large Prospector</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>ATS_New_Onboarding_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.ATS_New_Onboarding</recordType>
+        <type>Flexipage</type>
+        <profile>Large Prospector</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>ATS_New_Onboarding_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.ATS_New_Onboarding</recordType>
+        <type>Flexipage</type>
+        <profile>Small Account Manager</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>ATS_New_Onboarding_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.ATS_New_Onboarding</recordType>
+        <type>Flexipage</type>
+        <profile>Small Account Manager</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>ATS_New_Onboarding_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.ATS_New_Onboarding</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>ATS_New_Onboarding_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.ATS_New_Onboarding</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>ATS_New_Onboarding_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.ATS_New_Onboarding</recordType>
+        <type>Flexipage</type>
+        <profile>VP Sales</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>ATS_New_Onboarding_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.ATS_New_Onboarding</recordType>
+        <type>Flexipage</type>
+        <profile>VP Sales</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>ATS_New_Onboarding_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.ATS_New_Onboarding</recordType>
+        <type>Flexipage</type>
+        <profile>Customer Operations Manager</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>ATS_New_Onboarding_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.ATS_New_Onboarding</recordType>
+        <type>Flexipage</type>
+        <profile>Customer Operations Manager</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>ATS_New_Onboarding_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.ATS_New_Onboarding</recordType>
+        <type>Flexipage</type>
+        <profile>Head of Customer Operations</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>ATS_New_Onboarding_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.ATS_New_Onboarding</recordType>
+        <type>Flexipage</type>
+        <profile>Head of Customer Operations</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>ATS_New_Onboarding_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.ATS_New_Onboarding</recordType>
+        <type>Flexipage</type>
+        <profile>Inventory Partner Manager</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>ATS_New_Onboarding_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.ATS_New_Onboarding</recordType>
+        <type>Flexipage</type>
+        <profile>Inventory Partner Manager</profile>
+    </profileActionOverrides>
     <setupExperience>all</setupExperience>
     <tabs>standard-home</tabs>
     <tabs>standard-MobileHome</tabs>

@@ -4,14 +4,6 @@
     <category>activities</category>
     <deployed>true</deployed>
     <description>Accounts with Unified Activities &amp; Relations</description>
-    <join>
-        <join>
-            <outerJoin>true</outerJoin>
-            <relationship>UnifiedActivityRelations</relationship>
-        </join>
-        <outerJoin>false</outerJoin>
-        <relationship>UnifiedActivities</relationship>
-    </join>
     <label>Accounts with Unified Activities &amp; Relations</label>
     <sections>
         <columns>
@@ -967,94 +959,9 @@
         <masterLabel>Accounts</masterLabel>
     </sections>
     <sections>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Id</field>
-            <table>Account.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>ActivityType</field>
-            <table>Account.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>ActivitySubType</field>
-            <table>Account.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>ActivityDateTime</field>
-            <table>Account.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Subject</field>
-            <table>Account.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Snippet</field>
-            <table>Account.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>IsInsightAvailable</field>
-            <table>Account.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Detail-Event</field>
-            <table>Account.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Detail-Task</field>
-            <table>Account.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Detail-Task.Owner</field>
-            <table>Account.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Detail-Task.Assigned_Profile__c</field>
-            <table>Account.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Detail-Event.Owner</field>
-            <table>Account.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Detail-Event.Assigned_Profile__c</field>
-            <table>Account.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Detail-EmailMessage.CreatedBy</field>
-            <table>Account.UnifiedActivities</table>
-        </columns>
         <masterLabel>Unified Activities</masterLabel>
     </sections>
     <sections>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Id</field>
-            <table>Account.UnifiedActivities.UnifiedActivityRelations</table>
-        </columns>
-        <columns>
-            <checkedByDefault>true</checkedByDefault>
-            <field>Name</field>
-            <table>Account.UnifiedActivities.UnifiedActivityRelations</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Type</field>
-            <table>Account.UnifiedActivities.UnifiedActivityRelations</table>
-        </columns>
         <masterLabel>Relations</masterLabel>
     </sections>
 </ReportType>

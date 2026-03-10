@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Current_contract_until__c</fullName>
-    <description>RO - 1692</description>
+    <description>RO-2858 — LEGACY. Replaced by Partner_Contract_End_Date__c. Do not use.</description>
     <formula>Framework_Opportunity_Group__r.Framework_Opportunity__r.Contract_End_Date__c</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-    <label>Current contract until</label>
+    <label>Legacy - Current Contract Until</label>
     <required>false</required>
     <trackHistory>false</trackHistory>
     <type>Date</type>

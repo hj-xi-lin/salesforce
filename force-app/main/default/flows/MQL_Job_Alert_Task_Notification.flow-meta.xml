@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>action_SendBellNotification</name>
+        <label>Send Bell Notification</label>
+        <locationX>176</locationX>
+        <locationY>638</locationY>
+        <actionName>customNotificationAction</actionName>
+        <actionType>customNotificationAction</actionType>
+        <connector>
+            <targetReference>action_SendEmailNotification</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>action_SendEmailNotification</targetReference>
+        </faultConnector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>customNotifTypeId</name>
+            <value>
+                <elementReference>get_NotificationType.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recipientIds</name>
+            <value>
+                <elementReference>varRecipientIds</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>title</name>
+            <value>
+                <elementReference>frmNotificationTitle</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>body</name>
+            <value>
+                <elementReference>frmNotificationBody</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>targetId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>customNotificationAction</nameSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>action_SendEmailNotification</name>
+        <label>Send Email Notification</label>
+        <locationX>176</locationX>
+        <locationY>758</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>get_OwnerUser.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <elementReference>frmEmailSubject</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>frmEmailBody</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+    </actionCalls>
+    <apiVersion>65.0</apiVersion>
+    <assignments>
+        <name>assign_Recipients</name>
+        <label>Add Owner to Recipients</label>
+        <locationX>176</locationX>
+        <locationY>518</locationY>
+        <assignmentItems>
+            <assignToReference>varRecipientIds</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>$Record.OwnerId</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>action_SendBellNotification</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>dec_Is_MQL_Or_Job_Alert</name>
+        <label>Is New Task or Owner Changed?</label>
+        <locationX>176</locationX>
+        <locationY>158</locationY>
+        <defaultConnectorLabel>No Action Needed</defaultConnectorLabel>
+        <rules>
+            <name>rule_New_Or_Reassigned</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record__Prior</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.OwnerId</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record__Prior.OwnerId</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>get_NotificationType</targetReference>
+            </connector>
+            <label>New Task or Owner Changed</label>
+        </rules>
+    </decisions>
+    <description>Sends a bell notification and email to David Beck when an MQL Task or Job Alert task is created or assigned to him.</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>frmEmailBody</name>
+        <dataType>String</dataType>
+        <expression>&apos;Hi,&apos; &amp; BR() &amp; BR() &amp;
+&apos;You have been assigned a new &apos; &amp; {!$Record.txtTaskType__c} &amp; &apos;.&apos; &amp; BR() &amp; BR() &amp;
+&apos;Account: &apos; &amp; {!$Record.Account.Name} &amp; BR() &amp;
+&apos;Subject: &apos; &amp; {!$Record.Subject} &amp; BR() &amp;
+&apos;Due Date: &apos; &amp; TEXT({!$Record.ActivityDate}) &amp; BR() &amp; BR() &amp;
+&apos;Please review and action this task in Salesforce.&apos; &amp; BR() &amp; BR() &amp;
+&apos;Open task: &apos; &amp; LEFT({!$Api.Enterprise_Server_URL_600}, FIND(&apos;/services&apos;, {!$Api.Enterprise_Server_URL_600})) &amp; {!$Record.Id}</expression>
+    </formulas>
+    <formulas>
+        <name>frmEmailSubject</name>
+        <dataType>String</dataType>
+        <expression>&apos;[Salesforce] &apos; &amp; {!frmNotificationTitle}</expression>
+    </formulas>
+    <formulas>
+        <name>frmNotificationBody</name>
+        <dataType>String</dataType>
+        <expression>&apos;You have been assigned a new &apos; &amp; {!$Record.txtTaskType__c} &amp; &apos; for account &apos; &amp; {!$Record.Account.Name} &amp; &apos;. Subject: &apos; &amp; {!$Record.Subject}</expression>
+    </formulas>
+    <formulas>
+        <name>frmNotificationTitle</name>
+        <dataType>String</dataType>
+        <expression>IF(
+    {!$Record.txtTaskType__c} = &apos;MQL Task&apos;,
+    &apos;New MQL Task Assigned&apos;,
+    &apos;New Job Alert Task Assigned&apos;
+)</expression>
+    </formulas>
+    <interviewLabel>MQL Job Alert Task Notification {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>MQL / Job Alert Task Notification</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>get_NotificationType</name>
+        <label>Get Notification Type</label>
+        <locationX>176</locationX>
+        <locationY>278</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>get_OwnerUser</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>get_OwnerUser</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>MQL_Job_Alert_Task_Notification</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>CustomNotificationType</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>get_OwnerUser</name>
+        <label>Get Owner User</label>
+        <locationX>176</locationX>
+        <locationY>398</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>assign_Recipients</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.OwnerId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>User</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <runInMode>SystemModeWithoutSharing</runInMode>
+    <start>
+        <locationX>176</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>dec_Is_MQL_Or_Job_Alert</targetReference>
+        </connector>
+        <filterLogic>(1 OR 2) AND 3</filterLogic>
+        <filters>
+            <field>txtTaskType__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>MQL Task</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>txtTaskType__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Job Alert</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>OwnerId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>005W7000003UovJIAS</stringValue>
+            </value>
+        </filters>
+        <object>Task</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Draft</status>
+    <triggerOrder>500</triggerOrder>
+    <variables>
+        <name>varRecipientIds</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

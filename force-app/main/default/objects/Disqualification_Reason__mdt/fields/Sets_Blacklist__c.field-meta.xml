@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sets_Blacklist__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>When checked, the flow sets Blacklist__c = true on the account.</description>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Sets Blacklist</label>
+    <type>Checkbox</type>
+</CustomField>

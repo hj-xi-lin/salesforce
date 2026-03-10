@@ -13,24 +13,19 @@
     <columns>HeyJobs_Category__c</columns>
     <filterScope>Everything</filterScope>
     <filters>
-        <field>Stage_ACM__c</field>
-        <operation>equals</operation>
-        <value>Outbound,Prospect,Acquisition</value>
-    </filters>
-    <filters>
         <field>Test_Account__c</field>
         <operation>equals</operation>
         <value>0</value>
     </filters>
     <filters>
         <field>Account_Owner__c</field>
-        <operation>contains</operation>
-        <value>Hübert</value>
+        <operation>equals</operation>
+        <value>Leo Enslin</value>
     </filters>
     <filters>
-        <field>Estimated_Wallet_Size__c</field>
-        <operation>lessThan</operation>
-        <value>EUR 75000</value>
+        <field>Follow_up_Details_Account__c</field>
+        <operation>notContain</operation>
+        <value>KEEP</value>
     </filters>
     <label>All Accounts Julia Chycko</label>
     <sharedTo>

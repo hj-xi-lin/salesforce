@@ -7,8 +7,8 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Name</fieldItem>
-                <identifier>RecordNameField2</identifier>
+                <fieldItem>Record.Type__c</fieldItem>
+                <identifier>RecordType_cField3</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-a58b6dd2-063d-4183-a199-f066cb23740b</name>

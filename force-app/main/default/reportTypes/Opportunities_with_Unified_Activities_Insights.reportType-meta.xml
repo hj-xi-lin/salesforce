@@ -4,14 +4,6 @@
     <category>activities</category>
     <deployed>true</deployed>
     <description>Opportunities with Unified Activities &amp; Insights</description>
-    <join>
-        <join>
-            <outerJoin>true</outerJoin>
-            <relationship>Insights</relationship>
-        </join>
-        <outerJoin>false</outerJoin>
-        <relationship>UnifiedActivities</relationship>
-    </join>
     <label>Opportunities with Unified Activities &amp; Insights</label>
     <sections>
         <columns>
@@ -332,94 +324,9 @@
         <masterLabel>Opportunities</masterLabel>
     </sections>
     <sections>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>ActivityDateTime</field>
-            <table>Opportunity.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>ActivitySubType</field>
-            <table>Opportunity.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>ActivityType</field>
-            <table>Opportunity.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Detail-Event</field>
-            <table>Opportunity.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Detail-Task</field>
-            <table>Opportunity.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>IsInsightAvailable</field>
-            <table>Opportunity.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Snippet</field>
-            <table>Opportunity.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Subject</field>
-            <table>Opportunity.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Id</field>
-            <table>Opportunity.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Detail-Task.Type</field>
-            <table>Opportunity.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Detail-Task.TaskSubtype</field>
-            <table>Opportunity.UnifiedActivities</table>
-        </columns>
         <masterLabel>Unified Activities</masterLabel>
     </sections>
     <sections>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>AggregatedKeywordOccurrences</field>
-            <table>Opportunity.UnifiedActivities.Insights</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>CreatedDate</field>
-            <table>Opportunity.UnifiedActivities.Insights</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>InsightType</field>
-            <table>Opportunity.UnifiedActivities.Insights</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>LastModifiedDate</field>
-            <table>Opportunity.UnifiedActivities.Insights</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Scope</field>
-            <table>Opportunity.UnifiedActivities.Insights</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Id</field>
-            <table>Opportunity.UnifiedActivities.Insights</table>
-        </columns>
         <masterLabel>Insights</masterLabel>
     </sections>
 </ReportType>

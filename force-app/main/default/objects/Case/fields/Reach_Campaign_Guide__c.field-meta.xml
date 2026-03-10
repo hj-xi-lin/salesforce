@@ -2,8 +2,8 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Reach_Campaign_Guide__c</fullName>
     <description>RO - 2458</description>
-    <inlineHelpText>Link to the REACH Campaign Guide</inlineHelpText>
-    <label>REACH Campaign Guide</label>
+    <inlineHelpText>Link to the REACH Timeline</inlineHelpText>
+    <label>REACH Timeline</label>
     <length>32768</length>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>

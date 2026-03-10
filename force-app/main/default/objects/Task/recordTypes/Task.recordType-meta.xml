@@ -1025,6 +1025,14 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Pilot Handover ACM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pilot Handover AE</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>SSSU MVP Follow Up</fullName>
             <default>false</default>
         </values>
@@ -1115,6 +1123,36 @@
         </values>
         <values>
             <fullName>short_abandoned</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>aircall__SMS_Direction__c</picklist>
+        <values>
+            <fullName>Inbound</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outbound</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>aircall__SMS_Status__c</picklist>
+        <values>
+            <fullName>Delivered</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Received</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Undelivered</fullName>
             <default>false</default>
         </values>
     </picklistValues>

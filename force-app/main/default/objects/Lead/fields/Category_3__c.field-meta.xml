@@ -12,6 +12,11 @@
         <valueSetDefinition>
             <sorted>true</sorted>
             <value>
+                <fullName>1? Stores</fullName>
+                <default>false</default>
+                <label>1? Stores</label>
+            </value>
+            <value>
                 <fullName>1€ Stores</fullName>
                 <default>false</default>
                 <label>1€ Stores</label>
@@ -85,6 +90,16 @@
                 <fullName>Auditors</fullName>
                 <default>false</default>
                 <label>Auditors</label>
+            </value>
+            <value>
+                <fullName>Automation</fullName>
+                <default>false</default>
+                <label>Automation</label>
+            </value>
+            <value>
+                <fullName>Auto Parts Trade</fullName>
+                <default>false</default>
+                <label>Auto Parts Trade</label>
             </value>
             <value>
                 <fullName>Bakery</fullName>
@@ -207,6 +222,11 @@
                 <label>Butcher</label>
             </value>
             <value>
+                <fullName>Buying Group</fullName>
+                <default>false</default>
+                <label>Buying Group</label>
+            </value>
+            <value>
                 <fullName>Cable Companies</fullName>
                 <default>false</default>
                 <label>Cable Companies</label>
@@ -232,6 +252,11 @@
                 <label>Camera Maker</label>
             </value>
             <value>
+                <fullName>Camping Sites</fullName>
+                <default>false</default>
+                <label>Camping Sites</label>
+            </value>
+            <value>
                 <fullName>Camping Van manufacturers</fullName>
                 <default>false</default>
                 <label>Camping Van manufacturers</label>
@@ -240,6 +265,11 @@
                 <fullName>Caravan Dealer</fullName>
                 <default>false</default>
                 <label>Caravan Dealer</label>
+            </value>
+            <value>
+                <fullName>Car Cranes</fullName>
+                <default>false</default>
+                <label>Car Cranes</label>
             </value>
             <value>
                 <fullName>Car Dealer</fullName>
@@ -302,9 +332,19 @@
                 <label>Cement Industry</label>
             </value>
             <value>
+                <fullName>Chambers</fullName>
+                <default>false</default>
+                <label>Chambers</label>
+            </value>
+            <value>
                 <fullName>Chemical Wholesale</fullName>
                 <default>false</default>
                 <label>Chemical Wholesale</label>
+            </value>
+            <value>
+                <fullName>City ??Marketing</fullName>
+                <default>false</default>
+                <label>City ??Marketing</label>
             </value>
             <value>
                 <fullName>City ​​Marketing</fullName>
@@ -445,6 +485,11 @@
                 <fullName>DIY</fullName>
                 <default>false</default>
                 <label>DIY</label>
+            </value>
+            <value>
+                <fullName>Drugstore</fullName>
+                <default>false</default>
+                <label>Drugstore</label>
             </value>
             <value>
                 <fullName>Drugstores</fullName>
@@ -622,6 +667,11 @@
                 <label>Freight Forwarders</label>
             </value>
             <value>
+                <fullName>Fruit Vegetables</fullName>
+                <default>false</default>
+                <label>Fruit Vegetables</label>
+            </value>
+            <value>
                 <fullName>Fruit VeIdgetables</fullName>
                 <default>false</default>
                 <label>Fruit VeIdgetables</label>
@@ -635,6 +685,11 @@
                 <fullName>Furniture Industry</fullName>
                 <default>false</default>
                 <label>Furniture Industry</label>
+            </value>
+            <value>
+                <fullName>Furniture Shipping</fullName>
+                <default>false</default>
+                <label>Furniture Shipping</label>
             </value>
             <value>
                 <fullName>Furniture Stores</fullName>
@@ -655,6 +710,11 @@
                 <fullName>Gas Stations</fullName>
                 <default>false</default>
                 <label>Gas Stations</label>
+            </value>
+            <value>
+                <fullName>Gastro Outfitters</fullName>
+                <default>false</default>
+                <label>Gastro Outfitters</label>
             </value>
             <value>
                 <fullName>Generics</fullName>
@@ -705,6 +765,11 @@
                 <fullName>Gyms</fullName>
                 <default>false</default>
                 <label>Gyms</label>
+            </value>
+            <value>
+                <fullName>Hairdresser Wholesale</fullName>
+                <default>false</default>
+                <label>Hairdresser Wholesale</label>
             </value>
             <value>
                 <fullName>Hair Stylist</fullName>
@@ -807,6 +872,11 @@
                 <label>Internet companies</label>
             </value>
             <value>
+                <fullName>Investors</fullName>
+                <default>false</default>
+                <label>Investors</label>
+            </value>
+            <value>
                 <fullName>IT Consulting</fullName>
                 <default>false</default>
                 <label>IT Consulting</label>
@@ -820,6 +890,11 @@
                 <fullName>Jeweler</fullName>
                 <default>false</default>
                 <label>Jeweler</label>
+            </value>
+            <value>
+                <fullName>Jewelry</fullName>
+                <default>false</default>
+                <label>Jewelry</label>
             </value>
             <value>
                 <fullName>Jewelry Manufacturer</fullName>
@@ -1062,6 +1137,11 @@
                 <label>Parks</label>
             </value>
             <value>
+                <fullName>Parties</fullName>
+                <default>false</default>
+                <label>Parties</label>
+            </value>
+            <value>
                 <fullName>Payment Processor</fullName>
                 <default>false</default>
                 <label>Payment Processor</label>
@@ -1085,6 +1165,11 @@
                 <fullName>Petroleum Houses</fullName>
                 <default>false</default>
                 <label>Petroleum Houses</label>
+            </value>
+            <value>
+                <fullName>Pet Shop</fullName>
+                <default>false</default>
+                <label>Pet Shop</label>
             </value>
             <value>
                 <fullName>Pharmaceutical Industry</fullName>
@@ -1255,6 +1340,11 @@
                 <fullName>Semiconductor Industry</fullName>
                 <default>false</default>
                 <label>Semiconductor Industry</label>
+            </value>
+            <value>
+                <fullName>SEO Agency</fullName>
+                <default>false</default>
+                <label>SEO Agency</label>
             </value>
             <value>
                 <fullName>Sheet Metal Parts</fullName>
@@ -1517,6 +1607,11 @@
                 <label>Truck Service</label>
             </value>
             <value>
+                <fullName>Trustee</fullName>
+                <default>false</default>
+                <label>Trustee</label>
+            </value>
+            <value>
                 <fullName>TV Channel</fullName>
                 <default>false</default>
                 <label>TV Channel</label>
@@ -1580,6 +1675,11 @@
                 <fullName>White Goods</fullName>
                 <default>false</default>
                 <label>White Goods</label>
+            </value>
+            <value>
+                <fullName>Wholesale Cleaning</fullName>
+                <default>false</default>
+                <label>Wholesale Cleaning</label>
             </value>
             <value>
                 <fullName>Wholesale Grosso</fullName>

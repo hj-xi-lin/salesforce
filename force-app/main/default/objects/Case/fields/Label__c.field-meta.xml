@@ -29,12 +29,12 @@
             <value>
                 <fullName>Pre Kick-Off</fullName>
                 <default>false</default>
-                <label>Pre Kick-Off</label>
+                <label>Onboarding Kick-Off</label>
             </value>
             <value>
                 <fullName>Kick-Off</fullName>
                 <default>false</default>
-                <label>Kick-Off</label>
+                <label>Kampagnen Finalisierung</label>
             </value>
         </valueSetDefinition>
     </valueSet>

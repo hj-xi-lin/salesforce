@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Job_Submission__c</fullName>
-    <description>RO - 1631</description>
-    <label>Job Submission</label>
+    <description>RO-2858 — Renamed from &quot;Job Submission&quot;. Partner job submission method.</description>
+    <label>Partner Job Submission</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>
@@ -12,34 +12,60 @@
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
-                <fullName>Recruiter Portal</fullName>
+                <fullName>Einstellungsservice Plus</fullName>
                 <default>false</default>
-                <label>Recruiter Portal</label>
+                <label>Einstellungsservice Plus</label>
             </value>
             <value>
-                <fullName>Einstellungsservice</fullName>
+                <fullName>Einstellungsservice mit Feed</fullName>
                 <default>false</default>
-                <label>Einstellungsservice</label>
+                <label>Einstellungsservice mit Feed</label>
             </value>
             <value>
-                <fullName>Feed Integration + Einstellungsservice</fullName>
+                <fullName>Einstellungsservice ohne Feed</fullName>
                 <default>false</default>
-                <label>Feed Integration + Einstellungsservice</label>
+                <label>Einstellungsservice ohne Feed</label>
+            </value>
+            <value>
+                <fullName>Agentur selbst</fullName>
+                <default>false</default>
+                <label>Agentur selbst</label>
             </value>
             <value>
                 <fullName>API</fullName>
                 <default>false</default>
+                <isActive>false</isActive>
                 <label>API</label>
+            </value>
+            <value>
+                <fullName>Einstellungsservice</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Einstellungsservice</label>
             </value>
             <value>
                 <fullName>Einstellungsservice +</fullName>
                 <default>false</default>
+                <isActive>false</isActive>
                 <label>Einstellungsservice +</label>
+            </value>
+            <value>
+                <fullName>Feed Integration + Einstellungsservice</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Feed Integration + Einstellungsservice</label>
             </value>
             <value>
                 <fullName>Feed Integration + Einstellungsservice +</fullName>
                 <default>false</default>
+                <isActive>false</isActive>
                 <label>Feed Integration + Einstellungsservice +</label>
+            </value>
+            <value>
+                <fullName>Recruiter Portal</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Recruiter Portal</label>
             </value>
         </valueSetDefinition>
     </valueSet>

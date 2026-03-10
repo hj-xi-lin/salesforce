@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partner_Kickback_Threshold_2__c</fullName>
+    <description>RO-2858 — Replaces Boost_Volume__c. Booking value to unlock kickback tier 2.</description>
+    <externalId>false</externalId>
+    <label>Partner Kickback Threshold 2</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

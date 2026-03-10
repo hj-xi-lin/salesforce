@@ -87,6 +87,51 @@
         <reevaluateOnChange>false</reevaluateOnChange>
     </fieldUpdates>
     <fieldUpdates>
+        <fullName>Clear_Disqualification_Outcome</fullName>
+        <field>Disqualification_Outcome__c</field>
+        <name>Clear Disqualification Outcome</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Clear_Disqualified_By_On_Rejection</fullName>
+        <field>Account_Disqualified_By__c</field>
+        <name>Clear Disqualified By On Rejection</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Clear_Identified_Service_Country</fullName>
+        <field>Identified_Service_Country__c</field>
+        <name>Clear Identified Service Country</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Clear_Loss_Detail_On_Rejection</fullName>
+        <field>Loss_Reason_Detail_Account__c</field>
+        <name>Clear Loss Detail On Rejection</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Clear_Loss_Reason_On_Rejection</fullName>
+        <field>Loss_Reason_Account__c</field>
+        <name>Clear Loss Reason On Rejection</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
         <fullName>Set_status_to_Pending</fullName>
         <field>Account_Approval_Status__c</field>
         <literalValue>Pending</literalValue>

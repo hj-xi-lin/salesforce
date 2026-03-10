@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Job_Tasks</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.ADDRESS1_STATE_CODE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>GTM_Motion_Account__c</columns>
+    <columns>Total_Live_Jobs_Self__c</columns>
+    <columns>Stepstone_Jobs_Self__c</columns>
+    <columns>Timestamp_Trigger_Job_Task__c</columns>
+    <columns>Record_Type__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Timestamp_Trigger_Job_Task__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>Account_Owner__c</field>
+        <operation>equals</operation>
+        <value>Lead Gen</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.NAME</field>
+        <operation>notContain</operation>
+        <value>Personal</value>
+    </filters>
+    <filters>
+        <field>GTM_Motion_Account__c</field>
+        <operation>equals</operation>
+        <value>Inside Sales</value>
+    </filters>
+    <filters>
+        <field>Record_Type__c</field>
+        <operation>equals</operation>
+        <value>Sales</value>
+    </filters>
+    <label>Job Tasks</label>
+</ListView>

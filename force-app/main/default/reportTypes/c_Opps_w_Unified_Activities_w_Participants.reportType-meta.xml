@@ -4,14 +4,6 @@
     <category>opportunities</category>
     <deployed>true</deployed>
     <description>Opportunities with Unified Activities (including EAC activities) and Participants</description>
-    <join>
-        <join>
-            <outerJoin>false</outerJoin>
-            <relationship>UnifiedActivityParticipants</relationship>
-        </join>
-        <outerJoin>false</outerJoin>
-        <relationship>UnifiedActivities</relationship>
-    </join>
     <label>c - Opps w/ Unified Activities w/ Participants</label>
     <sections>
         <columns>
@@ -1637,114 +1629,9 @@
         <masterLabel>Opportunities</masterLabel>
     </sections>
     <sections>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Id</field>
-            <table>Opportunity.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>ActivityType</field>
-            <table>Opportunity.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>ActivitySubType</field>
-            <table>Opportunity.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>ActivityDateTime</field>
-            <table>Opportunity.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Subject</field>
-            <table>Opportunity.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Snippet</field>
-            <table>Opportunity.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>IsInsightAvailable</field>
-            <table>Opportunity.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>InternalEventKey</field>
-            <table>Opportunity.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Detail-Event</field>
-            <table>Opportunity.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Detail-Task</field>
-            <table>Opportunity.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Detail-VideoCall</field>
-            <table>Opportunity.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Detail-Event.Type</field>
-            <table>Opportunity.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Detail-Event.plEventSubject__c</field>
-            <table>Opportunity.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Detail-Task.CallType</field>
-            <table>Opportunity.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Detail-Task.Answered_Unanswered__c</field>
-            <table>Opportunity.UnifiedActivities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Detail-Task.CallDurationInSeconds</field>
-            <table>Opportunity.UnifiedActivities</table>
-        </columns>
         <masterLabel>Unified Activities</masterLabel>
     </sections>
     <sections>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>ChannelAddress</field>
-            <table>Opportunity.UnifiedActivities.UnifiedActivityParticipants</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>ParticipantType</field>
-            <table>Opportunity.UnifiedActivities.UnifiedActivityParticipants</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Id</field>
-            <table>Opportunity.UnifiedActivities.UnifiedActivityParticipants</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Name</field>
-            <table>Opportunity.UnifiedActivities.UnifiedActivityParticipants</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Type</field>
-            <table>Opportunity.UnifiedActivities.UnifiedActivityParticipants</table>
-        </columns>
         <masterLabel>Participants</masterLabel>
     </sections>
 </ReportType>

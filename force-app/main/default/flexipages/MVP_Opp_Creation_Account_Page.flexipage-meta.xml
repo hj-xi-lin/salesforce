@@ -12,6 +12,9 @@ RO-2316</description>
                             <value>Edit</value>
                         </valueListItems>
                         <valueListItems>
+                            <value>Account.Account_Disqualifizieren</value>
+                        </valueListItems>
+                        <valueListItems>
                             <value>CustomButton.Account.Edit_Contacts</value>
                         </valueListItems>
                         <valueListItems>
@@ -3155,11 +3158,6 @@ RO-2316</description>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>adminFilters</name>
-                    <valueList>
-                        <valueListItems>
-                            <value>Type__c|EQUALS|[&quot;Account Documentation&quot;]</value>
-                        </valueListItems>
-                    </valueList>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>maxRecordsToDisplay</name>
@@ -3522,6 +3520,27 @@ RO-2316</description>
         <type>Region</type>
     </flexiPageRegions>
     <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>decorate</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size: 20px; color: rgb(232, 119, 34);&quot;&gt;⏳ Disqualifizierung wartet auf Genehmigung&lt;/span&gt;&lt;/p&gt;</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:richText</componentName>
+                <identifier>flexipage_richText_pending_approval</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.Account_Approval_Status__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>Pending</rightValue>
+                    </criteria>
+                </visibilityRule>
+            </componentInstance>
+        </itemInstances>
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>

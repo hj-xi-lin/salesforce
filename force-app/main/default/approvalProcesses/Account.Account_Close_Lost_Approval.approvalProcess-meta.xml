@@ -3,13 +3,15 @@
     <active>true</active>
     <allowRecall>false</allowRecall>
     <allowedSubmitters>
-        <type>owner</type>
+        <type>allInternalUsers</type>
     </allowedSubmitters>
     <approvalPageFields>
         <field>Name</field>
         <field>Owner</field>
         <field>Loss_Reason_Account__c</field>
         <field>Loss_Reason_Detail_Account__c</field>
+        <field>Disqualification_Outcome__c</field>
+        <field>Identified_Service_Country__c</field>
     </approvalPageFields>
     <approvalStep>
         <allowDelegate>true</allowDelegate>
@@ -42,6 +44,26 @@
         <action>
             <name>Approval_Update_Rejection</name>
             <type>Alert</type>
+        </action>
+        <action>
+            <name>Clear_Disqualification_Outcome</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Clear_Disqualified_By_On_Rejection</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Clear_Identified_Service_Country</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Clear_Loss_Detail_On_Rejection</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Clear_Loss_Reason_On_Rejection</name>
+            <type>FieldUpdate</type>
         </action>
     </finalRejectionActions>
     <finalRejectionRecordLock>false</finalRejectionRecordLock>

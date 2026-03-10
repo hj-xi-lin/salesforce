@@ -621,6 +621,46 @@ private class HandoverServiceTest {
     }
     
     /**
+     * @description Test Invocable Action Calculate Time to ACM Assignment updates C360 when Account has ACM assignment timestamp
+     */
+    @isTest
+    static void testCalculateTimeToACMAssignment_Invocable() {
+        Account testAccount = [SELECT Id FROM Account WHERE Name = 'Test Account' LIMIT 1];
+        testAccount.Timestamp_ACM_Assignment__c = DateTime.now();
+        update testAccount;
+        C360TimeToACMAssignmentAction.TimeToACMAssignmentRequest req = new C360TimeToACMAssignmentAction.TimeToACMAssignmentRequest();
+        req.accountId = testAccount.Id;
+        Test.startTest();
+        C360TimeToACMAssignmentAction.calculateTimeToACMAssignment(new List<C360TimeToACMAssignmentAction.TimeToACMAssignmentRequest>{ req });
+        Test.stopTest();
+        // Invocable runs; no Pilot Handover C360 with pilot Opportunity for this account, so no C360 update. No exception.
+    }
+    
+    /**
+     * @description Test calculateTimeToACMAssignment with empty/null request does not throw
+     */
+    @isTest
+    static void testCalculateTimeToACMAssignment_EmptyRequest() {
+        Test.startTest();
+        C360TimeToACMAssignmentAction.calculateTimeToACMAssignment(new List<C360TimeToACMAssignmentAction.TimeToACMAssignmentRequest>());
+        C360TimeToACMAssignmentAction.calculateTimeToACMAssignment(null);
+        Test.stopTest();
+        // No exception expected
+    }
+    
+    /**
+     * @description Test HandoverService.calculateTimeToACMAssignmentForAccounts (used by invocable) with empty list
+     */
+    @isTest
+    static void testCalculateTimeToACMAssignmentForAccounts_Empty() {
+        Test.startTest();
+        HandoverService.calculateTimeToACMAssignmentForAccounts(new List<Id>());
+        HandoverService.calculateTimeToACMAssignmentForAccounts(null);
+        Test.stopTest();
+        // No exception expected
+    }
+    
+    /**
      * @description Test resolveHandoverTask finds the AE task for an Opportunity-linked Task
      * Note: Since sandbox has complex Opportunity validations, we test with an Account
      * that has a Task with Type = 'Pilot Handover AE'. The query logic is the same
