@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Base_Volume__c</fullName>
-    <description>RO - 1631</description>
-    <inlineHelpText>The volume we define in order to work together. If this is 0€ then we have no fixed commitment and if it has a value then it is the minimum commitment.</inlineHelpText>
-    <label>Base Volume</label>
+    <description>RO-2858 — Renamed from &quot;Base Volume&quot;. Booking value to unlock kickback tier 1.</description>
+    <inlineHelpText>Booking threshold for kickback tier 1. Populated from Account on Opp creation.</inlineHelpText>
+    <label>Partner Kickback Threshold 1</label>
     <precision>18</precision>
     <required>false</required>
     <scale>2</scale>

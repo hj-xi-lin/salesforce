@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lock_Partner_Fields_On_Closed</fullName>
+    <active>true</active>
+    <description>RO-2858 — Prevents editing any partner fields on Closed Won or Closed Lost opportunities. Only System Administrator can override.</description>
+    <errorConditionFormula>AND(
+    OR(
+        ISPICKVAL(StageName, &quot;Closed Won&quot;),
+        ISPICKVAL(StageName, &quot;Closed Lost&quot;)
+    ),
+    OR(
+        ISCHANGED(Partner_Basis_AE__c),
+        ISCHANGED(Base_AE__c),
+        ISCHANGED(Boost_AE__c),
+        ISCHANGED(Partner_Kickback_3_AE__c),
+        ISCHANGED(Base_Volume__c),
+        ISCHANGED(Boost_Volume__c),
+        ISCHANGED(Partner_Kickback_Threshold_3__c),
+        ISCHANGED(Partner_Current_AE__c),
+        ISCHANGED(Partner_Contract_Start_Date__c),
+        ISCHANGED(Partner_Contract_End_Date__c)
+    ),
+    $Profile.Name &lt;&gt; &quot;System Administrator&quot;
+)</errorConditionFormula>
+    <errorMessage>Partner fields cannot be modified on closed opportunities. Please contact the Salesforce team.</errorMessage>
+</ValidationRule>

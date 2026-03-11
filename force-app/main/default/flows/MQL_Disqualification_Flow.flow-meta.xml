@@ -130,9 +130,6 @@
         <label>Account Update</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
-        <defaultConnector>
-            <targetReference>Complete_Task</targetReference>
-        </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Blacklist2</name>
@@ -491,9 +488,6 @@
         <label>Blacklist Account</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
-        <connector>
-            <targetReference>Complete_Task</targetReference>
-        </connector>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
@@ -554,6 +548,9 @@
         <label>Complete Task</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Account</targetReference>
+        </connector>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
@@ -600,7 +597,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Get_Account</targetReference>
+            <targetReference>Complete_Task</targetReference>
         </connector>
         <inputReference>Get_Contact</inputReference>
     </recordUpdates>
@@ -922,9 +919,6 @@
         <label>Update Account to Outbound</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
-        <connector>
-            <targetReference>Complete_Task</targetReference>
-        </connector>
         <flowName>GTM_Motion_Enable_RT_Lifecycle_Changes</flowName>
         <inputAssignments>
             <name>varAccount</name>
