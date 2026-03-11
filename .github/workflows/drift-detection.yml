@@ -132,11 +132,19 @@ jobs:
               --body-file drift-report.md \
               --base main \
               --head "$BRANCH" \
-              --reviewer heyjobs/gtm_salesforce \
               $ASSIGNEE_FLAGS)
             echo "pr_url=$PR_URL" >> "$GITHUB_OUTPUT"
             echo "Created new drift PR" >> "$GITHUB_STEP_SUMMARY"
           fi
+
+      - name: Add team reviewer
+        if: steps.pr.outputs.pr_url
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.DRIFT_DETECTION_TOKEN || secrets.GITHUB_TOKEN }}
+        run: |
+          gh pr edit "${{ env.DRIFT_BRANCH }}" \
+            --add-reviewer heyjobs/gtm_salesforce
 
       - name: Notify Slack
         if: steps.pr.outputs.pr_url
