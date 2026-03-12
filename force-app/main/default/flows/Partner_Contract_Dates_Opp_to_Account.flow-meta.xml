@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <description>RO-2858 — On agency Opportunity create/update, if Partner_Contract_Start_Date__c or Partner_Contract_End_Date__c is changed, syncs them back to the ultimate parent Account (or direct Account if no ultimate parent).</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>frmSourceAccountId</name>
+        <dataType>String</dataType>
+        <expression>IF(
+    ISBLANK({!Get_Account.Ultimate_Parent_Account_Id__c}),
+    {!$Record.AccountId},
+    {!Get_Account.Ultimate_Parent_Account_Id__c}
+)</expression>
+    </formulas>
+    <interviewLabel>Partner Contract Dates Opp to Account {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Partner Contract Dates Opp to Account</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Account</name>
+        <label>Get Account</label>
+        <locationX>176</locationX>
+        <locationY>134</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Update_Target_Account</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.AccountId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Account</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Target_Account</name>
+        <label>Update Target Account</label>
+        <locationX>176</locationX>
+        <locationY>242</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>frmSourceAccountId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Partner_Contract_End_Date__c</field>
+            <value>
+                <elementReference>$Record.Partner_Contract_End_Date__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Partner_Contract_Start_Date__c</field>
+            <value>
+                <elementReference>$Record.Partner_Contract_Start_Date__c</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Account</object>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Account</targetReference>
+        </connector>
+        <filterFormula>AND(
+    OR(
+        {!$Record.RecordTypeId} = &quot;0129L0000004I2HQAU&quot;,
+        {!$Record.RecordTypeId} = &quot;0121v000000z1JnAAI&quot;,
+        {!$Record.RecordTypeId} = &quot;0121v000000z1JsAAI&quot;
+    ),
+    OR(
+        ISCHANGED({!$Record.Partner_Contract_Start_Date__c}),
+        ISCHANGED({!$Record.Partner_Contract_End_Date__c}),
+        AND(
+            ISNEW(),
+            OR(
+                NOT(ISBLANK({!$Record.Partner_Contract_Start_Date__c})),
+                NOT(ISBLANK({!$Record.Partner_Contract_End_Date__c}))
+            )
+        )
+    )
+)</filterFormula>
+        <object>Opportunity</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

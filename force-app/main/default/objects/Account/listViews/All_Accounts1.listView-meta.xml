@@ -20,12 +20,12 @@
     <filters>
         <field>Account_Owner__c</field>
         <operation>equals</operation>
-        <value>Leo Enslin</value>
+        <value>Sebastian Schönert</value>
     </filters>
     <filters>
-        <field>Follow_up_Details_Account__c</field>
-        <operation>notContain</operation>
-        <value>KEEP</value>
+        <field>Stage_ACM__c</field>
+        <operation>notEqual</operation>
+        <value>Lost</value>
     </filters>
     <label>All Accounts Julia Chycko</label>
     <sharedTo>

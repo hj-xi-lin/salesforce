@@ -1065,6 +1065,36 @@
                 <identifier>RecordTypeform_Submitted_cField</identifier>
             </fieldInstance>
         </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>readonly</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Invoice_Date_Formula__c</fieldItem>
+                <identifier>RecordInvoice_Date_Formula_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>readonly</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Invoice_Status_Formula__c</fieldItem>
+                <identifier>RecordInvoice_Status_Formula_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>readonly</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Invoice_Overdue_Days_Formula__c</fieldItem>
+                <identifier>RecordInvoice_Overdue_Days_Formula_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
         <name>Facet-78eb9b0b-066d-4b23-a2ec-8d582d2448b2</name>
         <type>Facet</type>
     </flexiPageRegions>

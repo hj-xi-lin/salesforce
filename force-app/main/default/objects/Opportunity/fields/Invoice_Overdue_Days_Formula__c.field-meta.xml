@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Invoice_Overdue_Days_Formula__c</fullName>
+    <description>Invoice overdue days from JustON</description>
+    <externalId>false</externalId>
+    <formula>ON_Invoice__r.ONB2__DaysOverdue__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Überfällige Tage der Rechnung</inlineHelpText>
+    <label>Invoice Overdue Days</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>
