@@ -1315,6 +1315,16 @@
             <field>Phone_Enriched__c</field>
             <table>Contact</table>
         </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Event_Name__c</field>
+            <table>Contact</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Event_Attended__c</field>
+            <table>Contact</table>
+        </columns>
         <masterLabel>Contacts</masterLabel>
     </sections>
     <sections>
@@ -1334,12 +1344,6 @@
             <checkedByDefault>false</checkedByDefault>
             <displayNameOverride>Contact : Account Name : Timestamp Acc Lifecycle StageAcquisition</displayNameOverride>
             <field>Account.Timestamp_Acc_Lifecycle_StageAcquisition__c</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Contact : Account Name : Timestamp Acc Lifecycle Stage Retention</displayNameOverride>
-            <field>Account.Timestamp_Acc_Lifecycle_Stage_Retention__c</field>
             <table>Contact</table>
         </columns>
         <columns>
@@ -1406,18 +1410,6 @@
             <checkedByDefault>false</checkedByDefault>
             <displayNameOverride>Contact : Account Name : Last Activity</displayNameOverride>
             <field>Account.LastActivityDate</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Contact : Account Name : Job specific title - Inventory</displayNameOverride>
-            <field>Account.Job_specific_title__c</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Contact : Account Name : Job Platform - Inventory</displayNameOverride>
-            <field>Account.Job_Platform__c</field>
             <table>Contact</table>
         </columns>
         <columns>

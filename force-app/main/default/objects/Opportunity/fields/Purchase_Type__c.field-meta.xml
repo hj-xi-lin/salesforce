@@ -1,34 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Job_Submission__c</fullName>
-    <description>RO-2858 — Renamed from &quot;Job Submission&quot;. Partner job submission method.</description>
-    <label>Partner Job Submission</label>
+    <fullName>Purchase_Type__c</fullName>
+    <label>Purchase Type</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>
     <type>Picklist</type>
     <valueSet>
+        <restricted>true</restricted>
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
-                <fullName>Einstellungsservice Plus</fullName>
+                <fullName>Pilot</fullName>
                 <default>false</default>
-                <label>Einstellungsservice Plus</label>
+                <label>Pilot</label>
             </value>
             <value>
-                <fullName>Einstellungsservice mit Feed</fullName>
+                <fullName>Second Purchase</fullName>
                 <default>false</default>
-                <label>Einstellungsservice mit Feed</label>
+                <label>Second Purchase</label>
             </value>
             <value>
-                <fullName>Einstellungsservice ohne Feed</fullName>
+                <fullName>Re-win Pilot</fullName>
                 <default>false</default>
-                <label>Einstellungsservice ohne Feed</label>
+                <label>Re-win Pilot</label>
             </value>
             <value>
-                <fullName>Agentur selbst</fullName>
+                <fullName>Re-win Second Purchase</fullName>
                 <default>false</default>
-                <label>Agentur selbst</label>
+                <label>Re-win Second Purchase</label>
+            </value>
+            <value>
+                <fullName>Retention</fullName>
+                <default>false</default>
+                <label>Retention</label>
             </value>
         </valueSetDefinition>
     </valueSet>

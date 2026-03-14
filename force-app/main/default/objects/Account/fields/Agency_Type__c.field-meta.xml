@@ -8,7 +8,6 @@
     <trackHistory>false</trackHistory>
     <type>Picklist</type>
     <valueSet>
-        <restricted>true</restricted>
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
@@ -25,36 +24,6 @@
                 <fullName>Cut/Ignore</fullName>
                 <default>false</default>
                 <label>Cut/Ignore</label>
-            </value>
-            <value>
-                <fullName>Marketing Agentur / Employer Branding</fullName>
-                <default>false</default>
-                <isActive>false</isActive>
-                <label>Marketing Agentur / Employer Branding</label>
-            </value>
-            <value>
-                <fullName>Multiposter / ATS</fullName>
-                <default>false</default>
-                <isActive>false</isActive>
-                <label>Multiposter / ATS</label>
-            </value>
-            <value>
-                <fullName>Pakete Agentur</fullName>
-                <default>false</default>
-                <isActive>false</isActive>
-                <label>Pakete Agentur</label>
-            </value>
-            <value>
-                <fullName>Special Case</fullName>
-                <default>false</default>
-                <isActive>false</isActive>
-                <label>Special Case</label>
-            </value>
-            <value>
-                <fullName>Stellenanzeigen Beratungsagentur</fullName>
-                <default>false</default>
-                <isActive>false</isActive>
-                <label>Stellenanzeigen Beratungsagentur</label>
             </value>
         </valueSetDefinition>
     </valueSet>

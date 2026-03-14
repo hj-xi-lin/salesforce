@@ -2156,76 +2156,6 @@
         </values>
     </picklistValues>
     <picklistValues>
-        <picklist>Heyassessment_Deactivation_Reason__c</picklist>
-        <values>
-            <fullName>Aus Versehen</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Datenschutzbedenken</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Firmenrichtlinie gegen KI</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Kein Bedarf%2FMehrwert</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Keine Screening-Unterstützung gegeben</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Mangelndes Vertrauen in KI</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Other</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Passt nicht in unseren Prozess</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Verstehe die Funktion nicht</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Zu kompliziert</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Zu teuer</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
-    <picklistValues>
-        <picklist>Hiring_Seasonality__c</picklist>
-        <values>
-            <fullName>None</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Q1</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Q2</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Q3</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Q4</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
-    <picklistValues>
         <picklist>Inbound_Source__c</picklist>
         <values>
             <fullName>Bing</fullName>
@@ -2481,17 +2411,6 @@
         </values>
     </picklistValues>
     <picklistValues>
-        <picklist>Live_At_Risk_Trigger_Details__c</picklist>
-        <values>
-            <fullName>Automated Trigger</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Manual Trigger by Sales</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
-    <picklistValues>
         <picklist>Loss_Reason_Account__c</picklist>
         <values>
             <fullName>%28Admin only%29 churned due to inactivity</fullName>
@@ -2662,25 +2581,6 @@
         </values>
     </picklistValues>
     <picklistValues>
-        <picklist>Priority_Account__c</picklist>
-        <values>
-            <fullName>1</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>2</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>3</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>4</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
-    <picklistValues>
         <picklist>Purchase_Decision_Behavior__c</picklist>
         <values>
             <fullName>Deciding</fullName>
@@ -2825,17 +2725,6 @@
         </values>
         <values>
             <fullName>gGmbH</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
-    <picklistValues>
-        <picklist>Renewal_At_Risk_Trigger_Details__c</picklist>
-        <values>
-            <fullName>Automated by AppSmith</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Manual Trigger by Sales</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -3868,29 +3757,6 @@
         </values>
         <values>
             <fullName>4 -%3E Sehr happy%2C will continue</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
-    <picklistValues>
-        <picklist>plAccountPotential__c</picklist>
-        <values>
-            <fullName>A - %3E %3E100%E2%80%99000%E2%82%AC</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>B -%3E 50%E2%80%99000%E2%82%AC-100%E2%80%99000%E2%82%AC</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>C -%3E 10%E2%80%99000%E2%82%AC-50%E2%80%99000%E2%82%AC</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>D -%3E 0-10%E2%80%99000%E2%82%AC</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>E -%3E Zero Potential</fullName>
             <default>false</default>
         </values>
     </picklistValues>

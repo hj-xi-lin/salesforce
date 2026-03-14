@@ -229,11 +229,6 @@
             <field>Account__c.GTM_Motion_Account__c</field>
             <table>Job__c</table>
         </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Account__c.Total_Live_Jobs__c</field>
-            <table>Job__c</table>
-        </columns>
         <masterLabel>Account Fields</masterLabel>
     </sections>
 </ReportType>

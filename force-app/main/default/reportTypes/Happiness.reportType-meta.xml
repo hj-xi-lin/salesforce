@@ -159,11 +159,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Account__c.Weight__c</field>
-            <table>Happiness__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>Account__c.Test_Account__c</field>
             <table>Happiness__c</table>
         </columns>
