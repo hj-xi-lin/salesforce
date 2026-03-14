@@ -1050,6 +1050,16 @@
             <field>Phone_Enriched__c</field>
             <table>Contact</table>
         </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Event_Name__c</field>
+            <table>Contact</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Event_Attended__c</field>
+            <table>Contact</table>
+        </columns>
         <masterLabel>Contacts</masterLabel>
     </sections>
     <sections>
@@ -1390,22 +1400,12 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>dJobslive__c</field>
-            <table>Contact.AccountContactRelations</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>fmlCompanyBackendLink__c</field>
             <table>Contact.AccountContactRelations</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Yearly_Budget_Planning_Time__c</field>
-            <table>Contact.AccountContactRelations</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>fmlLookerLink__c</field>
             <table>Contact.AccountContactRelations</table>
         </columns>
         <columns>
@@ -1431,11 +1431,6 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Contact_Last_Name__c</field>
-            <table>Contact.AccountContactRelations</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>plAccountPotential__c</field>
             <table>Contact.AccountContactRelations</table>
         </columns>
         <columns>
@@ -1565,42 +1560,12 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Timestamp_NPS20__c</field>
-            <table>Contact.AccountContactRelations</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Timestamp_NPS120__c</field>
-            <table>Contact.AccountContactRelations</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Timestamp_NPS360__c</field>
-            <table>Contact.AccountContactRelations</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>fmlPromoter__c</field>
-            <table>Contact.AccountContactRelations</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>fmlPassive__c</field>
             <table>Contact.AccountContactRelations</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>fmlDetractor__c</field>
-            <table>Contact.AccountContactRelations</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>refPilotAmount__c</field>
-            <table>Contact.AccountContactRelations</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>refPilotMonth__c</field>
             <table>Contact.AccountContactRelations</table>
         </columns>
         <columns>
@@ -1625,22 +1590,12 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Kununu_Score__c</field>
-            <table>Contact.AccountContactRelations</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>plRecruitingBudget__c</field>
             <table>Contact.AccountContactRelations</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>plPlannedHires__c</field>
-            <table>Contact.AccountContactRelations</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Current_Channel_Andere__c</field>
             <table>Contact.AccountContactRelations</table>
         </columns>
         <columns>
@@ -1840,26 +1795,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Weight__c</field>
-            <table>Contact.AccountContactRelations</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Weighted_Detractor__c</field>
-            <table>Contact.AccountContactRelations</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Weighted_Promoter__c</field>
-            <table>Contact.AccountContactRelations</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Weighted_Passive__c</field>
-            <table>Contact.AccountContactRelations</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>Converted__c</field>
             <table>Contact.AccountContactRelations</table>
         </columns>
@@ -1900,16 +1835,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Linkedin_Company__c</field>
-            <table>Contact.AccountContactRelations</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Job_specific_title__c</field>
-            <table>Contact.AccountContactRelations</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>Country__c</field>
             <table>Contact.AccountContactRelations</table>
         </columns>
@@ -1941,21 +1866,6 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Research_Status__c</field>
-            <table>Contact.AccountContactRelations</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Timestamp_Please_Research__c</field>
-            <table>Contact.AccountContactRelations</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Timestamp_Research_Done__c</field>
-            <table>Contact.AccountContactRelations</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Timestamp_B2B_Check_Done__c</field>
             <table>Contact.AccountContactRelations</table>
         </columns>
         <columns>
@@ -2095,11 +2005,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Facebook_Jobs_enabled__c</field>
-            <table>Contact.AccountContactRelations</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>Parent_Account_Lead_Score__c</field>
             <table>Contact.AccountContactRelations</table>
         </columns>
@@ -2130,27 +2035,12 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>BookingCoverage__c</field>
-            <table>Contact.AccountContactRelations</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>RemainingBudget__c</field>
             <table>Contact.AccountContactRelations</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Last_Job_Submitted_Date__c</field>
-            <table>Contact.AccountContactRelations</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Job_Platform__c</field>
-            <table>Contact.AccountContactRelations</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>pc_Booking_Coverage__c</field>
             <table>Contact.AccountContactRelations</table>
         </columns>
         <columns>
@@ -2191,21 +2081,6 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Legal_Parent_Account__c</field>
-            <table>Contact.AccountContactRelations</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Timestamp_acm_Survey_Reply__c</field>
-            <table>Contact.AccountContactRelations</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>TextKerneIImportDate__c</field>
-            <table>Contact.AccountContactRelations</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Timestamp_CS_Survey_Reply__c</field>
             <table>Contact.AccountContactRelations</table>
         </columns>
         <columns>

@@ -5,7 +5,6 @@
     <excludeButtons>ChangeRecordType</excludeButtons>
     <excludeButtons>Clone</excludeButtons>
     <excludeButtons>Delete</excludeButtons>
-    <excludeButtons>OpenSlackRecordChannel</excludeButtons>
     <excludeButtons>PrintableView</excludeButtons>
     <layoutSections>
         <customLabel>false</customLabel>
@@ -108,6 +107,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Demo_Count_Forecast__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Purchase_Type__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>

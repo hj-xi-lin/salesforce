@@ -385,6 +385,16 @@
                 <identifier>RecordLoss_Reason_Detail_cField</identifier>
             </fieldInstance>
         </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>readonly</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Purchase_Type__c</fieldItem>
+                <identifier>RecordPurchase_Type_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
         <name>Facet-9303a2e7-d039-4b3e-9872-50cde147b7e5</name>
         <type>Facet</type>
     </flexiPageRegions>

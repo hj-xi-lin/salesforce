@@ -131,12 +131,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Account Potential</displayNameOverride>
-            <field>plAccountPotential__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <displayNameOverride>Account Record Type</displayNameOverride>
             <field>RecordType</field>
             <table>Account</table>
@@ -246,18 +240,6 @@
             <checkedByDefault>false</checkedByDefault>
             <displayNameOverride>Agency Type</displayNameOverride>
             <field>Agency_Type__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Amount 2 years ago</displayNameOverride>
-            <field>Amount_2_years_ago__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Amount of packages HJ is included</displayNameOverride>
-            <field>Amount_of_packages_HJ_is_included__c</field>
             <table>Account</table>
         </columns>
         <columns>
@@ -478,12 +460,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>BookingCoverage</displayNameOverride>
-            <field>BookingCoverage__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <displayNameOverride>Bookings in current contract</displayNameOverride>
             <field>Bookings_in_current_contract__c</field>
             <table>Account</table>
@@ -582,12 +558,6 @@
             <checkedByDefault>false</checkedByDefault>
             <displayNameOverride>Category 3</displayNameOverride>
             <field>Category_3__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>CbC Reference Clients</displayNameOverride>
-            <field>CbC_Reference_Clients__c</field>
             <table>Account</table>
         </columns>
         <columns>
@@ -706,12 +676,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Current Channel Andere</displayNameOverride>
-            <field>Current_Channel_Andere__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <displayNameOverride>Current Channels</displayNameOverride>
             <field>plCurrentChannels__c</field>
             <table>Account</table>
@@ -792,12 +756,6 @@
             <checkedByDefault>false</checkedByDefault>
             <displayNameOverride>Description - Dealfront</displayNameOverride>
             <field>Description</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Detractor</displayNameOverride>
-            <field>fmlDetractor__c</field>
             <table>Account</table>
         </columns>
         <columns>
@@ -910,12 +868,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Facebook Jobs enabled</displayNameOverride>
-            <field>Facebook_Jobs_enabled__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <displayNameOverride>Fax</displayNameOverride>
             <field>Fax</field>
             <table>Account</table>
@@ -1012,12 +964,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Groove Upload Date</displayNameOverride>
-            <field>Groove_Upload_Date__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <displayNameOverride>GTC consent</displayNameOverride>
             <field>GTC_consent__c</field>
             <table>Account</table>
@@ -1054,12 +1000,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>HeyJobs Competitor</displayNameOverride>
-            <field>HeyJobs_Competitor__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <displayNameOverride>HeyPaket Status</displayNameOverride>
             <field>HeyPaket_Status__c</field>
             <table>Account</table>
@@ -1068,12 +1008,6 @@
             <checkedByDefault>false</checkedByDefault>
             <displayNameOverride>HeyPartner</displayNameOverride>
             <field>HeyPartner__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Hiring Seasonality</displayNameOverride>
-            <field>Hiring_Seasonality__c</field>
             <table>Account</table>
         </columns>
         <columns>
@@ -1132,12 +1066,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Initial Go Live Case</displayNameOverride>
-            <field>Initial_Go_Live_Case__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <displayNameOverride>Initial Go-Live</displayNameOverride>
             <field>dateInitialGoLive__c</field>
             <table>Account</table>
@@ -1168,80 +1096,14 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Is Update Through Category batch</displayNameOverride>
-            <field>isUpdateThroughCategorybatch__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Job feed update  - Inventory</displayNameOverride>
-            <field>Job_feed_update__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <displayNameOverride>Job feed update - Agency</displayNameOverride>
             <field>agency_data_job_feed_update__c</field>
             <table>Account</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Job feed update - Index</displayNameOverride>
-            <field>Job_feed_update_Index__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Job platform - Index</displayNameOverride>
-            <field>Job_platform_Index__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Job Platform - Inventory</displayNameOverride>
-            <field>Job_Platform__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Job specific title - Index</displayNameOverride>
-            <field>Job_specific_title_Index__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Job specific title - Inventory</displayNameOverride>
-            <field>Job_specific_title__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Job specific title (date) - Index</displayNameOverride>
-            <field>Job_specific_title_date_Index__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Job specific title (date) - Inventory</displayNameOverride>
-            <field>job_specific_title_published_date__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <displayNameOverride>Job specific title (link) - Agency</displayNameOverride>
             <field>Job_specific_title_link_Agency__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Job specific title (link) - Index</displayNameOverride>
-            <field>Job_specific_title_link_Index__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Job specific title (link) - Inventory</displayNameOverride>
-            <field>Job_specific_title_link__c</field>
             <table>Account</table>
         </columns>
         <columns>
@@ -1266,30 +1128,6 @@
             <checkedByDefault>false</checkedByDefault>
             <displayNameOverride>Jobs Live - Agency</displayNameOverride>
             <field>agency_data_jobs_live__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Jobs live - Index</displayNameOverride>
-            <field>Jobs_live_Index__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Jobs live - Inventory</displayNameOverride>
-            <field>dJobslive__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Jobs on Career Page</displayNameOverride>
-            <field>Jobs_on_Career_Page__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Jobs on Career Page (update date)</displayNameOverride>
-            <field>Jobs_on_Career_Page_update_date__c</field>
             <table>Account</table>
         </columns>
         <columns>
@@ -1372,12 +1210,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Kununu Score</displayNameOverride>
-            <field>Kununu_Score__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <displayNameOverride>Last Account Happiness Check</displayNameOverride>
             <field>Last_Account_Happiness_Check__c</field>
             <table>Account</table>
@@ -1416,12 +1248,6 @@
             <checkedByDefault>false</checkedByDefault>
             <displayNameOverride>Last Booking Generated Date Hierarchy</displayNameOverride>
             <field>Last_Booking_Generated_Date_Hierarchy__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Last Dealfront Update</displayNameOverride>
-            <field>Last_Dealfront_Update__c</field>
             <table>Account</table>
         </columns>
         <columns>
@@ -1518,12 +1344,6 @@
             <checkedByDefault>false</checkedByDefault>
             <displayNameOverride>Last Revenue Generated Date Hierarchy</displayNameOverride>
             <field>Last_Revenue_Generated_Date_Hierarchy__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Last Segment V02 Check</displayNameOverride>
-            <field>Last_Segment_V02_Check__c</field>
             <table>Account</table>
         </columns>
         <columns>
@@ -1696,20 +1516,8 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Linkedin Company</displayNameOverride>
-            <field>Linkedin_Company__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <displayNameOverride>Linkout</displayNameOverride>
             <field>Linkout__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Local ACM Prio Score</displayNameOverride>
-            <field>Local_ACM_Prio_Score__c</field>
             <table>Account</table>
         </columns>
         <columns>
@@ -1816,12 +1624,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Obi-Pilot</displayNameOverride>
-            <field>Obi_Pilot__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <displayNameOverride>Open Jobs</displayNameOverride>
             <field>plOpenJobs__c</field>
             <table>Account</table>
@@ -1918,12 +1720,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Parent Account Booking Coverage</displayNameOverride>
-            <field>pc_Booking_Coverage__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <displayNameOverride>Parent Account Description</displayNameOverride>
             <field>Parent_Account_Description__c</field>
             <table>Account</table>
@@ -2014,12 +1810,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Pilot Month</displayNameOverride>
-            <field>refPilotMonth__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <displayNameOverride>Pilot Type</displayNameOverride>
             <field>First_Won_Opportunity_Record_Type__c</field>
             <table>Account</table>
@@ -2050,20 +1840,8 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Priority (Account)</displayNameOverride>
-            <field>Priority_Account__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <displayNameOverride>Proj Bookings in current contract</displayNameOverride>
             <field>Proj_Bookings_in_current_contract__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Promoter</displayNameOverride>
-            <field>fmlPromoter__c</field>
             <table>Account</table>
         </columns>
         <columns>
@@ -2248,12 +2026,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Share of Wallet</displayNameOverride>
-            <field>Share_of_Wallet__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <displayNameOverride>Ship To Name</displayNameOverride>
             <field>Ship_To_Name__c</field>
             <table>Account</table>
@@ -2362,12 +2134,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>SSSU Pilot Amount</displayNameOverride>
-            <field>SSSU_Pilot_Amount__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <displayNameOverride>Standard Prices</displayNameOverride>
             <field>Standard_Prices__c</field>
             <table>Account</table>
@@ -2392,12 +2158,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Tableau Link</displayNameOverride>
-            <field>fmlLookerLink__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <displayNameOverride>Taskdrive Done</displayNameOverride>
             <field>Taskdrive_Done__c</field>
             <table>Account</table>
@@ -2406,12 +2166,6 @@
             <checkedByDefault>false</checkedByDefault>
             <displayNameOverride>Test Account</displayNameOverride>
             <field>Test_Account__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>TextKernelImportDate</displayNameOverride>
-            <field>TextKerneIImportDate__c</field>
             <table>Account</table>
         </columns>
         <columns>
@@ -2452,12 +2206,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Timestamp Acc Lifecycle Stage Retention</displayNameOverride>
-            <field>Timestamp_Acc_Lifecycle_Stage_Retention__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <displayNameOverride>Timestamp Acc Lifecycle StageAcquisition</displayNameOverride>
             <field>Timestamp_Acc_Lifecycle_StageAcquisition__c</field>
             <table>Account</table>
@@ -2466,18 +2214,6 @@
             <checkedByDefault>false</checkedByDefault>
             <displayNameOverride>Timestamp Account Insert Source</displayNameOverride>
             <field>Timestamp_Account_Insert_Source__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Timestamp ACM Survey Reply</displayNameOverride>
-            <field>Timestamp_acm_Survey_Reply__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Timestamp B2B Check Done</displayNameOverride>
-            <field>Timestamp_B2B_Check_Done__c</field>
             <table>Account</table>
         </columns>
         <columns>
@@ -2496,18 +2232,6 @@
             <checkedByDefault>false</checkedByDefault>
             <displayNameOverride>Timestamp Converted</displayNameOverride>
             <field>Timestamp_Converted__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Timestamp CS Survey Reply</displayNameOverride>
-            <field>Timestamp_CS_Survey_Reply__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Timestamp Direct Mail</displayNameOverride>
-            <field>Timestamp_Direct_Mail__c</field>
             <table>Account</table>
         </columns>
         <columns>
@@ -2542,38 +2266,8 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Timestamp NPS120</displayNameOverride>
-            <field>Timestamp_NPS120__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Timestamp NPS20</displayNameOverride>
-            <field>Timestamp_NPS20__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Timestamp NPS360</displayNameOverride>
-            <field>Timestamp_NPS360__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Timestamp Please Research</displayNameOverride>
-            <field>Timestamp_Please_Research__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <displayNameOverride>Timestamp Referral</displayNameOverride>
             <field>Timestamp_Referral__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Timestamp Research Done</displayNameOverride>
-            <field>Timestamp_Research_Done__c</field>
             <table>Account</table>
         </columns>
         <columns>
@@ -2716,30 +2410,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Weight</displayNameOverride>
-            <field>Weight__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Weighted Detractor</displayNameOverride>
-            <field>Weighted_Detractor__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Weighted Passive</displayNameOverride>
-            <field>Weighted_Passive__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Weighted Promoter</displayNameOverride>
-            <field>Weighted_Promoter__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <displayNameOverride>Won Opportunities</displayNameOverride>
             <field>Won_Opportunities__c</field>
             <table>Account</table>
@@ -2774,26 +2444,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Anzeigenumsatz_Sum__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Latest_Published_JDP_URL__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Latest_Published_JDP_City__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Cornerstone_Jobreferenznummer_account__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>Onboarding_Documentation__c</field>
             <table>Account</table>
         </columns>
@@ -2819,22 +2469,12 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Total_Live_Jobs__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>Job_Ingestion_Account_ID__c</field>
             <table>Account</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>AI_Account_Sentiment_Score__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Actively_Hiring_Score__c</field>
             <table>Account</table>
         </columns>
         <columns>
@@ -2904,11 +2544,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Latest_Published_JDP_Postal_Code__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>Temporary_Account_Marker__c</field>
             <table>Account</table>
         </columns>
@@ -2920,26 +2555,6 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Is_ZP_Account__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Heyassessment_Enabled__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Timestamp_Heyassessment_Deactivation__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Heyassessment_Deactivation_Reason__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Heyassessment_Deactivation_Reason_Detail__c</field>
             <table>Account</table>
         </columns>
         <columns>
