@@ -12,7 +12,6 @@
     <columns>Blacklist__c</columns>
     <columns>Timestamp_Latest_SSSU_Account__c</columns>
     <columns>ACCOUNT.CREATED_DATE</columns>
-    <columns>Jobs_live_Index__c</columns>
     <filterScope>Everything</filterScope>
     <filters>
         <field>Account_Owner__c</field>

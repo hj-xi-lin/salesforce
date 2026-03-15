@@ -303,51 +303,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>HeyJobs_Competitor__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Jobs_on_Career_Page_update_date__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Jobs_on_Career_Page__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Job_feed_update_Index__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Job_platform_Index__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Job_specific_title_date_Index__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Job_specific_title_link_Index__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Job_specific_title_Index__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Jobs_live_Index__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>IndexAnzeigendaten_ID__c</field>
             <table>Account</table>
         </columns>
@@ -383,11 +338,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Last_Segment_V02_Check__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>Last_HeyJobs_Category_Check__c</field>
             <table>Account</table>
         </columns>
@@ -419,11 +369,6 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Eligible_for_Voucher_Code__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Last_Dealfront_Update__c</field>
             <table>Account</table>
         </columns>
         <columns>
@@ -538,11 +483,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Timestamp_Acc_Lifecycle_Stage_Retention__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>Timestamp_Acc_Lifecycle_StageAcquisition__c</field>
             <table>Account</table>
         </columns>
@@ -639,11 +579,6 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Existence_employer_branding__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Priority_Account__c</field>
             <table>Account</table>
         </columns>
         <columns>
@@ -758,26 +693,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Anzeigenumsatz_Sum__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Latest_Published_JDP_URL__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Latest_Published_JDP_City__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Cornerstone_Jobreferenznummer_account__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>Onboarding_Documentation__c</field>
             <table>Account</table>
         </columns>
@@ -803,22 +718,12 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Total_Live_Jobs__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>Job_Ingestion_Account_ID__c</field>
             <table>Account</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>AI_Account_Sentiment_Score__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Actively_Hiring_Score__c</field>
             <table>Account</table>
         </columns>
         <columns>
@@ -888,11 +793,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Latest_Published_JDP_Postal_Code__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>Temporary_Account_Marker__c</field>
             <table>Account</table>
         </columns>
@@ -904,26 +804,6 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Is_ZP_Account__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Heyassessment_Enabled__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Timestamp_Heyassessment_Deactivation__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Heyassessment_Deactivation_Reason__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Heyassessment_Deactivation_Reason_Detail__c</field>
             <table>Account</table>
         </columns>
         <columns>

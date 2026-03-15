@@ -2340,6 +2340,29 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>Purchase_Type__c</picklist>
+        <values>
+            <fullName>Pilot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Re-win Pilot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Re-win Second Purchase</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retention</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Second Purchase</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>Qualifizierungsfrage_Einstellungsbedarf__c</picklist>
         <values>
             <fullName>No</fullName>

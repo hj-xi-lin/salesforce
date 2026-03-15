@@ -468,6 +468,21 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>Call_Customer_Sentiment__c</picklist>
+        <values>
+            <fullName>Negative</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neutral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Positive</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>Call_Result_Options__c</picklist>
         <values>
             <fullName>Interested</fullName>

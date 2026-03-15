@@ -669,11 +669,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>ConvertedAccount.SSSU_Pilot_Amount__c</field>
-            <table>Lead</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>ConvertedAccount.refTotalAmount__c</field>
             <table>Lead</table>
         </columns>
