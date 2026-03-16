@@ -886,6 +886,16 @@
             <field>Phone_Enriched__c</field>
             <table>Contact</table>
         </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Event_Name__c</field>
+            <table>Contact</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Event_Attended__c</field>
+            <table>Contact</table>
+        </columns>
         <masterLabel>Contacts</masterLabel>
     </sections>
     <sections>
@@ -917,11 +927,6 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Owner</field>
-            <table>Contact.AccountContactRelations</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>plAccountPotential__c</field>
             <table>Contact.AccountContactRelations</table>
         </columns>
         <columns>
@@ -1071,11 +1076,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Current_Channel_Andere__c</field>
-            <table>Contact.AccountContactRelations</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>plCurrentChannels__c</field>
             <table>Contact.AccountContactRelations</table>
         </columns>
@@ -1087,11 +1087,6 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Description</field>
-            <table>Contact.AccountContactRelations</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>fmlDetractor__c</field>
             <table>Contact.AccountContactRelations</table>
         </columns>
         <columns>
@@ -1162,11 +1157,6 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>LastModifiedDate</field>
-            <table>Contact.AccountContactRelations</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>fmlLookerLink__c</field>
             <table>Contact.AccountContactRelations</table>
         </columns>
         <columns>
@@ -1246,11 +1236,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>refPilotMonth__c</field>
-            <table>Contact.AccountContactRelations</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>txtPipedriveId__c</field>
             <table>Contact.AccountContactRelations</table>
         </columns>
@@ -1262,11 +1247,6 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>bPrioAccount__c</field>
-            <table>Contact.AccountContactRelations</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>fmlPromoter__c</field>
             <table>Contact.AccountContactRelations</table>
         </columns>
         <columns>
@@ -1382,21 +1362,6 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>TickerSymbol</field>
-            <table>Contact.AccountContactRelations</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Timestamp_NPS120__c</field>
-            <table>Contact.AccountContactRelations</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Timestamp_NPS20__c</field>
-            <table>Contact.AccountContactRelations</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Timestamp_NPS360__c</field>
             <table>Contact.AccountContactRelations</table>
         </columns>
         <columns>

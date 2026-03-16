@@ -3,15 +3,9 @@
     <fullName>Transactional_accounts_with_open_jobs</fullName>
     <columns>ACCOUNT.NAME</columns>
     <columns>Account_Owner__c</columns>
-    <columns>Total_Live_Jobs__c</columns>
     <columns>Estimated_Wallet_Size__c</columns>
     <columns>Lead_Score_2__c</columns>
     <filterScope>Everything</filterScope>
-    <filters>
-        <field>Total_Live_Jobs__c</field>
-        <operation>greaterThan</operation>
-        <value>0</value>
-    </filters>
     <filters>
         <field>GTM_Motion_Account__c</field>
         <operation>equals</operation>

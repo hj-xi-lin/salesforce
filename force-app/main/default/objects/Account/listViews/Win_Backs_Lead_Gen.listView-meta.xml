@@ -8,9 +8,6 @@
     <columns>Estimated_Wallet_Size__c</columns>
     <columns>Follow_up_Date_Account__c</columns>
     <columns>Follow_up_Details_Account__c</columns>
-    <columns>Job_platform_Index__c</columns>
-    <columns>Jobs_live_Index__c</columns>
-    <columns>Jobs_on_Career_Page_update_date__c</columns>
     <columns>ACCOUNT.LAST_ACTIVITY</columns>
     <columns>LAST_CALL_DATE</columns>
     <columns>LAST_EMAIL_DATE</columns>

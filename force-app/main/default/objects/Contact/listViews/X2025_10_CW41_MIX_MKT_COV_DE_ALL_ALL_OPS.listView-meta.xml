@@ -8,7 +8,6 @@
     <columns>CONTACT.TITLE</columns>
     <columns>CORE.USERS.ALIAS</columns>
     <columns>Lifecycle_Stage_Contact__c</columns>
-    <columns>Account.Heyassessment_Enabled__c</columns>
     <filterScope>Everything</filterScope>
     <label>2025-10-CW41-MIX-MKT-COV-DE-ALL-ALL-OPS-</label>
 </ListView>

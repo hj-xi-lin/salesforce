@@ -1610,11 +1610,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>ConvertedAccount.plAccountPotential__c</field>
-            <table>Campaign.LeadCampaignMembers</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>ConvertedAccount.RecordType</field>
             <table>Campaign.LeadCampaignMembers</table>
         </columns>
@@ -1855,11 +1850,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>ConvertedAccount.Current_Channel_Andere__c</field>
-            <table>Campaign.LeadCampaignMembers</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>ConvertedAccount.plCurrentChannels__c</field>
             <table>Campaign.LeadCampaignMembers</table>
         </columns>
@@ -1890,11 +1880,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>ConvertedAccount.fmlDetractor__c</field>
-            <table>Campaign.LeadCampaignMembers</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>ConvertedAccount.fmlDetractorPerformance__c</field>
             <table>Campaign.LeadCampaignMembers</table>
         </columns>
@@ -1916,11 +1901,6 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>ConvertedAccount.NumberOfEmployees</field>
-            <table>Campaign.LeadCampaignMembers</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>ConvertedAccount.Facebook_Jobs_enabled__c</field>
             <table>Campaign.LeadCampaignMembers</table>
         </columns>
         <columns>
@@ -1985,21 +1965,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>ConvertedAccount.dJobslive__c</field>
-            <table>Campaign.LeadCampaignMembers</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>ConvertedAccount.Job_specific_title__c</field>
-            <table>Campaign.LeadCampaignMembers</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>ConvertedAccount.Kununu_Score__c</field>
-            <table>Campaign.LeadCampaignMembers</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>ConvertedAccount.LastActivityDate</field>
             <table>Campaign.LeadCampaignMembers</table>
         </columns>
@@ -2041,11 +2006,6 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>ConvertedAccount.Last_Won_Opportunity_ID__c</field>
-            <table>Campaign.LeadCampaignMembers</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>ConvertedAccount.Linkedin_Company__c</field>
             <table>Campaign.LeadCampaignMembers</table>
         </columns>
         <columns>
@@ -2190,11 +2150,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>ConvertedAccount.refPilotMonth__c</field>
-            <table>Campaign.LeadCampaignMembers</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>ConvertedAccount.txtPipedriveId__c</field>
             <table>Campaign.LeadCampaignMembers</table>
         </columns>
@@ -2206,11 +2161,6 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>ConvertedAccount.bPrioAccount__c</field>
-            <table>Campaign.LeadCampaignMembers</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>ConvertedAccount.fmlPromoter__c</field>
             <table>Campaign.LeadCampaignMembers</table>
         </columns>
         <columns>
@@ -2405,11 +2355,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>ConvertedAccount.fmlLookerLink__c</field>
-            <table>Campaign.LeadCampaignMembers</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>ConvertedAccount.Taskdrive_Done__c</field>
             <table>Campaign.LeadCampaignMembers</table>
         </columns>
@@ -2421,36 +2366,6 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>ConvertedAccount.TickerSymbol</field>
-            <table>Campaign.LeadCampaignMembers</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>ConvertedAccount.Timestamp_B2B_Check_Done__c</field>
-            <table>Campaign.LeadCampaignMembers</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>ConvertedAccount.Timestamp_NPS120__c</field>
-            <table>Campaign.LeadCampaignMembers</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>ConvertedAccount.Timestamp_NPS20__c</field>
-            <table>Campaign.LeadCampaignMembers</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>ConvertedAccount.Timestamp_NPS360__c</field>
-            <table>Campaign.LeadCampaignMembers</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>ConvertedAccount.Timestamp_Please_Research__c</field>
-            <table>Campaign.LeadCampaignMembers</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>ConvertedAccount.Timestamp_Research_Done__c</field>
             <table>Campaign.LeadCampaignMembers</table>
         </columns>
         <columns>
@@ -2546,26 +2461,6 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>ConvertedAccount.Website</field>
-            <table>Campaign.LeadCampaignMembers</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>ConvertedAccount.Weight__c</field>
-            <table>Campaign.LeadCampaignMembers</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>ConvertedAccount.Weighted_Detractor__c</field>
-            <table>Campaign.LeadCampaignMembers</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>ConvertedAccount.Weighted_Passive__c</field>
-            <table>Campaign.LeadCampaignMembers</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>ConvertedAccount.Weighted_Promoter__c</field>
             <table>Campaign.LeadCampaignMembers</table>
         </columns>
         <columns>

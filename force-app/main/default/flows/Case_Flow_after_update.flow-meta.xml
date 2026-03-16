@@ -5,7 +5,7 @@
         <name>Send_Outbound_Message_to_Zapier</name>
         <label>Send Outbound Message to Zapier</label>
         <locationX>1282</locationX>
-        <locationY>3192</locationY>
+        <locationY>3600</locationY>
         <actionName>Case.Send_Slack_Message_for_Submitted_Job</actionName>
         <actionType>outboundMessage</actionType>
         <connector>
@@ -36,7 +36,7 @@
         <name>Blank_Subject_Desicion</name>
         <label>Blank Subject</label>
         <locationX>1414</locationX>
-        <locationY>2592</locationY>
+        <locationY>3000</locationY>
         <defaultConnector>
             <targetReference>New_Job_Creation_Case</targetReference>
         </defaultConnector>
@@ -61,7 +61,7 @@
         <name>Blank_Type</name>
         <label>Blank Type</label>
         <locationX>1216</locationX>
-        <locationY>2700</locationY>
+        <locationY>3108</locationY>
         <defaultConnector>
             <targetReference>Update_Subject_with_Type</targetReference>
         </defaultConnector>
@@ -87,7 +87,7 @@
         <name>Case_Assignment_Flow_Case_Creation</name>
         <label>Case Assignment Flow Case Creation</label>
         <locationX>1414</locationX>
-        <locationY>2184</locationY>
+        <locationY>2592</locationY>
         <defaultConnector>
             <targetReference>Blank_Subject_Desicion</targetReference>
         </defaultConnector>
@@ -333,7 +333,7 @@
         <name>Check_Long_Term_Commitment</name>
         <label>Check Long Term Commitment</label>
         <locationX>2162</locationX>
-        <locationY>4008</locationY>
+        <locationY>4416</locationY>
         <defaultConnectorLabel>Default</defaultConnectorLabel>
         <rules>
             <name>Blank</name>
@@ -377,7 +377,7 @@
         <name>Job_Creation_Case</name>
         <label>Job Creation Case</label>
         <locationX>2558</locationX>
-        <locationY>3684</locationY>
+        <locationY>4092</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Small</name>
@@ -435,7 +435,7 @@
         <name>New_Job_Creation_Case</name>
         <label>New Job Creation Case?</label>
         <locationX>1414</locationX>
-        <locationY>3084</locationY>
+        <locationY>3492</locationY>
         <defaultConnector>
             <targetReference>Status_value</targetReference>
         </defaultConnector>
@@ -467,7 +467,7 @@
         <name>New_Record</name>
         <label>New Record</label>
         <locationX>1634</locationX>
-        <locationY>2076</locationY>
+        <locationY>2484</locationY>
         <defaultConnector>
             <targetReference>Status_value</targetReference>
         </defaultConnector>
@@ -515,7 +515,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Special_Termination_rights_populated</targetReference>
+                <targetReference>Fetchthepreviouswonopp</targetReference>
             </connector>
             <label>Yes</label>
         </rules>
@@ -622,8 +622,8 @@
     <decisions>
         <name>Special_Termination_rights_populated</name>
         <label>Special Termination rights populated</label>
-        <locationX>1436</locationX>
-        <locationY>1692</locationY>
+        <locationX>1216</locationX>
+        <locationY>1800</locationY>
         <defaultConnector>
             <targetReference>Update_REACH_campaign_end_date</targetReference>
         </defaultConnector>
@@ -648,7 +648,7 @@
         <name>Status_value</name>
         <label>Status value</label>
         <locationX>1634</locationX>
-        <locationY>3468</locationY>
+        <locationY>3876</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>On_Hold</name>
@@ -779,7 +779,127 @@
             <label>Closed</label>
         </rules>
     </decisions>
-    <description>RO-231, RO-377, RO-483, RO-721, RO-750, RO-1238,RO-1448, RO-1759, RO-1703, RO - 2225 , RO - 2281, Modified to exclude &quot;Budget boost&quot; reach deal type from updating REACH campaign end date, RO - 2398, RO - 2460 , RO - 2461 , RO - 2548, RO - 1357</description>
+    <decisions>
+        <name>Update_Purchase_type</name>
+        <label>Update Purchase type</label>
+        <locationX>1216</locationX>
+        <locationY>2100</locationY>
+        <defaultConnector>
+            <targetReference>New_Record</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Pilot</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Fetchthepreviouswonopp</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Purchase_type_on_related_Opp</targetReference>
+            </connector>
+            <label>Pilot</label>
+        </rules>
+        <rules>
+            <name>Second_Purchase</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Fetchthepreviouswonopp.Purchase_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Pilot</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>fmlTimeBetweenContracts</leftValueReference>
+                <operator>LessThanOrEqualTo</operator>
+                <rightValue>
+                    <numberValue>180.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Purchase_type_on_related_Opp_2</targetReference>
+            </connector>
+            <label>Second Purchase</label>
+        </rules>
+        <rules>
+            <name>Re_win_Pilot</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>fmlTimeBetweenContracts</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <numberValue>180.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Purchase_type_on_related_Opp_3</targetReference>
+            </connector>
+            <label>Re-win Pilot</label>
+        </rules>
+        <rules>
+            <name>Re_win_Second_Purchase</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Fetchthepreviouswonopp.Purchase_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Re-win Pilot</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>fmlTimeBetweenContracts</leftValueReference>
+                <operator>LessThanOrEqualTo</operator>
+                <rightValue>
+                    <numberValue>180.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Purchase_type_on_related_Opp_4</targetReference>
+            </connector>
+            <label>Re-win Second Purchase</label>
+        </rules>
+        <rules>
+            <name>Retention</name>
+            <conditionLogic>(1 OR 2 OR 3) AND 4</conditionLogic>
+            <conditions>
+                <leftValueReference>Fetchthepreviouswonopp.Purchase_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Re-win Second Purchase</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Fetchthepreviouswonopp.Purchase_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Second Purchase</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Fetchthepreviouswonopp.Purchase_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Retention</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>fmlTimeBetweenContracts</leftValueReference>
+                <operator>LessThanOrEqualTo</operator>
+                <rightValue>
+                    <numberValue>180.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Purchase_type_on_related_Opp_5</targetReference>
+            </connector>
+            <label>Retention</label>
+        </rules>
+    </decisions>
+    <description>RO-231, RO-377, RO-483, RO-721, RO-750, RO-1238,RO-1448, RO-1759, RO-1703, RO - 2225 , RO - 2281, Modified to exclude &quot;Budget boost&quot; reach deal type from updating REACH campaign end date, RO - 2398, RO - 2460 , RO - 2461 , RO - 2548, RO - 1357 , RO - 2838</description>
     <environments>Default</environments>
     <formulas>
         <name>fmlCampaignEndDate</name>
@@ -795,6 +915,12 @@
         <name>fmlIsNew</name>
         <dataType>Boolean</dataType>
         <expression>ISNEW()</expression>
+    </formulas>
+    <formulas>
+        <name>fmlTimeBetweenContracts</name>
+        <dataType>Number</dataType>
+        <expression>TODAY()- {!Fetchthepreviouswonopp.Contract_Start_Date__c}</expression>
+        <scale>2</scale>
     </formulas>
     <formulas>
         <name>formulaNOW</name>
@@ -836,7 +962,7 @@
         <name>Create_Task</name>
         <label>Create Task</label>
         <locationX>1898</locationX>
-        <locationY>4116</locationY>
+        <locationY>4524</locationY>
         <inputAssignments>
             <field>ActivityDate</field>
             <value>
@@ -892,7 +1018,7 @@
         <name>Create_Task_2</name>
         <label>Create Task</label>
         <locationX>2162</locationX>
-        <locationY>4116</locationY>
+        <locationY>4524</locationY>
         <inputAssignments>
             <field>ActivityDate</field>
             <value>
@@ -945,10 +1071,47 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordLookups>
+        <name>Fetchthepreviouswonopp</name>
+        <label>Fetch the previous won opp</label>
+        <locationX>1216</locationX>
+        <locationY>1692</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Special_Termination_rights_populated</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Opportunity_ID_18__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <elementReference>$Record.Opportunity__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>AccountId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.AccountId</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>StageName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Closed Won</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Opportunity</object>
+        <sortField>Timestamp_Closed_Won__c</sortField>
+        <sortOrder>Desc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
         <name>Get_ATS_Case_Queue</name>
         <label>Get ATS Case Queue</label>
         <locationX>1414</locationX>
-        <locationY>2292</locationY>
+        <locationY>2700</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Copy_1_of_Update_Owner</targetReference>
@@ -978,7 +1141,7 @@
         <name>Get_CusOps_Case_Queue</name>
         <label>Get CusOps Case Queue</label>
         <locationX>1150</locationX>
-        <locationY>2292</locationY>
+        <locationY>2700</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Update_Owner</targetReference>
@@ -1057,7 +1220,7 @@
         <name>Copy_1_of_Update_Owner</name>
         <label>Update Owner</label>
         <locationX>1414</locationX>
-        <locationY>2400</locationY>
+        <locationY>2808</locationY>
         <connector>
             <targetReference>Blank_Subject_Desicion</targetReference>
         </connector>
@@ -1087,7 +1250,7 @@
         <name>Update_Account_SMB</name>
         <label>Update Account</label>
         <locationX>2162</locationX>
-        <locationY>3792</locationY>
+        <locationY>4200</locationY>
         <connector>
             <targetReference>Update_Opportunity_SMB</targetReference>
         </connector>
@@ -1118,7 +1281,7 @@
         <name>Update_Account_SMB_0</name>
         <label>Update Account</label>
         <locationX>2690</locationX>
-        <locationY>3792</locationY>
+        <locationY>4200</locationY>
         <connector>
             <targetReference>Update_Opportunity_LCS</targetReference>
         </connector>
@@ -1149,7 +1312,7 @@
         <name>Update_Case_Closed</name>
         <label>Update Case</label>
         <locationX>2558</locationX>
-        <locationY>3576</locationY>
+        <locationY>3984</locationY>
         <connector>
             <targetReference>Job_Creation_Case</targetReference>
         </connector>
@@ -1171,7 +1334,7 @@
         <name>Update_Case_Discussion</name>
         <label>Update Case</label>
         <locationX>578</locationX>
-        <locationY>3576</locationY>
+        <locationY>3984</locationY>
         <inputAssignments>
             <field>TimestampDiscussionwithCustomer__c</field>
             <value>
@@ -1190,7 +1353,7 @@
         <name>Update_Case_Discussion_with_ACM</name>
         <label>Update Case</label>
         <locationX>1634</locationX>
-        <locationY>3576</locationY>
+        <locationY>3984</locationY>
         <inputAssignments>
             <field>Timestamp_Discussion_with_ACM__c</field>
             <value>
@@ -1203,7 +1366,7 @@
         <name>Update_Case_Go_Live_Scheduled</name>
         <label>Update Case</label>
         <locationX>1106</locationX>
-        <locationY>3576</locationY>
+        <locationY>3984</locationY>
         <inputAssignments>
             <field>TimestampGoLiveScheduled__c</field>
             <value>
@@ -1222,7 +1385,7 @@
         <name>Update_Case_Lost</name>
         <label>Update Case</label>
         <locationX>1370</locationX>
-        <locationY>3576</locationY>
+        <locationY>3984</locationY>
         <inputAssignments>
             <field>TimestampLost__c</field>
             <value>
@@ -1241,7 +1404,7 @@
         <name>Update_Case_On_Hold</name>
         <label>Update Case</label>
         <locationX>50</locationX>
-        <locationY>3576</locationY>
+        <locationY>3984</locationY>
         <inputAssignments>
             <field>TimestampOnHold__c</field>
             <value>
@@ -1260,7 +1423,7 @@
         <name>Update_Case_Preview_Sent</name>
         <label>Update Case</label>
         <locationX>842</locationX>
-        <locationY>3576</locationY>
+        <locationY>3984</locationY>
         <inputAssignments>
             <field>TimestampPreviewSent__c</field>
             <value>
@@ -1279,7 +1442,7 @@
         <name>Update_Case_Waiting_for_Budget</name>
         <label>Update Case</label>
         <locationX>314</locationX>
-        <locationY>3576</locationY>
+        <locationY>3984</locationY>
         <inputAssignments>
             <field>Timestamp_Waiting_for_Budget__c</field>
             <value>
@@ -1292,7 +1455,7 @@
         <name>Update_Opportunity_LCS</name>
         <label>Update Opportunity</label>
         <locationX>2690</locationX>
-        <locationY>3900</locationY>
+        <locationY>4308</locationY>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
@@ -1313,7 +1476,7 @@
         <name>Update_Opportunity_SMB</name>
         <label>Update Opportunity</label>
         <locationX>2162</locationX>
-        <locationY>3900</locationY>
+        <locationY>4308</locationY>
         <connector>
             <targetReference>Check_Long_Term_Commitment</targetReference>
         </connector>
@@ -1337,7 +1500,7 @@
         <name>Update_Owner</name>
         <label>Update Owner</label>
         <locationX>1150</locationX>
-        <locationY>2400</locationY>
+        <locationY>2808</locationY>
         <connector>
             <targetReference>Blank_Subject_Desicion</targetReference>
         </connector>
@@ -1366,12 +1529,132 @@
         <inputReference>$Record</inputReference>
     </recordUpdates>
     <recordUpdates>
-        <name>Update_REACH_campaign_end_date</name>
-        <label>Update REACH campaign end date</label>
-        <locationX>1568</locationX>
-        <locationY>1800</locationY>
+        <name>Update_Purchase_type_on_related_Opp</name>
+        <label>Update Purchase type on related Opp</label>
+        <locationX>556</locationX>
+        <locationY>2208</locationY>
         <connector>
             <targetReference>New_Record</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Opportunity_ID_18__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Opportunity__r.Opportunity_ID_18__c</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Purchase_Type__c</field>
+            <value>
+                <stringValue>Pilot</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Opportunity</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Purchase_type_on_related_Opp_2</name>
+        <label>Update Purchase type on related Opp</label>
+        <locationX>820</locationX>
+        <locationY>2208</locationY>
+        <connector>
+            <targetReference>New_Record</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Opportunity_ID_18__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Opportunity__r.Opportunity_ID_18__c</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Purchase_Type__c</field>
+            <value>
+                <stringValue>Second Purchase</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Opportunity</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Purchase_type_on_related_Opp_3</name>
+        <label>Update Purchase type on related Opp</label>
+        <locationX>1084</locationX>
+        <locationY>2208</locationY>
+        <connector>
+            <targetReference>New_Record</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Opportunity_ID_18__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Opportunity__r.Opportunity_ID_18__c</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Purchase_Type__c</field>
+            <value>
+                <stringValue>Re-win Pilot</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Opportunity</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Purchase_type_on_related_Opp_4</name>
+        <label>Update Purchase type on related Opp</label>
+        <locationX>1348</locationX>
+        <locationY>2208</locationY>
+        <connector>
+            <targetReference>New_Record</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Opportunity_ID_18__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Opportunity__r.Opportunity_ID_18__c</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Purchase_Type__c</field>
+            <value>
+                <stringValue>Re-win Second Purchase</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Opportunity</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Purchase_type_on_related_Opp_5</name>
+        <label>Update Purchase type on related Opp</label>
+        <locationX>1612</locationX>
+        <locationY>2208</locationY>
+        <connector>
+            <targetReference>New_Record</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Opportunity_ID_18__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Opportunity__r.Opportunity_ID_18__c</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Purchase_Type__c</field>
+            <value>
+                <stringValue>Retention</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Opportunity</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_REACH_campaign_end_date</name>
+        <label>Update REACH campaign end date</label>
+        <locationX>1348</locationX>
+        <locationY>1908</locationY>
+        <connector>
+            <targetReference>Update_Purchase_type</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -1392,10 +1675,10 @@
     <recordUpdates>
         <name>Update_REACH_campaign_end_date_2</name>
         <label>Update REACH campaign end date</label>
-        <locationX>1304</locationX>
-        <locationY>1800</locationY>
+        <locationX>1084</locationX>
+        <locationY>1908</locationY>
         <connector>
-            <targetReference>New_Record</targetReference>
+            <targetReference>Update_Purchase_type</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -1461,7 +1744,7 @@
         <name>Update_Subject_No_Type</name>
         <label>Update Subject</label>
         <locationX>1084</locationX>
-        <locationY>2808</locationY>
+        <locationY>3216</locationY>
         <connector>
             <targetReference>New_Job_Creation_Case</targetReference>
         </connector>
@@ -1477,7 +1760,7 @@
         <name>Update_Subject_with_Type</name>
         <label>Update Subject</label>
         <locationX>1348</locationX>
-        <locationY>2808</locationY>
+        <locationY>3216</locationY>
         <connector>
             <targetReference>New_Job_Creation_Case</targetReference>
         </connector>

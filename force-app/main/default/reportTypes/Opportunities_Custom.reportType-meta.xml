@@ -2978,12 +2978,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Opportunity : Account Name : Pilot Month</displayNameOverride>
-            <field>Account.refPilotMonth__c</field>
-            <table>Opportunity</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <displayNameOverride>Opportunity : Account Name : Timestamp SSSU Account</displayNameOverride>
             <field>Account.Timestamp_SSSU_Account__c</field>
             <table>Opportunity</table>
