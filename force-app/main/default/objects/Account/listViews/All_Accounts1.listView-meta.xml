@@ -20,7 +20,7 @@
     <filters>
         <field>Account_Owner__c</field>
         <operation>equals</operation>
-        <value>Sebastian Schönert</value>
+        <value>Julia Chycko</value>
     </filters>
     <filters>
         <field>Stage_ACM__c</field>

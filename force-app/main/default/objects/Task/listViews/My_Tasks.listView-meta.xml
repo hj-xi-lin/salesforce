@@ -7,7 +7,6 @@
     <columns>WHAT_NAME</columns>
     <columns>PRIORITY</columns>
     <columns>STATUS</columns>
-    <columns>Comments__c</columns>
     <filterScope>Mine</filterScope>
     <filters>
         <field>IS_CLOSED</field>

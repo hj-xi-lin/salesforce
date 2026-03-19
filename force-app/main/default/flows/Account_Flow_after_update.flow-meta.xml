@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>59.0</apiVersion>
+    <assignments>
+        <name>UpdateRT</name>
+        <label>Update record type to Discarded</label>
+        <locationX>50</locationX>
+        <locationY>2939</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.RecordTypeId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Label.AccountRecordTypeID_Discarded</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Account_type_change_to_Inventory_Partner</targetReference>
+        </connector>
+    </assignments>
     <customErrors>
         <name>Error_message</name>
         <label>Error message</label>
@@ -15,10 +31,35 @@
         </customErrorMessages>
     </customErrors>
     <decisions>
+        <name>Account_Lifecycle_stage_updated_to_Lost</name>
+        <label>Account Lifecycle stage updated to Lost ?</label>
+        <locationX>182</locationX>
+        <locationY>2831</locationY>
+        <defaultConnector>
+            <targetReference>Account_type_change_to_Inventory_Partner</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes_34</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Stage_ACM__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Lost</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>UpdateRT</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>Account_type_change_to_Inventory_Partner</name>
         <label>Account type change to Inventory Partner</label>
         <locationX>182</locationX>
-        <locationY>2831</locationY>
+        <locationY>3131</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Yes_18</name>
@@ -49,7 +90,7 @@
         <locationX>182</locationX>
         <locationY>2531</locationY>
         <defaultConnector>
-            <targetReference>Account_type_change_to_Inventory_Partner</targetReference>
+            <targetReference>Account_Lifecycle_stage_updated_to_Lost</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -362,7 +403,7 @@
             <label>Agency Acc RT</label>
         </rules>
     </decisions>
-    <description>RO-1445, RO-1529, RO-1380,RO-1574, RO - 1650, RO - 1659, RO - 1649 ,RO - 1656, RO - 1649 ( Legacy field &quot;Potential field&quot; was removed for the Low booking coverage decision element), RO - 1659 ( Sales Trigger - Last job submitted &gt;5 months branch was removed), RO - 1855 , RO - 2012, RO - 2146 ( Update GTM Motion on Opp), RO-2179,RO-2282, RO - 2281 , RO - 2326 ( task creation removal),Blacklist contacts, RO - 2429, ALCS TS Update , RO - 2403 , RO - 1357 , RO - 2747 , RO - 2763 , RO - 2747</description>
+    <description>RO-1445, RO-1529, RO-1380,RO-1574, RO - 1650, RO - 1659, RO - 1649 ,RO - 1656, RO - 1649 ( Legacy field &quot;Potential field&quot; was removed for the Low booking coverage decision element), RO - 1659 ( Sales Trigger - Last job submitted &gt;5 months branch was removed), RO - 1855 , RO - 2012, RO - 2146 ( Update GTM Motion on Opp), RO-2179,RO-2282, RO - 2281 , RO - 2326 ( task creation removal),Blacklist contacts, RO - 2429, ALCS TS Update , RO - 2403 , RO - 1357 , RO - 2747 , RO - 2763 , RO - 2747 , RO - 2841</description>
     <environments>Default</environments>
     <formulas>
         <name>currentTime</name>
@@ -538,7 +579,7 @@ TODAY() + 5
         <name>Update_related_Contacts</name>
         <label>Update related Contacts</label>
         <locationX>50</locationX>
-        <locationY>2939</locationY>
+        <locationY>3239</locationY>
         <inputAssignments>
             <field>Blacklist__c</field>
             <value>
@@ -559,7 +600,7 @@ TODAY() + 5
         <locationX>50</locationX>
         <locationY>2639</locationY>
         <connector>
-            <targetReference>Account_type_change_to_Inventory_Partner</targetReference>
+            <targetReference>Account_Lifecycle_stage_updated_to_Lost</targetReference>
         </connector>
         <inputAssignments>
             <field>Blacklist__c</field>

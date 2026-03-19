@@ -13,6 +13,13 @@
             <sortOrder>1</sortOrder>
             <table>User</table>
         </duplicateRuleFilterItems>
+        <duplicateRuleFilterItems>
+            <field>Full_Name__c</field>
+            <operation>notEqual</operation>
+            <value>Integration User LeanData</value>
+            <sortOrder>2</sortOrder>
+            <table>User</table>
+        </duplicateRuleFilterItems>
     </duplicateRuleFilter>
     <duplicateRuleMatchRules>
         <matchRuleSObjectType>Lead</matchRuleSObjectType>
