@@ -7617,6 +7617,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Lead.Converted_By__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Lead.Converted_Lead__c</field>
         <readable>false</readable>
     </fieldPermissions>

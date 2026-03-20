@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PDSler</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Account_Owner__c</columns>
+    <columns>Bookings_last_12_months__c</columns>
+    <columns>Days_since_Last_Booking_Child__c</columns>
+    <columns>Owner_Role__c</columns>
+    <columns>Owner_Profile__c</columns>
+    <columns>Account_Owner_s_Manager__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Category_3__c</field>
+        <operation>equals</operation>
+        <value>Headhunter,Temporary Employment Agencies</value>
+    </filters>
+    <filters>
+        <field>Owner_Role__c</field>
+        <operation>contains</operation>
+        <value>Inside Sales</value>
+    </filters>
+    <label>SF_Clean_UP: PDSler</label>
+</ListView>

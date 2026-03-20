@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>seboffunnelpersdr</fullName>
+    <columns>Account_Owner__c</columns>
+    <columns>Ultimate_Parent_Account__c</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>PARENT_NAME</columns>
+    <columns>Category_1__c</columns>
+    <columns>Category_2__c</columns>
+    <columns>Category_3__c</columns>
+    <columns>ACCOUNT.LAST_UPDATE</columns>
+    <columns>Bookings_last_12_months__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Stage_ACM__c</field>
+        <operation>equals</operation>
+        <value>Outbound,Prospect,Acquisition</value>
+    </filters>
+    <filters>
+        <field>Estimated_Wallet_Size__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>EUR 75000</value>
+    </filters>
+    <filters>
+        <field>Account_Owner_s_Manager__c</field>
+        <operation>equals</operation>
+        <value>Sebastian Schönert</value>
+    </filters>
+    <filters>
+        <field>Account_Owner__c</field>
+        <operation>equals</operation>
+        <value>Ozair Yousofi</value>
+    </filters>
+    <label>All Accounts Manager Sebastian Schönert</label>
+</ListView>
