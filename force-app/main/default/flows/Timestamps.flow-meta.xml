@@ -2063,7 +2063,7 @@
                 <leftValueReference>$Record.StageName</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Pre- Discussion</stringValue>
+                    <stringValue>Pre-Discussion</stringValue>
                 </rightValue>
             </conditions>
             <conditions>
@@ -2873,7 +2873,7 @@
             <label>Yes</label>
         </rules>
     </decisions>
-    <description>edit: RO-1275, RO-1256, RO-1410, RO-1473, RO - 1781,RO - 1859, RO-2090, RO-2610, RO - 2814</description>
+    <description>edit: RO-1275, RO-1256, RO-1410, RO-1473, RO - 1781,RO - 1859, RO-2090, RO-2610, RO - 2814, RO - 2846</description>
     <environments>Default</environments>
     <formulas>
         <name>fmlCurrentDate</name>

@@ -527,6 +527,36 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordUpdates>
+        <name>Close_Task_Early</name>
+        <label>Close Task Early</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Selected_Action</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Allow_closing__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Completed</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Task</object>
+    </recordUpdates>
+    <recordUpdates>
         <name>Close_Task_No_Contact</name>
         <label>Close Task No Contact</label>
         <locationX>0</locationX>
@@ -561,7 +591,7 @@
     </recordUpdates>
     <recordUpdates>
         <name>Complete_Task2</name>
-        <label>Complete Task</label>
+        <label>Stamp Task Details</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
@@ -576,12 +606,6 @@
             </value>
         </filters>
         <inputAssignments>
-            <field>Allow_closing__c</field>
-            <value>
-                <booleanValue>true</booleanValue>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
             <field>Linked_Opportunity__c</field>
             <value>
                 <elementReference>Opp_Creation2.varNewOppId</elementReference>
@@ -593,17 +617,11 @@
                 <elementReference>$Label.QualificationOutcome_OppCreated</elementReference>
             </value>
         </inputAssignments>
-        <inputAssignments>
-            <field>Status</field>
-            <value>
-                <stringValue>Completed</stringValue>
-            </value>
-        </inputAssignments>
         <object>Task</object>
     </recordUpdates>
     <recordUpdates>
         <name>Complete_Task3</name>
-        <label>Complete Task</label>
+        <label>Stamp Task Details</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
@@ -618,12 +636,6 @@
             </value>
         </filters>
         <inputAssignments>
-            <field>Allow_closing__c</field>
-            <value>
-                <booleanValue>true</booleanValue>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
             <field>Linked_Opportunity__c</field>
             <value>
                 <elementReference>Get_Open_Opportunity.Id</elementReference>
@@ -635,17 +647,11 @@
                 <elementReference>varQualificationOutcome</elementReference>
             </value>
         </inputAssignments>
-        <inputAssignments>
-            <field>Status</field>
-            <value>
-                <stringValue>Completed</stringValue>
-            </value>
-        </inputAssignments>
         <object>Task</object>
     </recordUpdates>
     <recordUpdates>
         <name>Complete_Task4</name>
-        <label>Complete Task</label>
+        <label>Stamp Task Details</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <filterLogic>and</filterLogic>
@@ -657,21 +663,9 @@
             </value>
         </filters>
         <inputAssignments>
-            <field>Allow_closing__c</field>
-            <value>
-                <booleanValue>true</booleanValue>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
             <field>Qualification_Outcome__c</field>
             <value>
                 <elementReference>$Label.QualificationOutcome_FUPMoved</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Status</field>
-            <value>
-                <stringValue>Completed</stringValue>
             </value>
         </inputAssignments>
         <object>Task</object>
@@ -879,7 +873,7 @@
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
         <connector>
-            <targetReference>Selected_Action</targetReference>
+            <targetReference>Close_Task_Early</targetReference>
         </connector>
         <fields>
             <name>ScreenText1</name>

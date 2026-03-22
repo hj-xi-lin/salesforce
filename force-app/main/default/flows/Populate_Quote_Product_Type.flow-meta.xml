@@ -96,7 +96,7 @@
                 <leftValueReference>$Record.Opportunity.StageName</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Pre- Discussion</stringValue>
+                    <stringValue>Pre-Discussion</stringValue>
                 </rightValue>
             </conditions>
             <conditions>
@@ -166,7 +166,7 @@
             <label>Contains PPCP</label>
         </rules>
     </decisions>
-    <description>RO-1547, RO-1765, RO - 2715</description>
+    <description>RO-1547, RO-1765, RO - 2715, RO - 2846</description>
     <environments>Default</environments>
     <interviewLabel>Populate Quote Product Type {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Populate Quote Product Type</label>
