@@ -136,7 +136,7 @@
             <label>1 Day in Future (Auto Renewal)</label>
         </rules>
     </decisions>
-    <description>RO-1461, RO-1540, RO-1616, RO-1670, RO-1838, RO-1824, RO-1966, RO-2089, RO-2418, RO-2711, RO - 2794</description>
+    <description>RO-1461, RO-1540, RO-1616, RO-1670, RO-1838, RO-1824, RO-1966, RO-2089, RO-2418, RO-2711, RO - 2794, RO - 2846</description>
     <environments>Default</environments>
     <formulas>
         <name>varDueDate</name>
@@ -230,7 +230,7 @@
         <inputAssignments>
             <field>StageName</field>
             <value>
-                <stringValue>Pre- Discussion</stringValue>
+                <stringValue>Pre-Discussion</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -307,7 +307,7 @@
         <inputAssignments>
             <field>StageName</field>
             <value>
-                <stringValue>Pre- Discussion</stringValue>
+                <stringValue>Pre-Discussion</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -650,7 +650,9 @@
         </filters>
         <object>Opportunity</object>
         <schedule>
+            <dayOfMonthToRun>0</dayOfMonthToRun>
             <frequency>Daily</frequency>
+            <frequencyNumber>0</frequencyNumber>
             <startDate>2024-06-08</startDate>
             <startTime>14:25:00.000Z</startTime>
         </schedule>

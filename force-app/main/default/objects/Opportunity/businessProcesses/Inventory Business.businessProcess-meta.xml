@@ -22,8 +22,4 @@
         <fullName>Onlinekauf</fullName>
         <default>false</default>
     </values>
-    <values>
-        <fullName>Pre- Discussion</fullName>
-        <default>false</default>
-    </values>
 </BusinessProcess>
